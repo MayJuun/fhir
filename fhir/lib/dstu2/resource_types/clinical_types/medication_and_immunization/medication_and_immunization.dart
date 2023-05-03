@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Medication with Resource, _$Medication {
     @Default(Dstu2ResourceType.Medication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -49,7 +48,7 @@ class Medication with Resource, _$Medication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Medication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Medication.fromJson(Map<String, dynamic> json) =>
       _$MedicationFromJson(json);
 
   /// Acts like a constructor, returns a [Medication], accepts a
@@ -69,7 +68,7 @@ class Medication with Resource, _$Medication {
 class MedicationProduct with _$MedicationProduct {
   MedicationProduct._();
   factory MedicationProduct({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -93,7 +92,7 @@ class MedicationProduct with _$MedicationProduct {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationProduct.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationProduct.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationProduct], accepts a
@@ -113,7 +112,7 @@ class MedicationProduct with _$MedicationProduct {
 class MedicationProductIngredient with _$MedicationProductIngredient {
   MedicationProductIngredient._();
   factory MedicationProductIngredient({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
@@ -135,7 +134,7 @@ class MedicationProductIngredient with _$MedicationProductIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationProductIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationProductIngredient], accepts a
@@ -155,7 +154,7 @@ class MedicationProductIngredient with _$MedicationProductIngredient {
 class MedicationProductBatch with _$MedicationProductBatch {
   MedicationProductBatch._();
   factory MedicationProductBatch({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? lotNumber,
@@ -179,7 +178,7 @@ class MedicationProductBatch with _$MedicationProductBatch {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationProductBatch.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationProductBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationProductBatchFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationProductBatch], accepts a
@@ -199,7 +198,7 @@ class MedicationProductBatch with _$MedicationProductBatch {
 class MedicationPackage with _$MedicationPackage {
   MedicationPackage._();
   factory MedicationPackage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -222,7 +221,7 @@ class MedicationPackage with _$MedicationPackage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationPackage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationPackage], accepts a
@@ -242,7 +241,7 @@ class MedicationPackage with _$MedicationPackage {
 class MedicationPackageContent with _$MedicationPackageContent {
   MedicationPackageContent._();
   factory MedicationPackageContent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
@@ -264,7 +263,7 @@ class MedicationPackageContent with _$MedicationPackageContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationPackageContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationPackageContent.fromJson(Map<String, dynamic> json) =>
       _$MedicationPackageContentFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationPackageContent], accepts a
@@ -287,7 +286,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
     @Default(Dstu2ResourceType.MedicationOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -329,7 +328,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationOrder.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationOrder], accepts a
@@ -349,7 +348,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
 class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
   MedicationOrderDosageInstruction._();
   factory MedicationOrderDosageInstruction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -392,7 +391,7 @@ class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
 class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
   MedicationOrderDispenseRequest._();
   factory MedicationOrderDispenseRequest({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? medicationCodeableConcept,
@@ -419,7 +418,7 @@ class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationOrderDispenseRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationOrderDispenseRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderDispenseRequestFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationOrderDispenseRequest], accepts a
@@ -439,7 +438,7 @@ class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
 class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   MedicationOrderSubstitution._();
   factory MedicationOrderSubstitution({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -461,7 +460,7 @@ class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationOrderSubstitution.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationOrderSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationOrderSubstitutionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationOrderSubstitution], accepts a
@@ -484,7 +483,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     @Default(Dstu2ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -527,7 +526,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationAdministration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationAdministration], accepts a
@@ -547,7 +546,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -577,7 +576,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationAdministrationDosage], accepts a
@@ -600,7 +599,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     @Default(Dstu2ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -645,7 +644,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispense.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationDispense], accepts a
@@ -666,7 +665,7 @@ class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
   MedicationDispenseDosageInstruction._();
   factory MedicationDispenseDosageInstruction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -709,7 +708,7 @@ class MedicationDispenseDosageInstruction
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -733,7 +732,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationDispenseSubstitution], accepts a
@@ -756,7 +755,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     @Default(Dstu2ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -800,7 +799,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationStatement], accepts a
@@ -820,7 +819,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
 class MedicationStatementDosage with _$MedicationStatementDosage {
   MedicationStatementDosage._();
   factory MedicationStatementDosage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -853,7 +852,7 @@ class MedicationStatementDosage with _$MedicationStatementDosage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationStatementDosage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationStatementDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementDosageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationStatementDosage], accepts a
@@ -876,7 +875,7 @@ class Immunization with Resource, _$Immunization {
     @Default(Dstu2ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -925,7 +924,7 @@ class Immunization with Resource, _$Immunization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Immunization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
 
   /// Acts like a constructor, returns a [Immunization], accepts a
@@ -945,7 +944,7 @@ class Immunization with Resource, _$Immunization {
 class ImmunizationExplanation with _$ImmunizationExplanation {
   ImmunizationExplanation._();
   factory ImmunizationExplanation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? reason,
@@ -967,7 +966,7 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationExplanation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationExplanationFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationExplanation], accepts a
@@ -987,7 +986,7 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
 class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDateTime? date,
@@ -1012,7 +1011,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationReaction], accepts a
@@ -1032,7 +1031,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
 class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
   factory ImmunizationVaccinationProtocol({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required PositiveInt doseSequence,
@@ -1062,7 +1061,7 @@ class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationVaccinationProtocolFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationVaccinationProtocol], accepts a
@@ -1085,7 +1084,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1113,7 +1112,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationRecommendation], accepts a
@@ -1134,7 +1133,7 @@ class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirDateTime date,
@@ -1172,7 +1171,7 @@ class ImmunizationRecommendationRecommendationDateCriterion
     with _$ImmunizationRecommendationRecommendationDateCriterion {
   ImmunizationRecommendationRecommendationDateCriterion._();
   factory ImmunizationRecommendationRecommendationDateCriterion({
-    FhirId? id,
+    Id? id,
     FhirExtension? extensio,
     FhirExtension? modifier,
     required CodeableConcept code,
@@ -1206,7 +1205,7 @@ class ImmunizationRecommendationRecommendationProtocol
     with _$ImmunizationRecommendationRecommendationProtocol {
   ImmunizationRecommendationRecommendationProtocol._();
   factory ImmunizationRecommendationRecommendationProtocol({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExten,
     Integer? doseSequence,

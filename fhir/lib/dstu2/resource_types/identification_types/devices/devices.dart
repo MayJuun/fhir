@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Device with Resource, _$Device {
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -66,7 +65,7 @@ class Device with Resource, _$Device {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$DeviceFromJson(json);
+  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 
   /// Acts like a constructor, returns a [Device], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -88,7 +87,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -122,7 +121,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceComponent], accepts a
@@ -143,7 +142,7 @@ class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? specType,
@@ -178,7 +177,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @Default(Dstu2ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -218,7 +217,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetric], accepts a
@@ -238,7 +237,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType? type,
@@ -265,7 +264,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a

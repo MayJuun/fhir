@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -16,7 +15,7 @@ part 'element.g.dart';
 class Element with _$Element {
   Element._();
   factory Element({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
   }) = _Element;
@@ -36,7 +35,7 @@ class Element with _$Element {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Element.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Element.fromJson(Map<String, dynamic> json) =>
       _$ElementFromJson(json);
 
   /// Acts like a constructor, returns a [Element], accepts a

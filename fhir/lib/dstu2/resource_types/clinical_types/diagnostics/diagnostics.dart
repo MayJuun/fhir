@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Observation with Resource, _$Observation {
     @Default(Dstu2ResourceType.Observation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -82,7 +81,7 @@ class Observation with Resource, _$Observation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Observation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
 
   /// Acts like a constructor, returns a [Observation], accepts a
@@ -102,7 +101,7 @@ class Observation with Resource, _$Observation {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -129,7 +128,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationReferenceRange], accepts a
@@ -149,7 +148,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -172,7 +171,7 @@ class ObservationRelated with _$ObservationRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationRelated], accepts a
@@ -192,7 +191,7 @@ class ObservationRelated with _$ObservationRelated {
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -229,7 +228,7 @@ class ObservationComponent with _$ObservationComponent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationComponent], accepts a
@@ -252,7 +251,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(Dstu2ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -299,7 +298,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReport], accepts a
@@ -319,7 +318,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
@@ -342,7 +341,7 @@ class DiagnosticReportImage with _$DiagnosticReportImage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportImage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReportImage], accepts a
@@ -365,7 +364,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
     @Default(Dstu2ResourceType.DiagnosticOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -401,7 +400,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticOrder.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticOrder], accepts a
@@ -421,7 +420,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
 class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   DiagnosticOrderEvent._();
   factory DiagnosticOrderEvent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EventStatus.unknown) required EventStatus status,
@@ -445,7 +444,7 @@ class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticOrderEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderEventFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticOrderEvent], accepts a
@@ -465,7 +464,7 @@ class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 class DiagnosticOrderItem with _$DiagnosticOrderItem {
   DiagnosticOrderItem._();
   factory DiagnosticOrderItem({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
@@ -490,7 +489,7 @@ class DiagnosticOrderItem with _$DiagnosticOrderItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticOrderItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderItemFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticOrderItem], accepts a
@@ -513,7 +512,7 @@ class Specimen with Resource, _$Specimen {
     @Default(Dstu2ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -549,7 +548,7 @@ class Specimen with Resource, _$Specimen {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Specimen.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
 
   /// Acts like a constructor, returns a [Specimen], accepts a
@@ -569,7 +568,7 @@ class Specimen with Resource, _$Specimen {
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -598,7 +597,7 @@ class SpecimenCollection with _$SpecimenCollection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenCollection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenCollection], accepts a
@@ -618,7 +617,7 @@ class SpecimenCollection with _$SpecimenCollection {
 class SpecimenTreatment with _$SpecimenTreatment {
   SpecimenTreatment._();
   factory SpecimenTreatment({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -641,7 +640,7 @@ class SpecimenTreatment with _$SpecimenTreatment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenTreatment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
       _$SpecimenTreatmentFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenTreatment], accepts a
@@ -661,7 +660,7 @@ class SpecimenTreatment with _$SpecimenTreatment {
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -689,7 +688,7 @@ class SpecimenContainer with _$SpecimenContainer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenContainer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenContainer], accepts a
@@ -712,7 +711,7 @@ class BodySite with Resource, _$BodySite {
     @Default(Dstu2ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -740,7 +739,7 @@ class BodySite with Resource, _$BodySite {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BodySite.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
 
   /// Acts like a constructor, returns a [BodySite], accepts a
@@ -763,7 +762,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(Dstu2ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -808,7 +807,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudy], accepts a
@@ -828,7 +827,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -865,7 +864,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudySeries.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudySeries], accepts a
@@ -885,7 +884,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
   ImagingStudySeriesInstance._();
   factory ImagingStudySeriesInstance({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -914,7 +913,7 @@ class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudySeriesInstance], accepts a
@@ -937,7 +936,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
     @Default(Dstu2ResourceType.ImagingObjectSelection)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -966,7 +965,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingObjectSelection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
       _$ImagingObjectSelectionFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingObjectSelection], accepts a
@@ -986,7 +985,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
 class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   ImagingObjectSelectionStudy._();
   factory ImagingObjectSelectionStudy({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Oid uid,
@@ -1011,7 +1010,7 @@ class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingObjectSelectionStudy], accepts a
@@ -1032,7 +1031,7 @@ class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
   ImagingObjectSelectionStudySeries._();
   factory ImagingObjectSelectionStudySeries({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Oid? uid,
@@ -1066,7 +1065,7 @@ class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
   ImagingObjectSelectionSeriesInstance._();
   factory ImagingObjectSelectionSeriesInstance({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Oid sopClass,
@@ -1100,7 +1099,7 @@ class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
   ImagingObjectSelectionInstanceFrames._();
   factory ImagingObjectSelectionInstanceFrames({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExte,
     required List<UnsignedInt> frameNumbers,

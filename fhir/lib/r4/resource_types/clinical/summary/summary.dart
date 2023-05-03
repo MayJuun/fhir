@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -146,48 +144,44 @@ class AdverseEvent with Resource, _$AdverseEvent {
   /// [referenceDocument] AdverseEvent.referenceDocument.
   ///
   /// [study] AdverseEvent.study.
-  @HiveType(typeId: 58, adapterName: 'AdverseEventAdapter')
   factory AdverseEvent({
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Identifier? identifier,
-    @HiveField(12) Code? actuality,
-    @HiveField(13) @JsonKey(name: '_actuality') Element? actualityElement,
-    @HiveField(14) List<CodeableConcept>? category,
-    @HiveField(15) CodeableConcept? event,
-    @HiveField(16) required Reference subject,
-    @HiveField(17) Reference? encounter,
-    @HiveField(18) FhirDateTime? date,
-    @HiveField(19) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(20) FhirDateTime? detected,
-    @HiveField(21) @JsonKey(name: '_detected') Element? detectedElement,
-    @HiveField(22) FhirDateTime? recordedDate,
-    @HiveField(23) @JsonKey(name: '_recordedDate') Element? recordedDateElement,
-    @HiveField(24) List<Reference>? resultingCondition,
-    @HiveField(25) Reference? location,
-    @HiveField(26) CodeableConcept? seriousness,
-    @HiveField(27) CodeableConcept? severity,
-    @HiveField(28) CodeableConcept? outcome,
-    @HiveField(29) Reference? recorder,
-    @HiveField(30) List<Reference>? contributor,
-    @HiveField(31) List<AdverseEventSuspectEntity>? suspectEntity,
-    @HiveField(32) List<Reference>? subjectMedicalHistory,
-    @HiveField(33) List<Reference>? referenceDocument,
-    @HiveField(34) List<Reference>? study,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    Code? actuality,
+    @JsonKey(name: '_actuality') Element? actualityElement,
+    List<CodeableConcept>? category,
+    CodeableConcept? event,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    FhirDateTime? detected,
+    @JsonKey(name: '_detected') Element? detectedElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    List<Reference>? resultingCondition,
+    Reference? location,
+    CodeableConcept? seriousness,
+    CodeableConcept? severity,
+    CodeableConcept? outcome,
+    Reference? recorder,
+    List<Reference>? contributor,
+    List<AdverseEventSuspectEntity>? suspectEntity,
+    List<Reference>? subjectMedicalHistory,
+    List<Reference>? referenceDocument,
+    List<Reference>? study,
   }) = _AdverseEvent;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -202,7 +196,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdverseEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventFromJson(json);
 
   /// Acts like a constructor, returns a [AdverseEvent], accepts a
@@ -282,7 +276,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventSuspectEntityFromJson(json);
 
   /// Acts like a constructor, returns a [AdverseEventSuspectEntity], accepts a
@@ -370,7 +364,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdverseEventCausality.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventCausalityFromJson(json);
 
   /// Acts like a constructor, returns a [AdverseEventCausality], accepts a
@@ -535,55 +529,47 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   ///
   /// [reaction] Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
-  @HiveType(typeId: 59, adapterName: 'AllergyIntoleranceAdapter')
   factory AllergyIntolerance({
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) CodeableConcept? clinicalStatus,
-    @HiveField(13) CodeableConcept? verificationStatus,
-    @HiveField(14) Code? type,
-    @HiveField(15) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(16) List<Code>? category,
-    @HiveField(17) @JsonKey(name: '_category') List<Element?>? categoryElement,
-    @HiveField(18) Code? criticality,
-    @HiveField(19) @JsonKey(name: '_criticality') Element? criticalityElement,
-    @HiveField(20) CodeableConcept? code,
-    @HiveField(21) required Reference patient,
-    @HiveField(22) Reference? encounter,
-    @HiveField(23) FhirDateTime? onsetDateTime,
-    @HiveField(24)
-    @JsonKey(name: '_onsetDateTime')
-        Element? onsetDateTimeElement,
-    @HiveField(25) Age? onsetAge,
-    @HiveField(26) Period? onsetPeriod,
-    @HiveField(27) Range? onsetRange,
-    @HiveField(28) String? onsetString,
-    @HiveField(29) @JsonKey(name: '_onsetString') Element? onsetStringElement,
-    @HiveField(30) FhirDateTime? recordedDate,
-    @HiveField(31) @JsonKey(name: '_recordedDate') Element? recordedDateElement,
-    @HiveField(32) Reference? recorder,
-    @HiveField(33) Reference? asserter,
-    @HiveField(34) FhirDateTime? lastOccurrence,
-    @HiveField(35)
-    @JsonKey(name: '_lastOccurrence')
-        Element? lastOccurrenceElement,
-    @HiveField(36) List<Annotation>? note,
-    @HiveField(37) List<AllergyIntoleranceReaction>? reaction,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? clinicalStatus,
+    CodeableConcept? verificationStatus,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    List<Code>? category,
+    @JsonKey(name: '_category') List<Element?>? categoryElement,
+    Code? criticality,
+    @JsonKey(name: '_criticality') Element? criticalityElement,
+    CodeableConcept? code,
+    required Reference patient,
+    Reference? encounter,
+    FhirDateTime? onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
+    Age? onsetAge,
+    Period? onsetPeriod,
+    Range? onsetRange,
+    String? onsetString,
+    @JsonKey(name: '_onsetString') Element? onsetStringElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    Reference? recorder,
+    Reference? asserter,
+    FhirDateTime? lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
+    List<Annotation>? note,
+    List<AllergyIntoleranceReaction>? reaction,
   }) = _AllergyIntolerance;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -598,7 +584,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AllergyIntolerance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
 
   /// Acts like a constructor, returns a [AllergyIntolerance], accepts a
@@ -713,7 +699,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
 
   /// Acts like a constructor, returns a [AllergyIntoleranceReaction], accepts a
@@ -870,53 +856,47 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [note] Commentary about the impression, typically recorded after the
   /// impression itself was made, though supplemental notes by the original
   ///  author could also appear.
-  @HiveType(typeId: 60, adapterName: 'ClinicalImpressionAdapter')
   factory ClinicalImpression({
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @HiveField(13) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(14) CodeableConcept? statusReason,
-    @HiveField(15) CodeableConcept? code,
-    @HiveField(16) String? description,
-    @HiveField(17) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(18) required Reference subject,
-    @HiveField(19) Reference? encounter,
-    @HiveField(20) FhirDateTime? effectiveDateTime,
-    @HiveField(21)
-    @JsonKey(name: '_effectiveDateTime')
-        Element? effectiveDateTimeElement,
-    @HiveField(22) Period? effectivePeriod,
-    @HiveField(23) FhirDateTime? date,
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(25) Reference? assessor,
-    @HiveField(26) Reference? previous,
-    @HiveField(27) List<Reference>? problem,
-    @HiveField(28) List<ClinicalImpressionInvestigation>? investigation,
-    @HiveField(29) List<FhirUri>? protocol,
-    @HiveField(30) @JsonKey(name: '_protocol') List<Element?>? protocolElement,
-    @HiveField(31) String? summary,
-    @HiveField(32) @JsonKey(name: '_summary') Element? summaryElement,
-    @HiveField(33) List<ClinicalImpressionFinding>? finding,
-    @HiveField(34) List<CodeableConcept>? prognosisCodeableConcept,
-    @HiveField(35) List<Reference>? prognosisReference,
-    @HiveField(36) List<Reference>? supportingInfo,
-    @HiveField(37) List<Annotation>? note,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? effectiveDateTime,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
+    Period? effectivePeriod,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? assessor,
+    Reference? previous,
+    List<Reference>? problem,
+    List<ClinicalImpressionInvestigation>? investigation,
+    List<FhirUri>? protocol,
+    @JsonKey(name: '_protocol') List<Element?>? protocolElement,
+    String? summary,
+    @JsonKey(name: '_summary') Element? summaryElement,
+    List<ClinicalImpressionFinding>? finding,
+    List<CodeableConcept>? prognosisCodeableConcept,
+    List<Reference>? prognosisReference,
+    List<Reference>? supportingInfo,
+    List<Annotation>? note,
   }) = _ClinicalImpression;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -931,7 +911,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalImpression.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalImpression], accepts a
@@ -1016,7 +996,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalImpressionInvestigation], accepts a
@@ -1105,7 +1085,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalImpressionFinding], accepts a
@@ -1276,60 +1256,50 @@ class Condition with Resource, _$Condition {
   /// [note] Additional information about the Condition. This is a general
   /// notes/comments entry  for description of the Condition, its diagnosis and
   ///  prognosis.
-  @HiveType(typeId: 61, adapterName: 'ConditionAdapter')
   factory Condition({
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) CodeableConcept? clinicalStatus,
-    @HiveField(13) CodeableConcept? verificationStatus,
-    @HiveField(14) List<CodeableConcept>? category,
-    @HiveField(15) CodeableConcept? severity,
-    @HiveField(16) CodeableConcept? code,
-    @HiveField(17) List<CodeableConcept>? bodySite,
-    @HiveField(18) required Reference subject,
-    @HiveField(19) Reference? encounter,
-    @HiveField(20) FhirDateTime? onsetDateTime,
-    @HiveField(21)
-    @JsonKey(name: '_onsetDateTime')
-        Element? onsetDateTimeElement,
-    @HiveField(22) Age? onsetAge,
-    @HiveField(23) Period? onsetPeriod,
-    @HiveField(24) Range? onsetRange,
-    @HiveField(25) String? onsetString,
-    @HiveField(26) @JsonKey(name: '_onsetString') Element? onsetStringElement,
-    @HiveField(27) FhirDateTime? abatementDateTime,
-    @HiveField(28)
-    @JsonKey(name: '_abatementDateTime')
-        Element? abatementDateTimeElement,
-    @HiveField(29) Age? abatementAge,
-    @HiveField(30) Period? abatementPeriod,
-    @HiveField(31) Range? abatementRange,
-    @HiveField(32) String? abatementString,
-    @HiveField(33)
-    @JsonKey(name: '_abatementString')
-        Element? abatementStringElement,
-    @HiveField(34) FhirDateTime? recordedDate,
-    @HiveField(35) @JsonKey(name: '_recordedDate') Element? recordedDateElement,
-    @HiveField(36) Reference? recorder,
-    @HiveField(37) Reference? asserter,
-    @HiveField(38) List<ConditionStage>? stage,
-    @HiveField(39) List<ConditionEvidence>? evidence,
-    @HiveField(40) List<Annotation>? note,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? clinicalStatus,
+    CodeableConcept? verificationStatus,
+    List<CodeableConcept>? category,
+    CodeableConcept? severity,
+    CodeableConcept? code,
+    List<CodeableConcept>? bodySite,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
+    Age? onsetAge,
+    Period? onsetPeriod,
+    Range? onsetRange,
+    String? onsetString,
+    @JsonKey(name: '_onsetString') Element? onsetStringElement,
+    FhirDateTime? abatementDateTime,
+    @JsonKey(name: '_abatementDateTime') Element? abatementDateTimeElement,
+    Age? abatementAge,
+    Period? abatementPeriod,
+    Range? abatementRange,
+    String? abatementString,
+    @JsonKey(name: '_abatementString') Element? abatementStringElement,
+    FhirDateTime? recordedDate,
+    @JsonKey(name: '_recordedDate') Element? recordedDateElement,
+    Reference? recorder,
+    Reference? asserter,
+    List<ConditionStage>? stage,
+    List<ConditionEvidence>? evidence,
+    List<Annotation>? note,
   }) = _Condition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1344,7 +1314,7 @@ class Condition with Resource, _$Condition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Condition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
 
   /// Acts like a constructor, returns a [Condition], accepts a
@@ -1425,7 +1395,7 @@ class ConditionStage with _$ConditionStage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConditionStage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
 
   /// Acts like a constructor, returns a [ConditionStage], accepts a
@@ -1503,7 +1473,7 @@ class ConditionEvidence with _$ConditionEvidence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConditionEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
 
   /// Acts like a constructor, returns a [ConditionEvidence], accepts a
@@ -1632,44 +1602,38 @@ class DetectedIssue with Resource, _$DetectedIssue {
   /// reduce or eliminate the likelihood of the risk identified by the detected
   /// issue from manifesting.  Can also reflect an observation of known
   ///  mitigating factors that may reduce/eliminate the need for any action.
-  @HiveType(typeId: 62, adapterName: 'DetectedIssueAdapter')
   factory DetectedIssue({
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @HiveField(13) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(14) CodeableConcept? code,
-    @HiveField(15) Code? severity,
-    @HiveField(16) @JsonKey(name: '_severity') Element? severityElement,
-    @HiveField(17) Reference? patient,
-    @HiveField(18) FhirDateTime? identifiedDateTime,
-    @HiveField(19)
-    @JsonKey(name: '_identifiedDateTime')
-        Element? identifiedDateTimeElement,
-    @HiveField(20) Period? identifiedPeriod,
-    @HiveField(21) Reference? author,
-    @HiveField(22) List<Reference>? implicated,
-    @HiveField(23) List<DetectedIssueEvidence>? evidence,
-    @HiveField(24) String? detail,
-    @HiveField(25) @JsonKey(name: '_detail') Element? detailElement,
-    @HiveField(26) FhirUri? reference,
-    @HiveField(27) @JsonKey(name: '_reference') Element? referenceElement,
-    @HiveField(28) List<DetectedIssueMitigation>? mitigation,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? code,
+    Code? severity,
+    @JsonKey(name: '_severity') Element? severityElement,
+    Reference? patient,
+    FhirDateTime? identifiedDateTime,
+    @JsonKey(name: '_identifiedDateTime') Element? identifiedDateTimeElement,
+    Period? identifiedPeriod,
+    Reference? author,
+    List<Reference>? implicated,
+    List<DetectedIssueEvidence>? evidence,
+    String? detail,
+    @JsonKey(name: '_detail') Element? detailElement,
+    FhirUri? reference,
+    @JsonKey(name: '_reference') Element? referenceElement,
+    List<DetectedIssueMitigation>? mitigation,
   }) = _DetectedIssue;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1684,7 +1648,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DetectedIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
 
   /// Acts like a constructor, returns a [DetectedIssue], accepts a
@@ -1762,7 +1726,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueEvidenceFromJson(json);
 
   /// Acts like a constructor, returns a [DetectedIssueEvidence], accepts a
@@ -1848,7 +1812,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
 
   /// Acts like a constructor, returns a [DetectedIssueMitigation], accepts a
@@ -2026,67 +1990,57 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// member had. This is a repeating section to allow a system to represent
   /// more than one condition per resource, though there is nothing stopping
   ///  multiple resources - one per condition.
-  @HiveType(typeId: 63, adapterName: 'FamilyMemberHistoryAdapter')
   factory FamilyMemberHistory({
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Canonical>? instantiatesCanonical,
-    @HiveField(13) List<FhirUri>? instantiatesUri,
-    @HiveField(14)
-    @JsonKey(name: '_instantiatesUri')
-        List<Element?>? instantiatesUriElement,
-    @HiveField(15) Code? status,
-    @HiveField(16) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(17) CodeableConcept? dataAbsentReason,
-    @HiveField(18) required Reference patient,
-    @HiveField(19) FhirDateTime? date,
-    @HiveField(20) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(21) String? name,
-    @HiveField(22) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(23) required CodeableConcept relationship,
-    @HiveField(24) CodeableConcept? sex,
-    @HiveField(25) Period? bornPeriod,
-    @HiveField(26) Date? bornDate,
-    @HiveField(27) @JsonKey(name: '_bornDate') Element? bornDateElement,
-    @HiveField(28) String? bornString,
-    @HiveField(29) @JsonKey(name: '_bornString') Element? bornStringElement,
-    @HiveField(30) Age? ageAge,
-    @HiveField(31) Range? ageRange,
-    @HiveField(32) String? ageString,
-    @HiveField(33) @JsonKey(name: '_ageString') Element? ageStringElement,
-    @HiveField(34) Boolean? estimatedAge,
-    @HiveField(35) @JsonKey(name: '_estimatedAge') Element? estimatedAgeElement,
-    @HiveField(36) Boolean? deceasedBoolean,
-    @HiveField(37)
-    @JsonKey(name: '_deceasedBoolean')
-        Element? deceasedBooleanElement,
-    @HiveField(38) Age? deceasedAge,
-    @HiveField(39) Range? deceasedRange,
-    @HiveField(40) Date? deceasedDate,
-    @HiveField(41) @JsonKey(name: '_deceasedDate') Element? deceasedDateElement,
-    @HiveField(42) String? deceasedString,
-    @HiveField(43)
-    @JsonKey(name: '_deceasedString')
-        Element? deceasedStringElement,
-    @HiveField(44) List<CodeableConcept>? reasonCode,
-    @HiveField(45) List<Reference>? reasonReference,
-    @HiveField(46) List<Annotation>? note,
-    @HiveField(47) List<FamilyMemberHistoryCondition>? condition,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? dataAbsentReason,
+    required Reference patient,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    required CodeableConcept relationship,
+    CodeableConcept? sex,
+    Period? bornPeriod,
+    Date? bornDate,
+    @JsonKey(name: '_bornDate') Element? bornDateElement,
+    String? bornString,
+    @JsonKey(name: '_bornString') Element? bornStringElement,
+    Age? ageAge,
+    Range? ageRange,
+    String? ageString,
+    @JsonKey(name: '_ageString') Element? ageStringElement,
+    Boolean? estimatedAge,
+    @JsonKey(name: '_estimatedAge') Element? estimatedAgeElement,
+    Boolean? deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
+    Age? deceasedAge,
+    Range? deceasedRange,
+    Date? deceasedDate,
+    @JsonKey(name: '_deceasedDate') Element? deceasedDateElement,
+    String? deceasedString,
+    @JsonKey(name: '_deceasedString') Element? deceasedStringElement,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<Annotation>? note,
+    List<FamilyMemberHistoryCondition>? condition,
   }) = _FamilyMemberHistory;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2101,7 +2055,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FamilyMemberHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
 
   /// Acts like a constructor, returns a [FamilyMemberHistory], accepts a
@@ -2216,7 +2170,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
 
   /// Acts like a constructor, returns a [FamilyMemberHistoryCondition], accepts a
@@ -2414,66 +2368,56 @@ class Procedure with Resource, _$Procedure {
   ///
   /// [usedCode] Identifies coded items that were used as part of the
   ///  procedure.
-  @HiveType(typeId: 64, adapterName: 'ProcedureAdapter')
   factory Procedure({
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Canonical>? instantiatesCanonical,
-    @HiveField(13) List<FhirUri>? instantiatesUri,
-    @HiveField(14)
-    @JsonKey(name: '_instantiatesUri')
-        List<Element?>? instantiatesUriElement,
-    @HiveField(15) List<Reference>? basedOn,
-    @HiveField(16) List<Reference>? partOf,
-    @HiveField(17) Code? status,
-    @HiveField(18) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(19) CodeableConcept? statusReason,
-    @HiveField(20) CodeableConcept? category,
-    @HiveField(21) CodeableConcept? code,
-    @HiveField(22) required Reference subject,
-    @HiveField(23) Reference? encounter,
-    @HiveField(24) FhirDateTime? performedDateTime,
-    @HiveField(25)
-    @JsonKey(name: '_performedDateTime')
-        Element? performedDateTimeElement,
-    @HiveField(26) Period? performedPeriod,
-    @HiveField(27) String? performedString,
-    @HiveField(28)
-    @JsonKey(name: '_performedString')
-        Element? performedStringElement,
-    @HiveField(29) Age? performedAge,
-    @HiveField(30) Range? performedRange,
-    @HiveField(31) Reference? recorder,
-    @HiveField(32) Reference? asserter,
-    @HiveField(33) List<ProcedurePerformer>? performer,
-    @HiveField(34) Reference? location,
-    @HiveField(35) List<CodeableConcept>? reasonCode,
-    @HiveField(36) List<Reference>? reasonReference,
-    @HiveField(37) List<CodeableConcept>? bodySite,
-    @HiveField(38) CodeableConcept? outcome,
-    @HiveField(39) List<Reference>? report,
-    @HiveField(40) List<CodeableConcept>? complication,
-    @HiveField(41) List<Reference>? complicationDetail,
-    @HiveField(42) List<CodeableConcept>? followUp,
-    @HiveField(43) List<Annotation>? note,
-    @HiveField(44) List<ProcedureFocalDevice>? focalDevice,
-    @HiveField(45) List<Reference>? usedReference,
-    @HiveField(46) List<CodeableConcept>? usedCode,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Canonical>? instantiatesCanonical,
+    List<FhirUri>? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
+    List<Reference>? basedOn,
+    List<Reference>? partOf,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    CodeableConcept? category,
+    CodeableConcept? code,
+    required Reference subject,
+    Reference? encounter,
+    FhirDateTime? performedDateTime,
+    @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
+    Period? performedPeriod,
+    String? performedString,
+    @JsonKey(name: '_performedString') Element? performedStringElement,
+    Age? performedAge,
+    Range? performedRange,
+    Reference? recorder,
+    Reference? asserter,
+    List<ProcedurePerformer>? performer,
+    Reference? location,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<CodeableConcept>? bodySite,
+    CodeableConcept? outcome,
+    List<Reference>? report,
+    List<CodeableConcept>? complication,
+    List<Reference>? complicationDetail,
+    List<CodeableConcept>? followUp,
+    List<Annotation>? note,
+    List<ProcedureFocalDevice>? focalDevice,
+    List<Reference>? usedReference,
+    List<CodeableConcept>? usedCode,
   }) = _Procedure;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2488,7 +2432,7 @@ class Procedure with Resource, _$Procedure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Procedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
 
   /// Acts like a constructor, returns a [Procedure], accepts a
@@ -2569,7 +2513,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcedurePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
 
   /// Acts like a constructor, returns a [ProcedurePerformer], accepts a
@@ -2647,7 +2591,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
 
   /// Acts like a constructor, returns a [ProcedureFocalDevice], accepts a

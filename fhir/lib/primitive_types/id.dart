@@ -11,25 +11,25 @@ import 'package:yaml/yaml.dart';
 import 'primitive_type_exceptions.dart';
 
 /// returns the same resource with a new ID (even if there is already an ID present)
-FhirId newId() => FhirId(const uuid.Uuid().v4());
+Id newId() => Id(const uuid.Uuid().v4());
 
 String newIdString() => const uuid.Uuid().v4();
 
-class FhirId {
-  const FhirId._(this._valueString, this._valueId, this._isValid);
+class Id {
+  const Id._(this._valueString, this._valueId, this._isValid);
 
-  factory FhirId(dynamic inValue) =>
+  factory Id(dynamic inValue) =>
       inValue is String && RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
-          ? FhirId._(inValue, inValue, true)
-          : FhirId._(inValue.toString(), null, false);
+          ? Id._(inValue, inValue, true)
+          : Id._(inValue.toString(), null, false);
 
-  factory FhirId.fromJson(dynamic json) => FhirId(json);
+  factory Id.fromJson(dynamic json) => Id(json);
 
-  factory FhirId.fromYaml(dynamic yaml) => yaml is String
-      ? FhirId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  factory Id.fromYaml(dynamic yaml) => yaml is String
+      ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirId.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirId>(
+          ? Id.fromJson(jsonDecode(jsonEncode(yaml)))
+          : throw YamlFormatException<Id>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
@@ -49,7 +49,7 @@ class FhirId {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is FhirId
+      : o is Id
           ? o.value == _valueId
           : o is String
               ? o == _valueString

@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -82,7 +81,7 @@ class Narrative with _$Narrative {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Narrative.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
 
   /// Acts like a constructor, returns a [Narrative], accepts a
@@ -162,7 +161,7 @@ class CodeableReference with _$CodeableReference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeableReference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeableReference.fromJson(Map<String, dynamic> json) =>
       _$CodeableReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [CodeableReference], accepts a
@@ -283,7 +282,7 @@ class Reference with _$Reference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Reference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [Reference], accepts a
@@ -368,7 +367,7 @@ class Meta with _$Meta {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
-    FhirId? versionId,
+    Id? versionId,
 
     /// [versionIdElement] ("_versionId") Extensions for versionId
     @JsonKey(name: '_versionId') Element? versionIdElement,
@@ -409,7 +408,7 @@ class Meta with _$Meta {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$MetaFromJson(json);
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -603,7 +602,7 @@ class Dosage with _$Dosage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Dosage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$DosageFromJson(json);
+  factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
 
   /// Acts like a constructor, returns a [Dosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -727,7 +726,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DosageDoseAndRate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
       _$DosageDoseAndRateFromJson(json);
 
   /// Acts like a constructor, returns a [DosageDoseAndRate], accepts a
@@ -3374,7 +3373,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
 
     /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    FhirId? defaultValueId,
+    Id? defaultValueId,
 
     /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
@@ -3406,7 +3405,7 @@ class ElementDefinition with _$ElementDefinition {
         Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    FhirId? defaultValueOid,
+    Id? defaultValueOid,
 
     /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
@@ -3450,7 +3449,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
 
     /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    FhirId? defaultValueUuid,
+    Id? defaultValueUuid,
 
     /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
     @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
@@ -3612,7 +3611,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
 
     /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    FhirId? fixedId,
+    Id? fixedId,
 
     /// [fixedIdElement] ("_fixedId") Extensions for fixedId
     @JsonKey(name: '_fixedId') Element? fixedIdElement,
@@ -3642,7 +3641,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
 
     /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    FhirId? fixedOid,
+    Id? fixedOid,
 
     /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
@@ -3684,7 +3683,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
 
     /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    FhirId? fixedUuid,
+    Id? fixedUuid,
 
     /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
     @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
@@ -3930,7 +3929,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    FhirId? patternId,
+    Id? patternId,
 
     /// [patternIdElement] ("_patternId") Extensions for patternId
     @JsonKey(name: '_patternId') Element? patternIdElement,
@@ -4020,7 +4019,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    FhirId? patternOid,
+    Id? patternOid,
 
     /// [patternOidElement] ("_patternOid") Extensions for patternOid
     @JsonKey(name: '_patternOid') Element? patternOidElement,
@@ -4146,7 +4145,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    FhirId? patternUuid,
+    Id? patternUuid,
 
     /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
     @JsonKey(name: '_patternUuid') Element? patternUuidElement,
@@ -4785,7 +4784,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
 
     /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-    List<FhirId>? condition,
+    List<Id>? condition,
 
     /// [conditionElement] ("_condition") Extensions for condition
     @JsonKey(name: '_condition') List<Element>? conditionElement,
@@ -4851,7 +4850,7 @@ class ElementDefinition with _$ElementDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinition], accepts a
@@ -4991,7 +4990,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionSlicing], accepts a
@@ -5109,7 +5108,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionDiscriminatorFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionDiscriminator],
@@ -5237,7 +5236,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBase], accepts a
@@ -5392,7 +5391,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionType], accepts a
@@ -5728,7 +5727,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
-    FhirId? valueId,
+    Id? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -5758,7 +5757,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
-    FhirId? valueOid,
+    Id? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -5800,7 +5799,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
-    FhirId? valueUuid,
+    Id? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -5923,7 +5922,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionExample.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionExampleFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionExample], accepts a
@@ -6036,7 +6035,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     List<FhirExtension>? modifierExtension,
 
     /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
-    FhirId? key,
+    Id? key,
 
     /// [keyElement] ("_key") Extensions for key
     @JsonKey(name: '_key') Element? keyElement,
@@ -6090,7 +6089,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts
@@ -6250,7 +6249,7 @@ class ElementDefinitionObligation with _$ElementDefinitionObligation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionObligation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionObligation.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionObligationFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionObligation], accepts
@@ -6380,7 +6379,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBinding], accepts a
@@ -6531,7 +6530,7 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionAdditional.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionAdditional.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionAdditionalFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionAdditional], accepts
@@ -6629,7 +6628,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.
-    FhirId? identity,
+    Id? identity,
 
     /// [identityElement] ("_identity") Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,
@@ -6668,7 +6667,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionMapping], accepts a

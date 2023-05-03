@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Conformance with Resource, _$Conformance {
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -45,7 +44,7 @@ class Conformance with Resource, _$Conformance {
         required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
-    required FhirId fhirVersion,
+    required Id fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
         required ConformanceAcceptUnknown acceptUnknown,
@@ -69,7 +68,7 @@ class Conformance with Resource, _$Conformance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Conformance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Conformance.fromJson(Map<String, dynamic> json) =>
       _$ConformanceFromJson(json);
 
   /// Acts like a constructor, returns a [Conformance], accepts a
@@ -92,7 +91,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -117,7 +116,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
         required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
-    required FhirId fhirVersion,
+    required Id fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
         required ConformanceAcceptUnknown acceptUnknown,
@@ -141,7 +140,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatement], accepts a
@@ -161,7 +160,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -183,7 +182,7 @@ class ConformanceContact with _$ConformanceContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$ConformanceContactFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceContact], accepts a
@@ -203,7 +202,7 @@ class ConformanceContact with _$ConformanceContact {
 class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
@@ -226,7 +225,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceSoftware.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSoftwareFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceSoftware], accepts a
@@ -246,7 +245,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
 class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
@@ -268,7 +267,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceImplementation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceImplementationFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceImplementation], accepts a
@@ -288,7 +287,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
 class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -320,7 +319,7 @@ class ConformanceRest with _$ConformanceRest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRest], accepts a
@@ -340,7 +339,7 @@ class ConformanceRest with _$ConformanceRest {
 class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -365,7 +364,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessaging.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessaging], accepts a
@@ -385,7 +384,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
 class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -409,7 +408,7 @@ class ConformanceDocument with _$ConformanceDocument {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceDocument.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
       _$ConformanceDocumentFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceDocument], accepts a
@@ -429,7 +428,7 @@ class ConformanceDocument with _$ConformanceDocument {
 class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? cors,
@@ -454,7 +453,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestSecurityFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestSecurity], accepts a
@@ -474,7 +473,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
 class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -514,7 +513,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestResourceFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestResource], accepts a
@@ -534,7 +533,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
 class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
@@ -558,7 +557,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceResourceInteraction], accepts a
@@ -578,7 +577,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
 class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -601,7 +600,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestOperationFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestOperation], accepts a
@@ -621,7 +620,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
 class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding protocol,
@@ -644,7 +643,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessagingEndpoint], accepts a
@@ -664,7 +663,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
 class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding code,
@@ -692,7 +691,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEventFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessagingEvent], accepts a
@@ -712,7 +711,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -736,7 +735,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSecurityCertificateFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceSecurityCertificate], accepts a
@@ -756,7 +755,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
 class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
@@ -779,7 +778,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestInteraction], accepts a
@@ -799,7 +798,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
 class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -829,7 +828,7 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceSearchParamFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceResourceSearchParam], accepts a
@@ -852,7 +851,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -895,7 +894,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinition], accepts a
@@ -915,7 +914,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -937,7 +936,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionContactFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionContact], accepts a
@@ -957,7 +956,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -987,7 +986,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionParameter], accepts a
@@ -1008,7 +1007,7 @@ class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -1047,7 +1046,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -1088,7 +1087,7 @@ class SearchParameter with Resource, _$SearchParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameter], accepts a
@@ -1108,7 +1107,7 @@ class SearchParameter with Resource, _$SearchParameter {
 class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1130,7 +1129,7 @@ class SearchParameterContact with _$SearchParameterContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameterContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterContactFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameterContact], accepts a

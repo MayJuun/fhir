@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -16,7 +15,7 @@ part 'fhir_extension.g.dart';
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
   factory FhirExtension({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -45,7 +44,7 @@ class FhirExtension with _$FhirExtension {
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
     Oid? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    FhirId? valueId,
+    Id? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     UnsignedInt? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -86,7 +85,7 @@ class FhirExtension with _$FhirExtension {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
 
   /// Acts like a constructor, returns a [FhirExtension], accepts a

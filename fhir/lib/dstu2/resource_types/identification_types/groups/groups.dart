@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Organization with Resource, _$Organization {
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -56,7 +55,7 @@ class Organization with Resource, _$Organization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Organization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
 
   /// Acts like a constructor, returns a [Organization], accepts a
@@ -76,7 +75,7 @@ class Organization with Resource, _$Organization {
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -101,7 +100,7 @@ class OrganizationContact with _$OrganizationContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationContact], accepts a
@@ -124,7 +123,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -175,7 +174,7 @@ class HealthcareService with Resource, _$HealthcareService {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareService.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareService], accepts a
@@ -195,7 +194,7 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -217,7 +216,7 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceServiceTypeFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceServiceType], accepts a
@@ -237,7 +236,7 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<AvailableTimeDaysOfWeek>? daysOfWeek,
@@ -266,7 +265,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceAvailableTime], accepts a
@@ -286,7 +285,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
@@ -309,7 +308,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceNotAvailable], accepts a
@@ -332,7 +331,7 @@ class Group with Resource, _$Group {
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -367,7 +366,7 @@ class Group with Resource, _$Group {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$GroupFromJson(json);
+  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 
   /// Acts like a constructor, returns a [Group], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -386,7 +385,7 @@ class Group with Resource, _$Group {
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
@@ -414,7 +413,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GroupCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [GroupCharacteristic], accepts a
@@ -434,7 +433,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
@@ -458,7 +457,7 @@ class GroupMember with _$GroupMember {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GroupMember.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
 
   /// Acts like a constructor, returns a [GroupMember], accepts a

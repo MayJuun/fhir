@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -113,45 +111,37 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///  infusion.
   ///
   /// [storage] Product storage.
-  @HiveType(typeId: 5, adapterName: 'BiologicallyDerivedProductAdapter')
   factory BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
 
-    /// [resourceType] This is a BiologicallyDerivedProduct resource
-    @HiveField(0)
+        /// [resourceType] This is a BiologicallyDerivedProduct resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -160,15 +150,13 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -177,7 +165,6 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -193,77 +180,62 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] This records identifiers associated with this biologically
     /// derived product instance that are defined by business processes and/or
     /// used to refer to it when a direct URL reference to the resource itself is
     /// not appropriate (e.g. in CDA documents, or in written / printed
     ///  documentation).
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [productCategory] Broad category of this product.
-    @HiveField(12)
-        Code? productCategory,
+    Code? productCategory,
 
     /// [productCategoryElement] Extensions for productCategory
     @JsonKey(name: '_productCategory')
-    @HiveField(13)
         Element? productCategoryElement,
 
     /// [productCode] A code that identifies the kind of this biologically
     ///  derived product (SNOMED Ctcode).
-    @HiveField(14)
-        CodeableConcept? productCode,
+    CodeableConcept? productCode,
 
     /// [status] Whether the product is currently available.
-    @HiveField(15)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(16)
         Element? statusElement,
 
     /// [request] Procedure request to obtain this biologically derived product.
-    @HiveField(17)
-        List<Reference>? request,
+    List<Reference>? request,
 
     /// [quantity] Number of discrete units within this product.
-    @HiveField(18)
-        Integer? quantity,
+    Integer? quantity,
 
     /// [quantityElement] Extensions for quantity
     @JsonKey(name: '_quantity')
-    @HiveField(19)
         Element? quantityElement,
 
     /// [parent] Parent product (if any).
-    @HiveField(20)
-        List<Reference>? parent,
+    List<Reference>? parent,
 
     /// [collection] How this product was collected.
-    @HiveField(21)
-        BiologicallyDerivedProductCollection? collection,
+    BiologicallyDerivedProductCollection? collection,
 
     /// [processing] Any processing of the product during collection that does
     /// not change the fundamental nature of the product. For example adding
     ///  anti-coagulants during the collection of Peripheral Blood Stem Cells.
-    @HiveField(22)
-        List<BiologicallyDerivedProductProcessing>? processing,
+    List<BiologicallyDerivedProductProcessing>? processing,
 
     /// [manipulation] Any manipulation of product post-collection that is
     /// intended to alter the product.  For example a buffy-coat enrichment or CD8
     /// reduction of Peripheral Blood Stem Cells to make it more suitable for
     ///  infusion.
-    @HiveField(23)
-        BiologicallyDerivedProductManipulation? manipulation,
+    BiologicallyDerivedProductManipulation? manipulation,
 
     /// [storage] Product storage.
-    @HiveField(24)
-        List<BiologicallyDerivedProductStorage>? storage,
+    List<BiologicallyDerivedProductStorage>? storage,
   }) = _BiologicallyDerivedProduct;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -278,7 +250,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductFromJson(json);
 
   /// Acts like a constructor, returns a [BiologicallyDerivedProduct], accepts a
@@ -895,45 +867,37 @@ class Device with Resource, _$Device {
   ///  device.  For example devices containing latex.
   ///
   /// [parent] The parent device.
-  @HiveType(typeId: 6, adapterName: 'DeviceAdapter')
   factory Device({
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
 
-    /// [resourceType] This is a Device resource
-    @HiveField(0)
+        /// [resourceType] This is a Device resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -942,15 +906,13 @@ class Device with Resource, _$Device {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -959,7 +921,6 @@ class Device with Resource, _$Device {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -975,94 +936,75 @@ class Device with Resource, _$Device {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique instance identifiers assigned to a device by
     ///  manufacturers other organizations or owners.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [definition] The reference to the definition for the device.
-    @HiveField(12)
-        Reference? definition,
+    Reference? definition,
 
     /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
     /// package.  Note that the Device may include multiple udiCarriers as it
     /// either may include just the udiCarrier for the jurisdiction it is sold, or
     ///  for multiple jurisdictions it could have been sold.
-    @HiveField(13)
-        List<DeviceUdiCarrier>? udiCarrier,
+    List<DeviceUdiCarrier>? udiCarrier,
 
     /// [status] Status of the Device availability.
-    @HiveField(14)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(15)
         Element? statusElement,
 
     /// [statusReason] Reason for the dtatus of the Device availability.
-    @HiveField(16)
-        List<CodeableConcept>? statusReason,
+    List<CodeableConcept>? statusReason,
 
     /// [distinctIdentifier] The distinct identification string as required by
     /// regulation for a human cell, tissue, or cellular and tissue-based
     ///  product.
-    @HiveField(17)
-        String? distinctIdentifier,
+    String? distinctIdentifier,
 
     /// [distinctIdentifierElement] Extensions for distinctIdentifier
     @JsonKey(name: '_distinctIdentifier')
-    @HiveField(18)
         Element? distinctIdentifierElement,
 
     /// [manufacturer] A name of the manufacturer.
-    @HiveField(19)
-        String? manufacturer,
+    String? manufacturer,
 
     /// [manufacturerElement] Extensions for manufacturer
     @JsonKey(name: '_manufacturer')
-    @HiveField(20)
         Element? manufacturerElement,
 
     /// [manufactureDate] The date and time when the device was manufactured.
-    @HiveField(21)
-        FhirDateTime? manufactureDate,
+    FhirDateTime? manufactureDate,
 
     /// [manufactureDateElement] Extensions for manufactureDate
     @JsonKey(name: '_manufactureDate')
-    @HiveField(22)
         Element? manufactureDateElement,
 
     /// [expirationDate] The date and time beyond which this device is no longer
     ///  valid or should not be used (if applicable).
-    @HiveField(23)
-        FhirDateTime? expirationDate,
+    FhirDateTime? expirationDate,
 
     /// [expirationDateElement] Extensions for expirationDate
     @JsonKey(name: '_expirationDate')
-    @HiveField(24)
         Element? expirationDateElement,
 
     /// [lotNumber] Lot number assigned by the manufacturer.
-    @HiveField(25)
-        String? lotNumber,
+    String? lotNumber,
 
     /// [lotNumberElement] Extensions for lotNumber
     @JsonKey(name: '_lotNumber')
-    @HiveField(26)
         Element? lotNumberElement,
 
     /// [serialNumber] The serial number assigned by the organization when the
     ///  device was manufactured.
-    @HiveField(27)
-        String? serialNumber,
+    String? serialNumber,
 
     /// [serialNumberElement] Extensions for serialNumber
     @JsonKey(name: '_serialNumber')
-    @HiveField(28)
         Element? serialNumberElement,
 
     /// [deviceName] This represents the manufacturer's name of the device as
@@ -1070,87 +1012,69 @@ class Device with Resource, _$Device {
     /// Device.  This typically would be used when a person provides the name(s)
     /// or when the device represents one of the names available from
     ///  DeviceDefinition.
-    @HiveField(29)
-        List<DeviceDeviceName>? deviceName,
+    List<DeviceDeviceName>? deviceName,
 
     /// [modelNumber] The model number for the device.
-    @HiveField(30)
-        String? modelNumber,
+    String? modelNumber,
 
     /// [modelNumberElement] Extensions for modelNumber
     @JsonKey(name: '_modelNumber')
-    @HiveField(31)
         Element? modelNumberElement,
 
     /// [partNumber] The part number of the device.
-    @HiveField(32)
-        String? partNumber,
+    String? partNumber,
 
     /// [partNumberElement] Extensions for partNumber
     @JsonKey(name: '_partNumber')
-    @HiveField(33)
         Element? partNumberElement,
 
     /// [type] The kind or type of device.
-    @HiveField(34)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [specialization] The capabilities supported on a  device, the standards
     /// to which the device conforms for a particular purpose, and used for the
     ///  communication.
-    @HiveField(35)
-        List<DeviceSpecialization>? specialization,
+    List<DeviceSpecialization>? specialization,
 
     /// [version] The actual design of the device or software version running on
     ///  the device.
-    @HiveField(36)
-        List<DeviceVersion>? version,
+    List<DeviceVersion>? version,
 
     /// [property] The actual configuration settings of a device as it actually
     ///  operates, e.g., regulation status, time properties.
-    @HiveField(37)
-        List<DeviceProperty>? property,
+    List<DeviceProperty>? property,
 
     /// [patient] Patient information, If the device is affixed to a person.
-    @HiveField(38)
-        Reference? patient,
+    Reference? patient,
 
     /// [owner] An organization that is responsible for the provision and ongoing
     ///  maintenance of the device.
-    @HiveField(39)
-        Reference? owner,
+    Reference? owner,
 
     /// [contact] Contact details for an organization or a particular human that
     ///  is responsible for the device.
-    @HiveField(40)
-        List<ContactPoint>? contact,
+    List<ContactPoint>? contact,
 
     /// [location] The place where the device can be found.
-    @HiveField(41)
-        Reference? location,
+    Reference? location,
 
     /// [url] A network address on which the device may be contacted directly.
-    @HiveField(42)
-        FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
-    @HiveField(43)
         Element? urlElement,
 
     /// [note] Descriptive information, usage information or implantation
     ///  information that is not captured in an existing element.
-    @HiveField(44)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [safety] Provides additional safety characteristics about a medical
     ///  device.  For example devices containing latex.
-    @HiveField(45)
-        List<CodeableConcept>? safety,
+    List<CodeableConcept>? safety,
 
     /// [parent] The parent device.
-    @HiveField(46)
-        Reference? parent,
+    Reference? parent,
   }) = _Device;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1165,7 +1089,7 @@ class Device with Resource, _$Device {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$DeviceFromJson(json);
+  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 
   /// Acts like a constructor, returns a [Device], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -1359,7 +1283,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceUdiCarrier], accepts a
@@ -1476,7 +1400,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceDeviceName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceDeviceName], accepts a
@@ -1586,7 +1510,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceSpecialization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceSpecializationFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceSpecialization], accepts a
@@ -1699,7 +1623,7 @@ class DeviceVersion with _$DeviceVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceVersion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
       _$DeviceVersionFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceVersion], accepts a
@@ -1809,7 +1733,7 @@ class DeviceProperty with _$DeviceProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceProperty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceProperty], accepts a
@@ -1938,45 +1862,37 @@ class DeviceMetric with Resource, _$DeviceMetric {
   ///
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
-  @HiveType(typeId: 7, adapterName: 'DeviceMetricAdapter')
   factory DeviceMetric({
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
 
-    /// [resourceType] This is a DeviceMetric resource
-    @HiveField(0)
+        /// [resourceType] This is a DeviceMetric resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1985,15 +1901,13 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2002,7 +1916,6 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2018,30 +1931,25 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique instance identifiers assigned to a device by the
     /// device or gateway software, manufacturers, other organizations or owners.
     ///  For example: handle ID.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
     ///  Setting, etc.
-    @HiveField(12)
-        required CodeableConcept type,
+    required CodeableConcept type,
 
     /// [unit] Describes the unit that an observed value determined for this
     ///  metric will have. For example: Percent, Seconds, etc.
-    @HiveField(13)
-        CodeableConcept? unit,
+    CodeableConcept? unit,
 
     /// [source] Describes the link to the  Device that this DeviceMetric belongs
     /// to and that contains administrative device information such as
     ///  manufacturer, serial number, etc.
-    @HiveField(14)
-        Reference? source,
+    Reference? source,
 
     /// [parent] Describes the link to the  Device that this DeviceMetric belongs
     /// to and that provide information about the location of this DeviceMetric in
@@ -2049,42 +1957,33 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// Device that represents a Channel. This reference can be used by a client
     /// application to distinguish DeviceMetrics that have the same type, but
     ///  should be interpreted based on their containment location.
-    @HiveField(15)
-        Reference? parent,
+    Reference? parent,
 
     /// [operationalStatus] Indicates current operational state of the device.
     ///  For example: On, Off, Standby, etc.
-    @HiveField(16)
-        Code? operationalStatus,
+    Code? operationalStatus,
 
     /// [operationalStatusElement] Extensions for operationalStatus
     @JsonKey(name: '_operationalStatus')
-    @HiveField(17)
         Element? operationalStatusElement,
 
     /// [color] Describes the color representation for the metric. This is often
     /// used to aid clinicians to track and identify parameter types by color. In
     /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
-    @HiveField(18)
-
     /// example; the parameters are displayed in different characteristic colors,
     ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
-    @HiveField(19)
-        Code? color,
+    Code? color,
 
     /// [colorElement] Extensions for color
     @JsonKey(name: '_color')
-    @HiveField(20)
         Element? colorElement,
 
     /// [category] Indicates the category of the observation generation process.
     ///  A DeviceMetric can be for example a setting, measurement, or calculation.
-    @HiveField(21)
-        Code? category,
+    Code? category,
 
     /// [categoryElement] Extensions for category
     @JsonKey(name: '_category')
-    @HiveField(22)
         Element? categoryElement,
 
     /// [measurementPeriod] Describes the measurement repetition time. This is
@@ -2096,13 +1995,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// be different than the measurement repetition time, if the device does not
     /// update the published observed value with the same frequency as it was
     ///  measured.
-    @HiveField(23)
-        Timing? measurementPeriod,
+    Timing? measurementPeriod,
 
     /// [calibration] Describes the calibrations that have been performed or that
     ///  are required to be performed.
-    @HiveField(24)
-        List<DeviceMetricCalibration>? calibration,
+    List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2117,7 +2014,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetric], accepts a
@@ -2239,7 +2136,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
@@ -2305,76 +2202,71 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   ///
   /// [note] Comments made about the product.;
-  @HiveType(typeId: 8, adapterName: 'NutritionProductAdapter')
   factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource;
-    @HiveField(0)
-    @Default(R4ResourceType.NutritionProduct)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Code? status,
-    @HiveField(12) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(13) List<CodeableConcept>? category,
+    List<FhirExtension>? modifierExtension,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
 
     /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
-    @HiveField(14) CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
 
-    @HiveField(15) List<Reference>? manufacturer,
+    List<Reference>? manufacturer,
 
     /// [nutrient] The product's nutritional information expressed by the nutrients.;
 
-    @HiveField(16) List<NutritionProductNutrient>? nutrient,
+    List<NutritionProductNutrient>? nutrient,
 
     /// [ingredient] Ingredients contained in this product.;
 
-    @HiveField(17) List<NutritionProductIngredient>? ingredient,
+    List<NutritionProductIngredient>? ingredient,
 
     /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
 
-    @HiveField(18) List<CodeableReference>? knownAllergen,
-    @HiveField(19) List<NutritionProductCharacteristic>? productCharacteristic,
+    List<CodeableReference>? knownAllergen,
+    List<NutritionProductCharacteristic>? productCharacteristic,
 
     /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
 
-    @HiveField(20) List<NutritionProductInstance>? instance,
+    List<NutritionProductInstance>? instance,
 
     /// [note] Comments made about the product.;
 
-    @HiveField(21) List<Annotation>? note,
+    List<Annotation>? note,
   }) = _NutritionProduct;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2389,7 +2281,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProduct.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NutritionProduct.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProduct], accepts a
@@ -2461,7 +2353,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductNutrient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductNutrientFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductNutrient], accepts a
@@ -2533,7 +2425,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductIngredient], accepts a
@@ -2651,7 +2543,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NutritionProductCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductCharacteristic], accepts a
@@ -2735,7 +2627,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductInstance], accepts a
@@ -2832,39 +2724,35 @@ class Substance with Resource, _$Substance {
   ///  specific package/container of the substance: an instance.
   ///
   /// [ingredient] A substance can be composed of other substances.
-  @HiveType(typeId: 9, adapterName: 'SubstanceAdapter')
   factory Substance({
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
 
     /// [status] The current state of the product.;
-    @HiveField(12) Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
-    @HiveField(13) @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
-    @HiveField(14) List<CodeableConcept>? category,
-    @HiveField(15) required CodeableConcept code,
-    @HiveField(16) String? description,
-    @HiveField(17) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(18) List<SubstanceInstance>? instance,
-    @HiveField(19) List<SubstanceIngredient>? ingredient,
+    List<CodeableConcept>? category,
+    required CodeableConcept code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<SubstanceInstance>? instance,
+    List<SubstanceIngredient>? ingredient,
   }) = _Substance;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2879,7 +2767,7 @@ class Substance with Resource, _$Substance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Substance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
 
   /// Acts like a constructor, returns a [Substance], accepts a
@@ -2961,7 +2849,7 @@ class SubstanceInstance with _$SubstanceInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceInstance], accepts a
@@ -3042,7 +2930,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceIngredient], accepts a

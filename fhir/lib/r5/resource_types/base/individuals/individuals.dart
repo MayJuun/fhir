@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -142,7 +141,7 @@ class Group with Resource, _$Group {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -290,7 +289,7 @@ class Group with Resource, _$Group {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$GroupFromJson(json);
+  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 
   /// Acts like a constructor, returns a [Group], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -455,7 +454,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GroupCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [GroupCharacteristic], accepts a
@@ -583,7 +582,7 @@ class GroupMember with _$GroupMember {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GroupMember.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
 
   /// Acts like a constructor, returns a [GroupMember], accepts a
@@ -740,7 +739,7 @@ class Patient with Resource, _$Patient {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -915,7 +914,7 @@ class Patient with Resource, _$Patient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Patient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
 
   /// Acts like a constructor, returns a [Patient], accepts a
@@ -1061,7 +1060,7 @@ class PatientContact with _$PatientContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
 
   /// Acts like a constructor, returns a [PatientContact], accepts a
@@ -1183,7 +1182,7 @@ class PatientCommunication with _$PatientCommunication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientCommunication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [PatientCommunication], accepts a
@@ -1298,7 +1297,7 @@ class PatientLink with _$PatientLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
 
   /// Acts like a constructor, returns a [PatientLink], accepts a
@@ -1432,7 +1431,7 @@ class Person with Resource, _$Person {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1576,7 +1575,7 @@ class Person with Resource, _$Person {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Person.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$PersonFromJson(json);
+  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 
   /// Acts like a constructor, returns a [Person], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -1694,7 +1693,7 @@ class PersonCommunication with _$PersonCommunication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PersonCommunication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PersonCommunication.fromJson(Map<String, dynamic> json) =>
       _$PersonCommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [PersonCommunication], accepts a
@@ -1807,7 +1806,7 @@ class PersonLink with _$PersonLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PersonLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
 
   /// Acts like a constructor, returns a [PersonLink], accepts a
@@ -1942,7 +1941,7 @@ class Practitioner with Resource, _$Practitioner {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2085,7 +2084,7 @@ class Practitioner with Resource, _$Practitioner {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Practitioner.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
 
   /// Acts like a constructor, returns a [Practitioner], accepts a
@@ -2201,7 +2200,7 @@ class PractitionerQualification with _$PractitionerQualification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerQualification.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
 
   /// Acts like a constructor, returns a [PractitionerQualification], accepts a
@@ -2326,7 +2325,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2457,7 +2456,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerRole.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
 
   /// Acts like a constructor, returns a [PractitionerRole], accepts a
@@ -2584,7 +2583,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2714,7 +2713,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RelatedPerson.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
 
   /// Acts like a constructor, returns a [RelatedPerson], accepts a
@@ -2838,7 +2837,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonCommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [RelatedPersonCommunication], accepts a

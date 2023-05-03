@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -189,7 +188,7 @@ class Composition with Resource, _$Composition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -315,7 +314,7 @@ class Composition with Resource, _$Composition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Composition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
 
   /// Acts like a constructor, returns a [Composition], accepts a
@@ -453,7 +452,7 @@ class CompositionAttester with _$CompositionAttester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionAttester], accepts a
@@ -594,7 +593,7 @@ class CompositionEvent with _$CompositionEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionEvent], accepts a
@@ -795,7 +794,7 @@ class CompositionSection with _$CompositionSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionSection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionSection], accepts a
@@ -932,7 +931,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1031,7 +1030,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentManifest], accepts a
@@ -1137,7 +1136,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentManifestRelated], accepts a
@@ -1330,7 +1329,7 @@ class DocumentReference with Resource, _$DocumentReference {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1453,7 +1452,7 @@ class DocumentReference with Resource, _$DocumentReference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReference], accepts a
@@ -1590,7 +1589,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceAttesterFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceAttester], accepts a
@@ -1718,7 +1717,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceRelatesTo], accepts a
@@ -1848,7 +1847,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceContent], accepts a
@@ -1990,7 +1989,7 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceProfile.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceProfileFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceProfile], accepts a

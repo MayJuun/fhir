@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -49,87 +47,63 @@ class AdministrableProductDefinition
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  @HiveType(typeId: 126, adapterName: 'AdministrableProductDefinitionAdapter')
   factory AdministrableProductDefinition({
     @Default(R4ResourceType.AdministrableProductDefinition)
 
-    /// [resourceType] This is a AdministrableProductDefinition resource",
-    @HiveField(0)
+        /// [resourceType] This is a AdministrableProductDefinition resource",
         R4ResourceType resourceType,
-    @HiveField(1)
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
-    @HiveField(2)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(3)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(4)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
-    @HiveField(5)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(6)
-        Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
-    @HiveField(7)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(8)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(9)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension')
-    @HiveField(10)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(11)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-    @HiveField(12)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    @HiveField(13)
-        Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
-    @HiveField(14)
         Element? statusElement,
-    @HiveField(15)
-        List<Reference>? formOf,
-    @HiveField(16)
-        CodeableConcept? administrableDoseForm,
-    @HiveField(17)
-        CodeableConcept? unitOfPresentation,
-    @HiveField(18)
-        List<Reference>? producedFrom,
-    @HiveField(19)
-        List<CodeableConcept>? ingredient,
-    @HiveField(20)
-        Reference? device,
-    @HiveField(21)
-        List<AdministrableProductDefinitionProperty>? property,
-    @HiveField(22)
-        required List<AdministrableProductDefinitionRouteOfAdministration>
-            routeOfAdministration,
+    List<Reference>? formOf,
+    CodeableConcept? administrableDoseForm,
+    CodeableConcept? unitOfPresentation,
+    List<Reference>? producedFrom,
+    List<CodeableConcept>? ingredient,
+    Reference? device,
+    List<AdministrableProductDefinitionProperty>? property,
+    required List<AdministrableProductDefinitionRouteOfAdministration>
+        routeOfAdministration,
   }) = _AdministrableProductDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -145,7 +119,7 @@ class AdministrableProductDefinition
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdministrableProductDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinition], accepts a
@@ -573,80 +547,73 @@ class Ingredient with Resource, _$Ingredient {
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
   ///
   /// [substance] The substance that comprises this ingredient.;
-  @HiveType(typeId: 127, adapterName: 'IngredientAdapter')
   factory Ingredient({
     /// [resourceType] This is a Ingredient resource;
-    @HiveField(0)
-    @Default(R4ResourceType.Ingredient)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
-    @HiveField(11) Identifier? identifier,
+    Identifier? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    @HiveField(12) Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
-    @HiveField(13) @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [for] The product which this ingredient is a constituent part of.;
-    @HiveField(14) @JsonKey(name: 'for') List<Reference>? for_,
+    @JsonKey(name: 'for') List<Reference>? for_,
 
     /// [role] A classification of the ingredient identifying its purpose within the product, e.g. active, inactive.;
-    @HiveField(15) required CodeableConcept role,
+    required CodeableConcept role,
 
     /// [function] A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
-    @HiveField(16) List<CodeableConcept>? function,
+    List<CodeableConcept>? function,
 
     /// [group] A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink.;
-    @HiveField(17) CodeableConcept? group,
+    CodeableConcept? group,
 
     /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-    @HiveField(18) Boolean? allergenicIndicator,
+    Boolean? allergenicIndicator,
 
     /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
-    @HiveField(19)
-    @JsonKey(name: '_allergenicIndicator')
-        Element? allergenicIndicatorElement,
+    @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
 
     /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
-    @HiveField(20) List<IngredientManufacturer>? manufacturer,
+    List<IngredientManufacturer>? manufacturer,
 
     /// [substance] The substance that comprises this ingredient.;
-    @HiveField(21) required IngredientSubstance substance,
+    required IngredientSubstance substance,
   }) = _Ingredient;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -661,7 +628,7 @@ class Ingredient with Resource, _$Ingredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Ingredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Ingredient.fromJson(Map<String, dynamic> json) =>
       _$IngredientFromJson(json);
 
   /// Acts like a constructor, returns a [Ingredient], accepts a
@@ -732,7 +699,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientManufacturer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory IngredientManufacturer.fromJson(Map<String, dynamic> json) =>
       _$IngredientManufacturerFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientManufacturer], accepts a
@@ -801,7 +768,7 @@ class IngredientSubstance with _$IngredientSubstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientSubstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory IngredientSubstance.fromJson(Map<String, dynamic> json) =>
       _$IngredientSubstanceFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientSubstance], accepts a
@@ -920,7 +887,7 @@ class IngredientStrength with _$IngredientStrength {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientStrength.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory IngredientStrength.fromJson(Map<String, dynamic> json) =>
       _$IngredientStrengthFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientStrength], accepts a
@@ -1014,7 +981,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientReferenceStrength.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =>
       _$IngredientReferenceStrengthFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientReferenceStrength], accepts a
@@ -1084,80 +1051,75 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
   ///
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-  @HiveType(typeId: 128, adapterName: 'ClinicalUseDefinitionAdapter')
   factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource;
-    @HiveField(0)
-    @Default(R4ResourceType.ClinicalUseDefinition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions. Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifier for this issue.;
-    @HiveField(11) List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-    @HiveField(12) Code? type,
+    Code? type,
 
     /// [typeElement] (_type): Extensions for type;
-    @HiveField(13) @JsonKey(name: '_type') Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [category] A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy and Lactation", "Overdose", "Effects on Ability to Drive and Use Machines".;
-    @HiveField(14) List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [subject] The medication or procedure for which this is an indication.;
-    @HiveField(15) List<Reference>? subject,
+    List<Reference>? subject,
 
     /// [status] Whether this is a current issue or one that has been retired etc.;
-    @HiveField(16) CodeableConcept? status,
+    CodeableConcept? status,
 
     /// [contraindication] Specifics for when this is a contraindication.;
-    @HiveField(17) ClinicalUseDefinitionContraindication? contraindication,
+    ClinicalUseDefinitionContraindication? contraindication,
 
     /// [indication] Specifics for when this is an indication.;
-    @HiveField(18) ClinicalUseDefinitionIndication? indication,
+    ClinicalUseDefinitionIndication? indication,
 
     /// [interaction] Specifics for when this is an interaction.;
-    @HiveField(19) ClinicalUseDefinitionInteraction? interaction,
+    ClinicalUseDefinitionInteraction? interaction,
 
     /// [population] The population group to which this applies.;
-    @HiveField(20) List<Reference>? population,
+    List<Reference>? population,
 
     /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
-    @HiveField(21) ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
+    ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
 
     /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-    @HiveField(22) ClinicalUseDefinitionWarning? warning,
+    ClinicalUseDefinitionWarning? warning,
   }) = _ClinicalUseDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1172,7 +1134,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinition], accepts a
@@ -1423,7 +1385,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinitionIndication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalUseDefinitionIndication.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionIndicationFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionIndication], accepts a
@@ -1717,7 +1679,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionWarningFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionWarning], accepts a
@@ -1781,90 +1743,70 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
   ///
   /// [property] General characteristics of this item.;
-  @HiveType(typeId: 129, adapterName: 'ManufacturedItemDefinitionAdapter')
   factory ManufacturedItemDefinition({
     @Default(R4ResourceType.ManufacturedItemDefinition)
 
-    /// [resourceType] This is a ManufacturedItemDefinition resource;
-    @HiveField(0)
+        /// [resourceType] This is a ManufacturedItemDefinition resource;
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique identifier.;
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-    @HiveField(12)
-        Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [manufacturedDoseForm] Dose form as manufactured and before any transformation into the pharmaceutical product.;
-    @HiveField(14)
-        required CodeableConcept manufacturedDoseForm,
+    required CodeableConcept manufacturedDoseForm,
 
     /// [unitOfPresentation] The “real world” units in which the quantity of the manufactured item is described.;
-    @HiveField(15)
-        CodeableConcept? unitOfPresentation,
+    CodeableConcept? unitOfPresentation,
 
     /// [manufacturer] Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
-    @HiveField(16)
-        List<Reference>? manufacturer,
+    List<Reference>? manufacturer,
 
     /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
-    @HiveField(17)
-        List<CodeableConcept>? ingredient,
+    List<CodeableConcept>? ingredient,
 
     /// [property] General characteristics of this item.;
-    @HiveField(18)
-        List<ManufacturedItemDefinitionProperty>? property,
+    List<ManufacturedItemDefinitionProperty>? property,
   }) = _ManufacturedItemDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1879,7 +1821,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ManufacturedItemDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$ManufacturedItemDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ManufacturedItemDefinition], accepts a
@@ -2090,189 +2032,145 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
   ///
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-  @HiveType(typeId: 130, adapterName: 'MedicinalProductDefinitionAdapter')
   factory MedicinalProductDefinition({
     @Default(R4ResourceType.MedicinalProductDefinition)
 
-    /// [resourceType] This is a MedicinalProductDefinition resource;
-    @HiveField(0)
+        /// [resourceType] This is a MedicinalProductDefinition resource;
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifier for this product. Could be an MPID. When in development or being regulated, products are typically referenced by official identifiers, assigned by a manufacturer or regulator, and unique to a product (which, when compared to a product instance being prescribed, is actually a product type). See also MedicinalProductDefinition.code.;
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [type] Regulatory type, e.g. Investigational or Authorized.;
-    @HiveField(12)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [domain] If this medicine applies to human or veterinary uses.;
-    @HiveField(13)
-        CodeableConcept? domain,
+    CodeableConcept? domain,
 
     /// [version] A business identifier relating to a specific version of the product, this is commonly used to support revisions to an existing product.;
-    @HiveField(14)
-        String? version,
+    String? version,
 
     /// [versionElement] (_version): Extensions for version;
     @JsonKey(name: '_version')
-    @HiveField(15)
         Element? versionElement,
 
     /// [status] The status within the lifecycle of this product record. A high-level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization status.;
-    @HiveField(16)
-        CodeableConcept? status,
+    CodeableConcept? status,
 
     /// [statusDate] The date at which the given status became applicable.;
-    @HiveField(17)
-        FhirDateTime? statusDate,
+    FhirDateTime? statusDate,
 
     /// [statusDateElement] (_statusDate): Extensions for statusDate;
     @JsonKey(name: '_statusDate')
-    @HiveField(18)
         Element? statusDateElement,
 
     /// [description] General description of this product.;
-    @HiveField(19)
-        Markdown? description,
+    Markdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description')
-    @HiveField(20)
         Element? descriptionElement,
 
     /// [combinedPharmaceuticalDoseForm] The dose form for a single part product, or combined form of a multiple part product. This is one concept that describes all the components. It does not represent the form with components physically mixed, if that might be necessary, for which see (AdministrableProductDefinition.administrableDoseForm).;
-    @HiveField(21)
-        CodeableConcept? combinedPharmaceuticalDoseForm,
+    CodeableConcept? combinedPharmaceuticalDoseForm,
 
     /// [route] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
-    @HiveField(22)
-        List<CodeableConcept>? route,
+    List<CodeableConcept>? route,
 
     /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
-    @HiveField(23)
-        Markdown? indication,
+    Markdown? indication,
 
     /// [indicationElement] (_indication): Extensions for indication;
     @JsonKey(name: '_indication')
-    @HiveField(24)
         Element? indicationElement,
 
     /// [legalStatusOfSupply] The legal status of supply of the medicinal product as classified by the regulator.;
-    @HiveField(25)
-        CodeableConcept? legalStatusOfSupply,
+    CodeableConcept? legalStatusOfSupply,
 
     /// [additionalMonitoringIndicator] Whether the Medicinal Product is subject to additional monitoring for regulatory reasons, such as heightened reporting requirements.;
-    @HiveField(26)
-        CodeableConcept? additionalMonitoringIndicator,
+    CodeableConcept? additionalMonitoringIndicator,
 
     /// [specialMeasures] Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
-    @HiveField(27)
-        List<CodeableConcept>? specialMeasures,
+    List<CodeableConcept>? specialMeasures,
 
     /// [pediatricUseIndicator] If authorised for use in children, or infants, neonates etc.;
-    @HiveField(28)
-        CodeableConcept? pediatricUseIndicator,
+    CodeableConcept? pediatricUseIndicator,
 
     /// [classification] Allows the product to be classified by various systems, commonly WHO ATC.;
-    @HiveField(29)
-        List<CodeableConcept>? classification,
+    List<CodeableConcept>? classification,
 
     /// [marketingStatus] Marketing status of the medicinal product, in contrast to marketing authorization. This refers to the product being actually 'on the market' as opposed to being allowed to be on the market (which is an authorization).;
-    @HiveField(30)
-        List<MarketingStatus>? marketingStatus,
+    List<MarketingStatus>? marketingStatus,
 
     /// [packagedMedicinalProduct] Package type for the product. See also the PackagedProductDefinition resource.;
-    @HiveField(31)
-        List<CodeableConcept>? packagedMedicinalProduct,
+    List<CodeableConcept>? packagedMedicinalProduct,
 
     /// [ingredient] The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
-    @HiveField(32)
-        List<CodeableConcept>? ingredient,
+    List<CodeableConcept>? ingredient,
 
     /// [impurity] Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
-    @HiveField(33)
-        List<CodeableReference>? impurity,
+    List<CodeableReference>? impurity,
 
     /// [attachedDocument] Additional information or supporting documentation about the medicinal product.;
-    @HiveField(34)
-        List<Reference>? attachedDocument,
+    List<Reference>? attachedDocument,
 
     /// [masterFile] A master file for the medicinal product (e.g. Pharmacovigilance System Master File). Drug master files (DMFs) are documents submitted to regulatory agencies to provide confidential detailed information about facilities, processes or articles used in the manufacturing, processing, packaging and storing of drug products.;
-    @HiveField(35)
-        List<Reference>? masterFile,
+    List<Reference>? masterFile,
 
     /// [contact] A product specific contact, person (in a role), or an organization.;
-    @HiveField(36)
-        List<MedicinalProductDefinitionContact>? contact,
+    List<MedicinalProductDefinitionContact>? contact,
 
     /// [clinicalTrial] Clinical trials or studies that this product is involved in.;
-    @HiveField(37)
-        List<Reference>? clinicalTrial,
+    List<Reference>? clinicalTrial,
 
     /// [code] A code that this product is known by, usually within some formal terminology, perhaps assigned by a third party (i.e. not the manufacturer or regulator). Products (types of medications) tend to be known by identifiers during development and within regulatory process. However when they are prescribed they tend to be identified by codes. The same product may be have multiple codes, applied to it by multiple organizations.;
-    @HiveField(38)
-        List<Coding>? code,
+    List<Coding>? code,
 
     /// [name] The product's name, including full name and possibly coded parts.;
-    @HiveField(39)
-        required List<MedicinalProductDefinitionName> name,
+    required List<MedicinalProductDefinitionName> name,
 
     /// [crossReference] Reference to another product, e.g. for linking authorised to investigational product, or a virtual product.;
-    @HiveField(40)
-        List<MedicinalProductDefinitionCrossReference>? crossReference,
+    List<MedicinalProductDefinitionCrossReference>? crossReference,
 
     /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
-    @HiveField(41)
-        List<MedicinalProductDefinitionOperation>? operation,
+    List<MedicinalProductDefinitionOperation>? operation,
 
     /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-    @HiveField(42)
-        List<MedicinalProductDefinitionCharacteristic>? characteristic,
+    List<MedicinalProductDefinitionCharacteristic>? characteristic,
   }) = _MedicinalProductDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2287,7 +2185,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinition], accepts a
@@ -2442,7 +2340,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionNameFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionName], accepts a
@@ -2929,133 +2827,103 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   ///
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-  @HiveType(typeId: 131, adapterName: 'PackagedProductDefinitionAdapter')
   factory PackagedProductDefinition({
     @Default(R4ResourceType.PackagedProductDefinition)
 
-    /// [resourceType] This is a PackagedProductDefinition resource;
-    @HiveField(0)
+        /// [resourceType] This is a PackagedProductDefinition resource;
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier for this package as whole - not the the content of the package. Unique instance identifiers assigned to a package by manufacturers, regulators, drug catalogue custodians or other organizations.;
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [name] A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.;
-    @HiveField(12)
-        String? name,
+    String? name,
 
     /// [nameElement] (_name): Extensions for name;
     @JsonKey(name: '_name')
-    @HiveField(13)
         Element? nameElement,
 
     /// [type] A high level category e.g. medicinal product, raw material, shipping/transport container, etc.;
-    @HiveField(14)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [packageFor] The product this package model relates to, not the contents of the package (for which see package.containedItem).;
-    @HiveField(15)
-        List<Reference>? packageFor,
+    List<Reference>? packageFor,
 
     /// [status] The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.;
-    @HiveField(16)
-        CodeableConcept? status,
+    CodeableConcept? status,
 
     /// [statusDate] The date at which the given status became applicable.;
-    @HiveField(17)
-        FhirDateTime? statusDate,
+    FhirDateTime? statusDate,
 
     /// [statusDateElement] (_statusDate): Extensions for statusDate;
     @JsonKey(name: '_statusDate')
-    @HiveField(18)
         Element? statusDateElement,
 
     /// [containedItemQuantity] A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
-    @HiveField(19)
-        List<Quantity>? containedItemQuantity,
+    List<Quantity>? containedItemQuantity,
 
     /// [description] Textual description. Note that this is not the name of the package or product.;
-    @HiveField(20)
-        Markdown? description,
+    Markdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
     @JsonKey(name: '_description')
-    @HiveField(21)
         Element? descriptionElement,
 
     /// [legalStatusOfSupply] The legal status of supply of the packaged item as classified by the regulator.;
-    @HiveField(22)
-        List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
+    List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
 
     /// [marketingStatus] Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated.;
-    @HiveField(23)
-        List<MarketingStatus>? marketingStatus,
+    List<MarketingStatus>? marketingStatus,
 
     /// [characteristic] Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".;
-    @HiveField(24)
-        List<CodeableConcept>? characteristic,
+    List<CodeableConcept>? characteristic,
 
     /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-    @HiveField(25)
-        Boolean? copackagedIndicator,
+    Boolean? copackagedIndicator,
 
     /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
     @JsonKey(name: '_copackagedIndicator')
-    @HiveField(26)
         Element? copackagedIndicatorElement,
 
     /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
-    @HiveField(27)
-        List<Reference>? manufacturer,
+    List<Reference>? manufacturer,
 
     /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-    @HiveField(28)
-        PackagedProductDefinitionPackage? package,
+    PackagedProductDefinitionPackage? package,
   }) = _PackagedProductDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3070,7 +2938,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PackagedProductDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PackagedProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$PackagedProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinition], accepts a
@@ -3661,93 +3529,88 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   ///
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-  @HiveType(typeId: 132, adapterName: 'RegulatedAuthorizationAdapter')
   factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource;
-    @HiveField(0)
-    @Default(R4ResourceType.RegulatedAuthorization)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifier for the authorization, typically assigned by the authorizing body.;
-    @HiveField(11) List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [subject] The product type, treatment, facility or activity that is being authorized.;
-    @HiveField(12) List<Reference>? subject,
+    List<Reference>? subject,
 
     /// [type] Overall type of this authorization, for example drug marketing approval, orphan drug designation.;
-    @HiveField(13) CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [description] General textual supporting information.;
-    @HiveField(14) Markdown? description,
+    Markdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
-    @HiveField(15) @JsonKey(name: '_description') Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [region] The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.;
-    @HiveField(16) List<CodeableConcept>? region,
+    List<CodeableConcept>? region,
 
     /// [status] The status that is authorised e.g. approved. Intermediate states and actions can be tracked with cases and applications.;
-    @HiveField(17) CodeableConcept? status,
+    CodeableConcept? status,
 
     /// [statusDate] The date at which the current status was assigned.;
-    @HiveField(18) FhirDateTime? statusDate,
+    FhirDateTime? statusDate,
 
     /// [statusDateElement] (_statusDate): Extensions for statusDate;
-    @HiveField(19) @JsonKey(name: '_statusDate') Element? statusDateElement,
+    @JsonKey(name: '_statusDate') Element? statusDateElement,
 
     /// [validityPeriod] The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.;
-    @HiveField(20) Period? validityPeriod,
+    Period? validityPeriod,
 
     /// [indication] Condition for which the use of the regulated product applies.;
-    @HiveField(21) CodeableReference? indication,
+    CodeableReference? indication,
 
     /// [intendedUse] The intended use of the product, e.g. prevention, treatment, diagnosis.;
-    @HiveField(22) CodeableConcept? intendedUse,
+    CodeableConcept? intendedUse,
 
     /// [basis] The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
-    @HiveField(23) List<CodeableConcept>? basis,
+    List<CodeableConcept>? basis,
 
     /// [holder] The organization that has been granted this authorization, by some authoritative body (the 'regulator').;
-    @HiveField(24) Reference? holder,
+    Reference? holder,
 
     /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
-    @HiveField(25) Reference? regulator,
+    Reference? regulator,
 
     /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-    @HiveField(26) @JsonKey(name: 'case') RegulatedAuthorizationCase? case_,
+    @JsonKey(name: 'case') RegulatedAuthorizationCase? case_,
   }) = _RegulatedAuthorization;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3762,7 +3625,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory RegulatedAuthorization.fromJson(Map<String, dynamic> json) =>
       _$RegulatedAuthorizationFromJson(json);
 
   /// Acts like a constructor, returns a [RegulatedAuthorization], accepts a
@@ -3856,7 +3719,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =>
       _$RegulatedAuthorizationCaseFromJson(json);
 
   /// Acts like a constructor, returns a [RegulatedAuthorizationCase], accepts a
@@ -3946,108 +3809,103 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [relationship] A link between this substance and another, with details of the relationship.;
   ///
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-  @HiveType(typeId: 133, adapterName: 'SubstanceDefinitionAdapter')
   factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource;
-    @HiveField(0)
-    @Default(R4ResourceType.SubstanceDefinition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier by which this substance is known.;
-    @HiveField(11) List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] A business level version identifier of the substance.;
-    @HiveField(12) String? version,
+    String? version,
 
     /// [versionElement] (_version): Extensions for version;
-    @HiveField(13) @JsonKey(name: '_version') Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [status] Status of substance within the catalogue e.g. active, retired.;
-    @HiveField(14) CodeableConcept? status,
+    CodeableConcept? status,
 
     /// [classification] A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
-    @HiveField(15) List<CodeableConcept>? classification,
+    List<CodeableConcept>? classification,
 
     /// [domain] If the substance applies to human or veterinary use.;
-    @HiveField(16) CodeableConcept? domain,
+    CodeableConcept? domain,
 
     /// [grade] The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
-    @HiveField(17) List<CodeableConcept>? grade,
+    List<CodeableConcept>? grade,
 
     /// [description] Textual description of the substance.;
-    @HiveField(18) Markdown? description,
+    Markdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
-    @HiveField(19) @JsonKey(name: '_description') Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [informationSource] Supporting literature.;
-    @HiveField(20) List<Reference>? informationSource,
+    List<Reference>? informationSource,
 
     /// [note] Textual comment about the substance's catalogue or registry record.;
-    @HiveField(21) List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [manufacturer] The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.;
-    @HiveField(22) List<Reference>? manufacturer,
+    List<Reference>? manufacturer,
 
     /// [supplier] An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.;
-    @HiveField(23) List<Reference>? supplier,
+    List<Reference>? supplier,
 
     /// [moiety] Moiety, for structural modifications.;
-    @HiveField(24) List<SubstanceDefinitionMoiety>? moiety,
+    List<SubstanceDefinitionMoiety>? moiety,
 
     /// [property] General specifications for this substance.;
-    @HiveField(25) List<SubstanceDefinitionProperty>? property,
+    List<SubstanceDefinitionProperty>? property,
 
     /// [molecularWeight] The molecular weight or weight range (for proteins, polymers or nucleic acids).;
-    @HiveField(26) List<SubstanceDefinitionMolecularWeight>? molecularWeight,
+    List<SubstanceDefinitionMolecularWeight>? molecularWeight,
 
     /// [structure] Structural information.;
-    @HiveField(27) SubstanceDefinitionStructure? structure,
+    SubstanceDefinitionStructure? structure,
 
     /// [code] Codes associated with the substance.;
-    @HiveField(28) List<SubstanceDefinitionCode>? code,
+    List<SubstanceDefinitionCode>? code,
 
     /// [name] Names applicable to this substance.;
-    @HiveField(29) List<SubstanceDefinitionName>? name,
+    List<SubstanceDefinitionName>? name,
 
     /// [relationship] A link between this substance and another, with details of the relationship.;
-    @HiveField(30) List<SubstanceDefinitionRelationship>? relationship,
+    List<SubstanceDefinitionRelationship>? relationship,
 
     /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-    @HiveField(31) SubstanceDefinitionSourceMaterial? sourceMaterial,
+    SubstanceDefinitionSourceMaterial? sourceMaterial,
   }) = _SubstanceDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4062,7 +3920,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinition.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinition], accepts a
@@ -4181,7 +4039,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionMoietyFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionMoiety], accepts a
@@ -4280,7 +4138,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionProperty], accepts a
@@ -4467,7 +4325,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionStructureFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionStructure], accepts a
@@ -4641,7 +4499,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionCode.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionCodeFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionCode], accepts a
@@ -4765,7 +4623,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionNameFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionName], accepts a
@@ -4844,7 +4702,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionOfficialFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionOfficial], accepts a
@@ -4964,7 +4822,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionRelationshipFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionRelationship], accepts a

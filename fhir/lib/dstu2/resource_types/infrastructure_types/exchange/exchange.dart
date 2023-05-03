@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(Dstu2ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -55,7 +54,7 @@ class MessageHeader with Resource, _$MessageHeader {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeader], accepts a
@@ -75,10 +74,10 @@ class MessageHeader with Resource, _$MessageHeader {
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    required FhirId identifier,
+    required Id identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: ResponseCode.unknown) required ResponseCode code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -100,7 +99,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderResponse], accepts a
@@ -120,7 +119,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -149,7 +148,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderSource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderSource], accepts a
@@ -169,7 +168,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -194,7 +193,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderDestination], accepts a
@@ -217,7 +216,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(Dstu2ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -246,7 +245,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationOutcome.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 
   /// Acts like a constructor, returns a [OperationOutcome], accepts a
@@ -266,7 +265,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: IssueSeverity.unknown)
@@ -292,7 +291,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 
   /// Acts like a constructor, returns a [OperationOutcomeIssue], accepts a
@@ -315,7 +314,7 @@ class Parameters with Resource, _$Parameters {
     @Default(Dstu2ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -336,7 +335,7 @@ class Parameters with Resource, _$Parameters {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Parameters.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
 
   /// Acts like a constructor, returns a [Parameters], accepts a
@@ -356,7 +355,7 @@ class Parameters with Resource, _$Parameters {
 class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
@@ -413,7 +412,7 @@ class ParametersParameter with _$ParametersParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ParametersParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 
   /// Acts like a constructor, returns a [ParametersParameter], accepts a
@@ -436,7 +435,7 @@ class Subscription with Resource, _$Subscription {
     @Default(Dstu2ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -474,7 +473,7 @@ class Subscription with Resource, _$Subscription {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Subscription.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 
   /// Acts like a constructor, returns a [Subscription], accepts a
@@ -494,7 +493,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ChannelType.unknown) required ChannelType type,
@@ -522,7 +521,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionChannel.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionChannel], accepts a

@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -274,7 +273,7 @@ class CodeSystem with Resource, _$CodeSystem {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -503,7 +502,7 @@ class CodeSystem with Resource, _$CodeSystem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystem], accepts a
@@ -642,7 +641,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemFilterFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemFilter], accepts a
@@ -786,7 +785,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemProperty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemProperty], accepts a
@@ -937,7 +936,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemConceptFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemConcept], accepts a
@@ -1065,7 +1064,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemDesignationFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemDesignation], accepts a
@@ -1237,7 +1236,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemProperty1FromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemProperty1], accepts a
@@ -1499,7 +1498,7 @@ class ConceptMap with Resource, _$ConceptMap {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1706,7 +1705,7 @@ class ConceptMap with Resource, _$ConceptMap {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMap], accepts a
@@ -1829,7 +1828,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapGroupFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapGroup], accepts a
@@ -1968,7 +1967,7 @@ class ConceptMapElement with _$ConceptMapElement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapElement], accepts a
@@ -2127,7 +2126,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapTarget.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapTarget], accepts a
@@ -2305,7 +2304,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueId] Property value that the map depends on.
-    FhirId? valueId,
+    Id? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2329,7 +2328,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapDependsOnFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapDependsOn], accepts a
@@ -2490,7 +2489,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapUnmappedFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapUnmapped], accepts a
@@ -2741,7 +2740,7 @@ class NamingSystem with Resource, _$NamingSystem {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2943,7 +2942,7 @@ class NamingSystem with Resource, _$NamingSystem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
 
   /// Acts like a constructor, returns a [NamingSystem], accepts a
@@ -3104,7 +3103,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
 
   /// Acts like a constructor, returns a [NamingSystemUniqueId], accepts a
@@ -3348,7 +3347,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3532,7 +3531,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilities], accepts a
@@ -3654,7 +3653,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesSoftwareFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesSoftware],
@@ -4077,7 +4076,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesVersionFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesVersion],
@@ -4198,7 +4197,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesFilterFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesFilter],
@@ -4809,7 +4808,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesClosureFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesClosure],
@@ -5063,7 +5062,7 @@ class ValueSet with Resource, _$ValueSet {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    FhirId? id,
+    Id? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5256,7 +5255,7 @@ class ValueSet with Resource, _$ValueSet {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSet], accepts a
@@ -5410,7 +5409,7 @@ class ValueSetCompose with _$ValueSetCompose {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetCompose.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetCompose], accepts a
@@ -5567,7 +5566,7 @@ class ValueSetInclude with _$ValueSetInclude {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetInclude.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetInclude], accepts a
@@ -5696,7 +5695,7 @@ class ValueSetConcept with _$ValueSetConcept {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetConcept], accepts a
@@ -5829,7 +5828,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetDesignation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
       _$ValueSetDesignationFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetDesignation], accepts a
@@ -5965,7 +5964,7 @@ class ValueSetFilter with _$ValueSetFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFilterFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetFilter], accepts a
@@ -6145,7 +6144,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetExpansion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetExpansion], accepts a
@@ -6327,7 +6326,7 @@ class ValueSetParameter with _$ValueSetParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetParameterFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetParameter], accepts a
@@ -6450,7 +6449,7 @@ class ValueSetProperty with _$ValueSetProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetProperty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetProperty.fromJson(Map<String, dynamic> json) =>
       _$ValueSetPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetProperty], accepts a
@@ -6642,7 +6641,7 @@ class ValueSetContains with _$ValueSetContains {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetContains.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContainsFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetContains], accepts a
@@ -6822,7 +6821,7 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetProperty1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetProperty1.fromJson(Map<String, dynamic> json) =>
       _$ValueSetProperty1FromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetProperty1], accepts a
@@ -6999,7 +6998,7 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetSubProperty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetSubProperty.fromJson(Map<String, dynamic> json) =>
       _$ValueSetSubPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetSubProperty], accepts a
@@ -7123,7 +7122,7 @@ class ValueSetScope with _$ValueSetScope {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetScope.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ValueSetScope.fromJson(Map<String, dynamic> json) =>
       _$ValueSetScopeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetScope], accepts a

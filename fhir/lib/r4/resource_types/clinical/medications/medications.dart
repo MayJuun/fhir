@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -170,45 +168,37 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
-  @HiveType(typeId: 42, adapterName: 'ImmunizationAdapter')
   factory Immunization({
     @Default(R4ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
 
-    /// [resourceType] This is a Immunization resource
-    @HiveField(0)
+        /// [resourceType] This is a Immunization resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -217,15 +207,13 @@ class Immunization with Resource, _$Immunization {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -234,7 +222,6 @@ class Immunization with Resource, _$Immunization {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -250,185 +237,147 @@ class Immunization with Resource, _$Immunization {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this immunization record.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] Indicates the current status of the immunization event.
-    @HiveField(12)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [statusReason] Indicates the reason the immunization event was not
     ///  performed.
-    @HiveField(14)
-        CodeableConcept? statusReason,
+    CodeableConcept? statusReason,
 
     /// [vaccineCode] Vaccine that was administered or was to be administered.
-    @HiveField(15)
-        required CodeableConcept vaccineCode,
+    required CodeableConcept vaccineCode,
 
     /// [patient] The patient who either received or did not receive the
     ///  immunization.
-    @HiveField(16)
-        required Reference patient,
+    required Reference patient,
 
     /// [encounter] The visit or admission or other contact between patient and
     ///  health care provider the immunization was performed as part of.
-    @HiveField(17)
-        Reference? encounter,
+    Reference? encounter,
 
     /// [occurrenceDateTime] Date vaccine administered or was to be administered.
-    @HiveField(18)
-        FhirDateTime? occurrenceDateTime,
+    FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
     @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(19)
         Element? occurrenceDateTimeElement,
 
     /// [occurrenceString] Date vaccine administered or was to be administered.
-    @HiveField(20)
-        String? occurrenceString,
+    String? occurrenceString,
 
     /// [occurrenceStringElement] Extensions for occurrenceString
     @JsonKey(name: '_occurrenceString')
-    @HiveField(21)
         Element? occurrenceStringElement,
 
     /// [recorded] The date the occurrence of the immunization was first captured
     /// in the record - potentially significantly after the occurrence of the
     ///  event.
-    @HiveField(22)
-        FhirDateTime? recorded,
+    FhirDateTime? recorded,
 
     /// [recordedElement] Extensions for recorded
     @JsonKey(name: '_recorded')
-    @HiveField(23)
         Element? recordedElement,
 
     /// [primarySource] An indication that the content of the record is based on
     /// information from the person who administered the vaccine. This reflects
     ///  the context under which the data was originally recorded.
-    @HiveField(24)
-        Boolean? primarySource,
+    Boolean? primarySource,
 
     /// [primarySourceElement] Extensions for primarySource
     @JsonKey(name: '_primarySource')
-    @HiveField(25)
         Element? primarySourceElement,
 
     /// [reportOrigin] The source of the data when the report of the immunization
     /// event is not based on information from the person who administered the
     ///  vaccine.
-    @HiveField(26)
-        CodeableConcept? reportOrigin,
+    CodeableConcept? reportOrigin,
 
     /// [location] The service delivery location where the vaccine administration
     ///  occurred.
-    @HiveField(27)
-        Reference? location,
+    Reference? location,
 
     /// [manufacturer] Name of vaccine manufacturer.
-    @HiveField(28)
-        Reference? manufacturer,
+    Reference? manufacturer,
 
     /// [lotNumber] Lot number of the  vaccine product.
-    @HiveField(29)
-        String? lotNumber,
+    String? lotNumber,
 
     /// [lotNumberElement] Extensions for lotNumber
     @JsonKey(name: '_lotNumber')
-    @HiveField(30)
         Element? lotNumberElement,
 
     /// [expirationDate] Date vaccine batch expires.
-    @HiveField(31)
-        Date? expirationDate,
+    Date? expirationDate,
 
     /// [expirationDateElement] Extensions for expirationDate
     @JsonKey(name: '_expirationDate')
-    @HiveField(32)
         Element? expirationDateElement,
 
     /// [site] Body site where vaccine was administered.
-    @HiveField(33)
-        CodeableConcept? site,
+    CodeableConcept? site,
 
     /// [route] The path by which the vaccine product is taken into the body.
-    @HiveField(34)
-        CodeableConcept? route,
+    CodeableConcept? route,
 
     /// [doseQuantity] The quantity of vaccine product that was administered.
-    @HiveField(35)
-        Quantity? doseQuantity,
+    Quantity? doseQuantity,
 
     /// [performer] Indicates who performed the immunization event.
-    @HiveField(36)
-        List<ImmunizationPerformer>? performer,
+    List<ImmunizationPerformer>? performer,
 
     /// [note] Extra information about the immunization that is not conveyed by
     ///  the other attributes.
-    @HiveField(37)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [reasonCode] Reasons why the vaccine was administered.
-    @HiveField(38)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Condition, Observation or DiagnosticReport that
     ///  supports why the immunization was administered.
-    @HiveField(39)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [isSubpotent] Indication if a dose is considered to be subpotent. By
     ///  default, a dose should be considered to be potent.
-    @HiveField(40)
-        Boolean? isSubpotent,
+    Boolean? isSubpotent,
 
     /// [isSubpotentElement] Extensions for isSubpotent
     @JsonKey(name: '_isSubpotent')
-    @HiveField(41)
         Element? isSubpotentElement,
 
     /// [subpotentReason] Reason why a dose is considered to be subpotent.
-    @HiveField(42)
-        List<CodeableConcept>? subpotentReason,
+    List<CodeableConcept>? subpotentReason,
 
     /// [education] Educational material presented to the patient (or guardian)
     ///  at the time of vaccine administration.
-    @HiveField(43)
-        List<ImmunizationEducation>? education,
+    List<ImmunizationEducation>? education,
 
     /// [programEligibility] Indicates a patient's eligibility for a funding
     ///  program.
-    @HiveField(44)
-        List<CodeableConcept>? programEligibility,
+    List<CodeableConcept>? programEligibility,
 
     /// [fundingSource] Indicates the source of the vaccine actually
     /// administered. This may be different than the patient eligibility (e.g. the
     /// patient may be eligible for a publically purchased vaccine but due to
     /// inventory issues, vaccine purchased with private funds was actually
     ///  administered).
-    @HiveField(45)
-        CodeableConcept? fundingSource,
+    CodeableConcept? fundingSource,
 
     /// [reaction] Categorical data indicating that an adverse event is
     ///  associated in time to an immunization.
-    @HiveField(46)
-        List<ImmunizationReaction>? reaction,
+    List<ImmunizationReaction>? reaction,
 
     /// [protocolApplied] The protocol (set of recommendations) being followed by
     ///  the provider who administered the dose.
-    @HiveField(47)
-        List<ImmunizationProtocolApplied>? protocolApplied,
+    List<ImmunizationProtocolApplied>? protocolApplied,
   }) = _Immunization;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -443,7 +392,7 @@ class Immunization with Resource, _$Immunization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Immunization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
 
   /// Acts like a constructor, returns a [Immunization], accepts a
@@ -548,7 +497,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationPerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationPerformer.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationPerformerFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationPerformer], accepts a
@@ -685,7 +634,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationEducation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationEducation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationEducationFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationEducation], accepts a
@@ -803,7 +752,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationReaction], accepts a
@@ -970,7 +919,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationProtocolApplied.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationProtocolApplied.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationProtocolAppliedFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationProtocolApplied], accepts a
@@ -1104,45 +1053,37 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
-  @HiveType(typeId: 43, adapterName: 'ImmunizationEvaluationAdapter')
   factory ImmunizationEvaluation({
     @Default(R4ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
 
-    /// [resourceType] This is a ImmunizationEvaluation resource
-    @HiveField(0)
+        /// [resourceType] This is a ImmunizationEvaluation resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1151,15 +1092,13 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1168,7 +1107,6 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1184,117 +1122,93 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this immunization evaluation
     ///  record.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [status] Indicates the current status of the evaluation of the
     ///  vaccination administration event.
-    @HiveField(12)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [patient] The individual for whom the evaluation is being done.
-    @HiveField(14)
-        required Reference patient,
+    required Reference patient,
 
     /// [date] The date the evaluation of the vaccine administration event was
     ///  performed.
-    @HiveField(15)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(16)
         Element? dateElement,
 
     /// [authority] Indicates the authority who published the protocol (e.g.
     ///  ACIP).
-    @HiveField(17)
-        Reference? authority,
+    Reference? authority,
 
     /// [targetDisease] The vaccine preventable disease the dose is being
     ///  evaluated against.
-    @HiveField(18)
-        required CodeableConcept targetDisease,
+    required CodeableConcept targetDisease,
 
     /// [immunizationEvent] The vaccine administration event being evaluated.
-    @HiveField(19)
-        required Reference immunizationEvent,
+    required Reference immunizationEvent,
 
     /// [doseStatus] Indicates if the dose is valid or not valid with respect to
     ///  the published recommendations.
-    @HiveField(20)
-        required CodeableConcept doseStatus,
+    required CodeableConcept doseStatus,
 
     /// [doseStatusReason] Provides an explanation as to why the vaccine
     /// administration event is valid or not relative to the published
     ///  recommendations.
-    @HiveField(21)
-        List<CodeableConcept>? doseStatusReason,
+    List<CodeableConcept>? doseStatusReason,
 
     /// [description] Additional information about the evaluation.
-    @HiveField(22)
-        String? description,
+    String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(23)
         Element? descriptionElement,
 
     /// [series] One possible path to achieve presumed immunity against a disease
     ///  - within the context of an authority.
-    @HiveField(24)
-        String? series,
+    String? series,
 
     /// [seriesElement] Extensions for series
     @JsonKey(name: '_series')
-    @HiveField(25)
         Element? seriesElement,
 
     /// [doseNumberPositiveInt] Nominal position in a series.
-    @HiveField(26)
-        PositiveInt? doseNumberPositiveInt,
+    PositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
-    /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
-    @HiveField(27)
+        /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
         Element? doseNumberPositiveIntElement,
 
     /// [doseNumberString] Nominal position in a series.
-    @HiveField(28)
-        String? doseNumberString,
+    String? doseNumberString,
 
     /// [doseNumberStringElement] Extensions for doseNumberString
     @JsonKey(name: '_doseNumberString')
-    @HiveField(29)
         Element? doseNumberStringElement,
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
-    @HiveField(30)
-        PositiveInt? seriesDosesPositiveInt,
+    PositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
-    /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
-    @HiveField(31)
+        /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
         Element? seriesDosesPositiveIntElement,
 
     /// [seriesDosesString] The recommended number of doses to achieve immunity.
-    @HiveField(32)
-        String? seriesDosesString,
+    String? seriesDosesString,
 
     /// [seriesDosesStringElement] Extensions for seriesDosesString
     @JsonKey(name: '_seriesDosesString')
-    @HiveField(33)
         Element? seriesDosesStringElement,
   }) = _ImmunizationEvaluation;
 
@@ -1310,7 +1224,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationEvaluation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationEvaluationFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationEvaluation], accepts a
@@ -1402,45 +1316,37 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///  ACIP).
   ///
   /// [recommendation] Vaccine administration recommendations.
-  @HiveType(typeId: 44, adapterName: 'ImmunizationRecommendationAdapter')
   factory ImmunizationRecommendation({
     @Default(R4ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
 
-    /// [resourceType] This is a ImmunizationRecommendation resource
-    @HiveField(0)
+        /// [resourceType] This is a ImmunizationRecommendation resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1449,15 +1355,13 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1466,7 +1370,6 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1482,35 +1385,28 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this particular
     ///  recommendation record.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [patient] The patient the recommendation(s) are for.
-    @HiveField(12)
-        required Reference patient,
+    required Reference patient,
 
     /// [date] The date the immunization recommendation(s) were created.
-    @HiveField(13)
-        FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
-    @HiveField(14)
         Element? dateElement,
 
     /// [authority] Indicates the authority who published the protocol (e.g.
     ///  ACIP).
-    @HiveField(15)
-        Reference? authority,
+    Reference? authority,
 
     /// [recommendation] Vaccine administration recommendations.
-    @HiveField(16)
-        required List<ImmunizationRecommendationRecommendation> recommendation,
+    required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1525,7 +1421,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
 
   /// Acts like a constructor, returns a [ImmunizationRecommendation], accepts a
@@ -1943,45 +1839,37 @@ class Medication with Resource, _$Medication {
   ///  product.
   ///
   /// [batch] Information that only applies to packages (not products).
-  @HiveType(typeId: 45, adapterName: 'MedicationAdapter')
   factory Medication({
     @Default(R4ResourceType.Medication)
     @JsonKey(unknownEnumValue: R4ResourceType.Medication)
 
-    /// [resourceType] This is a Medication resource
-    @HiveField(0)
+        /// [resourceType] This is a Medication resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1990,15 +1878,13 @@ class Medication with Resource, _$Medication {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2007,7 +1893,6 @@ class Medication with Resource, _$Medication {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2023,56 +1908,46 @@ class Medication with Resource, _$Medication {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifier for this medication.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [code] A code (or set of codes) that specify this medication, or a
     /// textual description if no code is available. Usage note: This could be a
     /// standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc.
     /// It could also be a national or local formulary code, optionally with
     ///  translations to other code systems.
-    @HiveField(12)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [status] A code to indicate if the medication is in active use.
-    @HiveField(13)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(14)
         Element? statusElement,
 
     /// [manufacturer] Describes the details of the manufacturer of the
     /// medication product.  This is not intended to represent the distributor of
     ///  a medication product.
-    @HiveField(15)
-        Reference? manufacturer,
+    Reference? manufacturer,
 
     /// [form] Describes the form of the item.  Powder; tablets; capsule.
-    @HiveField(16)
-        CodeableConcept? form,
+    CodeableConcept? form,
 
     /// [amount] Specific amount of the drug in the packaged product.  For
     /// example, when specifying a product that has the same strength (For
     /// example, Insulin glargine 100 unit per mL solution for injection), this
     /// attribute provides additional clarification of the package amount (For
     ///  example, 3 mL, 10mL, etc.).
-    @HiveField(17)
-        Ratio? amount,
+    Ratio? amount,
 
     /// [ingredient] Identifies a particular constituent of interest in the
     ///  product.
-    @HiveField(18)
-        List<MedicationIngredient>? ingredient,
+    List<MedicationIngredient>? ingredient,
 
     /// [batch] Information that only applies to packages (not products).
-    @HiveField(19)
-        MedicationBatch? batch,
+    MedicationBatch? batch,
   }) = _Medication;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2087,7 +1962,7 @@ class Medication with Resource, _$Medication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Medication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Medication.fromJson(Map<String, dynamic> json) =>
       _$MedicationFromJson(json);
 
   /// Acts like a constructor, returns a [Medication], accepts a
@@ -2216,7 +2091,7 @@ class MedicationIngredient with _$MedicationIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationIngredient], accepts a
@@ -2330,7 +2205,7 @@ class MedicationBatch with _$MedicationBatch {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationBatch.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationBatchFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationBatch], accepts a
@@ -2492,45 +2367,37 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
-  @HiveType(typeId: 46, adapterName: 'MedicationAdministrationAdapter')
   factory MedicationAdministration({
     @Default(R4ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
 
-    /// [resourceType] This is a MedicationAdministration resource
-    @HiveField(0)
+        /// [resourceType] This is a MedicationAdministration resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2539,15 +2406,13 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2556,7 +2421,6 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2572,8 +2436,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers associated with this Medication Administration
     /// that are defined by business processes and/or used to refer to it when a
@@ -2581,134 +2444,108 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// business identifiers assigned to this resource by the performer or other
     /// systems and remain constant as the resource is updated and propagates from
     ///  server to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [instantiates] A protocol, guideline, orderset, or other definition that
     ///  was adhered to in whole or in part by this event.
-    @HiveField(12)
-        List<FhirUri>? instantiates,
+    List<FhirUri>? instantiates,
 
     /// [instantiatesElement] Extensions for instantiates
     @JsonKey(name: '_instantiates')
-    @HiveField(13)
         List<Element?>? instantiatesElement,
 
     /// [partOf] A larger event of which this particular event is a component or
     ///  step.
-    @HiveField(14)
-        List<Reference>? partOf,
+    List<Reference>? partOf,
 
     /// [status] Will generally be set to show that the administration has been
     /// completed.  For some long running administrations such as infusions, it is
     /// possible for an administration to be started but not completed or it may
     ///  be paused while some other process is under way.
-    @HiveField(15)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(16)
         Element? statusElement,
 
     /// [statusReason] A code indicating why the administration was not
     ///  performed.
-    @HiveField(17)
-        List<CodeableConcept>? statusReason,
+    List<CodeableConcept>? statusReason,
 
     /// [category] Indicates where the medication is expected to be consumed or
     ///  administered.
-    @HiveField(18)
-        CodeableConcept? category,
+    CodeableConcept? category,
 
     /// [medicationCodeableConcept] Identifies the medication that was
     /// administered. This is either a link to a resource representing the details
     /// of the medication or a simple attribute carrying a code that identifies
     ///  the medication from a known list of medications.
-    @HiveField(19)
-        CodeableConcept? medicationCodeableConcept,
+    CodeableConcept? medicationCodeableConcept,
 
     /// [medicationReference] Identifies the medication that was administered.
     /// This is either a link to a resource representing the details of the
     /// medication or a simple attribute carrying a code that identifies the
     ///  medication from a known list of medications.
-    @HiveField(20)
-        Reference? medicationReference,
+    Reference? medicationReference,
 
     /// [subject] The person or animal or group receiving the medication.
-    @HiveField(21)
-        required Reference subject,
+    required Reference subject,
 
     /// [context] The visit, admission, or other contact between patient and
     /// health care provider during which the medication administration was
     ///  performed.
-    @HiveField(22)
-        Reference? context,
+    Reference? context,
 
     /// [supportingInformation] Additional information (for example, patient
     ///  height and weight) that supports the administration of the medication.
-    @HiveField(23)
-        List<Reference>? supportingInformation,
+    List<Reference>? supportingInformation,
 
     /// [effectiveDateTime] A specific date/time or interval of time during which
     /// the administration took place (or did not take place, when the 'notGiven'
     /// attribute is true). For many administrations, such as swallowing a tablet
     ///  the use of dateTime is more appropriate.
-    @HiveField(24)
-        FhirDateTime? effectiveDateTime,
+    FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
     @JsonKey(name: '_effectiveDateTime')
-    @HiveField(25)
         Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] A specific date/time or interval of time during which
     /// the administration took place (or did not take place, when the 'notGiven'
     /// attribute is true). For many administrations, such as swallowing a tablet
     ///  the use of dateTime is more appropriate.
-    @HiveField(26)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [performer] Indicates who or what performed the medication administration
     ///  and how they were involved.
-    @HiveField(27)
-        List<MedicationAdministrationPerformer>? performer,
+    List<MedicationAdministrationPerformer>? performer,
 
     /// [reasonCode] A code indicating why the medication was given.
-    @HiveField(28)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Condition or observation that supports why the
     ///  medication was administered.
-    @HiveField(29)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [request] The original request, instruction or authority to perform the
     ///  administration.
-    @HiveField(30)
-        Reference? request,
+    Reference? request,
 
     /// [device] The device used in administering the medication to the patient.
     ///  For example, a particular infusion pump.
-    @HiveField(31)
-        List<Reference>? device,
+    List<Reference>? device,
 
     /// [note] Extra information about the medication administration that is not
     ///  conveyed by the other attributes.
-    @HiveField(32)
-        List<Annotation>? note,
-    @HiveField(33)
+    List<Annotation>? note,
 
     /// [dosage] Describes the medication dosage information details e.g. dose,
     ///  rate, site, route, etc.
-    @HiveField(34)
-        MedicationAdministrationDosage? dosage,
-    @HiveField(35)
+    MedicationAdministrationDosage? dosage,
 
     /// [eventHistory] A summary of the events of interest that have occurred,
     ///  such as when the administration was verified.
-    @HiveField(36)
-        List<Reference>? eventHistory,
+    List<Reference>? eventHistory,
   }) = _MedicationAdministration;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2723,7 +2560,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationAdministration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationAdministration], accepts a
@@ -2994,7 +2831,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationAdministrationDosage], accepts a
@@ -3169,45 +3006,37 @@ class MedicationDispense with Resource, _$MedicationDispense {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
-  @HiveType(typeId: 47, adapterName: 'MedicationDispenseAdapter')
   factory MedicationDispense({
     @Default(R4ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
 
-    /// [resourceType] This is a MedicationDispense resource
-    @HiveField(0)
+        /// [resourceType] This is a MedicationDispense resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3216,15 +3045,13 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3233,7 +3060,6 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3249,8 +3075,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers associated with this Medication Dispense that
     /// are defined by business processes and/or used to refer to it when a direct
@@ -3258,158 +3083,126 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// identifiers assigned to this resource by the performer or other systems
     /// and remain constant as the resource is updated and propagates from server
     ///  to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [partOf] The procedure that trigger the dispense.
-    @HiveField(12)
-        List<Reference>? partOf,
+    List<Reference>? partOf,
 
     /// [status] A code specifying the state of the set of dispense events.
-    @HiveField(13)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(14)
         Element? statusElement,
 
     /// [statusReasonCodeableConcept] Indicates the reason why a dispense was not
     ///  performed.
-    @HiveField(15)
-        CodeableConcept? statusReasonCodeableConcept,
+    CodeableConcept? statusReasonCodeableConcept,
 
     /// [statusReasonReference] Indicates the reason why a dispense was not
     ///  performed.
-    @HiveField(16)
-        Reference? statusReasonReference,
+    Reference? statusReasonReference,
 
     /// [category] Indicates the type of medication dispense (for example, where
     /// the medication is expected to be consumed or administered (i.e. inpatient
     ///  or outpatient)).
-    @HiveField(17)
-        CodeableConcept? category,
+    CodeableConcept? category,
 
     /// [medicationCodeableConcept] Identifies the medication being administered.
     /// This is either a link to a resource representing the details of the
     /// medication or a simple attribute carrying a code that identifies the
     ///  medication from a known list of medications.
-    @HiveField(18)
-        CodeableConcept? medicationCodeableConcept,
+    CodeableConcept? medicationCodeableConcept,
 
     /// [medicationReference] Identifies the medication being administered. This
     /// is either a link to a resource representing the details of the medication
     /// or a simple attribute carrying a code that identifies the medication from
     ///  a known list of medications.
-    @HiveField(19)
-        Reference? medicationReference,
+    Reference? medicationReference,
 
     /// [subject] A link to a resource representing the person or the group to
     ///  whom the medication will be given.
-    @HiveField(20)
-        Reference? subject,
+    Reference? subject,
 
     /// [context] The encounter or episode of care that establishes the context
     ///  for this event.
-    @HiveField(21)
-        Reference? context,
+    Reference? context,
 
     /// [supportingInformation] Additional information that supports the
     ///  medication being dispensed.
-    @HiveField(22)
-        List<Reference>? supportingInformation,
+    List<Reference>? supportingInformation,
 
     /// [performer] Indicates who or what performed the event.
-    @HiveField(23)
-        List<MedicationDispensePerformer>? performer,
+    List<MedicationDispensePerformer>? performer,
 
     /// [location] The principal physical location where the dispense was
     ///  performed.
-    @HiveField(24)
-        Reference? location,
+    Reference? location,
 
     /// [authorizingPrescription] Indicates the medication order that is being
     ///  dispensed against.
-    @HiveField(25)
-        List<Reference>? authorizingPrescription,
+    List<Reference>? authorizingPrescription,
 
     /// [type] Indicates the type of dispensing event that is performed. For
-    @HiveField(26)
-
     /// example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
     ///  Samples, etc.
-    @HiveField(27)
-        CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [quantity] The amount of medication that has been dispensed. Includes
     ///  unit of measure.
-    @HiveField(28)
-        Quantity? quantity,
+    Quantity? quantity,
 
     /// [daysSupply] The amount of medication expressed as a timing amount.
-    @HiveField(29)
-        Quantity? daysSupply,
+    Quantity? daysSupply,
 
     /// [whenPrepared] The time when the dispensed product was packaged and
     ///  reviewed.
-    @HiveField(30)
-        FhirDateTime? whenPrepared,
+    FhirDateTime? whenPrepared,
 
     /// [whenPreparedElement] Extensions for whenPrepared
     @JsonKey(name: '_whenPrepared')
-    @HiveField(31)
         Element? whenPreparedElement,
 
     /// [whenHandedOver] The time the dispensed product was provided to the
     ///  patient or their representative.
-    @HiveField(32)
-        FhirDateTime? whenHandedOver,
+    FhirDateTime? whenHandedOver,
 
     /// [whenHandedOverElement] Extensions for whenHandedOver
     @JsonKey(name: '_whenHandedOver')
-    @HiveField(33)
         Element? whenHandedOverElement,
 
     /// [destination] Identification of the facility/location where the
     ///  medication was shipped to, as part of the dispense event.
-    @HiveField(34)
-        Reference? destination,
+    Reference? destination,
 
     /// [receiver] Identifies the person who picked up the medication.  This will
     /// usually be a patient or their caregiver, but some cases exist where it can
     ///  be a healthcare professional.
-    @HiveField(35)
-        List<Reference>? receiver,
+    List<Reference>? receiver,
 
     /// [note] Extra information about the dispense that could not be conveyed in
     ///  the other attributes.
-    @HiveField(36)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [dosageInstruction] Indicates how the medication is to be used by the
     ///  patient.
-    @HiveField(37)
-        List<Dosage>? dosageInstruction,
+    List<Dosage>? dosageInstruction,
 
     /// [substitution] Indicates whether or not substitution was made as part of
     /// the dispense.  In some cases, substitution will be expected but does not
     /// happen, in other cases substitution is not expected but does happen.  This
     /// block explains what substitution did or did not happen and why.  If
     ///  nothing is specified, substitution was not done.
-    @HiveField(38)
-        MedicationDispenseSubstitution? substitution,
+    MedicationDispenseSubstitution? substitution,
 
     /// [detectedIssue] Indicates an actual or potential clinical issue with or
     /// between one or more active or proposed clinical actions for a patient;
     ///  e.g. drug-drug interaction, duplicate therapy, dosage alert etc.
-    @HiveField(39)
-        List<Reference>? detectedIssue,
-    @HiveField(40)
+    List<Reference>? detectedIssue,
 
     /// [eventHistory] A summary of the events of interest that have occurred,
     ///  such as when the dispense was verified.
-    @HiveField(41)
-        List<Reference>? eventHistory,
+    List<Reference>? eventHistory,
   }) = _MedicationDispense;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3424,7 +3217,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispense.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationDispense], accepts a
@@ -3533,7 +3326,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispensePerformerFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationDispensePerformer], accepts a
@@ -3662,7 +3455,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationDispenseSubstitution], accepts a
@@ -3815,45 +3608,37 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  @HiveType(typeId: 48, adapterName: 'MedicationKnowledgeAdapter')
   factory MedicationKnowledge({
     @Default(R4ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
 
-    /// [resourceType] This is a MedicationKnowledge resource
-    @HiveField(0)
+        /// [resourceType] This is a MedicationKnowledge resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3862,15 +3647,13 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3879,7 +3662,6 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3895,143 +3677,112 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [code] A code that specifies this medication, or a textual description if
     /// no code is available. Usage note: This could be a standard medication code
     /// such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a
     /// national or local formulary code, optionally with translations to other
     ///  code systems.
-    @HiveField(11)
-        CodeableConcept? code,
+    CodeableConcept? code,
 
     /// [status] A code to indicate if the medication is in active use.  The
     /// status refers to the validity about the information of the medication and
     ///  not to its medicinal properties.
-    @HiveField(12)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(13)
         Element? statusElement,
 
     /// [manufacturer] Describes the details of the manufacturer of the
     /// medication product.  This is not intended to represent the distributor of
     ///  a medication product.
-    @HiveField(14)
-        Reference? manufacturer,
+    Reference? manufacturer,
 
     /// [doseForm] Describes the form of the item.  Powder; tablets; capsule.
-    @HiveField(15)
-        CodeableConcept? doseForm,
+    CodeableConcept? doseForm,
 
     /// [amount] Specific amount of the drug in the packaged product.  For
     /// example, when specifying a product that has the same strength (For
     /// example, Insulin glargine 100 unit per mL solution for injection), this
     /// attribute provides additional clarification of the package amount (For
     ///  example, 3 mL, 10mL, etc.).
-    @HiveField(16)
-        Quantity? amount,
+    Quantity? amount,
 
     /// [synonym] Additional names for a medication, for example, the name(s)
     /// given to a medication in different countries.  For example, acetaminophen
     ///  and paracetamol or salbutamol and albuterol.
-    @HiveField(17)
-        List<String>? synonym,
+    List<String>? synonym,
 
     /// [synonymElement] Extensions for synonym
     @JsonKey(name: '_synonym')
-    @HiveField(18)
         List<Element?>? synonymElement,
+    List<MedicationKnowledgeRelatedMedicationKnowledge>?
 
-    /// [relatedMedicationKnowledge] Associated or related knowledge about a
-    ///  medication.
-    @HiveField(19)
-        List<MedicationKnowledgeRelatedMedicationKnowledge>?
-            relatedMedicationKnowledge,
-    @HiveField(20)
+        /// [relatedMedicationKnowledge] Associated or related knowledge about a
+        ///  medication.
+        relatedMedicationKnowledge,
 
     /// [associatedMedication] Associated or related medications.  For example,
     /// if the medication is a branded product (e.g. Crestor), this is the
     /// Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication
     ///  (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).
-    @HiveField(21)
-        List<Reference>? associatedMedication,
+    List<Reference>? associatedMedication,
 
     /// [productType] Category of the medication or product (e.g. branded
     ///  product, therapeutic moeity, generic product, innovator product, etc.).
-    @HiveField(22)
-        List<CodeableConcept>? productType,
+    List<CodeableConcept>? productType,
 
     /// [monograph] Associated documentation about the medication.
-    @HiveField(23)
-        List<MedicationKnowledgeMonograph>? monograph,
+    List<MedicationKnowledgeMonograph>? monograph,
 
     /// [ingredient] Identifies a particular constituent of interest in the
     ///  product.
-    @HiveField(24)
-        List<MedicationKnowledgeIngredient>? ingredient,
+    List<MedicationKnowledgeIngredient>? ingredient,
 
     /// [preparationInstruction] The instructions for preparing the medication.
-    @HiveField(25)
-        Markdown? preparationInstruction,
+    Markdown? preparationInstruction,
     @JsonKey(name: '_preparationInstruction')
 
-    /// [preparationInstructionElement] Extensions for preparationInstruction
-    @HiveField(26)
+        /// [preparationInstructionElement] Extensions for preparationInstruction
         Element? preparationInstructionElement,
 
     /// [intendedRoute] The intended or approved route of administration.
-    @HiveField(27)
-        List<CodeableConcept>? intendedRoute,
+    List<CodeableConcept>? intendedRoute,
 
     /// [cost] The price of the medication.
-    @HiveField(28)
-        List<MedicationKnowledgeCost>? cost,
+    List<MedicationKnowledgeCost>? cost,
 
     /// [monitoringProgram] The program under which the medication is reviewed.
-    @HiveField(29)
-        List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
+    List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
 
     /// [administrationGuidelines] Guidelines for the administration of the
     ///  medication.
-    @HiveField(30)
-        List<MedicationKnowledgeAdministrationGuidelines>?
-            administrationGuidelines,
+    List<MedicationKnowledgeAdministrationGuidelines>? administrationGuidelines,
 
     /// [medicineClassification] Categorization of the medication within a
     ///  formulary or classification system.
-    @HiveField(31)
-        List<MedicationKnowledgeMedicineClassification>? medicineClassification,
+    List<MedicationKnowledgeMedicineClassification>? medicineClassification,
 
     /// [packaging] Information that only applies to packages (not products).
-    @HiveField(32)
-        MedicationKnowledgePackaging? packaging,
-    @HiveField(33)
+    MedicationKnowledgePackaging? packaging,
 
     /// [drugCharacteristic] Specifies descriptive properties of the medicine,
     ///  such as color, shape, imprints, etc.
-    @HiveField(34)
-        List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
+    List<MedicationKnowledgeDrugCharacteristic>? drugCharacteristic,
 
     /// [contraindication] Potential clinical issue with or between medication(s)
-    @HiveField(35)
-
     /// (for example, drug-drug interaction, drug-disease contraindication,
     ///  drug-allergy interaction, etc.).
-    @HiveField(36)
-        List<Reference>? contraindication,
+    List<Reference>? contraindication,
 
     /// [regulatory] Regulatory information about a medication.
-    @HiveField(37)
-        List<MedicationKnowledgeRegulatory>? regulatory,
+    List<MedicationKnowledgeRegulatory>? regulatory,
 
     /// [kinetics] The time course of drug absorption, distribution, metabolism
     ///  and excretion of a medication from the body.
-    @HiveField(38)
-        List<MedicationKnowledgeKinetics>? kinetics,
+    List<MedicationKnowledgeKinetics>? kinetics,
   }) = _MedicationKnowledge;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4046,7 +3797,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledge.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledge.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledge], accepts a
@@ -4243,7 +3994,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeMonographFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeMonograph], accepts a
@@ -4370,7 +4121,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeIngredient], accepts a
@@ -4484,7 +4235,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeCost.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeCost.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeCostFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeCost], accepts a
@@ -4791,7 +4542,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeDosageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeDosage], accepts a
@@ -5095,7 +4846,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgePackagingFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgePackaging], accepts a
@@ -5328,7 +5079,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeRegulatory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeRegulatory.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeRegulatoryFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeRegulatory], accepts a
@@ -5438,7 +5189,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeSubstitution.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeSubstitutionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeSubstitution], accepts a
@@ -5535,7 +5286,7 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeSchedule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeSchedule.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeScheduleFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeSchedule], accepts a
@@ -5640,7 +5391,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeMaxDispenseFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeMaxDispense], accepts a
@@ -5751,7 +5502,7 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeKinetics.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationKnowledgeKinetics.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeKineticsFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationKnowledgeKinetics], accepts a
@@ -5973,45 +5724,37 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  @HiveType(typeId: 49, adapterName: 'MedicationRequestAdapter')
   factory MedicationRequest({
     @Default(R4ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
 
-    /// [resourceType] This is a MedicationRequest resource
-    @HiveField(0)
+        /// [resourceType] This is a MedicationRequest resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -6020,15 +5763,13 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -6037,7 +5778,6 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -6053,8 +5793,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers associated with this medication request that are
     /// defined by business processes and/or used to refer to it when a direct URL
@@ -6062,202 +5801,161 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// identifiers assigned to this resource by the performer or other systems
     /// and remain constant as the resource is updated and propagates from server
     ///  to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
-    @HiveField(12)
+    List<Identifier>? identifier,
 
     /// [status] A code specifying the current state of the order.  Generally,
     ///  this will be active or completed state.
-    @HiveField(13)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(14)
         Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  MedicationRequest.
-    @HiveField(15)
-        CodeableConcept? statusReason,
+    CodeableConcept? statusReason,
 
     /// [intent] Whether the request is a proposal, plan, or an original order.
-    @HiveField(16)
-        Code? intent,
+    Code? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
-    @HiveField(17)
         Element? intentElement,
 
     /// [category] Indicates the type of medication request (for example, where
     /// the medication is expected to be consumed or administered (i.e. inpatient
     ///  or outpatient)).
-    @HiveField(18)
-        List<CodeableConcept>? category,
+    List<CodeableConcept>? category,
 
     /// [priority] Indicates how quickly the Medication Request should be
     ///  addressed with respect to other requests.
-    @HiveField(19)
-        Code? priority,
+    Code? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
-    @HiveField(20)
         Element? priorityElement,
 
     /// [doNotPerform] If true indicates that the provider is asking for the
     ///  medication request not to occur.
-    @HiveField(21)
-        Boolean? doNotPerform,
+    Boolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
-    @HiveField(22)
         Element? doNotPerformElement,
 
     /// [reportedBoolean] Indicates if this record was captured as a secondary
     /// 'reported' record rather than as an original primary source-of-truth
     ///  record.  It may also indicate the source of the report.
-    @HiveField(23)
-        Boolean? reportedBoolean,
+    Boolean? reportedBoolean,
 
     /// [reportedBooleanElement] Extensions for reportedBoolean
     @JsonKey(name: '_reportedBoolean')
-    @HiveField(24)
         Element? reportedBooleanElement,
 
     /// [reportedReference] Indicates if this record was captured as a secondary
     /// 'reported' record rather than as an original primary source-of-truth
     ///  record.  It may also indicate the source of the report.
-    @HiveField(25)
-        Reference? reportedReference,
+    Reference? reportedReference,
 
     /// [medicationCodeableConcept] Identifies the medication being requested.
     /// This is a link to a resource that represents the medication which may be
     /// the details of the medication or simply an attribute carrying a code that
     ///  identifies the medication from a known list of medications.
-    @HiveField(26)
-        CodeableConcept? medicationCodeableConcept,
+    CodeableConcept? medicationCodeableConcept,
 
     /// [medicationReference] Identifies the medication being requested. This is
     /// a link to a resource that represents the medication which may be the
     /// details of the medication or simply an attribute carrying a code that
     ///  identifies the medication from a known list of medications.
-    @HiveField(27)
-        Reference? medicationReference,
+    Reference? medicationReference,
 
     /// [subject] A link to a resource representing the person or set of
     ///  individuals to whom the medication will be given.
-    @HiveField(28)
-        required Reference subject,
+    required Reference subject,
 
     /// [encounter] The Encounter during which this [x] was created or to which
     ///  the creation of this record is tightly associated.
-    @HiveField(29)
-        Reference? encounter,
-    @HiveField(30)
+    Reference? encounter,
 
     /// [supportingInformation] Include additional information (for example,
     ///  patient height and weight) that supports the ordering of the medication.
-    @HiveField(31)
-        List<Reference>? supportingInformation,
+    List<Reference>? supportingInformation,
 
     /// [authoredOn] The date (and perhaps time) when the prescription was
     ///  initially written or authored on.
-    @HiveField(32)
-        FhirDateTime? authoredOn,
+    FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
     @JsonKey(name: '_authoredOn')
-    @HiveField(33)
         Element? authoredOnElement,
 
     /// [requester] The individual, organization, or device that initiated the
     ///  request and has responsibility for its activation.
-    @HiveField(34)
-        Reference? requester,
+    Reference? requester,
 
     /// [performer] The specified desired performer of the medication treatment
     ///  (e.g. the performer of the medication administration).
-    @HiveField(35)
-        Reference? performer,
+    Reference? performer,
 
     /// [performerType] Indicates the type of performer of the administration of
     ///  the medication.
-    @HiveField(36)
-        CodeableConcept? performerType,
+    CodeableConcept? performerType,
 
     /// [recorder] The person who entered the order on behalf of another
     ///  individual for example in the case of a verbal or a telephone order.
-    @HiveField(37)
-        Reference? recorder,
+    Reference? recorder,
 
     /// [reasonCode] The reason or the indication for ordering or not ordering
     ///  the medication.
-    @HiveField(38)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Condition or observation that supports why the
     ///  medication was ordered.
-    @HiveField(39)
-        List<Reference>? reasonReference,
-    @HiveField(40)
+    List<Reference>? reasonReference,
 
     /// [instantiatesCanonical] The URL pointing to a protocol, guideline,
     /// orderset, or other definition that is adhered to in whole or in part by
     ///  this MedicationRequest.
-    @HiveField(41)
-        List<Canonical>? instantiatesCanonical,
+    List<Canonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
-    /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
-    @HiveField(42)
+        /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
         List<Element>? instantiatesCanonicalElement,
-    @HiveField(43)
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this MedicationRequest.
-    @HiveField(44)
-        List<FhirUri>? instantiatesUri,
+    List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
-    @HiveField(45)
         List<Element?>? instantiatesUriElement,
 
     /// [basedOn] A plan or request that is fulfilled in whole or in part by this
     ///  medication request.
-    @HiveField(46)
-        List<Reference>? basedOn,
+    List<Reference>? basedOn,
 
     /// [groupIdentifier] A shared identifier common to all requests that were
     /// authorized more or less simultaneously by a single author, representing
     ///  the identifier of the requisition or prescription.
-    @HiveField(47)
-        Identifier? groupIdentifier,
+    Identifier? groupIdentifier,
 
     /// [courseOfTherapyType] The description of the overall patte3rn of the
     ///  administration of the medication to the patient.
-    @HiveField(48)
-        CodeableConcept? courseOfTherapyType,
+    CodeableConcept? courseOfTherapyType,
 
     /// [insurance] Insurance plans, coverage extensions, pre-authorizations
     /// and/or pre-determinations that may be required for delivering the
     ///  requested service.
-    @HiveField(49)
-        List<Reference>? insurance,
+    List<Reference>? insurance,
 
     /// [note] Extra information about the prescription that could not be
     ///  conveyed by the other attributes.
-    @HiveField(50)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [dosageInstruction] Indicates how the medication is to be used by the
     ///  patient.
-    @HiveField(51)
-        List<Dosage>? dosageInstruction,
+    List<Dosage>? dosageInstruction,
 
     /// [dispenseRequest] Indicates the specific details for the dispense or
     /// medication supply part of a medication request (also known as a Medication
@@ -6265,33 +5963,28 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// always sent with the order.  There may be in some settings (e.g.
     /// hospitals) institutional or system support for completing the dispense
     ///  details in the pharmacy department.
-    @HiveField(52)
-        MedicationRequestDispenseRequest? dispenseRequest,
+    MedicationRequestDispenseRequest? dispenseRequest,
 
     /// [substitution] Indicates whether or not substitution can or should be
     /// part of the dispense. In some cases, substitution must happen, in other
     /// cases substitution must not happen. This block explains the prescriber's
     ///  intent. If nothing is specified substitution may be done.
-    @HiveField(53)
-        MedicationRequestSubstitution? substitution,
+    MedicationRequestSubstitution? substitution,
 
     /// [priorPrescription] A link to a resource representing an earlier order
     ///  related order or prescription.
-    @HiveField(54)
-        Reference? priorPrescription,
+    Reference? priorPrescription,
 
     /// [detectedIssue] Indicates an actual or potential clinical issue with or
     /// between one or more active or proposed clinical actions for a patient;
     ///  e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.
-    @HiveField(55)
-        List<Reference>? detectedIssue,
+    List<Reference>? detectedIssue,
 
     /// [eventHistory] Links to Provenance records for past versions of this
     /// resource or fulfilling request or event resources that identify key state
     /// transitions or updates that are likely to be relevant to a user looking at
     ///  the current version of the resource.
-    @HiveField(56)
-        List<Reference>? eventHistory,
+    List<Reference>? eventHistory,
   }) = _MedicationRequest;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6306,7 +5999,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationRequest], accepts a
@@ -6569,7 +6262,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestInitialFillFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationRequestInitialFill], accepts a
@@ -6691,7 +6384,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestSubstitutionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationRequestSubstitution], accepts a
@@ -6864,45 +6557,37 @@ class MedicationStatement with Resource, _$MedicationStatement {
   ///
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  @HiveType(typeId: 50, adapterName: 'MedicationStatementAdapter')
   factory MedicationStatement({
     @Default(R4ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
 
-    /// [resourceType] This is a MedicationStatement resource
-    @HiveField(0)
+        /// [resourceType] This is a MedicationStatement resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -6911,15 +6596,13 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -6928,7 +6611,6 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -6944,8 +6626,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers associated with this Medication Statement that
     /// are defined by business processes and/or used to refer to it when a direct
@@ -6953,125 +6634,99 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// identifiers assigned to this resource by the performer or other systems
     /// and remain constant as the resource is updated and propagates from server
     ///  to server.
-    @HiveField(11)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
     ///  by this event.
-    @HiveField(12)
-        List<Reference>? basedOn,
+    List<Reference>? basedOn,
 
     /// [partOf] A larger event of which this particular event is a component or
     ///  step.
-    @HiveField(13)
-        List<Reference>? partOf,
+    List<Reference>? partOf,
 
     /// [status] A code representing the patient or other source's judgment about
-    @HiveField(14)
-
     /// the state of the medication used that this statement is about.  Generally,
     ///  this will be active or completed.
-    @HiveField(15)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(16)
         Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  MedicationStatement.
-    @HiveField(17)
-        List<CodeableConcept>? statusReason,
+    List<CodeableConcept>? statusReason,
 
     /// [category] Indicates where the medication is expected to be consumed or
     ///  administered.
-    @HiveField(18)
-        CodeableConcept? category,
+    CodeableConcept? category,
 
     /// [medicationCodeableConcept] Identifies the medication being administered.
     /// This is either a link to a resource representing the details of the
     /// medication or a simple attribute carrying a code that identifies the
     ///  medication from a known list of medications.
-    @HiveField(19)
-        CodeableConcept? medicationCodeableConcept,
+    CodeableConcept? medicationCodeableConcept,
 
     /// [medicationReference] Identifies the medication being administered. This
     /// is either a link to a resource representing the details of the medication
     /// or a simple attribute carrying a code that identifies the medication from
     ///  a known list of medications.
-    @HiveField(20)
-        Reference? medicationReference,
+    Reference? medicationReference,
 
     /// [subject] The person, animal or group who is/was taking the medication.
-    @HiveField(21)
-        required Reference subject,
+    required Reference subject,
 
     /// [context] The encounter or episode of care that establishes the context
     ///  for this MedicationStatement.
-    @HiveField(22)
-        Reference? context,
+    Reference? context,
 
     /// [effectiveDateTime] The interval of time during which it is being
     /// asserted that the patient is/was/will be taking the medication (or was not
     ///  taking, when the MedicationStatement.taken element is No).
-    @HiveField(23)
-        FhirDateTime? effectiveDateTime,
+    FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
     @JsonKey(name: '_effectiveDateTime')
-    @HiveField(24)
         Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The interval of time during which it is being asserted
-    @HiveField(25)
-
     /// that the patient is/was/will be taking the medication (or was not taking,
     ///  when the MedicationStatement.taken element is No).
-    @HiveField(26)
-        Period? effectivePeriod,
+    Period? effectivePeriod,
 
     /// [dateAsserted] The date when the medication statement was asserted by the
     ///  information source.
-    @HiveField(27)
-        FhirDateTime? dateAsserted,
+    FhirDateTime? dateAsserted,
 
     /// [dateAssertedElement] Extensions for dateAsserted
     @JsonKey(name: '_dateAsserted')
-    @HiveField(28)
         Element? dateAssertedElement,
 
     /// [informationSource] The person or organization that provided the
     /// information about the taking of this medication. Note: Use derivedFrom
     /// when a MedicationStatement is derived from other resources, e.g. Claim or
     ///  MedicationRequest.
-    @HiveField(29)
-        Reference? informationSource,
+    Reference? informationSource,
 
     /// [derivedFrom] Allows linking the MedicationStatement to the underlying
     /// MedicationRequest, or to other information that supports or is used to
     ///  derive the MedicationStatement.
-    @HiveField(30)
-        List<Reference>? derivedFrom,
+    List<Reference>? derivedFrom,
 
     /// [reasonCode] A reason for why the medication is being/was taken.
-    @HiveField(31)
-        List<CodeableConcept>? reasonCode,
+    List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Condition or observation that supports why the
     ///  medication is being/was taken.
-    @HiveField(32)
-        List<Reference>? reasonReference,
+    List<Reference>? reasonReference,
 
     /// [note] Provides extra information about the medication statement that is
     ///  not conveyed by the other attributes.
-    @HiveField(33)
-        List<Annotation>? note,
+    List<Annotation>? note,
 
     /// [dosage] Indicates how the medication is/was or should be taken by the
     ///  patient.
-    @HiveField(34)
-        List<Dosage>? dosage,
+    List<Dosage>? dosage,
   }) = _MedicationStatement;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -7086,7 +6741,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementFromJson(json);
 
   /// Acts like a constructor, returns a [MedicationStatement], accepts a

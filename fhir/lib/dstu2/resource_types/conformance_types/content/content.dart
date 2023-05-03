@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -56,7 +55,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? code,
-    FhirId? fhirVersion,
+    Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
@@ -85,7 +84,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinition], accepts a
@@ -105,7 +104,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
   factory StructureDefinitionContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -127,7 +126,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionContactFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionContact], accepts a
@@ -147,11 +146,11 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirId identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -176,7 +175,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionMapping], accepts a
@@ -196,7 +195,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
@@ -217,7 +216,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts a
@@ -237,7 +236,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
@@ -259,7 +258,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionDifferential], accepts a
@@ -282,7 +281,7 @@ class DataElement with Resource, _$DataElement {
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     Code? language,
@@ -320,7 +319,7 @@ class DataElement with Resource, _$DataElement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
 
   /// Acts like a constructor, returns a [DataElement], accepts a
@@ -340,7 +339,7 @@ class DataElement with Resource, _$DataElement {
 class DataElementContact with _$DataElementContact {
   DataElementContact._();
   factory DataElementContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -362,7 +361,7 @@ class DataElementContact with _$DataElementContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElementContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DataElementContact.fromJson(Map<String, dynamic> json) =>
       _$DataElementContactFromJson(json);
 
   /// Acts like a constructor, returns a [DataElementContact], accepts a
@@ -382,11 +381,11 @@ class DataElementContact with _$DataElementContact {
 class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirId identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -411,7 +410,7 @@ class DataElementMapping with _$DataElementMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElementMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
 
   /// Acts like a constructor, returns a [DataElementMapping], accepts a

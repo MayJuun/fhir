@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(Dstu2ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -55,7 +54,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
@@ -78,7 +77,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(Dstu2ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -121,7 +120,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
@@ -141,7 +140,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding type,
@@ -169,7 +168,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationDetail], accepts a
@@ -189,7 +188,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 class PaymentReconciliationNote with _$PaymentReconciliationNote {
   PaymentReconciliationNote._();
   factory PaymentReconciliationNote({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -213,7 +212,7 @@ class PaymentReconciliationNote with _$PaymentReconciliationNote {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationNoteFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationNote], accepts a

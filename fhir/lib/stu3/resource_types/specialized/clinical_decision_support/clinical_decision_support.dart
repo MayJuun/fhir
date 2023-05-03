@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -30,7 +29,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    FhirId? requestId,
+    Id? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
     Identifier? identifier,
     required Reference module,
@@ -62,7 +61,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GuidanceResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 
   /// Acts like a constructor, returns a [GuidanceResponse], accepts a

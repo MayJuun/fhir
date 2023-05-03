@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -17,10 +16,10 @@ part 'special_types.g.dart';
 class Meta with _$Meta {
   Meta._();
   factory Meta({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    FhirId? versionId,
+    Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -43,7 +42,7 @@ class Meta with _$Meta {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$MetaFromJson(json);
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -62,7 +61,7 @@ class Meta with _$Meta {
 class Reference with _$Reference {
   Reference._();
   factory Reference({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     String? reference,
@@ -86,7 +85,7 @@ class Reference with _$Reference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Reference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [Reference], accepts a
@@ -106,7 +105,7 @@ class Reference with _$Reference {
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     List<Code>? representation,
@@ -159,7 +158,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Oid? defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    FhirId? defaultValueId,
+    Id? defaultValueId,
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
@@ -211,7 +210,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
     Oid? fixedOid,
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
-    FhirId? fixedId,
+    Id? fixedId,
     @JsonKey(name: '_fixedId') Element? fixedIdElement,
     UnsignedInt? fixedUnsignedInt,
     @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
@@ -260,7 +259,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_patternCode') Element? patternCodeElement,
     Oid? patternOid,
     @JsonKey(name: '_patternOid') Element? patternOidElement,
-    FhirId? patternId,
+    Id? patternId,
     @JsonKey(name: '_patternId') Element? patternIdElement,
     UnsignedInt? patternUnsignedInt,
     @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
@@ -309,7 +308,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_exampleCode') Element? exampleCodeElement,
     Oid? exampleOid,
     @JsonKey(name: '_exampleOid') Element? exampleOidElement,
-    FhirId? exampleId,
+    Id? exampleId,
     @JsonKey(name: '_exampleId') Element? exampleIdElement,
     UnsignedInt? exampleUnsignedInt,
     @JsonKey(name: '_exampleUnsignedInt') Element? exampleUnsignedIntElement,
@@ -359,7 +358,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueCode') Element? minValueCodeElement,
     Oid? minValueOid,
     @JsonKey(name: '_minValueOid') Element? minValueOidElement,
-    FhirId? minValueId,
+    Id? minValueId,
     @JsonKey(name: '_minValueId') Element? minValueIdElement,
     UnsignedInt? minValueUnsignedInt,
     @JsonKey(name: '_minValueUnsignedInt') Element? minValueUnsignedIntElement,
@@ -409,7 +408,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueCode') Element? maxValueCodeElement,
     Oid? maxValueOid,
     @JsonKey(name: '_maxValueOid') Element? maxValueOidElement,
-    FhirId? maxValueId,
+    Id? maxValueId,
     @JsonKey(name: '_maxValueId') Element? maxValueIdElement,
     UnsignedInt? maxValueUnsignedInt,
     @JsonKey(name: '_maxValueUnsignedInt') Element? maxValueUnsignedIntElement,
@@ -436,7 +435,7 @@ class ElementDefinition with _$ElementDefinition {
     Meta? maxValueMeta,
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<FhirId>? condition,
+    List<Id>? condition,
     @JsonKey(name: '_condition') Element? conditionElement,
     List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
@@ -464,7 +463,7 @@ class ElementDefinition with _$ElementDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinition], accepts a
@@ -484,7 +483,7 @@ class ElementDefinition with _$ElementDefinition {
 class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
@@ -508,7 +507,7 @@ class Narrative with _$Narrative {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Narrative.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
 
   /// Acts like a constructor, returns a [Narrative], accepts a
@@ -528,7 +527,7 @@ class Narrative with _$Narrative {
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<String>? discriminator,
     String? description,
@@ -555,7 +554,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionSlicing], accepts a
@@ -575,7 +574,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -600,7 +599,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBase], accepts a
@@ -620,7 +619,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -645,7 +644,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionType], accepts a
@@ -683,7 +682,7 @@ class TypeCodeExtension with _$TypeCodeExtension {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TypeCodeExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
       _$TypeCodeExtensionFromJson(json);
 
   /// Acts like a constructor, returns a [TypeCodeExtension], accepts a
@@ -703,9 +702,9 @@ class TypeCodeExtension with _$TypeCodeExtension {
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    required FhirId key,
+    required Id key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
@@ -733,7 +732,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts a
@@ -753,7 +752,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
         required ElementDefinitionBindingStrength strength,
@@ -779,7 +778,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBinding], accepts a
@@ -799,10 +798,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirId identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -825,7 +824,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionMapping], accepts a

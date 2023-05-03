@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -17,7 +16,7 @@ part 'general_types.g.dart';
 class Period with _$Period {
   Period._();
   factory Period({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirDateTime? start,
@@ -41,7 +40,7 @@ class Period with _$Period {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Period.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$PeriodFromJson(json);
+  factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
 
   /// Acts like a constructor, returns a [Period], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -60,7 +59,7 @@ class Period with _$Period {
 class Coding with _$Coding {
   Coding._();
   factory Coding({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirUri? system,
@@ -90,7 +89,7 @@ class Coding with _$Coding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$CodingFromJson(json);
+  factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
 
   /// Acts like a constructor, returns a [Coding], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -109,7 +108,7 @@ class Coding with _$Coding {
 class Range with _$Range {
   Range._();
   factory Range({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
     Quantity? high,
@@ -129,7 +128,7 @@ class Range with _$Range {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Range.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$RangeFromJson(json);
+  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
 
   /// Acts like a constructor, returns a [Range], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -148,7 +147,7 @@ class Range with _$Range {
 class Quantity with _$Quantity {
   Quantity._();
   factory Quantity({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Decimal? value,
@@ -179,7 +178,7 @@ class Quantity with _$Quantity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Quantity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Quantity.fromJson(Map<String, dynamic> json) =>
       _$QuantityFromJson(json);
 
   /// Acts like a constructor, returns a [Quantity], accepts a
@@ -199,7 +198,7 @@ class Quantity with _$Quantity {
 class Attachment with _$Attachment {
   Attachment._();
   factory Attachment({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Code? contentType,
@@ -235,7 +234,7 @@ class Attachment with _$Attachment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Attachment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
 
   /// Acts like a constructor, returns a [Attachment], accepts a
@@ -255,7 +254,7 @@ class Attachment with _$Attachment {
 class Ratio with _$Ratio {
   Ratio._();
   factory Ratio({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
     Quantity? denominator,
@@ -275,7 +274,7 @@ class Ratio with _$Ratio {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Ratio.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$RatioFromJson(json);
+  factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
 
   /// Acts like a constructor, returns a [Ratio], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -294,7 +293,7 @@ class Ratio with _$Ratio {
 class Annotation with _$Annotation {
   Annotation._();
   factory Annotation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Reference? authorReference,
@@ -321,7 +320,7 @@ class Annotation with _$Annotation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Annotation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Annotation.fromJson(Map<String, dynamic> json) =>
       _$AnnotationFromJson(json);
 
   /// Acts like a constructor, returns a [Annotation], accepts a
@@ -341,7 +340,7 @@ class Annotation with _$Annotation {
 class SampledData with _$SampledData {
   SampledData._();
   factory SampledData({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity origin,
     required Decimal period,
@@ -373,7 +372,7 @@ class SampledData with _$SampledData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SampledData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SampledData.fromJson(Map<String, dynamic> json) =>
       _$SampledDataFromJson(json);
 
   /// Acts like a constructor, returns a [SampledData], accepts a
@@ -393,7 +392,7 @@ class SampledData with _$SampledData {
 class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<Coding>? coding,
@@ -416,7 +415,7 @@ class CodeableConcept with _$CodeableConcept {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeableConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeableConceptFromJson(json);
 
   /// Acts like a constructor, returns a [CodeableConcept], accepts a
@@ -436,7 +435,7 @@ class CodeableConcept with _$CodeableConcept {
 class Identifier with _$Identifier {
   Identifier._();
   factory Identifier({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
@@ -465,7 +464,7 @@ class Identifier with _$Identifier {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Identifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Identifier.fromJson(Map<String, dynamic> json) =>
       _$IdentifierFromJson(json);
 
   /// Acts like a constructor, returns a [Identifier], accepts a
@@ -485,7 +484,7 @@ class Identifier with _$Identifier {
 class Signature with _$Signature {
   Signature._();
   factory Signature({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding> type,
     required Instant when,
@@ -515,7 +514,7 @@ class Signature with _$Signature {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Signature.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Signature.fromJson(Map<String, dynamic> json) =>
       _$SignatureFromJson(json);
 
   /// Acts like a constructor, returns a [Signature], accepts a
@@ -535,7 +534,7 @@ class Signature with _$Signature {
 class Timing with _$Timing {
   Timing._();
   factory Timing({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirDateTime>? event,
@@ -559,7 +558,7 @@ class Timing with _$Timing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Timing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$TimingFromJson(json);
+  factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
 
   /// Acts like a constructor, returns a [Timing], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -578,7 +577,7 @@ class Timing with _$Timing {
 class Address with _$Address {
   Address._();
   factory Address({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
@@ -617,7 +616,7 @@ class Address with _$Address {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Address.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Address.fromJson(Map<String, dynamic> json) =>
       _$AddressFromJson(json);
 
   /// Acts like a constructor, returns a [Address], accepts a
@@ -637,7 +636,7 @@ class Address with _$Address {
 class HumanName with _$HumanName {
   HumanName._();
   factory HumanName({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
@@ -670,7 +669,7 @@ class HumanName with _$HumanName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HumanName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory HumanName.fromJson(Map<String, dynamic> json) =>
       _$HumanNameFromJson(json);
 
   /// Acts like a constructor, returns a [HumanName], accepts a
@@ -690,7 +689,7 @@ class HumanName with _$HumanName {
 class ContactPoint with _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
@@ -720,7 +719,7 @@ class ContactPoint with _$ContactPoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContactPoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$ContactPointFromJson(json);
 
   /// Acts like a constructor, returns a [ContactPoint], accepts a
@@ -740,7 +739,7 @@ class ContactPoint with _$ContactPoint {
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Quantity? boundsQuantity,
@@ -783,7 +782,7 @@ class TimingRepeat with _$TimingRepeat {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TimingRepeat.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$TimingRepeatFromJson(json);
 
   /// Acts like a constructor, returns a [TimingRepeat], accepts a

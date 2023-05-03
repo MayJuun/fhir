@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Coverage with Resource, _$Coverage {
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -61,7 +60,7 @@ class Coverage with Resource, _$Coverage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
 
   /// Acts like a constructor, returns a [Coverage], accepts a
@@ -84,7 +83,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -116,7 +115,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EligibilityRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
 
   /// Acts like a constructor, returns a [EligibilityRequest], accepts a
@@ -139,7 +138,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -177,7 +176,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EligibilityResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
 
   /// Acts like a constructor, returns a [EligibilityResponse], accepts a
@@ -200,7 +199,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -235,7 +234,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
@@ -258,7 +257,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -296,7 +295,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a

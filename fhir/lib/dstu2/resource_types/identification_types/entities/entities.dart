@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Location with Resource, _$Location {
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -60,7 +59,7 @@ class Location with Resource, _$Location {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Location.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
 
   /// Acts like a constructor, returns a [Location], accepts a
@@ -80,7 +79,7 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Decimal longitude,
@@ -106,7 +105,7 @@ class LocationPosition with _$LocationPosition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationPosition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
 
   /// Acts like a constructor, returns a [LocationPosition], accepts a
@@ -129,7 +128,7 @@ class Substance with Resource, _$Substance {
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -160,7 +159,7 @@ class Substance with Resource, _$Substance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Substance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
 
   /// Acts like a constructor, returns a [Substance], accepts a
@@ -180,7 +179,7 @@ class Substance with Resource, _$Substance {
 class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -204,7 +203,7 @@ class SubstanceInstance with _$SubstanceInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceInstance], accepts a
@@ -224,7 +223,7 @@ class SubstanceInstance with _$SubstanceInstance {
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,
@@ -246,7 +245,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceIngredient], accepts a
@@ -269,7 +268,7 @@ class Person with Resource, _$Person {
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -306,7 +305,7 @@ class Person with Resource, _$Person {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Person.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$PersonFromJson(json);
+  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 
   /// Acts like a constructor, returns a [Person], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -325,7 +324,7 @@ class Person with Resource, _$Person {
 class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference target,
@@ -348,7 +347,7 @@ class PersonLink with _$PersonLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PersonLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
 
   /// Acts like a constructor, returns a [PersonLink], accepts a
@@ -371,7 +370,7 @@ class Contract with Resource, _$Contract {
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -415,7 +414,7 @@ class Contract with Resource, _$Contract {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Contract.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
 
   /// Acts like a constructor, returns a [Contract], accepts a
@@ -435,7 +434,7 @@ class Contract with Resource, _$Contract {
 class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
@@ -457,7 +456,7 @@ class ContractActor with _$ContractActor {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractActor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractActor.fromJson(Map<String, dynamic> json) =>
       _$ContractActorFromJson(json);
 
   /// Acts like a constructor, returns a [ContractActor], accepts a
@@ -477,7 +476,7 @@ class ContractActor with _$ContractActor {
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
@@ -510,7 +509,7 @@ class ContractValuedItem with _$ContractValuedItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractValuedItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
 
   /// Acts like a constructor, returns a [ContractValuedItem], accepts a
@@ -530,7 +529,7 @@ class ContractValuedItem with _$ContractValuedItem {
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding type,
@@ -553,7 +552,7 @@ class ContractSigner with _$ContractSigner {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractSigner.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
 
   /// Acts like a constructor, returns a [ContractSigner], accepts a
@@ -573,7 +572,7 @@ class ContractSigner with _$ContractSigner {
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -607,7 +606,7 @@ class ContractTerm with _$ContractTerm {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractTerm.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
 
   /// Acts like a constructor, returns a [ContractTerm], accepts a
@@ -627,7 +626,7 @@ class ContractTerm with _$ContractTerm {
 class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference entity,
@@ -649,7 +648,7 @@ class ContractTermActor with _$ContractTermActor {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractTermActor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractTermActor.fromJson(Map<String, dynamic> json) =>
       _$ContractTermActorFromJson(json);
 
   /// Acts like a constructor, returns a [ContractTermActor], accepts a
@@ -669,7 +668,7 @@ class ContractTermActor with _$ContractTermActor {
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -691,7 +690,7 @@ class ContractFriendly with _$ContractFriendly {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractFriendly.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
 
   /// Acts like a constructor, returns a [ContractFriendly], accepts a
@@ -711,7 +710,7 @@ class ContractFriendly with _$ContractFriendly {
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -733,7 +732,7 @@ class ContractLegal with _$ContractLegal {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractLegal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
 
   /// Acts like a constructor, returns a [ContractLegal], accepts a
@@ -753,7 +752,7 @@ class ContractLegal with _$ContractLegal {
 class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -775,7 +774,7 @@ class ContractRule with _$ContractRule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractRule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
 
   /// Acts like a constructor, returns a [ContractRule], accepts a

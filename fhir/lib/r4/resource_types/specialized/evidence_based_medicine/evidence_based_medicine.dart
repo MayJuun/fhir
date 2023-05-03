@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -194,135 +192,62 @@ class Citation with Resource, _$Citation {
   /// [relatesTo] Artifact related to the Citation Resource.
   ///
   /// [citedArtifact] The article or artifact being described.
-  @HiveType(typeId: 120, adapterName: 'CitationAdapter')
   factory Citation({
-    @HiveField(0)
-    @Default(R4ResourceType.Citation)
-        R4ResourceType resourceType,
-    @HiveField(1)
-        String? id,
-    @HiveField(2)
-        Meta? meta,
-    @HiveField(3)
-        FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5)
-        Code? language,
-    @HiveField(6)
-    @JsonKey(name: '_language')
-        Element? languageElement,
-    @HiveField(7)
-        Narrative? text,
-    @HiveField(8)
-        List<Resource>? contained,
-    @HiveField(9)
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
-    @HiveField(11)
-        FhirUri? url,
-    @HiveField(12)
-    @JsonKey(name: '_url')
-        Element? urlElement,
-    @HiveField(13)
-        List<Identifier>? identifier,
-    @HiveField(14)
-        String? version,
-    @HiveField(15)
-    @JsonKey(name: '_version')
-        Element? versionElement,
-    @HiveField(16)
-        String? name,
-    @HiveField(17)
-    @JsonKey(name: '_name')
-        Element? nameElement,
-    @HiveField(18)
-        String? title,
-    @HiveField(19)
-    @JsonKey(name: '_title')
-        Element? titleElement,
-    @HiveField(20)
-        Code? status,
-    @HiveField(21)
-    @JsonKey(name: '_status')
-        Element? statusElement,
-    @HiveField(22)
-        Boolean? experimental,
-    @HiveField(23)
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
-    @HiveField(24)
-        FhirDateTime? date,
-    @HiveField(25)
-    @JsonKey(name: '_date')
-        Element? dateElement,
-    @HiveField(26)
-        String? publisher,
-    @HiveField(27)
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
-    @HiveField(28)
-        List<ContactDetail>? contact,
-    @HiveField(29)
-        Markdown? description,
-    @HiveField(30)
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
-    @HiveField(31)
-        List<UsageContext>? useContext,
-    @HiveField(32)
-        List<CodeableConcept>? jurisdiction,
-    @HiveField(33)
-        Markdown? purpose,
-    @HiveField(34)
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
-    @HiveField(35)
-        Markdown? copyright,
-    @HiveField(36)
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
-    @HiveField(37)
-        Date? approvalDate,
-    @HiveField(38)
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
-    @HiveField(39)
-        Date? lastReviewDate,
-    @HiveField(40)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(41)
-        Period? effectivePeriod,
-    @HiveField(42)
+    @Default(R4ResourceType.Citation) R4ResourceType resourceType,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
     // List<CodeableConcept>? topic,
-    @HiveField(43)
-        List<ContactDetail>? author,
-    @HiveField(44)
-        List<ContactDetail>? editor,
-    @HiveField(45)
-        List<ContactDetail>? reviewer,
-    @HiveField(46)
-        List<ContactDetail>? endorser,
-    @HiveField(47)
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
     // List<RelatedArtifact>? relatedArtifact,
-    @HiveField(48)
-        List<CitationSummary>? summary,
-    @HiveField(49)
-        List<CitationClassification>? classification,
-    @HiveField(50)
-        List<Annotation>? note,
-    @HiveField(51)
-        List<CodeableConcept>? currentState,
-    @HiveField(52)
-        List<CitationStatusDate>? statusDate,
-    @HiveField(53)
-        List<CitationRelatesTo>? relatesTo,
-    @HiveField(54)
-        CitationCitedArtifact? citedArtifact,
+    List<CitationSummary>? summary,
+    List<CitationClassification>? classification,
+    List<Annotation>? note,
+    List<CodeableConcept>? currentState,
+    List<CitationStatusDate>? statusDate,
+    List<CitationRelatesTo>? relatesTo,
+    CitationCitedArtifact? citedArtifact,
   }) = _Citation;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -337,7 +262,7 @@ class Citation with Resource, _$Citation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Citation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Citation.fromJson(Map<String, dynamic> json) =>
       _$CitationFromJson(json);
 
   /// Acts like a constructor, returns a [Citation], accepts a
@@ -417,7 +342,7 @@ class CitationSummary with _$CitationSummary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationSummary.fromJson(Map<String, dynamic> json) =>
       _$CitationSummaryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary], accepts a
@@ -494,7 +419,7 @@ class CitationClassification with _$CitationClassification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationClassification.fromJson(Map<String, dynamic> json) =>
       _$CitationClassificationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification], accepts a
@@ -577,7 +502,7 @@ class CitationStatusDate with _$CitationStatusDate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationStatusDate.fromJson(Map<String, dynamic> json) =>
       _$CitationStatusDateFromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate], accepts a
@@ -673,7 +598,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [CitationRelatesTo], accepts a
@@ -798,7 +723,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationCitedArtifact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
       _$CitationCitedArtifactFromJson(json);
 
   /// Acts like a constructor, returns a [CitationCitedArtifact], accepts a
@@ -878,7 +803,7 @@ class CitationVersion with _$CitationVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationVersion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationVersion.fromJson(Map<String, dynamic> json) =>
       _$CitationVersionFromJson(json);
 
   /// Acts like a constructor, returns a [CitationVersion], accepts a
@@ -961,7 +886,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
       _$CitationStatusDate1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate1], accepts a
@@ -1044,7 +969,7 @@ class CitationTitle with _$CitationTitle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationTitle.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationTitle.fromJson(Map<String, dynamic> json) =>
       _$CitationTitleFromJson(json);
 
   /// Acts like a constructor, returns a [CitationTitle], accepts a
@@ -1133,7 +1058,7 @@ class CitationAbstract with _$CitationAbstract {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAbstract.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationAbstract.fromJson(Map<String, dynamic> json) =>
       _$CitationAbstractFromJson(json);
 
   /// Acts like a constructor, returns a [CitationAbstract], accepts a
@@ -1216,7 +1141,7 @@ class CitationPart with _$CitationPart {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPart.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationPart.fromJson(Map<String, dynamic> json) =>
       _$CitationPartFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPart], accepts a
@@ -1311,7 +1236,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatesTo1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatesTo1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationRelatesTo1], accepts a
@@ -1443,7 +1368,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationForm.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationFormFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublicationForm], accepts a
@@ -1537,7 +1462,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublishedIn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedInFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublishedIn], accepts a
@@ -1629,7 +1554,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPeriodicRelease.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
       _$CitationPeriodicReleaseFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPeriodicRelease], accepts a
@@ -1737,7 +1662,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationDateOfPublication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
       _$CitationDateOfPublicationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationDateOfPublication], accepts a
@@ -1817,7 +1742,7 @@ class CitationWebLocation with _$CitationWebLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationWebLocation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationWebLocation.fromJson(Map<String, dynamic> json) =>
       _$CitationWebLocationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationWebLocation], accepts a
@@ -1898,7 +1823,7 @@ class CitationClassification1 with _$CitationClassification1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationClassification1.fromJson(Map<String, dynamic> json) =>
       _$CitationClassification1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification1], accepts a
@@ -1992,7 +1917,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationWhoClassified.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationWhoClassified.fromJson(Map<String, dynamic> json) =>
       _$CitationWhoClassifiedFromJson(json);
 
   /// Acts like a constructor, returns a [CitationWhoClassified], accepts a
@@ -2076,7 +2001,7 @@ class CitationContributorship with _$CitationContributorship {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributorship.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
       _$CitationContributorshipFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributorship], accepts a
@@ -2199,7 +2124,7 @@ class CitationEntry with _$CitationEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationEntry.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationEntry.fromJson(Map<String, dynamic> json) =>
       _$CitationEntryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationEntry], accepts a
@@ -2285,7 +2210,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationAffiliationInfoFromJson(json);
 
   /// Acts like a constructor, returns a [CitationAffiliationInfo], accepts a
@@ -2365,7 +2290,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributionInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
       _$CitationContributionInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributionInstance], accepts a
@@ -2453,7 +2378,7 @@ class CitationSummary1 with _$CitationSummary1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
       _$CitationSummary1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary1], accepts a
@@ -2667,65 +2592,57 @@ class Evidence with Resource, _$Evidence {
   ///
   /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
-  @HiveType(typeId: 121, adapterName: 'EvidenceAdapter')
   factory Evidence({
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? title,
-    @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) Code? status,
-    @HiveField(22) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(23) FhirDateTime? date,
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(25) List<UsageContext>? useContext,
-    @HiveField(26) Date? approvalDate,
-    @HiveField(27) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(28) Date? lastReviewDate,
-    @HiveField(29)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(30) String? publisher,
-    @HiveField(31) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(32) List<ContactDetail>? contact,
-    @HiveField(33) List<ContactDetail>? author,
-    @HiveField(34) List<ContactDetail>? editor,
-    @HiveField(35) List<ContactDetail>? reviewer,
-    @HiveField(36) List<ContactDetail>? endorser,
-    @HiveField(37) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(38) Markdown? description,
-    @HiveField(39) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(40) Markdown? assertion,
-    @HiveField(41) @JsonKey(name: '_assertion') Element? assertionElement,
-    @HiveField(42) List<Annotation>? note,
-    @HiveField(43) required List<EvidenceVariableDefinition> variableDefinition,
-    @HiveField(44) CodeableConcept? synthesisType,
-    @HiveField(45) CodeableConcept? studyType,
-    @HiveField(46) List<EvidenceStatistic>? statistic,
-    @HiveField(47) List<EvidenceCertainty>? certainty,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Reference? citeAsReference,
+    Markdown? citAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    List<UsageContext>? useContext,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Markdown? assertion,
+    @JsonKey(name: '_assertion') Element? assertionElement,
+    List<Annotation>? note,
+    required List<EvidenceVariableDefinition> variableDefinition,
+    CodeableConcept? synthesisType,
+    CodeableConcept? studyType,
+    List<EvidenceStatistic>? statistic,
+    List<EvidenceCertainty>? certainty,
   }) = _Evidence;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2740,7 +2657,7 @@ class Evidence with Resource, _$Evidence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Evidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
 
   /// Acts like a constructor, returns a [Evidence], accepts a
@@ -2814,7 +2731,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableDefinition], accepts a
@@ -2904,7 +2821,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceStatistic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceStatistic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceStatisticFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceStatistic], accepts a
@@ -2983,7 +2900,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceSampleSize.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceSampleSize.fromJson(Map<String, dynamic> json) =>
       _$EvidenceSampleSizeFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceSampleSize], accepts a
@@ -3061,7 +2978,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =>
       _$EvidenceAttributeEstimateFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceAttributeEstimate], accepts a
@@ -3124,7 +3041,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceModelCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceModelCharacteristic], accepts a
@@ -3198,7 +3115,7 @@ class EvidenceVar with _$EvidenceVar {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVar.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVar.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVarFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVar], accepts a
@@ -3275,7 +3192,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceCertainty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceCertainty], accepts a
@@ -3415,48 +3332,41 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
   /// [section] The root of the sections that make up the composition.;
-  @HiveType(typeId: 122, adapterName: 'EvidenceReportAdapter')
   factory EvidenceReport({
-    @HiveField(0)
-    @Default(R4ResourceType.EvidenceReport)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) Code? status,
-    @HiveField(14) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(15) List<UsageContext>? useContext,
-    @HiveField(16) List<Identifier>? identifier,
-    @HiveField(17) List<Identifier>? relatedIdentifier,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citeAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) CodeableConcept? type,
-    @HiveField(22) List<Annotation>? note,
-    @HiveField(23) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(24) required EvidenceReportSubject subject,
-    @HiveField(25) String? publisher,
-    @HiveField(26) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(27) List<ContactDetail>? contact,
-    @HiveField(28) List<ContactDetail>? author,
-    @HiveField(29) List<ContactDetail>? editor,
-    @HiveField(30) List<ContactDetail>? reviewer,
-    @HiveField(31) List<ContactDetail>? endorser,
-    @HiveField(32) List<EvidenceReportRelatesTo>? relatesTo,
-    @HiveField(33) List<EvidenceReportSection>? section,
+    @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<UsageContext>? useContext,
+    List<Identifier>? identifier,
+    List<Identifier>? relatedIdentifier,
+    Reference? citeAsReference,
+    Markdown? citeAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+    CodeableConcept? type,
+    List<Annotation>? note,
+    List<RelatedArtifact>? relatedArtifact,
+    required EvidenceReportSubject subject,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<EvidenceReportRelatesTo>? relatesTo,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3471,7 +3381,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReport], accepts a
@@ -3530,7 +3440,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSubject.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSubject], accepts a
@@ -3613,7 +3523,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportCharacteristic], accepts a
@@ -3676,7 +3586,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportRelatesTo], accepts a
@@ -3771,7 +3681,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSectionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSection], accepts a
@@ -3985,63 +3895,58 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
-  @HiveType(typeId: 123, adapterName: 'EvidenceVariableAdapter')
   factory EvidenceVariable({
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) FhirDateTime? date,
-    @HiveField(27) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(28) Markdown? description,
-    @HiveField(29) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(30) List<Annotation>? note,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) List<ContactDetail>? author,
-    @HiveField(36) List<ContactDetail>? editor,
-    @HiveField(37) List<ContactDetail>? reviewer,
-    @HiveField(38) List<ContactDetail>? endorser,
-    @HiveField(39) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(40) Boolean? actual,
-    @HiveField(41) @JsonKey(name: '_actual') Element? actualElement,
-    @HiveField(42) Code? characteristicCombination,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Annotation>? note,
+    List<UsageContext>? useContext,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    Boolean? actual,
+    @JsonKey(name: '_actual') Element? actualElement,
+    Code? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
-    @HiveField(43)
         Element? characteristicCombinationElement,
-    @HiveField(44) required List<EvidenceVariableCharacteristic> characteristic,
-    @HiveField(45) Code? handling,
-    @HiveField(46) @JsonKey(name: '_handling') Element? handlingElement,
-    @HiveField(47) List<EvidenceVariableCategory>? category,
+    required List<EvidenceVariableCharacteristic> characteristic,
+    Code? handling,
+    @JsonKey(name: '_handling') Element? handlingElement,
+    List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4056,7 +3961,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariable], accepts a
@@ -4206,7 +4111,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
@@ -4291,7 +4196,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableTimeFromStartFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableTimeFromStart], accepts a
@@ -4359,7 +4264,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCategoryFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCategory], accepts a
@@ -4607,78 +4512,72 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   ///
   /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
-  @HiveType(typeId: 124, adapterName: 'ResearchDefinitionAdapter')
   factory ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
-    @HiveField(59) required Reference population,
-    @HiveField(60) Reference? exposure,
-    @HiveField(61) Reference? exposureAlternative,
-    @HiveField(62) Reference? outcome,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<String>? comment,
+    @JsonKey(name: '_comment') List<Element?>? commentElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Canonical>? library_,
+    required Reference population,
+    Reference? exposure,
+    Reference? exposureAlternative,
+    Reference? outcome,
   }) = _ResearchDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4693,7 +4592,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchDefinition], accepts a
@@ -4948,80 +4847,73 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
-  @HiveType(typeId: 125, adapterName: 'ResearchElementDefinitionAdapter')
   factory ResearchElementDefinition({
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
-    @HiveField(0)
         R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
-    @HiveField(59) Code? type,
-    @HiveField(60) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(61) Code? variableType,
-    @HiveField(62) @JsonKey(name: '_variableType') Element? variableTypeElement,
-    @HiveField(63)
-        required List<ResearchElementDefinitionCharacteristic> characteristic,
+    String? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<String>? comment,
+    @JsonKey(name: '_comment') List<Element?>? commentElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Canonical>? library_,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Code? variableType,
+    @JsonKey(name: '_variableType') Element? variableTypeElement,
+    required List<ResearchElementDefinitionCharacteristic> characteristic,
   }) = _ResearchElementDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5036,7 +4928,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchElementDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchElementDefinition], accepts a

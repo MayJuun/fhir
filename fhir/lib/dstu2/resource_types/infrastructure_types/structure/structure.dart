@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class Media with Resource, _$Media {
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -60,7 +59,7 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$MediaFromJson(json);
+  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -82,7 +81,7 @@ class Binary with Resource, _$Binary {
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -105,7 +104,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BinaryFromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -127,7 +126,7 @@ class Bundle with Resource, _$Bundle {
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -154,7 +153,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BundleFromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -173,7 +172,7 @@ class Bundle with Resource, _$Bundle {
 class BundleLink with _$BundleLink {
   BundleLink._();
   factory BundleLink({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -198,7 +197,7 @@ class BundleLink with _$BundleLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
 
   /// Acts like a constructor, returns a [BundleLink], accepts a
@@ -218,7 +217,7 @@ class BundleLink with _$BundleLink {
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -289,7 +288,7 @@ class BundleEntry with _$BundleEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntry.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntry], accepts a
@@ -309,7 +308,7 @@ class BundleEntry with _$BundleEntry {
 class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
   factory BundleEntrySearch({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -334,7 +333,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntrySearch.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
       _$BundleEntrySearchFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntrySearch], accepts a
@@ -354,7 +353,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
 class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
   factory BundleEntryRequest({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -388,7 +387,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntryRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryRequestFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntryRequest], accepts a
@@ -408,7 +407,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
   factory BundleEntryResponse({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -437,7 +436,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntryResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryResponseFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntryResponse], accepts a
@@ -460,7 +459,7 @@ class Basic with Resource, _$Basic {
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -489,7 +488,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BasicFromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

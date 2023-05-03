@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -324,7 +323,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueId] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    FhirId? valueId,
+    Id? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -574,7 +573,7 @@ class FhirExtension with _$FhirExtension {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
 
   /// Acts like a constructor, returns a [FhirExtension], accepts a

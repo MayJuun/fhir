@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -20,7 +19,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @Default(Dstu2ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -51,7 +50,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     List<CodeableConcept>? useContext,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    FhirId? fhirVersion,
+    Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     List<ImplementationGuideDependency>? dependency,
     required List<ImplementationGuidePackage> package,
@@ -72,7 +71,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuide.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuide], accepts a
@@ -92,7 +91,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 class ImplementationGuideContact with _$ImplementationGuideContact {
   ImplementationGuideContact._();
   factory ImplementationGuideContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -114,7 +113,7 @@ class ImplementationGuideContact with _$ImplementationGuideContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideContactFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideContact], accepts a
@@ -134,7 +133,7 @@ class ImplementationGuideContact with _$ImplementationGuideContact {
 class ImplementationGuideDependency with _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DependencyType.unknown)
@@ -158,7 +157,7 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideDependency], accepts a
@@ -178,7 +177,7 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
 class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
@@ -202,7 +201,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuidePackage], accepts a
@@ -222,7 +221,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Code type,
@@ -245,7 +244,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideGlobal], accepts a
@@ -265,7 +264,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirUri source,
@@ -292,7 +291,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuidePage], accepts a
@@ -313,7 +312,7 @@ class ImplementationGuidePackageResource
     with _$ImplementationGuidePackageResource {
   ImplementationGuidePackageResource._();
   factory ImplementationGuidePackageResource({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
@@ -354,7 +353,7 @@ class TestScript with Resource, _$TestScript {
     @Default(Dstu2ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -408,7 +407,7 @@ class TestScript with Resource, _$TestScript {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
 
   /// Acts like a constructor, returns a [TestScript], accepts a
@@ -428,7 +427,7 @@ class TestScript with Resource, _$TestScript {
 class TestScriptContact with _$TestScriptContact {
   TestScriptContact._();
   factory TestScriptContact({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -450,7 +449,7 @@ class TestScriptContact with _$TestScriptContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptContact.fromJson(Map<String, dynamic> json) =>
       _$TestScriptContactFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptContact], accepts a
@@ -470,7 +469,7 @@ class TestScriptContact with _$TestScriptContact {
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<TestScriptMetadataLink>? link,
@@ -493,7 +492,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptMetadata], accepts a
@@ -513,7 +512,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
 class TestScriptMetadataLink with _$TestScriptMetadataLink {
   TestScriptMetadataLink._();
   factory TestScriptMetadataLink({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirUri url,
@@ -537,7 +536,7 @@ class TestScriptMetadataLink with _$TestScriptMetadataLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataLinkFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptMetadataLink], accepts a
@@ -557,7 +556,7 @@ class TestScriptMetadataLink with _$TestScriptMetadataLink {
 class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
   TestScriptMetadataCapability._();
   factory TestScriptMetadataCapability({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'required') Boolean? required_,
@@ -588,7 +587,7 @@ class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataCapabilityFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptMetadataCapability], accepts a
@@ -608,7 +607,7 @@ class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? autocreate,
@@ -633,7 +632,7 @@ class TestScriptFixture with _$TestScriptFixture {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptFixture], accepts a
@@ -653,7 +652,7 @@ class TestScriptFixture with _$TestScriptFixture {
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
@@ -662,7 +661,7 @@ class TestScriptVariable with _$TestScriptVariable {
     @JsonKey(name: '_headerField') Element? headerFieldElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    FhirId? sourceId,
+    Id? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
   }) = _TestScriptVariable;
 
@@ -681,7 +680,7 @@ class TestScriptVariable with _$TestScriptVariable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptVariable], accepts a
@@ -701,7 +700,7 @@ class TestScriptVariable with _$TestScriptVariable {
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptMetadata? metadata,
@@ -723,7 +722,7 @@ class TestScriptSetup with _$TestScriptSetup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptSetup], accepts a
@@ -743,7 +742,7 @@ class TestScriptSetup with _$TestScriptSetup {
 class TestScriptSetupAction with _$TestScriptSetupAction {
   TestScriptSetupAction._();
   factory TestScriptSetupAction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -766,7 +765,7 @@ class TestScriptSetupAction with _$TestScriptSetupAction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptSetupAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupActionFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptSetupAction], accepts a
@@ -786,7 +785,7 @@ class TestScriptSetupAction with _$TestScriptSetupAction {
 class TestScriptActionOperation with _$TestScriptActionOperation {
   TestScriptActionOperation._();
   factory TestScriptActionOperation({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -809,11 +808,11 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
     List<TestScriptOperationRequestHeader>? requestHeader,
-    FhirId? responseId,
+    Id? responseId,
     @JsonKey(name: '_responseId') Element? responseIdElement,
-    FhirId? sourceId,
+    Id? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? targetId,
+    Id? targetId,
     @JsonKey(name: '_targetId') Element? targetIdElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -834,7 +833,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptActionOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptActionOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionOperationFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptActionOperation], accepts a
@@ -854,7 +853,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
 class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
   TestScriptOperationRequestHeader._();
   factory TestScriptOperationRequestHeader({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExtension,
     required String field,
@@ -887,7 +886,7 @@ class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
 class TestScriptActionAssert with _$TestScriptActionAssert {
   TestScriptActionAssert._();
   factory TestScriptActionAssert({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? label,
@@ -920,9 +919,9 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
     @JsonKey(name: '_response') Element? responseElement,
     String? responseCode,
     @JsonKey(name: '_responseCode') Element? responseCodeElement,
-    FhirId? sourceId,
+    Id? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? validateProfileId,
+    Id? validateProfileId,
     @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -945,7 +944,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptActionAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionAssertFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptActionAssert], accepts a
@@ -965,7 +964,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -991,7 +990,7 @@ class TestScriptTest with _$TestScriptTest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptTest], accepts a
@@ -1011,7 +1010,7 @@ class TestScriptTest with _$TestScriptTest {
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptTeardownAction> action,
@@ -1032,7 +1031,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptTeardown], accepts a
@@ -1052,7 +1051,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
 class TestScriptTeardownAction with _$TestScriptTeardownAction {
   TestScriptTeardownAction._();
   factory TestScriptTeardownAction({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -1074,7 +1073,7 @@ class TestScriptTeardownAction with _$TestScriptTeardownAction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownActionFromJson(json);
 
   /// Acts like a constructor, returns a [TestScriptTeardownAction], accepts a

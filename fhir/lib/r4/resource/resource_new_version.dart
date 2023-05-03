@@ -11,12 +11,12 @@ Meta _updateMetaVersion(Meta? oldMeta) {
   if (oldMeta == null) {
     return Meta(
       lastUpdated: Instant(DateTime.now().toUtc()),
-      versionId: FhirId(version.toString()),
+      versionId: Id(version.toString()),
     );
   } else {
     return oldMeta.copyWith(
       lastUpdated: Instant(DateTime.now().toUtc()),
-      versionId: FhirId(version.toString()),
+      versionId: Id(version.toString()),
     );
   }
 }

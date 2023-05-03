@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,7 @@ class Composition with Resource, _$Composition {
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -65,7 +64,7 @@ class Composition with Resource, _$Composition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Composition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
 
   /// Acts like a constructor, returns a [Composition], accepts a
@@ -85,7 +84,7 @@ class Composition with Resource, _$Composition {
 class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<AttesterMode> mode,
@@ -110,7 +109,7 @@ class CompositionAttester with _$CompositionAttester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionAttester], accepts a
@@ -130,7 +129,7 @@ class CompositionAttester with _$CompositionAttester {
 class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -153,7 +152,7 @@ class CompositionEvent with _$CompositionEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionEvent], accepts a
@@ -173,7 +172,7 @@ class CompositionEvent with _$CompositionEvent {
 class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -204,7 +203,7 @@ class CompositionSection with _$CompositionSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionSection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionSection], accepts a
@@ -227,7 +226,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -268,7 +267,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentManifest], accepts a
@@ -288,7 +287,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? pAttachment,
@@ -310,7 +309,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifestContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentManifestContent], accepts a
@@ -330,7 +329,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
 class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -352,7 +351,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentManifestRelated], accepts a
@@ -375,7 +374,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -420,7 +419,7 @@ class DocumentReference with Resource, _$DocumentReference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReference], accepts a
@@ -440,7 +439,7 @@ class DocumentReference with Resource, _$DocumentReference {
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatesToCode.unknown)
@@ -464,7 +463,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceRelatesTo], accepts a
@@ -484,7 +483,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Attachment attachment,
@@ -506,7 +505,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceContent], accepts a
@@ -526,7 +525,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? encounter,
@@ -553,7 +552,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceContext], accepts a
@@ -573,7 +572,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
 class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
   DocumentReferenceContextRelated._();
   factory DocumentReferenceContextRelated({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -596,7 +595,7 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceContextRelated], accepts a
@@ -619,7 +618,7 @@ class List_ with Resource, _$List_ {
     @Default(Dstu2ResourceType.List_)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    Id? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -659,7 +658,7 @@ class List_ with Resource, _$List_ {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory List_.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$List_FromJson(json);
+  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
 
   /// Acts like a constructor, returns a [List_], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -678,7 +677,7 @@ class List_ with Resource, _$List_ {
 class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
-    FhirId? id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -705,7 +704,7 @@ class ListEntry with _$ListEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ListEntry.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
 
   /// Acts like a constructor, returns a [ListEntry], accepts a

@@ -3,8 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
-import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -91,45 +89,37 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource
   ///  instance.
-  @HiveType(typeId: 94, adapterName: 'BasicAdapter')
   factory Basic({
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
 
-    /// [resourceType] This is a Basic resource
-    @HiveField(0)
+        /// [resourceType] This is a Basic resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -138,15 +128,13 @@ class Basic with Resource, _$Basic {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -155,7 +143,6 @@ class Basic with Resource, _$Basic {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -171,38 +158,30 @@ class Basic with Resource, _$Basic {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
-    @HiveField(11)
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier assigned to the resource for business purposes,
     ///  outside the context of FHIR.
-    @HiveField(12)
-        List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [code] Identifies the 'type' of resource - equivalent to the resource
     ///  name for other resources.
-    @HiveField(13)
-        required CodeableConcept code,
+    required CodeableConcept code,
 
     /// [subject] Identifies the patient, practitioner, device or any other
     ///  resource that is the "focus" of this resource.
-    @HiveField(14)
-        Reference? subject,
+    Reference? subject,
 
     /// [created] Identifies when the resource was first created.
-    @HiveField(15)
-        Date? created,
+    Date? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
-    @HiveField(16)
         Element? createdElement,
 
     /// [author] Indicates who was responsible for creating the resource
     ///  instance.
-    @HiveField(17)
-        Reference? author,
+    Reference? author,
   }) = _Basic;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -216,7 +195,7 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BasicFromJson(json);
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -281,55 +260,45 @@ class Binary with Resource, _$Binary {
   /// [data] The actual content, base64 encoded.
   ///
   /// [dataElement] Extensions for data
-  @HiveType(typeId: 95, adapterName: 'BinaryAdapter')
   factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
 
-    /// [resourceType] This is a Binary resource
-    @HiveField(0)
+        /// [resourceType] This is a Binary resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [contentType] MimeType of the binary content represented as a standard
     ///  MimeType (BCP 13).
-    @HiveField(7)
-        Code? contentType,
+    Code? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType')
-    @HiveField(8)
         Element? contentTypeElement,
 
     /// [securityContext] This element identifies another resource that can be
@@ -338,23 +307,18 @@ class Binary with Resource, _$Binary {
     /// Binary resource contains very few elements that can be used to determine
     /// the sensitivity of the data and relationships to individuals, the
     /// referenced resource stands in as a proxy equivalent for this purpose. This
-    @HiveField(9)
-
     /// referenced resource may be related to the Binary (e.g. Media,
     /// DocumentReference), or may be some non-related Resource purely as a
     /// security proxy. E.g. to identify that the binary resource relates to a
     /// patient, and access should only be granted to applications that have
     ///  access to the patient.
-    @HiveField(10)
-        Reference? securityContext,
+    Reference? securityContext,
 
     /// [data] The actual content, base64 encoded.
-    @HiveField(11)
-        Base64Binary? data,
+    Base64Binary? data,
 
     /// [dataElement] Extensions for data
     @JsonKey(name: '_data')
-    @HiveField(12)
         Element? dataElement,
   }) = _Binary;
 
@@ -370,7 +334,7 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BinaryFromJson(json);
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -439,96 +403,78 @@ class Bundle with Resource, _$Bundle {
   ///  information about a resource (transactions and history only).
   ///
   /// [signature] Digital Signature - base64 encoded. XML-DSig or a JWT.
-  @HiveType(typeId: 96, adapterName: 'BundleAdapter')
   factory Bundle({
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
 
-    /// [resourceType] This is a Bundle resource
-    @HiveField(0)
+        /// [resourceType] This is a Bundle resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [identifier] A persistent identifier for the bundle that won't change as
     ///  a bundle is copied from server to server.
-    @HiveField(7)
-        Identifier? identifier,
+    Identifier? identifier,
 
     /// [type] Indicates the purpose of this bundle - how it is intended to be
     ///  used.
-    @HiveField(8)
-        Code? type,
+    Code? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
-    @HiveField(9)
         Element? typeElement,
 
     /// [timestamp] The date/time that the bundle was assembled - i.e. when the
     ///  resources were placed in the bundle.
-    @HiveField(10)
-        Instant? timestamp,
+    Instant? timestamp,
 
     /// [timestampElement] Extensions for timestamp
     @JsonKey(name: '_timestamp')
-    @HiveField(11)
         Element? timestampElement,
 
     /// [total] If a set of search matches, this is the total number of entries
     /// of type 'match' across all pages in the search.  It does not include
     /// search.mode = 'include' or 'outcome' entries and it does not provide a
     ///  count of the number of entries in the Bundle.
-    @HiveField(12)
-        UnsignedInt? total,
+    UnsignedInt? total,
 
     /// [totalElement] Extensions for total
     @JsonKey(name: '_total')
-    @HiveField(13)
         Element? totalElement,
 
     /// [link] A series of links that provide context to this bundle.
-    @HiveField(14)
-        List<BundleLink>? link,
+    List<BundleLink>? link,
 
     /// [entry] An entry in a bundle resource - will either contain a resource or
     ///  information about a resource (transactions and history only).
-    @HiveField(15)
-        List<BundleEntry>? entry,
+    List<BundleEntry>? entry,
 
     /// [signature] Digital Signature - base64 encoded. XML-DSig or a JWT.
-    @HiveField(16)
-        Signature? signature,
+    Signature? signature,
   }) = _Bundle;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -543,7 +489,7 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$BundleFromJson(json);
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -655,7 +601,7 @@ class BundleLink with _$BundleLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
 
   /// Acts like a constructor, returns a [BundleLink], accepts a
@@ -863,7 +809,7 @@ class BundleEntry with _$BundleEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntry.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntry], accepts a
@@ -978,7 +924,7 @@ class BundleSearch with _$BundleSearch {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleSearch.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$BundleSearchFromJson(json);
 
   /// Acts like a constructor, returns a [BundleSearch], accepts a
@@ -1153,7 +1099,7 @@ class BundleRequest with _$BundleRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleRequestFromJson(json);
 
   /// Acts like a constructor, returns a [BundleRequest], accepts a
@@ -1305,7 +1251,7 @@ class BundleResponse with _$BundleResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
 
   /// Acts like a constructor, returns a [BundleResponse], accepts a
@@ -1395,45 +1341,37 @@ class Linkage with Resource, _$Linkage {
   /// [item] Identifies which record considered as the reference to the same
   /// real-world occurrence as well as how the items should be evaluated within
   ///  the collection of linked items.
-  @HiveType(typeId: 97, adapterName: 'LinkageAdapter')
   factory Linkage({
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
 
-    /// [resourceType] This is a Linkage resource
-    @HiveField(0)
+        /// [resourceType] This is a Linkage resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1442,15 +1380,13 @@ class Linkage with Resource, _$Linkage {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1459,7 +1395,6 @@ class Linkage with Resource, _$Linkage {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1475,30 +1410,25 @@ class Linkage with Resource, _$Linkage {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [active] Indicates whether the asserted set of linkages are considered to
     ///  be "in effect".
-    @HiveField(11)
-        Boolean? active,
+    Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
-    @HiveField(12)
         Element? activeElement,
 
     /// [author] Identifies the user or organization responsible for asserting
     /// the linkages as well as the user or organization who establishes the
     ///  context in which the nature of each linkage is evaluated.
-    @HiveField(13)
-        Reference? author,
+    Reference? author,
 
     /// [item] Identifies which record considered as the reference to the same
     /// real-world occurrence as well as how the items should be evaluated within
     ///  the collection of linked items.
-    @HiveField(14)
-        required List<LinkageItem> item,
+    required List<LinkageItem> item,
   }) = _Linkage;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1513,7 +1443,7 @@ class Linkage with Resource, _$Linkage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Linkage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
 
   /// Acts like a constructor, returns a [Linkage], accepts a
@@ -1622,7 +1552,7 @@ class LinkageItem with _$LinkageItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LinkageItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
 
   /// Acts like a constructor, returns a [LinkageItem], accepts a
@@ -1748,45 +1678,37 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  class of the event.
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
-  @HiveType(typeId: 98, adapterName: 'MessageHeaderAdapter')
   factory MessageHeader({
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
 
-    /// [resourceType] This is a MessageHeader resource
-    @HiveField(0)
+        /// [resourceType] This is a MessageHeader resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1795,15 +1717,13 @@ class MessageHeader with Resource, _$MessageHeader {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1812,7 +1732,6 @@ class MessageHeader with Resource, _$MessageHeader {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1828,81 +1747,67 @@ class MessageHeader with Resource, _$MessageHeader {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [eventCoding] Code that identifies the event this message represents and
     /// connects it with its definition. Events defined as part of the FHIR
     /// specification have the system value
     /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
     ///  to the EventDefinition.
-    @HiveField(11)
-        Coding? eventCoding,
+    Coding? eventCoding,
 
     /// [eventUri] Code that identifies the event this message represents and
     /// connects it with its definition. Events defined as part of the FHIR
     /// specification have the system value
     /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
     ///  to the EventDefinition.
-    @HiveField(12)
-        FhirUri? eventUri,
+    FhirUri? eventUri,
 
     /// [eventUriElement] Extensions for eventUri
     @JsonKey(name: '_eventUri')
-    @HiveField(13)
         Element? eventUriElement,
 
     /// [destination] The destination application which the message is intended
     ///  for.
-    @HiveField(14)
-        List<MessageHeaderDestination>? destination,
+    List<MessageHeaderDestination>? destination,
 
     /// [sender] Identifies the sending system to allow the use of a trust
     ///  relationship.
-    @HiveField(15)
-        Reference? sender,
+    Reference? sender,
 
     /// [enterer] The person or device that performed the data entry leading to
     /// this message. When there is more than one candidate, pick the most
     ///  proximal to the message. Can provide other enterers in extensions.
-    @HiveField(16)
-        Reference? enterer,
+    Reference? enterer,
 
     /// [author] The logical author of the message - the person or device that
     /// decided the described event should happen. When there is more than one
     /// candidate, pick the most proximal to the MessageHeader. Can provide other
     ///  authors in extensions.
-    @HiveField(17)
-        Reference? author,
+    Reference? author,
 
     /// [source] The source application from which this message originated.
-    @HiveField(18)
-        required MessageHeaderSource source,
+    required MessageHeaderSource source,
 
     /// [responsible] The person or organization that accepts overall
     /// responsibility for the contents of the message. The implication is that
     ///  the message event happened under the policies of the responsible party.
-    @HiveField(19)
-        Reference? responsible,
+    Reference? responsible,
 
     /// [reason] Coded indication of the cause for the event - indicates  a
     ///  reason for the occurrence of the event that is a focus of this message.
-    @HiveField(20)
-        CodeableConcept? reason,
+    CodeableConcept? reason,
 
     /// [response] Information about the message that this message is a response
     ///  to.  Only present if this message is a response.
-    @HiveField(21)
-        MessageHeaderResponse? response,
+    MessageHeaderResponse? response,
 
     /// [focus] The actual data of the message - a reference to the root/focus
     ///  class of the event.
-    @HiveField(22)
-        List<Reference>? focus,
+    List<Reference>? focus,
 
     /// [definition] Permanent link to the MessageDefinition for this message.
-    @HiveField(23)
-        Canonical? definition,
+    Canonical? definition,
   }) = _MessageHeader;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1917,7 +1822,7 @@ class MessageHeader with Resource, _$MessageHeader {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeader], accepts a
@@ -2048,7 +1953,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderDestination], accepts a
@@ -2194,7 +2099,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderSource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderSource], accepts a
@@ -2287,7 +2192,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
     /// [identifier] The MessageHeader.id of the message to which this message is
     ///  a response.
-    FhirId? identifier,
+    Id? identifier,
 
     /// [identifierElement] Extensions for identifier
     @JsonKey(name: '_identifier') Element? identifierElement,
@@ -2318,7 +2223,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
 
   /// Acts like a constructor, returns a [MessageHeaderResponse], accepts a
@@ -2398,45 +2303,37 @@ class OperationOutcome with Resource, _$OperationOutcome {
   ///
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
-  @HiveType(typeId: 100, adapterName: 'OperationOutcomeAdapter')
   factory OperationOutcome({
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
 
-    /// [resourceType] This is a OperationOutcome resource
-    @HiveField(0)
+        /// [resourceType] This is a OperationOutcome resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2445,15 +2342,13 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2462,7 +2357,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2478,13 +2372,11 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [issue] An error, warning, or information message that results from a
     ///  system action.
-    @HiveField(11)
-        required List<OperationOutcomeIssue> issue,
+    required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
   bool get isInformational =>
@@ -2502,7 +2394,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationOutcome.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 
   /// Acts like a constructor, returns a [OperationOutcome], accepts a
@@ -2677,7 +2569,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 
   /// Acts like a constructor, returns a [OperationOutcomeIssue], accepts a
@@ -2724,50 +2616,41 @@ class Parameters with Resource, _$Parameters {
   /// [languageElement] Extensions for language
   ///
   /// [parameter] A parameter passed to or received from the operation.
-  @HiveType(typeId: 101, adapterName: 'ParametersAdapter')
   factory Parameters({
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
 
-    /// [resourceType] This is a Parameters resource
-    @HiveField(0)
+        /// [resourceType] This is a Parameters resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [parameter] A parameter passed to or received from the operation.
-    @HiveField(7)
-        List<ParametersParameter>? parameter,
+    List<ParametersParameter>? parameter,
   }) = _Parameters;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2782,7 +2665,7 @@ class Parameters with Resource, _$Parameters {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Parameters.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
 
   /// Acts like a constructor, returns a [Parameters], accepts a
@@ -3054,7 +2937,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] If the parameter is a data type.
-    FhirId? valueId,
+    Id? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -3240,7 +3123,7 @@ class ParametersParameter with _$ParametersParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ParametersParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 
   /// Acts like a constructor, returns a [ParametersParameter], accepts a
@@ -3350,45 +3233,37 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [channel] Details where to send notifications when resources are received
   ///  that meet the criteria.
-  @HiveType(typeId: 102, adapterName: 'SubscriptionAdapter')
   factory Subscription({
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
 
-    /// [resourceType] This is a Subscription resource
-    @HiveField(0)
+        /// [resourceType] This is a Subscription resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3397,15 +3272,13 @@ class Subscription with Resource, _$Subscription {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3414,7 +3287,6 @@ class Subscription with Resource, _$Subscription {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3430,66 +3302,53 @@ class Subscription with Resource, _$Subscription {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [status] The status of the subscription, which marks the server state for
     ///  managing the subscription.
-    @HiveField(11)
-        Code? status,
+    Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
-    @HiveField(12)
         Element? statusElement,
 
     /// [contact] Contact details for a human to contact about the subscription.
     ///  The primary use of this for system administrator troubleshooting.
-    @HiveField(13)
-        List<ContactPoint>? contact,
+    List<ContactPoint>? contact,
 
     /// [end] The time for the server to turn the subscription off.
-    @HiveField(14)
-        Instant? end,
+    Instant? end,
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end')
-    @HiveField(15)
         Element? endElement,
 
     /// [reason] A description of why this subscription is defined.
-    @HiveField(16)
-        String? reason,
+    String? reason,
 
     /// [reasonElement] Extensions for reason
     @JsonKey(name: '_reason')
-    @HiveField(17)
         Element? reasonElement,
 
     /// [criteria] The rules that the server should use to determine when to
     ///  generate notifications for this subscription.
-    @HiveField(18)
-        String? criteria,
+    String? criteria,
 
     /// [criteriaElement] Extensions for criteria
     @JsonKey(name: '_criteria')
-    @HiveField(19)
         Element? criteriaElement,
 
     /// [error] A record of the last error that occurred when the server
     ///  processed a notification.
-    @HiveField(20)
-        String? error,
+    String? error,
 
     /// [errorElement] Extensions for error
     @JsonKey(name: '_error')
-    @HiveField(21)
         Element? errorElement,
 
     /// [channel] Details where to send notifications when resources are received
     ///  that meet the criteria.
-    @HiveField(22)
-        required SubscriptionChannel channel,
+    required SubscriptionChannel channel,
   }) = _Subscription;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3504,7 +3363,7 @@ class Subscription with Resource, _$Subscription {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Subscription.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 
   /// Acts like a constructor, returns a [Subscription], accepts a
@@ -3652,7 +3511,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionChannel.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionChannel], accepts a
@@ -3720,99 +3579,77 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
   ///
   /// [error] A record of errors that occurred when the server processed a notification.;
-  @HiveType(typeId: 103, adapterName: 'SubscriptionStatusAdapter')
   factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource;
     @Default(R4ResourceType.SubscriptionStatus)
-    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1)
-        String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2)
-        Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3)
-        FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
-    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5)
-        Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
-    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7)
-        Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8)
-        List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
     @JsonKey(name: 'extension')
-    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10)
-        List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [status] The status of the subscription, which marks the server state for managing the subscription.;
-    @HiveField(11)
-        Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
-    @HiveField(12)
         Element? statusElement,
 
     /// [type] The type of event being conveyed with this notificaiton.;
-    @HiveField(13)
-        Code? type,
+    Code? type,
 
     /// [typeElement] (_type): Extensions for type;
     @JsonKey(name: '_type')
-    @HiveField(14)
         Element? typeElement,
 
     /// [eventsSinceSubscriptionStart] The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.;
-    @HiveField(15)
-        Integer64? eventsSinceSubscriptionStart,
+    Integer64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
 
-    /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
-    @HiveField(16)
+        /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
         Element? eventsSinceSubscriptionStartElement,
 
     /// [notificationEvent] Detailed information about events relevant to this subscription notification.;
-    @HiveField(17)
-        List<SubscriptionStatusNotificationEvent>? notificationEvent,
+    List<SubscriptionStatusNotificationEvent>? notificationEvent,
 
     /// [subscription] The reference to the Subscription which generated this notification.;
-    @HiveField(18)
-        required Reference subscription,
+    required Reference subscription,
 
     /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
-    @HiveField(19)
-        Canonical? topic,
+    Canonical? topic,
 
     /// [error] A record of errors that occurred when the server processed a notification.;
-    @HiveField(20)
-        List<CodeableConcept>? error,
+    List<CodeableConcept>? error,
   }) = _SubscriptionStatus;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3827,7 +3664,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionStatus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionStatus.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionStatusFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionStatus], accepts a
@@ -4030,129 +3867,122 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [canFilterBy] List of properties by which Subscriptions on the SubscriptionTopic can be filtered. May be defined Search Parameters (e.g., Encounter.patient) or parameters defined within this SubscriptionTopic context (e.g., hub.event).;
   ///
   /// [notificationShape] List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.;
-  @HiveType(typeId: 104, adapterName: 'SubscriptionTopicAdapter')
   factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource;
-    @HiveField(0)
-    @Default(R4ResourceType.SubscriptionTopic)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @HiveField(1) String? id,
+    String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    @HiveField(3) FhirUri? implicitRules,
+    FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-    @HiveField(7) Narrative? text,
+    Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-    @HiveField(8) List<Resource>? contained,
+    List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-    @HiveField(10) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this subscription topic when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this subscription topic is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the subscription topic is stored on different servers.;
-    @HiveField(11) FhirUri? url,
+    FhirUri? url,
 
     /// [urlElement] (_url): Extensions for url;
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] Business identifiers assigned to this subscription topic by the performer and/or other systems.  These identifiers remain constant as the resource is updated and propagates from server to server.;
-    @HiveField(13) List<Identifier>? identifier,
+    List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the subscription topic when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the Topic author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions are orderable.;
-    @HiveField(14) String? version,
+    String? version,
 
     /// [versionElement] (_version): Extensions for version;
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [title] A short, descriptive, user-friendly title for the SubscriptionTopic, for example, "admission".;
-    @HiveField(16) String? title,
+    String? title,
 
     /// [titleElement] (_title): Extensions for title;
-    @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) List<Canonical>? derivedFrom,
+    @JsonKey(name: '_title') Element? titleElement,
+    List<Canonical>? derivedFrom,
 
     /// [status] The current state of the SubscriptionTopic.;
-    @HiveField(19) Code? status,
+    Code? status,
 
     /// [statusElement] (_status): Extensions for status;
-    @HiveField(20) @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.;
-    @HiveField(21) Boolean? experimental,
+    Boolean? experimental,
 
     /// [experimentalElement] (_experimental): Extensions for experimental;
-    @HiveField(22) @JsonKey(name: '_experimental') Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] For draft definitions, indicates the date of initial creation.  For active definitions, represents the date of activation.  For withdrawn definitions, indicates the date of withdrawal.;
-    @HiveField(23) FhirDateTime? date,
+    FhirDateTime? date,
 
     /// [dateElement] (_date): Extensions for date;
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] Helps establish the "authority/credibility" of the SubscriptionTopic.  May also allow for contact.;
-    @HiveField(25) String? publisher,
+    String? publisher,
 
     /// [publisherElement] (_publisher): Extensions for publisher;
-    @HiveField(26) @JsonKey(name: '_publisher') Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
-    @HiveField(27) List<ContactDetail>? contact,
+    List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the Topic from the consumer's perspective.;
-    @HiveField(28) Markdown? description,
+    Markdown? description,
 
     /// [descriptionElement] (_description): Extensions for description;
-    @HiveField(29) @JsonKey(name: '_description') Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of code system definitions.;
-    @HiveField(30) List<UsageContext>? useContext,
+    List<UsageContext>? useContext,
 
     /// [jurisdiction] A jurisdiction in which the Topic is intended to be used.;
-    @HiveField(31) List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explains why this Topic is needed and why it has been designed as it has.;
-    @HiveField(32) Markdown? purpose,
+    Markdown? purpose,
 
     /// [purposeElement] (_purpose): Extensions for purpose;
-    @HiveField(33) @JsonKey(name: '_purpose') Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the SubscriptionTopic and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the SubscriptionTopic.;
-    @HiveField(34) Markdown? copyright,
+    Markdown? copyright,
 
     /// [copyrightElement] (_copyright): Extensions for copyright;
-    @HiveField(35) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(36) Date? approvalDate,
-    @HiveField(37) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(38) Date? lastReviewDate,
-    @HiveField(39)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(40) Period? effectivePeriod,
-    @HiveField(41) List<SubscriptionTopicResourceTrigger>? resourceTrigger,
-    @HiveField(42) List<SubscriptionTopicEventTrigger>? eventTrigger,
-    @HiveField(43) List<SubscriptionTopicCanFilterBy>? canFilterBy,
-    @HiveField(44) List<SubscriptionTopicNotificationShape>? notificationShape,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<SubscriptionTopicResourceTrigger>? resourceTrigger,
+    List<SubscriptionTopicEventTrigger>? eventTrigger,
+    List<SubscriptionTopicCanFilterBy>? canFilterBy,
+    List<SubscriptionTopicNotificationShape>? notificationShape,
   }) = _SubscriptionTopic;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4167,7 +3997,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionTopic.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionTopic.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionTopicFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionTopic], accepts a
@@ -4334,7 +4164,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionTopicQueryCriteriaFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionTopicQueryCriteria], accepts a
@@ -4402,7 +4232,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionTopicEventTriggerFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionTopicEventTrigger], accepts a
@@ -4485,7 +4315,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
+  factory SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionTopicCanFilterByFromJson(json);
 
   /// Acts like a constructor, returns a [SubscriptionTopicCanFilterBy], accepts a
