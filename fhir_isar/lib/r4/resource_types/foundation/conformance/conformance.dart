@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
 /// [CapabilityStatement] A Capability Statement documents a set of
-@freezed
+
 class CapabilityStatement {
   /// [CapabilityStatement] A Capability Statement documents a set of
 
@@ -210,7 +209,7 @@ class CapabilityStatement {
   /// [messaging] A description of the messaging capabilities of the solution.
   ///
   /// [document] A document definition.
-  factory CapabilityStatement({
+  
     @Default(R4ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
 
@@ -473,11 +472,11 @@ class CapabilityStatement {
 
     /// [document] A document definition.
     List<CapabilityStatementDocument>? document,
-  }) = _CapabilityStatement;
+  
 }
 
 /// [CapabilityStatementSoftware] A Capability Statement documents a set of
-@freezed
+
 class CapabilityStatementSoftware {
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
 
@@ -522,7 +521,7 @@ class CapabilityStatementSoftware {
   /// [releaseDate] Date this version of the software was released.
   ///
   /// [releaseDateElement] Extensions for releaseDate
-  factory CapabilityStatementSoftware({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -568,10 +567,9 @@ class CapabilityStatementSoftware {
 
     /// [releaseDateElement] Extensions for releaseDate
     @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatementSoftware;
+  
 }
 
-@freezed
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
   /// [CapabilityStatementImplementation] A Capability Statement documents a
@@ -615,7 +613,7 @@ class CapabilityStatementImplementation
   ///
   /// [custodian] The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
-  factory CapabilityStatementImplementation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -660,14 +658,14 @@ class CapabilityStatementImplementation
     /// [custodian] The organization responsible for the management of the
     ///  instance and oversight of the data on the server at the specified URL.
     Reference? custodian,
-  }) = _CapabilityStatementImplementation;
+  
 }
 
 /// [CapabilityStatementSecurity] A Capability Statement documents a set of
 /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
 /// that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSecurity {
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -714,7 +712,7 @@ class CapabilityStatementSecurity {
   /// [description] General description of how security works.
   ///
   /// [descriptionElement] Extensions for description
-  factory CapabilityStatementSecurity({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -758,14 +756,14 @@ class CapabilityStatementSecurity {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CapabilityStatementSecurity;
+  
 }
 
 /// [CapabilityStatementResource] A Capability Statement documents a set of
 /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
 /// that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementResource {
   /// [CapabilityStatementResource] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -890,7 +888,7 @@ class CapabilityStatementResource {
   /// parameters and their meaning and type. Consult the definition of the
   /// operation for details about how to invoke the operation, and the
   ///  parameters.
-  factory CapabilityStatementResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1036,14 +1034,14 @@ class CapabilityStatementResource {
     /// operation for details about how to invoke the operation, and the
     ///  parameters.
     List<CapabilityStatementOperation>? operation,
-  }) = _CapabilityStatementResource;
+  
 }
 
 /// [CapabilityStatementInteraction] A Capability Statement documents a set
 /// of capabilities (behaviors) of a FHIR Server for a particular version of
 /// FHIR that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementInteraction {
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1090,7 +1088,7 @@ class CapabilityStatementInteraction {
   ///  certificates only'.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementInteraction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1133,14 +1131,14 @@ class CapabilityStatementInteraction {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction;
+  
 }
 
 /// [CapabilityStatementSearchParam] A Capability Statement documents a set
 /// of capabilities (behaviors) of a FHIR Server for a particular version of
 /// FHIR that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSearchParam {
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1197,7 +1195,7 @@ class CapabilityStatementSearchParam {
   ///  how the search parameter is used.  For example, text matching algorithms.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementSearchParam({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1249,14 +1247,14 @@ class CapabilityStatementSearchParam {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementSearchParam;
+  
 }
 
 /// [CapabilityStatementOperation] A Capability Statement documents a set of
 /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
 /// that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementOperation {
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1313,7 +1311,7 @@ class CapabilityStatementOperation {
   ///  and instance-level invocation of the operation.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1367,14 +1365,14 @@ class CapabilityStatementOperation {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementOperation;
+  
 }
 
 /// [CapabilityStatementInteraction1] A Capability Statement documents a set
 /// of capabilities (behaviors) of a FHIR Server for a particular version of
 /// FHIR that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementInteraction1 {
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1419,7 +1417,7 @@ class CapabilityStatementInteraction1 {
   ///  information about system wide search is implemented.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementInteraction1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1460,14 +1458,14 @@ class CapabilityStatementInteraction1 {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction1;
+  
 }
 
 /// [CapabilityStatementMessaging] A Capability Statement documents a set of
 /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
 /// that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementMessaging {
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1521,7 +1519,7 @@ class CapabilityStatementMessaging {
   ///
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
-  factory CapabilityStatementMessaging({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1573,14 +1571,14 @@ class CapabilityStatementMessaging {
     /// [supportedMessage] References to message definitions for messages this
     ///  system can send or receive.
     List<CapabilityStatementSupportedMessage>? supportedMessage,
-  }) = _CapabilityStatementMessaging;
+  
 }
 
 /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
 /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
 /// that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementEndpoint {
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1623,7 +1621,7 @@ class CapabilityStatementEndpoint {
   ///  use network addresses for routing, it can be just an identifier.
   ///
   /// [addressElement] Extensions for address
-  factory CapabilityStatementEndpoint({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1661,14 +1659,14 @@ class CapabilityStatementEndpoint {
 
     /// [addressElement] Extensions for address
     @JsonKey(name: '_address') Element? addressElement,
-  }) = _CapabilityStatementEndpoint;
+  
 }
 
 /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
 /// set of capabilities (behaviors) of a FHIR Server for a particular version
 /// of FHIR that may be used as a statement of actual server functionality or
 ///  a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
@@ -1712,7 +1710,7 @@ class CapabilityStatementSupportedMessage
   ///
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  factory CapabilityStatementSupportedMessage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1750,11 +1748,11 @@ class CapabilityStatementSupportedMessage
     /// [definition] Points to a message definition that identifies the messaging
     ///  event, message structure, allowed responses, etc.
     required Canonical definition,
-  }) = _CapabilityStatementSupportedMessage;
+  
 }
 
 /// [CompartmentDefinition] A compartment definition that defines how
-@freezed
+
 class CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how
 
@@ -1893,7 +1891,7 @@ class CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the
   ///  compartment.
-  factory CompartmentDefinition({
+  
     @Default(R4ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
 
@@ -2079,11 +2077,11 @@ class CompartmentDefinition {
     /// [resource] Information about how a resource is related to the
     ///  compartment.
     List<CompartmentDefinitionResource>? resource,
-  }) = _CompartmentDefinition;
+  
 }
 
 /// [CompartmentDefinitionResource] A compartment definition that defines
-@freezed
+
 class CompartmentDefinitionResource {
   /// [CompartmentDefinitionResource] A compartment definition that defines
 
@@ -2128,7 +2126,7 @@ class CompartmentDefinitionResource {
   ///  compartment.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CompartmentDefinitionResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2176,11 +2174,11 @@ class CompartmentDefinitionResource {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CompartmentDefinitionResource;
+  
 }
 
 /// [ExampleScenario] Example of workflow instance.
-@freezed
+
 class ExampleScenario {
   /// [ExampleScenario] Example of workflow instance.
 
@@ -2325,7 +2323,7 @@ class ExampleScenario {
   /// [process] Each major process - a group of operations.
   ///
   /// [workflow] Another nested workflow.
-  factory ExampleScenario({
+  
     @Default(R4ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
 
@@ -2517,11 +2515,11 @@ class ExampleScenario {
 
     /// [workflow] Another nested workflow.
     List<Canonical>? workflow,
-  }) = _ExampleScenario;
+  
 }
 
 /// [ExampleScenarioActor] Example of workflow instance.
-@freezed
+
 class ExampleScenarioActor {
   /// [ExampleScenarioActor] Example of workflow instance.
 
@@ -2566,7 +2564,7 @@ class ExampleScenarioActor {
   /// [description] The description of the actor.
   ///
   /// [descriptionElement] Extensions for description
-  factory ExampleScenarioActor({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2617,11 +2615,11 @@ class ExampleScenarioActor {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioActor;
+  
 }
 
 /// [ExampleScenarioInstance] Example of workflow instance.
-@freezed
+
 class ExampleScenarioInstance {
   /// [ExampleScenarioInstance] Example of workflow instance.
 
@@ -2671,7 +2669,7 @@ class ExampleScenarioInstance {
   ///
   /// [containedInstance] Resources contained in the instance (e.g. the
   ///  observations contained in a bundle).
-  factory ExampleScenarioInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2729,11 +2727,11 @@ class ExampleScenarioInstance {
     /// [containedInstance] Resources contained in the instance (e.g. the
     ///  observations contained in a bundle).
     List<ExampleScenarioContainedInstance>? containedInstance,
-  }) = _ExampleScenarioInstance;
+  
 }
 
 /// [ExampleScenarioVersion] Example of workflow instance.
-@freezed
+
 class ExampleScenarioVersion {
   /// [ExampleScenarioVersion] Example of workflow instance.
 
@@ -2770,7 +2768,7 @@ class ExampleScenarioVersion {
   /// [description] The description of the resource version.
   ///
   /// [descriptionElement] Extensions for description
-  factory ExampleScenarioVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2809,11 +2807,11 @@ class ExampleScenarioVersion {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioVersion;
+  
 }
 
 /// [ExampleScenarioContainedInstance] Example of workflow instance.
-@freezed
+
 class ExampleScenarioContainedInstance {
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
 
@@ -2850,7 +2848,7 @@ class ExampleScenarioContainedInstance {
   /// [versionId] A specific version of a resource contained in the instance.
   ///
   /// [versionIdElement] Extensions for versionId
-  factory ExampleScenarioContainedInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2889,11 +2887,11 @@ class ExampleScenarioContainedInstance {
 
     /// [versionIdElement] Extensions for versionId
     @JsonKey(name: '_versionId') Element? versionIdElement,
-  }) = _ExampleScenarioContainedInstance;
+  
 }
 
 /// [ExampleScenarioStep] Example of workflow instance.
-@freezed
+
 class ExampleScenarioStep {
   /// [ExampleScenarioStep] Example of workflow instance.
 
@@ -2933,7 +2931,7 @@ class ExampleScenarioStep {
   ///
   /// [alternative] Indicates an alternative step that can be taken instead of
   ///  the operations on the base step in exceptional/atypical circumstances.
-  factory ExampleScenarioStep({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2976,11 +2974,11 @@ class ExampleScenarioStep {
     /// [alternative] Indicates an alternative step that can be taken instead of
     ///  the operations on the base step in exceptional/atypical circumstances.
     List<ExampleScenarioAlternative>? alternative,
-  }) = _ExampleScenarioStep;
+  
 }
 
 /// [ExampleScenarioOperation] Example of workflow instance.
-@freezed
+
 class ExampleScenarioOperation {
   /// [ExampleScenarioOperation] Example of workflow instance.
 
@@ -3047,7 +3045,7 @@ class ExampleScenarioOperation {
   /// [request] Each resource instance used by the initiator.
   ///
   /// [response] Each resource instance used by the responder.
-  factory ExampleScenarioOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3130,11 +3128,11 @@ class ExampleScenarioOperation {
 
     /// [response] Each resource instance used by the responder.
     ExampleScenarioContainedInstance? response,
-  }) = _ExampleScenarioOperation;
+  
 }
 
 /// [ExampleScenarioAlternative] Example of workflow instance.
-@freezed
+
 class ExampleScenarioAlternative {
   /// [ExampleScenarioAlternative] Example of workflow instance.
 
@@ -3175,7 +3173,7 @@ class ExampleScenarioAlternative {
   /// [descriptionElement] Extensions for description
   ///
   /// [step] What happens in each alternative option.
-  factory ExampleScenarioAlternative({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3219,11 +3217,11 @@ class ExampleScenarioAlternative {
 
     /// [step] What happens in each alternative option.
     List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioAlternative;
+  
 }
 
 /// [GraphDefinition] A formal computable definition of a graph of resources
-@freezed
+
 class GraphDefinition {
   /// [GraphDefinition] A formal computable definition of a graph of resources
 
@@ -3363,7 +3361,7 @@ class GraphDefinition {
   /// [profile] The profile that describes the use of the base resource.
   ///
   /// [link] Links this graph makes rules about.
-  factory GraphDefinition({
+  
     @Default(R4ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
 
@@ -3547,11 +3545,11 @@ class GraphDefinition {
 
     /// [link] Links this graph makes rules about.
     List<GraphDefinitionLink>? link,
-  }) = _GraphDefinition;
+  
 }
 
 /// [GraphDefinitionLink] A formal computable definition of a graph of
-@freezed
+
 class GraphDefinitionLink {
   /// [GraphDefinitionLink] A formal computable definition of a graph of
 
@@ -3607,7 +3605,7 @@ class GraphDefinitionLink {
   /// [descriptionElement] Extensions for description
   ///
   /// [target] Potential target for the link.
-  factory GraphDefinitionLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3669,11 +3667,11 @@ class GraphDefinitionLink {
 
     /// [target] Potential target for the link.
     List<GraphDefinitionTarget>? target,
-  }) = _GraphDefinitionLink;
+  
 }
 
 /// [GraphDefinitionTarget] A formal computable definition of a graph of
-@freezed
+
 class GraphDefinitionTarget {
   /// [GraphDefinitionTarget] A formal computable definition of a graph of
 
@@ -3719,7 +3717,7 @@ class GraphDefinitionTarget {
   /// [compartment] Compartment Consistency Rules.
   ///
   /// [link] Additional links from target resource.
-  factory GraphDefinitionTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3767,11 +3765,11 @@ class GraphDefinitionTarget {
 
     /// [link] Additional links from target resource.
     List<GraphDefinitionLink>? link,
-  }) = _GraphDefinitionTarget;
+  
 }
 
 /// [GraphDefinitionCompartment] A formal computable definition of a graph
-@freezed
+
 class GraphDefinitionCompartment {
   /// [GraphDefinitionCompartment] A formal computable definition of a graph
 
@@ -3825,7 +3823,7 @@ class GraphDefinitionCompartment {
   /// [description] Documentation for FHIRPath expression.
   ///
   /// [descriptionElement] Extensions for description
-  factory GraphDefinitionCompartment({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3884,11 +3882,11 @@ class GraphDefinitionCompartment {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _GraphDefinitionCompartment;
+  
 }
 
 /// [ImplementationGuide] A set of rules of how a particular interoperability
-@freezed
+
 class ImplementationGuide {
   /// [ImplementationGuide] A set of rules of how a particular interoperability
 
@@ -4060,7 +4058,7 @@ class ImplementationGuide {
   ///
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
-  factory ImplementationGuide({
+  
     @Default(R4ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
 
@@ -4286,11 +4284,11 @@ class ImplementationGuide {
     /// [manifest] Information about an assembled implementation guide, created
     ///  by the publication tooling.
     ImplementationGuideManifest? manifest,
-  }) = _ImplementationGuide;
+  
 }
 
 /// [ImplementationGuideDependsOn] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideDependsOn {
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
 
@@ -4336,7 +4334,7 @@ class ImplementationGuideDependsOn {
   ///  version is required to understand the IG correctly.
   ///
   /// [versionElement] Extensions for version
-  factory ImplementationGuideDependsOn({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4381,11 +4379,11 @@ class ImplementationGuideDependsOn {
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
-  }) = _ImplementationGuideDependsOn;
+  
 }
 
 /// [ImplementationGuideGlobal] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideGlobal {
   /// [ImplementationGuideGlobal] A set of rules of how a particular
 
@@ -4424,7 +4422,7 @@ class ImplementationGuideGlobal {
   /// [typeElement] Extensions for type
   ///
   /// [profile] A reference to the profile that all instances must conform to.
-  factory ImplementationGuideGlobal({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4460,11 +4458,11 @@ class ImplementationGuideGlobal {
 
     /// [profile] A reference to the profile that all instances must conform to.
     required Canonical profile,
-  }) = _ImplementationGuideGlobal;
+  
 }
 
 /// [ImplementationGuideDefinition] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideDefinition {
   /// [ImplementationGuideDefinition] A set of rules of how a particular
 
@@ -4512,7 +4510,7 @@ class ImplementationGuideDefinition {
   /// [parameter] Defines how IG is built by tools.
   ///
   /// [template] A template for building resources.
-  factory ImplementationGuideDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4559,11 +4557,11 @@ class ImplementationGuideDefinition {
 
     /// [template] A template for building resources.
     List<ImplementationGuideTemplate>? template,
-  }) = _ImplementationGuideDefinition;
+  
 }
 
 /// [ImplementationGuideGrouping] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideGrouping {
   /// [ImplementationGuideGrouping] A set of rules of how a particular
 
@@ -4605,7 +4603,7 @@ class ImplementationGuideGrouping {
   /// [description] Human readable text describing the package.
   ///
   /// [descriptionElement] Extensions for description
-  factory ImplementationGuideGrouping({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4645,11 +4643,11 @@ class ImplementationGuideGrouping {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ImplementationGuideGrouping;
+  
 }
 
 /// [ImplementationGuideResource] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideResource {
   /// [ImplementationGuideResource] A set of rules of how a particular
 
@@ -4718,7 +4716,7 @@ class ImplementationGuideResource {
   ///  in.
   ///
   /// [groupingIdElement] Extensions for groupingId
-  factory ImplementationGuideResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4794,11 +4792,11 @@ class ImplementationGuideResource {
 
     /// [groupingIdElement] Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
-  }) = _ImplementationGuideResource;
+  
 }
 
 /// [ImplementationGuidePage] A set of rules of how a particular
-@freezed
+
 class ImplementationGuidePage {
   /// [ImplementationGuidePage] A set of rules of how a particular
 
@@ -4848,7 +4846,7 @@ class ImplementationGuidePage {
   /// [generationElement] Extensions for generation
   ///
   /// [page] Nested Pages/Sections under this page.
-  factory ImplementationGuidePage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4900,11 +4898,11 @@ class ImplementationGuidePage {
 
     /// [page] Nested Pages/Sections under this page.
     List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
+  
 }
 
 /// [ImplementationGuideParameter] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideParameter {
   /// [ImplementationGuideParameter] A set of rules of how a particular
 
@@ -4947,7 +4945,7 @@ class ImplementationGuideParameter {
   /// [value] Value for named type.
   ///
   /// [valueElement] Extensions for value
-  factory ImplementationGuideParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4988,11 +4986,11 @@ class ImplementationGuideParameter {
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ImplementationGuideParameter;
+  
 }
 
 /// [ImplementationGuideTemplate] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideTemplate {
   /// [ImplementationGuideTemplate] A set of rules of how a particular
 
@@ -5037,7 +5035,7 @@ class ImplementationGuideTemplate {
   /// [scope] The scope in which the template applies.
   ///
   /// [scopeElement] Extensions for scope
-  factory ImplementationGuideTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5082,11 +5080,11 @@ class ImplementationGuideTemplate {
 
     /// [scopeElement] Extensions for scope
     @JsonKey(name: '_scope') Element? scopeElement,
-  }) = _ImplementationGuideTemplate;
+  
 }
 
 /// [ImplementationGuideManifest] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideManifest {
   /// [ImplementationGuideManifest] A set of rules of how a particular
 
@@ -5141,7 +5139,7 @@ class ImplementationGuideManifest {
   ///  be the target of a hyperlink in a derived IG.
   ///
   /// [otherElement] Extensions for other
-  factory ImplementationGuideManifest({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5198,11 +5196,11 @@ class ImplementationGuideManifest {
 
     /// [otherElement] Extensions for other
     @JsonKey(name: '_other') List<Element?>? otherElement,
-  }) = _ImplementationGuideManifest;
+  
 }
 
 /// [ImplementationGuideResource1] A set of rules of how a particular
-@freezed
+
 class ImplementationGuideResource1 {
   /// [ImplementationGuideResource1] A set of rules of how a particular
 
@@ -5254,7 +5252,7 @@ class ImplementationGuideResource1 {
   ///  within the IG.
   ///
   /// [relativePathElement] Extensions for relativePath
-  factory ImplementationGuideResource1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5307,11 +5305,11 @@ class ImplementationGuideResource1 {
 
     /// [relativePathElement] Extensions for relativePath
     @JsonKey(name: '_relativePath') Element? relativePathElement,
-  }) = _ImplementationGuideResource1;
+  
 }
 
 /// [ImplementationGuidePage1] A set of rules of how a particular
-@freezed
+
 class ImplementationGuidePage1 {
   /// [ImplementationGuidePage1] A set of rules of how a particular
 
@@ -5356,7 +5354,7 @@ class ImplementationGuidePage1 {
   /// [anchor] The name of an anchor available on the page.
   ///
   /// [anchorElement] Extensions for anchor
-  factory ImplementationGuidePage1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5401,11 +5399,11 @@ class ImplementationGuidePage1 {
 
     /// [anchorElement] Extensions for anchor
     @JsonKey(name: '_anchor') List<Element?>? anchorElement,
-  }) = _ImplementationGuidePage1;
+  
 }
 
 /// [MessageDefinition] Defines the characteristics of a message that can be
-@freezed
+
 class MessageDefinition {
   /// [MessageDefinition] Defines the characteristics of a message that can be
 
@@ -5584,7 +5582,7 @@ class MessageDefinition {
   /// what resources are to be added to the bundle when building the document.
   /// The GraphDefinition can also specify profiles that apply to the various
   ///  resources.
-  factory MessageDefinition({
+  
     @Default(R4ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
 
@@ -5825,11 +5823,11 @@ class MessageDefinition {
     /// The GraphDefinition can also specify profiles that apply to the various
     ///  resources.
     List<Canonical>? graph,
-  }) = _MessageDefinition;
+  
 }
 
 /// [MessageDefinitionFocus] Defines the characteristics of a message that
-@freezed
+
 class MessageDefinitionFocus {
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
 
@@ -5880,7 +5878,7 @@ class MessageDefinitionFocus {
   ///  MessageDefinition.
   ///
   /// [maxElement] Extensions for max
-  factory MessageDefinitionFocus({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5933,11 +5931,11 @@ class MessageDefinitionFocus {
 
     /// [maxElement] Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
-  }) = _MessageDefinitionFocus;
+  
 }
 
 /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
-@freezed
+
 class MessageDefinitionAllowedResponse {
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
 
@@ -5977,7 +5975,7 @@ class MessageDefinitionAllowedResponse {
   ///  response should be used (as opposed to one of the alternative responses).
   ///
   /// [situationElement] Extensions for situation
-  factory MessageDefinitionAllowedResponse({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6015,11 +6013,11 @@ class MessageDefinitionAllowedResponse {
 
     /// [situationElement] Extensions for situation
     @JsonKey(name: '_situation') Element? situationElement,
-  }) = _MessageDefinitionAllowedResponse;
+  
 }
 
 /// [OperationDefinitionParameter] A formal computable definition of an
-@freezed
+
 class OperationDefinitionParameter {
   /// [OperationDefinitionParameter] A formal computable definition of an
 
@@ -6099,7 +6097,7 @@ class OperationDefinitionParameter {
   ///  operation invocation that are expected to resolve to this resource.
   ///
   /// [part] The parts of a nested Parameter.
-  factory OperationDefinitionParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6193,11 +6191,11 @@ class OperationDefinitionParameter {
 
     /// [part] The parts of a nested Parameter.
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
+  
 }
 
 /// [OperationDefinitionBinding] A formal computable definition of an
-@freezed
+
 class OperationDefinitionBinding {
   /// [OperationDefinitionBinding] A formal computable definition of an
 
@@ -6237,7 +6235,7 @@ class OperationDefinitionBinding {
   ///
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  factory OperationDefinitionBinding({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6276,10 +6274,9 @@ class OperationDefinitionBinding {
     /// [valueSet] Points to the value set or external definition (e.g. implicit
     ///  value set) that identifies the set of codes to be used.
     required Canonical valueSet,
-  }) = _OperationDefinitionBinding;
+  
 }
 
-@freezed
 class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
@@ -6320,7 +6317,7 @@ class OperationDefinitionReferencedFrom
   ///  expected to resolve to this resource.
   ///
   /// [sourceIdElement] Extensions for sourceId
-  factory OperationDefinitionReferencedFrom({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6362,11 +6359,11 @@ class OperationDefinitionReferencedFrom
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _OperationDefinitionReferencedFrom;
+  
 }
 
 /// [SearchParameter] A search parameter that defines a named search item
-@freezed
+
 class SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item
 
@@ -6566,7 +6563,7 @@ class SearchParameter {
   /// [chainElement] Extensions for chain
   ///
   /// [component] Used to define the parts of a composite search parameter.
-  factory SearchParameter({
+  
     @Default(R4ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
 
@@ -6845,11 +6842,11 @@ class SearchParameter {
 
     /// [component] Used to define the parts of a composite search parameter.
     List<SearchParameterComponent>? component,
-  }) = _SearchParameter;
+  
 }
 
 /// [SearchParameterComponent] A search parameter that defines a named
-@freezed
+
 class SearchParameterComponent {
   /// [SearchParameterComponent] A search parameter that defines a named
 
@@ -6887,7 +6884,7 @@ class SearchParameterComponent {
   ///  component from the output of the main SearchParameter.expression.
   ///
   /// [expressionElement] Extensions for expression
-  factory SearchParameterComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6925,11 +6922,11 @@ class SearchParameterComponent {
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _SearchParameterComponent;
+  
 }
 
 /// [StructureDefinition] A definition of a FHIR structure. This resource is
-@freezed
+
 class StructureDefinition {
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
 
@@ -7135,7 +7132,7 @@ class StructureDefinition {
   ///
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
-  factory StructureDefinition({
+  
     @Default(R4ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
 
@@ -7414,11 +7411,11 @@ class StructureDefinition {
     /// [differential] A differential view is expressed relative to the base
     ///  StructureDefinition - a statement of differences that it applies.
     StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
+  
 }
 
 /// [StructureDefinitionMapping] A definition of a FHIR structure. This
-@freezed
+
 class StructureDefinitionMapping {
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
 
@@ -7469,7 +7466,7 @@ class StructureDefinitionMapping {
   ///  scope limitations, and other important notes for usage.
   ///
   /// [commentElement] Extensions for comment
-  factory StructureDefinitionMapping({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7523,11 +7520,11 @@ class StructureDefinitionMapping {
 
     /// [commentElement] Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _StructureDefinitionMapping;
+  
 }
 
 /// [StructureDefinitionContext] A definition of a FHIR structure. This
-@freezed
+
 class StructureDefinitionContext {
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
 
@@ -7569,7 +7566,7 @@ class StructureDefinitionContext {
   ///  resources.
   ///
   /// [expressionElement] Extensions for expression
-  factory StructureDefinitionContext({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7610,11 +7607,11 @@ class StructureDefinitionContext {
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _StructureDefinitionContext;
+  
 }
 
 /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
-@freezed
+
 class StructureDefinitionSnapshot {
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
 
@@ -7648,7 +7645,7 @@ class StructureDefinitionSnapshot {
   ///  modifierExtension itself).
   ///
   /// [element] Captures constraints on each element within the resource.
-  factory StructureDefinitionSnapshot({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7678,11 +7675,11 @@ class StructureDefinitionSnapshot {
 
     /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
+  
 }
 
 /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
-@freezed
+
 class StructureDefinitionDifferential {
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
 
@@ -7716,7 +7713,7 @@ class StructureDefinitionDifferential {
   ///  modifierExtension itself).
   ///
   /// [element] Captures constraints on each element within the resource.
-  factory StructureDefinitionDifferential({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -7746,11 +7743,11 @@ class StructureDefinitionDifferential {
 
     /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
+  
 }
 
 /// [StructureMap] A Map of relationships between 2 structures that can be
-@freezed
+
 class StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be
 
@@ -7903,7 +7900,7 @@ class StructureMap {
   ///
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
-  factory StructureMap({
+  
     @Default(R4ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
 
@@ -8108,11 +8105,11 @@ class StructureMap {
     /// [group] Organizes the mapping into manageable chunks for human
     ///  review/ease of maintenance.
     required List<StructureMapGroup> group,
-  }) = _StructureMap;
+  
 }
 
 /// [StructureMapStructure] A Map of relationships between 2 structures that
-@freezed
+
 class StructureMapStructure {
   /// [StructureMapStructure] A Map of relationships between 2 structures that
 
@@ -8157,7 +8154,7 @@ class StructureMapStructure {
   ///  the mapping.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapStructure({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8206,11 +8203,11 @@ class StructureMapStructure {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapStructure;
+  
 }
 
 /// [StructureMapGroup] A Map of relationships between 2 structures that can
-@freezed
+
 class StructureMapGroup {
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
 
@@ -8263,7 +8260,7 @@ class StructureMapGroup {
   ///  provided when the mapping is invoked.
   ///
   /// [rule] Transform Rule from source to target.
-  factory StructureMapGroup({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8323,11 +8320,11 @@ class StructureMapGroup {
 
     /// [rule] Transform Rule from source to target.
     required List<StructureMapRule> rule,
-  }) = _StructureMapGroup;
+  
 }
 
 /// [StructureMapInput] A Map of relationships between 2 structures that can
-@freezed
+
 class StructureMapInput {
   /// [StructureMapInput] A Map of relationships between 2 structures that can
 
@@ -8373,7 +8370,7 @@ class StructureMapInput {
   /// [documentation] Documentation for this instance of data.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8424,11 +8421,11 @@ class StructureMapInput {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapInput;
+  
 }
 
 /// [StructureMapRule] A Map of relationships between 2 structures that can
-@freezed
+
 class StructureMapRule {
   /// [StructureMapRule] A Map of relationships between 2 structures that can
 
@@ -8474,7 +8471,7 @@ class StructureMapRule {
   /// [documentation] Documentation for this instance of data.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapRule({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -8525,11 +8522,11 @@ class StructureMapRule {
 
     /// [documentationElement] Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapRule;
+  
 }
 
 /// [StructureMapSource] A Map of relationships between 2 structures that
-@freezed
+
 class StructureMapSource {
   /// [StructureMapSource] A Map of relationships between 2 structures that
 
@@ -8794,7 +8791,7 @@ class StructureMapSource {
   ///  the transform log when content matching the source rule is found.
   ///
   /// [logMessageElement] Extensions for logMessage
-  factory StructureMapSource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9175,11 +9172,11 @@ class StructureMapSource {
     /// [logMessageElement] Extensions for logMessage
     @JsonKey(name: '_logMessage')
         Element? logMessageElement,
-  }) = _StructureMapSource;
+  
 }
 
 /// [StructureMapTarget] A Map of relationships between 2 structures that
-@freezed
+
 class StructureMapTarget {
   /// [StructureMapTarget] A Map of relationships between 2 structures that
 
@@ -9239,7 +9236,7 @@ class StructureMapTarget {
   /// [transformElement] Extensions for transform
   ///
   /// [parameter] Parameters to the transform.
-  factory StructureMapTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9311,11 +9308,11 @@ class StructureMapTarget {
 
     /// [parameter] Parameters to the transform.
     List<StructureMapParameter>? parameter,
-  }) = _StructureMapTarget;
+  
 }
 
 /// [StructureMapParameter] A Map of relationships between 2 structures that
-@freezed
+
 class StructureMapParameter {
   /// [StructureMapParameter] A Map of relationships between 2 structures that
 
@@ -9365,7 +9362,7 @@ class StructureMapParameter {
   /// [valueDecimal] Parameter value - variable or literal.
   ///
   /// [valueDecimalElement] Extensions for valueDecimal
-  factory StructureMapParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9422,11 +9419,11 @@ class StructureMapParameter {
 
     /// [valueDecimalElement] Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _StructureMapParameter;
+  
 }
 
 /// [StructureMapDependent] A Map of relationships between 2 structures that
-@freezed
+
 class StructureMapDependent {
   /// [StructureMapDependent] A Map of relationships between 2 structures that
 
@@ -9464,7 +9461,7 @@ class StructureMapDependent {
   /// [variable] Variable to pass to the rule or group.
   ///
   /// [variableElement] Extensions for variable
-  factory StructureMapDependent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -9503,5 +9500,5 @@ class StructureMapDependent {
 
     /// [variableElement] Extensions for variable
     @JsonKey(name: '_variable') List<Element?>? variableElement,
-  }) = _StructureMapDependent;
+  
 }

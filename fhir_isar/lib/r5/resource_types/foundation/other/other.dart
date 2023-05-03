@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'other.freezed.dart';
 part 'other.g.dart';
 
 /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
 ///  narrative-only resources that don't map to an existing resource, and
 ///  custom resources not appropriate for inclusion in the FHIR specification.
-@freezed
+
 class Basic {
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
@@ -93,7 +92,7 @@ class Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource instance.
   ///
-  factory Basic({
+  
     /// [resourceType] This is a Basic resource
     @Default(R5ResourceType.Basic)
     @JsonKey(unknownEnumValue: R5ResourceType.Basic)
@@ -152,13 +151,13 @@ class Basic {
 
     /// [author] Indicates who was responsible for creating the resource instance.
     Reference? author,
-  }) = _Basic;
+  
 }
 
 /// [Binary] A resource that represents the data of a single raw artifact as
 ///  digital content accessible in its native format.  A Binary resource can
 ///  contain any content, whether text, image, pdf, zip archive, etc.
-@freezed
+
 class Binary {
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
@@ -209,7 +208,7 @@ class Binary {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  factory Binary({
+  
     /// [resourceType] This is a Binary resource
     @Default(R5ResourceType.Binary)
     @JsonKey(unknownEnumValue: R5ResourceType.Binary)
@@ -253,11 +252,11 @@ class Binary {
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _Binary;
+  
 }
 
 /// [Bundle] A container for a collection of resources.
-@freezed
+
 class Bundle {
   /// [Bundle] A container for a collection of resources.
 
@@ -313,7 +312,7 @@ class Bundle {
   /// [issues] Captures issues and warnings that relate to the construction of
   ///  the Bundle and the content within it.
   ///
-  factory Bundle({
+  
     /// [resourceType] This is a Bundle resource
     @Default(R5ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
@@ -375,11 +374,11 @@ class Bundle {
 
     /// [issues] Captures issues and warnings that relate to the construction of the Bundle and the content within it.
     Resource? issues,
-  }) = _Bundle;
+  
 }
 
 /// [BundleLink] A container for a collection of resources.
-@freezed
+
 class BundleLink {
   /// [BundleLink] A container for a collection of resources.
 
@@ -420,7 +419,7 @@ class BundleLink {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory BundleLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -458,11 +457,11 @@ class BundleLink {
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _BundleLink;
+  
 }
 
 /// [BundleEntry] A container for a collection of resources.
-@freezed
+
 class BundleEntry {
   /// [BundleEntry] A container for a collection of resources.
 
@@ -526,7 +525,7 @@ class BundleEntry {
   ///  'request' entry in the batch or transaction being responded to or what
   ///  the results of an operation where when returning history.
   ///
-  factory BundleEntry({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -576,11 +575,11 @@ class BundleEntry {
 
     /// [response] Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
     BundleResponse? response,
-  }) = _BundleEntry;
+  
 }
 
 /// [BundleSearch] A container for a collection of resources.
-@freezed
+
 class BundleSearch {
   /// [BundleSearch] A container for a collection of resources.
 
@@ -620,7 +619,7 @@ class BundleSearch {
   ///
   /// [scoreElement] ("_score") Extensions for score
   ///
-  factory BundleSearch({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -658,11 +657,11 @@ class BundleSearch {
 
     /// [scoreElement] ("_score") Extensions for score
     @JsonKey(name: '_score') Element? scoreElement,
-  }) = _BundleSearch;
+  
 }
 
 /// [BundleRequest] A container for a collection of resources.
-@freezed
+
 class BundleRequest {
   /// [BundleRequest] A container for a collection of resources.
 
@@ -729,7 +728,7 @@ class BundleRequest {
   ///
   /// [ifNoneExistElement] ("_ifNoneExist") Extensions for ifNoneExist
   ///
-  factory BundleRequest({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -791,11 +790,11 @@ class BundleRequest {
 
     /// [ifNoneExistElement] ("_ifNoneExist") Extensions for ifNoneExist
     @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
-  }) = _BundleRequest;
+  
 }
 
 /// [BundleResponse] A container for a collection of resources.
-@freezed
+
 class BundleResponse {
   /// [BundleResponse] A container for a collection of resources.
 
@@ -850,7 +849,7 @@ class BundleResponse {
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   ///
-  factory BundleResponse({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -903,12 +902,12 @@ class BundleResponse {
 
     /// [outcome] An OperationOutcome containing hints and warnings produced as part of processing this entry in a batch or transaction.
     Resource? outcome,
-  }) = _BundleResponse;
+  
 }
 
 /// [Linkage] Identifies two or more records (resource instances) that refer to
 ///  the same real-world "occurrence".
-@freezed
+
 class Linkage {
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
@@ -983,7 +982,7 @@ class Linkage {
   ///  real-world occurrence as well as how the items should be evaluated
   ///  within the collection of linked items.
   ///
-  factory Linkage({
+  
     /// [resourceType] This is a Linkage resource
     @Default(R5ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
@@ -1036,12 +1035,12 @@ class Linkage {
 
     /// [item] Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
     required List<LinkageItem> item,
-  }) = _Linkage;
+  
 }
 
 /// [LinkageItem] Identifies two or more records (resource instances) that
 ///  refer to the same real-world "occurrence".
-@freezed
+
 class LinkageItem {
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
@@ -1080,7 +1079,7 @@ class LinkageItem {
   ///
   /// [resource] The resource instance being linked as part of the group.
   ///
-  factory LinkageItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1115,7 +1114,7 @@ class LinkageItem {
 
     /// [resource] The resource instance being linked as part of the group.
     required Reference resource,
-  }) = _LinkageItem;
+  
 }
 
 /// [MessageHeader] The header for a message exchange that is either requesting
@@ -1123,7 +1122,7 @@ class LinkageItem {
 ///  action as well as other information related to the action are typically
 ///  transmitted in a bundle in which the MessageHeader resource instance is
 ///  the first resource in the bundle.
-@freezed
+
 class MessageHeader {
   /// [MessageHeader] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1237,7 +1236,7 @@ class MessageHeader {
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
   ///
-  factory MessageHeader({
+  
     /// [resourceType] This is a MessageHeader resource
     @Default(R5ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
@@ -1317,7 +1316,7 @@ class MessageHeader {
 
     /// [definition] Permanent link to the MessageDefinition for this message.
     Canonical? definition,
-  }) = _MessageHeader;
+  
 }
 
 /// [MessageHeaderDestination] The header for a message exchange that is either
@@ -1325,7 +1324,7 @@ class MessageHeader {
 ///  subject of the action as well as other information related to the action
 ///  are typically transmitted in a bundle in which the MessageHeader resource
 ///  instance is the first resource in the bundle.
-@freezed
+
 class MessageHeaderDestination {
   /// [MessageHeaderDestination] The header for a message exchange that is
   ///  either requesting or responding to an action.  The reference(s) that are
@@ -1378,7 +1377,7 @@ class MessageHeaderDestination {
   ///  particular person or department when routing to a specific application
   ///  isn't sufficient.
   ///
-  factory MessageHeaderDestination({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1422,7 +1421,7 @@ class MessageHeaderDestination {
 
     /// [receiver] Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient.
     Reference? receiver,
-  }) = _MessageHeaderDestination;
+  
 }
 
 /// [MessageHeaderSource] The header for a message exchange that is either
@@ -1430,7 +1429,7 @@ class MessageHeaderDestination {
 ///  subject of the action as well as other information related to the action
 ///  are typically transmitted in a bundle in which the MessageHeader resource
 ///  instance is the first resource in the bundle.
-@freezed
+
 class MessageHeaderSource {
   /// [MessageHeaderSource] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1489,7 +1488,7 @@ class MessageHeaderSource {
   ///
   /// [endpointElement] ("_endpoint") Extensions for endpoint
   ///
-  factory MessageHeaderSource({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1542,7 +1541,7 @@ class MessageHeaderSource {
 
     /// [endpointElement] ("_endpoint") Extensions for endpoint
     @JsonKey(name: '_endpoint') Element? endpointElement,
-  }) = _MessageHeaderSource;
+  
 }
 
 /// [MessageHeaderResponse] The header for a message exchange that is either
@@ -1550,7 +1549,7 @@ class MessageHeaderSource {
 ///  subject of the action as well as other information related to the action
 ///  are typically transmitted in a bundle in which the MessageHeader resource
 ///  instance is the first resource in the bundle.
-@freezed
+
 class MessageHeaderResponse {
   /// [MessageHeaderResponse] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1598,7 +1597,7 @@ class MessageHeaderResponse {
   ///
   /// [details] Full details of any issues found in the message.
   ///
-  factory MessageHeaderResponse({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1636,12 +1635,12 @@ class MessageHeaderResponse {
 
     /// [details] Full details of any issues found in the message.
     Reference? details,
-  }) = _MessageHeaderResponse;
+  
 }
 
 /// [OperationOutcome] A collection of error, warning, or information messages
 ///  that result from a system action.
-@freezed
+
 class OperationOutcome {
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -1706,7 +1705,7 @@ class OperationOutcome {
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
   ///
-  factory OperationOutcome({
+  
     /// [resourceType] This is a OperationOutcome resource
     @Default(R5ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
@@ -1750,12 +1749,12 @@ class OperationOutcome {
 
     /// [issue] An error, warning, or information message that results from a system action.
     required List<OperationOutcomeIssue> issue,
-  }) = _OperationOutcome;
+  
 }
 
 /// [OperationOutcomeIssue] A collection of error, warning, or information
 ///  messages that result from a system action.
-@freezed
+
 class OperationOutcomeIssue {
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -1822,7 +1821,7 @@ class OperationOutcomeIssue {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory OperationOutcomeIssue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1881,14 +1880,14 @@ class OperationOutcomeIssue {
 
     /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') List<Element>? expressionElement,
-  }) = _OperationOutcomeIssue;
+  
 }
 
 /// [Parameters] This resource is used to pass information into and back from
 ///  an operation (whether invoked directly from REST or within a messaging
 ///  environment).  It is not persisted or allowed to be referenced by other
 ///  resources.
-@freezed
+
 class Parameters {
   /// [Parameters] This resource is used to pass information into and back from
   ///  an operation (whether invoked directly from REST or within a messaging
@@ -1922,7 +1921,7 @@ class Parameters {
   ///
   /// [parameter] A parameter passed to or received from the operation.
   ///
-  factory Parameters({
+  
     /// [resourceType] This is a Parameters resource
     @Default(R5ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
@@ -1954,14 +1953,14 @@ class Parameters {
 
     /// [parameter] A parameter passed to or received from the operation.
     List<ParametersParameter>? parameter,
-  }) = _Parameters;
+  
 }
 
 /// [ParametersParameter] This resource is used to pass information into and
 ///  back from an operation (whether invoked directly from REST or within a
 ///  messaging environment).  It is not persisted or allowed to be referenced
 ///  by other resources.
-@freezed
+
 class ParametersParameter {
   /// [ParametersParameter] This resource is used to pass information into and
   ///  back from an operation (whether invoked directly from REST or within a
@@ -2163,7 +2162,7 @@ class ParametersParameter {
   ///
   /// [part_] ("part") A named part of a multi-part parameter.
   ///
-  factory ParametersParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2423,12 +2422,12 @@ class ParametersParameter {
 
     /// [part_] ("part") A named part of a multi-part parameter.
     @JsonKey(name: 'part') List<ParametersParameter>? part_,
-  }) = _ParametersParameter;
+  
 }
 
 /// [Subscription] The subscription resource describes a particular client's
 ///  request to be notified about a SubscriptionTopic.
-@freezed
+
 class Subscription {
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
@@ -2570,7 +2569,7 @@ class Subscription {
   ///
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   ///
-  factory Subscription({
+  
     /// [resourceType] This is a Subscription resource
     @Default(R5ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
@@ -2695,12 +2694,12 @@ class Subscription {
 
     /// [maxCountElement] ("_maxCount") Extensions for maxCount
     @JsonKey(name: '_maxCount') Element? maxCountElement,
-  }) = _Subscription;
+  
 }
 
 /// [SubscriptionFilterBy] The subscription resource describes a particular
 ///  client's request to be notified about a SubscriptionTopic.
-@freezed
+
 class SubscriptionFilterBy {
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
@@ -2757,7 +2756,7 @@ class SubscriptionFilterBy {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory SubscriptionFilterBy({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2807,12 +2806,12 @@ class SubscriptionFilterBy {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _SubscriptionFilterBy;
+  
 }
 
 /// [SubscriptionStatus] The SubscriptionStatus resource describes the state of
 ///  a Subscription during notifications.
-@freezed
+
 class SubscriptionStatus {
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
@@ -2904,7 +2903,7 @@ class SubscriptionStatus {
   /// [error] A record of errors that occurred when the server processed a
   ///  notification.
   ///
-  factory SubscriptionStatus({
+  
     /// [resourceType] This is a SubscriptionStatus resource
     @Default(R5ResourceType.SubscriptionStatus)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
@@ -2976,12 +2975,12 @@ class SubscriptionStatus {
 
     /// [error] A record of errors that occurred when the server processed a notification.
     List<CodeableConcept>? error,
-  }) = _SubscriptionStatus;
+  
 }
 
 /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
 ///  describes the state of a Subscription during notifications.
-@freezed
+
 class SubscriptionStatusNotificationEvent
     with _$SubscriptionStatusNotificationEvent {
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
@@ -3032,7 +3031,7 @@ class SubscriptionStatusNotificationEvent
   ///  with the event (e.g., the Patient relevant to an Encounter), however it
   ///  MAY refer to non-FHIR objects.
   ///
-  factory SubscriptionStatusNotificationEvent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3076,12 +3075,12 @@ class SubscriptionStatusNotificationEvent
 
     /// [additionalContext] Additional context information for this event. Generally, this will contain references to additional resources included with the event (e.g., the Patient relevant to an Encounter), however it MAY refer to non-FHIR objects.
     List<Reference>? additionalContext,
-  }) = _SubscriptionStatusNotificationEvent;
+  
 }
 
 /// [SubscriptionTopic] Describes a stream of resource state changes or events
 ///  and annotated with labels useful to filter projections from this topic.
-@freezed
+
 class SubscriptionTopic {
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
@@ -3277,7 +3276,7 @@ class SubscriptionTopic {
   /// [notificationShape] List of properties to describe the shape (e.g.,
   ///  resources) included in notifications from this Subscription Topic.
   ///
-  factory SubscriptionTopic({
+  
     /// [resourceType] This is a SubscriptionTopic resource
     @Default(R5ResourceType.SubscriptionTopic)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
@@ -3442,13 +3441,13 @@ class SubscriptionTopic {
 
     /// [notificationShape] List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.
     List<SubscriptionTopicNotificationShape>? notificationShape,
-  }) = _SubscriptionTopic;
+  
 }
 
 /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
 ///  changes or events and annotated with labels useful to filter projections
 ///  from this topic.
-@freezed
+
 class SubscriptionTopicResourceTrigger {
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -3516,7 +3515,7 @@ class SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteriaElement] ("_fhirPathCriteria") Extensions for
   ///  fhirPathCriteria
   ///
-  factory SubscriptionTopicResourceTrigger({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3570,13 +3569,13 @@ class SubscriptionTopicResourceTrigger {
 
     /// [fhirPathCriteriaElement] ("_fhirPathCriteria") Extensions for fhirPathCriteria
     @JsonKey(name: '_fhirPathCriteria') Element? fhirPathCriteriaElement,
-  }) = _SubscriptionTopicResourceTrigger;
+  
 }
 
 /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
 ///  changes or events and annotated with labels useful to filter projections
 ///  from this topic.
-@freezed
+
 class SubscriptionTopicQueryCriteria {
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -3639,7 +3638,7 @@ class SubscriptionTopicQueryCriteria {
   ///
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   ///
-  factory SubscriptionTopicQueryCriteria({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3695,13 +3694,13 @@ class SubscriptionTopicQueryCriteria {
 
     /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
     @JsonKey(name: '_requireBoth') Element? requireBothElement,
-  }) = _SubscriptionTopicQueryCriteria;
+  
 }
 
 /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
 ///  changes or events and annotated with labels useful to filter projections
 ///  from this topic.
-@freezed
+
 class SubscriptionTopicEventTrigger {
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -3757,7 +3756,7 @@ class SubscriptionTopicEventTrigger {
   ///
   /// [resourceElement] ("_resource") Extensions for resource
   ///
-  factory SubscriptionTopicEventTrigger({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3798,13 +3797,13 @@ class SubscriptionTopicEventTrigger {
 
     /// [resourceElement] ("_resource") Extensions for resource
     @JsonKey(name: '_resource') Element? resourceElement,
-  }) = _SubscriptionTopicEventTrigger;
+  
 }
 
 /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state changes
 ///  or events and annotated with labels useful to filter projections from this
 ///  topic.
-@freezed
+
 class SubscriptionTopicCanFilterBy {
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -3874,7 +3873,7 @@ class SubscriptionTopicCanFilterBy {
   ///
   /// [modifierElement] ("_modifier") Extensions for modifier
   ///
-  factory SubscriptionTopicCanFilterBy({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3930,13 +3929,13 @@ class SubscriptionTopicCanFilterBy {
 
     /// [modifierElement] ("_modifier") Extensions for modifier
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
-  }) = _SubscriptionTopicCanFilterBy;
+  
 }
 
 /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
 ///  changes or events and annotated with labels useful to filter projections
 ///  from this topic.
-@freezed
+
 class SubscriptionTopicNotificationShape
     with _$SubscriptionTopicNotificationShape {
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
@@ -3996,7 +3995,7 @@ class SubscriptionTopicNotificationShape
   ///
   /// [revIncludeElement] ("_revInclude") Extensions for revInclude
   ///
-  factory SubscriptionTopicNotificationShape({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4040,5 +4039,5 @@ class SubscriptionTopicNotificationShape
 
     /// [revIncludeElement] ("_revInclude") Extensions for revInclude
     @JsonKey(name: '_revInclude') List<Element>? revIncludeElement,
-  }) = _SubscriptionTopicNotificationShape;
+  
 }

@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 /// [CatalogEntry] Catalog entries are wrappers that contextualize items
-@freezed
+
 class CatalogEntry {
   /// [CatalogEntry] Catalog entries are wrappers that contextualize items
 
@@ -113,7 +112,7 @@ class CatalogEntry {
   ///
   /// [relatedEntry] Used for example, to point to a substance, or to a device
   ///  used to administer a medication.
-  factory CatalogEntry({
+  
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
 
@@ -246,11 +245,11 @@ class CatalogEntry {
     /// [relatedEntry] Used for example, to point to a substance, or to a device
     ///  used to administer a medication.
     List<CatalogEntryRelatedEntry>? relatedEntry,
-  }) = _CatalogEntry;
+  
 }
 
 /// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
-@freezed
+
 class CatalogEntryRelatedEntry {
   /// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
 
@@ -287,7 +286,7 @@ class CatalogEntryRelatedEntry {
   /// [relationtypeElement] Extensions for relationtype
   ///
   /// [item] The reference to the related item.
-  factory CatalogEntryRelatedEntry({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -324,11 +323,11 @@ class CatalogEntryRelatedEntry {
 
     /// [item] The reference to the related item.
     required Reference item,
-  }) = _CatalogEntryRelatedEntry;
+  
 }
 
 /// [Composition] A set of healthcare-related information that is assembled
-@freezed
+
 class Composition {
   /// [Composition] A set of healthcare-related information that is assembled
 
@@ -451,7 +450,7 @@ class Composition {
   ///  being documented.
   ///
   /// [section] The root of the sections that make up the composition.
-  factory Composition({
+  
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
 
@@ -600,11 +599,11 @@ class Composition {
 
     /// [section] The root of the sections that make up the composition.
     List<CompositionSection>? section,
-  }) = _Composition;
+  
 }
 
 /// [CompositionAttester] A set of healthcare-related information that is
-@freezed
+
 class CompositionAttester {
   /// [CompositionAttester] A set of healthcare-related information that is
 
@@ -652,7 +651,7 @@ class CompositionAttester {
   /// [timeElement] Extensions for time
   ///
   /// [party] Who attested the composition in the specified way.
-  factory CompositionAttester({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -694,11 +693,11 @@ class CompositionAttester {
 
     /// [party] Who attested the composition in the specified way.
     Reference? party,
-  }) = _CompositionAttester;
+  
 }
 
 /// [CompositionRelatesTo] A set of healthcare-related information that is
-@freezed
+
 class CompositionRelatesTo {
   /// [CompositionRelatesTo] A set of healthcare-related information that is
 
@@ -745,7 +744,7 @@ class CompositionRelatesTo {
   /// [targetIdentifier] The target composition/document of this relationship.
   ///
   /// [targetReference] The target composition/document of this relationship.
-  factory CompositionRelatesTo({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -785,11 +784,11 @@ class CompositionRelatesTo {
 
     /// [targetReference] The target composition/document of this relationship.
     Reference? targetReference,
-  }) = _CompositionRelatesTo;
+  
 }
 
 /// [CompositionEvent] A set of healthcare-related information that is
-@freezed
+
 class CompositionEvent {
   /// [CompositionEvent] A set of healthcare-related information that is
 
@@ -841,7 +840,7 @@ class CompositionEvent {
   /// [detail] The description and/or reference of the event(s) being
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
-  factory CompositionEvent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -885,11 +884,11 @@ class CompositionEvent {
     /// documented. For example, this could be used to document such a colonoscopy
     ///  or an appendectomy.
     List<Reference>? detail,
-  }) = _CompositionEvent;
+  
 }
 
 /// [CompositionSection] A set of healthcare-related information that is
-@freezed
+
 class CompositionSection {
   /// [CompositionSection] A set of healthcare-related information that is
 
@@ -973,7 +972,7 @@ class CompositionSection {
   ///  section typically has some text explaining the empty reason.
   ///
   /// [section] A nested sub-section within this section.
-  factory CompositionSection({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1058,11 +1057,11 @@ class CompositionSection {
 
     /// [section] A nested sub-section within this section.
     List<CompositionSection>? section,
-  }) = _CompositionSection;
+  
 }
 
 /// [DocumentManifest] A collection of documents compiled for a purpose
-@freezed
+
 class DocumentManifest {
   /// [DocumentManifest] A collection of documents compiled for a purpose
 
@@ -1169,7 +1168,7 @@ class DocumentManifest {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
-  factory DocumentManifest({
+  
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
 
@@ -1307,11 +1306,11 @@ class DocumentManifest {
     /// [related] Related identifiers or resources associated with the
     ///  DocumentManifest.
     List<DocumentManifestRelated>? related,
-  }) = _DocumentManifest;
+  
 }
 
 /// [DocumentManifestRelated] A collection of documents compiled for a
-@freezed
+
 class DocumentManifestRelated {
   /// [DocumentManifestRelated] A collection of documents compiled for a
 
@@ -1347,7 +1346,7 @@ class DocumentManifestRelated {
   ///
   /// [ref] Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
-  factory DocumentManifestRelated({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1382,11 +1381,11 @@ class DocumentManifestRelated {
     /// [ref] Related Resource to this DocumentManifest. For example, Order,
     ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
     Reference? ref,
-  }) = _DocumentManifestRelated;
+  
 }
 
 /// [DocumentReference] A reference to a document of any kind for any
-@freezed
+
 class DocumentReference {
   /// [DocumentReference] A reference to a document of any kind for any
 
@@ -1510,7 +1509,7 @@ class DocumentReference {
   ///  content element repetitions, each with a different format.
   ///
   /// [context] The clinical context in which the document was prepared.
-  factory DocumentReference({
+  
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
 
@@ -1665,11 +1664,11 @@ class DocumentReference {
 
     /// [context] The clinical context in which the document was prepared.
     DocumentReferenceContext? context,
-  }) = _DocumentReference;
+  
 }
 
 /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
-@freezed
+
 class DocumentReferenceRelatesTo {
   /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
 
@@ -1710,7 +1709,7 @@ class DocumentReferenceRelatesTo {
   /// [codeElement] Extensions for code
   ///
   /// [target] The target document of this relationship.
-  factory DocumentReferenceRelatesTo({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1747,11 +1746,11 @@ class DocumentReferenceRelatesTo {
 
     /// [target] The target document of this relationship.
     required Reference target,
-  }) = _DocumentReferenceRelatesTo;
+  
 }
 
 /// [DocumentReferenceContent] A reference to a document of any kind for any
-@freezed
+
 class DocumentReferenceContent {
   /// [DocumentReferenceContent] A reference to a document of any kind for any
 
@@ -1792,7 +1791,7 @@ class DocumentReferenceContent {
   /// [format] An identifier of the document encoding, structure, and template
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
-  factory DocumentReferenceContent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1828,11 +1827,11 @@ class DocumentReferenceContent {
     /// that the document conforms to beyond the base format indicated in the
     ///  mimeType.
     Coding? format,
-  }) = _DocumentReferenceContent;
+  
 }
 
 /// [DocumentReferenceContext] A reference to a document of any kind for any
-@freezed
+
 class DocumentReferenceContext {
   /// [DocumentReferenceContext] A reference to a document of any kind for any
 
@@ -1890,7 +1889,7 @@ class DocumentReferenceContext {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentReference.
-  factory DocumentReferenceContext({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1948,5 +1947,5 @@ class DocumentReferenceContext {
     /// [related] Related identifiers or resources associated with the
     ///  DocumentReference.
     List<Reference>? related,
-  }) = _DocumentReferenceContext;
+  
 }

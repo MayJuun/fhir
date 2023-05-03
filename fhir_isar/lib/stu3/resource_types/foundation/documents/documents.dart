@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'documents.enums.dart';
-part 'documents.freezed.dart';
+
 part 'documents.g.dart';
 
-@freezed
 class Composition {
-  factory Composition({
+  
     @Default(Stu3ResourceType.Composition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
         Stu3ResourceType resourceType,
@@ -47,42 +46,38 @@ class Composition {
     List<CompositionRelatesTo>? relatesTo,
     List<CompositionEvent>? event,
     List<CompositionSection>? section,
-  }) = _Composition;
+  
 }
 
-@freezed
 class CompositionAttester {
-  factory CompositionAttester({
+  
     List<CompositionAttesterMode>? mode,
     @JsonKey(name: '_mode') List<Element?>? modeElement,
     Time? time,
     @JsonKey(name: '_time') Element? timeElement,
     Reference? party,
-  }) = _CompositionAttester;
+  
 }
 
-@freezed
 class CompositionRelatesTo {
-  factory CompositionRelatesTo({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,
-  }) = _CompositionRelatesTo;
+  
 }
 
-@freezed
 class CompositionEvent {
-  factory CompositionEvent({
+  
     List<CodeableConcept>? code,
     Period? period,
     List<Reference>? detail,
-  }) = _CompositionEvent;
+  
 }
 
-@freezed
 class CompositionSection {
-  factory CompositionSection({
+  
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     CodeableConcept? code,
@@ -93,12 +88,11 @@ class CompositionSection {
     List<Reference>? entry,
     CodeableConcept? emptyReason,
     List<CompositionSection>? section,
-  }) = _CompositionSection;
+  
 }
 
-@freezed
 class DocumentManifest {
-  factory DocumentManifest({
+  
     @Default(Stu3ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
         Stu3ResourceType resourceType,
@@ -128,28 +122,25 @@ class DocumentManifest {
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<DocumentManifestContent> content,
     List<DocumentManifestRelated>? related,
-  }) = _DocumentManifest;
+  
 }
 
-@freezed
 class DocumentManifestContent {
-  factory DocumentManifestContent({
+  
     Attachment? pAttachment,
     Reference? pReference,
-  }) = _DocumentManifestContent;
+  
 }
 
-@freezed
 class DocumentManifestRelated {
-  factory DocumentManifestRelated({
+  
     Identifier? identifier,
     Reference? ref,
-  }) = _DocumentManifestRelated;
+  
 }
 
-@freezed
 class DocumentReference {
-  factory DocumentReference({
+  
     @Default(Stu3ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
         Stu3ResourceType resourceType,
@@ -185,29 +176,26 @@ class DocumentReference {
     List<CodeableConcept>? securityLabel,
     required List<DocumentReferenceContent> content,
     DocumentReferenceContext? context,
-  }) = _DocumentReference;
+  
 }
 
-@freezed
 class DocumentReferenceRelatesTo {
-  factory DocumentReferenceRelatesTo({
+  
     DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
-  }) = _DocumentReferenceRelatesTo;
+  
 }
 
-@freezed
 class DocumentReferenceContent {
-  factory DocumentReferenceContent({
+  
     required Attachment attachment,
     Coding? format,
-  }) = _DocumentReferenceContent;
+  
 }
 
-@freezed
 class DocumentReferenceContext {
-  factory DocumentReferenceContext({
+  
     Reference? encounter,
     List<CodeableConcept>? event,
     Period? period,
@@ -215,13 +203,12 @@ class DocumentReferenceContext {
     CodeableConcept? practiceSetting,
     Reference? sourcePatientInfo,
     List<DocumentReferenceRelated>? related,
-  }) = _DocumentReferenceContext;
+  
 }
 
-@freezed
 class DocumentReferenceRelated {
-  factory DocumentReferenceRelated({
+  
     Identifier? identifier,
     Reference? ref,
-  }) = _DocumentReferenceRelated;
+  
 }

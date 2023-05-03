@@ -2,13 +2,12 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 /// [Composition] A set of healthcare-related information that is assembled
@@ -21,7 +20,7 @@ part 'documents.g.dart';
 ///  Bundle.type=document, and any other resources referenced from Composition
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
-@freezed
+
 class Composition {
   /// [Composition] A set of healthcare-related information that is assembled
   ///  together into a single logical package that provides a single coherent
@@ -179,7 +178,7 @@ class Composition {
   ///
   /// [section] The root of the sections that make up the composition.
   ///
-  factory Composition({
+  
     /// [resourceType] This is a Composition resource
     @Default(R5ResourceType.Composition)
     @JsonKey(unknownEnumValue: R5ResourceType.Composition)
@@ -295,7 +294,7 @@ class Composition {
 
     /// [section] The root of the sections that make up the composition.
     List<CompositionSection>? section,
-  }) = _Composition;
+  
 }
 
 /// [CompositionAttester] A set of healthcare-related information that is
@@ -308,7 +307,7 @@ class Composition {
 ///  Bundle.type=document, and any other resources referenced from Composition
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
-@freezed
+
 class CompositionAttester {
   /// [CompositionAttester] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -364,7 +363,7 @@ class CompositionAttester {
   ///
   /// [party] Who attested the composition in the specified way.
   ///
-  factory CompositionAttester({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -402,7 +401,7 @@ class CompositionAttester {
 
     /// [party] Who attested the composition in the specified way.
     Reference? party,
-  }) = _CompositionAttester;
+  
 }
 
 /// [CompositionEvent] A set of healthcare-related information that is
@@ -415,7 +414,7 @@ class CompositionAttester {
 ///  Bundle.type=document, and any other resources referenced from Composition
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
-@freezed
+
 class CompositionEvent {
   /// [CompositionEvent] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -477,7 +476,7 @@ class CompositionEvent {
   ///  documented. For example, this could be used to document such a
   ///  colonoscopy or an appendectomy.
   ///
-  factory CompositionEvent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -512,7 +511,7 @@ class CompositionEvent {
 
     /// [detail] The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.
     List<Reference>? detail,
-  }) = _CompositionEvent;
+  
 }
 
 /// [CompositionSection] A set of healthcare-related information that is
@@ -525,7 +524,7 @@ class CompositionEvent {
 ///  Bundle.type=document, and any other resources referenced from Composition
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
-@freezed
+
 class CompositionSection {
   /// [CompositionSection] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -620,7 +619,7 @@ class CompositionSection {
   ///
   /// [section] A nested sub-section within this section.
   ///
-  factory CompositionSection({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -682,12 +681,12 @@ class CompositionSection {
 
     /// [section] A nested sub-section within this section.
     List<CompositionSection>? section,
-  }) = _CompositionSection;
+  
 }
 
 /// [DocumentManifest] A collection of documents compiled for a purpose
 ///  together with metadata that applies to the collection.
-@freezed
+
 class DocumentManifest {
   /// [DocumentManifest] A collection of documents compiled for a purpose
   ///  together with metadata that applies to the collection.
@@ -797,7 +796,7 @@ class DocumentManifest {
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
   ///
-  factory DocumentManifest({
+  
     /// [resourceType] This is a DocumentManifest resource
     @Default(R5ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
@@ -886,12 +885,12 @@ class DocumentManifest {
 
     /// [related] Related identifiers or resources associated with the DocumentManifest.
     List<DocumentManifestRelated>? related,
-  }) = _DocumentManifest;
+  
 }
 
 /// [DocumentManifestRelated] A collection of documents compiled for a purpose
 ///  together with metadata that applies to the collection.
-@freezed
+
 class DocumentManifestRelated {
   /// [DocumentManifestRelated] A collection of documents compiled for a
   ///  purpose together with metadata that applies to the collection.
@@ -929,7 +928,7 @@ class DocumentManifestRelated {
   /// [ref] Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   ///
-  factory DocumentManifestRelated({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -961,7 +960,7 @@ class DocumentManifestRelated {
 
     /// [ref] Related Resource to this DocumentManifest. For example, Order, ServiceRequest,  Procedure, EligibilityRequest, etc.
     Reference? ref,
-  }) = _DocumentManifestRelated;
+  
 }
 
 /// [DocumentReference] A reference to a document of any kind for any purpose.
@@ -973,7 +972,7 @@ class DocumentManifestRelated {
 ///  DocumentReference resource provides metadata about the document so that
 ///  the document can be discovered and managed.  The actual content may be
 ///  inline base64 encoded data or provided by direct reference.
-@freezed
+
 class DocumentReference {
   /// [DocumentReference] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1132,7 +1131,7 @@ class DocumentReference {
   ///  content element repetitions, these must all represent the same document
   ///  in different format, or attachment metadata.
   ///
-  factory DocumentReference({
+  
     /// [resourceType] This is a DocumentReference resource
     @Default(R5ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
@@ -1245,7 +1244,7 @@ class DocumentReference {
 
     /// [content] The document and format referenced.  If there are multiple content element repetitions, these must all represent the same document in different format, or attachment metadata.
     required List<DocumentReferenceContent> content,
-  }) = _DocumentReference;
+  
 }
 
 /// [DocumentReferenceAttester] A reference to a document of any kind for any
@@ -1257,7 +1256,7 @@ class DocumentReference {
 ///   The DocumentReference resource provides metadata about the document so
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
-@freezed
+
 class DocumentReferenceAttester {
   /// [DocumentReferenceAttester] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1313,7 +1312,7 @@ class DocumentReferenceAttester {
   ///
   /// [party] Who attested the document in the specified way.
   ///
-  factory DocumentReferenceAttester({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1351,7 +1350,7 @@ class DocumentReferenceAttester {
 
     /// [party] Who attested the document in the specified way.
     Reference? party,
-  }) = _DocumentReferenceAttester;
+  
 }
 
 /// [DocumentReferenceRelatesTo] A reference to a document of any kind for any
@@ -1363,7 +1362,7 @@ class DocumentReferenceAttester {
 ///   The DocumentReference resource provides metadata about the document so
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
-@freezed
+
 class DocumentReferenceRelatesTo {
   /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
   ///  any purpose. While the term “document” implies a more narrow focus, for
@@ -1416,7 +1415,7 @@ class DocumentReferenceRelatesTo {
   ///
   /// [target] The target document of this relationship.
   ///
-  factory DocumentReferenceRelatesTo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1448,7 +1447,7 @@ class DocumentReferenceRelatesTo {
 
     /// [target] The target document of this relationship.
     required Reference target,
-  }) = _DocumentReferenceRelatesTo;
+  
 }
 
 /// [DocumentReferenceContent] A reference to a document of any kind for any
@@ -1460,7 +1459,7 @@ class DocumentReferenceRelatesTo {
 ///   The DocumentReference resource provides metadata about the document so
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
-@freezed
+
 class DocumentReferenceContent {
   /// [DocumentReferenceContent] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1515,7 +1514,7 @@ class DocumentReferenceContent {
   ///  and template that the document conforms to beyond the base format
   ///  indicated in the mimeType.
   ///
-  factory DocumentReferenceContent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1547,7 +1546,7 @@ class DocumentReferenceContent {
 
     /// [profile] An identifier of the document constraints, encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.
     List<DocumentReferenceProfile>? profile,
-  }) = _DocumentReferenceContent;
+  
 }
 
 /// [DocumentReferenceProfile] A reference to a document of any kind for any
@@ -1559,7 +1558,7 @@ class DocumentReferenceContent {
 ///   The DocumentReference resource provides metadata about the document so
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
-@freezed
+
 class DocumentReferenceProfile {
   /// [DocumentReferenceProfile] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1617,7 +1616,7 @@ class DocumentReferenceProfile {
   ///
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   ///
-  factory DocumentReferenceProfile({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1658,5 +1657,5 @@ class DocumentReferenceProfile {
 
     /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-  }) = _DocumentReferenceProfile;
+  
 }

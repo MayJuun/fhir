@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
 
 /// [Measure] The Measure resource provides the definition of a quality measure.
-@freezed
+
 class Measure {
   /// [Measure] The Measure resource provides the definition of a quality
   ///  measure.
@@ -312,7 +311,7 @@ class Measure {
   ///  specified as either the name of a valid CQL expression within a
   ///  referenced library, or a valid FHIR Resource Path.
   ///
-  factory Measure({
+  
     /// [resourceType] This is a Measure resource
     @Default(R5ResourceType.Measure)
     @JsonKey(unknownEnumValue: R5ResourceType.Measure)
@@ -568,12 +567,12 @@ class Measure {
 
     /// [supplementalData] The supplemental data criteria for the measure report, specified as either the name of a valid CQL expression within a referenced library, or a valid FHIR Resource Path.
     List<MeasureSupplementalData>? supplementalData,
-  }) = _Measure;
+  
 }
 
 /// [MeasureTerm] The Measure resource provides the definition of a quality
 ///  measure.
-@freezed
+
 class MeasureTerm {
   /// [MeasureTerm] The Measure resource provides the definition of a quality
   ///  measure.
@@ -612,7 +611,7 @@ class MeasureTerm {
   ///
   /// [definitionElement] ("_definition") Extensions for definition
   ///
-  factory MeasureTerm({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -647,12 +646,12 @@ class MeasureTerm {
 
     /// [definitionElement] ("_definition") Extensions for definition
     @JsonKey(name: '_definition') Element? definitionElement,
-  }) = _MeasureTerm;
+  
 }
 
 /// [MeasureGroup] The Measure resource provides the definition of a quality
 ///  measure.
-@freezed
+
 class MeasureGroup {
   /// [MeasureGroup] The Measure resource provides the definition of a quality
   ///  measure.
@@ -728,7 +727,7 @@ class MeasureGroup {
   ///  either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
   ///
-  factory MeasureGroup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -787,12 +786,12 @@ class MeasureGroup {
 
     /// [stratifier] The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
     List<MeasureStratifier>? stratifier,
-  }) = _MeasureGroup;
+  
 }
 
 /// [MeasurePopulation] The Measure resource provides the definition of a
 ///  quality measure.
-@freezed
+
 class MeasurePopulation {
   /// [MeasurePopulation] The Measure resource provides the definition of a
   ///  quality measure.
@@ -851,7 +850,7 @@ class MeasurePopulation {
   ///  For continuous variables, however, this information must be specified to
   ///  ensure correct calculation.
   ///
-  factory MeasurePopulation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -898,12 +897,12 @@ class MeasurePopulation {
 
     /// [aggregateMethod] Specifies which method should be used to aggregate measure observation values. For most scoring types, this is implied by scoring (e.g. a proportion measure counts members of the populations). For continuous variables, however, this information must be specified to ensure correct calculation.
     CodeableConcept? aggregateMethod,
-  }) = _MeasurePopulation;
+  
 }
 
 /// [MeasureStratifier] The Measure resource provides the definition of a
 ///  quality measure.
-@freezed
+
 class MeasureStratifier {
   /// [MeasureStratifier] The Measure resource provides the definition of a
   ///  quality measure.
@@ -952,7 +951,7 @@ class MeasureStratifier {
   ///  report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
   ///
-  factory MeasureStratifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -993,12 +992,12 @@ class MeasureStratifier {
 
     /// [component] A component of the stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
     List<MeasureComponent>? component,
-  }) = _MeasureStratifier;
+  
 }
 
 /// [MeasureComponent] The Measure resource provides the definition of a
 ///  quality measure.
-@freezed
+
 class MeasureComponent {
   /// [MeasureComponent] The Measure resource provides the definition of a
   ///  quality measure.
@@ -1045,7 +1044,7 @@ class MeasureComponent {
   ///  within a referenced library, but it may also be a path to a stratifier
   ///  element.
   ///
-  factory MeasureComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1083,12 +1082,12 @@ class MeasureComponent {
 
     /// [criteria] An expression that specifies the criteria for this component of the stratifier. This is typically the name of an expression defined within a referenced library, but it may also be a path to a stratifier element.
     required Expression criteria,
-  }) = _MeasureComponent;
+  
 }
 
 /// [MeasureSupplementalData] The Measure resource provides the definition of a
 ///  quality measure.
-@freezed
+
 class MeasureSupplementalData {
   /// [MeasureSupplementalData] The Measure resource provides the definition of
   ///  a quality measure.
@@ -1140,7 +1139,7 @@ class MeasureSupplementalData {
   ///  may also be a path to a specific data element. The criteria defines the
   ///  data to be returned for this element.
   ///
-  factory MeasureSupplementalData({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1181,13 +1180,13 @@ class MeasureSupplementalData {
 
     /// [criteria] The criteria for the supplemental data. This is typically the name of a valid expression defined within a referenced library, but it may also be a path to a specific data element. The criteria defines the data to be returned for this element.
     required Expression criteria,
-  }) = _MeasureSupplementalData;
+  
 }
 
 /// [MeasureReport] The MeasureReport resource contains the results of the
 ///  calculation of a measure; and optionally a reference to the resources
 ///  involved in that calculation.
-@freezed
+
 class MeasureReport {
   /// [MeasureReport] The MeasureReport resource contains the results of the
   ///  calculation of a measure; and optionally a reference to the resources
@@ -1321,7 +1320,7 @@ class MeasureReport {
   /// [evaluatedResource] A reference to a Resource that was used in the
   ///  calculation of this measure.
   ///
-  factory MeasureReport({
+  
     /// [resourceType] This is a MeasureReport resource
     @Default(R5ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
@@ -1422,13 +1421,13 @@ class MeasureReport {
 
     /// [evaluatedResource] A reference to a Resource that was used in the calculation of this measure.
     List<Reference>? evaluatedResource,
-  }) = _MeasureReport;
+  
 }
 
 /// [MeasureReportGroup] The MeasureReport resource contains the results of the
 ///  calculation of a measure; and optionally a reference to the resources
 ///  involved in that calculation.
-@freezed
+
 class MeasureReportGroup {
   /// [MeasureReportGroup] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
@@ -1499,7 +1498,7 @@ class MeasureReportGroup {
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
   ///
-  factory MeasureReportGroup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1556,13 +1555,13 @@ class MeasureReportGroup {
 
     /// [stratifier] When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
     List<MeasureReportStratifier>? stratifier,
-  }) = _MeasureReportGroup;
+  
 }
 
 /// [MeasureReportPopulation] The MeasureReport resource contains the results
 ///  of the calculation of a measure; and optionally a reference to the
 ///  resources involved in that calculation.
-@freezed
+
 class MeasureReportPopulation {
   /// [MeasureReportPopulation] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -1605,7 +1604,7 @@ class MeasureReportPopulation {
   /// [subjectResults] This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
   ///
-  factory MeasureReportPopulation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1643,13 +1642,13 @@ class MeasureReportPopulation {
 
     /// [subjectResults] This element refers to a List of subject level MeasureReport resources, one for each subject in this population.
     Reference? subjectResults,
-  }) = _MeasureReportPopulation;
+  
 }
 
 /// [MeasureReportStratifier] The MeasureReport resource contains the results
 ///  of the calculation of a measure; and optionally a reference to the
 ///  resources involved in that calculation.
-@freezed
+
 class MeasureReportStratifier {
   /// [MeasureReportStratifier] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -1690,7 +1689,7 @@ class MeasureReportStratifier {
   ///  the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
   ///
-  factory MeasureReportStratifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1722,13 +1721,13 @@ class MeasureReportStratifier {
 
     /// [stratum] This element contains the results for a single stratum within the stratifier. For example, when stratifying on administrative gender, there will be four strata, one for each possible gender value.
     List<MeasureReportStratum>? stratum,
-  }) = _MeasureReportStratifier;
+  
 }
 
 /// [MeasureReportStratum] The MeasureReport resource contains the results of
 ///  the calculation of a measure; and optionally a reference to the resources
 ///  involved in that calculation.
-@freezed
+
 class MeasureReportStratum {
   /// [MeasureReportStratum] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
@@ -1820,7 +1819,7 @@ class MeasureReportStratum {
   ///  appropriate for the measure type and scoring method, and based on only
   ///  the members of this stratum.
   ///
-  factory MeasureReportStratum({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1892,13 +1891,13 @@ class MeasureReportStratum {
 
     /// [measureScoreDuration] The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
     FhirDuration? measureScoreDuration,
-  }) = _MeasureReportStratum;
+  
 }
 
 /// [MeasureReportComponent] The MeasureReport resource contains the results of
 ///  the calculation of a measure; and optionally a reference to the resources
 ///  involved in that calculation.
-@freezed
+
 class MeasureReportComponent {
   /// [MeasureReportComponent] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -1946,7 +1945,7 @@ class MeasureReportComponent {
   ///
   /// [valueReference] The stratum component value.
   ///
-  factory MeasureReportComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1993,13 +1992,13 @@ class MeasureReportComponent {
 
     /// [valueReference] The stratum component value.
     Reference? valueReference,
-  }) = _MeasureReportComponent;
+  
 }
 
 /// [MeasureReportPopulation1] The MeasureReport resource contains the results
 ///  of the calculation of a measure; and optionally a reference to the
 ///  resources involved in that calculation.
-@freezed
+
 class MeasureReportPopulation1 {
   /// [MeasureReportPopulation1] The MeasureReport resource contains the
   ///  results of the calculation of a measure; and optionally a reference to
@@ -2043,7 +2042,7 @@ class MeasureReportPopulation1 {
   ///  MeasureReport resources, one for each subject in this population in this
   ///  stratum.
   ///
-  factory MeasureReportPopulation1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2081,12 +2080,12 @@ class MeasureReportPopulation1 {
 
     /// [subjectResults] This element refers to a List of subject level MeasureReport resources, one for each subject in this population in this stratum.
     Reference? subjectResults,
-  }) = _MeasureReportPopulation1;
+  
 }
 
 /// [TestReport] A summary of information based on the results of executing a
 ///  TestScript.
-@freezed
+
 class TestReport {
   /// [TestReport] A summary of information based on the results of executing a
   ///  TestScript.
@@ -2194,7 +2193,7 @@ class TestReport {
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
   ///
-  factory TestReport({
+  
     /// [resourceType] This is a TestReport resource
     @Default(R5ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
@@ -2289,12 +2288,12 @@ class TestReport {
 
     /// [teardown] The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
     TestReportTeardown? teardown,
-  }) = _TestReport;
+  
 }
 
 /// [TestReportParticipant] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportParticipant {
   /// [TestReportParticipant] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2338,7 +2337,7 @@ class TestReportParticipant {
   ///
   /// [displayElement] ("_display") Extensions for display
   ///
-  factory TestReportParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2382,12 +2381,12 @@ class TestReportParticipant {
 
     /// [displayElement] ("_display") Extensions for display
     @JsonKey(name: '_display') Element? displayElement,
-  }) = _TestReportParticipant;
+  
 }
 
 /// [TestReportSetup] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportSetup {
   /// [TestReportSetup] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2421,7 +2420,7 @@ class TestReportSetup {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestReportSetup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2450,12 +2449,12 @@ class TestReportSetup {
 
     /// [action] Action would contain either an operation or an assertion.
     required List<TestReportAction> action,
-  }) = _TestReportSetup;
+  
 }
 
 /// [TestReportAction] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportAction {
   /// [TestReportAction] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2492,7 +2491,7 @@ class TestReportAction {
   /// [assert_] ("assert") The results of the assertion performed on the
   ///  previous operations.
   ///
-  factory TestReportAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2524,12 +2523,12 @@ class TestReportAction {
 
     /// [assert_] ("assert") The results of the assertion performed on the previous operations.
     @JsonKey(name: 'assert') TestReportAssert? assert_,
-  }) = _TestReportAction;
+  
 }
 
 /// [TestReportOperation] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportOperation {
   /// [TestReportOperation] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2573,7 +2572,7 @@ class TestReportOperation {
   ///
   /// [detailElement] ("_detail") Extensions for detail
   ///
-  factory TestReportOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2617,12 +2616,12 @@ class TestReportOperation {
 
     /// [detailElement] ("_detail") Extensions for detail
     @JsonKey(name: '_detail') Element? detailElement,
-  }) = _TestReportOperation;
+  
 }
 
 /// [TestReportAssert] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportAssert {
   /// [TestReportAssert] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2666,7 +2665,7 @@ class TestReportAssert {
   ///
   /// [detailElement] ("_detail") Extensions for detail
   ///
-  factory TestReportAssert({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2710,12 +2709,12 @@ class TestReportAssert {
 
     /// [detailElement] ("_detail") Extensions for detail
     @JsonKey(name: '_detail') Element? detailElement,
-  }) = _TestReportAssert;
+  
 }
 
 /// [TestReportTest] A summary of information based on the results of executing
 ///  a TestScript.
-@freezed
+
 class TestReportTest {
   /// [TestReportTest] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2759,7 +2758,7 @@ class TestReportTest {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestReportTest({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2800,12 +2799,12 @@ class TestReportTest {
 
     /// [action] Action would contain either an operation or an assertion.
     required List<TestReportAction1> action,
-  }) = _TestReportTest;
+  
 }
 
 /// [TestReportAction1] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportAction1 {
   /// [TestReportAction1] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2842,7 +2841,7 @@ class TestReportAction1 {
   /// [assert_] ("assert") The results of the assertion performed on the
   ///  previous operations.
   ///
-  factory TestReportAction1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2874,12 +2873,12 @@ class TestReportAction1 {
 
     /// [assert_] ("assert") The results of the assertion performed on the previous operations.
     @JsonKey(name: 'assert') TestReportAssert? assert_,
-  }) = _TestReportAction1;
+  
 }
 
 /// [TestReportTeardown] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportTeardown {
   /// [TestReportTeardown] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2913,7 +2912,7 @@ class TestReportTeardown {
   ///
   /// [action] The teardown action will only contain an operation.
   ///
-  factory TestReportTeardown({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2942,12 +2941,12 @@ class TestReportTeardown {
 
     /// [action] The teardown action will only contain an operation.
     required List<TestReportAction2> action,
-  }) = _TestReportTeardown;
+  
 }
 
 /// [TestReportAction2] A summary of information based on the results of
 ///  executing a TestScript.
-@freezed
+
 class TestReportAction2 {
   /// [TestReportAction2] A summary of information based on the results of
   ///  executing a TestScript.
@@ -2981,7 +2980,7 @@ class TestReportAction2 {
   ///
   /// [operation] An operation would involve a REST request to a server.
   ///
-  factory TestReportAction2({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3010,12 +3009,12 @@ class TestReportAction2 {
 
     /// [operation] An operation would involve a REST request to a server.
     required TestReportOperation operation,
-  }) = _TestReportAction2;
+  
 }
 
 /// [TestScript] A structured set of tests against a FHIR server or client
 ///  implementation to determine compliance against the FHIR specification.
-@freezed
+
 class TestScript {
   /// [TestScript] A structured set of tests against a FHIR server or client
   ///  implementation to determine compliance against the FHIR specification.
@@ -3206,7 +3205,7 @@ class TestScript {
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
   ///
-  factory TestScript({
+  
     /// [resourceType] This is a TestScript resource
     @Default(R5ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
@@ -3371,13 +3370,13 @@ class TestScript {
 
     /// [teardown] A series of operations required to clean up after all the tests are executed (successfully or otherwise).
     TestScriptTeardown? teardown,
-  }) = _TestScript;
+  
 }
 
 /// [TestScriptOrigin] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptOrigin {
   /// [TestScriptOrigin] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -3424,7 +3423,7 @@ class TestScriptOrigin {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptOrigin({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3468,13 +3467,13 @@ class TestScriptOrigin {
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptOrigin;
+  
 }
 
 /// [TestScriptDestination] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptDestination {
   /// [TestScriptDestination] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
@@ -3520,7 +3519,7 @@ class TestScriptDestination {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptDestination({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3561,13 +3560,13 @@ class TestScriptDestination {
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptDestination;
+  
 }
 
 /// [TestScriptMetadata] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptMetadata {
   /// [TestScriptMetadata] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -3606,7 +3605,7 @@ class TestScriptMetadata {
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   ///
-  factory TestScriptMetadata({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3638,12 +3637,12 @@ class TestScriptMetadata {
 
     /// [capability] Capabilities that must exist and are assumed to function correctly on the FHIR server being tested.
     required List<TestScriptCapability> capability,
-  }) = _TestScriptMetadata;
+  
 }
 
 /// [TestScriptLink] A structured set of tests against a FHIR server or client
 ///  implementation to determine compliance against the FHIR specification.
-@freezed
+
 class TestScriptLink {
   /// [TestScriptLink] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -3686,7 +3685,7 @@ class TestScriptLink {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory TestScriptLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3724,13 +3723,13 @@ class TestScriptLink {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _TestScriptLink;
+  
 }
 
 /// [TestScriptCapability] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptCapability {
   /// [TestScriptCapability] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -3798,7 +3797,7 @@ class TestScriptCapability {
   ///  referenced capability statement, then all tests in this script are
   ///  skipped.
   ///
-  factory TestScriptCapability({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3863,12 +3862,12 @@ class TestScriptCapability {
 
     /// [capabilities] Minimum capabilities required of server for test script to execute successfully.   If server does not meet at a minimum the referenced capability statement, then all tests in this script are skipped.
     required Canonical capabilities,
-  }) = _TestScriptCapability;
+  
 }
 
 /// [TestScriptScope] A structured set of tests against a FHIR server or client
 ///  implementation to determine compliance against the FHIR specification.
-@freezed
+
 class TestScriptScope {
   /// [TestScriptScope] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -3916,7 +3915,7 @@ class TestScriptScope {
   ///  production - live system to system phase (Note, this may involve pii/phi
   ///  data).
   ///
-  factory TestScriptScope({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3951,13 +3950,13 @@ class TestScriptScope {
 
     /// [phase] The phase of testing for this artifact: unit - development / implementation phase, integration - internal system to system phase, production - live system to system phase (Note, this may involve pii/phi data).
     CodeableConcept? phase,
-  }) = _TestScriptScope;
+  
 }
 
 /// [TestScriptFixture] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptFixture {
   /// [TestScriptFixture] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4009,7 +4008,7 @@ class TestScriptFixture {
   ///  resource needed for operations). This is allowed to be a Parameters
   ///  resource.
   ///
-  factory TestScriptFixture({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4050,13 +4049,13 @@ class TestScriptFixture {
 
     /// [resource] Reference to the resource (containing the contents of the resource needed for operations). This is allowed to be a Parameters resource.
     Reference? resource,
-  }) = _TestScriptFixture;
+  
 }
 
 /// [TestScriptVariable] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptVariable {
   /// [TestScriptVariable] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4131,7 +4130,7 @@ class TestScriptVariable {
   ///
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  factory TestScriptVariable({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4205,12 +4204,12 @@ class TestScriptVariable {
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _TestScriptVariable;
+  
 }
 
 /// [TestScriptSetup] A structured set of tests against a FHIR server or client
 ///  implementation to determine compliance against the FHIR specification.
-@freezed
+
 class TestScriptSetup {
   /// [TestScriptSetup] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4246,7 +4245,7 @@ class TestScriptSetup {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestScriptSetup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4275,13 +4274,13 @@ class TestScriptSetup {
 
     /// [action] Action would contain either an operation or an assertion.
     required List<TestScriptAction> action,
-  }) = _TestScriptSetup;
+  
 }
 
 /// [TestScriptAction] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptAction {
   /// [TestScriptAction] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4320,7 +4319,7 @@ class TestScriptAction {
   /// [assert_] ("assert") Evaluates the results of previous operations to
   ///  determine if the server under test behaves appropriately.
   ///
-  factory TestScriptAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4352,13 +4351,13 @@ class TestScriptAction {
 
     /// [assert_] ("assert") Evaluates the results of previous operations to determine if the server under test behaves appropriately.
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
-  }) = _TestScriptAction;
+  
 }
 
 /// [TestScriptOperation] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptOperation {
   /// [TestScriptOperation] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4472,7 +4471,7 @@ class TestScriptOperation {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4594,13 +4593,13 @@ class TestScriptOperation {
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptOperation;
+  
 }
 
 /// [TestScriptRequestHeader] A structured set of tests against a FHIR server
 ///  or client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptRequestHeader {
   /// [TestScriptRequestHeader] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
@@ -4642,7 +4641,7 @@ class TestScriptRequestHeader {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory TestScriptRequestHeader({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4680,13 +4679,13 @@ class TestScriptRequestHeader {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _TestScriptRequestHeader;
+  
 }
 
 /// [TestScriptAssert] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptAssert {
   /// [TestScriptAssert] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -4841,7 +4840,7 @@ class TestScriptAssert {
   ///
   /// [warningOnlyElement] ("_warningOnly") Extensions for warningOnly
   ///
-  factory TestScriptAssert({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5006,12 +5005,12 @@ class TestScriptAssert {
 
     /// [warningOnlyElement] ("_warningOnly") Extensions for warningOnly
     @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
-  }) = _TestScriptAssert;
+  
 }
 
 /// [TestScriptTest] A structured set of tests against a FHIR server or client
 ///  implementation to determine compliance against the FHIR specification.
-@freezed
+
 class TestScriptTest {
   /// [TestScriptTest] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -5057,7 +5056,7 @@ class TestScriptTest {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestScriptTest({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5098,13 +5097,13 @@ class TestScriptTest {
 
     /// [action] Action would contain either an operation or an assertion.
     required List<TestScriptAction1> action,
-  }) = _TestScriptTest;
+  
 }
 
 /// [TestScriptAction1] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptAction1 {
   /// [TestScriptAction1] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -5143,7 +5142,7 @@ class TestScriptAction1 {
   /// [assert_] ("assert") Evaluates the results of previous operations to
   ///  determine if the server under test behaves appropriately.
   ///
-  factory TestScriptAction1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5175,13 +5174,13 @@ class TestScriptAction1 {
 
     /// [assert_] ("assert") Evaluates the results of previous operations to determine if the server under test behaves appropriately.
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
-  }) = _TestScriptAction1;
+  
 }
 
 /// [TestScriptTeardown] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptTeardown {
   /// [TestScriptTeardown] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -5217,7 +5216,7 @@ class TestScriptTeardown {
   ///
   /// [action] The teardown action will only contain an operation.
   ///
-  factory TestScriptTeardown({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5246,13 +5245,13 @@ class TestScriptTeardown {
 
     /// [action] The teardown action will only contain an operation.
     required List<TestScriptAction2> action,
-  }) = _TestScriptTeardown;
+  
 }
 
 /// [TestScriptAction2] A structured set of tests against a FHIR server or
 ///  client implementation to determine compliance against the FHIR
 ///  specification.
-@freezed
+
 class TestScriptAction2 {
   /// [TestScriptAction2] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -5288,7 +5287,7 @@ class TestScriptAction2 {
   ///
   /// [operation] An operation would involve a REST request to a server.
   ///
-  factory TestScriptAction2({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5317,5 +5316,5 @@ class TestScriptAction2 {
 
     /// [operation] An operation would involve a REST request to a server.
     required TestScriptOperation operation,
-  }) = _TestScriptAction2;
+  
 }

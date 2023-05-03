@@ -3,13 +3,12 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'management.freezed.dart';
 part 'management.g.dart';
 
 /// [Encounter] An interaction between a patient and healthcare provider(s) for
@@ -17,7 +16,7 @@ part 'management.g.dart';
 ///  status of a patient.  Encounter is primarily used to record information
 ///  about the actual activities that occurred, where Appointment is used to
 ///  record planned activities.
-@freezed
+
 class Encounter {
   /// [Encounter] An interaction between a patient and healthcare provider(s)
   ///  for the purpose of providing healthcare service(s) or assessing the
@@ -190,7 +189,7 @@ class Encounter {
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
   ///
-  factory Encounter({
+  
     /// [resourceType] This is a Encounter resource
     @Default(R5ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
@@ -399,7 +398,7 @@ class Encounter {
     /// [location] List of locations where  the patient has been during this
     ///  encounter.
     List<EncounterLocation>? location,
-  }) = _Encounter;
+  
 }
 
 /// [EncounterStatusHistory] An interaction between a patient and healthcare
@@ -407,7 +406,7 @@ class Encounter {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterStatusHistory {
   /// [EncounterStatusHistory] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -452,7 +451,7 @@ class EncounterStatusHistory {
   ///
   /// [period] The time that the episode was in the specified status.
   ///
-  factory EncounterStatusHistory({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -490,7 +489,7 @@ class EncounterStatusHistory {
 
     /// [period] The time that the episode was in the specified status.
     required Period period,
-  }) = _EncounterStatusHistory;
+  
 }
 
 /// [EncounterClassHistory] An interaction between a patient and healthcare
@@ -498,7 +497,7 @@ class EncounterStatusHistory {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterClassHistory {
   /// [EncounterClassHistory] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -540,7 +539,7 @@ class EncounterClassHistory {
   ///
   /// [period] The time that the episode was in the specified class.
   ///
-  factory EncounterClassHistory({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -574,7 +573,7 @@ class EncounterClassHistory {
 
     /// [period] The time that the episode was in the specified class.
     required Period period,
-  }) = _EncounterClassHistory;
+  
 }
 
 /// [EncounterParticipant] An interaction between a patient and healthcare
@@ -582,7 +581,7 @@ class EncounterClassHistory {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterParticipant {
   /// [EncounterParticipant] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -631,7 +630,7 @@ class EncounterParticipant {
   ///  the encounter. Not including the patient here covers use cases such as a
   ///  case meeting between practitioners about a patient - non contact times.
   ///
-  factory EncounterParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -674,7 +673,7 @@ class EncounterParticipant {
     ///  as a case meeting between practitioners about a patient - non contact
     ///  times.
     Reference? actor,
-  }) = _EncounterParticipant;
+  
 }
 
 /// [EncounterDiagnosis] An interaction between a patient and healthcare
@@ -682,7 +681,7 @@ class EncounterParticipant {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterDiagnosis {
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -732,7 +731,7 @@ class EncounterDiagnosis {
   ///
   /// [rankElement] ("_rank") Extensions for rank
   ///
-  factory EncounterDiagnosis({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -777,7 +776,7 @@ class EncounterDiagnosis {
 
     /// [rankElement] ("_rank") Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
-  }) = _EncounterDiagnosis;
+  
 }
 
 /// [EncounterAdmission] An interaction between a patient and healthcare
@@ -785,7 +784,7 @@ class EncounterDiagnosis {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterAdmission {
   /// [EncounterAdmission] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -845,7 +844,7 @@ class EncounterAdmission {
   ///
   /// [dischargeDisposition] Category or kind of location after discharge.
   ///
-  factory EncounterAdmission({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -904,7 +903,7 @@ class EncounterAdmission {
 
     /// [dischargeDisposition] Category or kind of location after discharge.
     CodeableConcept? dischargeDisposition,
-  }) = _EncounterAdmission;
+  
 }
 
 /// [EncounterLocation] An interaction between a patient and healthcare
@@ -912,7 +911,7 @@ class EncounterAdmission {
 ///  assessing the health status of a patient.  Encounter is primarily used to
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
-@freezed
+
 class EncounterLocation {
   /// [EncounterLocation] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -964,7 +963,7 @@ class EncounterLocation {
   ///
   /// [period] Time period during which the patient was present at the location.
   ///
-  factory EncounterLocation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1012,14 +1011,14 @@ class EncounterLocation {
     /// [period] Time period during which the patient was present at the
     ///  location.
     Period? period,
-  }) = _EncounterLocation;
+  
 }
 
 /// [EpisodeOfCare] An association between a patient and an organization /
 ///  healthcare provider(s) during which time encounters may occur. The
 ///  managing organization assumes a level of responsibility for the patient
 ///  during this time.
-@freezed
+
 class EpisodeOfCare {
   /// [EpisodeOfCare] An association between a patient and an organization /
   ///  healthcare provider(s) during which time encounters may occur. The
@@ -1122,7 +1121,7 @@ class EpisodeOfCare {
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
   ///
-  factory EpisodeOfCare({
+  
     /// [resourceType] This is a EpisodeOfCare resource
     @Default(R5ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
@@ -1242,14 +1241,14 @@ class EpisodeOfCare {
     /// [account] The set of accounts that may be used for billing for this
     ///  EpisodeOfCare.
     List<Reference>? account,
-  }) = _EpisodeOfCare;
+  
 }
 
 /// [EpisodeOfCareStatusHistory] An association between a patient and an
 ///  organization / healthcare provider(s) during which time encounters may
 ///  occur. The managing organization assumes a level of responsibility for the
 ///  patient during this time.
-@freezed
+
 class EpisodeOfCareStatusHistory {
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
@@ -1292,7 +1291,7 @@ class EpisodeOfCareStatusHistory {
   /// [period] The period during this EpisodeOfCare that the specific status
   ///  applied.
   ///
-  factory EpisodeOfCareStatusHistory({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1330,14 +1329,14 @@ class EpisodeOfCareStatusHistory {
     /// [period] The period during this EpisodeOfCare that the specific status
     ///  applied.
     required Period period,
-  }) = _EpisodeOfCareStatusHistory;
+  
 }
 
 /// [EpisodeOfCareDiagnosis] An association between a patient and an
 ///  organization / healthcare provider(s) during which time encounters may
 ///  occur. The managing organization assumes a level of responsibility for the
 ///  patient during this time.
-@freezed
+
 class EpisodeOfCareDiagnosis {
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
@@ -1383,7 +1382,7 @@ class EpisodeOfCareDiagnosis {
   ///
   /// [rankElement] ("_rank") Extensions for rank
   ///
-  factory EpisodeOfCareDiagnosis({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1425,12 +1424,12 @@ class EpisodeOfCareDiagnosis {
 
     /// [rankElement] ("_rank") Extensions for rank
     @JsonKey(name: '_rank') Element? rankElement,
-  }) = _EpisodeOfCareDiagnosis;
+  
 }
 
 /// [Flag] Prospective warnings of potential issues when providing care to the
 ///  patient.
-@freezed
+
 class Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to
   ///  the patient.
@@ -1519,7 +1518,7 @@ class Flag {
   ///
   /// [author] The person, organization or device that created the flag.
   ///
-  factory Flag({
+  
     /// [resourceType] This is a Flag resource
     @Default(R5ResourceType.Flag)
     @JsonKey(unknownEnumValue: R5ResourceType.Flag)
@@ -1625,14 +1624,14 @@ class Flag {
 
     /// [author] The person, organization or device that created the flag.
     Reference? author,
-  }) = _Flag;
+  
 }
 
 /// [Library] The Library resource is a general-purpose container for knowledge
 ///  asset definitions. It can be used to describe and expose existing
 ///  knowledge assets such as logic libraries and information model
 ///  descriptions, as well as to describe a collection of knowledge assets.
-@freezed
+
 class Library {
   /// [Library] The Library resource is a general-purpose container for
   ///  knowledge asset definitions. It can be used to describe and expose
@@ -1869,7 +1868,7 @@ class Library {
   ///  Either way, the contentType of the attachment determines how to
   ///  interpret the content.
   ///
-  factory Library({
+  
     /// [resourceType] This is a Library resource
     @Default(R5ResourceType.Library)
     @JsonKey(unknownEnumValue: R5ResourceType.Library)
@@ -2166,12 +2165,12 @@ class Library {
     ///  string. Either way, the contentType of the attachment determines how
     ///  to interpret the content.
     List<Attachment>? content,
-  }) = _Library;
+  
 }
 
 /// [List_] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
-@freezed
+
 class List_ {
   /// [List_] A List is a curated collection of resources, for things such as
   ///  problem lists, allergy lists, facility list, organization list, etc.
@@ -2275,7 +2274,7 @@ class List_ {
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
   ///
-  factory List_({
+  
     /// [resourceType] This is a List resource
     @Default(R5ResourceType.List_)
     @JsonKey(unknownEnumValue: R5ResourceType.List_)
@@ -2406,12 +2405,12 @@ class List_ {
 
     /// [emptyReason] If the list is empty, why the list is empty.
     CodeableConcept? emptyReason,
-  }) = _List_;
+  
 }
 
 /// [ListEntry] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
-@freezed
+
 class ListEntry {
   /// [ListEntry] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
@@ -2456,7 +2455,7 @@ class ListEntry {
   ///
   /// [item] A reference to the actual resource from which data was derived.
   ///
-  factory ListEntry({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2503,5 +2502,5 @@ class ListEntry {
 
     /// [item] A reference to the actual resource from which data was derived.
     required Reference item,
-  }) = _ListEntry;
+  
 }

@@ -2,16 +2,14 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
-@freezed
 class AdministrableProductDefinition
     with Resource, _$AdministrableProductDefinition {
   ///
@@ -45,7 +43,7 @@ class AdministrableProductDefinition
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
-  factory AdministrableProductDefinition({
+  
     @Default(R4ResourceType.AdministrableProductDefinition)
 
         /// [resourceType] This is a AdministrableProductDefinition resource",
@@ -102,10 +100,9 @@ class AdministrableProductDefinition
     List<AdministrableProductDefinitionProperty>? property,
     required List<AdministrableProductDefinitionRouteOfAdministration>
         routeOfAdministration,
-  }) = _AdministrableProductDefinition;
+  
 }
 
-@freezed
 class AdministrableProductDefinitionProperty
     with _$AdministrableProductDefinitionProperty {
   /// [AdministrableProductDefinitionProperty] A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
@@ -136,7 +133,7 @@ class AdministrableProductDefinitionProperty
   /// [valueAttachment] A value for the characteristic.;
   ///
   /// [status] The status of characteristic e.g. assigned or pending.;
-  factory AdministrableProductDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -173,10 +170,9 @@ class AdministrableProductDefinitionProperty
 
     /// [status] The status of characteristic e.g. assigned or pending.;
     CodeableConcept? status,
-  }) = _AdministrableProductDefinitionProperty;
+  
 }
 
-@freezed
 class AdministrableProductDefinitionRouteOfAdministration
     with _$AdministrableProductDefinitionRouteOfAdministration {
   /// [AdministrableProductDefinitionRouteOfAdministration] A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
@@ -203,7 +199,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   /// [maxTreatmentPeriod] The maximum treatment period during which the product can be administered.;
   ///
   /// [targetSpecies] A species for which this route applies.;
-  factory AdministrableProductDefinitionRouteOfAdministration({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -234,10 +230,9 @@ class AdministrableProductDefinitionRouteOfAdministration
 
     /// [targetSpecies] A species for which this route applies.;
     List<AdministrableProductDefinitionTargetSpecies>? targetSpecies,
-  }) = _AdministrableProductDefinitionRouteOfAdministration;
+  
 }
 
-@freezed
 class AdministrableProductDefinitionTargetSpecies
     with _$AdministrableProductDefinitionTargetSpecies {
   /// [AdministrableProductDefinitionTargetSpecies] A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
@@ -254,7 +249,7 @@ class AdministrableProductDefinitionTargetSpecies
   /// [code] Coded expression for the species.;
   ///
   /// [withdrawalPeriod] A species specific time during which consumption of animal product is not appropriate.;
-  factory AdministrableProductDefinitionTargetSpecies({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -270,10 +265,9 @@ class AdministrableProductDefinitionTargetSpecies
 
     /// [withdrawalPeriod] A species specific time during which consumption of animal product is not appropriate.;
     List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod,
-  }) = _AdministrableProductDefinitionTargetSpecies;
+  
 }
 
-@freezed
 class AdministrableProductDefinitionWithdrawalPeriod
     with _$AdministrableProductDefinitionWithdrawalPeriod {
   /// [AdministrableProductDefinitionWithdrawalPeriod] A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
@@ -294,7 +288,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   /// [supportingInformation] Extra information about the withdrawal period.;
   ///
   /// [supportingInformationElement] (_supportingInformation): Extensions for supportingInformation;
-  factory AdministrableProductDefinitionWithdrawalPeriod({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -318,11 +312,11 @@ class AdministrableProductDefinitionWithdrawalPeriod
 
         /// [supportingInformationElement] (_supportingInformation): Extensions for supportingInformation;
         Element? supportingInformationElement,
-  }) = _AdministrableProductDefinitionWithdrawalPeriod;
+  
 }
 
 /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class Ingredient {
   /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
 
@@ -374,7 +368,7 @@ class Ingredient {
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
   ///
   /// [substance] The substance that comprises this ingredient.;
-  factory Ingredient({
+  
     /// [resourceType] This is a Ingredient resource;
     @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
 
@@ -441,11 +435,11 @@ class Ingredient {
 
     /// [substance] The substance that comprises this ingredient.;
     required IngredientSubstance substance,
-  }) = _Ingredient;
+  
 }
 
 /// [IngredientManufacturer] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class IngredientManufacturer {
   /// [IngredientManufacturer] An ingredient of a manufactured item or pharmaceutical product.
 
@@ -463,7 +457,7 @@ class IngredientManufacturer {
   /// [roleElement] (_role): Extensions for role;
   ///
   /// [manufacturer] An organization that manufactures this ingredient.;
-  factory IngredientManufacturer({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -481,11 +475,11 @@ class IngredientManufacturer {
 
     /// [manufacturer] An organization that manufactures this ingredient.;
     required Reference manufacturer,
-  }) = _IngredientManufacturer;
+  
 }
 
 /// [IngredientSubstance] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class IngredientSubstance {
   /// [IngredientSubstance] An ingredient of a manufactured item or pharmaceutical product.
 
@@ -503,7 +497,7 @@ class IngredientSubstance {
   /// [code] A code or full resource that represents the ingredient's substance.;
   ///
   /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
-  factory IngredientSubstance({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -519,11 +513,11 @@ class IngredientSubstance {
 
     /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
     List<IngredientStrength>? strength,
-  }) = _IngredientSubstance;
+  
 }
 
 /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class IngredientStrength {
   /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical product.
 
@@ -561,7 +555,7 @@ class IngredientStrength {
   /// [country] The country or countries for which the strength range applies.;
   ///
   /// [referenceStrength] Strength expressed in terms of a reference substance. For when the ingredient strength is additionally expressed as equivalent to the strength of some other closely related substance (e.g. salt vs. base). Reference strength represents the strength (quantitative composition) of the active moiety of the active substance. There are situations when the active substance and active moiety are different, therefore both a strength and a reference strength are needed.;
-  factory IngredientStrength({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -607,11 +601,11 @@ class IngredientStrength {
 
     /// [referenceStrength] Strength expressed in terms of a reference substance. For when the ingredient strength is additionally expressed as equivalent to the strength of some other closely related substance (e.g. salt vs. base). Reference strength represents the strength (quantitative composition) of the active moiety of the active substance. There are situations when the active substance and active moiety are different, therefore both a strength and a reference strength are needed.;
     List<IngredientReferenceStrength>? referenceStrength,
-  }) = _IngredientStrength;
+  
 }
 
 /// [IngredientReferenceStrength] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class IngredientReferenceStrength {
   /// [IngredientReferenceStrength] An ingredient of a manufactured item or pharmaceutical product.
 
@@ -639,7 +633,7 @@ class IngredientReferenceStrength {
   /// [measurementPointElement] (_measurementPoint): Extensions for measurementPoint;
   ///
   /// [country] The country or countries for which the strength range applies.;
-  factory IngredientReferenceStrength({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -670,11 +664,11 @@ class IngredientReferenceStrength {
 
     /// [country] The country or countries for which the strength range applies.;
     List<CodeableConcept>? country,
-  }) = _IngredientReferenceStrength;
+  
 }
 
 /// [ClinicalUseDefinition] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinition {
   /// [ClinicalUseDefinition] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 
@@ -726,7 +720,7 @@ class ClinicalUseDefinition {
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
   ///
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
-  factory ClinicalUseDefinition({
+  
     /// [resourceType] This is a ClinicalUseDefinition resource;
     @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
 
@@ -795,10 +789,9 @@ class ClinicalUseDefinition {
 
     /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
     ClinicalUseDefinitionWarning? warning,
-  }) = _ClinicalUseDefinition;
+  
 }
 
-@freezed
 class ClinicalUseDefinitionContraindication
     with _$ClinicalUseDefinitionContraindication {
   /// [ClinicalUseDefinitionContraindication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
@@ -819,7 +812,7 @@ class ClinicalUseDefinitionContraindication
   /// [indication] The indication which this is a contraidication for.;
   ///
   /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.;
-  factory ClinicalUseDefinitionContraindication({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -843,10 +836,9 @@ class ClinicalUseDefinitionContraindication
 
     /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.;
     List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionContraindication;
+  
 }
 
-@freezed
 class ClinicalUseDefinitionOtherTherapy
     with _$ClinicalUseDefinitionOtherTherapy {
   /// [ClinicalUseDefinitionOtherTherapy] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
@@ -861,7 +853,7 @@ class ClinicalUseDefinitionOtherTherapy
   /// [relationshipType] The type of relationship between the medicinal product indication or contraindication and another therapy.;
   ///
   /// [therapy] Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.;
-  factory ClinicalUseDefinitionOtherTherapy({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -876,11 +868,11 @@ class ClinicalUseDefinitionOtherTherapy
 
     /// [therapy] Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.;
     required CodeableReference therapy,
-  }) = _ClinicalUseDefinitionOtherTherapy;
+  
 }
 
 /// [ClinicalUseDefinitionIndication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionIndication {
   /// [ClinicalUseDefinitionIndication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 
@@ -910,7 +902,7 @@ class ClinicalUseDefinitionIndication {
   /// [undesirableEffect] An unwanted side effect or negative outcome that may happen if you use the drug (or other subject of this resource) for this indication.;
   ///
   /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the indication.;
-  factory ClinicalUseDefinitionIndication({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -946,11 +938,11 @@ class ClinicalUseDefinitionIndication {
 
     /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the indication.;
     List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionIndication;
+  
 }
 
 /// [ClinicalUseDefinitionInteraction] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionInteraction {
   /// [ClinicalUseDefinitionInteraction] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 
@@ -972,7 +964,7 @@ class ClinicalUseDefinitionInteraction {
   /// [incidence] The incidence of the interaction, e.g. theoretical, observed.;
   ///
   /// [management] Actions for managing the interaction.;
-  factory ClinicalUseDefinitionInteraction({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -996,11 +988,11 @@ class ClinicalUseDefinitionInteraction {
 
     /// [management] Actions for managing the interaction.;
     List<CodeableConcept>? management,
-  }) = _ClinicalUseDefinitionInteraction;
+  
 }
 
 /// [ClinicalUseDefinitionInteractant] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionInteractant {
   /// [ClinicalUseDefinitionInteractant] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 
@@ -1016,7 +1008,7 @@ class ClinicalUseDefinitionInteractant {
   /// [itemReference] The specific medication, food or laboratory test that interacts.;
   ///
   /// [itemCodeableConcept] The specific medication, food or laboratory test that interacts.;
-  factory ClinicalUseDefinitionInteractant({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1031,10 +1023,9 @@ class ClinicalUseDefinitionInteractant {
 
     /// [itemCodeableConcept] The specific medication, food or laboratory test that interacts.;
     CodeableConcept? itemCodeableConcept,
-  }) = _ClinicalUseDefinitionInteractant;
+  
 }
 
-@freezed
 class ClinicalUseDefinitionUndesirableEffect
     with _$ClinicalUseDefinitionUndesirableEffect {
   /// [ClinicalUseDefinitionUndesirableEffect] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
@@ -1051,7 +1042,7 @@ class ClinicalUseDefinitionUndesirableEffect
   /// [classification] High level classification of the effect.;
   ///
   /// [frequencyOfOccurrence] How often the effect is seen.;
-  factory ClinicalUseDefinitionUndesirableEffect({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1069,11 +1060,11 @@ class ClinicalUseDefinitionUndesirableEffect
 
     /// [frequencyOfOccurrence] How often the effect is seen.;
     CodeableConcept? frequencyOfOccurrence,
-  }) = _ClinicalUseDefinitionUndesirableEffect;
+  
 }
 
 /// [ClinicalUseDefinitionWarning] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionWarning {
   /// [ClinicalUseDefinitionWarning] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 
@@ -1091,7 +1082,7 @@ class ClinicalUseDefinitionWarning {
   /// [descriptionElement] (_description): Extensions for description;
   ///
   /// [code] A coded or unformatted textual definition of this warning.;
-  factory ClinicalUseDefinitionWarning({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1109,11 +1100,11 @@ class ClinicalUseDefinitionWarning {
 
     /// [code] A coded or unformatted textual definition of this warning.;
     CodeableConcept? code,
-  }) = _ClinicalUseDefinitionWarning;
+  
 }
 
 /// [ManufacturedItemDefinition] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
-@freezed
+
 class ManufacturedItemDefinition {
   /// [ManufacturedItemDefinition] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
 
@@ -1159,7 +1150,7 @@ class ManufacturedItemDefinition {
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
   ///
   /// [property] General characteristics of this item.;
-  factory ManufacturedItemDefinition({
+  
     @Default(R4ResourceType.ManufacturedItemDefinition)
 
         /// [resourceType] This is a ManufacturedItemDefinition resource;
@@ -1223,10 +1214,9 @@ class ManufacturedItemDefinition {
 
     /// [property] General characteristics of this item.;
     List<ManufacturedItemDefinitionProperty>? property,
-  }) = _ManufacturedItemDefinition;
+  
 }
 
-@freezed
 class ManufacturedItemDefinitionProperty
     with _$ManufacturedItemDefinitionProperty {
   /// [ManufacturedItemDefinitionProperty] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
@@ -1255,7 +1245,7 @@ class ManufacturedItemDefinitionProperty
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.;
-  factory ManufacturedItemDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1289,11 +1279,11 @@ class ManufacturedItemDefinitionProperty
 
     /// [valueAttachment] A value for the characteristic.;
     Attachment? valueAttachment,
-  }) = _ManufacturedItemDefinitionProperty;
+  
 }
 
 /// [MedicinalProductDefinition] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinition {
   /// [MedicinalProductDefinition] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 
@@ -1386,7 +1376,7 @@ class MedicinalProductDefinition {
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
   ///
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
-  factory MedicinalProductDefinition({
+  
     @Default(R4ResourceType.MedicinalProductDefinition)
 
         /// [resourceType] This is a MedicinalProductDefinition resource;
@@ -1525,10 +1515,9 @@ class MedicinalProductDefinition {
 
     /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
     List<MedicinalProductDefinitionCharacteristic>? characteristic,
-  }) = _MedicinalProductDefinition;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionContact
     with _$MedicinalProductDefinitionContact {
   /// [MedicinalProductDefinitionContact] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1545,7 +1534,7 @@ class MedicinalProductDefinitionContact
   /// [type] Allows the contact to be classified, for example QPPV, Pharmacovigilance Enquiry Information.;
   ///
   /// [contact] A product specific contact, person (in a role), or an organization.;
-  factory MedicinalProductDefinitionContact({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1561,11 +1550,11 @@ class MedicinalProductDefinitionContact
 
     /// [contact] A product specific contact, person (in a role), or an organization.;
     required Reference contact,
-  }) = _MedicinalProductDefinitionContact;
+  
 }
 
 /// [MedicinalProductDefinitionName] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionName {
   /// [MedicinalProductDefinitionName] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 
@@ -1589,7 +1578,7 @@ class MedicinalProductDefinitionName {
   /// [namePart] Coding words or phrases of the name.;
   ///
   /// [countryLanguage] Country and jurisdiction where the name applies, and associated language.;
-  factory MedicinalProductDefinitionName({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1614,10 +1603,9 @@ class MedicinalProductDefinitionName {
 
     /// [countryLanguage] Country and jurisdiction where the name applies, and associated language.;
     List<MedicinalProductDefinitionCountryLanguage>? countryLanguage,
-  }) = _MedicinalProductDefinitionName;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionNamePart
     with _$MedicinalProductDefinitionNamePart {
   /// [MedicinalProductDefinitionNamePart] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1636,7 +1624,7 @@ class MedicinalProductDefinitionNamePart
   /// [partElement] (_part): Extensions for part;
   ///
   /// [type] Identifying type for this part of the name (e.g. strength part).;
-  factory MedicinalProductDefinitionNamePart({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1655,10 +1643,9 @@ class MedicinalProductDefinitionNamePart
 
     /// [type] Identifying type for this part of the name (e.g. strength part).;
     required CodeableConcept type,
-  }) = _MedicinalProductDefinitionNamePart;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionCountryLanguage
     with _$MedicinalProductDefinitionCountryLanguage {
   /// [MedicinalProductDefinitionCountryLanguage] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1677,7 +1664,7 @@ class MedicinalProductDefinitionCountryLanguage
   /// [jurisdiction] Jurisdiction code for where this name applies. A jurisdiction may be a sub- or supra-national entity (e.g. a state or a geographic region).;
   ///
   /// [language] Language code for this name.;
-  factory MedicinalProductDefinitionCountryLanguage({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1696,10 +1683,9 @@ class MedicinalProductDefinitionCountryLanguage
 
     /// [language] Language code for this name.;
     required CodeableConcept language,
-  }) = _MedicinalProductDefinitionCountryLanguage;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionCrossReference
     with _$MedicinalProductDefinitionCrossReference {
   /// [MedicinalProductDefinitionCrossReference] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1716,7 +1702,7 @@ class MedicinalProductDefinitionCrossReference
   /// [product] Reference to another product, e.g. for linking authorised to investigational product.;
   ///
   /// [type] The type of relationship, for instance branded to generic, virtual to actual product, product to development product (investigational), parallel import version.;
-  factory MedicinalProductDefinitionCrossReference({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1732,10 +1718,9 @@ class MedicinalProductDefinitionCrossReference
 
     /// [type] The type of relationship, for instance branded to generic, virtual to actual product, product to development product (investigational), parallel import version.;
     CodeableConcept? type,
-  }) = _MedicinalProductDefinitionCrossReference;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionOperation
     with _$MedicinalProductDefinitionOperation {
   /// [MedicinalProductDefinitionOperation] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1756,7 +1741,7 @@ class MedicinalProductDefinitionOperation
   /// [organization] The organization or establishment responsible for (or associated with) the particular process or step, examples include the manufacturer, importer, agent.;
   ///
   /// [confidentialityIndicator] Specifies whether this particular business or manufacturing process is considered proprietary or confidential.;
-  factory MedicinalProductDefinitionOperation({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1778,10 +1763,9 @@ class MedicinalProductDefinitionOperation
 
     /// [confidentialityIndicator] Specifies whether this particular business or manufacturing process is considered proprietary or confidential.;
     CodeableConcept? confidentialityIndicator,
-  }) = _MedicinalProductDefinitionOperation;
+  
 }
 
-@freezed
 class MedicinalProductDefinitionCharacteristic
     with _$MedicinalProductDefinitionCharacteristic {
   /// [MedicinalProductDefinitionCharacteristic] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
@@ -1810,7 +1794,7 @@ class MedicinalProductDefinitionCharacteristic
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.text.;
-  factory MedicinalProductDefinitionCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -1844,11 +1828,11 @@ class MedicinalProductDefinitionCharacteristic
 
     /// [valueAttachment] A value for the characteristic.text.;
     Attachment? valueAttachment,
-  }) = _MedicinalProductDefinitionCharacteristic;
+  
 }
 
 /// [PackagedProductDefinition] A medically related item or items, in a container or package.
-@freezed
+
 class PackagedProductDefinition {
   /// [PackagedProductDefinition] A medically related item or items, in a container or package.
 
@@ -1914,7 +1898,7 @@ class PackagedProductDefinition {
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   ///
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
-  factory PackagedProductDefinition({
+  
     @Default(R4ResourceType.PackagedProductDefinition)
 
         /// [resourceType] This is a PackagedProductDefinition resource;
@@ -2011,10 +1995,9 @@ class PackagedProductDefinition {
 
     /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
     PackagedProductDefinitionPackage? package,
-  }) = _PackagedProductDefinition;
+  
 }
 
-@freezed
 class PackagedProductDefinitionLegalStatusOfSupply
     with _$PackagedProductDefinitionLegalStatusOfSupply {
   /// [PackagedProductDefinitionLegalStatusOfSupply] A medically related item or items, in a container or package.
@@ -2031,7 +2014,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
   /// [code] The actual status of supply. Conveys in what situation this package type may be supplied for use.;
   ///
   /// [jurisdiction] The place where the legal status of supply applies. When not specified, this indicates it is unknown in this context.;
-  factory PackagedProductDefinitionLegalStatusOfSupply({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2047,11 +2030,11 @@ class PackagedProductDefinitionLegalStatusOfSupply
 
     /// [jurisdiction] The place where the legal status of supply applies. When not specified, this indicates it is unknown in this context.;
     CodeableConcept? jurisdiction,
-  }) = _PackagedProductDefinitionLegalStatusOfSupply;
+  
 }
 
 /// [PackagedProductDefinitionPackage] A medically related item or items, in a container or package.
-@freezed
+
 class PackagedProductDefinitionPackage {
   /// [PackagedProductDefinitionPackage] A medically related item or items, in a container or package.
 
@@ -2087,7 +2070,7 @@ class PackagedProductDefinitionPackage {
   /// [containedItem] The item(s) within the packaging.;
   ///
   /// [package] Allows containers (and parts of containers) parwithin containers, still a single packaged product.  See also PackagedProductDefinition.package.containedItem.item(PackagedProductDefinition).;
-  factory PackagedProductDefinitionPackage({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2130,10 +2113,9 @@ class PackagedProductDefinitionPackage {
 
     /// [package] Allows containers (and parts of containers) parwithin containers, still a single packaged product.  See also PackagedProductDefinition.package.containedItem.item(PackagedProductDefinition).;
     List<PackagedProductDefinitionPackage>? package,
-  }) = _PackagedProductDefinitionPackage;
+  
 }
 
-@freezed
 class PackagedProductDefinitionShelfLifeStorage
     with _$PackagedProductDefinitionShelfLifeStorage {
   /// [PackagedProductDefinitionShelfLifeStorage] The shelf-life and storage information for a medicinal
@@ -2189,7 +2171,7 @@ class PackagedProductDefinitionShelfLifeStorage
   /// [specialPrecautionsForStorage] Special precautions for storage, if any,
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
-  factory PackagedProductDefinitionShelfLifeStorage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2249,10 +2231,9 @@ class PackagedProductDefinitionShelfLifeStorage
     /// can be specified using an appropriate controlled vocabulary The controlled
     ///  term and the controlled term identifier shall be specified.
     List<CodeableConcept>? specialPrecautionsForStorage,
-  }) = _PackagedProductDefinitionShelfLifeStorage;
+  
 }
 
-@freezed
 class PackagedProductDefinitionProperty
     with _$PackagedProductDefinitionProperty {
   /// [PackagedProductDefinitionProperty] A medically related item or items, in a container or package.
@@ -2281,7 +2262,7 @@ class PackagedProductDefinitionProperty
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the characteristic.;
-  factory PackagedProductDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2315,10 +2296,9 @@ class PackagedProductDefinitionProperty
 
     /// [valueAttachment] A value for the characteristic.;
     Attachment? valueAttachment,
-  }) = _PackagedProductDefinitionProperty;
+  
 }
 
-@freezed
 class PackagedProductDefinitionContainedItem
     with _$PackagedProductDefinitionContainedItem {
   /// [PackagedProductDefinitionContainedItem] A medically related item or items, in a container or package.
@@ -2335,7 +2315,7 @@ class PackagedProductDefinitionContainedItem
   /// [item] The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another whole packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack (for layers within one package, use PackagedProductDefinition.package.package).;
   ///
   /// [amount] The number of this type of item within this packaging.;
-  factory PackagedProductDefinitionContainedItem({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2351,11 +2331,11 @@ class PackagedProductDefinitionContainedItem
 
     /// [amount] The number of this type of item within this packaging.;
     Quantity? amount,
-  }) = _PackagedProductDefinitionContainedItem;
+  
 }
 
 /// [RegulatedAuthorization] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
-@freezed
+
 class RegulatedAuthorization {
   /// [RegulatedAuthorization] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 
@@ -2417,7 +2397,7 @@ class RegulatedAuthorization {
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   ///
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
-  factory RegulatedAuthorization({
+  
     /// [resourceType] This is a RegulatedAuthorization resource;
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
 
@@ -2499,11 +2479,11 @@ class RegulatedAuthorization {
 
     /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
     @JsonKey(name: 'case') RegulatedAuthorizationCase? case_,
-  }) = _RegulatedAuthorization;
+  
 }
 
 /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
-@freezed
+
 class RegulatedAuthorizationCase {
   /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 
@@ -2531,7 +2511,7 @@ class RegulatedAuthorizationCase {
   /// [dateDateTimeElement] (_dateDateTime): Extensions for dateDateTime;
   ///
   /// [application] A regulatory submission from an organization to a regulator, as part of an assessing case. Multiple applications may occur over time, with more or different information to support or modify the submission or the authorization. The applications can be considered as steps within the longer running case or procedure for this authorization process.;
-  factory RegulatedAuthorizationCase({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2562,11 +2542,11 @@ class RegulatedAuthorizationCase {
 
     /// [application] A regulatory submission from an organization to a regulator, as part of an assessing case. Multiple applications may occur over time, with more or different information to support or modify the submission or the authorization. The applications can be considered as steps within the longer running case or procedure for this authorization process.;
     List<RegulatedAuthorizationCase>? application,
-  }) = _RegulatedAuthorizationCase;
+  
 }
 
 /// [SubstanceDefinition] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinition {
   /// [SubstanceDefinition] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -2638,7 +2618,7 @@ class SubstanceDefinition {
   /// [relationship] A link between this substance and another, with details of the relationship.;
   ///
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
-  factory SubstanceDefinition({
+  
     /// [resourceType] This is a SubstanceDefinition resource;
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
 
@@ -2735,11 +2715,11 @@ class SubstanceDefinition {
 
     /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
     SubstanceDefinitionSourceMaterial? sourceMaterial,
-  }) = _SubstanceDefinition;
+  
 }
 
 /// [SubstanceDefinitionMoiety] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionMoiety {
   /// [SubstanceDefinitionMoiety] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -2777,7 +2757,7 @@ class SubstanceDefinitionMoiety {
   /// [amountStringElement] (_amountString): Extensions for amountString;
   ///
   /// [measurementType] The measurement type of the quantitative value. In capturing the actual relative amounts of substances or molecular fragments it may be necessary to indicate whether the amount refers to, for example, a mole ratio or weight ratio.;
-  factory SubstanceDefinitionMoiety({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2823,11 +2803,11 @@ class SubstanceDefinitionMoiety {
 
     /// [measurementType] The measurement type of the quantitative value. In capturing the actual relative amounts of substances or molecular fragments it may be necessary to indicate whether the amount refers to, for example, a mole ratio or weight ratio.;
     CodeableConcept? measurementType,
-  }) = _SubstanceDefinitionMoiety;
+  
 }
 
 /// [SubstanceDefinitionProperty] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionProperty {
   /// [SubstanceDefinitionProperty] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -2857,7 +2837,7 @@ class SubstanceDefinitionProperty {
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   ///
   /// [valueAttachment] A value for the property.;
-  factory SubstanceDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2891,10 +2871,9 @@ class SubstanceDefinitionProperty {
 
     /// [valueAttachment] A value for the property.;
     Attachment? valueAttachment,
-  }) = _SubstanceDefinitionProperty;
+  
 }
 
-@freezed
 class SubstanceDefinitionMolecularWeight
     with _$SubstanceDefinitionMolecularWeight {
   /// [SubstanceDefinitionMolecularWeight] The detailed description of a substance, typically at a level beyond what is used for prescribing.
@@ -2913,7 +2892,7 @@ class SubstanceDefinitionMolecularWeight
   /// [type] Type of molecular weight such as exact, average (also known as. number average), weight average.;
   ///
   /// [amount] Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.;
-  factory SubstanceDefinitionMolecularWeight({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -2932,11 +2911,11 @@ class SubstanceDefinitionMolecularWeight
 
     /// [amount] Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.;
     required Quantity amount,
-  }) = _SubstanceDefinitionMolecularWeight;
+  
 }
 
 /// [SubstanceDefinitionStructure] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionStructure {
   /// [SubstanceDefinitionStructure] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -2970,7 +2949,7 @@ class SubstanceDefinitionStructure {
   /// [sourceDocument] The source of information about the structure.;
   ///
   /// [representation] A depiction of the structure or characterization of the substance.;
-  factory SubstanceDefinitionStructure({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3013,10 +2992,9 @@ class SubstanceDefinitionStructure {
 
     /// [representation] A depiction of the structure or characterization of the substance.;
     List<SubstanceDefinitionRepresentation>? representation,
-  }) = _SubstanceDefinitionStructure;
+  
 }
 
-@freezed
 class SubstanceDefinitionRepresentation
     with _$SubstanceDefinitionRepresentation {
   /// [SubstanceDefinitionRepresentation] The detailed description of a substance, typically at a level beyond what is used for prescribing.
@@ -3039,7 +3017,7 @@ class SubstanceDefinitionRepresentation
   /// [format] The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF. The logical content type rather than the physical file format of a document.;
   ///
   /// [document] An attached file with the structural representation or characterization e.g. a molecular structure graphic of the substance, a JCAMP or AnIML file.;
-  factory SubstanceDefinitionRepresentation({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3064,11 +3042,11 @@ class SubstanceDefinitionRepresentation
 
     /// [document] An attached file with the structural representation or characterization e.g. a molecular structure graphic of the substance, a JCAMP or AnIML file.;
     Reference? document,
-  }) = _SubstanceDefinitionRepresentation;
+  
 }
 
 /// [SubstanceDefinitionCode] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionCode {
   /// [SubstanceDefinitionCode] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -3094,7 +3072,7 @@ class SubstanceDefinitionCode {
   /// [note] Any comment can be provided in this field, if necessary.;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionCode({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3122,11 +3100,11 @@ class SubstanceDefinitionCode {
 
     /// [source] Supporting literature.;
     List<Reference>? source,
-  }) = _SubstanceDefinitionCode;
+  
 }
 
 /// [SubstanceDefinitionName] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionName {
   /// [SubstanceDefinitionName] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -3166,7 +3144,7 @@ class SubstanceDefinitionName {
   /// [official] Details of the official nature of this name.;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionName({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3215,11 +3193,11 @@ class SubstanceDefinitionName {
 
     /// [source] Supporting literature.;
     List<Reference>? source,
-  }) = _SubstanceDefinitionName;
+  
 }
 
 /// [SubstanceDefinitionOfficial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionOfficial {
   /// [SubstanceDefinitionOfficial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -3241,7 +3219,7 @@ class SubstanceDefinitionOfficial {
   /// [date] Date of the official name change.;
   ///
   /// [dateElement] (_date): Extensions for date;
-  factory SubstanceDefinitionOfficial({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3263,11 +3241,11 @@ class SubstanceDefinitionOfficial {
 
     /// [dateElement] (_date): Extensions for date;
     @JsonKey(name: '_date') Element? dateElement,
-  }) = _SubstanceDefinitionOfficial;
+  
 }
 
 /// [SubstanceDefinitionRelationship] The detailed description of a substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionRelationship {
   /// [SubstanceDefinitionRelationship] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 
@@ -3305,7 +3283,7 @@ class SubstanceDefinitionRelationship {
   /// [comparator] An operator for the amount, for example "average", "approximately", "less than".;
   ///
   /// [source] Supporting literature.;
-  factory SubstanceDefinitionRelationship({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3351,10 +3329,9 @@ class SubstanceDefinitionRelationship {
 
     /// [source] Supporting literature.;
     List<Reference>? source,
-  }) = _SubstanceDefinitionRelationship;
+  
 }
 
-@freezed
 class SubstanceDefinitionSourceMaterial
     with _$SubstanceDefinitionSourceMaterial {
   /// [SubstanceDefinitionSourceMaterial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
@@ -3377,7 +3354,7 @@ class SubstanceDefinitionSourceMaterial
   /// [part_] An anatomical origin of the source material within an organism.;
   ///
   /// [countryOfOrigin] The country or countries where the material is harvested.;
-  factory SubstanceDefinitionSourceMaterial({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -3402,5 +3379,5 @@ class SubstanceDefinitionSourceMaterial
 
     /// [countryOfOrigin] The country or countries where the material is harvested.;
     List<CodeableConcept>? countryOfOrigin,
-  }) = _SubstanceDefinitionSourceMaterial;
+  
 }

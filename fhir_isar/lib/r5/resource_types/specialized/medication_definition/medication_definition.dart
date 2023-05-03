@@ -4,19 +4,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
 /// [AdministrableProductDefinition] A medicinal product in the final form
 ///  which is suitable for administering to a patient (after any mixing of
 ///  multiple components, dissolution etc. has been performed).
-@freezed
+
 class AdministrableProductDefinition
     with Resource, _$AdministrableProductDefinition {
   /// [AdministrableProductDefinition] A medicinal product in the final form
@@ -138,7 +137,7 @@ class AdministrableProductDefinition
   ///  the 'formOf' product already uses MedicinalProductDefinition.route (and
   ///  vice versa).
   ///
-  factory AdministrableProductDefinition({
+  
     /// [resourceType] This is a AdministrableProductDefinition resource
     @Default(R5ResourceType.AdministrableProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
@@ -213,13 +212,13 @@ class AdministrableProductDefinition
     /// [routeOfAdministration] The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. RouteOfAdministration cannot be used when the 'formOf' product already uses MedicinalProductDefinition.route (and vice versa).
     required List<AdministrableProductDefinitionRouteOfAdministration>
         routeOfAdministration,
-  }) = _AdministrableProductDefinition;
+  
 }
 
 /// [AdministrableProductDefinitionProperty] A medicinal product in the final
 ///  form which is suitable for administering to a patient (after any mixing of
 ///  multiple components, dissolution etc. has been performed).
-@freezed
+
 class AdministrableProductDefinitionProperty
     with _$AdministrableProductDefinitionProperty {
   /// [AdministrableProductDefinitionProperty] A medicinal product in the final
@@ -272,7 +271,7 @@ class AdministrableProductDefinitionProperty
   ///
   /// [status] The status of characteristic e.g. assigned or pending.
   ///
-  factory AdministrableProductDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -325,13 +324,13 @@ class AdministrableProductDefinitionProperty
 
     /// [status] The status of characteristic e.g. assigned or pending.
     CodeableConcept? status,
-  }) = _AdministrableProductDefinitionProperty;
+  
 }
 
 /// [AdministrableProductDefinitionRouteOfAdministration] A medicinal product
 ///  in the final form which is suitable for administering to a patient (after
 ///  any mixing of multiple components, dissolution etc. has been performed).
-@freezed
+
 class AdministrableProductDefinitionRouteOfAdministration
     with _$AdministrableProductDefinitionRouteOfAdministration {
   /// [AdministrableProductDefinitionRouteOfAdministration] A medicinal product
@@ -387,7 +386,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   ///
   /// [targetSpecies] A species for which this route applies.
   ///
-  factory AdministrableProductDefinitionRouteOfAdministration({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -434,13 +433,13 @@ class AdministrableProductDefinitionRouteOfAdministration
 
     /// [targetSpecies] A species for which this route applies.
     List<AdministrableProductDefinitionTargetSpecies>? targetSpecies,
-  }) = _AdministrableProductDefinitionRouteOfAdministration;
+  
 }
 
 /// [AdministrableProductDefinitionTargetSpecies] A medicinal product in the
 ///  final form which is suitable for administering to a patient (after any
 ///  mixing of multiple components, dissolution etc. has been performed).
-@freezed
+
 class AdministrableProductDefinitionTargetSpecies
     with _$AdministrableProductDefinitionTargetSpecies {
   /// [AdministrableProductDefinitionTargetSpecies] A medicinal product in the
@@ -480,7 +479,7 @@ class AdministrableProductDefinitionTargetSpecies
   /// [withdrawalPeriod] A species specific time during which consumption of
   ///  animal product is not appropriate.
   ///
-  factory AdministrableProductDefinitionTargetSpecies({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -512,13 +511,13 @@ class AdministrableProductDefinitionTargetSpecies
 
     /// [withdrawalPeriod] A species specific time during which consumption of animal product is not appropriate.
     List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod,
-  }) = _AdministrableProductDefinitionTargetSpecies;
+  
 }
 
 /// [AdministrableProductDefinitionWithdrawalPeriod] A medicinal product in the
 ///  final form which is suitable for administering to a patient (after any
 ///  mixing of multiple components, dissolution etc. has been performed).
-@freezed
+
 class AdministrableProductDefinitionWithdrawalPeriod
     with _$AdministrableProductDefinitionWithdrawalPeriod {
   /// [AdministrableProductDefinitionWithdrawalPeriod] A medicinal product in
@@ -563,7 +562,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   /// [supportingInformationElement] ("_supportingInformation") Extensions for
   ///  supportingInformation
   ///
-  factory AdministrableProductDefinitionWithdrawalPeriod({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -602,13 +601,13 @@ class AdministrableProductDefinitionWithdrawalPeriod
     /// [supportingInformationElement] ("_supportingInformation") Extensions for supportingInformation
     @JsonKey(name: '_supportingInformation')
         Element? supportingInformationElement,
-  }) = _AdministrableProductDefinitionWithdrawalPeriod;
+  
 }
 
 /// [ClinicalUseDefinition] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinition {
   /// [ClinicalUseDefinition] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -705,7 +704,7 @@ class ClinicalUseDefinition {
   ///  'Do not operate heavy machinery', 'May cause drowsiness', or 'Get
   ///  medical advice/attention if you feel unwell'.
   ///
-  factory ClinicalUseDefinition({
+  
     /// [resourceType] This is a ClinicalUseDefinition resource
     @Default(R5ResourceType.ClinicalUseDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
@@ -785,13 +784,13 @@ class ClinicalUseDefinition {
 
     /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.
     ClinicalUseDefinitionWarning? warning,
-  }) = _ClinicalUseDefinition;
+  
 }
 
 /// [ClinicalUseDefinitionContraindication] A single issue - either an
 ///  indication, contraindication, interaction or an undesirable effect for a
 ///  medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionContraindication
     with _$ClinicalUseDefinitionContraindication {
   /// [ClinicalUseDefinitionContraindication] A single issue - either an
@@ -843,7 +842,7 @@ class ClinicalUseDefinitionContraindication
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the contraindication.
   ///
-  factory ClinicalUseDefinitionContraindication({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -887,13 +886,13 @@ class ClinicalUseDefinitionContraindication
 
     /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.
     List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionContraindication;
+  
 }
 
 /// [ClinicalUseDefinitionOtherTherapy] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionOtherTherapy
     with _$ClinicalUseDefinitionOtherTherapy {
   /// [ClinicalUseDefinitionOtherTherapy] A single issue - either an
@@ -935,7 +934,7 @@ class ClinicalUseDefinitionOtherTherapy
   ///  medicinal product or class of products) as part of an indication or
   ///  contraindication.
   ///
-  factory ClinicalUseDefinitionOtherTherapy({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -967,13 +966,13 @@ class ClinicalUseDefinitionOtherTherapy
 
     /// [treatment] Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.
     required CodeableReference treatment,
-  }) = _ClinicalUseDefinitionOtherTherapy;
+  
 }
 
 /// [ClinicalUseDefinitionIndication] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionIndication {
   /// [ClinicalUseDefinitionIndication] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -1041,7 +1040,7 @@ class ClinicalUseDefinitionIndication {
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the indication.
   ///
-  factory ClinicalUseDefinitionIndication({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1097,13 +1096,13 @@ class ClinicalUseDefinitionIndication {
 
     /// [otherTherapy] Information about the use of the medicinal product in relation to other therapies described as part of the indication.
     List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionIndication;
+  
 }
 
 /// [ClinicalUseDefinitionInteraction] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionInteraction {
   /// [ClinicalUseDefinitionInteraction] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -1150,7 +1149,7 @@ class ClinicalUseDefinitionInteraction {
   ///
   /// [management] Actions for managing the interaction.
   ///
-  factory ClinicalUseDefinitionInteraction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1191,13 +1190,13 @@ class ClinicalUseDefinitionInteraction {
 
     /// [management] Actions for managing the interaction.
     List<CodeableConcept>? management,
-  }) = _ClinicalUseDefinitionInteraction;
+  
 }
 
 /// [ClinicalUseDefinitionInteractant] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionInteractant {
   /// [ClinicalUseDefinitionInteractant] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -1237,7 +1236,7 @@ class ClinicalUseDefinitionInteractant {
   /// [itemCodeableConcept] The specific medication, food or laboratory test
   ///  that interacts.
   ///
-  factory ClinicalUseDefinitionInteractant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1269,13 +1268,13 @@ class ClinicalUseDefinitionInteractant {
 
     /// [itemCodeableConcept] The specific medication, food or laboratory test that interacts.
     CodeableConcept? itemCodeableConcept,
-  }) = _ClinicalUseDefinitionInteractant;
+  
 }
 
 /// [ClinicalUseDefinitionUndesirableEffect] A single issue - either an
 ///  indication, contraindication, interaction or an undesirable effect for a
 ///  medicinal product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionUndesirableEffect
     with _$ClinicalUseDefinitionUndesirableEffect {
   /// [ClinicalUseDefinitionUndesirableEffect] A single issue - either an
@@ -1317,7 +1316,7 @@ class ClinicalUseDefinitionUndesirableEffect
   ///
   /// [frequencyOfOccurrence] How often the effect is seen.
   ///
-  factory ClinicalUseDefinitionUndesirableEffect({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1352,13 +1351,13 @@ class ClinicalUseDefinitionUndesirableEffect
 
     /// [frequencyOfOccurrence] How often the effect is seen.
     CodeableConcept? frequencyOfOccurrence,
-  }) = _ClinicalUseDefinitionUndesirableEffect;
+  
 }
 
 /// [ClinicalUseDefinitionWarning] A single issue - either an indication,
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
-@freezed
+
 class ClinicalUseDefinitionWarning {
   /// [ClinicalUseDefinitionWarning] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -1398,7 +1397,7 @@ class ClinicalUseDefinitionWarning {
   ///
   /// [code] A coded or unformatted textual definition of this warning.
   ///
-  factory ClinicalUseDefinitionWarning({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1433,11 +1432,11 @@ class ClinicalUseDefinitionWarning {
 
     /// [code] A coded or unformatted textual definition of this warning.
     CodeableConcept? code,
-  }) = _ClinicalUseDefinitionWarning;
+  
 }
 
 /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
-@freezed
+
 class Ingredient {
   /// [Ingredient] An ingredient of a manufactured item or pharmaceutical
   ///  product.
@@ -1539,7 +1538,7 @@ class Ingredient {
   ///
   /// [substance] The substance that comprises this ingredient.
   ///
-  factory Ingredient({
+  
     /// [resourceType] This is a Ingredient resource
     @Default(R5ResourceType.Ingredient)
     @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
@@ -1613,12 +1612,12 @@ class Ingredient {
 
     /// [substance] The substance that comprises this ingredient.
     required IngredientSubstance substance,
-  }) = _Ingredient;
+  
 }
 
 /// [IngredientManufacturer] An ingredient of a manufactured item or
 ///  pharmaceutical product.
-@freezed
+
 class IngredientManufacturer {
   /// [IngredientManufacturer] An ingredient of a manufactured item or
   ///  pharmaceutical product.
@@ -1659,7 +1658,7 @@ class IngredientManufacturer {
   ///
   /// [manufacturer] An organization that manufactures this ingredient.
   ///
-  factory IngredientManufacturer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1694,12 +1693,12 @@ class IngredientManufacturer {
 
     /// [manufacturer] An organization that manufactures this ingredient.
     required Reference manufacturer,
-  }) = _IngredientManufacturer;
+  
 }
 
 /// [IngredientSubstance] An ingredient of a manufactured item or
 ///  pharmaceutical product.
-@freezed
+
 class IngredientSubstance {
   /// [IngredientSubstance] An ingredient of a manufactured item or
   ///  pharmaceutical product.
@@ -1739,7 +1738,7 @@ class IngredientSubstance {
   ///  strengths, but are different representations - mathematically equivalent
   ///  - of a single strength.
   ///
-  factory IngredientSubstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1771,12 +1770,12 @@ class IngredientSubstance {
 
     /// [strength] The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.
     List<IngredientStrength>? strength,
-  }) = _IngredientSubstance;
+  
 }
 
 /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical
 ///  product.
-@freezed
+
 class IngredientStrength {
   /// [IngredientStrength] An ingredient of a manufactured item or
   ///  pharmaceutical product.
@@ -1881,7 +1880,7 @@ class IngredientStrength {
   ///  situations when the active substance and active moiety are different,
   ///  therefore both a strength and a reference strength are needed.
   ///
-  factory IngredientStrength({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1958,12 +1957,12 @@ class IngredientStrength {
 
     /// [referenceStrength] Strength expressed in terms of a reference substance. For when the ingredient strength is additionally expressed as equivalent to the strength of some other closely related substance (e.g. salt vs. base). Reference strength represents the strength (quantitative composition) of the active moiety of the active substance. There are situations when the active substance and active moiety are different, therefore both a strength and a reference strength are needed.
     List<IngredientReferenceStrength>? referenceStrength,
-  }) = _IngredientStrength;
+  
 }
 
 /// [IngredientReferenceStrength] An ingredient of a manufactured item or
 ///  pharmaceutical product.
-@freezed
+
 class IngredientReferenceStrength {
   /// [IngredientReferenceStrength] An ingredient of a manufactured item or
   ///  pharmaceutical product.
@@ -2011,7 +2010,7 @@ class IngredientReferenceStrength {
   ///
   /// [country] The country or countries for which the strength range applies.
   ///
-  factory IngredientReferenceStrength({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2058,13 +2057,13 @@ class IngredientReferenceStrength {
 
     /// [country] The country or countries for which the strength range applies.
     List<CodeableConcept>? country,
-  }) = _IngredientReferenceStrength;
+  
 }
 
 /// [ManufacturedItemDefinition] The definition and characteristics of a
 ///  medicinal manufactured item, such as a tablet or capsule, as contained in
 ///  a packaged medicinal product.
-@freezed
+
 class ManufacturedItemDefinition {
   /// [ManufacturedItemDefinition] The definition and characteristics of a
   ///  medicinal manufactured item, such as a tablet or capsule, as contained
@@ -2161,7 +2160,7 @@ class ManufacturedItemDefinition {
   ///  intrisically made from. This is distinct from the ingredients that are
   ///  part of its chemical makeup.
   ///
-  factory ManufacturedItemDefinition({
+  
     /// [resourceType] This is a ManufacturedItemDefinition resource
     @Default(R5ResourceType.ManufacturedItemDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
@@ -2238,13 +2237,13 @@ class ManufacturedItemDefinition {
 
     /// [component] Physical parts of the manufactured item, that it is intrisically made from. This is distinct from the ingredients that are part of its chemical makeup.
     List<ManufacturedItemDefinitionComponent>? component,
-  }) = _ManufacturedItemDefinition;
+  
 }
 
 /// [ManufacturedItemDefinitionProperty] The definition and characteristics of
 ///  a medicinal manufactured item, such as a tablet or capsule, as contained
 ///  in a packaged medicinal product.
-@freezed
+
 class ManufacturedItemDefinitionProperty
     with _$ManufacturedItemDefinitionProperty {
   /// [ManufacturedItemDefinitionProperty] The definition and characteristics
@@ -2295,7 +2294,7 @@ class ManufacturedItemDefinitionProperty
   ///
   /// [valueAttachment] A value for the characteristic.
   ///
-  factory ManufacturedItemDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2345,13 +2344,13 @@ class ManufacturedItemDefinitionProperty
 
     /// [valueAttachment] A value for the characteristic.
     Attachment? valueAttachment,
-  }) = _ManufacturedItemDefinitionProperty;
+  
 }
 
 /// [ManufacturedItemDefinitionComponent] The definition and characteristics of
 ///  a medicinal manufactured item, such as a tablet or capsule, as contained
 ///  in a packaged medicinal product.
-@freezed
+
 class ManufacturedItemDefinitionComponent
     with _$ManufacturedItemDefinitionComponent {
   /// [ManufacturedItemDefinitionComponent] The definition and characteristics
@@ -2403,7 +2402,7 @@ class ManufacturedItemDefinitionComponent
   ///
   /// [component] A component that this component contains or is made from.
   ///
-  factory ManufacturedItemDefinitionComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2447,13 +2446,13 @@ class ManufacturedItemDefinitionComponent
 
     /// [component] A component that this component contains or is made from.
     List<ManufacturedItemDefinitionComponent>? component,
-  }) = _ManufacturedItemDefinitionComponent;
+  
 }
 
 /// [ManufacturedItemDefinitionConstituent] The definition and characteristics
 ///  of a medicinal manufactured item, such as a tablet or capsule, as
 ///  contained in a packaged medicinal product.
-@freezed
+
 class ManufacturedItemDefinitionConstituent
     with _$ManufacturedItemDefinitionConstituent {
   /// [ManufacturedItemDefinitionConstituent] The definition and
@@ -2502,7 +2501,7 @@ class ManufacturedItemDefinitionConstituent
   /// [hasIngredient] The ingredient that is the constituent of the given
   ///  component.
   ///
-  factory ManufacturedItemDefinitionConstituent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2540,7 +2539,7 @@ class ManufacturedItemDefinitionConstituent
 
     /// [hasIngredient] The ingredient that is the constituent of the given component.
     List<CodeableReference>? hasIngredient,
-  }) = _ManufacturedItemDefinitionConstituent;
+  
 }
 
 /// [MedicinalProductDefinition] A medicinal product, being a substance or
@@ -2550,7 +2549,7 @@ class ManufacturedItemDefinitionConstituent
 ///  resource is intended to define and detail such products and their
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
-@freezed
+
 class MedicinalProductDefinition {
   /// [MedicinalProductDefinition] A medicinal product, being a substance or
   ///  combination of substances that is intended to treat, prevent or diagnose
@@ -2749,7 +2748,7 @@ class MedicinalProductDefinition {
   /// [characteristic] Allows the key product features to be recorded, such as
   ///  "sugar free", "modified release", "parallel import".
   ///
-  factory MedicinalProductDefinition({
+  
     /// [resourceType] This is a MedicinalProductDefinition resource
     @Default(R5ResourceType.MedicinalProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
@@ -2889,7 +2888,7 @@ class MedicinalProductDefinition {
 
     /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".
     List<MedicinalProductDefinitionCharacteristic>? characteristic,
-  }) = _MedicinalProductDefinition;
+  
 }
 
 /// [MedicinalProductDefinitionContact] A medicinal product, being a substance
@@ -2899,7 +2898,7 @@ class MedicinalProductDefinition {
 ///  action. This resource is intended to define and detail such products and
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionContact
     with _$MedicinalProductDefinitionContact {
   /// [MedicinalProductDefinitionContact] A medicinal product, being a
@@ -2948,7 +2947,7 @@ class MedicinalProductDefinitionContact
   /// [contact] A product specific contact, person (in a role), or an
   ///  organization.
   ///
-  factory MedicinalProductDefinitionContact({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2980,7 +2979,7 @@ class MedicinalProductDefinitionContact
 
     /// [contact] A product specific contact, person (in a role), or an organization.
     required Reference contact,
-  }) = _MedicinalProductDefinitionContact;
+  
 }
 
 /// [MedicinalProductDefinitionName] A medicinal product, being a substance or
@@ -2990,7 +2989,7 @@ class MedicinalProductDefinitionContact
 ///  resource is intended to define and detail such products and their
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionName {
   /// [MedicinalProductDefinitionName] A medicinal product, being a substance
   ///  or combination of substances that is intended to treat, prevent or
@@ -3044,7 +3043,7 @@ class MedicinalProductDefinitionName {
   /// [usage] Country and jurisdiction where the name applies, and associated
   ///  language.
   ///
-  factory MedicinalProductDefinitionName({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3085,7 +3084,7 @@ class MedicinalProductDefinitionName {
 
     /// [usage] Country and jurisdiction where the name applies, and associated language.
     List<MedicinalProductDefinitionUsage>? usage,
-  }) = _MedicinalProductDefinitionName;
+  
 }
 
 /// [MedicinalProductDefinitionPart] A medicinal product, being a substance or
@@ -3095,7 +3094,7 @@ class MedicinalProductDefinitionName {
 ///  resource is intended to define and detail such products and their
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionPart {
   /// [MedicinalProductDefinitionPart] A medicinal product, being a substance
   ///  or combination of substances that is intended to treat, prevent or
@@ -3143,7 +3142,7 @@ class MedicinalProductDefinitionPart {
   ///
   /// [type] Identifying type for this part of the name (e.g. strength part).
   ///
-  factory MedicinalProductDefinitionPart({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3178,7 +3177,7 @@ class MedicinalProductDefinitionPart {
 
     /// [type] Identifying type for this part of the name (e.g. strength part).
     required CodeableConcept type,
-  }) = _MedicinalProductDefinitionPart;
+  
 }
 
 /// [MedicinalProductDefinitionUsage] A medicinal product, being a substance or
@@ -3188,7 +3187,7 @@ class MedicinalProductDefinitionPart {
 ///  resource is intended to define and detail such products and their
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionUsage {
   /// [MedicinalProductDefinitionUsage] A medicinal product, being a substance
   ///  or combination of substances that is intended to treat, prevent or
@@ -3238,7 +3237,7 @@ class MedicinalProductDefinitionUsage {
   ///
   /// [language] Language code for this name.
   ///
-  factory MedicinalProductDefinitionUsage({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3273,7 +3272,7 @@ class MedicinalProductDefinitionUsage {
 
     /// [language] Language code for this name.
     required CodeableConcept language,
-  }) = _MedicinalProductDefinitionUsage;
+  
 }
 
 /// [MedicinalProductDefinitionCrossReference] A medicinal product, being a
@@ -3283,7 +3282,7 @@ class MedicinalProductDefinitionUsage {
 ///  action. This resource is intended to define and detail such products and
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionCrossReference
     with _$MedicinalProductDefinitionCrossReference {
   /// [MedicinalProductDefinitionCrossReference] A medicinal product, being a
@@ -3333,7 +3332,7 @@ class MedicinalProductDefinitionCrossReference
   ///  to actual product, product to development product (investigational),
   ///  parallel import version.
   ///
-  factory MedicinalProductDefinitionCrossReference({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3365,7 +3364,7 @@ class MedicinalProductDefinitionCrossReference
 
     /// [type] The type of relationship, for instance branded to generic, virtual to actual product, product to development product (investigational), parallel import version.
     CodeableConcept? type,
-  }) = _MedicinalProductDefinitionCrossReference;
+  
 }
 
 /// [MedicinalProductDefinitionOperation] A medicinal product, being a
@@ -3375,7 +3374,7 @@ class MedicinalProductDefinitionCrossReference
 ///  action. This resource is intended to define and detail such products and
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionOperation
     with _$MedicinalProductDefinitionOperation {
   /// [MedicinalProductDefinitionOperation] A medicinal product, being a
@@ -3431,7 +3430,7 @@ class MedicinalProductDefinitionOperation
   /// [confidentialityIndicator] Specifies whether this particular business or
   ///  manufacturing process is considered proprietary or confidential.
   ///
-  factory MedicinalProductDefinitionOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3469,7 +3468,7 @@ class MedicinalProductDefinitionOperation
 
     /// [confidentialityIndicator] Specifies whether this particular business or manufacturing process is considered proprietary or confidential.
     CodeableConcept? confidentialityIndicator,
-  }) = _MedicinalProductDefinitionOperation;
+  
 }
 
 /// [MedicinalProductDefinitionCharacteristic] A medicinal product, being a
@@ -3479,7 +3478,7 @@ class MedicinalProductDefinitionOperation
 ///  action. This resource is intended to define and detail such products and
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
-@freezed
+
 class MedicinalProductDefinitionCharacteristic
     with _$MedicinalProductDefinitionCharacteristic {
   /// [MedicinalProductDefinitionCharacteristic] A medicinal product, being a
@@ -3546,7 +3545,7 @@ class MedicinalProductDefinitionCharacteristic
   ///
   /// [valueAttachment] A value for the characteristic.text.
   ///
-  factory MedicinalProductDefinitionCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3608,12 +3607,12 @@ class MedicinalProductDefinitionCharacteristic
 
     /// [valueAttachment] A value for the characteristic.text.
     Attachment? valueAttachment,
-  }) = _MedicinalProductDefinitionCharacteristic;
+  
 }
 
 /// [PackagedProductDefinition] A medically related item or items, in a
 ///  container or package.
-@freezed
+
 class PackagedProductDefinition {
   /// [PackagedProductDefinition] A medically related item or items, in a
   ///  container or package.
@@ -3747,7 +3746,7 @@ class PackagedProductDefinition {
   /// [characteristic] Allows the key features to be recorded, such as
   ///  "hospital pack", "nurse prescribable", "calendar pack".
   ///
-  factory PackagedProductDefinition({
+  
     /// [resourceType] This is a PackagedProductDefinition resource
     @Default(R5ResourceType.PackagedProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
@@ -3845,12 +3844,12 @@ class PackagedProductDefinition {
 
     /// [characteristic] Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".
     List<PackagedProductDefinitionProperty>? characteristic,
-  }) = _PackagedProductDefinition;
+  
 }
 
 /// [PackagedProductDefinitionLegalStatusOfSupply] A medically related item or
 ///  items, in a container or package.
-@freezed
+
 class PackagedProductDefinitionLegalStatusOfSupply
     with _$PackagedProductDefinitionLegalStatusOfSupply {
   /// [PackagedProductDefinitionLegalStatusOfSupply] A medically related item
@@ -3889,7 +3888,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
   /// [jurisdiction] The place where the legal status of supply applies. When
   ///  not specified, this indicates it is unknown in this context.
   ///
-  factory PackagedProductDefinitionLegalStatusOfSupply({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3921,12 +3920,12 @@ class PackagedProductDefinitionLegalStatusOfSupply
 
     /// [jurisdiction] The place where the legal status of supply applies. When not specified, this indicates it is unknown in this context.
     CodeableConcept? jurisdiction,
-  }) = _PackagedProductDefinitionLegalStatusOfSupply;
+  
 }
 
 /// [PackagedProductDefinitionPackaging] A medically related item or items, in
 ///  a container or package.
-@freezed
+
 class PackagedProductDefinitionPackaging
     with _$PackagedProductDefinitionPackaging {
   /// [PackagedProductDefinitionPackaging] A medically related item or items,
@@ -4001,7 +4000,7 @@ class PackagedProductDefinitionPackaging
   ///
   ///
   ///
-  factory PackagedProductDefinitionPackaging({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4066,12 +4065,12 @@ class PackagedProductDefinitionPackaging
 
     /// [packaging] Allows containers (and parts of containers) within containers, still as a part of a single packaged product. See also PackagedProductDefinition.packaging.containedItem.item(PackagedProductDefinition).
     List<PackagedProductDefinitionPackaging>? packaging,
-  }) = _PackagedProductDefinitionPackaging;
+  
 }
 
 /// [PackagedProductDefinitionProperty] A medically related item or items, in a
 ///  container or package.
-@freezed
+
 class PackagedProductDefinitionProperty
     with _$PackagedProductDefinitionProperty {
   /// [PackagedProductDefinitionProperty] A medically related item or items, in
@@ -4120,7 +4119,7 @@ class PackagedProductDefinitionProperty
   ///
   /// [valueAttachment] A value for the characteristic.
   ///
-  factory PackagedProductDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4170,12 +4169,12 @@ class PackagedProductDefinitionProperty
 
     /// [valueAttachment] A value for the characteristic.
     Attachment? valueAttachment,
-  }) = _PackagedProductDefinitionProperty;
+  
 }
 
 /// [PackagedProductDefinitionContainedItem] A medically related item or items,
 ///  in a container or package.
-@freezed
+
 class PackagedProductDefinitionContainedItem
     with _$PackagedProductDefinitionContainedItem {
   /// [PackagedProductDefinitionContainedItem] A medically related item or
@@ -4219,7 +4218,7 @@ class PackagedProductDefinitionContainedItem
   ///
   /// [amount] The number of this type of item within this packaging.
   ///
-  factory PackagedProductDefinitionContainedItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4251,14 +4250,14 @@ class PackagedProductDefinitionContainedItem
 
     /// [amount] The number of this type of item within this packaging.
     Quantity? amount,
-  }) = _PackagedProductDefinitionContainedItem;
+  
 }
 
 /// [RegulatedAuthorization] Regulatory approval, clearance or licencing
 ///  related to a regulated product, treatment, facility or activity that is
 ///  cited in a guidance, regulation, rule or legislative act. An example is
 ///  Market Authorization relating to a Medicinal Product.
-@freezed
+
 class RegulatedAuthorization {
   /// [RegulatedAuthorization] Regulatory approval, clearance or licencing
   ///  related to a regulated product, treatment, facility or activity that is
@@ -4378,7 +4377,7 @@ class RegulatedAuthorization {
   ///  ongoing review and the workgroup is seeking implementer feedback on its
   ///  use (see link at bottom of page).
   ///
-  factory RegulatedAuthorization({
+  
     /// [resourceType] This is a RegulatedAuthorization resource
     @Default(R5ResourceType.RegulatedAuthorization)
     @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
@@ -4470,14 +4469,14 @@ class RegulatedAuthorization {
 
     /// [case_] ("case") The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).
     @JsonKey(name: 'case') RegulatedAuthorizationCase? case_,
-  }) = _RegulatedAuthorization;
+  
 }
 
 /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing
 ///  related to a regulated product, treatment, facility or activity that is
 ///  cited in a guidance, regulation, rule or legislative act. An example is
 ///  Market Authorization relating to a Medicinal Product.
-@freezed
+
 class RegulatedAuthorizationCase {
   /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing
   ///  related to a regulated product, treatment, facility or activity that is
@@ -4532,7 +4531,7 @@ class RegulatedAuthorizationCase {
   ///  steps within the longer running case or procedure for this authorization
   ///  process.
   ///
-  factory RegulatedAuthorizationCase({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4579,12 +4578,12 @@ class RegulatedAuthorizationCase {
 
     /// [application] A regulatory submission from an organization to a regulator, as part of an assessing case. Multiple applications may occur over time, with more or different information to support or modify the submission or the authorization. The applications can be considered as steps within the longer running case or procedure for this authorization process.
     List<RegulatedAuthorizationCase>? application,
-  }) = _RegulatedAuthorizationCase;
+  
 }
 
 /// [SubstanceDefinition] The detailed description of a substance, typically at
 ///  a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinition {
   /// [SubstanceDefinition] The detailed description of a substance, typically
   ///  at a level beyond what is used for prescribing.
@@ -4709,7 +4708,7 @@ class SubstanceDefinition {
   /// [sourceMaterial] Material or taxonomic/anatomical source for the
   ///  substance.
   ///
-  factory SubstanceDefinition({
+  
     /// [resourceType] This is a SubstanceDefinition resource
     @Default(R5ResourceType.SubstanceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
@@ -4828,12 +4827,12 @@ class SubstanceDefinition {
 
     /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.
     SubstanceDefinitionSourceMaterial? sourceMaterial,
-  }) = _SubstanceDefinition;
+  
 }
 
 /// [SubstanceDefinitionMoiety] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionMoiety {
   /// [SubstanceDefinitionMoiety] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -4894,7 +4893,7 @@ class SubstanceDefinitionMoiety {
   ///  fragments it may be necessary to indicate whether the amount refers to,
   ///  for example, a mole ratio or weight ratio.
   ///
-  factory SubstanceDefinitionMoiety({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4956,12 +4955,12 @@ class SubstanceDefinitionMoiety {
 
     /// [measurementType] The measurement type of the quantitative value. In capturing the actual relative amounts of substances or molecular fragments it may be necessary to indicate whether the amount refers to, for example, a mole ratio or weight ratio.
     CodeableConcept? measurementType,
-  }) = _SubstanceDefinitionMoiety;
+  
 }
 
 /// [SubstanceDefinitionCharacterization] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionCharacterization
     with _$SubstanceDefinitionCharacterization {
   /// [SubstanceDefinitionCharacterization] The detailed description of a
@@ -5006,7 +5005,7 @@ class SubstanceDefinitionCharacterization
   ///
   /// [file] An image or data file that characterizes this substance.
   ///
-  factory SubstanceDefinitionCharacterization({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5047,12 +5046,12 @@ class SubstanceDefinitionCharacterization
 
     /// [file] An image or data file that characterizes this substance.
     List<Attachment>? file,
-  }) = _SubstanceDefinitionCharacterization;
+  
 }
 
 /// [SubstanceDefinitionProperty] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionProperty {
   /// [SubstanceDefinitionProperty] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -5100,7 +5099,7 @@ class SubstanceDefinitionProperty {
   ///
   /// [valueAttachment] A value for the property.
   ///
-  factory SubstanceDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5150,12 +5149,12 @@ class SubstanceDefinitionProperty {
 
     /// [valueAttachment] A value for the property.
     Attachment? valueAttachment,
-  }) = _SubstanceDefinitionProperty;
+  
 }
 
 /// [SubstanceDefinitionMolecularWeight] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionMolecularWeight
     with _$SubstanceDefinitionMolecularWeight {
   /// [SubstanceDefinitionMolecularWeight] The detailed description of a
@@ -5198,7 +5197,7 @@ class SubstanceDefinitionMolecularWeight
   ///  only a single definite value for a given element is given, it would be
   ///  captured in this field.
   ///
-  factory SubstanceDefinitionMolecularWeight({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5233,12 +5232,12 @@ class SubstanceDefinitionMolecularWeight
 
     /// [amount] Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
     required Quantity amount,
-  }) = _SubstanceDefinitionMolecularWeight;
+  
 }
 
 /// [SubstanceDefinitionStructure] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionStructure {
   /// [SubstanceDefinitionStructure] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -5297,7 +5296,7 @@ class SubstanceDefinitionStructure {
   ///
   /// [representation] A depiction of the structure of the substance.
   ///
-  factory SubstanceDefinitionStructure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5354,12 +5353,12 @@ class SubstanceDefinitionStructure {
 
     /// [representation] A depiction of the structure of the substance.
     List<SubstanceDefinitionRepresentation>? representation,
-  }) = _SubstanceDefinitionStructure;
+  
 }
 
 /// [SubstanceDefinitionRepresentation] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionRepresentation
     with _$SubstanceDefinitionRepresentation {
   /// [SubstanceDefinitionRepresentation] The detailed description of a
@@ -5406,7 +5405,7 @@ class SubstanceDefinitionRepresentation
   /// [document] An attached file with the structural representation e.g. a
   ///  molecular structure graphic of the substance, a JCAMP or AnIML file.
   ///
-  factory SubstanceDefinitionRepresentation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5447,12 +5446,12 @@ class SubstanceDefinitionRepresentation
 
     /// [document] An attached file with the structural representation e.g. a molecular structure graphic of the substance, a JCAMP or AnIML file.
     Reference? document,
-  }) = _SubstanceDefinitionRepresentation;
+  
 }
 
 /// [SubstanceDefinitionCode] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionCode {
   /// [SubstanceDefinitionCode] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -5498,7 +5497,7 @@ class SubstanceDefinitionCode {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionCode({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5542,12 +5541,12 @@ class SubstanceDefinitionCode {
 
     /// [source] Supporting literature.
     List<Reference>? source,
-  }) = _SubstanceDefinitionCode;
+  
 }
 
 /// [SubstanceDefinitionName] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionName {
   /// [SubstanceDefinitionName] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -5607,7 +5606,7 @@ class SubstanceDefinitionName {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionName({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5672,12 +5671,12 @@ class SubstanceDefinitionName {
 
     /// [source] Supporting literature.
     List<Reference>? source,
-  }) = _SubstanceDefinitionName;
+  
 }
 
 /// [SubstanceDefinitionOfficial] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionOfficial {
   /// [SubstanceDefinitionOfficial] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
@@ -5718,7 +5717,7 @@ class SubstanceDefinitionOfficial {
   ///
   /// [dateElement] ("_date") Extensions for date
   ///
-  factory SubstanceDefinitionOfficial({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5756,12 +5755,12 @@ class SubstanceDefinitionOfficial {
 
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
-  }) = _SubstanceDefinitionOfficial;
+  
 }
 
 /// [SubstanceDefinitionRelationship] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionRelationship {
   /// [SubstanceDefinitionRelationship] The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
@@ -5829,7 +5828,7 @@ class SubstanceDefinitionRelationship {
   ///
   /// [source] Supporting literature.
   ///
-  factory SubstanceDefinitionRelationship({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5891,12 +5890,12 @@ class SubstanceDefinitionRelationship {
 
     /// [source] Supporting literature.
     List<Reference>? source,
-  }) = _SubstanceDefinitionRelationship;
+  
 }
 
 /// [SubstanceDefinitionSourceMaterial] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
-@freezed
+
 class SubstanceDefinitionSourceMaterial
     with _$SubstanceDefinitionSourceMaterial {
   /// [SubstanceDefinitionSourceMaterial] The detailed description of a
@@ -5944,7 +5943,7 @@ class SubstanceDefinitionSourceMaterial
   /// [countryOfOrigin] The country or countries where the material is
   ///  harvested.
   ///
-  factory SubstanceDefinitionSourceMaterial({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5985,14 +5984,14 @@ class SubstanceDefinitionSourceMaterial
 
     /// [countryOfOrigin] The country or countries where the material is harvested.
     List<CodeableConcept>? countryOfOrigin,
-  }) = _SubstanceDefinitionSourceMaterial;
+  
 }
 
 /// [SubstanceNucleicAcid] Nucleic acids are defined by three distinct
 ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
-@freezed
+
 class SubstanceNucleicAcid {
   /// [SubstanceNucleicAcid] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
@@ -6085,7 +6084,7 @@ class SubstanceNucleicAcid {
   ///  the same length will be ordered by molecular weight; subunits that have
   ///  identical sequences will be repeated multiple times.
   ///
-  factory SubstanceNucleicAcid({
+  
     /// [resourceType] This is a SubstanceNucleicAcid resource
     @Default(R5ResourceType.SubstanceNucleicAcid)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
@@ -6147,14 +6146,14 @@ class SubstanceNucleicAcid {
 
     /// [subunit] Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
     List<SubstanceNucleicAcidSubunit>? subunit,
-  }) = _SubstanceNucleicAcid;
+  
 }
 
 /// [SubstanceNucleicAcidSubunit] Nucleic acids are defined by three distinct
 ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
-@freezed
+
 class SubstanceNucleicAcidSubunit {
   /// [SubstanceNucleicAcidSubunit] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
@@ -6223,7 +6222,7 @@ class SubstanceNucleicAcidSubunit {
   ///
   /// [sugar] 5.3.6.8.1 Sugar ID (Mandatory).
   ///
-  factory SubstanceNucleicAcidSubunit({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6282,14 +6281,14 @@ class SubstanceNucleicAcidSubunit {
 
     /// [sugar] 5.3.6.8.1 Sugar ID (Mandatory).
     List<SubstanceNucleicAcidSugar>? sugar,
-  }) = _SubstanceNucleicAcidSubunit;
+  
 }
 
 /// [SubstanceNucleicAcidLinkage] Nucleic acids are defined by three distinct
 ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
-@freezed
+
 class SubstanceNucleicAcidLinkage {
   /// [SubstanceNucleicAcidLinkage] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
@@ -6345,7 +6344,7 @@ class SubstanceNucleicAcidLinkage {
   ///
   /// [residueSiteElement] ("_residueSite") Extensions for residueSite
   ///
-  factory SubstanceNucleicAcidLinkage({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6392,14 +6391,14 @@ class SubstanceNucleicAcidLinkage {
 
     /// [residueSiteElement] ("_residueSite") Extensions for residueSite
     @JsonKey(name: '_residueSite') Element? residueSiteElement,
-  }) = _SubstanceNucleicAcidLinkage;
+  
 }
 
 /// [SubstanceNucleicAcidSugar] Nucleic acids are defined by three distinct
 ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
-@freezed
+
 class SubstanceNucleicAcidSugar {
   /// [SubstanceNucleicAcidSugar] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
@@ -6449,7 +6448,7 @@ class SubstanceNucleicAcidSugar {
   ///
   /// [residueSiteElement] ("_residueSite") Extensions for residueSite
   ///
-  factory SubstanceNucleicAcidSugar({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6490,11 +6489,11 @@ class SubstanceNucleicAcidSugar {
 
     /// [residueSiteElement] ("_residueSite") Extensions for residueSite
     @JsonKey(name: '_residueSite') Element? residueSiteElement,
-  }) = _SubstanceNucleicAcidSugar;
+  
 }
 
 /// [SubstancePolymer] Properties of a substance specific to it being a polymer.
-@freezed
+
 class SubstancePolymer {
   /// [SubstancePolymer] Properties of a substance specific to it being a
   ///  polymer.
@@ -6578,7 +6577,7 @@ class SubstancePolymer {
   /// [repeat] Specifies and quantifies the repeated units and their
   ///  configuration.
   ///
-  factory SubstancePolymer({
+  
     /// [resourceType] This is a SubstancePolymer resource
     @Default(R5ResourceType.SubstancePolymer)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
@@ -6643,12 +6642,12 @@ class SubstancePolymer {
 
     /// [repeat] Specifies and quantifies the repeated units and their configuration.
     List<SubstancePolymerRepeat>? repeat,
-  }) = _SubstancePolymer;
+  
 }
 
 /// [SubstancePolymerMonomerSet] Properties of a substance specific to it being
 ///  a polymer.
-@freezed
+
 class SubstancePolymerMonomerSet {
   /// [SubstancePolymerMonomerSet] Properties of a substance specific to it
   ///  being a polymer.
@@ -6686,7 +6685,7 @@ class SubstancePolymerMonomerSet {
   /// [startingMaterial] The starting materials - monomer(s) used in the
   ///  synthesis of the polymer.
   ///
-  factory SubstancePolymerMonomerSet({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6718,12 +6717,12 @@ class SubstancePolymerMonomerSet {
 
     /// [startingMaterial] The starting materials - monomer(s) used in the synthesis of the polymer.
     List<SubstancePolymerStartingMaterial>? startingMaterial,
-  }) = _SubstancePolymerMonomerSet;
+  
 }
 
 /// [SubstancePolymerStartingMaterial] Properties of a substance specific to it
 ///  being a polymer.
-@freezed
+
 class SubstancePolymerStartingMaterial {
   /// [SubstancePolymerStartingMaterial] Properties of a substance specific to
   ///  it being a polymer.
@@ -6766,7 +6765,7 @@ class SubstancePolymerStartingMaterial {
   ///
   /// [amount] A percentage.
   ///
-  factory SubstancePolymerStartingMaterial({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6807,12 +6806,12 @@ class SubstancePolymerStartingMaterial {
 
     /// [amount] A percentage.
     Quantity? amount,
-  }) = _SubstancePolymerStartingMaterial;
+  
 }
 
 /// [SubstancePolymerRepeat] Properties of a substance specific to it being a
 ///  polymer.
-@freezed
+
 class SubstancePolymerRepeat {
   /// [SubstancePolymerRepeat] Properties of a substance specific to it being a
   ///  polymer.
@@ -6855,7 +6854,7 @@ class SubstancePolymerRepeat {
   ///
   /// [repeatUnit] An SRU - Structural Repeat Unit.
   ///
-  factory SubstancePolymerRepeat({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6894,12 +6893,12 @@ class SubstancePolymerRepeat {
 
     /// [repeatUnit] An SRU - Structural Repeat Unit.
     List<SubstancePolymerRepeatUnit>? repeatUnit,
-  }) = _SubstancePolymerRepeat;
+  
 }
 
 /// [SubstancePolymerRepeatUnit] Properties of a substance specific to it being
 ///  a polymer.
-@freezed
+
 class SubstancePolymerRepeatUnit {
   /// [SubstancePolymerRepeatUnit] Properties of a substance specific to it
   ///  being a polymer.
@@ -6948,7 +6947,7 @@ class SubstancePolymerRepeatUnit {
   ///
   /// [structuralRepresentation] A graphical structure for this SRU.
   ///
-  factory SubstancePolymerRepeatUnit({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6995,12 +6994,12 @@ class SubstancePolymerRepeatUnit {
 
     /// [structuralRepresentation] A graphical structure for this SRU.
     List<SubstancePolymerStructuralRepresentation>? structuralRepresentation,
-  }) = _SubstancePolymerRepeatUnit;
+  
 }
 
 /// [SubstancePolymerDegreeOfPolymerisation] Properties of a substance specific
 ///  to it being a polymer.
-@freezed
+
 class SubstancePolymerDegreeOfPolymerisation
     with _$SubstancePolymerDegreeOfPolymerisation {
   /// [SubstancePolymerDegreeOfPolymerisation] Properties of a substance
@@ -7048,7 +7047,7 @@ class SubstancePolymerDegreeOfPolymerisation
   ///
   /// [highElement] ("_high") Extensions for high
   ///
-  factory SubstancePolymerDegreeOfPolymerisation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7095,12 +7094,12 @@ class SubstancePolymerDegreeOfPolymerisation
 
     /// [highElement] ("_high") Extensions for high
     @JsonKey(name: '_high') Element? highElement,
-  }) = _SubstancePolymerDegreeOfPolymerisation;
+  
 }
 
 /// [SubstancePolymerStructuralRepresentation] Properties of a substance
 ///  specific to it being a polymer.
-@freezed
+
 class SubstancePolymerStructuralRepresentation
     with _$SubstancePolymerStructuralRepresentation {
   /// [SubstancePolymerStructuralRepresentation] Properties of a substance
@@ -7145,7 +7144,7 @@ class SubstancePolymerStructuralRepresentation
   ///
   /// [attachment] An attached file with the structural representation.
   ///
-  factory SubstancePolymerStructuralRepresentation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7186,7 +7185,7 @@ class SubstancePolymerStructuralRepresentation
 
     /// [attachment] An attached file with the structural representation.
     Attachment? attachment,
-  }) = _SubstancePolymerStructuralRepresentation;
+  
 }
 
 /// [SubstanceProtein] A SubstanceProtein is defined as a single unit of a
@@ -7197,7 +7196,7 @@ class SubstancePolymerStructuralRepresentation
 ///  of elements will be used to describe albumins, coagulation factors,
 ///  cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes,
 ///  toxins, toxoids, recombinant vaccines, and immunomodulators.
-@freezed
+
 class SubstanceProtein {
   /// [SubstanceProtein] A SubstanceProtein is defined as a single unit of a
   ///  linear amino acid sequence, or a combination of subunits that are either
@@ -7305,7 +7304,7 @@ class SubstanceProtein {
   ///  of the same length will be ordered by decreasing molecular weight;
   ///  subunits that have identical sequences will be repeated multiple times.
   ///
-  factory SubstanceProtein({
+  
     /// [resourceType] This is a SubstanceProtein resource
     @Default(R5ResourceType.SubstanceProtein)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
@@ -7364,7 +7363,7 @@ class SubstanceProtein {
 
     /// [subunit] This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.
     List<SubstanceProteinSubunit>? subunit,
-  }) = _SubstanceProtein;
+  
 }
 
 /// [SubstanceProteinSubunit] A SubstanceProtein is defined as a single unit of
@@ -7375,7 +7374,7 @@ class SubstanceProtein {
 ///  of elements will be used to describe albumins, coagulation factors,
 ///  cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes,
 ///  toxins, toxoids, recombinant vaccines, and immunomodulators.
-@freezed
+
 class SubstanceProteinSubunit {
   /// [SubstanceProteinSubunit] A SubstanceProtein is defined as a single unit
   ///  of a linear amino acid sequence, or a combination of subunits that are
@@ -7471,7 +7470,7 @@ class SubstanceProteinSubunit {
   /// [cTerminalModificationElement] ("_cTerminalModification") Extensions for
   ///  cTerminalModification
   ///
-  factory SubstanceProteinSubunit({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7538,11 +7537,11 @@ class SubstanceProteinSubunit {
     /// [cTerminalModificationElement] ("_cTerminalModification") Extensions for cTerminalModification
     @JsonKey(name: '_cTerminalModification')
         Element? cTerminalModificationElement,
-  }) = _SubstanceProteinSubunit;
+  
 }
 
 /// [SubstanceReferenceInformation] Todo.
-@freezed
+
 class SubstanceReferenceInformation
     with Resource, _$SubstanceReferenceInformation {
   /// [SubstanceReferenceInformation] Todo.
@@ -7613,7 +7612,7 @@ class SubstanceReferenceInformation
   ///
   /// [target] Todo.
   ///
-  factory SubstanceReferenceInformation({
+  
     /// [resourceType] This is a SubstanceReferenceInformation resource
     @Default(R5ResourceType.SubstanceReferenceInformation)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
@@ -7669,11 +7668,11 @@ class SubstanceReferenceInformation
 
     /// [target] Todo.
     List<SubstanceReferenceInformationTarget>? target,
-  }) = _SubstanceReferenceInformation;
+  
 }
 
 /// [SubstanceReferenceInformationGene] Todo.
-@freezed
+
 class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
   /// [SubstanceReferenceInformationGene] Todo.
@@ -7710,7 +7709,7 @@ class SubstanceReferenceInformationGene
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationGene({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7745,11 +7744,11 @@ class SubstanceReferenceInformationGene
 
     /// [source] Todo.
     List<Reference>? source,
-  }) = _SubstanceReferenceInformationGene;
+  
 }
 
 /// [SubstanceReferenceInformationGeneElement] Todo.
-@freezed
+
 class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
   /// [SubstanceReferenceInformationGeneElement] Todo.
@@ -7786,7 +7785,7 @@ class SubstanceReferenceInformationGeneElement
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationGeneElement({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7821,11 +7820,11 @@ class SubstanceReferenceInformationGeneElement
 
     /// [source] Todo.
     List<Reference>? source,
-  }) = _SubstanceReferenceInformationGeneElement;
+  
 }
 
 /// [SubstanceReferenceInformationTarget] Todo.
-@freezed
+
 class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
   /// [SubstanceReferenceInformationTarget] Todo.
@@ -7878,7 +7877,7 @@ class SubstanceReferenceInformationTarget
   ///
   /// [source] Todo.
   ///
-  factory SubstanceReferenceInformationTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7937,7 +7936,7 @@ class SubstanceReferenceInformationTarget
 
     /// [source] Todo.
     List<Reference>? source,
-  }) = _SubstanceReferenceInformationTarget;
+  
 }
 
 /// [SubstanceSourceMaterial] Source material shall capture information on the
@@ -7954,7 +7953,7 @@ class SubstanceReferenceInformationTarget
 ///  and additional information for herbal extracts will be captured at the
 ///  Specified Substance Group 1 information level. See for further explanation
 ///  the Substance Class: Structurally Diverse and the herbal annex.
-@freezed
+
 class SubstanceSourceMaterial {
   /// [SubstanceSourceMaterial] Source material shall capture information on
   ///  the taxonomic and anatomical origins as well as the fraction of a
@@ -8103,7 +8102,7 @@ class SubstanceSourceMaterial {
   ///
   /// [partDescription] To do.
   ///
-  factory SubstanceSourceMaterial({
+  
     /// [resourceType] This is a SubstanceSourceMaterial resource
     @Default(R5ResourceType.SubstanceSourceMaterial)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
@@ -8194,7 +8193,7 @@ class SubstanceSourceMaterial {
 
     /// [partDescription] To do.
     List<SubstanceSourceMaterialPartDescription>? partDescription,
-  }) = _SubstanceSourceMaterial;
+  
 }
 
 /// [SubstanceSourceMaterialFractionDescription] Source material shall capture
@@ -8212,7 +8211,7 @@ class SubstanceSourceMaterial {
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialFractionDescription
     with _$SubstanceSourceMaterialFractionDescription {
   /// [SubstanceSourceMaterialFractionDescription] Source material shall
@@ -8280,7 +8279,7 @@ class SubstanceSourceMaterialFractionDescription
   ///  component. For Herbal preparations the particulars of the extracts
   ///  (liquid/dry) is described in Specified Substance Group 1.
   ///
-  factory SubstanceSourceMaterialFractionDescription({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8315,7 +8314,7 @@ class SubstanceSourceMaterialFractionDescription
 
     /// [materialType] The specific type of the material constituting the component. For Herbal preparations the particulars of the extracts (liquid/dry) is described in Specified Substance Group 1.
     CodeableConcept? materialType,
-  }) = _SubstanceSourceMaterialFractionDescription;
+  
 }
 
 /// [SubstanceSourceMaterialOrganism] Source material shall capture information
@@ -8333,7 +8332,7 @@ class SubstanceSourceMaterialFractionDescription
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialOrganism {
   /// [SubstanceSourceMaterialOrganism] Source material shall capture
   ///  information on the taxonomic and anatomical origins as well as the
@@ -8418,7 +8417,7 @@ class SubstanceSourceMaterialOrganism {
   ///
   /// [organismGeneral] 4.9.13.7.1 Kingdom (Conditional).
   ///
-  factory SubstanceSourceMaterialOrganism({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8472,7 +8471,7 @@ class SubstanceSourceMaterialOrganism {
 
     /// [organismGeneral] 4.9.13.7.1 Kingdom (Conditional).
     SubstanceSourceMaterialOrganismGeneral? organismGeneral,
-  }) = _SubstanceSourceMaterialOrganism;
+  
 }
 
 /// [SubstanceSourceMaterialAuthor] Source material shall capture information
@@ -8490,7 +8489,7 @@ class SubstanceSourceMaterialOrganism {
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialAuthor {
   /// [SubstanceSourceMaterialAuthor] Source material shall capture information
   ///  on the taxonomic and anatomical origins as well as the fraction of a
@@ -8562,7 +8561,7 @@ class SubstanceSourceMaterialAuthor {
   /// [authorDescriptionElement] ("_authorDescription") Extensions for
   ///  authorDescription
   ///
-  factory SubstanceSourceMaterialAuthor({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8597,7 +8596,7 @@ class SubstanceSourceMaterialAuthor {
 
     /// [authorDescriptionElement] ("_authorDescription") Extensions for authorDescription
     @JsonKey(name: '_authorDescription') Element? authorDescriptionElement,
-  }) = _SubstanceSourceMaterialAuthor;
+  
 }
 
 /// [SubstanceSourceMaterialHybrid] Source material shall capture information
@@ -8615,7 +8614,7 @@ class SubstanceSourceMaterialAuthor {
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialHybrid {
   /// [SubstanceSourceMaterialHybrid] Source material shall capture information
   ///  on the taxonomic and anatomical origins as well as the fraction of a
@@ -8703,7 +8702,7 @@ class SubstanceSourceMaterialHybrid {
   ///
   /// [hybridType] The hybrid type of an organism shall be specified.
   ///
-  factory SubstanceSourceMaterialHybrid({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8758,7 +8757,7 @@ class SubstanceSourceMaterialHybrid {
 
     /// [hybridType] The hybrid type of an organism shall be specified.
     CodeableConcept? hybridType,
-  }) = _SubstanceSourceMaterialHybrid;
+  
 }
 
 /// [SubstanceSourceMaterialOrganismGeneral] Source material shall capture
@@ -8776,7 +8775,7 @@ class SubstanceSourceMaterialHybrid {
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialOrganismGeneral
     with _$SubstanceSourceMaterialOrganismGeneral {
   /// [SubstanceSourceMaterialOrganismGeneral] Source material shall capture
@@ -8843,7 +8842,7 @@ class SubstanceSourceMaterialOrganismGeneral
   ///
   /// [order] The order of an organism shall be specified,.
   ///
-  factory SubstanceSourceMaterialOrganismGeneral({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8881,7 +8880,7 @@ class SubstanceSourceMaterialOrganismGeneral
 
     /// [order] The order of an organism shall be specified,.
     CodeableConcept? order,
-  }) = _SubstanceSourceMaterialOrganismGeneral;
+  
 }
 
 /// [SubstanceSourceMaterialPartDescription] Source material shall capture
@@ -8899,7 +8898,7 @@ class SubstanceSourceMaterialOrganismGeneral
 ///  captured at the Specified Substance Group 1 information level. See for
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
-@freezed
+
 class SubstanceSourceMaterialPartDescription
     with _$SubstanceSourceMaterialPartDescription {
   /// [SubstanceSourceMaterialPartDescription] Source material shall capture
@@ -8965,7 +8964,7 @@ class SubstanceSourceMaterialPartDescription
   ///  extracted from different anatomical locations of the organism. Multiple
   ///  alternative locations may apply.
   ///
-  factory SubstanceSourceMaterialPartDescription({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8997,5 +8996,5 @@ class SubstanceSourceMaterialPartDescription
 
     /// [partLocation] The detailed anatomic location when the part can be extracted from different anatomical locations of the organism. Multiple alternative locations may apply.
     CodeableConcept? partLocation,
-  }) = _SubstanceSourceMaterialPartDescription;
+  
 }

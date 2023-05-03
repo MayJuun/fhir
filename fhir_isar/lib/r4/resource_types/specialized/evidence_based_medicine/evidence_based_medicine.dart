@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
 
 /// [Citation] The Citation Resource enables reference to any knowledge
-@freezed
+
 class Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
 
@@ -191,7 +190,7 @@ class Citation {
   /// [relatesTo] Artifact related to the Citation Resource.
   ///
   /// [citedArtifact] The article or artifact being described.
-  factory Citation({
+  
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
     String? id,
     Meta? meta,
@@ -247,11 +246,11 @@ class Citation {
     List<CitationStatusDate>? statusDate,
     List<CitationRelatesTo>? relatesTo,
     CitationCitedArtifact? citedArtifact,
-  }) = _Citation;
+  
 }
 
 /// [CitationSummary] The Citation Resource enables reference to any
-@freezed
+
 class CitationSummary {
   /// [CitationSummary] The Citation Resource enables reference to any
 
@@ -289,18 +288,18 @@ class CitationSummary {
   /// [text] The human-readable display of the citation.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationSummary({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? style,
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationSummary;
+  
 }
 
 /// [CitationClassification] The Citation Resource enables reference to any
-@freezed
+
 class CitationClassification {
   /// [CitationClassification] The Citation Resource enables reference to any
 
@@ -336,17 +335,17 @@ class CitationClassification {
   /// [type] The kind of classifier (e.g. publication type, keyword).
   ///
   /// [classifier] The specific classification value.
-  factory CitationClassification({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     List<CodeableConcept>? classifier,
-  }) = _CitationClassification;
+  
 }
 
 /// [CitationStatusDate] The Citation Resource enables reference to any
-@freezed
+
 class CitationStatusDate {
   /// [CitationStatusDate] The Citation Resource enables reference to any
 
@@ -386,7 +385,7 @@ class CitationStatusDate {
   /// [actualElement] _(_actual) Extensions for actual
   ///
   /// [period] When the status started and/or ended.
-  factory CitationStatusDate({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -394,11 +393,11 @@ class CitationStatusDate {
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     required Period period,
-  }) = _CitationStatusDate;
+  
 }
 
 /// [CitationRelatesTo] The Citation Resource enables reference to any
-@freezed
+
 class CitationRelatesTo {
   /// [CitationRelatesTo] The Citation Resource enables reference to any
 
@@ -448,7 +447,7 @@ class CitationRelatesTo {
   ///
   /// [targetAttachment] The article or artifact that the Citation Resource is
   /// related to.
-  factory CitationRelatesTo({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -459,11 +458,11 @@ class CitationRelatesTo {
     Identifier? targetIdentifier,
     Reference? targetReference,
     Attachment? targetAttachment,
-  }) = _CitationRelatesTo;
+  
 }
 
 /// [CitationCitedArtifact] The Citation Resource enables reference to any
-@freezed
+
 class CitationCitedArtifact {
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
 
@@ -533,7 +532,7 @@ class CitationCitedArtifact {
   /// statements.
   ///
   /// [note] Any additional information or content for the article or artifact.
-  factory CitationCitedArtifact({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -553,11 +552,11 @@ class CitationCitedArtifact {
     List<CitationClassification1>? classification,
     CitationContributorship? contributorship,
     List<Annotation>? note,
-  }) = _CitationCitedArtifact;
+  
 }
 
 /// [CitationVersion] The Citation Resource enables reference to any
-@freezed
+
 class CitationVersion {
   /// [CitationVersion] The Citation Resource enables reference to any
 
@@ -595,18 +594,18 @@ class CitationVersion {
   /// [valueElement] _(_value) Extensions for value
   ///
   /// [baseCitation] Citation for the main version of the cited artifact.
-  factory CitationVersion({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
     Reference? baseCitation,
-  }) = _CitationVersion;
+  
 }
 
 /// [CitationStatusDate1] The Citation Resource enables reference to any
-@freezed
+
 class CitationStatusDate1 {
   /// [CitationStatusDate1] The Citation Resource enables reference to any
 
@@ -646,7 +645,7 @@ class CitationStatusDate1 {
   /// [actualElement] _(_actual) Extensions for actual
   ///
   /// [period] When the status started and/or ended.
-  factory CitationStatusDate1({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -654,11 +653,11 @@ class CitationStatusDate1 {
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     required Period period,
-  }) = _CitationStatusDate1;
+  
 }
 
 /// [CitationTitle] The Citation Resource enables reference to any knowledge
-@freezed
+
 class CitationTitle {
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
 
@@ -698,7 +697,7 @@ class CitationTitle {
   /// [text] The title of the article or artifact.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationTitle({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -706,11 +705,11 @@ class CitationTitle {
     CodeableConcept? language,
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationTitle;
+  
 }
 
 /// [CitationAbstract] The Citation Resource enables reference to any
-@freezed
+
 class CitationAbstract {
   /// [CitationAbstract] The Citation Resource enables reference to any
 
@@ -754,7 +753,7 @@ class CitationAbstract {
   /// [copyright] Copyright notice for the abstract.
   ///
   /// [copyrightElement] _(_copyright) Extensions for copyright
-  factory CitationAbstract({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -764,11 +763,11 @@ class CitationAbstract {
     @JsonKey(name: '_text') Element? textElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationAbstract;
+  
 }
 
 /// [CitationPart] The Citation Resource enables reference to any knowledge
-@freezed
+
 class CitationPart {
   /// [CitationPart] The Citation Resource enables reference to any knowledge
 
@@ -808,7 +807,7 @@ class CitationPart {
   /// [valueElement] _(_value) Extensions for value
   ///
   /// [baseCitation] The citation for the full article or artifact.
-  factory CitationPart({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -816,11 +815,11 @@ class CitationPart {
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
     Reference? baseCitation,
-  }) = _CitationPart;
+  
 }
 
 /// [CitationRelatesTo1] The Citation Resource enables reference to any
-@freezed
+
 class CitationRelatesTo1 {
   /// [CitationRelatesTo1] The Citation Resource enables reference to any
 
@@ -869,7 +868,7 @@ class CitationRelatesTo1 {
   ///
   /// [targetAttachment] The article or artifact that the cited artifact is
   /// related to.
-  factory CitationRelatesTo1({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -880,11 +879,11 @@ class CitationRelatesTo1 {
     Identifier? targetIdentifier,
     Reference? targetReference,
     Attachment? targetAttachment,
-  }) = _CitationRelatesTo1;
+  
 }
 
 /// [CitationPublicationForm] The Citation Resource enables reference to any
-@freezed
+
 class CitationPublicationForm {
   /// [CitationPublicationForm] The Citation Resource enables reference to any
 
@@ -958,7 +957,7 @@ class CitationPublicationForm {
   /// [copyright] Copyright notice for the full article or artifact.
   ///
   /// [copyrightElement] _(_copyright) Extensions for copyright
-  factory CitationPublicationForm({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -981,11 +980,11 @@ class CitationPublicationForm {
     @JsonKey(name: '_pageCount') Element? pageCountElement,
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationPublicationForm;
+  
 }
 
 /// [CitationPublishedIn] The Citation Resource enables reference to any
-@freezed
+
 class CitationPublishedIn {
   /// [CitationPublishedIn] The Citation Resource enables reference to any
 
@@ -1033,7 +1032,7 @@ class CitationPublishedIn {
   ///
   /// [publisherLocationElement] _(_publisherLocation) Extensions for
   /// publisherLocation
-  factory CitationPublishedIn({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1044,11 +1043,11 @@ class CitationPublishedIn {
     Reference? publisher,
     String? publisherLocation,
     @JsonKey(name: '_publisherLocation') Element? publisherLocationElement,
-  }) = _CitationPublishedIn;
+  
 }
 
 /// [CitationPeriodicRelease] The Citation Resource enables reference to any
-@freezed
+
 class CitationPeriodicRelease {
   /// [CitationPeriodicRelease] The Citation Resource enables reference to any
 
@@ -1095,7 +1094,7 @@ class CitationPeriodicRelease {
   ///
   /// [dateOfPublication] Defining the date on which the issue of the journal was
   /// published.
-  factory CitationPeriodicRelease({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1105,11 +1104,11 @@ class CitationPeriodicRelease {
     String? issue,
     @JsonKey(name: '_issue') Element? issueElement,
     CitationDateOfPublication? dateOfPublication,
-  }) = _CitationPeriodicRelease;
+  
 }
 
 /// [CitationDateOfPublication] The Citation Resource enables reference to
-@freezed
+
 class CitationDateOfPublication {
   /// [CitationDateOfPublication] The Citation Resource enables reference to
 
@@ -1166,7 +1165,7 @@ class CitationDateOfPublication {
   /// was published.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationDateOfPublication({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1182,11 +1181,11 @@ class CitationDateOfPublication {
     @JsonKey(name: '_season') Element? seasonElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationDateOfPublication;
+  
 }
 
 /// [CitationWebLocation] The Citation Resource enables reference to any
-@freezed
+
 class CitationWebLocation {
   /// [CitationWebLocation] The Citation Resource enables reference to any
 
@@ -1224,18 +1223,18 @@ class CitationWebLocation {
   /// [url] The specific URL.
   ///
   /// [urlElement] _(_url) Extensions for url
-  factory CitationWebLocation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _CitationWebLocation;
+  
 }
 
 /// [CitationClassification1] The Citation Resource enables reference to any
-@freezed
+
 class CitationClassification1 {
   /// [CitationClassification1] The Citation Resource enables reference to any
 
@@ -1273,7 +1272,7 @@ class CitationClassification1 {
   /// [classifier] The specific classification value.
   ///
   /// [whoClassified] Provenance and copyright of classification.
-  factory CitationClassification1({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1281,11 +1280,11 @@ class CitationClassification1 {
     List<CodeableConcept>? classifier,
     CitationWhoClassified? whoClassified,
     List<Reference>? artifactAssessment,
-  }) = _CitationClassification1;
+  
 }
 
 /// [CitationWhoClassified] The Citation Resource enables reference to any
-@freezed
+
 class CitationWhoClassified {
   /// [CitationWhoClassified] The Citation Resource enables reference to any
 
@@ -1333,7 +1332,7 @@ class CitationWhoClassified {
   /// [freeToShare] Acceptable to re-use the classification.
   ///
   /// [freeToShareElement] _(_freeToShare) Extensions for freeToShare
-  factory CitationWhoClassified({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1344,11 +1343,11 @@ class CitationWhoClassified {
     @JsonKey(name: '_classifierCopyright') Element? classifierCopyrightElement,
     Boolean? freeToShare,
     @JsonKey(name: '_freeToShare') Element? freeToShareElement,
-  }) = _CitationWhoClassified;
+  
 }
 
 /// [CitationContributorship] The Citation Resource enables reference to any
-@freezed
+
 class CitationContributorship {
   /// [CitationContributorship] The Citation Resource enables reference to any
 
@@ -1389,7 +1388,7 @@ class CitationContributorship {
   ///
   /// [summary] Used to record a display of the author/contributor list without
   /// separate coding for each list member.
-  factory CitationContributorship({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1397,11 +1396,11 @@ class CitationContributorship {
     @JsonKey(name: '_complete') Element? completeElement,
     List<CitationEntry>? entry,
     List<CitationSummary1>? summary,
-  }) = _CitationContributorship;
+  
 }
 
 /// [CitationEntry] The Citation Resource enables reference to any knowledge
-@freezed
+
 class CitationEntry {
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
 
@@ -1468,7 +1467,7 @@ class CitationEntry {
   /// [listOrder] Used to code order of authors.
   ///
   /// [listOrderElement] _(_listOrder) Extensions for listOrder
-  factory CitationEntry({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1489,11 +1488,11 @@ class CitationEntry {
         Element? correspondingContactElement,
     PositiveInt? listOrder,
     @JsonKey(name: '_listOrder') Element? listOrderElement,
-  }) = _CitationEntry;
+  
 }
 
 /// [CitationAffiliationInfo] The Citation Resource enables reference to any
-@freezed
+
 class CitationAffiliationInfo {
   /// [CitationAffiliationInfo] The Citation Resource enables reference to any
 
@@ -1535,7 +1534,7 @@ class CitationAffiliationInfo {
   /// [roleElement] _(_role) Extensions for role
   ///
   /// [identifier] Identifier for the organization.
-  factory CitationAffiliationInfo({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1544,11 +1543,11 @@ class CitationAffiliationInfo {
     String? role,
     @JsonKey(name: '_role') Element? roleElement,
     List<Identifier>? identifier,
-  }) = _CitationAffiliationInfo;
+  
 }
 
 /// [CitationContributionInstance] The Citation Resource enables reference to
-@freezed
+
 class CitationContributionInstance {
   /// [CitationContributionInstance] The Citation Resource enables reference to
 
@@ -1586,18 +1585,18 @@ class CitationContributionInstance {
   /// [time] The time that the contribution was made.
   ///
   /// [timeElement] _(_time) Extensions for time
-  factory CitationContributionInstance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _CitationContributionInstance;
+  
 }
 
 /// [CitationSummary1] The Citation Resource enables reference to any
-@freezed
+
 class CitationSummary1 {
   /// [CitationSummary1] The Citation Resource enables reference to any
 
@@ -1641,7 +1640,7 @@ class CitationSummary1 {
   /// contributorship statement.
   ///
   /// [valueElement] _(_value) Extensions for value
-  factory CitationSummary1({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1650,11 +1649,11 @@ class CitationSummary1 {
     CodeableConcept? source,
     Markdown? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CitationSummary1;
+  
 }
 
 /// [Evidence] The Evidence resource describes the conditional state
-@freezed
+
 class Evidence {
   /// [Evidence] The Evidence resource describes the conditional state
 
@@ -1850,7 +1849,7 @@ class Evidence {
   ///
   /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
-  factory Evidence({
+  
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
         R4ResourceType resourceType,
@@ -1901,11 +1900,11 @@ class Evidence {
     CodeableConcept? studyType,
     List<EvidenceStatistic>? statistic,
     List<EvidenceCertainty>? certainty,
-  }) = _Evidence;
+  
 }
 
 /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceVariableDefinition {
   /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -1933,7 +1932,7 @@ class EvidenceVariableDefinition {
   /// [intended] Definition of the intended variable related to the Evidence.;
   ///
   /// [directnessMatch] Indication of quality of match between intended variable to actual variable.;
-  factory EvidenceVariableDefinition({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1944,11 +1943,11 @@ class EvidenceVariableDefinition {
     Reference? observed,
     Reference? intended,
     CodeableConcept? directnessMatch,
-  }) = _EvidenceVariableDefinition;
+  
 }
 
 /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceStatistic {
   /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -1986,7 +1985,7 @@ class EvidenceStatistic {
   /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.;
   ///
   /// [modelCharacteristic] A component of the method to generate the statistic.;
-  factory EvidenceStatistic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2003,11 +2002,11 @@ class EvidenceStatistic {
     EvidenceSampleSize? sampleSize,
     List<EvidenceAttributeEstimate>? attributeEstimate,
     List<EvidenceModelCharacteristic>? modelCharacteristic,
-  }) = _EvidenceStatistic;
+  
 }
 
 /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceSampleSize {
   /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2037,7 +2036,7 @@ class EvidenceSampleSize {
   /// [knownDataCount] Number of participants with known results for measured variables.;
   ///
   /// [knownDataCountElement] (_knownDataCount): Extensions for knownDataCount;
-  factory EvidenceSampleSize({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2051,11 +2050,11 @@ class EvidenceSampleSize {
         Element? numberOfParticipantsElement,
     UnsignedInt? knownDataCount,
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
-  }) = _EvidenceSampleSize;
+  
 }
 
 /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceAttributeEstimate {
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2085,7 +2084,7 @@ class EvidenceAttributeEstimate {
   /// [range] Lower bound of confidence interval.;
   ///
   /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.;
-  factory EvidenceAttributeEstimate({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2098,11 +2097,11 @@ class EvidenceAttributeEstimate {
     @JsonKey(name: '_level') Element? levelElement,
     Range? range,
     List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceAttributeEstimate;
+  
 }
 
 /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceModelCharacteristic {
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2122,7 +2121,7 @@ class EvidenceModelCharacteristic {
   /// [variable] A variable adjusted for in the adjusted analysis.;
   ///
   /// [attributeEstimate] An attribute of the statistic used as a model characteristic.;
-  factory EvidenceModelCharacteristic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2130,11 +2129,11 @@ class EvidenceModelCharacteristic {
     Quantity? value,
     List<EvidenceVar>? variable,
     List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceModelCharacteristic;
+  
 }
 
 /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
-@freezed
+
 class EvidenceVar {
   /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
 
@@ -2166,7 +2165,7 @@ class EvidenceVar {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  factory EvidenceVar({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2176,11 +2175,11 @@ class EvidenceVar {
     List<CodeableConcept>? valueCategory,
     List<Quantity>? valueQuantity,
     List<Range>? valueRange,
-  }) = _EvidenceVar;
+  
 }
 
 /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceCertainty {
   /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2210,7 +2209,7 @@ class EvidenceCertainty {
   /// [raterElement] (_rater): Extensions for rater;
   ///
   /// [subcomponent] A domain or subdomain of certainty.;
-  factory EvidenceCertainty({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2222,11 +2221,11 @@ class EvidenceCertainty {
     String? rater,
     @JsonKey(name: '_rater') Element? raterElement,
     List<EvidenceCertainty>? subcomponent,
-  }) = _EvidenceCertainty;
+  
 }
 
 /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-@freezed
+
 class EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -2348,7 +2347,7 @@ class EvidenceReport {
   /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
   /// [section] The root of the sections that make up the composition.;
-  factory EvidenceReport({
+  
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
     String? id,
     Meta? meta,
@@ -2383,11 +2382,11 @@ class EvidenceReport {
     List<ContactDetail>? endorser,
     List<EvidenceReportRelatesTo>? relatesTo,
     List<EvidenceReportSection>? section,
-  }) = _EvidenceReport;
+  
 }
 
 /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-@freezed
+
 class EvidenceReportSubject {
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -2405,17 +2404,17 @@ class EvidenceReportSubject {
   /// [characteristic] Characteristic.;
   ///
   /// [note] Used for general notes and annotations not coded elsewhere.;
-  factory EvidenceReportSubject({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<EvidenceReportCharacteristic>? characteristic,
     List<Annotation>? note,
-  }) = _EvidenceReportSubject;
+  
 }
 
 /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-@freezed
+
 class EvidenceReportCharacteristic {
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -2449,7 +2448,7 @@ class EvidenceReportCharacteristic {
   /// [excludeElement] (_exclude): Extensions for exclude;
   ///
   /// [period] Timeframe for the characteristic.;
-  factory EvidenceReportCharacteristic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2463,11 +2462,11 @@ class EvidenceReportCharacteristic {
     Boolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     Period? period,
-  }) = _EvidenceReportCharacteristic;
+  
 }
 
 /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-@freezed
+
 class EvidenceReportRelatesTo {
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -2487,7 +2486,7 @@ class EvidenceReportRelatesTo {
   /// [codeElement] (_code): Extensions for code;
   ///
   /// [target] The target composition/document of this relationship.;
-  factory EvidenceReportRelatesTo({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2495,11 +2494,11 @@ class EvidenceReportRelatesTo {
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,
-  }) = _EvidenceReportRelatesTo;
+  
 }
 
 /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-@freezed
+
 class EvidenceReportSection {
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -2541,7 +2540,7 @@ class EvidenceReportSection {
   /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.;
   ///
   /// [section] A nested sub-section within this section.;
-  factory EvidenceReportSection({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2559,11 +2558,11 @@ class EvidenceReportSection {
     List<Quantity>? entryQuantity,
     CodeableConcept? emptyReason,
     List<EvidenceReportSection>? section,
-  }) = _EvidenceReportSection;
+  
 }
 
 /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
-@freezed
+
 class EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
 
@@ -2759,7 +2758,7 @@ class EvidenceVariable {
   /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
-  factory EvidenceVariable({
+  
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
         R4ResourceType resourceType,
@@ -2811,11 +2810,11 @@ class EvidenceVariable {
     Code? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<EvidenceVariableCategory>? category,
-  }) = _EvidenceVariable;
+  
 }
 
 /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
-@freezed
+
 class EvidenceVariableCharacteristic {
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
 
@@ -2913,7 +2912,7 @@ class EvidenceVariableCharacteristic {
   ///  effective period.
   ///
   /// [groupMeasureElement] Extensions for groupMeasure
-  factory EvidenceVariableCharacteristic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2929,11 +2928,11 @@ class EvidenceVariableCharacteristic {
     EvidenceVariableTimeFromStart? timeFromStart,
     Code? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
-  }) = _EvidenceVariableCharacteristic;
+  
 }
 
 /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
-@freezed
+
 class EvidenceVariableTimeFromStart {
   /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
 
@@ -2974,7 +2973,7 @@ class EvidenceVariableTimeFromStart {
   ///
   /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.;
   ///
-  factory EvidenceVariableTimeFromStart({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2983,11 +2982,11 @@ class EvidenceVariableTimeFromStart {
     Quantity? quantity,
     Range? range,
     List<Annotation>? note,
-  }) = _EvidenceVariableTimeFromStart;
+  
 }
 
 /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableCategory {
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
 
@@ -3011,7 +3010,7 @@ class EvidenceVariableCategory {
   /// [valueQuantity] Definition of the grouping.;
   ///
   /// [valueRange] Definition of the grouping.;
-  factory EvidenceVariableCategory({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3020,11 +3019,11 @@ class EvidenceVariableCategory {
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Range? valueRange,
-  }) = _EvidenceVariableCategory;
+  
 }
 
 /// [ResearchDefinition] The ResearchDefinition resource describes the
-@freezed
+
 class ResearchDefinition {
   /// [ResearchDefinition] The ResearchDefinition resource describes the
 
@@ -3254,7 +3253,7 @@ class ResearchDefinition {
   ///
   /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
-  factory ResearchDefinition({
+  
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
         R4ResourceType resourceType,
@@ -3320,11 +3319,11 @@ class ResearchDefinition {
     Reference? exposure,
     Reference? exposureAlternative,
     Reference? outcome,
-  }) = _ResearchDefinition;
+  
 }
 
 /// [ResearchElementDefinition] The ResearchElementDefinition resource
-@freezed
+
 class ResearchElementDefinition {
   /// [ResearchElementDefinition] The ResearchElementDefinition resource
 
@@ -3561,7 +3560,7 @@ class ResearchElementDefinition {
   /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
-  factory ResearchElementDefinition({
+  
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
         R4ResourceType resourceType,
@@ -3628,10 +3627,9 @@ class ResearchElementDefinition {
     Code? variableType,
     @JsonKey(name: '_variableType') Element? variableTypeElement,
     required List<ResearchElementDefinitionCharacteristic> characteristic,
-  }) = _ResearchElementDefinition;
+  
 }
 
-@freezed
 class ResearchElementDefinitionCharacteristic
     with _$ResearchElementDefinitionCharacteristic {
   /// [ResearchElementDefinitionCharacteristic] The ResearchElementDefinition
@@ -3748,7 +3746,7 @@ class ResearchElementDefinitionCharacteristic
   ///
   /// [participantEffectiveGroupMeasureElement] Extensions for
   ///  participantEffectiveGroupMeasure
-  factory ResearchElementDefinitionCharacteristic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3787,7 +3785,7 @@ class ResearchElementDefinitionCharacteristic
     Code? participantEffectiveGroupMeasure,
     @JsonKey(name: '_participantEffectiveGroupMeasure')
         Element? participantEffectiveGroupMeasureElement,
-  }) = _ResearchElementDefinitionCharacteristic;
+  
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

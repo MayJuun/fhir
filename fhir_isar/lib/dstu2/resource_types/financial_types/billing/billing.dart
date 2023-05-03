@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'billing.enums.dart';
-part 'billing.freezed.dart';
+
 part 'billing.g.dart';
 
-@freezed
 class Account {
-  factory Account({
+  
     @Default(Dstu2ResourceType.Account)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
         Dstu2ResourceType resourceType,
@@ -42,12 +41,11 @@ class Account {
     Reference? owner,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _Account;
+  
 }
 
-@freezed
 class Claim {
-  factory Claim({
+  
     @Default(Dstu2ResourceType.Claim)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
         Dstu2ResourceType resourceType,
@@ -92,12 +90,11 @@ class Claim {
     List<ClaimItem>? item,
     List<Coding>? additionalMaterials,
     List<ClaimMissingTeeth>? missingTeeth,
-  }) = _Claim;
+  
 }
 
-@freezed
 class ClaimPayee {
-  factory ClaimPayee({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -105,24 +102,22 @@ class ClaimPayee {
     Reference? provider,
     Reference? organization,
     Reference? person,
-  }) = _ClaimPayee;
+  
 }
 
-@freezed
 class ClaimDiagnosis {
-  factory ClaimDiagnosis({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Coding diagnosis,
-  }) = _ClaimDiagnosis;
+  
 }
 
-@freezed
 class ClaimCoverage {
-  factory ClaimCoverage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -134,12 +129,11 @@ class ClaimCoverage {
     List<String>? preAuthRef,
     Reference? claimResponse,
     Coding? originalRuleset,
-  }) = _ClaimCoverage;
+  
 }
 
-@freezed
 class ClaimItem {
-  factory ClaimItem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -163,12 +157,11 @@ class ClaimItem {
     List<Coding>? modifier,
     List<ClaimItemDetail>? detail,
     ClaimItemProsthesis? prosthesis,
-  }) = _ClaimItem;
+  
 }
 
-@freezed
 class ClaimItemDetail {
-  factory ClaimItemDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -184,12 +177,11 @@ class ClaimItemDetail {
     Quantity? net,
     Coding? udi,
     List<ClaimDetailSubDetail>? subDetail,
-  }) = _ClaimItemDetail;
+  
 }
 
-@freezed
 class ClaimDetailSubDetail {
-  factory ClaimDetailSubDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -204,36 +196,33 @@ class ClaimDetailSubDetail {
     Decimal? points,
     Quantity? net,
     Coding? udi,
-  }) = _ClaimDetailSubDetail;
+  
 }
 
-@freezed
 class ClaimItemProsthesis {
-  factory ClaimItemProsthesis({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? initial,
     Date? priorDate,
     Coding? priorMaterial,
-  }) = _ClaimItemProsthesis;
+  
 }
 
-@freezed
 class ClaimMissingTeeth {
-  factory ClaimMissingTeeth({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding tooth,
     Coding? reason,
     Date? extractionDate,
-  }) = _ClaimMissingTeeth;
+  
 }
 
-@freezed
 class ClaimResponse {
-  factory ClaimResponse({
+  
     @Default(Dstu2ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
         Dstu2ResourceType resourceType,
@@ -278,12 +267,11 @@ class ClaimResponse {
     Coding? form,
     List<ClaimResponseNote>? note,
     List<ClaimResponseCoverage>? coverage,
-  }) = _ClaimResponse;
+  
 }
 
-@freezed
 class ClaimResponseItem {
-  factory ClaimResponseItem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -293,12 +281,11 @@ class ClaimResponseItem {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseItemAdjudication>? adjudication,
     List<ClaimResponseItemDetail>? detail,
-  }) = _ClaimResponseItem;
+  
 }
 
-@freezed
 class ClaimResponseItemAdjudication {
-  factory ClaimResponseItemAdjudication({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -306,35 +293,32 @@ class ClaimResponseItemAdjudication {
     Quantity? amount,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ClaimResponseItemAdjudication;
+  
 }
 
-@freezed
 class ClaimResponseItemDetail {
-  factory ClaimResponseItemDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required PositiveInt sequenceLinkId,
     List<ClaimResponseItemAdjudication>? adjudication,
     List<ClaimResponseDetailSubDetail>? subDetail,
-  }) = _ClaimResponseItemDetail;
+  
 }
 
-@freezed
 class ClaimResponseDetailSubDetail {
-  factory ClaimResponseDetailSubDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required PositiveInt sequenceLinkId,
     List<ClaimResponseItemAdjudication>? adjudication,
-  }) = _ClaimResponseDetailSubDetail;
+  
 }
 
-@freezed
 class ClaimResponseAddItem {
-  factory ClaimResponseAddItem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -344,24 +328,22 @@ class ClaimResponseAddItem {
     List<PositiveInt>? noteNumberLinkId,
     List<ClaimResponseItemAdjudication>? adjudication,
     ClaimResponseAddItemDetail? detail,
-  }) = _ClaimResponseAddItem;
+  
 }
 
-@freezed
 class ClaimResponseAddItemDetail {
-  factory ClaimResponseAddItemDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding service,
     Quantity? fee,
     List<ClaimResponseItemAdjudication>? adjudication,
-  }) = _ClaimResponseAddItemDetail;
+  
 }
 
-@freezed
 class ClaimResponseError {
-  factory ClaimResponseError({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -369,12 +351,11 @@ class ClaimResponseError {
     PositiveInt? detailSequenceLinkId,
     PositiveInt? subdetailSequenceLinkId,
     required Coding code,
-  }) = _ClaimResponseError;
+  
 }
 
-@freezed
 class ClaimResponseNote {
-  factory ClaimResponseNote({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -384,12 +365,11 @@ class ClaimResponseNote {
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ClaimResponseNote;
+  
 }
 
-@freezed
 class ClaimResponseCoverage {
-  factory ClaimResponseCoverage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -401,5 +381,5 @@ class ClaimResponseCoverage {
     List<String>? preAuthRef,
     Reference? claimResponse,
     Coding? originalRuleset,
-  }) = _ClaimResponseCoverage;
+  
 }

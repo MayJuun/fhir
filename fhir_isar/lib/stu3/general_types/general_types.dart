@@ -2,26 +2,24 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../stu3.dart';
 
 part 'general_types.enums.dart';
-part 'general_types.freezed.dart';
+
 part 'general_types.g.dart';
 
-@freezed
 class BackboneElement {
-  factory BackboneElement({
+  
     List<FhirExtension>? modifierExtension,
-  }) = _BackboneElement;
+  
 }
 
-@freezed
 class Annotation {
-  factory Annotation({
+  
     Reference? authorReference,
     String? authorString,
     @JsonKey(name: '_authorString') Element? authorStringElement,
@@ -29,12 +27,11 @@ class Annotation {
     @JsonKey(name: '_time') Element? timeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _Annotation;
+  
 }
 
-@freezed
 class Attachment {
-  factory Attachment({
+  
     String? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? language,
@@ -51,12 +48,11 @@ class Attachment {
     @JsonKey(name: '_title') Element? titleElement,
     String? creation,
     @JsonKey(name: '_creation') Element? creationElement,
-  }) = _Attachment;
+  
 }
 
-@freezed
 class Identifier {
-  factory Identifier({
+  
     IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
     CodeableConcept? type,
@@ -66,21 +62,19 @@ class Identifier {
     @JsonKey(name: '_value') Element? valueElement,
     Period? period,
     Reference? assigner,
-  }) = _Identifier;
+  
 }
 
-@freezed
 class CodeableConcept {
-  factory CodeableConcept({
+  
     List<Coding>? coding,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CodeableConcept;
+  
 }
 
-@freezed
 class Coding {
-  factory Coding({
+  
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
@@ -91,12 +85,11 @@ class Coding {
     @JsonKey(name: '_display') Element? displayElement,
     Boolean? userSelected,
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
-  }) = _Coding;
+  
 }
 
-@freezed
 class Quantity {
-  factory Quantity({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -107,12 +100,11 @@ class Quantity {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Quantity;
+  
 }
 
-@freezed
 class FhirDuration {
-  factory FhirDuration({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -123,12 +115,11 @@ class FhirDuration {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _FhirDuration;
+  
 }
 
-@freezed
 class Distance {
-  factory Distance({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -139,12 +130,11 @@ class Distance {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Distance;
+  
 }
 
-@freezed
 class Count {
-  factory Count({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -155,12 +145,11 @@ class Count {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Count;
+  
 }
 
-@freezed
 class Money {
-  factory Money({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -171,12 +160,11 @@ class Money {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Money;
+  
 }
 
-@freezed
 class Age {
-  factory Age({
+  
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -187,38 +175,34 @@ class Age {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Age;
+  
 }
 
-@freezed
 class Range {
-  factory Range({
+  
     Quantity? low,
     Quantity? high,
-  }) = _Range;
+  
 }
 
-@freezed
 class Period {
-  factory Period({
+  
     String? start,
     @JsonKey(name: '_start') Element? startElement,
     String? end,
     @JsonKey(name: '_end') Element? endElement,
-  }) = _Period;
+  
 }
 
-@freezed
 class Ratio {
-  factory Ratio({
+  
     Quantity? numerator,
     Quantity? denominator,
-  }) = _Ratio;
+  
 }
 
-@freezed
 class SampledData {
-  factory SampledData({
+  
     required Quantity origin,
     Decimal? period,
     @JsonKey(name: '_period') Element? periodElement,
@@ -232,12 +216,11 @@ class SampledData {
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
     String? data,
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _SampledData;
+  
 }
 
-@freezed
 class Signature {
-  factory Signature({
+  
     required List<Coding> type,
     String? when,
     @JsonKey(name: '_when') Element? whenElement,
@@ -251,12 +234,11 @@ class Signature {
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? blob,
     @JsonKey(name: '_blob') Element? blobElement,
-  }) = _Signature;
+  
 }
 
-@freezed
 class HumanName {
-  factory HumanName({
+  
     HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
     String? text,
@@ -270,12 +252,11 @@ class HumanName {
     List<String>? suffix,
     @JsonKey(name: '_suffix') List<Element?>? suffixElement,
     Period? period,
-  }) = _HumanName;
+  
 }
 
-@freezed
 class Address {
-  factory Address({
+  
     AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
     AddressType? type,
@@ -295,12 +276,11 @@ class Address {
     String? country,
     @JsonKey(name: '_country') Element? countryElement,
     Period? period,
-  }) = _Address;
+  
 }
 
-@freezed
 class ContactPoint {
-  factory ContactPoint({
+  
     ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
@@ -310,22 +290,20 @@ class ContactPoint {
     Decimal? rank,
     @JsonKey(name: '_rank') Element? rankElement,
     Period? period,
-  }) = _ContactPoint;
+  
 }
 
-@freezed
 class Timing {
-  factory Timing({
+  
     List<String>? event,
     @JsonKey(name: '_event') List<Element?>? eventElement,
     TimingRepeat? repeat,
     CodeableConcept? code,
-  }) = _Timing;
+  
 }
 
-@freezed
 class TimingRepeat {
-  factory TimingRepeat({
+  
     FhirDuration? boundsDuration,
     Range? boundsRange,
     Period? boundsPeriod,
@@ -357,5 +335,5 @@ class TimingRepeat {
     @JsonKey(name: '_when') List<Element?>? whenElement,
     Decimal? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
-  }) = _TimingRepeat;
+  
 }

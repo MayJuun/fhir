@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'security.enums.dart';
-part 'security.freezed.dart';
+
 part 'security.g.dart';
 
-@freezed
 class AuditEvent {
-  factory AuditEvent({
+  
     @Default(Stu3ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
         Stu3ResourceType resourceType,
@@ -42,12 +41,11 @@ class AuditEvent {
     required List<AuditEventAgent> agent,
     required AuditEventSource source,
     List<AuditEventEntity>? entity,
-  }) = _AuditEvent;
+  
 }
 
-@freezed
 class AuditEventAgent {
-  factory AuditEventAgent({
+  
     List<CodeableConcept>? role,
     Reference? reference,
     Identifier? userId,
@@ -63,32 +61,29 @@ class AuditEventAgent {
     Coding? media,
     AuditEventNetwork? network,
     List<CodeableConcept>? purposeOfUse,
-  }) = _AuditEventAgent;
+  
 }
 
-@freezed
 class AuditEventNetwork {
-  factory AuditEventNetwork({
+  
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
     AuditEventNetworkType? type,
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _AuditEventNetwork;
+  
 }
 
-@freezed
 class AuditEventSource {
-  factory AuditEventSource({
+  
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
     required Identifier identifier,
     List<Coding>? type,
-  }) = _AuditEventSource;
+  
 }
 
-@freezed
 class AuditEventEntity {
-  factory AuditEventEntity({
+  
     Identifier? identifier,
     Reference? reference,
     Coding? type,
@@ -102,22 +97,20 @@ class AuditEventEntity {
     String? query,
     @JsonKey(name: '_query') Element? queryElement,
     List<AuditEventDetail>? detail,
-  }) = _AuditEventEntity;
+  
 }
 
-@freezed
 class AuditEventDetail {
-  factory AuditEventDetail({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _AuditEventDetail;
+  
 }
 
-@freezed
 class Consent {
-  factory Consent({
+  
     @Default(Stu3ResourceType.Consent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
         Stu3ResourceType resourceType,
@@ -154,39 +147,35 @@ class Consent {
     Period? dataPeriod,
     List<ConsentData>? data,
     List<ConsentExcept>? except,
-  }) = _Consent;
+  
 }
 
-@freezed
 class ConsentActor {
-  factory ConsentActor({
+  
     required CodeableConcept role,
     required Reference reference,
-  }) = _ConsentActor;
+  
 }
 
-@freezed
 class ConsentPolicy {
-  factory ConsentPolicy({
+  
     String? authority,
     @JsonKey(name: '_authority') Element? authorityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ConsentPolicy;
+  
 }
 
-@freezed
 class ConsentData {
-  factory ConsentData({
+  
     ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
-  }) = _ConsentData;
+  
 }
 
-@freezed
 class ConsentExcept {
-  factory ConsentExcept({
+  
     ConsentExceptType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
@@ -198,29 +187,26 @@ class ConsentExcept {
     List<Coding>? code,
     Period? dataPeriod,
     List<ConsentData1>? data,
-  }) = _ConsentExcept;
+  
 }
 
-@freezed
 class ConsentActor1 {
-  factory ConsentActor1({
+  
     required CodeableConcept role,
     required Reference reference,
-  }) = _ConsentActor1;
+  
 }
 
-@freezed
 class ConsentData1 {
-  factory ConsentData1({
+  
     ConsentData1Meaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
-  }) = _ConsentData1;
+  
 }
 
-@freezed
 class Provenance {
-  factory Provenance({
+  
     @Default(Stu3ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
         Stu3ResourceType resourceType,
@@ -246,12 +232,11 @@ class Provenance {
     required List<ProvenanceAgent> agent,
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,
-  }) = _Provenance;
+  
 }
 
-@freezed
 class ProvenanceAgent {
-  factory ProvenanceAgent({
+  
     List<CodeableConcept>? role,
     String? whoUri,
     @JsonKey(name: '_whoUri') Element? whoUriElement,
@@ -260,12 +245,11 @@ class ProvenanceAgent {
     @JsonKey(name: '_onBehalfOfUri') Element? onBehalfOfUriElement,
     Reference? onBehalfOfReference,
     CodeableConcept? relatedAgentType,
-  }) = _ProvenanceAgent;
+  
 }
 
-@freezed
 class ProvenanceEntity {
-  factory ProvenanceEntity({
+  
     ProvenanceEntityRole? role,
     @JsonKey(name: '_role') Element? roleElement,
     String? whatUri,
@@ -273,5 +257,5 @@ class ProvenanceEntity {
     Reference? whatReference,
     Identifier? whatIdentifier,
     List<ProvenanceAgent>? agent,
-  }) = _ProvenanceEntity;
+  
 }

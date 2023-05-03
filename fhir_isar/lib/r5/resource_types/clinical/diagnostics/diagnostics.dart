@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 /// [BodyStructure] Record details about an anatomical structure.  This
 ///  resource may be used when a coded concept does not provide the necessary
 ///  detail needed for the use case.
-@freezed
+
 class BodyStructure {
   /// [BodyStructure] Record details about an anatomical structure.  This
   ///  resource may be used when a coded concept does not provide the necessary
@@ -103,7 +102,7 @@ class BodyStructure {
   ///
   /// [patient] The person to which the body site belongs.
   ///
-  factory BodyStructure({
+  
     /// [resourceType] This is a BodyStructure resource
     @Default(R5ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
@@ -174,13 +173,13 @@ class BodyStructure {
 
     /// [patient] The person to which the body site belongs.
     required Reference patient,
-  }) = _BodyStructure;
+  
 }
 
 /// [BodyStructureIncludedStructure] Record details about an anatomical
 ///  structure.  This resource may be used when a coded concept does not
 ///  provide the necessary detail needed for the use case.
-@freezed
+
 class BodyStructureIncludedStructure {
   /// [BodyStructureIncludedStructure] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
@@ -220,7 +219,7 @@ class BodyStructureIncludedStructure {
   ///
   /// [qualifier] Code that represents the included structure qualifier.
   ///
-  factory BodyStructureIncludedStructure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -255,13 +254,13 @@ class BodyStructureIncludedStructure {
 
     /// [qualifier] Code that represents the included structure qualifier.
     List<CodeableConcept>? qualifier,
-  }) = _BodyStructureIncludedStructure;
+  
 }
 
 /// [BodyStructureExcludedStructure] Record details about an anatomical
 ///  structure.  This resource may be used when a coded concept does not
 ///  provide the necessary detail needed for the use case.
-@freezed
+
 class BodyStructureExcludedStructure {
   /// [BodyStructureExcludedStructure] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
@@ -301,7 +300,7 @@ class BodyStructureExcludedStructure {
   ///
   /// [qualifier] Code that represents the excluded structure qualifier.
   ///
-  factory BodyStructureExcludedStructure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -336,7 +335,7 @@ class BodyStructureExcludedStructure {
 
     /// [qualifier] Code that represents the excluded structure qualifier.
     List<CodeableConcept>? qualifier,
-  }) = _BodyStructureExcludedStructure;
+  
 }
 
 /// [DiagnosticReport] The findings and interpretation of diagnostic tests
@@ -347,7 +346,7 @@ class BodyStructureExcludedStructure {
 ///  representation of diagnostic reports. The report also includes
 ///  non-clinical context such as batch analysis and stability reporting of
 ///  products and substances.
-@freezed
+
 class DiagnosticReport {
   /// [DiagnosticReport] The findings and interpretation of diagnostic tests
   ///  performed on patients, groups of patients, products, substances,
@@ -512,7 +511,7 @@ class DiagnosticReport {
   ///  by the diagnostic service. Multiple formats are allowed but they SHALL
   ///  be semantically equivalent.
   ///
-  factory DiagnosticReport({
+  
     /// [resourceType] This is a DiagnosticReport resource
     @Default(R5ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
@@ -631,7 +630,7 @@ class DiagnosticReport {
 
     /// [presentedForm] Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.
     List<Attachment>? presentedForm,
-  }) = _DiagnosticReport;
+  
 }
 
 /// [DiagnosticReportSupportingInfo] The findings and interpretation of
@@ -642,7 +641,7 @@ class DiagnosticReport {
 ///  interpretations, and formatted representation of diagnostic reports. The
 ///  report also includes non-clinical context such as batch analysis and
 ///  stability reporting of products and substances.
-@freezed
+
 class DiagnosticReportSupportingInfo {
   /// [DiagnosticReportSupportingInfo] The findings and interpretation of
   ///  diagnostic tests performed on patients, groups of patients, products,
@@ -692,7 +691,7 @@ class DiagnosticReportSupportingInfo {
   /// [reference] The reference for the supporting information in the
   ///  diagnostic report.
   ///
-  factory DiagnosticReportSupportingInfo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -724,7 +723,7 @@ class DiagnosticReportSupportingInfo {
 
     /// [reference] The reference for the supporting information in the diagnostic report.
     required Reference reference,
-  }) = _DiagnosticReportSupportingInfo;
+  
 }
 
 /// [DiagnosticReportMedia] The findings and interpretation of diagnostic tests
@@ -735,7 +734,7 @@ class DiagnosticReportSupportingInfo {
 ///  representation of diagnostic reports. The report also includes
 ///  non-clinical context such as batch analysis and stability reporting of
 ///  products and substances.
-@freezed
+
 class DiagnosticReportMedia {
   /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
   ///  tests performed on patients, groups of patients, products, substances,
@@ -787,7 +786,7 @@ class DiagnosticReportMedia {
   ///
   /// [link] Reference to the image or data source.
   ///
-  factory DiagnosticReportMedia({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -822,12 +821,12 @@ class DiagnosticReportMedia {
 
     /// [link] Reference to the image or data source.
     required Reference link,
-  }) = _DiagnosticReportMedia;
+  
 }
 
 /// [GenomicStudy] A Genomic Study is a set of analysis performed to analyze
 ///  and generate genomic data.
-@freezed
+
 class GenomicStudy {
   /// [GenomicStudy] A Genomic Study is a set of analysis performed to analyze
   ///  and generate genomic data.
@@ -931,7 +930,7 @@ class GenomicStudy {
   /// [analysis] The details about a specific analysis that was performed in
   ///  this GenomicStudy.
   ///
-  factory GenomicStudy({
+  
     /// [resourceType] This is a GenomicStudy resource
     @Default(R5ResourceType.GenomicStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
@@ -1026,12 +1025,12 @@ class GenomicStudy {
 
     /// [analysis] The details about a specific analysis that was performed in this GenomicStudy.
     List<GenomicStudyAnalysis>? analysis,
-  }) = _GenomicStudy;
+  
 }
 
 /// [GenomicStudyAnalysis] A Genomic Study is a set of analysis performed to
 ///  analyze and generate genomic data.
-@freezed
+
 class GenomicStudyAnalysis {
   /// [GenomicStudyAnalysis] A Genomic Study is a set of analysis performed to
   ///  analyze and generate genomic data.
@@ -1114,7 +1113,7 @@ class GenomicStudyAnalysis {
   /// [device] Devices used for the analysis (e.g., instruments, software),
   ///  with settings and parameters.
   ///
-  factory GenomicStudyAnalysis({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1203,12 +1202,12 @@ class GenomicStudyAnalysis {
 
     /// [device] Devices used for the analysis (e.g., instruments, software), with settings and parameters.
     List<GenomicStudyDevice>? device,
-  }) = _GenomicStudyAnalysis;
+  
 }
 
 /// [GenomicStudyInput] A Genomic Study is a set of analysis performed to
 ///  analyze and generate genomic data.
-@freezed
+
 class GenomicStudyInput {
   /// [GenomicStudyInput] A Genomic Study is a set of analysis performed to
   ///  analyze and generate genomic data.
@@ -1250,7 +1249,7 @@ class GenomicStudyInput {
   /// [generatedByReference] The analysis event or other GenomicStudy that
   ///  generated this input file.
   ///
-  factory GenomicStudyInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1288,12 +1287,12 @@ class GenomicStudyInput {
 
     /// [generatedByReference] The analysis event or other GenomicStudy that generated this input file.
     Reference? generatedByReference,
-  }) = _GenomicStudyInput;
+  
 }
 
 /// [GenomicStudyOutput] A Genomic Study is a set of analysis performed to
 ///  analyze and generate genomic data.
-@freezed
+
 class GenomicStudyOutput {
   /// [GenomicStudyOutput] A Genomic Study is a set of analysis performed to
   ///  analyze and generate genomic data.
@@ -1329,7 +1328,7 @@ class GenomicStudyOutput {
   ///
   /// [type] Type of output data, e.g., VCF, MAF, or BAM.
   ///
-  factory GenomicStudyOutput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1361,12 +1360,12 @@ class GenomicStudyOutput {
 
     /// [type] Type of output data, e.g., VCF, MAF, or BAM.
     CodeableConcept? type,
-  }) = _GenomicStudyOutput;
+  
 }
 
 /// [GenomicStudyPerformer] A Genomic Study is a set of analysis performed to
 ///  analyze and generate genomic data.
-@freezed
+
 class GenomicStudyPerformer {
   /// [GenomicStudyPerformer] A Genomic Study is a set of analysis performed to
   ///  analyze and generate genomic data.
@@ -1403,7 +1402,7 @@ class GenomicStudyPerformer {
   ///
   /// [role] Role of the actor for this analysis.
   ///
-  factory GenomicStudyPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1435,12 +1434,12 @@ class GenomicStudyPerformer {
 
     /// [role] Role of the actor for this analysis.
     CodeableConcept? role,
-  }) = _GenomicStudyPerformer;
+  
 }
 
 /// [GenomicStudyDevice] A Genomic Study is a set of analysis performed to
 ///  analyze and generate genomic data.
-@freezed
+
 class GenomicStudyDevice {
   /// [GenomicStudyDevice] A Genomic Study is a set of analysis performed to
   ///  analyze and generate genomic data.
@@ -1477,7 +1476,7 @@ class GenomicStudyDevice {
   /// [function_] ("function") Specific function for the device used for the
   ///  analysis.
   ///
-  factory GenomicStudyDevice({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1509,7 +1508,7 @@ class GenomicStudyDevice {
 
     /// [function_] ("function") Specific function for the device used for the analysis.
     @JsonKey(name: 'function') CodeableConcept? function_,
-  }) = _GenomicStudyDevice;
+  
 }
 
 /// [ImagingSelection] A selection of DICOM SOP instances and/or frames within
@@ -1517,7 +1516,7 @@ class GenomicStudyDevice {
 ///  an image region, an Observation UID or a Segmentation Number, allowing
 ///  linkage to an Observation Resource or transferring this information along
 ///  with the ImagingStudy Resource.
-@freezed
+
 class ImagingSelection {
   /// [ImagingSelection] A selection of DICOM SOP instances and/or frames
   ///  within a single Study and Series. This might include additional
@@ -1660,7 +1659,7 @@ class ImagingSelection {
   /// [imageRegion] Each imaging selection might includes a 3D image region,
   ///  specified by a region type and a set of 3D coordinates.
   ///
-  factory ImagingSelection({
+  
     /// [resourceType] This is a ImagingSelection resource
     @Default(R5ResourceType.ImagingSelection)
     @JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
@@ -1773,7 +1772,7 @@ class ImagingSelection {
 
     /// [imageRegion] Each imaging selection might includes a 3D image region, specified by a region type and a set of 3D coordinates.
     List<ImagingSelectionImageRegion1>? imageRegion,
-  }) = _ImagingSelection;
+  
 }
 
 /// [ImagingSelectionPerformer] A selection of DICOM SOP instances and/or
@@ -1781,7 +1780,7 @@ class ImagingSelection {
 ///  specifics such as an image region, an Observation UID or a Segmentation
 ///  Number, allowing linkage to an Observation Resource or transferring this
 ///  information along with the ImagingStudy Resource.
-@freezed
+
 class ImagingSelectionPerformer {
   /// [ImagingSelectionPerformer] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -1824,7 +1823,7 @@ class ImagingSelectionPerformer {
   ///
   /// [actor] Author – human or machine.
   ///
-  factory ImagingSelectionPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1856,7 +1855,7 @@ class ImagingSelectionPerformer {
 
     /// [actor] Author – human or machine.
     Reference? actor,
-  }) = _ImagingSelectionPerformer;
+  
 }
 
 /// [ImagingSelectionInstance] A selection of DICOM SOP instances and/or frames
@@ -1864,7 +1863,7 @@ class ImagingSelectionPerformer {
 ///  such as an image region, an Observation UID or a Segmentation Number,
 ///  allowing linkage to an Observation Resource or transferring this
 ///  information along with the ImagingStudy Resource.
-@freezed
+
 class ImagingSelectionInstance {
   /// [ImagingSelectionInstance] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -1930,7 +1929,7 @@ class ImagingSelectionInstance {
   ///  element of type frame, the image region applies to all frames in the
   ///  subset list.
   ///
-  factory ImagingSelectionInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1985,7 +1984,7 @@ class ImagingSelectionInstance {
 
     /// [imageRegion] Each imaging selection instance or frame list might includes an image region, specified by a region type and a set of 2D coordinates. If the parent imagingSelection.instance contains a subset element of type frame, the image region applies to all frames in the subset list.
     List<ImagingSelectionImageRegion>? imageRegion,
-  }) = _ImagingSelectionInstance;
+  
 }
 
 /// [ImagingSelectionImageRegion] A selection of DICOM SOP instances and/or
@@ -1993,7 +1992,7 @@ class ImagingSelectionInstance {
 ///  specifics such as an image region, an Observation UID or a Segmentation
 ///  Number, allowing linkage to an Observation Resource or transferring this
 ///  information along with the ImagingStudy Resource.
-@freezed
+
 class ImagingSelectionImageRegion {
   /// [ImagingSelectionImageRegion] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -2045,7 +2044,7 @@ class ImagingSelectionImageRegion {
   ///
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   ///
-  factory ImagingSelectionImageRegion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2083,7 +2082,7 @@ class ImagingSelectionImageRegion {
 
     /// [coordinateElement] ("_coordinate") Extensions for coordinate
     @JsonKey(name: '_coordinate') List<Element>? coordinateElement,
-  }) = _ImagingSelectionImageRegion;
+  
 }
 
 /// [ImagingSelectionImageRegion1] A selection of DICOM SOP instances and/or
@@ -2091,7 +2090,7 @@ class ImagingSelectionImageRegion {
 ///  specifics such as an image region, an Observation UID or a Segmentation
 ///  Number, allowing linkage to an Observation Resource or transferring this
 ///  information along with the ImagingStudy Resource.
-@freezed
+
 class ImagingSelectionImageRegion1 {
   /// [ImagingSelectionImageRegion1] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -2140,7 +2139,7 @@ class ImagingSelectionImageRegion1 {
   ///
   /// [coordinateElement] ("_coordinate") Extensions for coordinate
   ///
-  factory ImagingSelectionImageRegion1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2178,7 +2177,7 @@ class ImagingSelectionImageRegion1 {
 
     /// [coordinateElement] ("_coordinate") Extensions for coordinate
     @JsonKey(name: '_coordinate') List<Element>? coordinateElement,
-  }) = _ImagingSelectionImageRegion1;
+  
 }
 
 /// [ImagingStudy] Representation of the content produced in a DICOM imaging
@@ -2187,7 +2186,7 @@ class ImagingSelectionImageRegion1 {
 ///  acquired or produced in a common context.  A series is of only one
 ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
 ///  series of different modalities.
-@freezed
+
 class ImagingStudy {
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   ///  study. A study comprises a set of series, each of which includes a set
@@ -2330,7 +2329,7 @@ class ImagingStudy {
   ///
   /// [series] Each study has one or more series of images or other content.
   ///
-  factory ImagingStudy({
+  
     /// [resourceType] This is a ImagingStudy resource
     @Default(R5ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
@@ -2440,7 +2439,7 @@ class ImagingStudy {
 
     /// [series] Each study has one or more series of images or other content.
     List<ImagingStudySeries>? series,
-  }) = _ImagingStudy;
+  
 }
 
 /// [ImagingStudySeries] Representation of the content produced in a DICOM
@@ -2449,7 +2448,7 @@ class ImagingStudy {
 ///  data) acquired or produced in a common context.  A series is of only one
 ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
 ///  series of different modalities.
-@freezed
+
 class ImagingStudySeries {
   /// [ImagingStudySeries] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -2542,7 +2541,7 @@ class ImagingStudySeries {
   /// [instance] A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
   ///
-  factory ImagingStudySeries({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2619,7 +2618,7 @@ class ImagingStudySeries {
 
     /// [instance] A single SOP instance within the series, e.g. an image, or presentation state.
     List<ImagingStudyInstance>? instance,
-  }) = _ImagingStudySeries;
+  
 }
 
 /// [ImagingStudyPerformer] Representation of the content produced in a DICOM
@@ -2628,7 +2627,7 @@ class ImagingStudySeries {
 ///  data) acquired or produced in a common context.  A series is of only one
 ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
 ///  series of different modalities.
-@freezed
+
 class ImagingStudyPerformer {
   /// [ImagingStudyPerformer] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -2673,7 +2672,7 @@ class ImagingStudyPerformer {
   ///
   /// [actor] Indicates who or what performed the series.
   ///
-  factory ImagingStudyPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2705,7 +2704,7 @@ class ImagingStudyPerformer {
 
     /// [actor] Indicates who or what performed the series.
     required Reference actor,
-  }) = _ImagingStudyPerformer;
+  
 }
 
 /// [ImagingStudyInstance] Representation of the content produced in a DICOM
@@ -2714,7 +2713,7 @@ class ImagingStudyPerformer {
 ///  data) acquired or produced in a common context.  A series is of only one
 ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
 ///  series of different modalities.
-@freezed
+
 class ImagingStudyInstance {
   /// [ImagingStudyInstance] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -2768,7 +2767,7 @@ class ImagingStudyInstance {
   ///
   /// [titleElement] ("_title") Extensions for title
   ///
-  factory ImagingStudyInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2815,11 +2814,11 @@ class ImagingStudyInstance {
 
     /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
-  }) = _ImagingStudyInstance;
+  
 }
 
 /// [MolecularSequence] Representation of a molecular sequence.
-@freezed
+
 class MolecularSequence {
   /// [MolecularSequence] Representation of a molecular sequence.
 
@@ -2903,7 +2902,7 @@ class MolecularSequence {
   ///
   /// [relative] A sequence defined relative to another sequence.
   ///
-  factory MolecularSequence({
+  
     /// [resourceType] This is a MolecularSequence resource
     @Default(R5ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
@@ -2977,11 +2976,11 @@ class MolecularSequence {
 
     /// [relative] A sequence defined relative to another sequence.
     List<MolecularSequenceRelative>? relative,
-  }) = _MolecularSequence;
+  
 }
 
 /// [MolecularSequenceRelative] Representation of a molecular sequence.
-@freezed
+
 class MolecularSequenceRelative {
   /// [MolecularSequenceRelative] Representation of a molecular sequence.
 
@@ -3030,7 +3029,7 @@ class MolecularSequenceRelative {
   ///
   /// [edit] Changes in sequence from the starting sequence.
   ///
-  factory MolecularSequenceRelative({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3074,11 +3073,11 @@ class MolecularSequenceRelative {
 
     /// [edit] Changes in sequence from the starting sequence.
     List<MolecularSequenceEdit>? edit,
-  }) = _MolecularSequenceRelative;
+  
 }
 
 /// [MolecularSequenceStartingSequence] Representation of a molecular sequence.
-@freezed
+
 class MolecularSequenceStartingSequence
     with _$MolecularSequenceStartingSequence {
   /// [MolecularSequenceStartingSequence] Representation of a molecular
@@ -3155,7 +3154,7 @@ class MolecularSequenceStartingSequence
   ///
   /// [strandElement] ("_strand") Extensions for strand
   ///
-  factory MolecularSequenceStartingSequence({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3223,11 +3222,11 @@ class MolecularSequenceStartingSequence
 
     /// [strandElement] ("_strand") Extensions for strand
     @JsonKey(name: '_strand') Element? strandElement,
-  }) = _MolecularSequenceStartingSequence;
+  
 }
 
 /// [MolecularSequenceEdit] Representation of a molecular sequence.
-@freezed
+
 class MolecularSequenceEdit {
   /// [MolecularSequenceEdit] Representation of a molecular sequence.
 
@@ -3288,7 +3287,7 @@ class MolecularSequenceEdit {
   /// [replacedSequenceElement] ("_replacedSequence") Extensions for
   ///  replacedSequence
   ///
-  factory MolecularSequenceEdit({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3338,12 +3337,12 @@ class MolecularSequenceEdit {
 
     /// [replacedSequenceElement] ("_replacedSequence") Extensions for replacedSequence
     @JsonKey(name: '_replacedSequence') Element? replacedSequenceElement,
-  }) = _MolecularSequenceEdit;
+  
 }
 
 /// [Observation] Measurements and simple assertions made about a patient,
 ///  device or other subject.
-@freezed
+
 class Observation {
   /// [Observation] Measurements and simple assertions made about a patient,
   ///  device or other subject.
@@ -3587,7 +3586,7 @@ class Observation {
   ///  component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
   ///
-  factory Observation({
+  
     /// [resourceType] This is a Observation resource
     @Default(R5ResourceType.Observation)
     @JsonKey(unknownEnumValue: R5ResourceType.Observation)
@@ -3785,12 +3784,12 @@ class Observation {
 
     /// [component] Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.
     List<ObservationComponent>? component,
-  }) = _Observation;
+  
 }
 
 /// [ObservationTriggeredBy] Measurements and simple assertions made about a
 ///  patient, device or other subject.
-@freezed
+
 class ObservationTriggeredBy {
   /// [ObservationTriggeredBy] Measurements and simple assertions made about a
   ///  patient, device or other subject.
@@ -3833,7 +3832,7 @@ class ObservationTriggeredBy {
   ///
   /// [reasonElement] ("_reason") Extensions for reason
   ///
-  factory ObservationTriggeredBy({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3874,12 +3873,12 @@ class ObservationTriggeredBy {
 
     /// [reasonElement] ("_reason") Extensions for reason
     @JsonKey(name: '_reason') Element? reasonElement,
-  }) = _ObservationTriggeredBy;
+  
 }
 
 /// [ObservationReferenceRange] Measurements and simple assertions made about a
 ///  patient, device or other subject.
-@freezed
+
 class ObservationReferenceRange {
   /// [ObservationReferenceRange] Measurements and simple assertions made about
   ///  a patient, device or other subject.
@@ -3943,7 +3942,7 @@ class ObservationReferenceRange {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory ObservationReferenceRange({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3993,12 +3992,12 @@ class ObservationReferenceRange {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ObservationReferenceRange;
+  
 }
 
 /// [ObservationComponent] Measurements and simple assertions made about a
 ///  patient, device or other subject.
-@freezed
+
 class ObservationComponent {
   /// [ObservationComponent] Measurements and simple assertions made about a
   ///  patient, device or other subject.
@@ -4088,7 +4087,7 @@ class ObservationComponent {
   /// [referenceRange] Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
   ///
-  factory ObservationComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4177,13 +4176,13 @@ class ObservationComponent {
 
     /// [referenceRange] Guidance on how to interpret the value by comparison to a normal or recommended range.
     List<ObservationReferenceRange>? referenceRange,
-  }) = _ObservationComponent;
+  
 }
 
 /// [QuestionnaireResponse] A structured set of questions and their answers.
 ///  The questions are ordered and grouped into coherent subsets, corresponding
 ///  to the structure of the grouping of the questionnaire being responded to.
-@freezed
+
 class QuestionnaireResponse {
   /// [QuestionnaireResponse] A structured set of questions and their answers.
   ///  The questions are ordered and grouped into coherent subsets,
@@ -4290,7 +4289,7 @@ class QuestionnaireResponse {
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
   ///
-  factory QuestionnaireResponse({
+  
     /// [resourceType] This is a QuestionnaireResponse resource
     @Default(R5ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -4373,14 +4372,14 @@ class QuestionnaireResponse {
 
     /// [item] A group or question item from the original questionnaire for which answers are provided.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponse;
+  
 }
 
 /// [QuestionnaireResponseItem] A structured set of questions and their
 ///  answers. The questions are ordered and grouped into coherent subsets,
 ///  corresponding to the structure of the grouping of the questionnaire being
 ///  responded to.
-@freezed
+
 class QuestionnaireResponseItem {
   /// [QuestionnaireResponseItem] A structured set of questions and their
   ///  answers. The questions are ordered and grouped into coherent subsets,
@@ -4436,7 +4435,7 @@ class QuestionnaireResponseItem {
   ///
   /// [item] Sub-questions, sub-groups or display items nested beneath a group.
   ///
-  factory QuestionnaireResponseItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4486,14 +4485,14 @@ class QuestionnaireResponseItem {
 
     /// [item] Sub-questions, sub-groups or display items nested beneath a group.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseItem;
+  
 }
 
 /// [QuestionnaireResponseAnswer] A structured set of questions and their
 ///  answers. The questions are ordered and grouped into coherent subsets,
 ///  corresponding to the structure of the grouping of the questionnaire being
 ///  responded to.
-@freezed
+
 class QuestionnaireResponseAnswer {
   /// [QuestionnaireResponseAnswer] A structured set of questions and their
   ///  answers. The questions are ordered and grouped into coherent subsets,
@@ -4583,7 +4582,7 @@ class QuestionnaireResponseAnswer {
   ///
   /// [item] Nested groups and/or questions found within this particular answer.
   ///
-  factory QuestionnaireResponseAnswer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4672,11 +4671,11 @@ class QuestionnaireResponseAnswer {
 
     /// [item] Nested groups and/or questions found within this particular answer.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseAnswer;
+  
 }
 
 /// [Specimen] A sample to be used for analysis.
-@freezed
+
 class Specimen {
   /// [Specimen] A sample to be used for analysis.
 
@@ -4791,7 +4790,7 @@ class Specimen {
   ///  the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
   ///
-  factory Specimen({
+  
     /// [resourceType] This is a Specimen resource
     @Default(R5ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R5ResourceType.Specimen)
@@ -4889,11 +4888,11 @@ class Specimen {
 
     /// [note] To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).
     List<Annotation>? note,
-  }) = _Specimen;
+  
 }
 
 /// [SpecimenFeature] A sample to be used for analysis.
-@freezed
+
 class SpecimenFeature {
   /// [SpecimenFeature] A sample to be used for analysis.
 
@@ -4929,7 +4928,7 @@ class SpecimenFeature {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory SpecimenFeature({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4964,11 +4963,11 @@ class SpecimenFeature {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _SpecimenFeature;
+  
 }
 
 /// [SpecimenCollection] A sample to be used for analysis.
-@freezed
+
 class SpecimenCollection {
   /// [SpecimenCollection] A sample to be used for analysis.
 
@@ -5035,7 +5034,7 @@ class SpecimenCollection {
   /// [fastingStatusDuration] Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
   ///
-  factory SpecimenCollection({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5097,11 +5096,11 @@ class SpecimenCollection {
 
     /// [fastingStatusDuration] Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.
     FhirDuration? fastingStatusDuration,
-  }) = _SpecimenCollection;
+  
 }
 
 /// [SpecimenProcessing] A sample to be used for analysis.
-@freezed
+
 class SpecimenProcessing {
   /// [SpecimenProcessing] A sample to be used for analysis.
 
@@ -5149,7 +5148,7 @@ class SpecimenProcessing {
   ///  occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
   ///
-  factory SpecimenProcessing({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5196,11 +5195,11 @@ class SpecimenProcessing {
 
     /// [timePeriod] A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.
     Period? timePeriod,
-  }) = _SpecimenProcessing;
+  
 }
 
 /// [SpecimenContainer] A sample to be used for analysis.
-@freezed
+
 class SpecimenContainer {
   /// [SpecimenContainer] A sample to be used for analysis.
 
@@ -5240,7 +5239,7 @@ class SpecimenContainer {
   ///  volume, dimensions, or other appropriate measurements, depending on the
   ///  specimen type.
   ///
-  factory SpecimenContainer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5275,5 +5274,5 @@ class SpecimenContainer {
 
     /// [specimenQuantity] The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.
     Quantity? specimenQuantity,
-  }) = _SpecimenContainer;
+  
 }

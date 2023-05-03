@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'workflow1.enums.dart';
-part 'workflow1.freezed.dart';
+
 part 'workflow1.g.dart';
 
-@freezed
 class Order {
-  factory Order({
+  
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
         Dstu2ResourceType resourceType,
@@ -35,24 +34,22 @@ class Order {
     Reference? reasonReference,
     OrderWhen? when,
     required List<Reference> detail,
-  }) = _Order;
+  
 }
 
-@freezed
 class OrderWhen {
-  factory OrderWhen({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     CodeableConcept? code,
     Timing? schedule,
-  }) = _OrderWhen;
+  
 }
 
-@freezed
 class OrderResponse {
-  factory OrderResponse({
+  
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
         Dstu2ResourceType resourceType,
@@ -73,12 +70,11 @@ class OrderResponse {
     @JsonKey(name: '_orderStatus') Element? orderStatusElement,
     String? description,
     List<Reference>? fulfillment,
-  }) = _OrderResponse;
+  
 }
 
-@freezed
 class CommunicationRequest {
-  factory CommunicationRequest({
+  
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
         Dstu2ResourceType resourceType,
@@ -110,12 +106,11 @@ class CommunicationRequest {
     Reference? subject,
     CodeableConcept? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
-  }) = _CommunicationRequest;
+  
 }
 
-@freezed
 class CommunicationRequestPayload {
-  factory CommunicationRequestPayload({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -123,12 +118,11 @@ class CommunicationRequestPayload {
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationRequestPayload;
+  
 }
 
-@freezed
 class DeviceUseRequest {
-  factory DeviceUseRequest({
+  
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
         Dstu2ResourceType resourceType,
@@ -162,12 +156,11 @@ class DeviceUseRequest {
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
         DeviceUseRequestPriority? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
-  }) = _DeviceUseRequest;
+  
 }
 
-@freezed
 class DeviceUseStatement {
-  factory DeviceUseStatement({
+  
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
         Dstu2ResourceType resourceType,
@@ -195,5 +188,5 @@ class DeviceUseStatement {
     Period? timingPeriod,
     FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-  }) = _DeviceUseStatement;
+  
 }

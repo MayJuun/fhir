@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'billing.enums.dart';
-part 'billing.freezed.dart';
+
 part 'billing.g.dart';
 
-@freezed
 class Claim {
-  factory Claim({
+  
     @Default(Stu3ResourceType.Claim)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
         Stu3ResourceType resourceType,
@@ -61,29 +60,26 @@ class Claim {
     Period? hospitalization,
     List<ClaimItem>? item,
     Money? total,
-  }) = _Claim;
+  
 }
 
-@freezed
 class ClaimRelated {
-  factory ClaimRelated({
+  
     Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
-  }) = _ClaimRelated;
+  
 }
 
-@freezed
 class ClaimPayee {
-  factory ClaimPayee({
+  
     required CodeableConcept type,
     Reference? party,
-  }) = _ClaimPayee;
+  
 }
 
-@freezed
 class ClaimCareTeam {
-  factory ClaimCareTeam({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference provider,
@@ -91,12 +87,11 @@ class ClaimCareTeam {
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
     CodeableConcept? qualification,
-  }) = _ClaimCareTeam;
+  
 }
 
-@freezed
 class ClaimInformation {
-  factory ClaimInformation({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept category,
@@ -110,36 +105,33 @@ class ClaimInformation {
     Attachment? valueAttachment,
     Reference? valueReference,
     CodeableConcept? reason,
-  }) = _ClaimInformation;
+  
 }
 
-@freezed
 class ClaimDiagnosis {
-  factory ClaimDiagnosis({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
     List<CodeableConcept>? type,
     CodeableConcept? packageCode,
-  }) = _ClaimDiagnosis;
+  
 }
 
-@freezed
 class ClaimProcedure {
-  factory ClaimProcedure({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
-  }) = _ClaimProcedure;
+  
 }
 
-@freezed
 class ClaimInsurance {
-  factory ClaimInsurance({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
@@ -150,23 +142,21 @@ class ClaimInsurance {
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
     Reference? claimResponse,
-  }) = _ClaimInsurance;
+  
 }
 
-@freezed
 class ClaimAccident {
-  factory ClaimAccident({
+  
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
     Reference? locationReference,
-  }) = _ClaimAccident;
+  
 }
 
-@freezed
 class ClaimItem {
-  factory ClaimItem({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
@@ -199,12 +189,11 @@ class ClaimItem {
     List<CodeableConcept>? subSite,
     List<Reference>? encounter,
     List<ClaimDetail>? detail,
-  }) = _ClaimItem;
+  
 }
 
-@freezed
 class ClaimDetail {
-  factory ClaimDetail({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
@@ -219,12 +208,11 @@ class ClaimDetail {
     Money? net,
     List<Reference>? udi,
     List<ClaimSubDetail>? subDetail,
-  }) = _ClaimDetail;
+  
 }
 
-@freezed
 class ClaimSubDetail {
-  factory ClaimSubDetail({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
@@ -238,12 +226,11 @@ class ClaimSubDetail {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
-  }) = _ClaimSubDetail;
+  
 }
 
-@freezed
 class ClaimResponse {
-  factory ClaimResponse({
+  
     @Default(Stu3ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
         Stu3ResourceType resourceType,
@@ -283,58 +270,53 @@ class ClaimResponse {
     List<ClaimResponseProcessNote>? processNote,
     List<Reference>? communicationRequest,
     List<ClaimResponseInsurance>? insurance,
-  }) = _ClaimResponse;
+  
 }
 
-@freezed
 class ClaimResponseItem {
-  factory ClaimResponseItem({
+  
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseDetail>? detail,
-  }) = _ClaimResponseItem;
+  
 }
 
-@freezed
 class ClaimResponseAdjudication {
-  factory ClaimResponseAdjudication({
+  
     required CodeableConcept category,
     CodeableConcept? reason,
     Money? amount,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ClaimResponseAdjudication;
+  
 }
 
-@freezed
 class ClaimResponseDetail {
-  factory ClaimResponseDetail({
+  
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseSubDetail>? subDetail,
-  }) = _ClaimResponseDetail;
+  
 }
 
-@freezed
 class ClaimResponseSubDetail {
-  factory ClaimResponseSubDetail({
+  
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseSubDetail;
+  
 }
 
-@freezed
 class ClaimResponseAddItem {
-  factory ClaimResponseAddItem({
+  
     List<Id>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
@@ -346,12 +328,11 @@ class ClaimResponseAddItem {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseDetail1>? detail,
-  }) = _ClaimResponseAddItem;
+  
 }
 
-@freezed
 class ClaimResponseDetail1 {
-  factory ClaimResponseDetail1({
+  
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
@@ -360,12 +341,11 @@ class ClaimResponseDetail1 {
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseDetail1;
+  
 }
 
-@freezed
 class ClaimResponseError {
-  factory ClaimResponseError({
+  
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     Id? detailSequenceLinkId,
@@ -375,12 +355,11 @@ class ClaimResponseError {
     @JsonKey(name: '_subdetailSequenceLinkId')
         Element? subdetailSequenceLinkIdElement,
     required CodeableConcept code,
-  }) = _ClaimResponseError;
+  
 }
 
-@freezed
 class ClaimResponsePayment {
-  factory ClaimResponsePayment({
+  
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
@@ -388,24 +367,22 @@ class ClaimResponsePayment {
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
     Identifier? identifier,
-  }) = _ClaimResponsePayment;
+  
 }
 
-@freezed
 class ClaimResponseProcessNote {
-  factory ClaimResponseProcessNote({
+  
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     CodeableConcept? language,
-  }) = _ClaimResponseProcessNote;
+  
 }
 
-@freezed
 class ClaimResponseInsurance {
-  factory ClaimResponseInsurance({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
@@ -416,5 +393,5 @@ class ClaimResponseInsurance {
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
     Reference? claimResponse,
-  }) = _ClaimResponseInsurance;
+  
 }

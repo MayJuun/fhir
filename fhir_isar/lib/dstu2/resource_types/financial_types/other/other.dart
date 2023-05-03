@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'other.enums.dart';
-part 'other.freezed.dart';
+
 part 'other.g.dart';
 
-@freezed
 class ExplanationOfBenefit {
-  factory ExplanationOfBenefit({
+  
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
         Dstu2ResourceType resourceType,
@@ -42,5 +41,5 @@ class ExplanationOfBenefit {
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-  }) = _ExplanationOfBenefit;
+  
 }

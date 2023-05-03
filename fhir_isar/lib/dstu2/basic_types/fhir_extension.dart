@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../dstu2.dart';
 
-part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
-@freezed
 class FhirExtension {
-  factory FhirExtension({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirUri url,
@@ -67,5 +65,5 @@ class FhirExtension {
     Timing? valueTiming,
     Reference? valueReference,
     Meta? valueMeta,
-  }) = _FhirExtension;
+  
 }

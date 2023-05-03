@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'exchange.enums.dart';
-part 'exchange.freezed.dart';
+
 part 'exchange.g.dart';
 
-@freezed
 class MessageHeader {
-  factory MessageHeader({
+  
     @Default(Dstu2ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
         Dstu2ResourceType resourceType,
@@ -39,12 +38,11 @@ class MessageHeader {
     Reference? responsible,
     CodeableConcept? reason,
     List<Reference>? data,
-  }) = _MessageHeader;
+  
 }
 
-@freezed
 class MessageHeaderResponse {
-  factory MessageHeaderResponse({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -53,12 +51,11 @@ class MessageHeaderResponse {
     @JsonKey(unknownEnumValue: ResponseCode.unknown) required ResponseCode code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
-  }) = _MessageHeaderResponse;
+  
 }
 
-@freezed
 class MessageHeaderSource {
-  factory MessageHeaderSource({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -71,12 +68,11 @@ class MessageHeaderSource {
     ContactPoint? contact,
     required FhirUri endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
-  }) = _MessageHeaderSource;
+  
 }
 
-@freezed
 class MessageHeaderDestination {
-  factory MessageHeaderDestination({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -85,12 +81,11 @@ class MessageHeaderDestination {
     Reference? target,
     required FhirUri endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
-  }) = _MessageHeaderDestination;
+  
 }
 
-@freezed
 class OperationOutcome {
-  factory OperationOutcome({
+  
     @Default(Dstu2ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
         Dstu2ResourceType resourceType,
@@ -106,12 +101,11 @@ class OperationOutcome {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<OperationOutcomeIssue> issue,
-  }) = _OperationOutcome;
+  
 }
 
-@freezed
 class OperationOutcomeIssue {
-  factory OperationOutcomeIssue({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -121,12 +115,11 @@ class OperationOutcomeIssue {
     CodeableConcept? details,
     String? diagnostics,
     List<String>? location,
-  }) = _OperationOutcomeIssue;
+  
 }
 
-@freezed
 class Parameters {
-  factory Parameters({
+  
     @Default(Dstu2ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
         Dstu2ResourceType resourceType,
@@ -137,12 +130,11 @@ class Parameters {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     List<ParametersParameter>? parameter,
-  }) = _Parameters;
+  
 }
 
-@freezed
 class ParametersParameter {
-  factory ParametersParameter({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -183,12 +175,11 @@ class ParametersParameter {
     Reference? valueReference,
     Resource? resource,
     @JsonKey(name: 'part') List<ParametersParameter>? part_,
-  }) = _ParametersParameter;
+  
 }
 
-@freezed
 class Subscription {
-  factory Subscription({
+  
     @Default(Dstu2ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
         Dstu2ResourceType resourceType,
@@ -216,12 +207,11 @@ class Subscription {
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
     List<Coding>? tag,
-  }) = _Subscription;
+  
 }
 
-@freezed
 class SubscriptionChannel {
-  factory SubscriptionChannel({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -233,5 +223,5 @@ class SubscriptionChannel {
     @JsonKey(name: '_payload') Element? payloadElement,
     String? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
-  }) = _SubscriptionChannel;
+  
 }

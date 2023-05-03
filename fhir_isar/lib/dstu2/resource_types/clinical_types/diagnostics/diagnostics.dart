@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'diagnostics.enums.dart';
-part 'diagnostics.freezed.dart';
+
 part 'diagnostics.g.dart';
 
-@freezed
 class Observation {
-  factory Observation({
+  
     @Default(Dstu2ResourceType.Observation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
         Dstu2ResourceType resourceType,
@@ -66,12 +65,11 @@ class Observation {
     List<ObservationReferenceRange>? referenceRange,
     List<ObservationRelated>? related,
     List<ObservationComponent>? component,
-  }) = _Observation;
+  
 }
 
-@freezed
 class ObservationReferenceRange {
-  factory ObservationReferenceRange({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -82,24 +80,22 @@ class ObservationReferenceRange {
     Range? age,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ObservationReferenceRange;
+  
 }
 
-@freezed
 class ObservationRelated {
-  factory ObservationRelated({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType? type,
     required Reference target,
-  }) = _ObservationRelated;
+  
 }
 
-@freezed
 class ObservationComponent {
-  factory ObservationComponent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -120,12 +116,11 @@ class ObservationComponent {
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
     List<ObservationReferenceRange>? referenceRange,
-  }) = _ObservationComponent;
+  
 }
 
-@freezed
 class DiagnosticReport {
-  factory DiagnosticReport({
+  
     @Default(Dstu2ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
         Dstu2ResourceType resourceType,
@@ -162,24 +157,22 @@ class DiagnosticReport {
     @JsonKey(name: '_conclusion') Element? conclusionElement,
     List<CodeableConcept>? codedDiagnosis,
     List<Attachment>? presentedForm,
-  }) = _DiagnosticReport;
+  
 }
 
-@freezed
 class DiagnosticReportImage {
-  factory DiagnosticReportImage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required Reference link,
-  }) = _DiagnosticReportImage;
+  
 }
 
-@freezed
 class DiagnosticOrder {
-  factory DiagnosticOrder({
+  
     @Default(Dstu2ResourceType.DiagnosticOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
         Dstu2ResourceType resourceType,
@@ -205,12 +198,11 @@ class DiagnosticOrder {
     List<DiagnosticOrderEvent>? event,
     List<DiagnosticOrderItem>? item,
     List<Annotation>? note,
-  }) = _DiagnosticOrder;
+  
 }
 
-@freezed
 class DiagnosticOrderEvent {
-  factory DiagnosticOrderEvent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -218,12 +210,11 @@ class DiagnosticOrderEvent {
     CodeableConcept? description,
     required FhirDateTime dateTime,
     Reference? actor,
-  }) = _DiagnosticOrderEvent;
+  
 }
 
-@freezed
 class DiagnosticOrderItem {
-  factory DiagnosticOrderItem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -232,12 +223,11 @@ class DiagnosticOrderItem {
     CodeableConcept? bodySite,
     @JsonKey(unknownEnumValue: ItemStatus.unknown) ItemStatus? status,
     List<DiagnosticOrderEvent>? event,
-  }) = _DiagnosticOrderItem;
+  
 }
 
-@freezed
 class Specimen {
-  factory Specimen({
+  
     @Default(Dstu2ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
         Dstu2ResourceType resourceType,
@@ -263,12 +253,11 @@ class Specimen {
     SpecimenCollection? collection,
     List<SpecimenTreatment>? treatment,
     List<SpecimenContainer>? container,
-  }) = _Specimen;
+  
 }
 
-@freezed
 class SpecimenCollection {
-  factory SpecimenCollection({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -281,24 +270,22 @@ class SpecimenCollection {
     Quantity? quantity,
     CodeableConcept? method,
     CodeableConcept? bodySite,
-  }) = _SpecimenCollection;
+  
 }
 
-@freezed
 class SpecimenTreatment {
-  factory SpecimenTreatment({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
     CodeableConcept? procedure,
     List<Reference>? additive,
-  }) = _SpecimenTreatment;
+  
 }
 
-@freezed
 class SpecimenContainer {
-  factory SpecimenContainer({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -310,12 +297,11 @@ class SpecimenContainer {
     Quantity? specimenQuantity,
     CodeableConcept? additiveCodeableConcept,
     Reference? additiveReference,
-  }) = _SpecimenContainer;
+  
 }
 
-@freezed
 class BodySite {
-  factory BodySite({
+  
     @Default(Dstu2ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
         Dstu2ResourceType resourceType,
@@ -333,12 +319,11 @@ class BodySite {
     List<CodeableConcept>? modifier,
     String? description,
     List<Attachment>? image,
-  }) = _BodySite;
+  
 }
 
-@freezed
 class ImagingStudy {
-  factory ImagingStudy({
+  
     @Default(Dstu2ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
         Dstu2ResourceType resourceType,
@@ -373,12 +358,11 @@ class ImagingStudy {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<ImagingStudySeries>? series,
-  }) = _ImagingStudy;
+  
 }
 
-@freezed
 class ImagingStudySeries {
-  factory ImagingStudySeries({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -399,12 +383,11 @@ class ImagingStudySeries {
     FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
     List<ImagingStudySeriesInstance>? instance,
-  }) = _ImagingStudySeries;
+  
 }
 
-@freezed
 class ImagingStudySeriesInstance {
-  factory ImagingStudySeriesInstance({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -417,12 +400,11 @@ class ImagingStudySeriesInstance {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     List<Attachment>? content,
-  }) = _ImagingStudySeriesInstance;
+  
 }
 
-@freezed
 class ImagingObjectSelection {
-  factory ImagingObjectSelection({
+  
     @Default(Dstu2ResourceType.ImagingObjectSelection)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
         Dstu2ResourceType resourceType,
@@ -441,12 +423,11 @@ class ImagingObjectSelection {
     Reference? author,
     FhirDateTime? authoringTime,
     required List<ImagingObjectSelectionStudy> study,
-  }) = _ImagingObjectSelection;
+  
 }
 
-@freezed
 class ImagingObjectSelectionStudy {
-  factory ImagingObjectSelectionStudy({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -455,13 +436,12 @@ class ImagingObjectSelectionStudy {
     Reference? imagingStudy,
     @JsonKey(required: true)
         required List<ImagingObjectSelectionStudySeries> series,
-  }) = _ImagingObjectSelectionStudy;
+  
 }
 
-@freezed
 class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
-  factory ImagingObjectSelectionStudySeries({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -469,7 +449,7 @@ class ImagingObjectSelectionStudySeries
     FhirUri? url,
     @JsonKey(required: true)
         required List<ImagingObjectSelectionSeriesInstance> instance,
-  }) = _ImagingObjectSelectionStudySeries;
+  
 
   String toYaml() => json2yaml(toJson());
 
@@ -489,10 +469,9 @@ class ImagingObjectSelectionStudySeries
       _$ImagingObjectSelectionStudySeriesFromJson(json);
 }
 
-@freezed
 class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
-  factory ImagingObjectSelectionSeriesInstance({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -500,7 +479,7 @@ class ImagingObjectSelectionSeriesInstance
     required Oid uid,
     required FhirUri url,
     List<ImagingObjectSelectionInstanceFrames>? frames,
-  }) = _ImagingObjectSelectionSeriesInstance;
+  
 
   String toYaml() => json2yaml(toJson());
 
@@ -520,16 +499,15 @@ class ImagingObjectSelectionSeriesInstance
       _$ImagingObjectSelectionSeriesInstanceFromJson(json);
 }
 
-@freezed
 class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
-  factory ImagingObjectSelectionInstanceFrames({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExte,
     required List<UnsignedInt> frameNumbers,
     required FhirUri url,
-  }) = _ImagingObjectSelectionInstanceFrames;
+  
 
   String toYaml() => json2yaml(toJson());
 

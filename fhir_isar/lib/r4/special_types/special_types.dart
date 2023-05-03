@@ -2,19 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r4.dart';
 
 part 'special_types.enums.dart';
-part 'special_types.freezed.dart';
+
 part 'special_types.g.dart';
 
 /// [Narrative] A human-readable summary of the resource conveying the essential
 /// clinical and business information for the resource.
-@freezed
+
 class Narrative {
   /// [Narrative] A human-readable summary of the resource conveying the essential
   /// clinical and business information for the resource.
@@ -39,7 +39,7 @@ class Narrative {
   /// [statusElement] (_status) Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
-  factory Narrative({
+  
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.
     String? id,
@@ -62,13 +62,12 @@ class Narrative {
 
     /// [div] The actual narrative content, a stripped down version of XHTML.
     required String div,
-  }) = _Narrative;
+  
 }
 
 /// [CodeableReference] A reference to a resource (by instance), or instead, a
 /// reference to a concept defined in a terminology or ontology (by class).
 
-@freezed
 class CodeableReference {
   /// [CodeableReference] A reference to a resource (by instance), or instead, a
   /// reference to a concept defined in a terminology or ontology (by class).
@@ -91,7 +90,7 @@ class CodeableReference {
   ///
   /// [reference] A reference to a resource the provides exact details about the
   /// information being referenced.
-  factory CodeableReference({
+  
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.",
     String? id,
@@ -111,11 +110,11 @@ class CodeableReference {
     /// [reference] A reference to a resource the provides exact details about the
     /// information being referenced.
     Reference? reference,
-  }) = _CodeableReference;
+  
 }
 
 /// [Reference] A reference from one resource to another.
-@freezed
+
 class Reference {
   /// [Reference] A reference from one resource to another.
 
@@ -167,7 +166,7 @@ class Reference {
   ///  to the resource reference.
   ///
   /// [displayElement] Extensions for display
-  factory Reference({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -223,11 +222,11 @@ class Reference {
 
     /// [displayElement] Extensions for display
     @JsonKey(name: '_display') Element? displayElement,
-  }) = _Reference;
+  
 }
 
 /// [Meta] The metadata about a resource. This is content in the resource
-@freezed
+
 class Meta {
   /// [Meta] The metadata about a resource. This is content in the resource
 
@@ -275,7 +274,7 @@ class Meta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
-  factory Meta({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -327,11 +326,11 @@ class Meta {
     /// are not required to consider the tags when interpreting the meaning of a
     ///  resource.
     List<Coding>? tag,
-  }) = _Meta;
+  
 }
 
 /// [Dosage] Indicates how the medication is/was taken or should be taken by
-@freezed
+
 class Dosage {
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
 
@@ -407,7 +406,7 @@ class Dosage {
   ///
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
-  factory Dosage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -498,11 +497,11 @@ class Dosage {
     /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
     ///  patient.
     Quantity? maxDosePerLifetime,
-  }) = _Dosage;
+  
 }
 
 /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
-@freezed
+
 class DosageDoseAndRate {
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
 
@@ -545,7 +544,7 @@ class DosageDoseAndRate {
   /// [rateRange] Amount of medication per unit of time.
   ///
   /// [rateQuantity] Amount of medication per unit of time.
-  factory DosageDoseAndRate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -591,11 +590,11 @@ class DosageDoseAndRate {
 
     /// [rateQuantity] Amount of medication per unit of time.
     Quantity? rateQuantity,
-  }) = _DosageDoseAndRate;
+  
 }
 
 /// [ElementDefinition] Captures constraints on each element within the
-@freezed
+
 class ElementDefinition {
   /// [ElementDefinition] Captures constraints on each element within the
 
@@ -2247,7 +2246,7 @@ class ElementDefinition {
   ///
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
-  factory ElementDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4285,11 +4284,11 @@ class ElementDefinition {
     /// [mapping] Identifies a concept from an external specification that
     ///  roughly corresponds to this element.
     List<ElementDefinitionMapping>? mapping,
-  }) = _ElementDefinition;
+  
 }
 
 /// [ElementDefinitionSlicing] Captures constraints on each element within
-@freezed
+
 class ElementDefinitionSlicing {
   /// [ElementDefinitionSlicing] Captures constraints on each element within
 
@@ -4344,7 +4343,7 @@ class ElementDefinitionSlicing {
   ///  allowed at the end.
   ///
   /// [rulesElement] Extensions for rules
-  factory ElementDefinitionSlicing({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4408,11 +4407,11 @@ class ElementDefinitionSlicing {
     /// [rulesElement] Extensions for rules
     @JsonKey(name: '_rules')
         Element? rulesElement,
-  }) = _ElementDefinitionSlicing;
+  
 }
 
 /// [ElementDefinitionDiscriminator] Captures constraints on each element
-@freezed
+
 class ElementDefinitionDiscriminator {
   /// [ElementDefinitionDiscriminator] Captures constraints on each element
 
@@ -4453,7 +4452,7 @@ class ElementDefinitionDiscriminator {
   ///  which discrimination is based.
   ///
   /// [pathElement] Extensions for path
-  factory ElementDefinitionDiscriminator({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4499,11 +4498,11 @@ class ElementDefinitionDiscriminator {
     /// [pathElement] Extensions for path
     @JsonKey(name: '_path')
         Element? pathElement,
-  }) = _ElementDefinitionDiscriminator;
+  
 }
 
 /// [ElementDefinitionBase] Captures constraints on each element within the
-@freezed
+
 class ElementDefinitionBase {
   /// [ElementDefinitionBase] Captures constraints on each element within the
 
@@ -4548,7 +4547,7 @@ class ElementDefinitionBase {
   /// [max] Maximum cardinality of the base element identified by the path.
   ///
   /// [maxElement] Extensions for max
-  factory ElementDefinitionBase({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4596,11 +4595,11 @@ class ElementDefinitionBase {
 
     /// [maxElement] Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
-  }) = _ElementDefinitionBase;
+  
 }
 
 /// [ElementDefinitionType] Captures constraints on each element within the
-@freezed
+
 class ElementDefinitionType {
   /// [ElementDefinitionType] Captures constraints on each element within the
 
@@ -4667,7 +4666,7 @@ class ElementDefinitionType {
   ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] Extensions for versioning
-  factory ElementDefinitionType({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4746,11 +4745,11 @@ class ElementDefinitionType {
     /// [versioningElement] Extensions for versioning
     @JsonKey(name: '_versioning')
         Element? versioningElement,
-  }) = _ElementDefinitionType;
+  
 }
 
 /// [ElementDefinitionExample] Captures constraints on each element within
-@freezed
+
 class ElementDefinitionExample {
   /// [ElementDefinitionExample] Captures constraints on each element within
 
@@ -4972,7 +4971,7 @@ class ElementDefinitionExample {
   ///
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  factory ElementDefinitionExample({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5264,11 +5263,11 @@ class ElementDefinitionExample {
     /// [valueMeta] The actual value for the element, which must be one of the
     ///  types allowed for this element.
     Meta? valueMeta,
-  }) = _ElementDefinitionExample;
+  
 }
 
 /// [ElementDefinitionConstraint] Captures constraints on each element
-@freezed
+
 class ElementDefinitionConstraint {
   /// [ElementDefinitionConstraint] Captures constraints on each element
 
@@ -5332,7 +5331,7 @@ class ElementDefinitionConstraint {
   ///
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  factory ElementDefinitionConstraint({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5414,11 +5413,11 @@ class ElementDefinitionConstraint {
     /// [source] A reference to the original source of the constraint, for
     ///  traceability purposes.
     Canonical? source,
-  }) = _ElementDefinitionConstraint;
+  
 }
 
 /// [ElementDefinitionBinding] Captures constraints on each element within
-@freezed
+
 class ElementDefinitionBinding {
   /// [ElementDefinitionBinding] Captures constraints on each element within
 
@@ -5461,7 +5460,7 @@ class ElementDefinitionBinding {
   ///
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  factory ElementDefinitionBinding({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5510,11 +5509,11 @@ class ElementDefinitionBinding {
     /// [valueSet] Refers to the value set that identifies the set of codes the
     ///  binding refers to.
     Canonical? valueSet,
-  }) = _ElementDefinitionBinding;
+  
 }
 
 /// [ElementDefinitionMapping] Captures constraints on each element within
-@freezed
+
 class ElementDefinitionMapping {
   /// [ElementDefinitionMapping] Captures constraints on each element within
 
@@ -5562,7 +5561,7 @@ class ElementDefinitionMapping {
   /// [comment] Comments that provide information about the mapping or its use.
   ///
   /// [commentElement] Extensions for comment
-  factory ElementDefinitionMapping({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5615,5 +5614,5 @@ class ElementDefinitionMapping {
 
     /// [commentElement] Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _ElementDefinitionMapping;
+  
 }

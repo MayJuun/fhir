@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
-@freezed
 class Endpoint {
-  factory Endpoint({
+  
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
         R5ResourceType resourceType,
@@ -46,12 +44,11 @@ class Endpoint {
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
     @JsonKey(name: '_header') List<Element>? headerElement,
-  }) = _Endpoint;
+  
 }
 
-@freezed
 class HealthcareService {
-  factory HealthcareService({
+  
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
         R5ResourceType resourceType,
@@ -93,24 +90,22 @@ class HealthcareService {
     @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
     List<Availability>? availability,
     List<Reference>? endpoint,
-  }) = _HealthcareService;
+  
 }
 
-@freezed
 class HealthcareServiceEligibility {
-  factory HealthcareServiceEligibility({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     Markdown? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _HealthcareServiceEligibility;
+  
 }
 
-@freezed
 class Location {
-  factory Location({
+  
     @Default(R5ResourceType.Location)
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
         R5ResourceType resourceType,
@@ -147,12 +142,11 @@ class Location {
     List<Availability>? hoursOfOperation,
     List<VirtualServiceDetail>? virtualService,
     List<Reference>? endpoint,
-  }) = _Location;
+  
 }
 
-@freezed
 class LocationPosition {
-  factory LocationPosition({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -162,12 +156,11 @@ class LocationPosition {
     @JsonKey(name: '_latitude') Element? latitudeElement,
     Decimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
-  }) = _LocationPosition;
+  
 }
 
-@freezed
 class Organization {
-  factory Organization({
+  
     @Default(R5ResourceType.Organization)
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
         R5ResourceType resourceType,
@@ -195,12 +188,11 @@ class Organization {
     Reference? partOf,
     List<Reference>? endpoint,
     List<OrganizationQualification>? qualification,
-  }) = _Organization;
+  
 }
 
-@freezed
 class OrganizationQualification {
-  factory OrganizationQualification({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -208,12 +200,11 @@ class OrganizationQualification {
     required CodeableConcept code,
     Period? period,
     Reference? issuer,
-  }) = _OrganizationQualification;
+  
 }
 
-@freezed
 class OrganizationAffiliation {
-  factory OrganizationAffiliation({
+  
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
@@ -240,5 +231,5 @@ class OrganizationAffiliation {
     List<Reference>? healthcareService,
     List<ExtendedContactDetail>? contact,
     List<Reference>? endpoint,
-  }) = _OrganizationAffiliation;
+  
 }

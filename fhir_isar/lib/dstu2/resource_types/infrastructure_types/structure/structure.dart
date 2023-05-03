@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'structure.enums.dart';
-part 'structure.freezed.dart';
+
 part 'structure.g.dart';
 
-@freezed
 class Media {
-  factory Media({
+  
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
@@ -45,12 +44,11 @@ class Media {
     UnsignedInt? duration,
     @JsonKey(name: '_duration') Element? durationElement,
     required Attachment content,
-  }) = _Media;
+  
 }
 
-@freezed
 class Binary {
-  factory Binary({
+  
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
@@ -63,12 +61,11 @@ class Binary {
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     Base64Binary? content,
-  }) = _Binary;
+  
 }
 
-@freezed
 class Bundle {
-  factory Bundle({
+  
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
@@ -85,12 +82,11 @@ class Bundle {
     List<BundleLink>? link,
     List<BundleEntry>? entry,
     Signature? signature,
-  }) = _Bundle;
+  
 }
 
-@freezed
 class BundleLink {
-  factory BundleLink({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -99,12 +95,11 @@ class BundleLink {
     @JsonKey(name: '_relation') Element? relationElement,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _BundleLink;
+  
 }
 
-@freezed
 class BundleEntry {
-  factory BundleEntry({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -116,12 +111,11 @@ class BundleEntry {
     BundleEntrySearch? search,
     BundleEntryRequest? request,
     BundleEntryResponse? response,
-  }) = _BundleEntry;
+  
 }
 
-@freezed
 class BundleEntrySearch {
-  factory BundleEntrySearch({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -130,12 +124,11 @@ class BundleEntrySearch {
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
-  }) = _BundleEntrySearch;
+  
 }
 
-@freezed
 class BundleEntryRequest {
-  factory BundleEntryRequest({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -153,12 +146,11 @@ class BundleEntryRequest {
     @JsonKey(name: '_ifMatch') Element? ifMatchElement,
     String? ifNoneExist,
     @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
-  }) = _BundleEntryRequest;
+  
 }
 
-@freezed
 class BundleEntryResponse {
-  factory BundleEntryResponse({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -171,12 +163,11 @@ class BundleEntryResponse {
     @JsonKey(name: '_etag') Element? etagElement,
     Instant? lastModified,
     @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-  }) = _BundleEntryResponse;
+  
 }
 
-@freezed
 class Basic {
-  factory Basic({
+  
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,
@@ -196,5 +187,5 @@ class Basic {
     Reference? author,
     Date? created,
     @JsonKey(name: '_created') Element? createdElement,
-  }) = _Basic;
+  
 }

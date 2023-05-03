@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'billing.freezed.dart';
 part 'billing.g.dart';
 
 /// [Claim] A provider issued list of professional services and products which
 ///  have been provided, or are to be provided, to a patient which is sent to
 ///  an insurer for reimbursement.
-@freezed
+
 class Claim {
   /// [Claim] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -186,7 +185,7 @@ class Claim {
   ///
   /// [total] The total value of the all the items in the claim.
   ///
-  factory Claim({
+  
     /// [resourceType] This is a Claim resource
     @Default(R5ResourceType.Claim)
     @JsonKey(unknownEnumValue: R5ResourceType.Claim)
@@ -326,13 +325,13 @@ class Claim {
 
     /// [total] The total value of the all the items in the claim.
     Money? total,
-  }) = _Claim;
+  
 }
 
 /// [ClaimRelated] A provider issued list of professional services and products
 ///  which have been provided, or are to be provided, to a patient which is
 ///  sent to an insurer for reimbursement.
-@freezed
+
 class ClaimRelated {
   /// [ClaimRelated] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -373,7 +372,7 @@ class ClaimRelated {
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   ///
-  factory ClaimRelated({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -408,13 +407,13 @@ class ClaimRelated {
 
     /// [reference] An alternate organizational reference to the case or file to which this particular claim pertains.
     Identifier? reference,
-  }) = _ClaimRelated;
+  
 }
 
 /// [ClaimPayee] A provider issued list of professional services and products
 ///  which have been provided, or are to be provided, to a patient which is
 ///  sent to an insurer for reimbursement.
-@freezed
+
 class ClaimPayee {
   /// [ClaimPayee] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -453,7 +452,7 @@ class ClaimPayee {
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
   ///
-  factory ClaimPayee({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -485,13 +484,13 @@ class ClaimPayee {
 
     /// [party] Reference to the individual or organization to whom any payment will be made.
     Reference? party,
-  }) = _ClaimPayee;
+  
 }
 
 /// [ClaimCareTeam] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimCareTeam {
   /// [ClaimCareTeam] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -542,7 +541,7 @@ class ClaimCareTeam {
   /// [specialty] The specialization of the practitioner or provider which is
   ///  applicable for this service.
   ///
-  factory ClaimCareTeam({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -589,13 +588,13 @@ class ClaimCareTeam {
 
     /// [specialty] The specialization of the practitioner or provider which is applicable for this service.
     CodeableConcept? specialty,
-  }) = _ClaimCareTeam;
+  
 }
 
 /// [ClaimSupportingInfo] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimSupportingInfo {
   /// [ClaimSupportingInfo] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -677,7 +676,7 @@ class ClaimSupportingInfo {
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   ///
-  factory ClaimSupportingInfo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -751,13 +750,13 @@ class ClaimSupportingInfo {
 
     /// [reason] Provides the reason in the situation where a reason code is required in addition to the content.
     CodeableConcept? reason,
-  }) = _ClaimSupportingInfo;
+  
 }
 
 /// [ClaimDiagnosis] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimDiagnosis {
   /// [ClaimDiagnosis] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -806,7 +805,7 @@ class ClaimDiagnosis {
   /// [onAdmission] Indication of whether the diagnosis was present on
   ///  admission to a facility.
   ///
-  factory ClaimDiagnosis({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -850,13 +849,13 @@ class ClaimDiagnosis {
 
     /// [onAdmission] Indication of whether the diagnosis was present on admission to a facility.
     CodeableConcept? onAdmission,
-  }) = _ClaimDiagnosis;
+  
 }
 
 /// [ClaimProcedure] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimProcedure {
   /// [ClaimProcedure] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -908,7 +907,7 @@ class ClaimProcedure {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  factory ClaimProcedure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -958,13 +957,13 @@ class ClaimProcedure {
 
     /// [udi] Unique Device Identifiers associated with this line item.
     List<Reference>? udi,
-  }) = _ClaimProcedure;
+  
 }
 
 /// [ClaimInsurance] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimInsurance {
   /// [ClaimInsurance] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1031,7 +1030,7 @@ class ClaimInsurance {
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   ///
-  factory ClaimInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1090,13 +1089,13 @@ class ClaimInsurance {
 
     /// [claimResponse] The result of the adjudication of the line items for the Coverage specified in this insurance.
     Reference? claimResponse,
-  }) = _ClaimInsurance;
+  
 }
 
 /// [ClaimAccident] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimAccident {
   /// [ClaimAccident] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1143,7 +1142,7 @@ class ClaimAccident {
   ///
   /// [locationReference] The physical location of the accident event.
   ///
-  factory ClaimAccident({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1184,13 +1183,13 @@ class ClaimAccident {
 
     /// [locationReference] The physical location of the accident event.
     Reference? locationReference,
-  }) = _ClaimAccident;
+  
 }
 
 /// [ClaimItem] A provider issued list of professional services and products
 ///  which have been provided, or are to be provided, to a patient which is
 ///  sent to an insurer for reimbursement.
-@freezed
+
 class ClaimItem {
   /// [ClaimItem] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -1320,7 +1319,7 @@ class ClaimItem {
   /// [detail] A claim detail line. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   ///
-  factory ClaimItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1448,13 +1447,13 @@ class ClaimItem {
 
     /// [detail] A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
     List<ClaimDetail>? detail,
-  }) = _ClaimItem;
+  
 }
 
 /// [ClaimBodySite] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimBodySite {
   /// [ClaimBodySite] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1493,7 +1492,7 @@ class ClaimBodySite {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ClaimBodySite({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1525,13 +1524,13 @@ class ClaimBodySite {
 
     /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth surface(s).
     List<CodeableConcept>? subSite,
-  }) = _ClaimBodySite;
+  
 }
 
 /// [ClaimDetail] A provider issued list of professional services and products
 ///  which have been provided, or are to be provided, to a patient which is
 ///  sent to an insurer for reimbursement.
-@freezed
+
 class ClaimDetail {
   /// [ClaimDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1621,7 +1620,7 @@ class ClaimDetail {
   /// [subDetail] A claim detail line. Either a simple (a product or service)
   ///  or a 'group' of sub-details which are simple items.
   ///
-  factory ClaimDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1698,13 +1697,13 @@ class ClaimDetail {
 
     /// [subDetail] A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
     List<ClaimSubDetail>? subDetail,
-  }) = _ClaimDetail;
+  
 }
 
 /// [ClaimSubDetail] A provider issued list of professional services and
 ///  products which have been provided, or are to be provided, to a patient
 ///  which is sent to an insurer for reimbursement.
-@freezed
+
 class ClaimSubDetail {
   /// [ClaimSubDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1791,7 +1790,7 @@ class ClaimSubDetail {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  factory ClaimSubDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1865,12 +1864,12 @@ class ClaimSubDetail {
 
     /// [udi] Unique Device Identifiers associated with this line item.
     List<Reference>? udi,
-  }) = _ClaimSubDetail;
+  
 }
 
 /// [ClaimResponse] This resource provides the adjudication details from the
 ///  processing of a Claim resource.
-@freezed
+
 class ClaimResponse {
   /// [ClaimResponse] This resource provides the adjudication details from the
   ///  processing of a Claim resource.
@@ -2039,7 +2038,7 @@ class ClaimResponse {
   ///
   /// [error] Errors encountered during the processing of the adjudication.
   ///
-  factory ClaimResponse({
+  
     /// [resourceType] This is a ClaimResponse resource
     @Default(R5ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
@@ -2188,12 +2187,12 @@ class ClaimResponse {
 
     /// [error] Errors encountered during the processing of the adjudication.
     List<ClaimResponseError>? error,
-  }) = _ClaimResponse;
+  
 }
 
 /// [ClaimResponseItem] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseItem {
   /// [ClaimResponseItem] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -2245,7 +2244,7 @@ class ClaimResponseItem {
   /// [detail] A claim detail. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   ///
-  factory ClaimResponseItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2292,12 +2291,12 @@ class ClaimResponseItem {
 
     /// [detail] A claim detail. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
     List<ClaimResponseDetail>? detail,
-  }) = _ClaimResponseItem;
+  
 }
 
 /// [ClaimResponseAdjudication] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseAdjudication {
   /// [ClaimResponseAdjudication] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
@@ -2345,7 +2344,7 @@ class ClaimResponseAdjudication {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ClaimResponseAdjudication({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2386,12 +2385,12 @@ class ClaimResponseAdjudication {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ClaimResponseAdjudication;
+  
 }
 
 /// [ClaimResponseDetail] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseDetail {
   /// [ClaimResponseDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -2439,7 +2438,7 @@ class ClaimResponseDetail {
   ///
   /// [subDetail] A sub-detail adjudication of a simple product or service.
   ///
-  factory ClaimResponseDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2486,12 +2485,12 @@ class ClaimResponseDetail {
 
     /// [subDetail] A sub-detail adjudication of a simple product or service.
     List<ClaimResponseSubDetail>? subDetail,
-  }) = _ClaimResponseDetail;
+  
 }
 
 /// [ClaimResponseSubDetail] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseSubDetail {
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -2539,7 +2538,7 @@ class ClaimResponseSubDetail {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ClaimResponseSubDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2583,12 +2582,12 @@ class ClaimResponseSubDetail {
 
     /// [adjudication] The adjudication results.
     List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseSubDetail;
+  
 }
 
 /// [ClaimResponseAddItem] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseAddItem {
   /// [ClaimResponseAddItem] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -2706,7 +2705,7 @@ class ClaimResponseAddItem {
   ///
   /// [detail] The second-tier service adjudications for payor added services.
   ///
-  factory ClaimResponseAddItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2823,12 +2822,12 @@ class ClaimResponseAddItem {
 
     /// [detail] The second-tier service adjudications for payor added services.
     List<ClaimResponseDetail1>? detail,
-  }) = _ClaimResponseAddItem;
+  
 }
 
 /// [ClaimResponseBodySite] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseBodySite {
   /// [ClaimResponseBodySite] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -2865,7 +2864,7 @@ class ClaimResponseBodySite {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ClaimResponseBodySite({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2897,12 +2896,12 @@ class ClaimResponseBodySite {
 
     /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth surface(s).
     List<CodeableConcept>? subSite,
-  }) = _ClaimResponseBodySite;
+  
 }
 
 /// [ClaimResponseDetail1] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseDetail1 {
   /// [ClaimResponseDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -2984,7 +2983,7 @@ class ClaimResponseDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added services.
   ///
-  factory ClaimResponseDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3055,12 +3054,12 @@ class ClaimResponseDetail1 {
 
     /// [subDetail] The third-tier service adjudications for payor added services.
     List<ClaimResponseSubDetail1>? subDetail,
-  }) = _ClaimResponseDetail1;
+  
 }
 
 /// [ClaimResponseSubDetail1] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseSubDetail1 {
   /// [ClaimResponseSubDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -3140,7 +3139,7 @@ class ClaimResponseSubDetail1 {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ClaimResponseSubDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3208,12 +3207,12 @@ class ClaimResponseSubDetail1 {
 
     /// [adjudication] The adjudication results.
     List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseSubDetail1;
+  
 }
 
 /// [ClaimResponseTotal] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseTotal {
   /// [ClaimResponseTotal] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -3253,7 +3252,7 @@ class ClaimResponseTotal {
   ///
   /// [amount] Monetary total amount associated with the category.
   ///
-  factory ClaimResponseTotal({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3285,12 +3284,12 @@ class ClaimResponseTotal {
 
     /// [amount] Monetary total amount associated with the category.
     required Money amount,
-  }) = _ClaimResponseTotal;
+  
 }
 
 /// [ClaimResponsePayment] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponsePayment {
   /// [ClaimResponsePayment] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -3339,7 +3338,7 @@ class ClaimResponsePayment {
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
   ///
-  factory ClaimResponsePayment({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3386,12 +3385,12 @@ class ClaimResponsePayment {
 
     /// [identifier] Issuer's unique identifier for the payment instrument.
     Identifier? identifier,
-  }) = _ClaimResponsePayment;
+  
 }
 
 /// [ClaimResponseProcessNote] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseProcessNote {
   /// [ClaimResponseProcessNote] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
@@ -3437,7 +3436,7 @@ class ClaimResponseProcessNote {
   ///
   /// [language] A code to define the language used in the text of the note.
   ///
-  factory ClaimResponseProcessNote({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3484,12 +3483,12 @@ class ClaimResponseProcessNote {
 
     /// [language] A code to define the language used in the text of the note.
     CodeableConcept? language,
-  }) = _ClaimResponseProcessNote;
+  
 }
 
 /// [ClaimResponseInsurance] This resource provides the adjudication details
 ///  from the processing of a Claim resource.
-@freezed
+
 class ClaimResponseInsurance {
   /// [ClaimResponseInsurance] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -3545,7 +3544,7 @@ class ClaimResponseInsurance {
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   ///
-  factory ClaimResponseInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3595,12 +3594,12 @@ class ClaimResponseInsurance {
 
     /// [claimResponse] The result of the adjudication of the line items for the Coverage specified in this insurance.
     Reference? claimResponse,
-  }) = _ClaimResponseInsurance;
+  
 }
 
 /// [ClaimResponseError] This resource provides the adjudication details from
 ///  the processing of a Claim resource.
-@freezed
+
 class ClaimResponseError {
   /// [ClaimResponseError] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -3654,7 +3653,7 @@ class ClaimResponseError {
   /// [code] An error code, from a specified code system, which details why the
   ///  claim could not be adjudicated.
   ///
-  factory ClaimResponseError({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3701,12 +3700,12 @@ class ClaimResponseError {
 
     /// [code] An error code, from a specified code system, which details why the claim could not be adjudicated.
     required CodeableConcept code,
-  }) = _ClaimResponseError;
+  
 }
 
 /// [Invoice] Invoice containing collected ChargeItems from an Account with
 ///  calculated individual and total price for Billing purpose.
-@freezed
+
 class Invoice {
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
   ///  calculated individual and total price for Billing purpose.
@@ -3833,7 +3832,7 @@ class Invoice {
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
   ///
-  factory Invoice({
+  
     /// [resourceType] This is a Invoice resource
     @Default(R5ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R5ResourceType.Invoice)
@@ -3949,12 +3948,12 @@ class Invoice {
 
     /// [note] Comments made about the invoice by the issuer, subject, or other participants.
     List<Annotation>? note,
-  }) = _Invoice;
+  
 }
 
 /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
 ///  Account with calculated individual and total price for Billing purpose.
-@freezed
+
 class InvoiceParticipant {
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
@@ -3993,7 +3992,7 @@ class InvoiceParticipant {
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
   ///
-  factory InvoiceParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4025,12 +4024,12 @@ class InvoiceParticipant {
 
     /// [actor] The device, practitioner, etc. who performed or participated in the service.
     required Reference actor,
-  }) = _InvoiceParticipant;
+  
 }
 
 /// [InvoiceLineItem] Invoice containing collected ChargeItems from an Account
 ///  with calculated individual and total price for Billing purpose.
-@freezed
+
 class InvoiceLineItem {
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
@@ -4091,7 +4090,7 @@ class InvoiceLineItem {
   ///  The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice as to how the prices have been calculated.
   ///
-  factory InvoiceLineItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4141,5 +4140,5 @@ class InvoiceLineItem {
 
     /// [priceComponent] The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
     List<MonetaryComponent>? priceComponent,
-  }) = _InvoiceLineItem;
+  
 }

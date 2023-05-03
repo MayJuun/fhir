@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'summary.enums.dart';
-part 'summary.freezed.dart';
+
 part 'summary.g.dart';
 
-@freezed
 class AdverseEvent {
-  factory AdverseEvent({
+  
     @Default(Stu3ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
         Stu3ResourceType resourceType,
@@ -47,12 +46,11 @@ class AdverseEvent {
     List<Reference>? subjectMedicalHistory,
     List<Reference>? referenceDocument,
     List<Reference>? study,
-  }) = _AdverseEvent;
+  
 }
 
-@freezed
 class AdverseEventSuspectEntity {
-  factory AdverseEventSuspectEntity({
+  
     required Reference instance,
     AdverseEventSuspectEntityCausality? causality,
     @JsonKey(name: '_causality') Element? causalityElement,
@@ -63,12 +61,11 @@ class AdverseEventSuspectEntity {
     CodeableConcept? causalityMethod,
     Reference? causalityAuthor,
     CodeableConcept? causalityResult,
-  }) = _AdverseEventSuspectEntity;
+  
 }
 
-@freezed
 class AllergyIntolerance {
-  factory AllergyIntolerance({
+  
     @Default(Stu3ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
         Stu3ResourceType resourceType,
@@ -110,12 +107,11 @@ class AllergyIntolerance {
     @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
     List<Annotation>? note,
     List<AllergyIntoleranceReaction>? reaction,
-  }) = _AllergyIntolerance;
+  
 }
 
-@freezed
 class AllergyIntoleranceReaction {
-  factory AllergyIntoleranceReaction({
+  
     CodeableConcept? substance,
     required List<CodeableConcept> manifestation,
     String? description,
@@ -126,12 +122,11 @@ class AllergyIntoleranceReaction {
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
-  }) = _AllergyIntoleranceReaction;
+  
 }
 
-@freezed
 class ClinicalImpression {
-  factory ClinicalImpression({
+  
     @Default(Stu3ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
         Stu3ResourceType resourceType,
@@ -171,30 +166,27 @@ class ClinicalImpression {
     List<Reference>? prognosisReference,
     List<Reference>? action,
     List<Annotation>? note,
-  }) = _ClinicalImpression;
+  
 }
 
-@freezed
 class ClinicalImpressionInvestigation {
-  factory ClinicalImpressionInvestigation({
+  
     required CodeableConcept code,
     List<Reference>? item,
-  }) = _ClinicalImpressionInvestigation;
+  
 }
 
-@freezed
 class ClinicalImpressionFinding {
-  factory ClinicalImpressionFinding({
+  
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     String? basis,
     @JsonKey(name: '_basis') Element? basisElement,
-  }) = _ClinicalImpressionFinding;
+  
 }
 
-@freezed
 class Condition {
-  factory Condition({
+  
     @Default(Stu3ResourceType.Condition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
         Stu3ResourceType resourceType,
@@ -241,28 +233,25 @@ class Condition {
     ConditionStage? stage,
     List<ConditionEvidence>? evidence,
     List<Annotation>? note,
-  }) = _Condition;
+  
 }
 
-@freezed
 class ConditionStage {
-  factory ConditionStage({
+  
     CodeableConcept? summary,
     List<Reference>? assessment,
-  }) = _ConditionStage;
+  
 }
 
-@freezed
 class ConditionEvidence {
-  factory ConditionEvidence({
+  
     List<CodeableConcept>? code,
     List<Reference>? detail,
-  }) = _ConditionEvidence;
+  
 }
 
-@freezed
 class DetectedIssue {
-  factory DetectedIssue({
+  
     @Default(Stu3ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
         Stu3ResourceType resourceType,
@@ -292,22 +281,20 @@ class DetectedIssue {
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     List<DetectedIssueMitigation>? mitigation,
-  }) = _DetectedIssue;
+  
 }
 
-@freezed
 class DetectedIssueMitigation {
-  factory DetectedIssueMitigation({
+  
     required CodeableConcept action,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? author,
-  }) = _DetectedIssueMitigation;
+  
 }
 
-@freezed
 class FamilyMemberHistory {
-  factory FamilyMemberHistory({
+  
     @Default(Stu3ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
         Stu3ResourceType resourceType,
@@ -359,12 +346,11 @@ class FamilyMemberHistory {
     List<Reference>? reasonReference,
     List<Annotation>? note,
     List<FamilyMemberHistoryCondition>? condition,
-  }) = _FamilyMemberHistory;
+  
 }
 
-@freezed
 class FamilyMemberHistoryCondition {
-  factory FamilyMemberHistoryCondition({
+  
     required CodeableConcept code,
     CodeableConcept? outcome,
     Age? onsetAge,
@@ -373,12 +359,11 @@ class FamilyMemberHistoryCondition {
     String? onsetString,
     @JsonKey(name: '_onsetString') Element? onsetStringElement,
     List<Annotation>? note,
-  }) = _FamilyMemberHistoryCondition;
+  
 }
 
-@freezed
 class Procedure {
-  factory Procedure({
+  
     @Default(Stu3ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
         Stu3ResourceType resourceType,
@@ -422,22 +407,20 @@ class Procedure {
     List<ProcedureFocalDevice>? focalDevice,
     List<Reference>? usedReference,
     List<CodeableConcept>? usedCode,
-  }) = _Procedure;
+  
 }
 
-@freezed
 class ProcedurePerformer {
-  factory ProcedurePerformer({
+  
     CodeableConcept? role,
     required Reference actor,
     Reference? onBehalfOf,
-  }) = _ProcedurePerformer;
+  
 }
 
-@freezed
 class ProcedureFocalDevice {
-  factory ProcedureFocalDevice({
+  
     CodeableConcept? action,
     required Reference manipulated,
-  }) = _ProcedureFocalDevice;
+  
 }

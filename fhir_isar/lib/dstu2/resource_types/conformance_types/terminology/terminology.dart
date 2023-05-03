@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'terminology.enums.dart';
-part 'terminology.freezed.dart';
+
 part 'terminology.g.dart';
 
-@freezed
 class ValueSet {
-  factory ValueSet({
+  
     @Default(Dstu2ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
         Dstu2ResourceType resourceType,
@@ -60,24 +59,22 @@ class ValueSet {
     ValueSetCodeSystem? codeSystem,
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
-  }) = _ValueSet;
+  
 }
 
-@freezed
 class ValueSetContact {
-  factory ValueSetContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _ValueSetContact;
+  
 }
 
-@freezed
 class ValueSetCodeSystem {
-  factory ValueSetCodeSystem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -89,12 +86,11 @@ class ValueSetCodeSystem {
     Boolean? caseSensitive,
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     required List<ValueSetCodeSystemConcept> concept,
-  }) = _ValueSetCodeSystem;
+  
 }
 
-@freezed
 class ValueSetCodeSystemConcept {
-  factory ValueSetCodeSystemConcept({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -107,12 +103,11 @@ class ValueSetCodeSystemConcept {
     String? definition,
     List<ValueSetConceptDesignation>? designation,
     List<ValueSetCodeSystemConcept>? concept,
-  }) = _ValueSetCodeSystemConcept;
+  
 }
 
-@freezed
 class ValueSetConceptDesignation {
-  factory ValueSetConceptDesignation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -121,12 +116,11 @@ class ValueSetConceptDesignation {
     Coding? use,
     required String value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetConceptDesignation;
+  
 }
 
-@freezed
 class ValueSetCompose {
-  factory ValueSetCompose({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -134,12 +128,11 @@ class ValueSetCompose {
     @JsonKey(name: 'import') List<FhirUri>? import_,
     List<ValueSetComposeInclude>? include,
     List<ValueSetComposeInclude>? exclude,
-  }) = _ValueSetCompose;
+  
 }
 
-@freezed
 class ValueSetComposeInclude {
-  factory ValueSetComposeInclude({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -150,12 +143,11 @@ class ValueSetComposeInclude {
     @JsonKey(name: '_version') Element? versionElement,
     List<ValueSetIncludeConcept>? concept,
     List<ValueSetIncludeFilter>? filter,
-  }) = _ValueSetComposeInclude;
+  
 }
 
-@freezed
 class ValueSetIncludeConcept {
-  factory ValueSetIncludeConcept({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -165,12 +157,11 @@ class ValueSetIncludeConcept {
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetConceptDesignation>? designation,
-  }) = _ValueSetIncludeConcept;
+  
 }
 
-@freezed
 class ValueSetIncludeFilter {
-  factory ValueSetIncludeFilter({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -181,12 +172,11 @@ class ValueSetIncludeFilter {
     @JsonKey(name: '_op') Element? opElement,
     required Code value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetIncludeFilter;
+  
 }
 
-@freezed
 class ValueSetExpansion {
-  factory ValueSetExpansion({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -201,12 +191,11 @@ class ValueSetExpansion {
     @JsonKey(name: '_offset') Element? offsetElement,
     List<ValueSetExpansionParameter>? parameter,
     List<ValueSetExpansionContains>? contains,
-  }) = _ValueSetExpansion;
+  
 }
 
-@freezed
 class ValueSetExpansionParameter {
-  factory ValueSetExpansionParameter({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -225,12 +214,11 @@ class ValueSetExpansionParameter {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-  }) = _ValueSetExpansionParameter;
+  
 }
 
-@freezed
 class ValueSetExpansionContains {
-  factory ValueSetExpansionContains({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -246,12 +234,11 @@ class ValueSetExpansionContains {
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetExpansionContains>? contains,
-  }) = _ValueSetExpansionContains;
+  
 }
 
-@freezed
 class ConceptMap {
-  factory ConceptMap({
+  
     @Default(Dstu2ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
         Dstu2ResourceType resourceType,
@@ -295,23 +282,21 @@ class ConceptMap {
     Reference? targetReference,
     List<ConceptMapElement>? element,
     @JsonKey(name: '_date') Element? dateElement,
-  }) = _ConceptMap;
+  
 }
 
-@freezed
 class ConceptMapContact {
-  factory ConceptMapContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _ConceptMapContact;
+  
 }
 
-@freezed
 class ConceptMapElement {
-  factory ConceptMapElement({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -319,12 +304,11 @@ class ConceptMapElement {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<ConceptMapElementTarget>? target,
-  }) = _ConceptMapElement;
+  
 }
 
-@freezed
 class ConceptMapElementTarget {
-  factory ConceptMapElementTarget({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -338,24 +322,22 @@ class ConceptMapElementTarget {
     @JsonKey(name: '_comments') Element? commentsElement,
     List<ConceptMapTargetDependsOn>? dependsOn,
     List<ConceptMapTargetDependsOn>? product,
-  }) = _ConceptMapElementTarget;
+  
 }
 
-@freezed
 class ConceptMapTargetDependsOn {
-  factory ConceptMapTargetDependsOn({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirUri element,
     required FhirUri codeSystem,
     required String code,
-  }) = _ConceptMapTargetDependsOn;
+  
 }
 
-@freezed
 class NamingSystem {
-  factory NamingSystem({
+  
     @Default(Dstu2ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
         Dstu2ResourceType resourceType,
@@ -392,23 +374,21 @@ class NamingSystem {
     @JsonKey(name: '_usage') Element? usageElement,
     required List<NamingSystemUniqueId> uniqueId,
     Reference? replacedBy,
-  }) = _NamingSystem;
+  
 }
 
-@freezed
 class NamingSystemContact {
-  factory NamingSystemContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _NamingSystemContact;
+  
 }
 
-@freezed
 class NamingSystemUniqueId {
-  factory NamingSystemUniqueId({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -419,5 +399,5 @@ class NamingSystemUniqueId {
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
     Period? period,
-  }) = _NamingSystemUniqueId;
+  
 }

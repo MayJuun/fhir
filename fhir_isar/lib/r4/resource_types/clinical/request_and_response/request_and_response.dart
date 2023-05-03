@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
-@freezed
 class Communication {
-  factory Communication({
+  
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
         R4ResourceType resourceType,
@@ -55,12 +53,11 @@ class Communication {
     List<Reference>? reasonReference,
     List<CommunicationPayload>? payload,
     List<Annotation>? note,
-  }) = _Communication;
+  
 }
 
-@freezed
 class CommunicationPayload {
-  factory CommunicationPayload({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -68,12 +65,11 @@ class CommunicationPayload {
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationPayload;
+  
 }
 
-@freezed
 class CommunicationRequest {
-  factory CommunicationRequest({
+  
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
         R4ResourceType resourceType,
@@ -115,12 +111,11 @@ class CommunicationRequest {
     List<CodeableConcept>? reasonCode,
     List<Reference>? reasonReference,
     List<Annotation>? note,
-  }) = _CommunicationRequest;
+  
 }
 
-@freezed
 class CommunicationRequestPayload {
-  factory CommunicationRequestPayload({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -128,12 +123,11 @@ class CommunicationRequestPayload {
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationRequestPayload;
+  
 }
 
-@freezed
 class DeviceRequest {
-  factory DeviceRequest({
+  
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
         R4ResourceType resourceType,
@@ -180,12 +174,11 @@ class DeviceRequest {
     List<Reference>? supportingInfo,
     List<Annotation>? note,
     List<Reference>? relevantHistory,
-  }) = _DeviceRequest;
+  
 }
 
-@freezed
 class DeviceRequestParameter {
-  factory DeviceRequestParameter({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -195,12 +188,11 @@ class DeviceRequestParameter {
     Range? valueRange,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _DeviceRequestParameter;
+  
 }
 
-@freezed
 class DeviceUseStatement {
-  factory DeviceUseStatement({
+  
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
         R4ResourceType resourceType,
@@ -232,12 +224,11 @@ class DeviceUseStatement {
     List<Reference>? reasonReference,
     CodeableConcept? bodySite,
     List<Annotation>? note,
-  }) = _DeviceUseStatement;
+  
 }
 
-@freezed
 class GuidanceResponse {
-  factory GuidanceResponse({
+  
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
         R4ResourceType resourceType,
@@ -272,12 +263,11 @@ class GuidanceResponse {
     Reference? outputParameters,
     Reference? result,
     List<DataRequirement>? dataRequirement,
-  }) = _GuidanceResponse;
+  
 }
 
-@freezed
 class SupplyDelivery {
-  factory SupplyDelivery({
+  
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
         R4ResourceType resourceType,
@@ -306,24 +296,22 @@ class SupplyDelivery {
     Reference? supplier,
     Reference? destination,
     List<Reference>? receiver,
-  }) = _SupplyDelivery;
+  
 }
 
-@freezed
 class SupplyDeliverySuppliedItem {
-  factory SupplyDeliverySuppliedItem({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
-  }) = _SupplyDeliverySuppliedItem;
+  
 }
 
-@freezed
 class SupplyRequest {
-  factory SupplyRequest({
+  
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
         R4ResourceType resourceType,
@@ -359,12 +347,11 @@ class SupplyRequest {
     List<Reference>? reasonReference,
     Reference? deliverFrom,
     Reference? deliverTo,
-  }) = _SupplyRequest;
+  
 }
 
-@freezed
 class SupplyRequestParameter {
-  factory SupplyRequestParameter({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -374,5 +361,5 @@ class SupplyRequestParameter {
     Range? valueRange,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _SupplyRequestParameter;
+  
 }

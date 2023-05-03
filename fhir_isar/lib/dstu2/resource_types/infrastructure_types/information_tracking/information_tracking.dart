@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'information_tracking.enums.dart';
-part 'information_tracking.freezed.dart';
+
 part 'information_tracking.g.dart';
 
-@freezed
 class Questionnaire {
-  factory Questionnaire({
+  
     @Default(Dstu2ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
         Dstu2ResourceType resourceType,
@@ -43,12 +42,11 @@ class Questionnaire {
     List<Code>? subjectType,
     @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     required QuestionnaireGroup group,
-  }) = _Questionnaire;
+  
 }
 
-@freezed
 class QuestionnaireGroup {
-  factory QuestionnaireGroup({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -63,12 +61,11 @@ class QuestionnaireGroup {
     Boolean? repeats,
     List<QuestionnaireGroup>? group,
     List<QuestionnaireGroupQuestion>? question,
-  }) = _QuestionnaireGroup;
+  
 }
 
-@freezed
 class QuestionnaireGroupQuestion {
-  factory QuestionnaireGroupQuestion({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -83,12 +80,11 @@ class QuestionnaireGroupQuestion {
     Reference? options,
     List<Coding>? option,
     List<QuestionnaireGroup>? group,
-  }) = _QuestionnaireGroupQuestion;
+  
 }
 
-@freezed
 class QuestionnaireResponse {
-  factory QuestionnaireResponse({
+  
     @Default(Dstu2ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
         Dstu2ResourceType resourceType,
@@ -115,12 +111,11 @@ class QuestionnaireResponse {
     Reference? source,
     Reference? encounter,
     QuestionnaireResponseGroup? group,
-  }) = _QuestionnaireResponse;
+  
 }
 
-@freezed
 class QuestionnaireResponseGroup {
-  factory QuestionnaireResponseGroup({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -133,13 +128,12 @@ class QuestionnaireResponseGroup {
     Reference? subject,
     List<QuestionnaireResponseGroup>? group,
     List<QuestionnaireResponseGroupQuestion>? question,
-  }) = _QuestionnaireResponseGroup;
+  
 }
 
-@freezed
 class QuestionnaireResponseGroupQuestion
     with _$QuestionnaireResponseGroupQuestion {
-  factory QuestionnaireResponseGroupQuestion({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -148,12 +142,11 @@ class QuestionnaireResponseGroupQuestion
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? text,
     List<QuestionnaireResponseQuestionAnswer>? answer,
-  }) = _QuestionnaireResponseGroupQuestion;
+  
 }
 
-@freezed
 class ProvenanceAgent {
-  factory ProvenanceAgent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -162,12 +155,11 @@ class ProvenanceAgent {
     Reference? actor,
     Identifier? userId,
     List<ProvenanceAgentRelatedAgent>? relatedAgent,
-  }) = _ProvenanceAgent;
+  
 }
 
-@freezed
 class ProvenanceEntity {
-  factory ProvenanceEntity({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -179,23 +171,21 @@ class ProvenanceEntity {
     @JsonKey(name: '_reference') Element? referenceElement,
     String? display,
     ProvenanceAgent? agent,
-  }) = _ProvenanceEntity;
+  
 }
 
-@freezed
 class ProvenanceAgentRelatedAgent {
-  factory ProvenanceAgentRelatedAgent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     required FhirUri target,
-  }) = _ProvenanceAgentRelatedAgent;
+  
 }
 
-@freezed
 class AuditEvent {
-  factory AuditEvent({
+  
     @Default(Dstu2ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
         Dstu2ResourceType resourceType,
@@ -213,12 +203,11 @@ class AuditEvent {
     required List<AuditEventParticipant> participant,
     required AuditEventSource source,
     List<AuditEventObject>? object,
-  }) = _AuditEvent;
+  
 }
 
-@freezed
 class AuditEventEvent {
-  factory AuditEventEvent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -229,12 +218,11 @@ class AuditEventEvent {
     Code? outcome,
     String? outcomeDesc,
     List<Coding>? purposeOfEvent,
-  }) = _AuditEventEvent;
+  
 }
 
-@freezed
 class AuditEventParticipant {
-  factory AuditEventParticipant({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -250,12 +238,11 @@ class AuditEventParticipant {
     Coding? media,
     AuditEventParticipantNetwork? network,
     List<Coding>? purposeOfUse,
-  }) = _AuditEventParticipant;
+  
 }
 
-@freezed
 class AuditEventSource {
-  factory AuditEventSource({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -263,12 +250,11 @@ class AuditEventSource {
     @JsonKey(name: '_site') Element? siteElement,
     required Identifier identifier,
     List<Coding>? type,
-  }) = _AuditEventSource;
+  
 }
 
-@freezed
 class AuditEventObject {
-  factory AuditEventObject({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -283,12 +269,11 @@ class AuditEventObject {
     Base64Binary? query,
     @JsonKey(name: '_query') Element? queryElement,
     List<AuditEventObjectDetail>? detail,
-  }) = _AuditEventObject;
+  
 }
 
-@freezed
 class AuditEventParticipantNetwork {
-  factory AuditEventParticipantNetwork({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -296,17 +281,16 @@ class AuditEventParticipantNetwork {
     @JsonKey(name: '_address') Element? addressElement,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _AuditEventParticipantNetwork;
+  
 }
 
-@freezed
 class AuditEventObjectDetail {
-  factory AuditEventObjectDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String type,
     @JsonKey(name: '_type') Element? typeElement,
     required Base64Binary value,
-  }) = _AuditEventObjectDetail;
+  
 }

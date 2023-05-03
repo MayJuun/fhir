@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'billing.freezed.dart';
 part 'billing.g.dart';
 
-@freezed
 class Claim {
-  factory Claim({
+  
     @Default(R4ResourceType.Claim)
     @JsonKey(unknownEnumValue: R4ResourceType.Claim)
         R4ResourceType resourceType,
@@ -57,35 +55,32 @@ class Claim {
     ClaimAccident? accident,
     List<ClaimItem>? item,
     Money? total,
-  }) = _Claim;
+  
 }
 
-@freezed
 class ClaimRelated {
-  factory ClaimRelated({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
-  }) = _ClaimRelated;
+  
 }
 
-@freezed
 class ClaimPayee {
-  factory ClaimPayee({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     Reference? party,
-  }) = _ClaimPayee;
+  
 }
 
-@freezed
 class ClaimCareTeam {
-  factory ClaimCareTeam({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -96,12 +91,11 @@ class ClaimCareTeam {
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
     CodeableConcept? qualification,
-  }) = _ClaimCareTeam;
+  
 }
 
-@freezed
 class ClaimSupportingInfo {
-  factory ClaimSupportingInfo({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -120,12 +114,11 @@ class ClaimSupportingInfo {
     Attachment? valueAttachment,
     Reference? valueReference,
     CodeableConcept? reason,
-  }) = _ClaimSupportingInfo;
+  
 }
 
-@freezed
 class ClaimDiagnosis {
-  factory ClaimDiagnosis({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -136,12 +129,11 @@ class ClaimDiagnosis {
     List<CodeableConcept>? type,
     CodeableConcept? onAdmission,
     CodeableConcept? packageCode,
-  }) = _ClaimDiagnosis;
+  
 }
 
-@freezed
 class ClaimProcedure {
-  factory ClaimProcedure({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -153,12 +145,11 @@ class ClaimProcedure {
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
     List<Reference>? udi,
-  }) = _ClaimProcedure;
+  
 }
 
-@freezed
 class ClaimInsurance {
-  factory ClaimInsurance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -173,12 +164,11 @@ class ClaimInsurance {
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
     Reference? claimResponse,
-  }) = _ClaimInsurance;
+  
 }
 
-@freezed
 class ClaimAccident {
-  factory ClaimAccident({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -187,12 +177,11 @@ class ClaimAccident {
     CodeableConcept? type,
     Address? locationAddress,
     Reference? locationReference,
-  }) = _ClaimAccident;
+  
 }
 
-@freezed
 class ClaimItem {
-  factory ClaimItem({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -230,12 +219,11 @@ class ClaimItem {
     List<CodeableConcept>? subSite,
     List<Reference>? encounter,
     List<ClaimDetail>? detail,
-  }) = _ClaimItem;
+  
 }
 
-@freezed
 class ClaimDetail {
-  factory ClaimDetail({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -253,12 +241,11 @@ class ClaimDetail {
     Money? net,
     List<Reference>? udi,
     List<ClaimSubDetail>? subDetail,
-  }) = _ClaimDetail;
+  
 }
 
-@freezed
 class ClaimSubDetail {
-  factory ClaimSubDetail({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -275,12 +262,11 @@ class ClaimSubDetail {
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     List<Reference>? udi,
-  }) = _ClaimSubDetail;
+  
 }
 
-@freezed
 class ClaimResponse {
-  factory ClaimResponse({
+  
     @Default(R4ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
         R4ResourceType resourceType,
@@ -327,12 +313,11 @@ class ClaimResponse {
     List<Reference>? communicationRequest,
     List<ClaimResponseInsurance>? insurance,
     List<ClaimResponseError>? error,
-  }) = _ClaimResponse;
+  
 }
 
-@freezed
 class ClaimResponseItem {
-  factory ClaimResponseItem({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -342,12 +327,11 @@ class ClaimResponseItem {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail>? detail,
-  }) = _ClaimResponseItem;
+  
 }
 
-@freezed
 class ClaimResponseAdjudication {
-  factory ClaimResponseAdjudication({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -356,12 +340,11 @@ class ClaimResponseAdjudication {
     Money? amount,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ClaimResponseAdjudication;
+  
 }
 
-@freezed
 class ClaimResponseDetail {
-  factory ClaimResponseDetail({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -371,12 +354,11 @@ class ClaimResponseDetail {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     required List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail>? subDetail,
-  }) = _ClaimResponseDetail;
+  
 }
 
-@freezed
 class ClaimResponseSubDetail {
-  factory ClaimResponseSubDetail({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -385,12 +367,11 @@ class ClaimResponseSubDetail {
     List<PositiveInt>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseSubDetail;
+  
 }
 
-@freezed
 class ClaimResponseAddItem {
-  factory ClaimResponseAddItem({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -477,11 +458,11 @@ class ClaimResponseAddItem {
 
     /// [detail] The second-tier service adjudications for payor added services.
     List<ClaimResponseDetail1>? detail,
-  }) = _ClaimResponseAddItem;
+  
 }
 
 /// [ClaimResponseDetail1] This resource provides the adjudication details
-@freezed
+
 class ClaimResponseDetail1 {
   /// [ClaimResponseDetail1] This resource provides the adjudication details
 
@@ -544,7 +525,7 @@ class ClaimResponseDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added
   ///  services.
-  factory ClaimResponseDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -615,11 +596,11 @@ class ClaimResponseDetail1 {
     /// [subDetail] The third-tier service adjudications for payor added
     ///  services.
     List<ClaimResponseSubDetail1>? subDetail,
-  }) = _ClaimResponseDetail1;
+  
 }
 
 /// [ClaimResponseSubDetail1] This resource provides the adjudication
-@freezed
+
 class ClaimResponseSubDetail1 {
   /// [ClaimResponseSubDetail1] This resource provides the adjudication
 
@@ -679,7 +660,7 @@ class ClaimResponseSubDetail1 {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ClaimResponseSubDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -746,11 +727,11 @@ class ClaimResponseSubDetail1 {
 
     /// [adjudication] The adjudication results.
     required List<ClaimResponseAdjudication> adjudication,
-  }) = _ClaimResponseSubDetail1;
+  
 }
 
 /// [ClaimResponseTotal] This resource provides the adjudication details
-@freezed
+
 class ClaimResponseTotal {
   /// [ClaimResponseTotal] This resource provides the adjudication details
 
@@ -788,7 +769,7 @@ class ClaimResponseTotal {
   ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
-  factory ClaimResponseTotal({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -825,11 +806,11 @@ class ClaimResponseTotal {
 
     /// [amount] Monetary total amount associated with the category.
     required Money amount,
-  }) = _ClaimResponseTotal;
+  
 }
 
 /// [ClaimResponsePayment] This resource provides the adjudication details
-@freezed
+
 class ClaimResponsePayment {
   /// [ClaimResponsePayment] This resource provides the adjudication details
 
@@ -876,7 +857,7 @@ class ClaimResponsePayment {
   /// [amount] Benefits payable less any payment adjustment.
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
-  factory ClaimResponsePayment({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -927,11 +908,11 @@ class ClaimResponsePayment {
 
     /// [identifier] Issuer's unique identifier for the payment instrument.
     Identifier? identifier,
-  }) = _ClaimResponsePayment;
+  
 }
 
 /// [ClaimResponseProcessNote] This resource provides the adjudication
-@freezed
+
 class ClaimResponseProcessNote {
   /// [ClaimResponseProcessNote] This resource provides the adjudication
 
@@ -975,7 +956,7 @@ class ClaimResponseProcessNote {
   /// [textElement] Extensions for text
   ///
   /// [language] A code to define the language used in the text of the note.
-  factory ClaimResponseProcessNote({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1023,11 +1004,11 @@ class ClaimResponseProcessNote {
 
     /// [language] A code to define the language used in the text of the note.
     CodeableConcept? language,
-  }) = _ClaimResponseProcessNote;
+  
 }
 
 /// [ClaimResponseInsurance] This resource provides the adjudication details
-@freezed
+
 class ClaimResponseInsurance {
   /// [ClaimResponseInsurance] This resource provides the adjudication details
 
@@ -1080,7 +1061,7 @@ class ClaimResponseInsurance {
   ///
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
-  factory ClaimResponseInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1138,11 +1119,11 @@ class ClaimResponseInsurance {
     /// [claimResponse] The result of the adjudication of the line items for the
     ///  Coverage specified in this insurance.
     Reference? claimResponse,
-  }) = _ClaimResponseInsurance;
+  
 }
 
 /// [ClaimResponseError] This resource provides the adjudication details
-@freezed
+
 class ClaimResponseError {
   /// [ClaimResponseError] This resource provides the adjudication details
 
@@ -1193,7 +1174,7 @@ class ClaimResponseError {
   ///
   /// [code] An error code, from a specified code system, which details why the
   ///  claim could not be adjudicated.
-  factory ClaimResponseError({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1248,11 +1229,11 @@ class ClaimResponseError {
     /// [code] An error code, from a specified code system, which details why the
     ///  claim could not be adjudicated.
     required CodeableConcept code,
-  }) = _ClaimResponseError;
+  
 }
 
 /// [Invoice] Invoice containing collected ChargeItems from an Account with
-@freezed
+
 class Invoice {
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
 
@@ -1365,7 +1346,7 @@ class Invoice {
   ///
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
-  factory Invoice({
+  
     @Default(R4ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
 
@@ -1513,11 +1494,11 @@ class Invoice {
     /// [note] Comments made about the invoice by the issuer, subject, or other
     ///  participants.
     List<Annotation>? note,
-  }) = _Invoice;
+  
 }
 
 /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
-@freezed
+
 class InvoiceParticipant {
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
 
@@ -1554,7 +1535,7 @@ class InvoiceParticipant {
   ///
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
-  factory InvoiceParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1590,11 +1571,11 @@ class InvoiceParticipant {
     /// [actor] The device, practitioner, etc. who performed or participated in
     ///  the service.
     required Reference actor,
-  }) = _InvoiceParticipant;
+  
 }
 
 /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
-@freezed
+
 class InvoiceLineItem {
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
 
@@ -1645,7 +1626,7 @@ class InvoiceLineItem {
   /// conditions that apply to a billing code is currently under development.
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice as to how the prices have been calculated.
-  factory InvoiceLineItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1698,11 +1679,11 @@ class InvoiceLineItem {
     /// The priceComponent element can be used to offer transparency to the
     ///  recipient of the Invoice as to how the prices have been calculated.
     List<InvoicePriceComponent>? priceComponent,
-  }) = _InvoiceLineItem;
+  
 }
 
 /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
-@freezed
+
 class InvoicePriceComponent {
   /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
 
@@ -1746,7 +1727,7 @@ class InvoicePriceComponent {
   /// [factorElement] Extensions for factor
   ///
   /// [amount] The amount calculated for this component.
-  factory InvoicePriceComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1793,5 +1774,5 @@ class InvoicePriceComponent {
 
     /// [amount] The amount calculated for this component.
     Money? amount,
-  }) = _InvoicePriceComponent;
+  
 }

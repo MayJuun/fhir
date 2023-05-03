@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'payment.enums.dart';
-part 'payment.freezed.dart';
+
 part 'payment.g.dart';
 
-@freezed
 class PaymentNotice {
-  factory PaymentNotice({
+  
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
         Stu3ResourceType resourceType,
@@ -41,12 +40,11 @@ class PaymentNotice {
     Reference? provider,
     Reference? organization,
     CodeableConcept? paymentStatus,
-  }) = _PaymentNotice;
+  
 }
 
-@freezed
 class PaymentReconciliation {
-  factory PaymentReconciliation({
+  
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
         Stu3ResourceType resourceType,
@@ -77,12 +75,11 @@ class PaymentReconciliation {
     CodeableConcept? form,
     Money? total,
     List<PaymentReconciliationProcessNote>? processNote,
-  }) = _PaymentReconciliation;
+  
 }
 
-@freezed
 class PaymentReconciliationDetail {
-  factory PaymentReconciliationDetail({
+  
     required CodeableConcept type,
     Reference? request,
     Reference? response,
@@ -91,16 +88,15 @@ class PaymentReconciliationDetail {
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
-  }) = _PaymentReconciliationDetail;
+  
 }
 
-@freezed
 class PaymentReconciliationProcessNote {
-  factory PaymentReconciliationProcessNote({
+  
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationProcessNote;
+  
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

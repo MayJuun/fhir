@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
-@freezed
 class BiologicallyDerivedProduct {
-  factory BiologicallyDerivedProduct({
+  
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
         R4ResourceType resourceType,
@@ -41,13 +39,12 @@ class BiologicallyDerivedProduct {
     List<BiologicallyDerivedProductProcessing>? processing,
     BiologicallyDerivedProductManipulation? manipulation,
     List<BiologicallyDerivedProductStorage>? storage,
-  }) = _BiologicallyDerivedProduct;
+  
 }
 
-@freezed
 class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
-  factory BiologicallyDerivedProductCollection({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -56,12 +53,11 @@ class BiologicallyDerivedProductCollection
     FhirDateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
     Period? collectedPeriod,
-  }) = _BiologicallyDerivedProductCollection;
+  
 }
 
-@freezed
 class DeviceUdiCarrier {
-  factory DeviceUdiCarrier({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -77,12 +73,11 @@ class DeviceUdiCarrier {
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
     Code? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
-  }) = _DeviceUdiCarrier;
+  
 }
 
-@freezed
 class DeviceDeviceName {
-  factory DeviceDeviceName({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -90,24 +85,22 @@ class DeviceDeviceName {
     @JsonKey(name: '_name') Element? nameElement,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _DeviceDeviceName;
+  
 }
 
-@freezed
 class DeviceSpecialization {
-  factory DeviceSpecialization({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept systemType,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-  }) = _DeviceSpecialization;
+  
 }
 
-@freezed
 class DeviceVersion {
-  factory DeviceVersion({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -115,24 +108,22 @@ class DeviceVersion {
     Identifier? component,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _DeviceVersion;
+  
 }
 
-@freezed
 class DeviceProperty {
-  factory DeviceProperty({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     List<Quantity>? valueQuantity,
     List<CodeableConcept>? valueCode,
-  }) = _DeviceProperty;
+  
 }
 
-@freezed
 class DeviceMetric {
-  factory DeviceMetric({
+  
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
         R4ResourceType resourceType,
@@ -159,12 +150,11 @@ class DeviceMetric {
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
-  }) = _DeviceMetric;
+  
 }
 
-@freezed
 class DeviceMetricCalibration {
-  factory DeviceMetricCalibration({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -174,12 +164,11 @@ class DeviceMetricCalibration {
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _DeviceMetricCalibration;
+  
 }
 
-@freezed
 class NutritionProduct {
-  factory NutritionProduct({
+  
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
     String? id,
     Meta? meta,
@@ -202,34 +191,31 @@ class NutritionProduct {
     List<NutritionProductCharacteristic>? productCharacteristic,
     List<NutritionProductInstance>? instance,
     List<Annotation>? note,
-  }) = _NutritionProduct;
+  
 }
 
-@freezed
 class NutritionProductNutrient {
-  factory NutritionProductNutrient({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableReference? item,
     List<Ratio>? amount,
-  }) = _NutritionProductNutrient;
+  
 }
 
-@freezed
 class NutritionProductIngredient {
-  factory NutritionProductIngredient({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableReference item,
     List<Ratio>? amount,
-  }) = _NutritionProductIngredient;
+  
 }
 
-@freezed
 class NutritionProductCharacteristic {
-  factory NutritionProductCharacteristic({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -243,12 +229,11 @@ class NutritionProductCharacteristic {
     Attachment? valueAttachment,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _NutritionProductCharacteristic;
+  
 }
 
-@freezed
 class NutritionProductInstance {
-  factory NutritionProductInstance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -263,12 +248,11 @@ class NutritionProductInstance {
     FhirDateTime? useBy,
     @JsonKey(name: '_useBy') Element? useByElement,
     Identifier? biologicalSource,
-  }) = _NutritionProductInstance;
+  
 }
 
-@freezed
 class Substance {
-  factory Substance({
+  
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
@@ -291,12 +275,11 @@ class Substance {
     @JsonKey(name: '_description') Element? descriptionElement,
     List<SubstanceInstance>? instance,
     List<SubstanceIngredient>? ingredient,
-  }) = _Substance;
+  
 }
 
-@freezed
 class SubstanceInstance {
-  factory SubstanceInstance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -304,17 +287,16 @@ class SubstanceInstance {
     FhirDateTime? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
     Quantity? quantity,
-  }) = _SubstanceInstance;
+  
 }
 
-@freezed
 class SubstanceIngredient {
-  factory SubstanceIngredient({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,
-  }) = _SubstanceIngredient;
+  
 }

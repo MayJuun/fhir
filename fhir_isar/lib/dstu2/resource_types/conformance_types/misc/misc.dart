@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'misc.enums.dart';
-part 'misc.freezed.dart';
+
 part 'misc.g.dart';
 
-@freezed
 class ImplementationGuide {
-  factory ImplementationGuide({
+  
     @Default(Dstu2ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
@@ -56,23 +55,21 @@ class ImplementationGuide {
     List<ImplementationGuideGlobal>? global,
     List<FhirUri>? binary,
     required ImplementationGuidePage page,
-  }) = _ImplementationGuide;
+  
 }
 
-@freezed
 class ImplementationGuideContact {
-  factory ImplementationGuideContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _ImplementationGuideContact;
+  
 }
 
-@freezed
 class ImplementationGuideDependency {
-  factory ImplementationGuideDependency({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -80,12 +77,11 @@ class ImplementationGuideDependency {
         required DependencyType type,
     required FhirUri uri,
     @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ImplementationGuideDependency;
+  
 }
 
-@freezed
 class ImplementationGuidePackage {
-  factory ImplementationGuidePackage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -93,24 +89,22 @@ class ImplementationGuidePackage {
     String? description,
     @JsonKey(required: true)
         required List<ImplementationGuidePackageResource> resource,
-  }) = _ImplementationGuidePackage;
+  
 }
 
-@freezed
 class ImplementationGuideGlobal {
-  factory ImplementationGuideGlobal({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Code type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference profile,
-  }) = _ImplementationGuideGlobal;
+  
 }
 
-@freezed
 class ImplementationGuidePage {
-  factory ImplementationGuidePage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -121,13 +115,12 @@ class ImplementationGuidePage {
     List<String>? package,
     Code? format,
     List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
+  
 }
 
-@freezed
 class ImplementationGuidePackageResource
     with _$ImplementationGuidePackageResource {
-  factory ImplementationGuidePackageResource({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -140,35 +133,32 @@ class ImplementationGuidePackageResource
     FhirUri? sourceUri,
     Reference? sourceReference,
     Reference? exampleFor,
-  }) = _ImplementationGuidePackageResource;
+  
 }
 
-@freezed
 class TestScriptContact {
-  factory TestScriptContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _TestScriptContact;
+  
 }
 
-@freezed
 class TestScriptMetadata {
-  factory TestScriptMetadata({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<TestScriptMetadataLink>? link,
     @JsonKey(required: true)
         required List<TestScriptMetadataCapability> capability,
-  }) = _TestScriptMetadata;
+  
 }
 
-@freezed
 class TestScriptMetadataLink {
-  factory TestScriptMetadataLink({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -176,12 +166,11 @@ class TestScriptMetadataLink {
     @JsonKey(name: '_url') Element? urlElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _TestScriptMetadataLink;
+  
 }
 
-@freezed
 class TestScriptMetadataCapability {
-  factory TestScriptMetadataCapability({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -196,12 +185,11 @@ class TestScriptMetadataCapability {
     List<FhirUri>? link,
     @JsonKey(name: '_link') List<Element?>? linkElement,
     required Reference conformance,
-  }) = _TestScriptMetadataCapability;
+  
 }
 
-@freezed
 class TestScriptFixture {
-  factory TestScriptFixture({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -210,12 +198,11 @@ class TestScriptFixture {
     Boolean? autodelete,
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
     Reference? resource,
-  }) = _TestScriptFixture;
+  
 }
 
-@freezed
 class TestScriptVariable {
-  factory TestScriptVariable({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -227,35 +214,32 @@ class TestScriptVariable {
     @JsonKey(name: '_path') Element? pathElement,
     Id? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _TestScriptVariable;
+  
 }
 
-@freezed
 class TestScriptSetup {
-  factory TestScriptSetup({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptMetadata? metadata,
     required List<TestScriptSetupAction> action,
-  }) = _TestScriptSetup;
+  
 }
 
-@freezed
 class TestScriptSetupAction {
-  factory TestScriptSetupAction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     TestScriptActionOperation? operation,
     @JsonKey(name: 'assert') TestScriptActionAssert? assert_,
-  }) = _TestScriptSetupAction;
+  
 }
 
-@freezed
 class TestScriptActionOperation {
-  factory TestScriptActionOperation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -287,12 +271,11 @@ class TestScriptActionOperation {
     @JsonKey(name: '_targetId') Element? targetIdElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptActionOperation;
+  
 }
 
-@freezed
 class TestScriptOperationRequestHeader {
-  factory TestScriptOperationRequestHeader({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExtension,
@@ -300,12 +283,11 @@ class TestScriptOperationRequestHeader {
     @JsonKey(name: '_field') Element? fieldElement,
     required String value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _TestScriptOperationRequestHeader;
+  
 }
 
-@freezed
 class TestScriptTest {
-  factory TestScriptTest({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -315,26 +297,24 @@ class TestScriptTest {
     @JsonKey(name: '_description') Element? descriptionElement,
     TestScriptMetadata? metadata,
     required List<TestScriptSetupAction> action,
-  }) = _TestScriptTest;
+  
 }
 
-@freezed
 class TestScriptTeardown {
-  factory TestScriptTeardown({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptTeardownAction> action,
-  }) = _TestScriptTeardown;
+  
 }
 
-@freezed
 class TestScriptTeardownAction {
-  factory TestScriptTeardownAction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     TestScriptActionOperation? operation,
-  }) = _TestScriptTeardownAction;
+  
 }

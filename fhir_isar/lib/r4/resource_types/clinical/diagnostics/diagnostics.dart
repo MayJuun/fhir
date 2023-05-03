@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
 /// [BodyStructure] Record details about an anatomical structure.  This
-@freezed
+
 class BodyStructure {
   /// [BodyStructure] Record details about an anatomical structure.  This
 
@@ -98,7 +97,7 @@ class BodyStructure {
   /// [image] Image or images used to identify a location.
   ///
   /// [patient] The person to which the body site belongs.
-  factory BodyStructure({
+  
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
 
@@ -206,11 +205,11 @@ class BodyStructure {
 
     /// [patient] The person to which the body site belongs.
     required Reference patient,
-  }) = _BodyStructure;
+  
 }
 
 /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
-@freezed
+
 class DiagnosticReport {
   /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
 
@@ -349,7 +348,7 @@ class DiagnosticReport {
   /// [presentedForm] Rich text representation of the entire result as issued
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
-  factory DiagnosticReport({
+  
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
 
@@ -522,11 +521,11 @@ class DiagnosticReport {
     /// by the diagnostic service. Multiple formats are allowed but they SHALL be
     ///  semantically equivalent.
     List<Attachment>? presentedForm,
-  }) = _DiagnosticReport;
+  
 }
 
 /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
-@freezed
+
 class DiagnosticReportMedia {
   /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
 
@@ -568,7 +567,7 @@ class DiagnosticReportMedia {
   /// [commentElement] Extensions for comment
   ///
   /// [link] Reference to the image source.
-  factory DiagnosticReportMedia({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -606,11 +605,11 @@ class DiagnosticReportMedia {
 
     /// [link] Reference to the image source.
     required Reference link,
-  }) = _DiagnosticReportMedia;
+  
 }
 
 /// [ImagingStudy] Representation of the content produced in a DICOM imaging
-@freezed
+
 class ImagingStudy {
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
 
@@ -747,7 +746,7 @@ class ImagingStudy {
   /// [descriptionElement] Extensions for description
   ///
   /// [series] Each study has one or more series of images or other content.
-  factory ImagingStudy({
+  
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
 
@@ -921,11 +920,11 @@ class ImagingStudy {
 
     /// [series] Each study has one or more series of images or other content.
     List<ImagingStudySeries>? series,
-  }) = _ImagingStudy;
+  
 }
 
 /// [ImagingStudySeries] Representation of the content produced in a DICOM
-@freezed
+
 class ImagingStudySeries {
   /// [ImagingStudySeries] Representation of the content produced in a DICOM
 
@@ -1009,7 +1008,7 @@ class ImagingStudySeries {
   ///
   /// [instance] A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
-  factory ImagingStudySeries({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1103,11 +1102,11 @@ class ImagingStudySeries {
     /// [instance] A single SOP instance within the series, e.g. an image, or
     ///  presentation state.
     List<ImagingStudyInstance>? instance,
-  }) = _ImagingStudySeries;
+  
 }
 
 /// [ImagingStudyPerformer] Representation of the content produced in a
-@freezed
+
 class ImagingStudyPerformer {
   /// [ImagingStudyPerformer] Representation of the content produced in a
 
@@ -1146,7 +1145,7 @@ class ImagingStudyPerformer {
   ///  series.
   ///
   /// [actor] Indicates who or what performed the series.
-  factory ImagingStudyPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1180,11 +1179,11 @@ class ImagingStudyPerformer {
 
     /// [actor] Indicates who or what performed the series.
     required Reference actor,
-  }) = _ImagingStudyPerformer;
+  
 }
 
 /// [ImagingStudyInstance] Representation of the content produced in a DICOM
-@freezed
+
 class ImagingStudyInstance {
   /// [ImagingStudyInstance] Representation of the content produced in a DICOM
 
@@ -1232,7 +1231,7 @@ class ImagingStudyInstance {
   /// [title] The description of the instance.
   ///
   /// [titleElement] Extensions for title
-  factory ImagingStudyInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1280,11 +1279,11 @@ class ImagingStudyInstance {
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
-  }) = _ImagingStudyInstance;
+  
 }
 
 /// [Media] A photo, video, or audio recording acquired or used in
-@freezed
+
 class Media {
   /// [Media] A photo, video, or audio recording acquired or used in
 
@@ -1425,7 +1424,7 @@ class Media {
   ///
   /// [note] Comments made about the media by the performer, subject or other
   ///  participants.
-  factory Media({
+  
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
 
@@ -1616,11 +1615,11 @@ class Media {
     /// [note] Comments made about the media by the performer, subject or other
     ///  participants.
     List<Annotation>? note,
-  }) = _Media;
+  
 }
 
 /// [MolecularSequence] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequence {
   /// [MolecularSequence] Raw data describing a biological sequence.
 
@@ -1737,7 +1736,7 @@ class MolecularSequence {
   ///  variant.
   ///
   /// [structureVariant] Information about chromosome structure variation.
-  factory MolecularSequence({
+  
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
 
@@ -1890,11 +1889,11 @@ class MolecularSequence {
 
     /// [structureVariant] Information about chromosome structure variation.
     List<MolecularSequenceStructureVariant>? structureVariant,
-  }) = _MolecularSequence;
+  
 }
 
 /// [MolecularSequenceReferenceSeq] Raw data describing a biological
-@freezed
+
 class MolecularSequenceReferenceSeq {
   /// [MolecularSequenceReferenceSeq] Raw data describing a biological
 
@@ -1973,7 +1972,7 @@ class MolecularSequenceReferenceSeq {
   ///  inclusive and includes the last position.
   ///
   /// [windowEndElement] Extensions for windowEnd
-  factory MolecularSequenceReferenceSeq({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2064,11 +2063,11 @@ class MolecularSequenceReferenceSeq {
 
     /// [windowEndElement] Extensions for windowEnd
     @JsonKey(name: '_windowEnd') Element? windowEndElement,
-  }) = _MolecularSequenceReferenceSeq;
+  
 }
 
 /// [MolecularSequenceVariant] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequenceVariant {
   /// [MolecularSequenceVariant] Raw data describing a biological sequence.
 
@@ -2139,7 +2138,7 @@ class MolecularSequenceVariant {
   ///
   /// [variantPointer] A pointer to an Observation containing variant
   ///  information.
-  factory MolecularSequenceVariant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2219,11 +2218,11 @@ class MolecularSequenceVariant {
     /// [variantPointer] A pointer to an Observation containing variant
     ///  information.
     Reference? variantPointer,
-  }) = _MolecularSequenceVariant;
+  
 }
 
 /// [MolecularSequenceQuality] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequenceQuality {
   /// [MolecularSequenceQuality] Raw data describing a biological sequence.
 
@@ -2328,7 +2327,7 @@ class MolecularSequenceQuality {
   ///
   /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
   ///  sensitivity/specificity tradeoff.
-  factory MolecularSequenceQuality({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2457,11 +2456,11 @@ class MolecularSequenceQuality {
     /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
     ///  sensitivity/specificity tradeoff.
     MolecularSequenceRoc? roc,
-  }) = _MolecularSequenceQuality;
+  
 }
 
 /// [MolecularSequenceRoc] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequenceRoc {
   /// [MolecularSequenceRoc] Raw data describing a biological sequence.
 
@@ -2525,7 +2524,7 @@ class MolecularSequenceRoc {
   ///  field value.
   ///
   /// [fMeasureElement] Extensions for fMeasure
-  factory MolecularSequenceRoc({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2601,11 +2600,11 @@ class MolecularSequenceRoc {
 
     /// [fMeasureElement] Extensions for fMeasure
     @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
-  }) = _MolecularSequenceRoc;
+  
 }
 
 /// [MolecularSequenceRepository] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequenceRepository {
   /// [MolecularSequenceRepository] Raw data describing a biological sequence.
 
@@ -2665,7 +2664,7 @@ class MolecularSequenceRepository {
   /// [readsetId] Id of the read in this external repository.
   ///
   /// [readsetIdElement] Extensions for readsetId
-  factory MolecularSequenceRepository({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2735,10 +2734,9 @@ class MolecularSequenceRepository {
 
     /// [readsetIdElement] Extensions for readsetId
     @JsonKey(name: '_readsetId') Element? readsetIdElement,
-  }) = _MolecularSequenceRepository;
+  
 }
 
-@freezed
 class MolecularSequenceStructureVariant
     with _$MolecularSequenceStructureVariant {
   /// [MolecularSequenceStructureVariant] Raw data describing a biological
@@ -2783,7 +2781,7 @@ class MolecularSequenceStructureVariant
   /// [outer] Structural variant outer.
   ///
   /// [inner] Structural variant inner.
-  factory MolecularSequenceStructureVariant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2833,11 +2831,11 @@ class MolecularSequenceStructureVariant
 
     /// [inner] Structural variant inner.
     MolecularSequenceInner? inner,
-  }) = _MolecularSequenceStructureVariant;
+  
 }
 
 /// [MolecularSequenceInner] Raw data describing a biological sequence.
-@freezed
+
 class MolecularSequenceInner {
   /// [MolecularSequenceInner] Raw data describing a biological sequence.
 
@@ -2878,7 +2876,7 @@ class MolecularSequenceInner {
   ///  position.
   ///
   /// [endElement] Extensions for end
-  factory MolecularSequenceInner({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2921,11 +2919,11 @@ class MolecularSequenceInner {
 
     /// [endElement] Extensions for end
     @JsonKey(name: '_end') Element? endElement,
-  }) = _MolecularSequenceInner;
+  
 }
 
 /// [Observation] Measurements and simple assertions made about a patient,
-@freezed
+
 class Observation {
   /// [Observation] Measurements and simple assertions made about a patient,
 
@@ -3140,7 +3138,7 @@ class Observation {
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
-  factory Observation({
+  
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
 
@@ -3421,11 +3419,11 @@ class Observation {
     /// component observations for blood pressure measurement and multiple
     ///  component observations for genetics observations.
     List<ObservationComponent>? component,
-  }) = _Observation;
+  
 }
 
 /// [ObservationReferenceRange] Measurements and simple assertions made
-@freezed
+
 class ObservationReferenceRange {
   /// [ObservationReferenceRange] Measurements and simple assertions made
 
@@ -3485,7 +3483,7 @@ class ObservationReferenceRange {
   ///  "normals".
   ///
   /// [textElement] Extensions for text
-  factory ObservationReferenceRange({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3549,11 +3547,11 @@ class ObservationReferenceRange {
 
     /// [textElement] Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ObservationReferenceRange;
+  
 }
 
 /// [ObservationComponent] Measurements and simple assertions made about a
-@freezed
+
 class ObservationComponent {
   /// [ObservationComponent] Measurements and simple assertions made about a
 
@@ -3638,7 +3636,7 @@ class ObservationComponent {
   ///
   /// [referenceRange] Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
-  factory ObservationComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3740,11 +3738,11 @@ class ObservationComponent {
     /// [referenceRange] Guidance on how to interpret the value by comparison to
     ///  a normal or recommended range.
     List<ObservationReferenceRange>? referenceRange,
-  }) = _ObservationComponent;
+  
 }
 
 /// [QuestionnaireResponse] A structured set of questions and their answers.
-@freezed
+
 class QuestionnaireResponse {
   /// [QuestionnaireResponse] A structured set of questions and their answers.
 
@@ -3846,7 +3844,7 @@ class QuestionnaireResponse {
   ///
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
-  factory QuestionnaireResponse({
+  
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
 
@@ -3975,11 +3973,11 @@ class QuestionnaireResponse {
     /// [item] A group or question item from the original questionnaire for which
     ///  answers are provided.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponse;
+  
 }
 
 /// [QuestionnaireResponseItem] A structured set of questions and their
-@freezed
+
 class QuestionnaireResponseItem {
   /// [QuestionnaireResponseItem] A structured set of questions and their
 
@@ -4030,7 +4028,7 @@ class QuestionnaireResponseItem {
   /// [answer] The respondent's answer(s) to the question.
   ///
   /// [item] Questions or sub-groups nested beneath a question or group.
-  factory QuestionnaireResponseItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4084,11 +4082,11 @@ class QuestionnaireResponseItem {
 
     /// [item] Questions or sub-groups nested beneath a question or group.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseItem;
+  
 }
 
 /// [QuestionnaireResponseAnswer] A structured set of questions and their
-@freezed
+
 class QuestionnaireResponseAnswer {
   /// [QuestionnaireResponseAnswer] A structured set of questions and their
 
@@ -4175,7 +4173,7 @@ class QuestionnaireResponseAnswer {
   ///
   /// [item] Nested groups and/or questions found within this particular
   ///  answer.
-  factory QuestionnaireResponseAnswer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4278,11 +4276,11 @@ class QuestionnaireResponseAnswer {
     /// [item] Nested groups and/or questions found within this particular
     ///  answer.
     List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseAnswer;
+  
 }
 
 /// [Specimen] A sample to be used for analysis.
-@freezed
+
 class Specimen {
   /// [Specimen] A sample to be used for analysis.
 
@@ -4381,7 +4379,7 @@ class Specimen {
   /// [note] To communicate any details or issues about the specimen or during
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
-  factory Specimen({
+  
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
 
@@ -4509,11 +4507,11 @@ class Specimen {
     /// the specimen collection. (for example: broken vial, sent with patient,
     ///  frozen).
     List<Annotation>? note,
-  }) = _Specimen;
+  
 }
 
 /// [SpecimenCollection] A sample to be used for analysis.
-@freezed
+
 class SpecimenCollection {
   /// [SpecimenCollection] A sample to be used for analysis.
 
@@ -4572,7 +4570,7 @@ class SpecimenCollection {
   ///
   /// [fastingStatusDuration] Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
-  factory SpecimenCollection({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4639,11 +4637,11 @@ class SpecimenCollection {
     /// [fastingStatusDuration] Abstinence or reduction from some or all food,
     ///  drink, or both, for a period of time prior to sample collection.
     FhirDuration? fastingStatusDuration,
-  }) = _SpecimenCollection;
+  
 }
 
 /// [SpecimenProcessing] A sample to be used for analysis.
-@freezed
+
 class SpecimenProcessing {
   /// [SpecimenProcessing] A sample to be used for analysis.
 
@@ -4691,7 +4689,7 @@ class SpecimenProcessing {
   /// [timePeriod] A record of the time or period when the specimen processing
   /// occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
-  factory SpecimenProcessing({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4744,11 +4742,11 @@ class SpecimenProcessing {
     /// occurred.  For example the time of sample fixation or the period of time
     ///  the sample was in formalin.
     Period? timePeriod,
-  }) = _SpecimenProcessing;
+  
 }
 
 /// [SpecimenContainer] A sample to be used for analysis.
-@freezed
+
 class SpecimenContainer {
   /// [SpecimenContainer] A sample to be used for analysis.
 
@@ -4801,7 +4799,7 @@ class SpecimenContainer {
   ///
   /// [additiveReference] Introduced substance to preserve, maintain or enhance
   ///  the specimen. Examples: Formalin, Citrate, EDTA.
-  factory SpecimenContainer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4860,5 +4858,5 @@ class SpecimenContainer {
     /// [additiveReference] Introduced substance to preserve, maintain or enhance
     ///  the specimen. Examples: Formalin, Citrate, EDTA.
     Reference? additiveReference,
-  }) = _SpecimenContainer;
+  
 }

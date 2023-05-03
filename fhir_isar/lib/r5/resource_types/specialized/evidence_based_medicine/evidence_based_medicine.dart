@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
 
 /// [ArtifactAssessment] This Resource provides one or more comments,
 ///  classifiers or ratings about a Resource and supports attribution and
 ///  rights management metadata for the added content.
-@freezed
+
 class ArtifactAssessment {
   /// [ArtifactAssessment] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
@@ -141,7 +140,7 @@ class ArtifactAssessment {
   ///
   /// [dispositionElement] ("_disposition") Extensions for disposition
   ///
-  factory ArtifactAssessment({
+  
     /// [resourceType] This is a ArtifactAssessment resource
     @Default(R5ResourceType.ArtifactAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
@@ -248,13 +247,13 @@ class ArtifactAssessment {
 
     /// [dispositionElement] ("_disposition") Extensions for disposition
     @JsonKey(name: '_disposition') Element? dispositionElement,
-  }) = _ArtifactAssessment;
+  
 }
 
 /// [ArtifactAssessmentContent] This Resource provides one or more comments,
 ///  classifiers or ratings about a Resource and supports attribution and
 ///  rights management metadata for the added content.
-@freezed
+
 class ArtifactAssessmentContent {
   /// [ArtifactAssessmentContent] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
@@ -322,7 +321,7 @@ class ArtifactAssessmentContent {
   /// [component] If the informationType is container, the components of the
   ///  content.
   ///
-  factory ArtifactAssessmentContent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -387,7 +386,7 @@ class ArtifactAssessmentContent {
 
     /// [component] If the informationType is container, the components of the content.
     List<ArtifactAssessmentContent>? component,
-  }) = _ArtifactAssessmentContent;
+  
 }
 
 /// [Citation] The Citation Resource enables reference to any knowledge
@@ -395,7 +394,7 @@ class ArtifactAssessmentContent {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -607,7 +606,7 @@ class Citation {
   ///
   /// [citedArtifact] The article or artifact being described.
   ///
-  factory Citation({
+  
     /// [resourceType] This is a Citation resource
     @Default(R5ResourceType.Citation)
     @JsonKey(unknownEnumValue: R5ResourceType.Citation)
@@ -793,7 +792,7 @@ class Citation {
 
     /// [citedArtifact] The article or artifact being described.
     CitationCitedArtifact? citedArtifact,
-  }) = _Citation;
+  
 }
 
 /// [CitationSummary] The Citation Resource enables reference to any knowledge
@@ -801,7 +800,7 @@ class Citation {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationSummary {
   /// [CitationSummary] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -845,7 +844,7 @@ class CitationSummary {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory CitationSummary({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -880,7 +879,7 @@ class CitationSummary {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationSummary;
+  
 }
 
 /// [CitationClassification] The Citation Resource enables reference to any
@@ -888,7 +887,7 @@ class CitationSummary {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationClassification {
   /// [CitationClassification] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -930,7 +929,7 @@ class CitationClassification {
   ///
   /// [classifier] The specific classification value.
   ///
-  factory CitationClassification({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -962,7 +961,7 @@ class CitationClassification {
 
     /// [classifier] The specific classification value.
     List<CodeableConcept>? classifier,
-  }) = _CitationClassification;
+  
 }
 
 /// [CitationStatusDate] The Citation Resource enables reference to any
@@ -970,7 +969,7 @@ class CitationClassification {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationStatusDate {
   /// [CitationStatusDate] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1018,7 +1017,7 @@ class CitationStatusDate {
   ///
   /// [period] When the status started and/or ended.
   ///
-  factory CitationStatusDate({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1056,7 +1055,7 @@ class CitationStatusDate {
 
     /// [period] When the status started and/or ended.
     required Period period,
-  }) = _CitationStatusDate;
+  
 }
 
 /// [CitationCitedArtifact] The Citation Resource enables reference to any
@@ -1064,7 +1063,7 @@ class CitationStatusDate {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationCitedArtifact {
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1143,7 +1142,7 @@ class CitationCitedArtifact {
   ///
   /// [note] Any additional information or content for the article or artifact.
   ///
-  factory CitationCitedArtifact({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1217,7 +1216,7 @@ class CitationCitedArtifact {
 
     /// [note] Any additional information or content for the article or artifact.
     List<Annotation>? note,
-  }) = _CitationCitedArtifact;
+  
 }
 
 /// [CitationVersion] The Citation Resource enables reference to any knowledge
@@ -1225,7 +1224,7 @@ class CitationCitedArtifact {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationVersion {
   /// [CitationVersion] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1269,7 +1268,7 @@ class CitationVersion {
   ///
   /// [baseCitation] Citation for the main version of the cited artifact.
   ///
-  factory CitationVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1304,7 +1303,7 @@ class CitationVersion {
 
     /// [baseCitation] Citation for the main version of the cited artifact.
     Reference? baseCitation,
-  }) = _CitationVersion;
+  
 }
 
 /// [CitationStatusDate1] The Citation Resource enables reference to any
@@ -1312,7 +1311,7 @@ class CitationVersion {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationStatusDate1 {
   /// [CitationStatusDate1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1358,7 +1357,7 @@ class CitationStatusDate1 {
   ///
   /// [period] When the status started and/or ended.
   ///
-  factory CitationStatusDate1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1396,7 +1395,7 @@ class CitationStatusDate1 {
 
     /// [period] When the status started and/or ended.
     required Period period,
-  }) = _CitationStatusDate1;
+  
 }
 
 /// [CitationTitle] The Citation Resource enables reference to any knowledge
@@ -1404,7 +1403,7 @@ class CitationStatusDate1 {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationTitle {
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -1450,7 +1449,7 @@ class CitationTitle {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory CitationTitle({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1488,7 +1487,7 @@ class CitationTitle {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationTitle;
+  
 }
 
 /// [CitationAbstract] The Citation Resource enables reference to any knowledge
@@ -1496,7 +1495,7 @@ class CitationTitle {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationAbstract {
   /// [CitationAbstract] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1546,7 +1545,7 @@ class CitationAbstract {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory CitationAbstract({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1590,7 +1589,7 @@ class CitationAbstract {
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationAbstract;
+  
 }
 
 /// [CitationPart] The Citation Resource enables reference to any knowledge
@@ -1598,7 +1597,7 @@ class CitationAbstract {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationPart {
   /// [CitationPart] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -1644,7 +1643,7 @@ class CitationPart {
   ///
   /// [baseCitation] The citation for the full article or artifact.
   ///
-  factory CitationPart({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1682,7 +1681,7 @@ class CitationPart {
 
     /// [baseCitation] The citation for the full article or artifact.
     Reference? baseCitation,
-  }) = _CitationPart;
+  
 }
 
 /// [CitationRelatesTo] The Citation Resource enables reference to any
@@ -1690,7 +1689,7 @@ class CitationPart {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationRelatesTo {
   /// [CitationRelatesTo] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1761,7 +1760,7 @@ class CitationRelatesTo {
   /// [resourceReference] The related artifact, if the artifact is not a
   ///  canonical resource, or a resource reference to a canonical resource.
   ///
-  factory CitationRelatesTo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1826,7 +1825,7 @@ class CitationRelatesTo {
 
     /// [resourceReference] The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.
     Reference? resourceReference,
-  }) = _CitationRelatesTo;
+  
 }
 
 /// [CitationPublicationForm] The Citation Resource enables reference to any
@@ -1834,7 +1833,7 @@ class CitationRelatesTo {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationPublicationForm {
   /// [CitationPublicationForm] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1954,7 +1953,7 @@ class CitationPublicationForm {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory CitationPublicationForm({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2081,7 +2080,7 @@ class CitationPublicationForm {
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationPublicationForm;
+  
 }
 
 /// [CitationPublishedIn] The Citation Resource enables reference to any
@@ -2089,7 +2088,7 @@ class CitationPublicationForm {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationPublishedIn {
   /// [CitationPublishedIn] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2143,7 +2142,7 @@ class CitationPublishedIn {
   /// [publisherLocationElement] ("_publisherLocation") Extensions for
   ///  publisherLocation
   ///
-  factory CitationPublishedIn({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2190,7 +2189,7 @@ class CitationPublishedIn {
 
     /// [publisherLocationElement] ("_publisherLocation") Extensions for publisherLocation
     @JsonKey(name: '_publisherLocation') Element? publisherLocationElement,
-  }) = _CitationPublishedIn;
+  
 }
 
 /// [CitationWebLocation] The Citation Resource enables reference to any
@@ -2198,7 +2197,7 @@ class CitationPublishedIn {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationWebLocation {
   /// [CitationWebLocation] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2243,7 +2242,7 @@ class CitationWebLocation {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory CitationWebLocation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2278,7 +2277,7 @@ class CitationWebLocation {
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _CitationWebLocation;
+  
 }
 
 /// [CitationClassification1] The Citation Resource enables reference to any
@@ -2286,7 +2285,7 @@ class CitationWebLocation {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationClassification1 {
   /// [CitationClassification1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2330,7 +2329,7 @@ class CitationClassification1 {
   ///
   /// [artifactAssessment] Complex or externally created classification.
   ///
-  factory CitationClassification1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2365,7 +2364,7 @@ class CitationClassification1 {
 
     /// [artifactAssessment] Complex or externally created classification.
     List<Reference>? artifactAssessment,
-  }) = _CitationClassification1;
+  
 }
 
 /// [CitationContributorship] The Citation Resource enables reference to any
@@ -2373,7 +2372,7 @@ class CitationClassification1 {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationContributorship {
   /// [CitationContributorship] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2420,7 +2419,7 @@ class CitationContributorship {
   /// [summary] Used to record a display of the author/contributor list without
   ///  separate coding for each list member.
   ///
-  factory CitationContributorship({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2458,7 +2457,7 @@ class CitationContributorship {
 
     /// [summary] Used to record a display of the author/contributor list without separate coding for each list member.
     List<CitationSummary1>? summary,
-  }) = _CitationContributorship;
+  
 }
 
 /// [CitationEntry] The Citation Resource enables reference to any knowledge
@@ -2466,7 +2465,7 @@ class CitationContributorship {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationEntry {
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -2532,7 +2531,7 @@ class CitationEntry {
   ///
   /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   ///
-  factory CitationEntry({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2592,7 +2591,7 @@ class CitationEntry {
 
     /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
     @JsonKey(name: '_rankingOrder') Element? rankingOrderElement,
-  }) = _CitationEntry;
+  
 }
 
 /// [CitationContributionInstance] The Citation Resource enables reference to
@@ -2600,7 +2599,7 @@ class CitationEntry {
 ///  Citation Resource supports existing reference structures and developing
 ///  publication practices such as versioning, expressing complex
 ///  contributorship roles, and referencing computable resources.
-@freezed
+
 class CitationContributionInstance {
   /// [CitationContributionInstance] The Citation Resource enables reference to
   ///  any knowledge artifact for purposes of identification and attribution.
@@ -2644,7 +2643,7 @@ class CitationContributionInstance {
   ///
   /// [timeElement] ("_time") Extensions for time
   ///
-  factory CitationContributionInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2679,7 +2678,7 @@ class CitationContributionInstance {
 
     /// [timeElement] ("_time") Extensions for time
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _CitationContributionInstance;
+  
 }
 
 /// [CitationSummary1] The Citation Resource enables reference to any knowledge
@@ -2687,7 +2686,7 @@ class CitationContributionInstance {
 ///  Resource supports existing reference structures and developing publication
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
-@freezed
+
 class CitationSummary1 {
   /// [CitationSummary1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2738,7 +2737,7 @@ class CitationSummary1 {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CitationSummary1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2779,7 +2778,7 @@ class CitationSummary1 {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CitationSummary1;
+  
 }
 
 /// [Evidence] The Evidence Resource provides a machine-interpretable
@@ -2787,7 +2786,7 @@ class CitationSummary1 {
 ///  population, exposures/interventions, comparators, outcomes, measured
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
-@freezed
+
 class Evidence {
   /// [Evidence] The Evidence Resource provides a machine-interpretable
   ///  expression of an evidence concept including the evidence variables
@@ -3017,7 +3016,7 @@ class Evidence {
   /// [certainty] Assessment of certainty, confidence in the estimates, or
   ///  quality of the evidence.
   ///
-  factory Evidence({
+  
     /// [resourceType] This is a Evidence resource
     @Default(R5ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
@@ -3218,7 +3217,7 @@ class Evidence {
 
     /// [certainty] Assessment of certainty, confidence in the estimates, or quality of the evidence.
     List<EvidenceCertainty>? certainty,
-  }) = _Evidence;
+  
 }
 
 /// [EvidenceVariableDefinition] The Evidence Resource provides a
@@ -3226,7 +3225,7 @@ class Evidence {
 ///  evidence variables (e.g., population, exposures/interventions,
 ///  comparators, outcomes, measured variables, confounding variables), the
 ///  statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceVariableDefinition {
   /// [EvidenceVariableDefinition] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3280,7 +3279,7 @@ class EvidenceVariableDefinition {
   /// [directnessMatch] Indication of quality of match between intended
   ///  variable to actual variable.
   ///
-  factory EvidenceVariableDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3327,7 +3326,7 @@ class EvidenceVariableDefinition {
 
     /// [directnessMatch] Indication of quality of match between intended variable to actual variable.
     CodeableConcept? directnessMatch,
-  }) = _EvidenceVariableDefinition;
+  
 }
 
 /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable
@@ -3335,7 +3334,7 @@ class EvidenceVariableDefinition {
 ///  population, exposures/interventions, comparators, outcomes, measured
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
-@freezed
+
 class EvidenceStatistic {
   /// [EvidenceStatistic] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3406,7 +3405,7 @@ class EvidenceStatistic {
   ///
   /// [modelCharacteristic] A component of the method to generate the statistic.
   ///
-  factory EvidenceStatistic({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3471,7 +3470,7 @@ class EvidenceStatistic {
 
     /// [modelCharacteristic] A component of the method to generate the statistic.
     List<EvidenceModelCharacteristic>? modelCharacteristic,
-  }) = _EvidenceStatistic;
+  
 }
 
 /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable
@@ -3479,7 +3478,7 @@ class EvidenceStatistic {
 ///  population, exposures/interventions, comparators, outcomes, measured
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
-@freezed
+
 class EvidenceSampleSize {
   /// [EvidenceSampleSize] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3539,7 +3538,7 @@ class EvidenceSampleSize {
   ///
   /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   ///
-  factory EvidenceSampleSize({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3593,7 +3592,7 @@ class EvidenceSampleSize {
 
     /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
-  }) = _EvidenceSampleSize;
+  
 }
 
 /// [EvidenceAttributeEstimate] The Evidence Resource provides a
@@ -3601,7 +3600,7 @@ class EvidenceSampleSize {
 ///  evidence variables (e.g., population, exposures/interventions,
 ///  comparators, outcomes, measured variables, confounding variables), the
 ///  statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceAttributeEstimate {
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3661,7 +3660,7 @@ class EvidenceAttributeEstimate {
   /// [attributeEstimate] A nested attribute estimate; which is the attribute
   ///  estimate of an attribute estimate.
   ///
-  factory EvidenceAttributeEstimate({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3714,7 +3713,7 @@ class EvidenceAttributeEstimate {
 
     /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.
     List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceAttributeEstimate;
+  
 }
 
 /// [EvidenceModelCharacteristic] The Evidence Resource provides a
@@ -3722,7 +3721,7 @@ class EvidenceAttributeEstimate {
 ///  evidence variables (e.g., population, exposures/interventions,
 ///  comparators, outcomes, measured variables, confounding variables), the
 ///  statistics, and the certainty of this evidence.
-@freezed
+
 class EvidenceModelCharacteristic {
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3770,7 +3769,7 @@ class EvidenceModelCharacteristic {
   /// [attributeEstimate] An attribute of the statistic used as a model
   ///  characteristic.
   ///
-  factory EvidenceModelCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3808,7 +3807,7 @@ class EvidenceModelCharacteristic {
 
     /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
     List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceModelCharacteristic;
+  
 }
 
 /// [Evidencevariable] The Evidence Resource provides a machine-interpretable
@@ -3816,7 +3815,7 @@ class EvidenceModelCharacteristic {
 ///  population, exposures/interventions, comparators, outcomes, measured
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
-@freezed
+
 class Evidencevariable {
   /// [Evidencevariable] The Evidence Resource provides a machine-interpretable
   ///  expression of an evidence concept including the evidence variables
@@ -3869,7 +3868,7 @@ class Evidencevariable {
   /// [valueRange] Range of values for grouping of ordinal or polychotomous
   ///  variables.
   ///
-  factory Evidencevariable({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3913,7 +3912,7 @@ class Evidencevariable {
 
     /// [valueRange] Range of values for grouping of ordinal or polychotomous variables.
     List<Range>? valueRange,
-  }) = _Evidencevariable;
+  
 }
 
 /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable
@@ -3921,7 +3920,7 @@ class Evidencevariable {
 ///  population, exposures/interventions, comparators, outcomes, measured
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
-@freezed
+
 class EvidenceCertainty {
   /// [EvidenceCertainty] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -3975,7 +3974,7 @@ class EvidenceCertainty {
   ///
   /// [subcomponent] A domain or subdomain of certainty.
   ///
-  factory EvidenceCertainty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4025,14 +4024,14 @@ class EvidenceCertainty {
 
     /// [subcomponent] A domain or subdomain of certainty.
     List<EvidenceCertainty>? subcomponent,
-  }) = _EvidenceCertainty;
+  
 }
 
 /// [EvidenceReport] The EvidenceReport Resource is a specialized container for
 ///  a collection of resources and codeable concepts, adapted to support
 ///  compositions of Evidence, EvidenceVariable, and Citation resources and
 ///  related concepts.
-@freezed
+
 class EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container
   ///  for a collection of resources and codeable concepts, adapted to support
@@ -4257,7 +4256,7 @@ class EvidenceReport {
   ///
   /// [section] The root of the sections that make up the composition.
   ///
-  factory EvidenceReport({
+  
     /// [resourceType] This is a EvidenceReport resource
     @Default(R5ResourceType.EvidenceReport)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
@@ -4452,14 +4451,14 @@ class EvidenceReport {
 
     /// [section] The root of the sections that make up the composition.
     List<EvidenceReportSection>? section,
-  }) = _EvidenceReport;
+  
 }
 
 /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized
 ///  container for a collection of resources and codeable concepts, adapted to
 ///  support compositions of Evidence, EvidenceVariable, and Citation resources
 ///  and related concepts.
-@freezed
+
 class EvidenceReportSubject {
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -4499,7 +4498,7 @@ class EvidenceReportSubject {
   ///
   /// [note] Used for general notes and annotations not coded elsewhere.
   ///
-  factory EvidenceReportSubject({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4531,14 +4530,14 @@ class EvidenceReportSubject {
 
     /// [note] Used for general notes and annotations not coded elsewhere.
     List<Annotation>? note,
-  }) = _EvidenceReportSubject;
+  
 }
 
 /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized
 ///  container for a collection of resources and codeable concepts, adapted to
 ///  support compositions of Evidence, EvidenceVariable, and Citation resources
 ///  and related concepts.
-@freezed
+
 class EvidenceReportCharacteristic {
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a
   ///  specialized container for a collection of resources and codeable
@@ -4594,7 +4593,7 @@ class EvidenceReportCharacteristic {
   ///
   /// [period] Timeframe for the characteristic.
   ///
-  factory EvidenceReportCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4650,14 +4649,14 @@ class EvidenceReportCharacteristic {
 
     /// [period] Timeframe for the characteristic.
     Period? period,
-  }) = _EvidenceReportCharacteristic;
+  
 }
 
 /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized
 ///  container for a collection of resources and codeable concepts, adapted to
 ///  support compositions of Evidence, EvidenceVariable, and Citation resources
 ///  and related concepts.
-@freezed
+
 class EvidenceReportRelatesTo {
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -4700,7 +4699,7 @@ class EvidenceReportRelatesTo {
   ///
   /// [target] The target composition/document of this relationship.
   ///
-  factory EvidenceReportRelatesTo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4735,14 +4734,14 @@ class EvidenceReportRelatesTo {
 
     /// [target] The target composition/document of this relationship.
     required EvidenceReportTarget target,
-  }) = _EvidenceReportRelatesTo;
+  
 }
 
 /// [EvidenceReportTarget] The EvidenceReport Resource is a specialized
 ///  container for a collection of resources and codeable concepts, adapted to
 ///  support compositions of Evidence, EvidenceVariable, and Citation resources
 ///  and related concepts.
-@freezed
+
 class EvidenceReportTarget {
   /// [EvidenceReportTarget] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -4790,7 +4789,7 @@ class EvidenceReportTarget {
   ///
   /// [resource] Target of the relationship Resource reference.
   ///
-  factory EvidenceReportTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4834,14 +4833,14 @@ class EvidenceReportTarget {
 
     /// [resource] Target of the relationship Resource reference.
     Reference? resource,
-  }) = _EvidenceReportTarget;
+  
 }
 
 /// [EvidenceReportSection] The EvidenceReport Resource is a specialized
 ///  container for a collection of resources and codeable concepts, adapted to
 ///  support compositions of Evidence, EvidenceVariable, and Citation resources
 ///  and related concepts.
-@freezed
+
 class EvidenceReportSection {
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -4923,7 +4922,7 @@ class EvidenceReportSection {
   ///
   /// [section] A nested sub-section within this section.
   ///
-  factory EvidenceReportSection({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4991,12 +4990,12 @@ class EvidenceReportSection {
 
     /// [section] A nested sub-section within this section.
     List<EvidenceReportSection>? section,
-  }) = _EvidenceReportSection;
+  
 }
 
 /// [EvidenceVariable] The EvidenceVariable resource describes an element that
 ///  knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes an element
   ///  that knowledge (Evidence) is about.
@@ -5227,7 +5226,7 @@ class EvidenceVariable {
   ///
   /// [category] A grouping for ordinal or polychotomous variables.
   ///
-  factory EvidenceVariable({
+  
     /// [resourceType] This is a EvidenceVariable resource
     @Default(R5ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
@@ -5428,12 +5427,12 @@ class EvidenceVariable {
 
     /// [category] A grouping for ordinal or polychotomous variables.
     List<EvidenceVariableCategory>? category,
-  }) = _EvidenceVariable;
+  
 }
 
 /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes an
 ///  element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableCharacteristic {
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
@@ -5505,7 +5504,7 @@ class EvidenceVariableCharacteristic {
   ///
   /// [timeFromEvent] Observation time from study specified event.
   ///
-  factory EvidenceVariableCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5579,12 +5578,12 @@ class EvidenceVariableCharacteristic {
 
     /// [timeFromEvent] Observation time from study specified event.
     List<EvidenceVariableTimeFromEvent>? timeFromEvent,
-  }) = _EvidenceVariableCharacteristic;
+  
 }
 
 /// [EvidenceVariableDefinitionByTypeAndValue] The EvidenceVariable resource
 ///  describes an element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableDefinitionByTypeAndValue
     with _$EvidenceVariableDefinitionByTypeAndValue {
   /// [EvidenceVariableDefinitionByTypeAndValue] The EvidenceVariable resource
@@ -5647,7 +5646,7 @@ class EvidenceVariableDefinitionByTypeAndValue
   /// [offset] Defines the reference point for comparison when valueQuantity is
   ///  not compared to zero.
   ///
-  factory EvidenceVariableDefinitionByTypeAndValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5709,12 +5708,12 @@ class EvidenceVariableDefinitionByTypeAndValue
 
     /// [offset] Defines the reference point for comparison when valueQuantity is not compared to zero.
     CodeableConcept? offset,
-  }) = _EvidenceVariableDefinitionByTypeAndValue;
+  
 }
 
 /// [EvidenceVariableDefinitionByCombination] The EvidenceVariable resource
 ///  describes an element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableDefinitionByCombination
     with _$EvidenceVariableDefinitionByCombination {
   /// [EvidenceVariableDefinitionByCombination] The EvidenceVariable resource
@@ -5759,7 +5758,7 @@ class EvidenceVariableDefinitionByCombination
   ///
   /// [characteristic] A defining factor of the characteristic.
   ///
-  factory EvidenceVariableDefinitionByCombination({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5800,12 +5799,12 @@ class EvidenceVariableDefinitionByCombination
 
     /// [characteristic] A defining factor of the characteristic.
     required List<EvidenceVariableCharacteristic> characteristic,
-  }) = _EvidenceVariableDefinitionByCombination;
+  
 }
 
 /// [EvidenceVariableTimeFromEvent] The EvidenceVariable resource describes an
 ///  element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableTimeFromEvent {
   /// [EvidenceVariableTimeFromEvent] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
@@ -5863,7 +5862,7 @@ class EvidenceVariableTimeFromEvent {
   /// [range] Used to express the observation within a period after the study
   ///  start.
   ///
-  factory EvidenceVariableTimeFromEvent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5922,12 +5921,12 @@ class EvidenceVariableTimeFromEvent {
 
     /// [range] Used to express the observation within a period after the study start.
     Range? range,
-  }) = _EvidenceVariableTimeFromEvent;
+  
 }
 
 /// [EvidenceVariableCategory] The EvidenceVariable resource describes an
 ///  element that knowledge (Evidence) is about.
-@freezed
+
 class EvidenceVariableCategory {
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an
   ///  element that knowledge (Evidence) is about.
@@ -5969,7 +5968,7 @@ class EvidenceVariableCategory {
   ///
   /// [valueRange] Definition of the grouping.
   ///
-  factory EvidenceVariableCategory({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6010,5 +6009,5 @@ class EvidenceVariableCategory {
 
     /// [valueRange] Definition of the grouping.
     Range? valueRange,
-  }) = _EvidenceVariableCategory;
+  
 }

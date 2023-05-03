@@ -2,19 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
 part 'general_types.enums.dart';
-part 'general_types.freezed.dart';
+
 part 'general_types.g.dart';
 
 /// [Annotation] A  text note which also  contains information about who made
 ///  the statement and when.
-@freezed
+
 class Annotation {
   /// [Annotation] A  text note which also  contains information about who made
   ///  the statement and when.
@@ -46,7 +46,7 @@ class Annotation {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory Annotation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -80,11 +80,11 @@ class Annotation {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _Annotation;
+  
 }
 
 /// [Attachment] For referring to data content defined in other formats.
-@freezed
+
 class Attachment {
   /// [Attachment] For referring to data content defined in other formats.
 
@@ -162,7 +162,7 @@ class Attachment {
   ///
   /// [pagesElement] ("_pages") Extensions for pages
   ///
-  factory Attachment({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -264,12 +264,12 @@ class Attachment {
 
     /// [pagesElement] ("_pages") Extensions for pages
     @JsonKey(name: '_pages') Element? pagesElement,
-  }) = _Attachment;
+  
 }
 
 /// [Identifier] An identifier - identifies some entity uniquely and
 ///  unambiguously. Typically this is used for business identifiers.
-@freezed
+
 class Identifier {
   /// [Identifier] An identifier - identifies some entity uniquely and
   ///  unambiguously. Typically this is used for business identifiers.
@@ -308,7 +308,7 @@ class Identifier {
   ///
   /// [assigner] Organization that issued/manages the identifier.
   ///
-  factory Identifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -351,12 +351,12 @@ class Identifier {
 
     /// [assigner] Organization that issued/manages the identifier.
     Reference? assigner,
-  }) = _Identifier;
+  
 }
 
 /// [CodeableConcept] A concept that may be defined by a formal reference to a
 ///  terminology or ontology or may be provided by text.
-@freezed
+
 class CodeableConcept {
   /// [CodeableConcept] A concept that may be defined by a formal reference to
   ///  a terminology or ontology or may be provided by text.
@@ -382,7 +382,7 @@ class CodeableConcept {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory CodeableConcept({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -406,11 +406,11 @@ class CodeableConcept {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CodeableConcept;
+  
 }
 
 /// [Coding] A reference to a code defined by a terminology system.
-@freezed
+
 class Coding {
   /// [Coding] A reference to a code defined by a terminology system.
 
@@ -456,7 +456,7 @@ class Coding {
   ///
   /// [userSelectedElement] ("_userSelected") Extensions for userSelected
   ///
-  factory Coding({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -509,14 +509,14 @@ class Coding {
 
     /// [userSelectedElement] ("_userSelected") Extensions for userSelected
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
-  }) = _Coding;
+  
 }
 
 /// [Quantity] A measured amount (or an amount that can potentially be
 ///  measured). Note that measured amounts include amounts that are not
 ///  precisely quantified, including amounts involving arbitrary units and
 ///  floating currencies.
-@freezed
+
 class Quantity {
   /// [Quantity] A measured amount (or an amount that can potentially be
   ///  measured). Note that measured amounts include amounts that are not
@@ -564,7 +564,7 @@ class Quantity {
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  factory Quantity({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -613,11 +613,11 @@ class Quantity {
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Quantity;
+  
 }
 
 /// [FhirDuration] A length of time.
-@freezed
+
 class FhirDuration {
   /// [FhirDuration] A length of time.
 
@@ -659,7 +659,7 @@ class FhirDuration {
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  factory FhirDuration({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -708,11 +708,11 @@ class FhirDuration {
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _FhirDuration;
+  
 }
 
 /// [Distance] A length - a value with a unit that is a physical distance.
-@freezed
+
 class Distance {
   /// [Distance] A length - a value with a unit that is a physical distance.
 
@@ -754,7 +754,7 @@ class Distance {
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  factory Distance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -803,14 +803,14 @@ class Distance {
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Distance;
+  
 }
 
 /// [Count] A measured amount (or an amount that can potentially be measured).
 ///  Note that measured amounts include amounts that are not precisely
 ///  quantified, including amounts involving arbitrary units and floating
 ///  currencies.
-@freezed
+
 class Count {
   /// [Count] A measured amount (or an amount that can potentially be
   ///  measured). Note that measured amounts include amounts that are not
@@ -858,7 +858,7 @@ class Count {
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  factory Count({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -907,11 +907,11 @@ class Count {
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Count;
+  
 }
 
 /// [Money] An amount of economic utility in some recognized currency.
-@freezed
+
 class Money {
   /// [Money] An amount of economic utility in some recognized currency.
 
@@ -935,7 +935,7 @@ class Money {
   ///
   /// [currencyElement] ("_currency") Extensions for currency
   ///
-  factory Money({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -960,12 +960,12 @@ class Money {
 
     /// [currencyElement] ("_currency") Extensions for currency
     @JsonKey(name: '_currency') Element? currencyElement,
-  }) = _Money;
+  
 }
 
 /// [Age] A duration of time during which an organism (or a process) has
 ///  existed.
-@freezed
+
 class Age {
   /// [Age] A duration of time during which an organism (or a process) has
   ///  existed.
@@ -1009,7 +1009,7 @@ class Age {
   ///
   /// [codeElement] ("_code") Extensions for code
   ///
-  factory Age({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1058,11 +1058,11 @@ class Age {
 
     /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Age;
+  
 }
 
 /// [Range] A set of ordered Quantities defined by a low and high limit.
-@freezed
+
 class Range {
   /// [Range] A set of ordered Quantities defined by a low and high limit.
 
@@ -1082,7 +1082,7 @@ class Range {
   ///
   /// [high] The high limit. The boundary is inclusive.
   ///
-  factory Range({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1101,11 +1101,11 @@ class Range {
 
     /// [high] The high limit. The boundary is inclusive.
     Quantity? high,
-  }) = _Range;
+  
 }
 
 /// [Period] A time period defined by a start and end date and optionally time.
-@freezed
+
 class Period {
   /// [Period] A time period defined by a start and end date and optionally
   ///  time.
@@ -1134,7 +1134,7 @@ class Period {
   ///
   /// [endElement] ("_end") Extensions for end
   ///
-  factory Period({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1162,12 +1162,12 @@ class Period {
 
     /// [endElement] ("_end") Extensions for end
     @JsonKey(name: '_end') Element? endElement,
-  }) = _Period;
+  
 }
 
 /// [Ratio] A relationship of two Quantity values - expressed as a numerator
 ///  and a denominator.
-@freezed
+
 class Ratio {
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   ///  and a denominator.
@@ -1189,7 +1189,7 @@ class Ratio {
   ///
   /// [denominator] The value of the denominator.
   ///
-  factory Ratio({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1208,12 +1208,12 @@ class Ratio {
 
     /// [denominator] The value of the denominator.
     Quantity? denominator,
-  }) = _Ratio;
+  
 }
 
 /// [RatioRange] A range of ratios expressed as a low and high numerator and a
 ///  denominator.
-@freezed
+
 class RatioRange {
   /// [RatioRange] A range of ratios expressed as a low and high numerator and
   ///  a denominator.
@@ -1237,7 +1237,7 @@ class RatioRange {
   ///
   /// [denominator] The value of the denominator.
   ///
-  factory RatioRange({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1259,12 +1259,12 @@ class RatioRange {
 
     /// [denominator] The value of the denominator.
     Quantity? denominator,
-  }) = _RatioRange;
+  
 }
 
 /// [SampledData] A series of measurements taken by a device, with upper and
 ///  lower limits. There may be more than one dimension in the data.
-@freezed
+
 class SampledData {
   /// [SampledData] A series of measurements taken by a device, with upper and
   ///  lower limits. There may be more than one dimension in the data.
@@ -1325,7 +1325,7 @@ class SampledData {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  factory SampledData({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1396,7 +1396,7 @@ class SampledData {
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _SampledData;
+  
 }
 
 /// [Signature] A signature along with supporting context. The signature may be
@@ -1404,7 +1404,7 @@ class SampledData {
 ///  signature acceptable to the domain. This other signature may be as simple
 ///  as a graphical image representing a hand-written signature, or a signature
 ///  ceremony Different signature approaches have different utilities.
-@freezed
+
 class Signature {
   /// [Signature] A signature along with supporting context. The signature may
   ///  be a digital signature that is cryptographic in nature, or some other
@@ -1462,7 +1462,7 @@ class Signature {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  factory Signature({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1518,14 +1518,14 @@ class Signature {
 
     /// [dataElement] ("_data") Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _Signature;
+  
 }
 
 /// [HumanName] A name, normally of a human, that can be used for other living
 ///  entities (eg. animals but not organizations) that have been assigned names
 ///  by a human and may need the use of name parts or the need for usage
 ///  information.
-@freezed
+
 class HumanName {
   /// [HumanName] A name, normally of a human, that can be used for other
   ///  living entities (eg. animals but not organizations) that have been
@@ -1581,7 +1581,7 @@ class HumanName {
   /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
   ///
-  factory HumanName({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1642,7 +1642,7 @@ class HumanName {
     /// [period] Indicates the period of time when this name was valid for the
     ///  named person.
     Period? period,
-  }) = _HumanName;
+  
 }
 
 /// [Address] An address expressed using postal conventions (as opposed to GPS
@@ -1652,7 +1652,7 @@ class HumanName {
 ///  of postal address formats defined around the world.The
 ///  ISO21090-codedString may be used to provide a coded representation of the
 ///  contents of strings in an Address.
-@freezed
+
 class Address {
   /// [Address] An address expressed using postal conventions (as opposed to
   ///  GPS or other location definition formats).  This data type may be used
@@ -1728,7 +1728,7 @@ class Address {
   ///
   /// [period] Time period when address was/is in use.
   ///
-  factory Address({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1809,12 +1809,12 @@ class Address {
 
     /// [period] Time period when address was/is in use.
     Period? period,
-  }) = _Address;
+  
 }
 
 /// [ContactPoint] Details for all kinds of technology mediated contact points
 ///  for a person or organization, including telephone, email, etc.
-@freezed
+
 class ContactPoint {
   /// [ContactPoint] Details for all kinds of technology mediated contact
   ///  points for a person or organization, including telephone, email, etc.
@@ -1854,7 +1854,7 @@ class ContactPoint {
   ///
   /// [period] Time period when the contact point was/is in use.
   ///
-  factory ContactPoint({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1899,7 +1899,7 @@ class ContactPoint {
 
     /// [period] Time period when the contact point was/is in use.
     Period? period,
-  }) = _ContactPoint;
+  
 }
 
 /// [Timing] Specifies an event that may occur multiple times. Timing schedules
@@ -1908,7 +1908,7 @@ class ContactPoint {
 ///  They are also used when planning care of various kinds, and may be used
 ///  for reporting the schedule to which past regular activities were carried
 ///  out.
-@freezed
+
 class Timing {
   /// [Timing] Specifies an event that may occur multiple times. Timing
   ///  schedules are used to record when things are planned, expected or
@@ -1962,7 +1962,7 @@ class Timing {
   ///  Timing, with the exception that .repeat.bounds still applies over the
   ///  code (and is not contained in the code).
   ///
-  factory Timing({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2008,7 +2008,7 @@ class Timing {
     ///  the Timing, with the exception that .repeat.bounds still applies over
     ///  the code (and is not contained in the code).
     CodeableConcept? code,
-  }) = _Timing;
+  
 }
 
 /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
@@ -2017,7 +2017,7 @@ class Timing {
 ///  medications. They are also used when planning care of various kinds, and
 ///  may be used for reporting the schedule to which past regular activities
 ///  were carried out.
-@freezed
+
 class TimingRepeat {
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   ///  schedules are used to record when things are planned, expected or
@@ -2149,7 +2149,7 @@ class TimingRepeat {
   ///
   /// [offsetElement] ("_offset") Extensions for offset
   ///
-  factory TimingRepeat({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2300,5 +2300,5 @@ class TimingRepeat {
 
     /// [offsetElement] ("_offset") Extensions for offset
     @JsonKey(name: '_offset') Element? offsetElement,
-  }) = _TimingRepeat;
+  
 }

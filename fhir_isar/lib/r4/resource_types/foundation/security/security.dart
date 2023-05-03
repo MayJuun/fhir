@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'security.freezed.dart';
 part 'security.g.dart';
 
 /// [AuditEvent] A record of an event made for purposes of maintaining a
-@freezed
+
 class AuditEvent {
   /// [AuditEvent] A record of an event made for purposes of maintaining a
 
@@ -107,7 +106,7 @@ class AuditEvent {
   /// [source] The system that is reporting the event.
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
-  factory AuditEvent({
+  
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
 
@@ -231,11 +230,11 @@ class AuditEvent {
 
     /// [entity] Specific instances of data or objects that have been accessed.
     List<AuditEventEntity>? entity,
-  }) = _AuditEvent;
+  
 }
 
 /// [AuditEventAgent] A record of an event made for purposes of maintaining
-@freezed
+
 class AuditEventAgent {
   /// [AuditEventAgent] A record of an event made for purposes of maintaining
 
@@ -309,7 +308,7 @@ class AuditEventAgent {
   ///
   /// [purposeOfUse] The reason (purpose of use), specific to this agent, that
   ///  was used during the event being recorded.
-  factory AuditEventAgent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -394,11 +393,11 @@ class AuditEventAgent {
     /// [purposeOfUse] The reason (purpose of use), specific to this agent, that
     ///  was used during the event being recorded.
     List<CodeableConcept>? purposeOfUse,
-  }) = _AuditEventAgent;
+  
 }
 
 /// [AuditEventNetwork] A record of an event made for purposes of
-@freezed
+
 class AuditEventNetwork {
   /// [AuditEventNetwork] A record of an event made for purposes of
 
@@ -439,7 +438,7 @@ class AuditEventNetwork {
   ///  the audit event.
   ///
   /// [typeElement] Extensions for type
-  factory AuditEventNetwork({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -480,11 +479,11 @@ class AuditEventNetwork {
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _AuditEventNetwork;
+  
 }
 
 /// [AuditEventSource] A record of an event made for purposes of maintaining
-@freezed
+
 class AuditEventSource {
   /// [AuditEventSource] A record of an event made for purposes of maintaining
 
@@ -525,7 +524,7 @@ class AuditEventSource {
   /// [observer] Identifier of the source where the event was detected.
   ///
   /// [type] Code specifying the type of source where event originated.
-  factory AuditEventSource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -566,11 +565,11 @@ class AuditEventSource {
 
     /// [type] Code specifying the type of source where event originated.
     List<Coding>? type,
-  }) = _AuditEventSource;
+  
 }
 
 /// [AuditEventEntity] A record of an event made for purposes of maintaining
-@freezed
+
 class AuditEventEntity {
   /// [AuditEventEntity] A record of an event made for purposes of maintaining
 
@@ -628,7 +627,7 @@ class AuditEventEntity {
   ///
   /// [detail] Tagged value pairs for conveying additional information about
   ///  the entity.
-  factory AuditEventEntity({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -694,11 +693,11 @@ class AuditEventEntity {
     /// [detail] Tagged value pairs for conveying additional information about
     ///  the entity.
     List<AuditEventDetail>? detail,
-  }) = _AuditEventEntity;
+  
 }
 
 /// [AuditEventDetail] A record of an event made for purposes of maintaining
-@freezed
+
 class AuditEventDetail {
   /// [AuditEventDetail] A record of an event made for purposes of maintaining
 
@@ -741,7 +740,7 @@ class AuditEventDetail {
   /// [valueBase64Binary] The  value of the extra detail.
   ///
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-  factory AuditEventDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -786,11 +785,11 @@ class AuditEventDetail {
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-  }) = _AuditEventDetail;
+  
 }
 
 /// [Consent] A record of a healthcare consumer’s  choices, which permits or
-@freezed
+
 class Consent {
   /// [Consent] A record of a healthcare consumer’s  choices, which permits or
 
@@ -903,7 +902,7 @@ class Consent {
   ///
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
-  factory Consent({
+  
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
 
@@ -1043,11 +1042,11 @@ class Consent {
     /// [provision] An exception to the base policy of this consent. An exception
     ///  can be an addition or removal of access permissions.
     ConsentProvision? provision,
-  }) = _Consent;
+  
 }
 
 /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
-@freezed
+
 class ConsentPolicy {
   /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
 
@@ -1090,7 +1089,7 @@ class ConsentPolicy {
   ///  jurisdictionally, or in law.
   ///
   /// [uriElement] Extensions for uri
-  factory ConsentPolicy({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1132,11 +1131,11 @@ class ConsentPolicy {
 
     /// [uriElement] Extensions for uri
     @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ConsentPolicy;
+  
 }
 
 /// [ConsentVerification] A record of a healthcare consumer’s  choices,
-@freezed
+
 class ConsentVerification {
   /// [ConsentVerification] A record of a healthcare consumer’s  choices,
 
@@ -1179,7 +1178,7 @@ class ConsentVerification {
   /// [verificationDate] Date verification was collected.
   ///
   /// [verificationDateElement] Extensions for verificationDate
-  factory ConsentVerification({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1222,11 +1221,11 @@ class ConsentVerification {
 
     /// [verificationDateElement] Extensions for verificationDate
     @JsonKey(name: '_verificationDate') Element? verificationDateElement,
-  }) = _ConsentVerification;
+  
 }
 
 /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
-@freezed
+
 class ConsentProvision {
   /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
 
@@ -1291,7 +1290,7 @@ class ConsentProvision {
   ///  referenced.
   ///
   /// [provision] Rules which provide exceptions to the base rule or subrules.
-  factory ConsentProvision({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1363,11 +1362,11 @@ class ConsentProvision {
 
     /// [provision] Rules which provide exceptions to the base rule or subrules.
     List<ConsentProvision>? provision,
-  }) = _ConsentProvision;
+  
 }
 
 /// [ConsentActor] A record of a healthcare consumer’s  choices, which
-@freezed
+
 class ConsentActor {
   /// [ConsentActor] A record of a healthcare consumer’s  choices, which
 
@@ -1406,7 +1405,7 @@ class ConsentActor {
   /// [reference] The resource that identifies the actor. To identify actors by
   /// type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
-  factory ConsentActor({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1442,11 +1441,11 @@ class ConsentActor {
     /// type, use group to identify a set of actors by some property they share
     ///  (e.g. 'admitting officers').
     required Reference reference,
-  }) = _ConsentActor;
+  
 }
 
 /// [ConsentData] A record of a healthcare consumer’s  choices, which
-@freezed
+
 class ConsentData {
   /// [ConsentData] A record of a healthcare consumer’s  choices, which
 
@@ -1486,7 +1485,7 @@ class ConsentData {
   ///
   /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
-  factory ConsentData({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1524,11 +1523,11 @@ class ConsentData {
     /// [reference] A reference to a specific resource that defines which
     ///  resources are covered by this consent.
     required Reference reference,
-  }) = _ConsentData;
+  
 }
 
 /// [Provenance] Provenance of a resource is a record that describes entities
-@freezed
+
 class Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
 
@@ -1632,7 +1631,7 @@ class Provenance {
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
-  factory Provenance({
+  
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
 
@@ -1756,11 +1755,11 @@ class Provenance {
     /// should match a Provenance.agent. The purpose of the signature is
     ///  indicated.
     List<Signature>? signature,
-  }) = _Provenance;
+  
 }
 
 /// [ProvenanceAgent] Provenance of a resource is a record that describes
-@freezed
+
 class ProvenanceAgent {
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
 
@@ -1809,7 +1808,7 @@ class ProvenanceAgent {
   ///
   /// [onBehalfOf] The individual, device, or organization for whom the change
   ///  was made.
-  factory ProvenanceAgent({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1851,11 +1850,11 @@ class ProvenanceAgent {
     /// [onBehalfOf] The individual, device, or organization for whom the change
     ///  was made.
     Reference? onBehalfOf,
-  }) = _ProvenanceAgent;
+  
 }
 
 /// [ProvenanceEntity] Provenance of a resource is a record that describes
-@freezed
+
 class ProvenanceEntity {
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
 
@@ -1905,7 +1904,7 @@ class ProvenanceEntity {
   /// responsibility for that entity, possibly along with other agents. This
   /// description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which generated the entity.
-  factory ProvenanceEntity({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1948,5 +1947,5 @@ class ProvenanceEntity {
     /// description can be understood as shorthand for saying that the agent was
     ///  responsible for the activity which generated the entity.
     List<ProvenanceAgent>? agent,
-  }) = _ProvenanceEntity;
+  
 }

@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
-part 'element.freezed.dart';
 part 'element.g.dart';
 
 /// [Element] Base definition for all elements in a resource.
-@freezed
+
 class Element {
   /// [Element] Base definition for all elements in a resource.
   ///
@@ -25,7 +24,7 @@ class Element {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  factory Element({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
 
@@ -41,5 +40,5 @@ class Element {
     ///  definition of the extension.
 
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  }) = _Element;
+  
 }

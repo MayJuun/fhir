@@ -2,18 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r4.dart';
 
 part 'metadata_types.enums.dart';
-part 'metadata_types.freezed.dart';
+
 part 'metadata_types.g.dart';
 
 /// [ContactDetail] Specifies contact information for a person or
-@freezed
+
 class ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or
 
@@ -36,7 +36,7 @@ class ContactDetail {
   ///
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-  factory ContactDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -58,11 +58,11 @@ class ContactDetail {
     /// [telecom] The contact details for the individual (if a name was provided)
     ///  or the organization.
     List<ContactPoint>? telecom,
-  }) = _ContactDetail;
+  
 }
 
 /// [Contributor] A contributor to the content of a knowledge asset,
-@freezed
+
 class Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset,
 
@@ -90,7 +90,7 @@ class Contributor {
   ///
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-  factory Contributor({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -119,11 +119,11 @@ class Contributor {
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the contributor.
     List<ContactDetail>? contact,
-  }) = _Contributor;
+  
 }
 
 /// [DataRequirement] Describes a required data item for evaluation in terms
-@freezed
+
 class DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms
 
@@ -183,7 +183,7 @@ class DataRequirement {
   /// [limitElement] Extensions for limit
   ///
   /// [sort] Specifies the order of the results to be returned.
-  factory DataRequirement({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -251,11 +251,11 @@ class DataRequirement {
 
     /// [sort] Specifies the order of the results to be returned.
     List<DataRequirementSort>? sort,
-  }) = _DataRequirement;
+  
 }
 
 /// [DataRequirementCodeFilter] Describes a required data item for
-@freezed
+
 class DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for
 
@@ -314,7 +314,7 @@ class DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-  factory DataRequirementCodeFilter({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -375,11 +375,11 @@ class DataRequirementCodeFilter {
     /// codes are specified in addition to a value set, the filter returns items
     ///  matching a code in the value set or one of the specified codes.
     List<Coding>? code,
-  }) = _DataRequirementCodeFilter;
+  
 }
 
 /// [DataRequirementDateFilter] Describes a required data item for
-@freezed
+
 class DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for
 
@@ -450,7 +450,7 @@ class DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  factory DataRequirementDateFilter({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -525,11 +525,11 @@ class DataRequirementDateFilter {
     /// to the specified dateTime. If a Duration is specified, the filter will
     ///  return only those data items that fall within Duration before now.
     FhirDuration? valueDuration,
-  }) = _DataRequirementDateFilter;
+  
 }
 
 /// [DataRequirementSort] Describes a required data item for evaluation in
-@freezed
+
 class DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
 
@@ -572,7 +572,7 @@ class DataRequirementSort {
   /// [direction] The direction of the sort, ascending or descending.
   ///
   /// [directionElement] Extensions for direction
-  factory DataRequirementSort({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -619,11 +619,11 @@ class DataRequirementSort {
     /// [directionElement] Extensions for direction
     @JsonKey(name: '_direction')
         Element? directionElement,
-  }) = _DataRequirementSort;
+  
 }
 
 /// [ParameterDefinition] The parameters to the module. This collection
-@freezed
+
 class ParameterDefinition {
   /// [ParameterDefinition] The parameters to the module. This collection
 
@@ -672,7 +672,7 @@ class ParameterDefinition {
   ///
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  factory ParameterDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -728,11 +728,11 @@ class ParameterDefinition {
     /// [profile] If specified, this indicates a profile that the input data must
     ///  conform to, or that the output data will conform to.
     Canonical? profile,
-  }) = _ParameterDefinition;
+  
 }
 
 /// [RelatedArtifact] Related artifacts such as additional documentation,
-@freezed
+
 class RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
 
@@ -778,7 +778,7 @@ class RelatedArtifact {
   ///
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  factory RelatedArtifact({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -839,11 +839,11 @@ class RelatedArtifact {
     /// [resource] The related resource, such as a library, value set, profile,
     ///  or other knowledge resource.
     Canonical? resource,
-  }) = _RelatedArtifact;
+  
 }
 
 /// [TriggerDefinition] A description of a triggering event. Triggering
-@freezed
+
 class TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering
 
@@ -891,7 +891,7 @@ class TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-  factory TriggerDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -952,11 +952,11 @@ class TriggerDefinition {
     /// of the container of the trigger definition and returns whether or not the
     ///  trigger fires.
     Expression? condition,
-  }) = _TriggerDefinition;
+  
 }
 
 /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
-@freezed
+
 class UsageContext {
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
 
@@ -989,7 +989,7 @@ class UsageContext {
   ///
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  factory UsageContext({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1021,11 +1021,11 @@ class UsageContext {
     /// [valueReference] A value that defines the context specified in this
     ///  context of use. The interpretation of the value is defined by the code.
     Reference? valueReference,
-  }) = _UsageContext;
+  
 }
 
 /// [Expression] A expression that is evaluated in a specified context and
-@freezed
+
 class Expression {
   /// [Expression] A expression that is evaluated in a specified context and
 
@@ -1066,7 +1066,7 @@ class Expression {
   /// [reference] A URI that defines where the expression is found.
   ///
   /// [referenceElement] Extensions for reference
-  factory Expression({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1118,5 +1118,5 @@ class Expression {
     /// [referenceElement] Extensions for reference
     @JsonKey(name: '_reference')
         Element? referenceElement,
-  }) = _Expression;
+  
 }

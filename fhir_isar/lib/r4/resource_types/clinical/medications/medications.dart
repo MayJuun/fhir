@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'medications.freezed.dart';
 part 'medications.g.dart';
 
 /// [Immunization] Describes the event of a patient being administered a
-@freezed
+
 class Immunization {
   /// [Immunization] Describes the event of a patient being administered a
 
@@ -167,7 +166,7 @@ class Immunization {
   ///
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
-  factory Immunization({
+  
     @Default(R4ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
 
@@ -377,11 +376,11 @@ class Immunization {
     /// [protocolApplied] The protocol (set of recommendations) being followed by
     ///  the provider who administered the dose.
     List<ImmunizationProtocolApplied>? protocolApplied,
-  }) = _Immunization;
+  
 }
 
 /// [ImmunizationPerformer] Describes the event of a patient being
-@freezed
+
 class ImmunizationPerformer {
   /// [ImmunizationPerformer] Describes the event of a patient being
 
@@ -417,7 +416,7 @@ class ImmunizationPerformer {
   ///  administering provider, etc.).
   ///
   /// [actor] The practitioner or organization who performed the action.
-  factory ImmunizationPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -451,11 +450,11 @@ class ImmunizationPerformer {
 
     /// [actor] The practitioner or organization who performed the action.
     required Reference actor,
-  }) = _ImmunizationPerformer;
+  
 }
 
 /// [ImmunizationEducation] Describes the event of a patient being
-@freezed
+
 class ImmunizationEducation {
   /// [ImmunizationEducation] Describes the event of a patient being
 
@@ -504,7 +503,7 @@ class ImmunizationEducation {
   ///  patient.
   ///
   /// [presentationDateElement] Extensions for presentationDate
-  factory ImmunizationEducation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -557,11 +556,11 @@ class ImmunizationEducation {
 
     /// [presentationDateElement] Extensions for presentationDate
     @JsonKey(name: '_presentationDate') Element? presentationDateElement,
-  }) = _ImmunizationEducation;
+  
 }
 
 /// [ImmunizationReaction] Describes the event of a patient being
-@freezed
+
 class ImmunizationReaction {
   /// [ImmunizationReaction] Describes the event of a patient being
 
@@ -602,7 +601,7 @@ class ImmunizationReaction {
   /// [reported] Self-reported indicator.
   ///
   /// [reportedElement] Extensions for reported
-  factory ImmunizationReaction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -644,11 +643,11 @@ class ImmunizationReaction {
 
     /// [reportedElement] Extensions for reported
     @JsonKey(name: '_reported') Element? reportedElement,
-  }) = _ImmunizationReaction;
+  
 }
 
 /// [ImmunizationProtocolApplied] Describes the event of a patient being
-@freezed
+
 class ImmunizationProtocolApplied {
   /// [ImmunizationProtocolApplied] Describes the event of a patient being
 
@@ -707,7 +706,7 @@ class ImmunizationProtocolApplied {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
-  factory ImmunizationProtocolApplied({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -780,11 +779,11 @@ class ImmunizationProtocolApplied {
     /// [seriesDosesStringElement] Extensions for seriesDosesString
     @JsonKey(name: '_seriesDosesString')
         Element? seriesDosesStringElement,
-  }) = _ImmunizationProtocolApplied;
+  
 }
 
 /// [ImmunizationEvaluation] Describes a comparison of an immunization event
-@freezed
+
 class ImmunizationEvaluation {
   /// [ImmunizationEvaluation] Describes a comparison of an immunization event
 
@@ -900,7 +899,7 @@ class ImmunizationEvaluation {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
-  factory ImmunizationEvaluation({
+  
     @Default(R4ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
 
@@ -1057,11 +1056,11 @@ class ImmunizationEvaluation {
     /// [seriesDosesStringElement] Extensions for seriesDosesString
     @JsonKey(name: '_seriesDosesString')
         Element? seriesDosesStringElement,
-  }) = _ImmunizationEvaluation;
+  
 }
 
 /// [ImmunizationRecommendation] A patient's point-in-time set of
-@freezed
+
 class ImmunizationRecommendation {
   /// [ImmunizationRecommendation] A patient's point-in-time set of
 
@@ -1135,7 +1134,7 @@ class ImmunizationRecommendation {
   ///  ACIP).
   ///
   /// [recommendation] Vaccine administration recommendations.
-  factory ImmunizationRecommendation({
+  
     @Default(R4ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
 
@@ -1226,10 +1225,9 @@ class ImmunizationRecommendation {
 
     /// [recommendation] Vaccine administration recommendations.
     required List<ImmunizationRecommendationRecommendation> recommendation,
-  }) = _ImmunizationRecommendation;
+  
 }
 
-@freezed
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   /// [ImmunizationRecommendationRecommendation] A patient's point-in-time set
@@ -1311,7 +1309,7 @@ class ImmunizationRecommendationRecommendation
   /// [supportingPatientInformation] Patient Information that supports the
   /// status and recommendation.  This includes patient observations, adverse
   ///  reactions and allergy/intolerance information.
-  factory ImmunizationRecommendationRecommendation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1417,11 +1415,11 @@ class ImmunizationRecommendationRecommendation
     /// status and recommendation.  This includes patient observations, adverse
     ///  reactions and allergy/intolerance information.
     List<Reference>? supportingPatientInformation,
-  }) = _ImmunizationRecommendationRecommendation;
+  
 }
 
 /// [MedicationIngredient] This resource is primarily used for the
-@freezed
+
 class MedicationIngredient {
   /// [MedicationIngredient] This resource is primarily used for the
 
@@ -1468,7 +1466,7 @@ class MedicationIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  factory MedicationIngredient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1515,11 +1513,11 @@ class MedicationIngredient {
     /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
     ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
     Ratio? strength,
-  }) = _MedicationIngredient;
+  
 }
 
 /// [MedicationBatch] This resource is primarily used for the identification
-@freezed
+
 class MedicationBatch {
   /// [MedicationBatch] This resource is primarily used for the identification
 
@@ -1559,7 +1557,7 @@ class MedicationBatch {
   /// [expirationDate] When this specific batch of product will expire.
   ///
   /// [expirationDateElement] Extensions for expirationDate
-  factory MedicationBatch({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1598,11 +1596,11 @@ class MedicationBatch {
 
     /// [expirationDateElement] Extensions for expirationDate
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
-  }) = _MedicationBatch;
+  
 }
 
 /// [MedicationAdministration] Describes the event of a patient consuming or
-@freezed
+
 class MedicationAdministration {
   /// [MedicationAdministration] Describes the event of a patient consuming or
 
@@ -1746,7 +1744,7 @@ class MedicationAdministration {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
-  factory MedicationAdministration({
+  
     @Default(R4ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
 
@@ -1925,10 +1923,9 @@ class MedicationAdministration {
     /// [eventHistory] A summary of the events of interest that have occurred,
     ///  such as when the administration was verified.
     List<Reference>? eventHistory,
-  }) = _MedicationAdministration;
+  
 }
 
-@freezed
 class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
   /// [MedicationAdministrationPerformer] Describes the event of a patient
@@ -1965,7 +1962,7 @@ class MedicationAdministrationPerformer
   ///  medication administration.
   ///
   /// [actor] Indicates who or what performed the medication administration.
-  factory MedicationAdministrationPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1999,11 +1996,11 @@ class MedicationAdministrationPerformer
 
     /// [actor] Indicates who or what performed the medication administration.
     required Reference actor,
-  }) = _MedicationAdministrationPerformer;
+  
 }
 
 /// [MedicationDispense] Indicates that a medication product is to be or has
-@freezed
+
 class MedicationDispense {
   /// [MedicationDispense] Indicates that a medication product is to be or has
 
@@ -2160,7 +2157,7 @@ class MedicationDispense {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
-  factory MedicationDispense({
+  
     @Default(R4ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
 
@@ -2357,11 +2354,11 @@ class MedicationDispense {
     /// [eventHistory] A summary of the events of interest that have occurred,
     ///  such as when the dispense was verified.
     List<Reference>? eventHistory,
-  }) = _MedicationDispense;
+  
 }
 
 /// [MedicationDispensePerformer] Indicates that a medication product is to
-@freezed
+
 class MedicationDispensePerformer {
   /// [MedicationDispensePerformer] Indicates that a medication product is to
 
@@ -2400,7 +2397,7 @@ class MedicationDispensePerformer {
   ///
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the medication.
-  factory MedicationDispensePerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2435,11 +2432,11 @@ class MedicationDispensePerformer {
     /// [actor] The device, practitioner, etc. who performed the action.  It
     ///  should be assumed that the actor is the dispenser of the medication.
     required Reference actor,
-  }) = _MedicationDispensePerformer;
+  
 }
 
 /// [MedicationDispenseSubstitution] Indicates that a medication product is
-@freezed
+
 class MedicationDispenseSubstitution {
   /// [MedicationDispenseSubstitution] Indicates that a medication product is
 
@@ -2486,7 +2483,7 @@ class MedicationDispenseSubstitution {
   ///
   /// [responsibleParty] The person or organization that has primary
   ///  responsibility for the substitution.
-  factory MedicationDispenseSubstitution({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2532,11 +2529,11 @@ class MedicationDispenseSubstitution {
     /// [responsibleParty] The person or organization that has primary
     ///  responsibility for the substitution.
     List<Reference>? responsibleParty,
-  }) = _MedicationDispenseSubstitution;
+  
 }
 
 /// [MedicationKnowledge] Information about a medication that is used to
-@freezed
+
 class MedicationKnowledge {
   /// [MedicationKnowledge] Information about a medication that is used to
 
@@ -2671,7 +2668,7 @@ class MedicationKnowledge {
   ///
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  factory MedicationKnowledge({
+  
     @Default(R4ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
 
@@ -2846,10 +2843,9 @@ class MedicationKnowledge {
     /// [kinetics] The time course of drug absorption, distribution, metabolism
     ///  and excretion of a medication from the body.
     List<MedicationKnowledgeKinetics>? kinetics,
-  }) = _MedicationKnowledge;
+  
 }
 
-@freezed
 class MedicationKnowledgeRelatedMedicationKnowledge
     with _$MedicationKnowledgeRelatedMedicationKnowledge {
   /// [MedicationKnowledgeRelatedMedicationKnowledge] Information about a
@@ -2883,7 +2879,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   ///
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
-  factory MedicationKnowledgeRelatedMedicationKnowledge({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2917,11 +2913,11 @@ class MedicationKnowledgeRelatedMedicationKnowledge
     /// [reference] Associated documentation about the associated medication
     ///  knowledge.
     required List<Reference> reference,
-  }) = _MedicationKnowledgeRelatedMedicationKnowledge;
+  
 }
 
 /// [MedicationKnowledgeIngredient] Information about a medication that is
-@freezed
+
 class MedicationKnowledgeIngredient {
   /// [MedicationKnowledgeIngredient] Information about a medication that is
 
@@ -2966,7 +2962,7 @@ class MedicationKnowledgeIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  factory MedicationKnowledgeIngredient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3013,11 +3009,11 @@ class MedicationKnowledgeIngredient {
     /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
     ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
     Ratio? strength,
-  }) = _MedicationKnowledgeIngredient;
+  
 }
 
 /// [MedicationKnowledgeCost] Information about a medication that is used to
-@freezed
+
 class MedicationKnowledgeCost {
   /// [MedicationKnowledgeCost] Information about a medication that is used to
 
@@ -3056,7 +3052,7 @@ class MedicationKnowledgeCost {
   /// [sourceElement] Extensions for source
   ///
   /// [cost] The price of the medication.
-  factory MedicationKnowledgeCost({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3096,10 +3092,9 @@ class MedicationKnowledgeCost {
 
     /// [cost] The price of the medication.
     required Money cost,
-  }) = _MedicationKnowledgeCost;
+  
 }
 
-@freezed
 class MedicationKnowledgeMonitoringProgram
     with _$MedicationKnowledgeMonitoringProgram {
   /// [MedicationKnowledgeMonitoringProgram] Information about a medication
@@ -3134,7 +3129,7 @@ class MedicationKnowledgeMonitoringProgram
   /// [name] Name of the reviewing program.
   ///
   /// [nameElement] Extensions for name
-  factory MedicationKnowledgeMonitoringProgram({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3170,10 +3165,9 @@ class MedicationKnowledgeMonitoringProgram
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
-  }) = _MedicationKnowledgeMonitoringProgram;
+  
 }
 
-@freezed
 class MedicationKnowledgePatientCharacteristics
     with _$MedicationKnowledgePatientCharacteristics {
   /// [MedicationKnowledgePatientCharacteristics] Information about a
@@ -3212,7 +3206,7 @@ class MedicationKnowledgePatientCharacteristics
   /// [value] The specific characteristic (e.g. height, weight, gender, etc.).
   ///
   /// [valueElement] Extensions for value
-  factory MedicationKnowledgePatientCharacteristics({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3253,10 +3247,9 @@ class MedicationKnowledgePatientCharacteristics
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') List<Element?>? valueElement,
-  }) = _MedicationKnowledgePatientCharacteristics;
+  
 }
 
-@freezed
 class MedicationKnowledgeDrugCharacteristic
     with _$MedicationKnowledgeDrugCharacteristic {
   /// [MedicationKnowledgeDrugCharacteristic] Information about a medication
@@ -3300,7 +3293,7 @@ class MedicationKnowledgeDrugCharacteristic
   /// [valueBase64Binary] Description of the characteristic.
   ///
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-  factory MedicationKnowledgeDrugCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3349,11 +3342,11 @@ class MedicationKnowledgeDrugCharacteristic
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-  }) = _MedicationKnowledgeDrugCharacteristic;
+  
 }
 
 /// [MedicationKnowledgeSubstitution] Information about a medication that is
-@freezed
+
 class MedicationKnowledgeSubstitution {
   /// [MedicationKnowledgeSubstitution] Information about a medication that is
 
@@ -3390,7 +3383,7 @@ class MedicationKnowledgeSubstitution {
   ///  when dispensing.
   ///
   /// [allowedElement] Extensions for allowed
-  factory MedicationKnowledgeSubstitution({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3427,11 +3420,11 @@ class MedicationKnowledgeSubstitution {
 
     /// [allowedElement] Extensions for allowed
     @JsonKey(name: '_allowed') Element? allowedElement,
-  }) = _MedicationKnowledgeSubstitution;
+  
 }
 
 /// [MedicationKnowledgeSchedule] Information about a medication that is
-@freezed
+
 class MedicationKnowledgeSchedule {
   /// [MedicationKnowledgeSchedule] Information about a medication that is
 
@@ -3463,7 +3456,7 @@ class MedicationKnowledgeSchedule {
   ///  modifierExtension itself).
   ///
   /// [schedule] Specifies the specific drug schedule.
-  factory MedicationKnowledgeSchedule({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3493,11 +3486,11 @@ class MedicationKnowledgeSchedule {
 
     /// [schedule] Specifies the specific drug schedule.
     required CodeableConcept schedule,
-  }) = _MedicationKnowledgeSchedule;
+  
 }
 
 /// [MedicationKnowledgeMaxDispense] Information about a medication that is
-@freezed
+
 class MedicationKnowledgeMaxDispense {
   /// [MedicationKnowledgeMaxDispense] Information about a medication that is
 
@@ -3532,7 +3525,7 @@ class MedicationKnowledgeMaxDispense {
   ///  dispensed.
   ///
   /// [period] The period that applies to the maximum number of units.
-  factory MedicationKnowledgeMaxDispense({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3566,11 +3559,11 @@ class MedicationKnowledgeMaxDispense {
 
     /// [period] The period that applies to the maximum number of units.
     FhirDuration? period,
-  }) = _MedicationKnowledgeMaxDispense;
+  
 }
 
 /// [MedicationKnowledgeKinetics] Information about a medication that is
-@freezed
+
 class MedicationKnowledgeKinetics {
   /// [MedicationKnowledgeKinetics] Information about a medication that is
 
@@ -3608,7 +3601,7 @@ class MedicationKnowledgeKinetics {
   ///
   /// [halfLifePeriod] The time required for any specified property (e.g., the
   ///  concentration of a substance in the body) to decrease by half.
-  factory MedicationKnowledgeKinetics({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3646,11 +3639,11 @@ class MedicationKnowledgeKinetics {
     /// [halfLifePeriod] The time required for any specified property (e.g., the
     ///  concentration of a substance in the body) to decrease by half.
     FhirDuration? halfLifePeriod,
-  }) = _MedicationKnowledgeKinetics;
+  
 }
 
 /// [MedicationRequest] An order or request for both supply of the medication
-@freezed
+
 class MedicationRequest {
   /// [MedicationRequest] An order or request for both supply of the medication
 
@@ -3854,7 +3847,7 @@ class MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  factory MedicationRequest({
+  
     @Default(R4ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
 
@@ -4115,11 +4108,11 @@ class MedicationRequest {
     /// transitions or updates that are likely to be relevant to a user looking at
     ///  the current version of the resource.
     List<Reference>? eventHistory,
-  }) = _MedicationRequest;
+  
 }
 
 /// [MedicationRequestDispenseRequest] An order or request for both supply
-@freezed
+
 class MedicationRequestDispenseRequest {
   /// [MedicationRequestDispenseRequest] An order or request for both supply
 
@@ -4182,7 +4175,7 @@ class MedicationRequestDispenseRequest {
   ///
   /// [performer] Indicates the intended dispensing Organization specified by
   ///  the prescriber.
-  factory MedicationRequestDispenseRequest({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4248,11 +4241,11 @@ class MedicationRequestDispenseRequest {
     /// [performer] Indicates the intended dispensing Organization specified by
     ///  the prescriber.
     Reference? performer,
-  }) = _MedicationRequestDispenseRequest;
+  
 }
 
 /// [MedicationRequestSubstitution] An order or request for both supply of
-@freezed
+
 class MedicationRequestSubstitution {
   /// [MedicationRequestSubstitution] An order or request for both supply of
 
@@ -4297,7 +4290,7 @@ class MedicationRequestSubstitution {
   ///
   /// [reason] Indicates the reason for the substitution, or why substitution
   ///  must or must not be performed.
-  factory MedicationRequestSubstitution({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4339,11 +4332,11 @@ class MedicationRequestSubstitution {
     /// [reason] Indicates the reason for the substitution, or why substitution
     ///  must or must not be performed.
     CodeableConcept? reason,
-  }) = _MedicationRequestSubstitution;
+  
 }
 
 /// [MedicationStatement] A record of a medication that is being consumed by
-@freezed
+
 class MedicationStatement {
   /// [MedicationStatement] A record of a medication that is being consumed by
 
@@ -4498,7 +4491,7 @@ class MedicationStatement {
   ///
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  factory MedicationStatement({
+  
     @Default(R4ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
 
@@ -4668,5 +4661,5 @@ class MedicationStatement {
     /// [dosage] Indicates how the medication is/was or should be taken by the
     ///  patient.
     List<Dosage>? dosage,
-  }) = _MedicationStatement;
+  
 }

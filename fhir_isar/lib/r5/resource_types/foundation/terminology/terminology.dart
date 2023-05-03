@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'terminology.freezed.dart';
 part 'terminology.g.dart';
 
 /// [CodeSystem] The CodeSystem resource is used to declare the existence of
 ///  and describe a code system or code system supplement and its key
 ///  properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   ///  and describe a code system or code system supplement and its key
@@ -264,7 +263,7 @@ class CodeSystem {
   ///  are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
   ///
-  factory CodeSystem({
+  
     /// [resourceType] This is a CodeSystem resource
     @Default(R5ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
@@ -483,13 +482,13 @@ class CodeSystem {
 
     /// [concept] Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.
     List<CodeSystemConcept>? concept,
-  }) = _CodeSystem;
+  
 }
 
 /// [CodeSystemFilter] The CodeSystem resource is used to declare the existence
 ///  of and describe a code system or code system supplement and its key
 ///  properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystemFilter {
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -541,7 +540,7 @@ class CodeSystemFilter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CodeSystemFilter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -591,13 +590,13 @@ class CodeSystemFilter {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemFilter;
+  
 }
 
 /// [CodeSystemProperty] The CodeSystem resource is used to declare the
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystemProperty {
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -654,7 +653,7 @@ class CodeSystemProperty {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory CodeSystemProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -704,13 +703,13 @@ class CodeSystemProperty {
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _CodeSystemProperty;
+  
 }
 
 /// [CodeSystemConcept] The CodeSystem resource is used to declare the
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystemConcept {
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -771,7 +770,7 @@ class CodeSystemConcept {
   ///  concepts. The nature of the relationships is variable
   ///  (is-a/contains/categorizes) - see hierarchyMeaning.
   ///
-  factory CodeSystemConcept({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -824,13 +823,13 @@ class CodeSystemConcept {
 
     /// [concept] Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) - see hierarchyMeaning.
     List<CodeSystemConcept>? concept,
-  }) = _CodeSystemConcept;
+  
 }
 
 /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystemDesignation {
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -877,7 +876,7 @@ class CodeSystemDesignation {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CodeSystemDesignation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -921,13 +920,13 @@ class CodeSystemDesignation {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemDesignation;
+  
 }
 
 /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
-@freezed
+
 class CodeSystemProperty1 {
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -991,7 +990,7 @@ class CodeSystemProperty1 {
   ///
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  factory CodeSystemProperty1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1062,13 +1061,13 @@ class CodeSystemProperty1 {
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _CodeSystemProperty1;
+  
 }
 
 /// [ConceptMap] A statement of relationships from one set of concepts to one
 ///  or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ///  or more other concepts - either concepts in code systems, or data
@@ -1302,7 +1301,7 @@ class ConceptMap {
   /// [group] A group of mappings that all have the same source and target
   ///  system.
   ///
-  factory ConceptMap({
+  
     /// [resourceType] This is a ConceptMap resource
     @Default(R5ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
@@ -1499,13 +1498,13 @@ class ConceptMap {
 
     /// [group] A group of mappings that all have the same source and target system.
     List<ConceptMapGroup>? group,
-  }) = _ConceptMap;
+  
 }
 
 /// [ConceptMapGroup] A statement of relationships from one set of concepts to
 ///  one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMapGroup {
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -1553,7 +1552,7 @@ class ConceptMapGroup {
   ///  there is no target concept mapping specified.  The 'unmapped' element is
   ///  ignored if a code is specified to have relationship = not-related-to.
   ///
-  factory ConceptMapGroup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1591,13 +1590,13 @@ class ConceptMapGroup {
 
     /// [unmapped] What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.
     ConceptMapUnmapped? unmapped,
-  }) = _ConceptMapGroup;
+  
 }
 
 /// [ConceptMapElement] A statement of relationships from one set of concepts
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMapElement {
   /// [ConceptMapElement] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -1649,7 +1648,7 @@ class ConceptMapElement {
   ///
   /// [target] A concept from the target value set that this concept maps to.
   ///
-  factory ConceptMapElement({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1699,13 +1698,13 @@ class ConceptMapElement {
 
     /// [target] A concept from the target value set that this concept maps to.
     List<ConceptMapTarget>? target,
-  }) = _ConceptMapElement;
+  
 }
 
 /// [ConceptMapTarget] A statement of relationships from one set of concepts to
 ///  one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMapTarget {
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -1768,7 +1767,7 @@ class ConceptMapTarget {
   /// [product] Product is the output of a ConceptMap that provides additional
   ///  values relevant to the interpretation of the mapping target.
   ///
-  factory ConceptMapTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1827,13 +1826,13 @@ class ConceptMapTarget {
 
     /// [product] Product is the output of a ConceptMap that provides additional values relevant to the interpretation of the mapping target.
     List<ConceptMapDependsOn>? product,
-  }) = _ConceptMapTarget;
+  
 }
 
 /// [ConceptMapDependsOn] A statement of relationships from one set of concepts
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMapDependsOn {
   /// [ConceptMapDependsOn] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -1912,7 +1911,7 @@ class ConceptMapDependsOn {
   /// [valueSet] This mapping applies if the property value is a code from this
   ///  value set.
   ///
-  factory ConceptMapDependsOn({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1998,13 +1997,13 @@ class ConceptMapDependsOn {
 
     /// [valueSet] This mapping applies if the property value is a code from this value set.
     Canonical? valueSet,
-  }) = _ConceptMapDependsOn;
+  
 }
 
 /// [ConceptMapUnmapped] A statement of relationships from one set of concepts
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
-@freezed
+
 class ConceptMapUnmapped {
   /// [ConceptMapUnmapped] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -2072,7 +2071,7 @@ class ConceptMapUnmapped {
   ///  instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
   ///
-  factory ConceptMapUnmapped({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2128,13 +2127,13 @@ class ConceptMapUnmapped {
 
     /// [otherMap] The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.
     Canonical? otherMap,
-  }) = _ConceptMapUnmapped;
+  
 }
 
 /// [NamingSystem] A curated namespace that issues unique symbols within that
 ///  namespace for the identification of concepts, people, devices, etc.
 ///  Represents a "System" used within the Identifier and Coding data types.
-@freezed
+
 class NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   ///  namespace for the identification of concepts, people, devices, etc.
@@ -2357,7 +2356,7 @@ class NamingSystem {
   /// [uniqueId] Indicates how the system may be identified when referenced in
   ///  electronic exchange.
   ///
-  factory NamingSystem({
+  
     /// [resourceType] This is a NamingSystem resource
     @Default(R5ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
@@ -2549,14 +2548,14 @@ class NamingSystem {
 
     /// [uniqueId] Indicates how the system may be identified when referenced in electronic exchange.
     required List<NamingSystemUniqueId> uniqueId,
-  }) = _NamingSystem;
+  
 }
 
 /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
 ///  within that namespace for the identification of concepts, people, devices,
 ///  etc.  Represents a "System" used within the Identifier and Coding data
 ///  types.
-@freezed
+
 class NamingSystemUniqueId {
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   ///  within that namespace for the identification of concepts, people,
@@ -2620,7 +2619,7 @@ class NamingSystemUniqueId {
   ///
   /// [authoritativeElement] ("_authoritative") Extensions for authoritative
   ///
-  factory NamingSystemUniqueId({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2679,14 +2678,14 @@ class NamingSystemUniqueId {
 
     /// [authoritativeElement] ("_authoritative") Extensions for authoritative
     @JsonKey(name: '_authoritative') Element? authoritativeElement,
-  }) = _NamingSystemUniqueId;
+  
 }
 
 /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
 ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
 ///  used as a statement of actual server functionality or a statement of
 ///  required or desired server implementation.
-@freezed
+
 class TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
@@ -2901,7 +2900,7 @@ class TerminologyCapabilities {
   ///
   /// [closure] Whether the $closure operation is supported.
   ///
-  factory TerminologyCapabilities({
+  
     /// [resourceType] This is a TerminologyCapabilities resource
     @Default(R5ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
@@ -3075,14 +3074,14 @@ class TerminologyCapabilities {
 
     /// [closure] Whether the $closure operation is supported.
     TerminologyCapabilitiesClosure? closure,
-  }) = _TerminologyCapabilities;
+  
 }
 
 /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesSoftware {
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3127,7 +3126,7 @@ class TerminologyCapabilitiesSoftware {
   ///
   /// [versionElement] ("_version") Extensions for version
   ///
-  factory TerminologyCapabilitiesSoftware({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3165,14 +3164,14 @@ class TerminologyCapabilitiesSoftware {
 
     /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
-  }) = _TerminologyCapabilitiesSoftware;
+  
 }
 
 /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
   /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities
@@ -3220,7 +3219,7 @@ class TerminologyCapabilitiesImplementation
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TerminologyCapabilitiesImplementation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3258,14 +3257,14 @@ class TerminologyCapabilitiesImplementation
 
     /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _TerminologyCapabilitiesImplementation;
+  
 }
 
 /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
   /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
@@ -3317,7 +3316,7 @@ class TerminologyCapabilitiesCodeSystem
   ///
   /// [subsumptionElement] ("_subsumption") Extensions for subsumption
   ///
-  factory TerminologyCapabilitiesCodeSystem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3361,14 +3360,14 @@ class TerminologyCapabilitiesCodeSystem
 
     /// [subsumptionElement] ("_subsumption") Extensions for subsumption
     @JsonKey(name: '_subsumption') Element? subsumptionElement,
-  }) = _TerminologyCapabilitiesCodeSystem;
+  
 }
 
 /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesVersion {
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3428,7 +3427,7 @@ class TerminologyCapabilitiesVersion {
   ///
   /// [propertyElement] ("_property") Extensions for property
   ///
-  factory TerminologyCapabilitiesVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3487,14 +3486,14 @@ class TerminologyCapabilitiesVersion {
 
     /// [propertyElement] ("_property") Extensions for property
     @JsonKey(name: '_property') List<Element>? propertyElement,
-  }) = _TerminologyCapabilitiesVersion;
+  
 }
 
 /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesFilter {
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3538,7 +3537,7 @@ class TerminologyCapabilitiesFilter {
   ///
   /// [opElement] ("_op") Extensions for op
   ///
-  factory TerminologyCapabilitiesFilter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3576,14 +3575,14 @@ class TerminologyCapabilitiesFilter {
 
     /// [opElement] ("_op") Extensions for op
     @JsonKey(name: '_op') List<Element>? opElement,
-  }) = _TerminologyCapabilitiesFilter;
+  
 }
 
 /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesExpansion {
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3637,7 +3636,7 @@ class TerminologyCapabilitiesExpansion {
   ///
   /// [textFilterElement] ("_textFilter") Extensions for textFilter
   ///
-  factory TerminologyCapabilitiesExpansion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3690,14 +3689,14 @@ class TerminologyCapabilitiesExpansion {
 
     /// [textFilterElement] ("_textFilter") Extensions for textFilter
     @JsonKey(name: '_textFilter') Element? textFilterElement,
-  }) = _TerminologyCapabilitiesExpansion;
+  
 }
 
 /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesParameter {
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3741,7 +3740,7 @@ class TerminologyCapabilitiesParameter {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory TerminologyCapabilitiesParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3779,14 +3778,14 @@ class TerminologyCapabilitiesParameter {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _TerminologyCapabilitiesParameter;
+  
 }
 
 /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
   /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
@@ -3827,7 +3826,7 @@ class TerminologyCapabilitiesValidateCode
   ///
   /// [translationsElement] ("_translations") Extensions for translations
   ///
-  factory TerminologyCapabilitiesValidateCode({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3859,14 +3858,14 @@ class TerminologyCapabilitiesValidateCode
 
     /// [translationsElement] ("_translations") Extensions for translations
     @JsonKey(name: '_translations') Element? translationsElement,
-  }) = _TerminologyCapabilitiesValidateCode;
+  
 }
 
 /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
   /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
@@ -3907,7 +3906,7 @@ class TerminologyCapabilitiesTranslation
   ///
   /// [needsMapElement] ("_needsMap") Extensions for needsMap
   ///
-  factory TerminologyCapabilitiesTranslation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3939,14 +3938,14 @@ class TerminologyCapabilitiesTranslation
 
     /// [needsMapElement] ("_needsMap") Extensions for needsMap
     @JsonKey(name: '_needsMap') Element? needsMapElement,
-  }) = _TerminologyCapabilitiesTranslation;
+  
 }
 
 /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
 ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
-@freezed
+
 class TerminologyCapabilitiesClosure {
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3986,7 +3985,7 @@ class TerminologyCapabilitiesClosure {
   ///
   /// [translationElement] ("_translation") Extensions for translation
   ///
-  factory TerminologyCapabilitiesClosure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4018,14 +4017,14 @@ class TerminologyCapabilitiesClosure {
 
     /// [translationElement] ("_translation") Extensions for translation
     @JsonKey(name: '_translation') Element? translationElement,
-  }) = _TerminologyCapabilitiesClosure;
+  
 }
 
 /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn from
 ///  one or more code systems, intended for use in a particular context. Value
 ///  sets link between [CodeSystem](codesystem.html) definitions and their use
 ///  in [coded elements](terminologies.html).
-@freezed
+
 class ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   ///  from one or more code systems, intended for use in a particular context.
@@ -4249,7 +4248,7 @@ class ValueSet {
   ///  intended to cover and should further clarify the text in
   ///  ValueSet.description.
   ///
-  factory ValueSet({
+  
     /// [resourceType] This is a ValueSet resource
     @Default(R5ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
@@ -4432,14 +4431,14 @@ class ValueSet {
 
     /// [scope] Description of the semantic space the Value Set Expansion is intended to cover and should further clarify the text in ValueSet.description.
     ValueSetScope? scope,
-  }) = _ValueSet;
+  
 }
 
 /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetCompose {
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -4505,7 +4504,7 @@ class ValueSetCompose {
   ///
   /// [propertyElement] ("_property") Extensions for property
   ///
-  factory ValueSetCompose({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4555,14 +4554,14 @@ class ValueSetCompose {
 
     /// [propertyElement] ("_property") Extensions for property
     @JsonKey(name: '_property') List<Element>? propertyElement,
-  }) = _ValueSetCompose;
+  
 }
 
 /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetInclude {
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -4628,7 +4627,7 @@ class ValueSetInclude {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory ValueSetInclude({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4681,14 +4680,14 @@ class ValueSetInclude {
 
     /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _ValueSetInclude;
+  
 }
 
 /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetConcept {
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -4738,7 +4737,7 @@ class ValueSetConcept {
   ///  this value set - other languages, aliases, specialized purposes, used
   ///  for particular purposes, etc.
   ///
-  factory ValueSetConcept({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4779,14 +4778,14 @@ class ValueSetConcept {
 
     /// [designation] Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.
     List<ValueSetDesignation>? designation,
-  }) = _ValueSetConcept;
+  
 }
 
 /// [ValueSetDesignation] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetDesignation {
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
   ///  codes drawn from one or more code systems, intended for use in a
@@ -4837,7 +4836,7 @@ class ValueSetDesignation {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ValueSetDesignation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4881,14 +4880,14 @@ class ValueSetDesignation {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetDesignation;
+  
 }
 
 /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetFilter {
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -4942,7 +4941,7 @@ class ValueSetFilter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ValueSetFilter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4986,14 +4985,14 @@ class ValueSetFilter {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetFilter;
+  
 }
 
 /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetExpansion {
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5070,7 +5069,7 @@ class ValueSetExpansion {
   ///
   /// [contains] The codes that are contained in the value set expansion.
   ///
-  factory ValueSetExpansion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5135,14 +5134,14 @@ class ValueSetExpansion {
 
     /// [contains] The codes that are contained in the value set expansion.
     List<ValueSetContains>? contains,
-  }) = _ValueSetExpansion;
+  
 }
 
 /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetParameter {
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5212,7 +5211,7 @@ class ValueSetParameter {
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  factory ValueSetParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5286,14 +5285,14 @@ class ValueSetParameter {
 
     /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-  }) = _ValueSetParameter;
+  
 }
 
 /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetProperty {
   /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5340,7 +5339,7 @@ class ValueSetProperty {
   ///
   /// [uriElement] ("_uri") Extensions for uri
   ///
-  factory ValueSetProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5378,14 +5377,14 @@ class ValueSetProperty {
 
     /// [uriElement] ("_uri") Extensions for uri
     @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ValueSetProperty;
+  
 }
 
 /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetContains {
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5468,7 +5467,7 @@ class ValueSetContains {
   /// [contains] Other codes and entries contained under this entry in the
   ///  hierarchy.
   ///
-  factory ValueSetContains({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5539,14 +5538,14 @@ class ValueSetContains {
 
     /// [contains] Other codes and entries contained under this entry in the hierarchy.
     List<ValueSetContains>? contains,
-  }) = _ValueSetContains;
+  
 }
 
 /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetProperty1 {
   /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5614,7 +5613,7 @@ class ValueSetProperty1 {
   ///
   /// [subProperty] A subproperty value for this concept.
   ///
-  factory ValueSetProperty1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5688,14 +5687,14 @@ class ValueSetProperty1 {
 
     /// [subProperty] A subproperty value for this concept.
     List<ValueSetSubProperty>? subProperty,
-  }) = _ValueSetProperty1;
+  
 }
 
 /// [ValueSetSubProperty] A ValueSet resource instance specifies a set of codes
 ///  drawn from one or more code systems, intended for use in a particular
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetSubProperty {
   /// [ValueSetSubProperty] A ValueSet resource instance specifies a set of
   ///  codes drawn from one or more code systems, intended for use in a
@@ -5763,7 +5762,7 @@ class ValueSetSubProperty {
   ///
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  factory ValueSetSubProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5834,14 +5833,14 @@ class ValueSetSubProperty {
 
     /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _ValueSetSubProperty;
+  
 }
 
 /// [ValueSetScope] A ValueSet resource instance specifies a set of codes drawn
 ///  from one or more code systems, intended for use in a particular context.
 ///  Value sets link between [CodeSystem](codesystem.html) definitions and
 ///  their use in [coded elements](terminologies.html).
-@freezed
+
 class ValueSetScope {
   /// [ValueSetScope] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -5889,7 +5888,7 @@ class ValueSetScope {
   /// [exclusionCriteriaElement] ("_exclusionCriteria") Extensions for
   ///  exclusionCriteria
   ///
-  factory ValueSetScope({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5927,5 +5926,5 @@ class ValueSetScope {
 
     /// [exclusionCriteriaElement] ("_exclusionCriteria") Extensions for exclusionCriteria
     @JsonKey(name: '_exclusionCriteria') Element? exclusionCriteriaElement,
-  }) = _ValueSetScope;
+  
 }

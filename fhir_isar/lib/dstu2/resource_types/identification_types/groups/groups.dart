@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'groups.enums.dart';
-part 'groups.freezed.dart';
+
 part 'groups.g.dart';
 
-@freezed
 class Organization {
-  factory Organization({
+  
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
@@ -40,12 +39,11 @@ class Organization {
     List<OrganizationContact>? contact,
 
     // @JsonKey(name: '_alias') Element? aliasElement,
-  }) = _Organization;
+  
 }
 
-@freezed
 class OrganizationContact {
-  factory OrganizationContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -54,12 +52,11 @@ class OrganizationContact {
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
-  }) = _OrganizationContact;
+  
 }
 
-@freezed
 class HealthcareService {
-  factory HealthcareService({
+  
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
@@ -100,23 +97,21 @@ class HealthcareService {
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
-  }) = _HealthcareService;
+  
 }
 
-@freezed
 class HealthcareServiceServiceType {
-  factory HealthcareServiceServiceType({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     List<CodeableConcept>? specialty,
-  }) = _HealthcareServiceServiceType;
+  
 }
 
-@freezed
 class HealthcareServiceAvailableTime {
-  factory HealthcareServiceAvailableTime({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -128,24 +123,22 @@ class HealthcareServiceAvailableTime {
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
-  }) = _HealthcareServiceAvailableTime;
+  
 }
 
-@freezed
 class HealthcareServiceNotAvailable {
-  factory HealthcareServiceNotAvailable({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
-  }) = _HealthcareServiceNotAvailable;
+  
 }
 
-@freezed
 class Group {
-  factory Group({
+  
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
@@ -171,12 +164,11 @@ class Group {
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-  }) = _Group;
+  
 }
 
-@freezed
 class GroupCharacteristic {
-  factory GroupCharacteristic({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -188,12 +180,11 @@ class GroupCharacteristic {
     Range? valueRange,
     required Boolean exclude,
     Period? period,
-  }) = _GroupCharacteristic;
+  
 }
 
-@freezed
 class GroupMember {
-  factory GroupMember({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -201,5 +192,5 @@ class GroupMember {
     Period? period,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
-  }) = _GroupMember;
+  
 }

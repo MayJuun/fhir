@@ -2,20 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
 /// [CapabilityStatement] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatement {
   /// [CapabilityStatement] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -247,7 +246,7 @@ class CapabilityStatement {
   ///
   /// [document] A document definition.
   ///
-  factory CapabilityStatement({
+  
     /// [resourceType] This is a CapabilityStatement resource
     @Default(R5ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
@@ -436,14 +435,14 @@ class CapabilityStatement {
 
     /// [document] A document definition.
     List<CapabilityStatementDocument>? document,
-  }) = _CapabilityStatement;
+  
 }
 
 /// [CapabilityStatementSoftware] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSoftware {
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -494,7 +493,7 @@ class CapabilityStatementSoftware {
   ///
   /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
   ///
-  factory CapabilityStatementSoftware({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -538,14 +537,14 @@ class CapabilityStatementSoftware {
 
     /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
     @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatementSoftware;
+  
 }
 
 /// [CapabilityStatementImplementation] A Capability Statement documents a set
 ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
   /// [CapabilityStatementImplementation] A Capability Statement documents a
@@ -597,7 +596,7 @@ class CapabilityStatementImplementation
   /// [custodian] The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
   ///
-  factory CapabilityStatementImplementation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -638,14 +637,14 @@ class CapabilityStatementImplementation
 
     /// [custodian] The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.
     Reference? custodian,
-  }) = _CapabilityStatementImplementation;
+  
 }
 
 /// [CapabilityStatementRest] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementRest {
   /// [CapabilityStatementRest] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -715,7 +714,7 @@ class CapabilityStatementRest {
   ///  compartment that the system supports. The reference is to a
   ///  CompartmentDefinition resource by its canonical URL .
   ///
-  factory CapabilityStatementRest({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -771,14 +770,14 @@ class CapabilityStatementRest {
 
     /// [compartment] An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .
     List<Canonical>? compartment,
-  }) = _CapabilityStatementRest;
+  
 }
 
 /// [CapabilityStatementSecurity] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSecurity {
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -828,7 +827,7 @@ class CapabilityStatementSecurity {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory CapabilityStatementSecurity({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -869,14 +868,14 @@ class CapabilityStatementSecurity {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CapabilityStatementSecurity;
+  
 }
 
 /// [CapabilityStatementResource] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementResource {
   /// [CapabilityStatementResource] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1017,7 +1016,7 @@ class CapabilityStatementResource {
   ///  operation for details about how to invoke the operation, and the
   ///  parameters.
   ///
-  factory CapabilityStatementResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1136,14 +1135,14 @@ class CapabilityStatementResource {
 
     /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type. Consult the definition of the operation for details about how to invoke the operation, and the parameters.
     List<CapabilityStatementOperation>? operation,
-  }) = _CapabilityStatementResource;
+  
 }
 
 /// [CapabilityStatementInteraction] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementInteraction {
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1193,7 +1192,7 @@ class CapabilityStatementInteraction {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementInteraction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1231,14 +1230,14 @@ class CapabilityStatementInteraction {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction;
+  
 }
 
 /// [CapabilityStatementSearchParam] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementSearchParam {
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1304,7 +1303,7 @@ class CapabilityStatementSearchParam {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementSearchParam({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1351,14 +1350,14 @@ class CapabilityStatementSearchParam {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementSearchParam;
+  
 }
 
 /// [CapabilityStatementOperation] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementOperation {
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1422,7 +1421,7 @@ class CapabilityStatementOperation {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1463,14 +1462,14 @@ class CapabilityStatementOperation {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementOperation;
+  
 }
 
 /// [CapabilityStatementInteraction1] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementInteraction1 {
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1518,7 +1517,7 @@ class CapabilityStatementInteraction1 {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementInteraction1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1556,14 +1555,14 @@ class CapabilityStatementInteraction1 {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction1;
+  
 }
 
 /// [CapabilityStatementMessaging] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementMessaging {
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1620,7 +1619,7 @@ class CapabilityStatementMessaging {
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
   ///
-  factory CapabilityStatementMessaging({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1664,14 +1663,14 @@ class CapabilityStatementMessaging {
 
     /// [supportedMessage] References to message definitions for messages this system can send or receive.
     List<CapabilityStatementSupportedMessage>? supportedMessage,
-  }) = _CapabilityStatementMessaging;
+  
 }
 
 /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementEndpoint {
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1717,7 +1716,7 @@ class CapabilityStatementEndpoint {
   ///
   /// [addressElement] ("_address") Extensions for address
   ///
-  factory CapabilityStatementEndpoint({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1752,7 +1751,7 @@ class CapabilityStatementEndpoint {
 
     /// [addressElement] ("_address") Extensions for address
     @JsonKey(name: '_address') Element? addressElement,
-  }) = _CapabilityStatementEndpoint;
+  
 }
 
 /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
@@ -1760,7 +1759,7 @@ class CapabilityStatementEndpoint {
 ///  particular version of FHIR that may be used as a statement of actual
 ///  server functionality or a statement of required or desired server
 ///  implementation.
-@freezed
+
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
@@ -1807,7 +1806,7 @@ class CapabilityStatementSupportedMessage
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
   ///
-  factory CapabilityStatementSupportedMessage({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1842,14 +1841,14 @@ class CapabilityStatementSupportedMessage
 
     /// [definition] Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
     required Canonical definition,
-  }) = _CapabilityStatementSupportedMessage;
+  
 }
 
 /// [CapabilityStatementDocument] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
-@freezed
+
 class CapabilityStatementDocument {
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1901,7 +1900,7 @@ class CapabilityStatementDocument {
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
   ///
-  factory CapabilityStatementDocument({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1942,12 +1941,12 @@ class CapabilityStatementDocument {
 
     /// [profile] A profile on the document Bundle that constrains which resources are present, and their contents.
     required Canonical profile,
-  }) = _CapabilityStatementDocument;
+  
 }
 
 /// [CompartmentDefinition] A compartment definition that defines how resources
 ///  are accessed on a server.
-@freezed
+
 class CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how
   ///  resources are accessed on a server.
@@ -2123,7 +2122,7 @@ class CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the compartment.
   ///
-  factory CompartmentDefinition({
+  
     /// [resourceType] This is a CompartmentDefinition resource
     @Default(R5ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
@@ -2273,12 +2272,12 @@ class CompartmentDefinition {
 
     /// [resource] Information about how a resource is related to the compartment.
     List<CompartmentDefinitionResource>? resource,
-  }) = _CompartmentDefinition;
+  
 }
 
 /// [CompartmentDefinitionResource] A compartment definition that defines how
 ///  resources are accessed on a server.
-@freezed
+
 class CompartmentDefinitionResource {
   /// [CompartmentDefinitionResource] A compartment definition that defines how
   ///  resources are accessed on a server.
@@ -2337,7 +2336,7 @@ class CompartmentDefinitionResource {
   ///
   /// [endParamElement] ("_endParam") Extensions for endParam
   ///
-  factory CompartmentDefinitionResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2393,14 +2392,14 @@ class CompartmentDefinitionResource {
 
     /// [endParamElement] ("_endParam") Extensions for endParam
     @JsonKey(name: '_endParam') Element? endParamElement,
-  }) = _CompartmentDefinitionResource;
+  
 }
 
 /// [GraphDefinition] A formal computable definition of a graph of resources -
 ///  that is, a coherent set of resources that form a graph by following
 ///  references. The Graph Definition resource defines a set and makes rules
 ///  about the set.
-@freezed
+
 class GraphDefinition {
   /// [GraphDefinition] A formal computable definition of a graph of resources
   ///  - that is, a coherent set of resources that form a graph by following
@@ -2578,7 +2577,7 @@ class GraphDefinition {
   ///
   /// [link] Links this graph makes rules about.
   ///
-  factory GraphDefinition({
+  
     /// [resourceType] This is a GraphDefinition resource
     @Default(R5ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
@@ -2725,14 +2724,14 @@ class GraphDefinition {
 
     /// [link] Links this graph makes rules about.
     List<GraphDefinitionLink>? link,
-  }) = _GraphDefinition;
+  
 }
 
 /// [GraphDefinitionNode] A formal computable definition of a graph of
 ///  resources - that is, a coherent set of resources that form a graph by
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
-@freezed
+
 class GraphDefinitionNode {
   /// [GraphDefinitionNode] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -2783,7 +2782,7 @@ class GraphDefinitionNode {
   ///
   /// [profile] Profile for the target resource.
   ///
-  factory GraphDefinitionNode({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2830,14 +2829,14 @@ class GraphDefinitionNode {
 
     /// [profile] Profile for the target resource.
     Canonical? profile,
-  }) = _GraphDefinitionNode;
+  
 }
 
 /// [GraphDefinitionLink] A formal computable definition of a graph of
 ///  resources - that is, a coherent set of resources that form a graph by
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
-@freezed
+
 class GraphDefinitionLink {
   /// [GraphDefinitionLink] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -2909,7 +2908,7 @@ class GraphDefinitionLink {
   ///
   /// [compartment] Compartment Consistency Rules.
   ///
-  factory GraphDefinitionLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2986,14 +2985,14 @@ class GraphDefinitionLink {
 
     /// [compartment] Compartment Consistency Rules.
     List<GraphDefinitionCompartment>? compartment,
-  }) = _GraphDefinitionLink;
+  
 }
 
 /// [GraphDefinitionCompartment] A formal computable definition of a graph of
 ///  resources - that is, a coherent set of resources that form a graph by
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
-@freezed
+
 class GraphDefinitionCompartment {
   /// [GraphDefinitionCompartment] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -3051,7 +3050,7 @@ class GraphDefinitionCompartment {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory GraphDefinitionCompartment({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3107,7 +3106,7 @@ class GraphDefinitionCompartment {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _GraphDefinitionCompartment;
+  
 }
 
 /// [ImplementationGuide] A set of rules of how a particular interoperability
@@ -3115,7 +3114,7 @@ class GraphDefinitionCompartment {
 ///  resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuide {
   /// [ImplementationGuide] A set of rules of how a particular interoperability
   ///  or standards problem is solved - typically through the use of FHIR
@@ -3319,7 +3318,7 @@ class ImplementationGuide {
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
   ///
-  factory ImplementationGuide({
+  
     /// [resourceType] This is a ImplementationGuide resource
     @Default(R5ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
@@ -3484,7 +3483,7 @@ class ImplementationGuide {
 
     /// [manifest] Information about an assembled implementation guide, created by the publication tooling.
     ImplementationGuideManifest? manifest,
-  }) = _ImplementationGuide;
+  
 }
 
 /// [ImplementationGuideDependsOn] A set of rules of how a particular
@@ -3492,7 +3491,7 @@ class ImplementationGuide {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideDependsOn {
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -3548,7 +3547,7 @@ class ImplementationGuideDependsOn {
   ///
   /// [reasonElement] ("_reason") Extensions for reason
   ///
-  factory ImplementationGuideDependsOn({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3595,7 +3594,7 @@ class ImplementationGuideDependsOn {
 
     /// [reasonElement] ("_reason") Extensions for reason
     @JsonKey(name: '_reason') Element? reasonElement,
-  }) = _ImplementationGuideDependsOn;
+  
 }
 
 /// [ImplementationGuideGlobal] A set of rules of how a particular
@@ -3603,7 +3602,7 @@ class ImplementationGuideDependsOn {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideGlobal {
   /// [ImplementationGuideGlobal] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -3647,7 +3646,7 @@ class ImplementationGuideGlobal {
   ///
   /// [profile] A reference to the profile that all instances must conform to.
   ///
-  factory ImplementationGuideGlobal({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3682,7 +3681,7 @@ class ImplementationGuideGlobal {
 
     /// [profile] A reference to the profile that all instances must conform to.
     required Canonical profile,
-  }) = _ImplementationGuideGlobal;
+  
 }
 
 /// [ImplementationGuideDefinition] A set of rules of how a particular
@@ -3690,7 +3689,7 @@ class ImplementationGuideGlobal {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideDefinition {
   /// [ImplementationGuideDefinition] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -3745,7 +3744,7 @@ class ImplementationGuideDefinition {
   ///
   /// [template] A template for building resources.
   ///
-  factory ImplementationGuideDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3786,7 +3785,7 @@ class ImplementationGuideDefinition {
 
     /// [template] A template for building resources.
     List<ImplementationGuideTemplate>? template,
-  }) = _ImplementationGuideDefinition;
+  
 }
 
 /// [ImplementationGuideGrouping] A set of rules of how a particular
@@ -3794,7 +3793,7 @@ class ImplementationGuideDefinition {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideGrouping {
   /// [ImplementationGuideGrouping] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -3841,7 +3840,7 @@ class ImplementationGuideGrouping {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ImplementationGuideGrouping({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3879,7 +3878,7 @@ class ImplementationGuideGrouping {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ImplementationGuideGrouping;
+  
 }
 
 /// [ImplementationGuideResource] A set of rules of how a particular
@@ -3887,7 +3886,7 @@ class ImplementationGuideGrouping {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideResource {
   /// [ImplementationGuideResource] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -3954,7 +3953,7 @@ class ImplementationGuideResource {
   ///
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   ///
-  factory ImplementationGuideResource({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4016,7 +4015,7 @@ class ImplementationGuideResource {
 
     /// [groupingIdElement] ("_groupingId") Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
-  }) = _ImplementationGuideResource;
+  
 }
 
 /// [ImplementationGuidePage] A set of rules of how a particular
@@ -4024,7 +4023,7 @@ class ImplementationGuideResource {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuidePage {
   /// [ImplementationGuidePage] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4092,7 +4091,7 @@ class ImplementationGuidePage {
   ///
   /// [page] Nested Pages/Sections under this page.
   ///
-  factory ImplementationGuidePage({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4157,7 +4156,7 @@ class ImplementationGuidePage {
 
     /// [page] Nested Pages/Sections under this page.
     List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
+  
 }
 
 /// [ImplementationGuideParameter] A set of rules of how a particular
@@ -4165,7 +4164,7 @@ class ImplementationGuidePage {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideParameter {
   /// [ImplementationGuideParameter] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4209,7 +4208,7 @@ class ImplementationGuideParameter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ImplementationGuideParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4244,7 +4243,7 @@ class ImplementationGuideParameter {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ImplementationGuideParameter;
+  
 }
 
 /// [ImplementationGuideTemplate] A set of rules of how a particular
@@ -4252,7 +4251,7 @@ class ImplementationGuideParameter {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideTemplate {
   /// [ImplementationGuideTemplate] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4302,7 +4301,7 @@ class ImplementationGuideTemplate {
   ///
   /// [scopeElement] ("_scope") Extensions for scope
   ///
-  factory ImplementationGuideTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4346,7 +4345,7 @@ class ImplementationGuideTemplate {
 
     /// [scopeElement] ("_scope") Extensions for scope
     @JsonKey(name: '_scope') Element? scopeElement,
-  }) = _ImplementationGuideTemplate;
+  
 }
 
 /// [ImplementationGuideManifest] A set of rules of how a particular
@@ -4354,7 +4353,7 @@ class ImplementationGuideTemplate {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideManifest {
   /// [ImplementationGuideManifest] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4414,7 +4413,7 @@ class ImplementationGuideManifest {
   ///
   /// [otherElement] ("_other") Extensions for other
   ///
-  factory ImplementationGuideManifest({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4464,7 +4463,7 @@ class ImplementationGuideManifest {
 
     /// [otherElement] ("_other") Extensions for other
     @JsonKey(name: '_other') List<Element>? otherElement,
-  }) = _ImplementationGuideManifest;
+  
 }
 
 /// [ImplementationGuideResource1] A set of rules of how a particular
@@ -4472,7 +4471,7 @@ class ImplementationGuideManifest {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuideResource1 {
   /// [ImplementationGuideResource1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4523,7 +4522,7 @@ class ImplementationGuideResource1 {
   ///
   /// [relativePathElement] ("_relativePath") Extensions for relativePath
   ///
-  factory ImplementationGuideResource1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4567,7 +4566,7 @@ class ImplementationGuideResource1 {
 
     /// [relativePathElement] ("_relativePath") Extensions for relativePath
     @JsonKey(name: '_relativePath') Element? relativePathElement,
-  }) = _ImplementationGuideResource1;
+  
 }
 
 /// [ImplementationGuidePage1] A set of rules of how a particular
@@ -4575,7 +4574,7 @@ class ImplementationGuideResource1 {
 ///  use of FHIR resources. This resource is used to gather all the parts of an
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
-@freezed
+
 class ImplementationGuidePage1 {
   /// [ImplementationGuidePage1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4625,7 +4624,7 @@ class ImplementationGuidePage1 {
   ///
   /// [anchorElement] ("_anchor") Extensions for anchor
   ///
-  factory ImplementationGuidePage1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4669,14 +4668,14 @@ class ImplementationGuidePage1 {
 
     /// [anchorElement] ("_anchor") Extensions for anchor
     @JsonKey(name: '_anchor') List<Element>? anchorElement,
-  }) = _ImplementationGuidePage1;
+  
 }
 
 /// [MessageDefinition] Defines the characteristics of a message that can be
 ///  shared between systems, including the type of event that initiates the
 ///  message, the content to be transmitted and what response(s), if any, are
 ///  permitted.
-@freezed
+
 class MessageDefinition {
   /// [MessageDefinition] Defines the characteristics of a message that can be
   ///  shared between systems, including the type of event that initiates the
@@ -4879,7 +4878,7 @@ class MessageDefinition {
   ///  GraphDefinition can also specify profiles that apply to the various
   ///  resources.
   ///
-  factory MessageDefinition({
+  
     /// [resourceType] This is a MessageDefinition resource
     @Default(R5ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
@@ -5053,14 +5052,14 @@ class MessageDefinition {
 
     /// [graph] Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
     Canonical? graph,
-  }) = _MessageDefinition;
+  
 }
 
 /// [MessageDefinitionFocus] Defines the characteristics of a message that can
 ///  be shared between systems, including the type of event that initiates the
 ///  message, the content to be transmitted and what response(s), if any, are
 ///  permitted.
-@freezed
+
 class MessageDefinitionFocus {
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
   ///  can be shared between systems, including the type of event that
@@ -5115,7 +5114,7 @@ class MessageDefinitionFocus {
   ///
   /// [maxElement] ("_max") Extensions for max
   ///
-  factory MessageDefinitionFocus({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5162,14 +5161,14 @@ class MessageDefinitionFocus {
 
     /// [maxElement] ("_max") Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
-  }) = _MessageDefinitionFocus;
+  
 }
 
 /// [MessageDefinitionAllowedResponse] Defines the characteristics of a message
 ///  that can be shared between systems, including the type of event that
 ///  initiates the message, the content to be transmitted and what response(s),
 ///  if any, are permitted.
-@freezed
+
 class MessageDefinitionAllowedResponse {
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
   ///  message that can be shared between systems, including the type of event
@@ -5213,7 +5212,7 @@ class MessageDefinitionAllowedResponse {
   ///
   /// [situationElement] ("_situation") Extensions for situation
   ///
-  factory MessageDefinitionAllowedResponse({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5248,12 +5247,12 @@ class MessageDefinitionAllowedResponse {
 
     /// [situationElement] ("_situation") Extensions for situation
     @JsonKey(name: '_situation') Element? situationElement,
-  }) = _MessageDefinitionAllowedResponse;
+  
 }
 
 /// [OperationDefinition] A formal computable definition of an operation (on
 ///  the RESTful interface) or a named query (using the search interaction).
-@freezed
+
 class OperationDefinition {
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
@@ -5477,7 +5476,7 @@ class OperationDefinition {
   ///  invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
   ///
-  factory OperationDefinition({
+  
     /// [resourceType] This is a OperationDefinition resource
     @Default(R5ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
@@ -5675,13 +5674,13 @@ class OperationDefinition {
 
     /// [overload] Defines an appropriate combination of parameters to use when invoking this operation, to help code generators when generating overloaded parameter sets for this operation.
     List<OperationDefinitionOverload>? overload,
-  }) = _OperationDefinition;
+  
 }
 
 /// [OperationDefinitionParameter] A formal computable definition of an
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
-@freezed
+
 class OperationDefinitionParameter {
   /// [OperationDefinitionParameter] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -5774,7 +5773,7 @@ class OperationDefinitionParameter {
   ///
   /// [part_] ("part") The parts of a nested Parameter.
   ///
-  factory OperationDefinitionParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5866,12 +5865,12 @@ class OperationDefinitionParameter {
 
     /// [part_] ("part") The parts of a nested Parameter.
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
+  
 }
 
 /// [OperationDefinitionBinding] A formal computable definition of an operation
 ///  (on the RESTful interface) or a named query (using the search interaction).
-@freezed
+
 class OperationDefinitionBinding {
   /// [OperationDefinitionBinding] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -5914,7 +5913,7 @@ class OperationDefinitionBinding {
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
   ///
-  factory OperationDefinitionBinding({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5949,13 +5948,13 @@ class OperationDefinitionBinding {
 
     /// [valueSet] Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.
     required Canonical valueSet,
-  }) = _OperationDefinitionBinding;
+  
 }
 
 /// [OperationDefinitionReferencedFrom] A formal computable definition of an
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
-@freezed
+
 class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
@@ -6001,7 +6000,7 @@ class OperationDefinitionReferencedFrom
   ///
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  factory OperationDefinitionReferencedFrom({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6039,13 +6038,13 @@ class OperationDefinitionReferencedFrom
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _OperationDefinitionReferencedFrom;
+  
 }
 
 /// [OperationDefinitionOverload] A formal computable definition of an
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
-@freezed
+
 class OperationDefinitionOverload {
   /// [OperationDefinitionOverload] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -6087,7 +6086,7 @@ class OperationDefinitionOverload {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory OperationDefinitionOverload({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6125,12 +6124,12 @@ class OperationDefinitionOverload {
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _OperationDefinitionOverload;
+  
 }
 
 /// [SearchParameter] A search parameter that defines a named search item that
 ///  can be used to search/filter on a resource.
-@freezed
+
 class SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item
   ///  that can be used to search/filter on a resource.
@@ -6368,7 +6367,7 @@ class SearchParameter {
   ///
   /// [component] Used to define the parts of a composite search parameter.
   ///
-  factory SearchParameter({
+  
     /// [resourceType] This is a SearchParameter resource
     @Default(R5ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
@@ -6581,12 +6580,12 @@ class SearchParameter {
 
     /// [component] Used to define the parts of a composite search parameter.
     List<SearchParameterComponent>? component,
-  }) = _SearchParameter;
+  
 }
 
 /// [SearchParameterComponent] A search parameter that defines a named search
 ///  item that can be used to search/filter on a resource.
-@freezed
+
 class SearchParameterComponent {
   /// [SearchParameterComponent] A search parameter that defines a named search
   ///  item that can be used to search/filter on a resource.
@@ -6626,7 +6625,7 @@ class SearchParameterComponent {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory SearchParameterComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6661,13 +6660,13 @@ class SearchParameterComponent {
 
     /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _SearchParameterComponent;
+  
 }
 
 /// [StructureDefinition] A definition of a FHIR structure. This resource is
 ///  used to describe the underlying resources, data types defined in FHIR, and
 ///  also for describing extensions and constraints on resources and data types.
-@freezed
+
 class StructureDefinition {
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
   ///  used to describe the underlying resources, data types defined in FHIR,
@@ -6898,7 +6897,7 @@ class StructureDefinition {
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
   ///
-  factory StructureDefinition({
+  
     /// [resourceType] This is a StructureDefinition resource
     @Default(R5ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
@@ -7087,14 +7086,14 @@ class StructureDefinition {
 
     /// [differential] A differential view is expressed relative to the base StructureDefinition - a statement of differences that it applies.
     StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
+  
 }
 
 /// [StructureDefinitionMapping] A definition of a FHIR structure. This
 ///  resource is used to describe the underlying resources, data types defined
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
-@freezed
+
 class StructureDefinitionMapping {
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -7149,7 +7148,7 @@ class StructureDefinitionMapping {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory StructureDefinitionMapping({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7199,14 +7198,14 @@ class StructureDefinitionMapping {
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _StructureDefinitionMapping;
+  
 }
 
 /// [StructureDefinitionContext] A definition of a FHIR structure. This
 ///  resource is used to describe the underlying resources, data types defined
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
-@freezed
+
 class StructureDefinitionContext {
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -7252,7 +7251,7 @@ class StructureDefinitionContext {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory StructureDefinitionContext({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7290,14 +7289,14 @@ class StructureDefinitionContext {
 
     /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _StructureDefinitionContext;
+  
 }
 
 /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
 ///  resource is used to describe the underlying resources, data types defined
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
-@freezed
+
 class StructureDefinitionSnapshot {
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -7335,7 +7334,7 @@ class StructureDefinitionSnapshot {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  factory StructureDefinitionSnapshot({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7364,14 +7363,14 @@ class StructureDefinitionSnapshot {
 
     /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
+  
 }
 
 /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
 ///  resource is used to describe the underlying resources, data types defined
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
-@freezed
+
 class StructureDefinitionDifferential {
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -7409,7 +7408,7 @@ class StructureDefinitionDifferential {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  factory StructureDefinitionDifferential({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7438,12 +7437,12 @@ class StructureDefinitionDifferential {
 
     /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
+  
 }
 
 /// [StructureMap] A Map of relationships between 2 structures that can be used
 ///  to transform data.
-@freezed
+
 class StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be
   ///  used to transform data.
@@ -7615,7 +7614,7 @@ class StructureMap {
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
   ///
-  factory StructureMap({
+  
     /// [resourceType] This is a StructureMap resource
     @Default(R5ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
@@ -7759,12 +7758,12 @@ class StructureMap {
 
     /// [group] Organizes the mapping into manageable chunks for human review/ease of maintenance.
     required List<StructureMapGroup> group,
-  }) = _StructureMap;
+  
 }
 
 /// [StructureMapStructure] A Map of relationships between 2 structures that
 ///  can be used to transform data.
-@freezed
+
 class StructureMapStructure {
   /// [StructureMapStructure] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -7811,7 +7810,7 @@ class StructureMapStructure {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapStructure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7858,12 +7857,12 @@ class StructureMapStructure {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapStructure;
+  
 }
 
 /// [StructureMapGroup] A Map of relationships between 2 structures that can be
 ///  used to transform data.
-@freezed
+
 class StructureMapGroup {
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -7918,7 +7917,7 @@ class StructureMapGroup {
   ///
   /// [rule] Transform Rule from source to target.
   ///
-  factory StructureMapGroup({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7974,12 +7973,12 @@ class StructureMapGroup {
 
     /// [rule] Transform Rule from source to target.
     List<StructureMapRule>? rule,
-  }) = _StructureMapGroup;
+  
 }
 
 /// [StructureMapInput] A Map of relationships between 2 structures that can be
 ///  used to transform data.
-@freezed
+
 class StructureMapInput {
   /// [StructureMapInput] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -8027,7 +8026,7 @@ class StructureMapInput {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8077,12 +8076,12 @@ class StructureMapInput {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapInput;
+  
 }
 
 /// [StructureMapRule] A Map of relationships between 2 structures that can be
 ///  used to transform data.
-@freezed
+
 class StructureMapRule {
   /// [StructureMapRule] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -8130,7 +8129,7 @@ class StructureMapRule {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapRule({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8180,12 +8179,12 @@ class StructureMapRule {
 
     /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapRule;
+  
 }
 
 /// [StructureMapSource] A Map of relationships between 2 structures that can
 ///  be used to transform data.
-@freezed
+
 class StructureMapSource {
   /// [StructureMapSource] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -8269,7 +8268,7 @@ class StructureMapSource {
   ///
   /// [logMessageElement] ("_logMessage") Extensions for logMessage
   ///
-  factory StructureMapSource({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8361,12 +8360,12 @@ class StructureMapSource {
 
     /// [logMessageElement] ("_logMessage") Extensions for logMessage
     @JsonKey(name: '_logMessage') Element? logMessageElement,
-  }) = _StructureMapSource;
+  
 }
 
 /// [StructureMapTarget] A Map of relationships between 2 structures that can
 ///  be used to transform data.
-@freezed
+
 class StructureMapTarget {
   /// [StructureMapTarget] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -8424,7 +8423,7 @@ class StructureMapTarget {
   ///
   /// [parameter] Parameters to the transform.
   ///
-  factory StructureMapTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8489,12 +8488,12 @@ class StructureMapTarget {
 
     /// [parameter] Parameters to the transform.
     List<StructureMapParameter>? parameter,
-  }) = _StructureMapTarget;
+  
 }
 
 /// [StructureMapParameter] A Map of relationships between 2 structures that
 ///  can be used to transform data.
-@freezed
+
 class StructureMapParameter {
   /// [StructureMapParameter] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -8558,7 +8557,7 @@ class StructureMapParameter {
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  factory StructureMapParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8632,12 +8631,12 @@ class StructureMapParameter {
 
     /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-  }) = _StructureMapParameter;
+  
 }
 
 /// [StructureMapDependent] A Map of relationships between 2 structures that
 ///  can be used to transform data.
-@freezed
+
 class StructureMapDependent {
   /// [StructureMapDependent] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -8675,7 +8674,7 @@ class StructureMapDependent {
   ///
   /// [parameter] Parameter to pass to the rule or group.
   ///
-  factory StructureMapDependent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8710,5 +8709,5 @@ class StructureMapDependent {
 
     /// [parameter] Parameter to pass to the rule or group.
     required List<StructureMapParameter> parameter,
-  }) = _StructureMapDependent;
+  
 }

@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'general.enums.dart';
-part 'general.freezed.dart';
+
 part 'general.g.dart';
 
-@freezed
 class AllergyIntolerance {
-  factory AllergyIntolerance({
+  
     @Default(Dstu2ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
         Dstu2ResourceType resourceType,
@@ -52,12 +51,11 @@ class AllergyIntolerance {
     @JsonKey(name: '_lastOccurence') Element? lastOccurenceElement,
     Annotation? note,
     List<AllergyIntoleranceReaction>? reaction,
-  }) = _AllergyIntolerance;
+  
 }
 
-@freezed
 class AllergyIntoleranceReaction {
-  factory AllergyIntoleranceReaction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -76,12 +74,11 @@ class AllergyIntoleranceReaction {
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     Annotation? note,
-  }) = _AllergyIntoleranceReaction;
+  
 }
 
-@freezed
 class Condition {
-  factory Condition({
+  
     @Default(Dstu2ResourceType.Condition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
         Dstu2ResourceType resourceType,
@@ -127,36 +124,33 @@ class Condition {
     List<ConditionEvidence>? evidence,
     List<CodeableConcept>? bodySite,
     String? notes,
-  }) = _Condition;
+  
 }
 
-@freezed
 class ConditionStage {
-  factory ConditionStage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
     List<Reference>? assessment,
-  }) = _ConditionStage;
+  
 }
 
-@freezed
 class ConditionEvidence {
-  factory ConditionEvidence({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     CodeableConcept? code,
     List<Reference>? detail,
-  }) = _ConditionEvidence;
+  
 }
 
-@freezed
 class Procedure {
-  factory Procedure({
+  
     @Default(Dstu2ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
         Dstu2ResourceType resourceType,
@@ -196,35 +190,32 @@ class Procedure {
     List<Annotation>? notes,
     List<ProcedureFocalDevice>? focalDevice,
     List<Reference>? used,
-  }) = _Procedure;
+  
 }
 
-@freezed
 class ProcedurePerformer {
-  factory ProcedurePerformer({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Reference? actor,
     CodeableConcept? role,
-  }) = _ProcedurePerformer;
+  
 }
 
-@freezed
 class ProcedureFocalDevice {
-  factory ProcedureFocalDevice({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,
     required Reference manipulated,
-  }) = _ProcedureFocalDevice;
+  
 }
 
-@freezed
 class ClinicalImpression {
-  factory ClinicalImpression({
+  
     @Default(Dstu2ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
         Dstu2ResourceType resourceType,
@@ -262,34 +253,31 @@ class ClinicalImpression {
     String? prognosis,
     List<Reference>? plan,
     List<Reference>? action,
-  }) = _ClinicalImpression;
+  
 }
 
-@freezed
 class ClinicalImpressionInvestigations {
-  factory ClinicalImpressionInvestigations({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     List<Reference>? item,
-  }) = _ClinicalImpressionInvestigations;
+  
 }
 
-@freezed
 class ClinicalImpressionRuledOut {
-  factory ClinicalImpressionRuledOut({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept item,
     String? reason,
-  }) = _ClinicalImpressionRuledOut;
+  
 }
 
-@freezed
 class FamilyMemberHistory {
-  factory FamilyMemberHistory({
+  
     @Default(Dstu2ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
         Dstu2ResourceType resourceType,
@@ -334,12 +322,11 @@ class FamilyMemberHistory {
     @JsonKey(name: '_deceasedString') Element? deceasedStringElement,
     Annotation? note,
     List<FamilyMemberHistoryCondition>? condition,
-  }) = _FamilyMemberHistory;
+  
 }
 
-@freezed
 class FamilyMemberHistoryCondition {
-  factory FamilyMemberHistoryCondition({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -351,12 +338,11 @@ class FamilyMemberHistoryCondition {
     String? onsetString,
     @JsonKey(name: '_onsetString') Element? onsetStringElement,
     Annotation? note,
-  }) = _FamilyMemberHistoryCondition;
+  
 }
 
-@freezed
 class RiskAssessment {
-  factory RiskAssessment({
+  
     @Default(Dstu2ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
         Dstu2ResourceType resourceType,
@@ -381,12 +367,11 @@ class RiskAssessment {
     List<RiskAssessmentPrediction>? prediction,
     String? mitigation,
     @JsonKey(name: '_mitigation') Element? mitigationElement,
-  }) = _RiskAssessment;
+  
 }
 
-@freezed
 class RiskAssessmentPrediction {
-  factory RiskAssessmentPrediction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -401,12 +386,11 @@ class RiskAssessmentPrediction {
     Range? whenRange,
     String? rationale,
     @JsonKey(name: '_rationale') Element? rationaleElement,
-  }) = _RiskAssessmentPrediction;
+  
 }
 
-@freezed
 class DetectedIssue {
-  factory DetectedIssue({
+  
     @Default(Dstu2ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
         Dstu2ResourceType resourceType,
@@ -434,17 +418,16 @@ class DetectedIssue {
     FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     List<DetectedIssueMitigation>? mitigation,
-  }) = _DetectedIssue;
+  
 }
 
-@freezed
 class DetectedIssueMitigation {
-  factory DetectedIssueMitigation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept action,
     FhirDateTime? date,
     Reference? author,
-  }) = _DetectedIssueMitigation;
+  
 }

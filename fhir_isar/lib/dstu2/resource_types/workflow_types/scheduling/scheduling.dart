@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'scheduling.enums.dart';
-part 'scheduling.freezed.dart';
+
 part 'scheduling.g.dart';
 
-@freezed
 class Appointment {
-  factory Appointment({
+  
     @Default(Dstu2ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
         Dstu2ResourceType resourceType,
@@ -48,12 +47,11 @@ class Appointment {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required List<AppointmentParticipant> participant,
-  }) = _Appointment;
+  
 }
 
-@freezed
 class AppointmentParticipant {
-  factory AppointmentParticipant({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -65,12 +63,11 @@ class AppointmentParticipant {
     @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
         required ParticipantStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-  }) = _AppointmentParticipant;
+  
 }
 
-@freezed
 class AppointmentResponse {
-  factory AppointmentResponse({
+  
     @Default(Dstu2ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
         Dstu2ResourceType resourceType,
@@ -97,12 +94,11 @@ class AppointmentResponse {
     @JsonKey(name: '_participantStatus') Element? participantStatusElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _AppointmentResponse;
+  
 }
 
-@freezed
 class Schedule {
-  factory Schedule({
+  
     @Default(Dstu2ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
         Dstu2ResourceType resourceType,
@@ -122,12 +118,11 @@ class Schedule {
     Period? planningHorizon,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Schedule;
+  
 }
 
-@freezed
 class Slot {
-  factory Slot({
+  
     @Default(Dstu2ResourceType.Slot)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
         Dstu2ResourceType resourceType,
@@ -154,5 +149,5 @@ class Slot {
     @JsonKey(name: '_overbooked') Element? overbookedElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Slot;
+  
 }

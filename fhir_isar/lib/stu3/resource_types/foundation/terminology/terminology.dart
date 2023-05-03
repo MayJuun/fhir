@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'terminology.enums.dart';
-part 'terminology.freezed.dart';
+
 part 'terminology.g.dart';
 
-@freezed
 class CodeSystem {
-  factory CodeSystem({
+  
     @Default(Stu3ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
         Stu3ResourceType resourceType,
@@ -71,12 +70,11 @@ class CodeSystem {
     List<CodeSystemFilter>? filter,
     List<CodeSystemProperty>? property,
     List<CodeSystemConcept>? concept,
-  }) = _CodeSystem;
+  
 }
 
-@freezed
 class CodeSystemFilter {
-  factory CodeSystemFilter({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
@@ -85,12 +83,11 @@ class CodeSystemFilter {
     @JsonKey(name: '_operator') List<Element?>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemFilter;
+  
 }
 
-@freezed
 class CodeSystemProperty {
-  factory CodeSystemProperty({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? uri,
@@ -99,12 +96,11 @@ class CodeSystemProperty {
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeSystemPropertyType? type,
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _CodeSystemProperty;
+  
 }
 
-@freezed
 class CodeSystemConcept {
-  factory CodeSystemConcept({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -115,23 +111,21 @@ class CodeSystemConcept {
     List<CodeSystemDesignation>? designation,
     List<CodeSystemProperty1>? property,
     List<CodeSystemConcept>? concept,
-  }) = _CodeSystemConcept;
+  
 }
 
-@freezed
 class CodeSystemDesignation {
-  factory CodeSystemDesignation({
+  
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemDesignation;
+  
 }
 
-@freezed
 class CodeSystemProperty1 {
-  factory CodeSystemProperty1({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Code? valueCode,
@@ -145,12 +139,11 @@ class CodeSystemProperty1 {
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-  }) = _CodeSystemProperty1;
+  
 }
 
-@freezed
 class ConceptMap {
-  factory ConceptMap({
+  
     @Default(Stu3ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
         Stu3ResourceType resourceType,
@@ -197,12 +190,11 @@ class ConceptMap {
     @JsonKey(name: '_targetUri') Element? targetUriElement,
     Reference? targetReference,
     List<ConceptMapGroup>? group,
-  }) = _ConceptMap;
+  
 }
 
-@freezed
 class ConceptMapGroup {
-  factory ConceptMapGroup({
+  
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? sourceVersion,
@@ -213,23 +205,21 @@ class ConceptMapGroup {
     @JsonKey(name: '_targetVersion') Element? targetVersionElement,
     required List<ConceptMapElement> element,
     ConceptMapUnmapped? unmapped,
-  }) = _ConceptMapGroup;
+  
 }
 
-@freezed
 class ConceptMapElement {
-  factory ConceptMapElement({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     List<ConceptMapTarget>? target,
-  }) = _ConceptMapElement;
+  
 }
 
-@freezed
 class ConceptMapTarget {
-  factory ConceptMapTarget({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
@@ -240,12 +230,11 @@ class ConceptMapTarget {
     @JsonKey(name: '_comment') Element? commentElement,
     List<ConceptMapDependsOn>? dependsOn,
     List<ConceptMapDependsOn>? product,
-  }) = _ConceptMapTarget;
+  
 }
 
-@freezed
 class ConceptMapDependsOn {
-  factory ConceptMapDependsOn({
+  
     String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     String? system,
@@ -254,12 +243,11 @@ class ConceptMapDependsOn {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-  }) = _ConceptMapDependsOn;
+  
 }
 
-@freezed
 class ConceptMapUnmapped {
-  factory ConceptMapUnmapped({
+  
     ConceptMapUnmappedMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
@@ -268,12 +256,11 @@ class ConceptMapUnmapped {
     @JsonKey(name: '_display') Element? displayElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _ConceptMapUnmapped;
+  
 }
 
-@freezed
 class ExpansionProfile {
-  factory ExpansionProfile({
+  
     @Default(Stu3ResourceType.ExpansionProfile)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
         Stu3ResourceType resourceType,
@@ -327,74 +314,66 @@ class ExpansionProfile {
     @JsonKey(name: '_displayLanguage') Element? displayLanguageElement,
     Boolean? limitedExpansion,
     @JsonKey(name: '_limitedExpansion') Element? limitedExpansionElement,
-  }) = _ExpansionProfile;
+  
 }
 
-@freezed
 class ExpansionProfileFixedVersion {
-  factory ExpansionProfileFixedVersion({
+  
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     ExpansionProfileFixedVersionMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
-  }) = _ExpansionProfileFixedVersion;
+  
 }
 
-@freezed
 class ExpansionProfileExcludedSystem {
-  factory ExpansionProfileExcludedSystem({
+  
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-  }) = _ExpansionProfileExcludedSystem;
+  
 }
 
-@freezed
 class ExpansionProfileDesignation {
-  factory ExpansionProfileDesignation({
+  
     ExpansionProfileInclude? include,
     ExpansionProfileExclude? exclude,
-  }) = _ExpansionProfileDesignation;
+  
 }
 
-@freezed
 class ExpansionProfileInclude {
-  factory ExpansionProfileInclude({
+  
     List<ExpansionProfileDesignation1>? designation,
-  }) = _ExpansionProfileInclude;
+  
 }
 
-@freezed
 class ExpansionProfileDesignation1 {
-  factory ExpansionProfileDesignation1({
+  
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
-  }) = _ExpansionProfileDesignation1;
+  
 }
 
-@freezed
 class ExpansionProfileExclude {
-  factory ExpansionProfileExclude({
+  
     List<ExpansionProfileDesignation2>? designation,
-  }) = _ExpansionProfileExclude;
+  
 }
 
-@freezed
 class ExpansionProfileDesignation2 {
-  factory ExpansionProfileDesignation2({
+  
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
-  }) = _ExpansionProfileDesignation2;
+  
 }
 
-@freezed
 class NamingSystem {
-  factory NamingSystem({
+  
     @Default(Stu3ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
         Stu3ResourceType resourceType,
@@ -430,12 +409,11 @@ class NamingSystem {
     @JsonKey(name: '_usage') Element? usageElement,
     required List<NamingSystemUniqueId> uniqueId,
     Reference? replacedBy,
-  }) = _NamingSystem;
+  
 }
 
-@freezed
 class NamingSystemUniqueId {
-  factory NamingSystemUniqueId({
+  
     NamingSystemUniqueIdType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
@@ -445,12 +423,11 @@ class NamingSystemUniqueId {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     Period? period,
-  }) = _NamingSystemUniqueId;
+  
 }
 
-@freezed
 class ValueSet {
-  factory ValueSet({
+  
     @Default(Stu3ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
         Stu3ResourceType resourceType,
@@ -496,24 +473,22 @@ class ValueSet {
     @JsonKey(name: '_extensible') Element? extensibleElement,
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
-  }) = _ValueSet;
+  
 }
 
-@freezed
 class ValueSetCompose {
-  factory ValueSetCompose({
+  
     Date? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
     required List<ValueSetInclude> include,
     List<ValueSetInclude>? exclude,
-  }) = _ValueSetCompose;
+  
 }
 
-@freezed
 class ValueSetInclude {
-  factory ValueSetInclude({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -523,47 +498,43 @@ class ValueSetInclude {
     List<ValueSetFilter>? filter,
     List<String>? valueSet,
     @JsonKey(name: '_valueSet') List<Element?>? valueSetElement,
-  }) = _ValueSetInclude;
+  
 }
 
-@freezed
 class ValueSetConcept {
-  factory ValueSetConcept({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetDesignation>? designation,
-  }) = _ValueSetConcept;
+  
 }
 
-@freezed
 class ValueSetDesignation {
-  factory ValueSetDesignation({
+  
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetDesignation;
+  
 }
 
-@freezed
 class ValueSetFilter {
-  factory ValueSetFilter({
+  
     String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     ValueSetFilterOp? op,
     @JsonKey(name: '_op') Element? opElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetFilter;
+  
 }
 
-@freezed
 class ValueSetExpansion {
-  factory ValueSetExpansion({
+  
     String? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     FhirDateTime? timestamp,
@@ -574,12 +545,11 @@ class ValueSetExpansion {
     @JsonKey(name: '_offset') Element? offsetElement,
     List<ValueSetParameter>? parameter,
     List<ValueSetContains>? contains,
-  }) = _ValueSetExpansion;
+  
 }
 
-@freezed
 class ValueSetParameter {
-  factory ValueSetParameter({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
@@ -594,12 +564,11 @@ class ValueSetParameter {
     @JsonKey(name: '_valueUri') Element? valueUriElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-  }) = _ValueSetParameter;
+  
 }
 
-@freezed
 class ValueSetContains {
-  factory ValueSetContains({
+  
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
@@ -614,5 +583,5 @@ class ValueSetContains {
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetDesignation>? designation,
     List<ValueSetContains>? contains,
-  }) = _ValueSetContains;
+  
 }

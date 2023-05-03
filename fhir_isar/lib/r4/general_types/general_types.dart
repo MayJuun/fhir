@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r4.dart';
 
 part 'general_types.enums.dart';
-part 'general_types.freezed.dart';
+
 part 'general_types.g.dart';
 
-@freezed
 class Annotation {
-  factory Annotation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Reference? authorReference,
@@ -24,12 +23,11 @@ class Annotation {
     @JsonKey(name: '_time') Element? timeElement,
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _Annotation;
+  
 }
 
-@freezed
 class Attachment {
-  factory Attachment({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? contentType,
@@ -48,12 +46,11 @@ class Attachment {
     @JsonKey(name: '_title') Element? titleElement,
     FhirDateTime? creation,
     @JsonKey(name: '_creation') Element? creationElement,
-  }) = _Attachment;
+  
 }
 
-@freezed
 class Identifier {
-  factory Identifier({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
@@ -65,23 +62,21 @@ class Identifier {
     @JsonKey(name: '_value') Element? valueElement,
     Period? period,
     Reference? assigner,
-  }) = _Identifier;
+  
 }
 
-@freezed
 class CodeableConcept {
-  factory CodeableConcept({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<Coding>? coding,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _CodeableConcept;
+  
 }
 
-@freezed
 class Coding {
-  factory Coding({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirUri? system,
@@ -94,12 +89,11 @@ class Coding {
     @JsonKey(name: '_display') Element? displayElement,
     Boolean? userSelected,
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
-  }) = _Coding;
+  
 }
 
-@freezed
 class Quantity {
-  factory Quantity({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
@@ -113,12 +107,11 @@ class Quantity {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Quantity;
+  
 }
 
-@freezed
 class FhirDuration {
-  factory FhirDuration({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
@@ -132,12 +125,11 @@ class FhirDuration {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _FhirDuration;
+  
 }
 
-@freezed
 class Distance {
-  factory Distance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
@@ -151,12 +143,11 @@ class Distance {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Distance;
+  
 }
 
-@freezed
 class Count {
-  factory Count({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
@@ -170,24 +161,22 @@ class Count {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Count;
+  
 }
 
-@freezed
 class Money {
-  factory Money({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     Code? currency,
     @JsonKey(name: '_currency') Element? currencyElement,
-  }) = _Money;
+  
 }
 
-@freezed
 class Age {
-  factory Age({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
@@ -200,55 +189,50 @@ class Age {
     @JsonKey(name: '_system') Element? systemElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-  }) = _Age;
+  
 }
 
-@freezed
 class Range {
-  factory Range({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
     Quantity? high,
-  }) = _Range;
+  
 }
 
-@freezed
 class Period {
-  factory Period({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirDateTime? start,
     @JsonKey(name: '_start') Element? startElement,
     FhirDateTime? end,
     @JsonKey(name: '_end') Element? endElement,
-  }) = _Period;
+  
 }
 
-@freezed
 class Ratio {
-  factory Ratio({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
     Quantity? denominator,
-  }) = _Ratio;
+  
 }
 
-@freezed
 class RatioRange {
-  factory RatioRange({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? lowNumerator,
     Quantity? highNumerator,
     Quantity? denominator,
-  }) = _RatioRange;
+  
 }
 
-@freezed
 class SampledData {
-  factory SampledData({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity origin,
@@ -264,12 +248,11 @@ class SampledData {
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
     String? data,
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _SampledData;
+  
 }
 
-@freezed
 class Signature {
-  factory Signature({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding> type,
@@ -283,12 +266,11 @@ class Signature {
     @JsonKey(name: '_sigFormat') Element? sigFormatElement,
     Base64Binary? data,
     @JsonKey(name: '_data') Element? dataElement,
-  }) = _Signature;
+  
 }
 
-@freezed
 class HumanName {
-  factory HumanName({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
@@ -304,12 +286,11 @@ class HumanName {
     List<String>? suffix,
     @JsonKey(name: '_suffix') List<Element?>? suffixElement,
     Period? period,
-  }) = _HumanName;
+  
 }
 
-@freezed
 class Address {
-  factory Address({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
@@ -331,12 +312,11 @@ class Address {
     String? country,
     @JsonKey(name: '_country') Element? countryElement,
     Period? period,
-  }) = _Address;
+  
 }
 
-@freezed
 class ContactPoint {
-  factory ContactPoint({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
@@ -349,12 +329,11 @@ class ContactPoint {
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
     Period? period,
-  }) = _ContactPoint;
+  
 }
 
-@freezed
 class Timing {
-  factory Timing({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -362,12 +341,11 @@ class Timing {
     @JsonKey(name: '_event') List<Element?>? eventElement,
     TimingRepeat? repeat,
     CodeableConcept? code,
-  }) = _Timing;
+  
 }
 
-@freezed
 class TimingRepeat {
-  factory TimingRepeat({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -404,5 +382,5 @@ class TimingRepeat {
     @JsonKey(name: '_when') List<Element?>? whenElement,
     UnsignedInt? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
-  }) = _TimingRepeat;
+  
 }

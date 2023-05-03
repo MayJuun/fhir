@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'operations_control.enums.dart';
-part 'operations_control.freezed.dart';
+
 part 'operations_control.g.dart';
 
-@freezed
 class Conformance {
-  factory Conformance({
+  
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
@@ -53,12 +52,11 @@ class Conformance {
     List<ConformanceRest>? rest,
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
-  }) = _Conformance;
+  
 }
 
-@freezed
 class CapabilityStatement {
-  factory CapabilityStatement({
+  
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
@@ -97,46 +95,42 @@ class CapabilityStatement {
     List<ConformanceRest>? rest,
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
-  }) = _CapabilityStatement;
+  
 }
 
-@freezed
 class ConformanceContact {
-  factory ConformanceContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _ConformanceContact;
+  
 }
 
-@freezed
 class ConformanceSoftware {
-  factory ConformanceSoftware({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
     String? version,
     FhirDateTime? releaseDate,
-  }) = _ConformanceSoftware;
+  
 }
 
-@freezed
 class ConformanceImplementation {
-  factory ConformanceImplementation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String description,
     FhirUri? url,
-  }) = _ConformanceImplementation;
+  
 }
 
-@freezed
 class ConformanceRest {
-  factory ConformanceRest({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -152,12 +146,11 @@ class ConformanceRest {
     List<ConformanceResourceSearchParam>? searchParam,
     List<ConformanceRestOperation>? operation,
     List<FhirUri>? compartment,
-  }) = _ConformanceRest;
+  
 }
 
-@freezed
 class ConformanceMessaging {
-  factory ConformanceMessaging({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -166,12 +159,11 @@ class ConformanceMessaging {
     UnsignedInt? reliableCache,
     String? documentation,
     required List<ConformanceMessagingEvent> event,
-  }) = _ConformanceMessaging;
+  
 }
 
-@freezed
 class ConformanceDocument {
-  factory ConformanceDocument({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -179,12 +171,11 @@ class ConformanceDocument {
     @JsonKey(unknownEnumValue: DocumentMode.unknown) required DocumentMode mode,
     String? documentation,
     required Reference profile,
-  }) = _ConformanceDocument;
+  
 }
 
-@freezed
 class ConformanceRestSecurity {
-  factory ConformanceRestSecurity({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -193,12 +184,11 @@ class ConformanceRestSecurity {
     List<CodeableConcept>? service,
     String? description,
     List<ConformanceSecurityCertificate>? certificate,
-  }) = _ConformanceRestSecurity;
+  
 }
 
-@freezed
 class ConformanceRestResource {
-  factory ConformanceRestResource({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -222,48 +212,44 @@ class ConformanceRestResource {
     List<String>? searchInclude,
     List<String>? searchRevInclude,
     List<ConformanceResourceSearchParam>? searchParam,
-  }) = _ConformanceRestResource;
+  
 }
 
-@freezed
 class ConformanceResourceInteraction {
-  factory ConformanceResourceInteraction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
         required ResourceInteractionCode code,
     String? documentation,
-  }) = _ConformanceResourceInteraction;
+  
 }
 
-@freezed
 class ConformanceRestOperation {
-  factory ConformanceRestOperation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required String name,
     required Reference definition,
-  }) = _ConformanceRestOperation;
+  
 }
 
-@freezed
 class ConformanceMessagingEndpoint {
-  factory ConformanceMessagingEndpoint({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding protocol,
     required FhirUri address,
     @JsonKey(name: '_address') Element? addressElement,
-  }) = _ConformanceMessagingEndpoint;
+  
 }
 
-@freezed
 class ConformanceMessagingEvent {
-  factory ConformanceMessagingEvent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -275,36 +261,33 @@ class ConformanceMessagingEvent {
     required Reference request,
     required Reference response,
     String? documentation,
-  }) = _ConformanceMessagingEvent;
+  
 }
 
-@freezed
 class ConformanceSecurityCertificate {
-  factory ConformanceSecurityCertificate({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
     Base64Binary? blob,
     @JsonKey(name: '_blob') Element? blobElement,
-  }) = _ConformanceSecurityCertificate;
+  
 }
 
-@freezed
 class ConformanceRestInteraction {
-  factory ConformanceRestInteraction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
         required RestInteractionCode code,
     String? documentation,
-  }) = _ConformanceRestInteraction;
+  
 }
 
-@freezed
 class ConformanceResourceSearchParam {
-  factory ConformanceResourceSearchParam({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -317,12 +300,11 @@ class ConformanceResourceSearchParam {
     List<Code>? target,
     List<SearchParamModifier>? modifier,
     List<String>? chain,
-  }) = _ConformanceResourceSearchParam;
+  
 }
 
-@freezed
 class OperationDefinition {
-  factory OperationDefinition({
+  
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
@@ -355,23 +337,21 @@ class OperationDefinition {
     List<Code>? type,
     required Boolean instance,
     List<OperationDefinitionParameter>? parameter,
-  }) = _OperationDefinition;
+  
 }
 
-@freezed
 class OperationDefinitionContact {
-  factory OperationDefinitionContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _OperationDefinitionContact;
+  
 }
 
-@freezed
 class OperationDefinitionParameter {
-  factory OperationDefinitionParameter({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -385,13 +365,12 @@ class OperationDefinitionParameter {
     Reference? profile,
     OperationDefinitionParameterBinding? binding,
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
+  
 }
 
-@freezed
 class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
-  factory OperationDefinitionParameterBinding({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -402,16 +381,15 @@ class OperationDefinitionParameterBinding
         required OperationDefinitionBindingStrength strength,
     FhirUri? valueSetUri,
     Reference? valueSetReference,
-  }) = _OperationDefinitionParameterBinding;
+  
 }
 
-@freezed
 class SearchParameterContact {
-  factory SearchParameterContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _SearchParameterContact;
+  
 }

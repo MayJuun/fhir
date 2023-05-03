@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'conformance.enums.dart';
-part 'conformance.freezed.dart';
+
 part 'conformance.g.dart';
 
-@freezed
 class CapabilityStatement {
-  factory CapabilityStatement({
+  
     @Default(Stu3ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
         Stu3ResourceType resourceType,
@@ -74,35 +73,32 @@ class CapabilityStatement {
     List<CapabilityStatementRest>? rest,
     List<CapabilityStatementMessaging>? messaging,
     List<CapabilityStatementDocument>? document,
-  }) = _CapabilityStatement;
+  
 }
 
-@freezed
 class CapabilityStatementSoftware {
-  factory CapabilityStatementSoftware({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     Date? releaseDate,
     @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatementSoftware;
+  
 }
 
-@freezed
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
-  factory CapabilityStatementImplementation({
+  
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _CapabilityStatementImplementation;
+  
 }
 
-@freezed
 class CapabilityStatementSecurity {
-  factory CapabilityStatementSecurity({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Boolean? cors,
     @JsonKey(name: '_cors') Element? corsElement,
@@ -110,22 +106,20 @@ class CapabilityStatementSecurity {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CapabilityStatementCertificate>? certificate,
-  }) = _CapabilityStatementSecurity;
+  
 }
 
-@freezed
 class CapabilityStatementCertificate {
-  factory CapabilityStatementCertificate({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? blob,
     @JsonKey(name: '_blob') Element? blobElement,
-  }) = _CapabilityStatementCertificate;
+  
 }
 
-@freezed
 class CapabilityStatementResource {
-  factory CapabilityStatementResource({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     Reference? profile,
@@ -153,22 +147,20 @@ class CapabilityStatementResource {
     List<String>? searchRevInclude,
     @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
     List<CapabilityStatementSearchParam>? searchParam,
-  }) = _CapabilityStatementResource;
+  
 }
 
-@freezed
 class CapabilityStatementInteraction {
-  factory CapabilityStatementInteraction({
+  
     CapabilityStatementInteractionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction;
+  
 }
 
-@freezed
 class CapabilityStatementSearchParam {
-  factory CapabilityStatementSearchParam({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? definition,
@@ -177,31 +169,28 @@ class CapabilityStatementSearchParam {
     @JsonKey(name: '_type') Element? typeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementSearchParam;
+  
 }
 
-@freezed
 class CapabilityStatementInteraction1 {
-  factory CapabilityStatementInteraction1({
+  
     CapabilityStatementInteraction1Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction1;
+  
 }
 
-@freezed
 class CapabilityStatementOperation {
-  factory CapabilityStatementOperation({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     required Reference definition,
-  }) = _CapabilityStatementOperation;
+  
 }
 
-@freezed
 class CapabilityStatementMessaging {
-  factory CapabilityStatementMessaging({
+  
     List<CapabilityStatementEndpoint>? endpoint,
     Decimal? reliableCache,
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
@@ -209,42 +198,38 @@ class CapabilityStatementMessaging {
     @JsonKey(name: '_documentation') Element? documentationElement,
     List<CapabilityStatementSupportedMessage>? supportedMessage,
     List<CapabilityStatementEvent>? event,
-  }) = _CapabilityStatementMessaging;
+  
 }
 
-@freezed
 class CapabilityStatementEndpoint {
-  factory CapabilityStatementEndpoint({
+  
     required Coding protocol,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
-  }) = _CapabilityStatementEndpoint;
+  
 }
 
-@freezed
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
-  factory CapabilityStatementSupportedMessage({
+  
     CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Reference definition,
-  }) = _CapabilityStatementSupportedMessage;
+  
 }
 
-@freezed
 class CapabilityStatementDocument {
-  factory CapabilityStatementDocument({
+  
     CapabilityStatementDocumentMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
     required Reference profile,
-  }) = _CapabilityStatementDocument;
+  
 }
 
-@freezed
 class CompartmentDefinition {
-  factory CompartmentDefinition({
+  
     @Default(Stu3ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
         Stu3ResourceType resourceType,
@@ -284,24 +269,22 @@ class CompartmentDefinition {
     Boolean? search,
     @JsonKey(name: '_search') Element? searchElement,
     List<CompartmentDefinitionResource>? resource,
-  }) = _CompartmentDefinition;
+  
 }
 
-@freezed
 class CompartmentDefinitionResource {
-  factory CompartmentDefinitionResource({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<String>? param,
     @JsonKey(name: '_param') List<Element?>? paramElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CompartmentDefinitionResource;
+  
 }
 
-@freezed
 class DataElement {
-  factory DataElement({
+  
     @Default(Stu3ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
         Stu3ResourceType resourceType,
@@ -341,12 +324,11 @@ class DataElement {
     @JsonKey(name: '_stringency') Element? stringencyElement,
     List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
-  }) = _DataElement;
+  
 }
 
-@freezed
 class DataElementMapping {
-  factory DataElementMapping({
+  
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
@@ -355,12 +337,11 @@ class DataElementMapping {
     @JsonKey(name: '_name') Element? nameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _DataElementMapping;
+  
 }
 
-@freezed
 class GraphDefinition {
-  factory GraphDefinition({
+  
     @Default(Stu3ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
         Stu3ResourceType resourceType,
@@ -400,12 +381,11 @@ class GraphDefinition {
     String? profile,
     @JsonKey(name: '_profile') Element? profileElement,
     List<GraphDefinitionLink>? link,
-  }) = _GraphDefinition;
+  
 }
 
-@freezed
 class GraphDefinitionLink {
-  factory GraphDefinitionLink({
+  
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? sliceName,
@@ -417,24 +397,22 @@ class GraphDefinitionLink {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<GraphDefinitionTarget> target,
-  }) = _GraphDefinitionLink;
+  
 }
 
-@freezed
 class GraphDefinitionTarget {
-  factory GraphDefinitionTarget({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? profile,
     @JsonKey(name: '_profile') Element? profileElement,
     List<GraphDefinitionCompartment>? compartment,
     List<GraphDefinitionLink>? link,
-  }) = _GraphDefinitionTarget;
+  
 }
 
-@freezed
 class GraphDefinitionCompartment {
-  factory GraphDefinitionCompartment({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     GraphDefinitionCompartmentRule? rule,
@@ -443,12 +421,11 @@ class GraphDefinitionCompartment {
     @JsonKey(name: '_expression') Element? expressionElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _GraphDefinitionCompartment;
+  
 }
 
-@freezed
 class ImplementationGuide {
-  factory ImplementationGuide({
+  
     @Default(Stu3ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
         Stu3ResourceType resourceType,
@@ -491,33 +468,30 @@ class ImplementationGuide {
     List<String>? binary,
     @JsonKey(name: '_binary') List<Element?>? binaryElement,
     ImplementationGuidePage? page,
-  }) = _ImplementationGuide;
+  
 }
 
-@freezed
 class ImplementationGuideDependency {
-  factory ImplementationGuideDependency({
+  
     ImplementationGuideDependencyType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ImplementationGuideDependency;
+  
 }
 
-@freezed
 class ImplementationGuidePackage {
-  factory ImplementationGuidePackage({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<ImplementationGuideResource> resource,
-  }) = _ImplementationGuidePackage;
+  
 }
 
-@freezed
 class ImplementationGuideResource {
-  factory ImplementationGuideResource({
+  
     Boolean? example,
     @JsonKey(name: '_example') Element? exampleElement,
     String? name,
@@ -530,21 +504,19 @@ class ImplementationGuideResource {
     @JsonKey(name: '_sourceUri') Element? sourceUriElement,
     Reference? sourceReference,
     Reference? exampleFor,
-  }) = _ImplementationGuideResource;
+  
 }
 
-@freezed
 class ImplementationGuideGlobal {
-  factory ImplementationGuideGlobal({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference profile,
-  }) = _ImplementationGuideGlobal;
+  
 }
 
-@freezed
 class ImplementationGuidePage {
-  factory ImplementationGuidePage({
+  
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? title,
@@ -558,12 +530,11 @@ class ImplementationGuidePage {
     String? format,
     @JsonKey(name: '_format') Element? formatElement,
     List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
+  
 }
 
-@freezed
 class MessageDefinition {
-  factory MessageDefinition({
+  
     @Default(Stu3ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
         Stu3ResourceType resourceType,
@@ -613,12 +584,11 @@ class MessageDefinition {
     Boolean? responseRequired,
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
     List<MessageDefinitionAllowedResponse>? allowedResponse,
-  }) = _MessageDefinition;
+  
 }
 
-@freezed
 class MessageDefinitionFocus {
-  factory MessageDefinitionFocus({
+  
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? profile,
@@ -626,21 +596,19 @@ class MessageDefinitionFocus {
     @JsonKey(name: '_min') Element? minElement,
     String? max,
     @JsonKey(name: '_max') Element? maxElement,
-  }) = _MessageDefinitionFocus;
+  
 }
 
-@freezed
 class MessageDefinitionAllowedResponse {
-  factory MessageDefinitionAllowedResponse({
+  
     required Reference message,
     String? situation,
     @JsonKey(name: '_situation') Element? situationElement,
-  }) = _MessageDefinitionAllowedResponse;
+  
 }
 
-@freezed
 class OperationDefinitionParameter {
-  factory OperationDefinitionParameter({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     OperationDefinitionParameterUse? use,
@@ -658,34 +626,31 @@ class OperationDefinitionParameter {
     Reference? profile,
     OperationDefinitionBinding? binding,
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
+  
 }
 
-@freezed
 class OperationDefinitionBinding {
-  factory OperationDefinitionBinding({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     OperationDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? valueSetUri,
     @JsonKey(name: '_valueSetUri') Element? valueSetUriElement,
     Reference? valueSetReference,
-  }) = _OperationDefinitionBinding;
+  
 }
 
-@freezed
 class OperationDefinitionOverload {
-  factory OperationDefinitionOverload({
+  
     List<String>? parameterName,
     @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _OperationDefinitionOverload;
+  
 }
 
-@freezed
 class SearchParameter {
-  factory SearchParameter({
+  
     @Default(Stu3ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
         Stu3ResourceType resourceType,
@@ -743,21 +708,19 @@ class SearchParameter {
     List<String>? chain,
     @JsonKey(name: '_chain') List<Element?>? chainElement,
     List<SearchParameterComponent>? component,
-  }) = _SearchParameter;
+  
 }
 
-@freezed
 class SearchParameterComponent {
-  factory SearchParameterComponent({
+  
     required Reference definition,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _SearchParameterComponent;
+  
 }
 
-@freezed
 class StructureDefinition {
-  factory StructureDefinition({
+  
     @Default(Stu3ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
         Stu3ResourceType resourceType,
@@ -819,12 +782,11 @@ class StructureDefinition {
     @JsonKey(name: '_derivation') Element? derivationElement,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
+  
 }
 
-@freezed
 class StructureDefinitionMapping {
-  factory StructureDefinitionMapping({
+  
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
@@ -833,26 +795,23 @@ class StructureDefinitionMapping {
     @JsonKey(name: '_name') Element? nameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _StructureDefinitionMapping;
+  
 }
 
-@freezed
 class StructureDefinitionSnapshot {
-  factory StructureDefinitionSnapshot({
+  
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
+  
 }
 
-@freezed
 class StructureDefinitionDifferential {
-  factory StructureDefinitionDifferential({
+  
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
+  
 }
 
-@freezed
 class StructureMap {
-  factory StructureMap({
+  
     @Default(Stu3ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
         Stu3ResourceType resourceType,
@@ -896,12 +855,11 @@ class StructureMap {
     @JsonKey(name: 'import') List<String>? import_,
     @JsonKey(name: '_import') List<Element?>? importElement,
     required List<StructureMapGroup> group,
-  }) = _StructureMap;
+  
 }
 
-@freezed
 class StructureMapStructure {
-  factory StructureMapStructure({
+  
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     StructureMapStructureMode? mode,
@@ -910,12 +868,11 @@ class StructureMapStructure {
     @JsonKey(name: '_alias') Element? aliasElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapStructure;
+  
 }
 
-@freezed
 class StructureMapGroup {
-  factory StructureMapGroup({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(name: 'extends') String? extends_,
@@ -926,12 +883,11 @@ class StructureMapGroup {
     @JsonKey(name: '_documentation') Element? documentationElement,
     required List<StructureMapInput> input,
     required List<StructureMapRule> rule,
-  }) = _StructureMapGroup;
+  
 }
 
-@freezed
 class StructureMapInput {
-  factory StructureMapInput({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? type,
@@ -940,12 +896,11 @@ class StructureMapInput {
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapInput;
+  
 }
 
-@freezed
 class StructureMapRule {
-  factory StructureMapRule({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     required List<StructureMapSource> source,
@@ -954,12 +909,11 @@ class StructureMapRule {
     List<StructureMapDependent>? dependent,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapRule;
+  
 }
 
-@freezed
 class StructureMapSource {
-  factory StructureMapSource({
+  
     String? context,
     @JsonKey(name: '_context') Element? contextElement,
     Decimal? min,
@@ -1053,12 +1007,11 @@ class StructureMapSource {
     @JsonKey(name: '_condition') Element? conditionElement,
     String? check,
     @JsonKey(name: '_check') Element? checkElement,
-  }) = _StructureMapSource;
+  
 }
 
-@freezed
 class StructureMapTarget {
-  factory StructureMapTarget({
+  
     String? context,
     @JsonKey(name: '_context') Element? contextElement,
     StructureMapTargetContextType? contextType,
@@ -1074,12 +1027,11 @@ class StructureMapTarget {
     StructureMapTargetTransform? transform,
     @JsonKey(name: '_transform') Element? transformElement,
     List<StructureMapParameter>? parameter,
-  }) = _StructureMapTarget;
+  
 }
 
-@freezed
 class StructureMapParameter {
-  factory StructureMapParameter({
+  
     Id? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     String? valueString,
@@ -1090,15 +1042,14 @@ class StructureMapParameter {
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     Decimal? valueDecimal,
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _StructureMapParameter;
+  
 }
 
-@freezed
 class StructureMapDependent {
-  factory StructureMapDependent({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? variable,
     @JsonKey(name: '_variable') List<Element?>? variableElement,
-  }) = _StructureMapDependent;
+  
 }

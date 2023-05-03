@@ -2,18 +2,17 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
-part 'backbone_type.freezed.dart';
 part 'backbone_type.g.dart';
 
 /// [BackboneType] Base definition for the few data types that are allowed to
 /// carry modifier extensions.
-@freezed
+
 class BackboneType {
   /// [BackboneType] Base definition for the few data types that are allowed to
   /// carry modifier extensions.
@@ -41,7 +40,7 @@ class BackboneType {
   /// required to check for modifier extensions. Modifier extensions SHALL NOT
   /// change the meaning of any elements on Resource or DomainResource
   /// (including cannot change the meaning of modifierExtension itself).
-  factory BackboneType({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references).
     /// This may be any string value that does not contain spaces.;
@@ -71,5 +70,5 @@ class BackboneType {
     /// change the meaning of any elements on Resource or DomainResource
     /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
-  }) = _BackboneType;
+  
 }

@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'payment.freezed.dart';
 part 'payment.g.dart';
 
-@freezed
 class PaymentNotice {
-  factory PaymentNotice({
+  
     @Default(R4ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
         R4ResourceType resourceType,
@@ -42,12 +40,11 @@ class PaymentNotice {
     required Reference recipient,
     required Money amount,
     CodeableConcept? paymentStatus,
-  }) = _PaymentNotice;
+  
 }
 
-@freezed
 class PaymentReconciliation {
-  factory PaymentReconciliation({
+  
     @Default(R4ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
         R4ResourceType resourceType,
@@ -81,12 +78,11 @@ class PaymentReconciliation {
     List<PaymentReconciliationDetail>? detail,
     CodeableConcept? formCode,
     List<PaymentReconciliationProcessNote>? processNote,
-  }) = _PaymentReconciliation;
+  
 }
 
-@freezed
 class PaymentReconciliationDetail {
-  factory PaymentReconciliationDetail({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -101,12 +97,11 @@ class PaymentReconciliationDetail {
     Reference? responsible,
     Reference? payee,
     Money? amount,
-  }) = _PaymentReconciliationDetail;
+  
 }
 
-@freezed
 class PaymentReconciliationProcessNote {
-  factory PaymentReconciliationProcessNote({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -114,7 +109,7 @@ class PaymentReconciliationProcessNote {
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationProcessNote;
+  
 
   String toYaml() => json2yaml(toJson());
 

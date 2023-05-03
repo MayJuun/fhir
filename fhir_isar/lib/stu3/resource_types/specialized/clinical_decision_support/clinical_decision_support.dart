@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'clinical_decision_support.enums.dart';
-part 'clinical_decision_support.freezed.dart';
+
 part 'clinical_decision_support.g.dart';
 
-@freezed
 class GuidanceResponse {
-  factory GuidanceResponse({
+  
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
@@ -46,5 +45,5 @@ class GuidanceResponse {
     Reference? outputParameters,
     Reference? result,
     List<DataRequirement>? dataRequirement,
-  }) = _GuidanceResponse;
+  
 }

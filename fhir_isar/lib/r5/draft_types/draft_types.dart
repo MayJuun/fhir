@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
-part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 /// [Population] A populatioof people with some set of grouping criteria.
-@freezed
+
 class Population {
   /// [Population] A populatioof people with some set of grouping criteria.
 
@@ -53,7 +52,7 @@ class Population {
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
   ///
-  factory Population({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal
@@ -124,12 +123,12 @@ class Population {
     /// [physiologicalCondition] The existing physiological conditions of the
     ///  specific population to which this applies.
     CodeableConcept? physiologicalCondition,
-  }) = _Population;
+  
 }
 
 /// [ProductShelfLife] The shelf-life and storage information for a medicinal
 ///  product item or container can be described using this class.
-@freezed
+
 class ProductShelfLife {
   /// [ProductShelfLife] The shelf-life and storage information for a medicinal
   ///  product item or container can be described using this class.
@@ -186,7 +185,7 @@ class ProductShelfLife {
   ///  can be specified using an appropriate controlled vocabulary The
   ///  controlled term and the controlled term identifier shall be specified.
   ///
-  factory ProductShelfLife({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal
@@ -285,13 +284,13 @@ class ProductShelfLife {
     ///  can be specified using an appropriate controlled vocabulary The
     ///  controlled term and the controlled term identifier shall be specified.
     List<CodeableConcept>? specialPrecautionsForStorage,
-  }) = _ProductShelfLife;
+  
 }
 
 /// [MarketingStatus] The marketing status describes the date when a medicinal
 ///  product is actually put on the market or the date as of which it is no
 ///  longer available.
-@freezed
+
 class MarketingStatus {
   /// [MarketingStatus] The marketing status describes the date when a
   ///  medicinal product is actually put on the market or the date as of which
@@ -357,7 +356,7 @@ class MarketingStatus {
   ///
   /// [restoreDateElement] ("_restoreDate") Extensions for restoreDate
   ///
-  factory MarketingStatus({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     /// [id] Unique id for the element within a resource (for internal
@@ -470,5 +469,5 @@ class MarketingStatus {
     /// [restoreDateElement] ("_restoreDate") Extensions for restoreDate
     /// [restoreDateElement] ("_restoreDate") Extensions for restoreDate
     @JsonKey(name: '_restoreDate') Element? restoreDateElement,
-  }) = _MarketingStatus;
+  
 }

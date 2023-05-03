@@ -4,19 +4,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'documents_and_lists.enums.dart';
-part 'documents_and_lists.freezed.dart';
+
 part 'documents_and_lists.g.dart';
 
-@freezed
 class Composition {
-  factory Composition({
+  
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
         Dstu2ResourceType resourceType,
@@ -49,12 +48,11 @@ class Composition {
     List<CompositionEvent>? event,
     Reference? encounter,
     List<CompositionSection>? section,
-  }) = _Composition;
+  
 }
 
-@freezed
 class CompositionAttester {
-  factory CompositionAttester({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -63,24 +61,22 @@ class CompositionAttester {
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
     Reference? party,
-  }) = _CompositionAttester;
+  
 }
 
-@freezed
 class CompositionEvent {
-  factory CompositionEvent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
     Period? period,
     List<Reference>? detail,
-  }) = _CompositionEvent;
+  
 }
 
-@freezed
 class CompositionSection {
-  factory CompositionSection({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -95,12 +91,11 @@ class CompositionSection {
     List<Reference>? entry,
     CodeableConcept? emptyReason,
     List<CompositionSection>? section,
-  }) = _CompositionSection;
+  
 }
 
-@freezed
 class DocumentManifest {
-  factory DocumentManifest({
+  
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
         Dstu2ResourceType resourceType,
@@ -131,34 +126,31 @@ class DocumentManifest {
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<DocumentManifestContent> content,
     List<DocumentManifestRelated>? related,
-  }) = _DocumentManifest;
+  
 }
 
-@freezed
 class DocumentManifestContent {
-  factory DocumentManifestContent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? pAttachment,
     Reference? pReference,
-  }) = _DocumentManifestContent;
+  
 }
 
-@freezed
 class DocumentManifestRelated {
-  factory DocumentManifestRelated({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     Reference? ref,
-  }) = _DocumentManifestRelated;
+  
 }
 
-@freezed
 class DocumentReference {
-  factory DocumentReference({
+  
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
         Dstu2ResourceType resourceType,
@@ -193,12 +185,11 @@ class DocumentReference {
     List<CodeableConcept>? securityLabel,
     required List<DocumentReferenceContent> content,
     DocumentReferenceContext? context,
-  }) = _DocumentReference;
+  
 }
 
-@freezed
 class DocumentReferenceRelatesTo {
-  factory DocumentReferenceRelatesTo({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -206,23 +197,21 @@ class DocumentReferenceRelatesTo {
         required RelatesToCode code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
-  }) = _DocumentReferenceRelatesTo;
+  
 }
 
-@freezed
 class DocumentReferenceContent {
-  factory DocumentReferenceContent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Attachment attachment,
     List<Coding>? format,
-  }) = _DocumentReferenceContent;
+  
 }
 
-@freezed
 class DocumentReferenceContext {
-  factory DocumentReferenceContext({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -233,23 +222,21 @@ class DocumentReferenceContext {
     CodeableConcept? practiceSetting,
     Reference? sourcePatientInfo,
     List<DocumentReferenceContextRelated>? related,
-  }) = _DocumentReferenceContext;
+  
 }
 
-@freezed
 class DocumentReferenceContextRelated {
-  factory DocumentReferenceContextRelated({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     Reference? ref,
-  }) = _DocumentReferenceContextRelated;
+  
 }
 
-@freezed
 class List_ {
-  factory List_({
+  
     @Default(Dstu2ResourceType.List_)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
         Dstu2ResourceType resourceType,
@@ -280,12 +267,11 @@ class List_ {
     String? note,
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
-  }) = _List_;
+  
 }
 
-@freezed
 class ListEntry {
-  factory ListEntry({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -296,5 +282,5 @@ class ListEntry {
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     required Reference item,
-  }) = _ListEntry;
+  
 }

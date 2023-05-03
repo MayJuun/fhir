@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'support.enums.dart';
-part 'support.freezed.dart';
+
 part 'support.g.dart';
 
-@freezed
 class Coverage {
-  factory Coverage({
+  
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
         Stu3ResourceType resourceType,
@@ -50,12 +49,11 @@ class Coverage {
     String? network,
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,
-  }) = _Coverage;
+  
 }
 
-@freezed
 class CoverageGrouping {
-  factory CoverageGrouping({
+  
     String? group,
     @JsonKey(name: '_group') Element? groupElement,
     String? groupDisplay,
@@ -80,12 +78,11 @@ class CoverageGrouping {
     @JsonKey(name: '_subClass') Element? subClassElement,
     String? subClassDisplay,
     @JsonKey(name: '_subClassDisplay') Element? subClassDisplayElement,
-  }) = _CoverageGrouping;
+  
 }
 
-@freezed
 class EligibilityRequest {
-  factory EligibilityRequest({
+  
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
         Stu3ResourceType resourceType,
@@ -119,12 +116,11 @@ class EligibilityRequest {
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     CodeableConcept? benefitCategory,
     CodeableConcept? benefitSubCategory,
-  }) = _EligibilityRequest;
+  
 }
 
-@freezed
 class EligibilityResponse {
-  factory EligibilityResponse({
+  
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
         Stu3ResourceType resourceType,
@@ -155,22 +151,20 @@ class EligibilityResponse {
     List<EligibilityResponseInsurance>? insurance,
     CodeableConcept? form,
     List<EligibilityResponseError>? error,
-  }) = _EligibilityResponse;
+  
 }
 
-@freezed
 class EligibilityResponseInsurance {
-  factory EligibilityResponseInsurance({
+  
     Reference? coverage,
     Reference? contract,
     List<EligibilityResponseBenefitBalance>? benefitBalance,
-  }) = _EligibilityResponseInsurance;
+  
 }
 
-@freezed
 class EligibilityResponseBenefitBalance
     with _$EligibilityResponseBenefitBalance {
-  factory EligibilityResponseBenefitBalance({
+  
     required CodeableConcept category,
     CodeableConcept? subCategory,
     Boolean? excluded,
@@ -183,19 +177,17 @@ class EligibilityResponseBenefitBalance
     CodeableConcept? unit,
     CodeableConcept? term,
     List<EligibilityResponseFinancial>? financial,
-  }) = _EligibilityResponseBenefitBalance;
+  
 }
 
-@freezed
 class EligibilityResponseError {
-  factory EligibilityResponseError({
+  
     required CodeableConcept code,
-  }) = _EligibilityResponseError;
+  
 }
 
-@freezed
 class EnrollmentRequest {
-  factory EnrollmentRequest({
+  
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
         Stu3ResourceType resourceType,
@@ -219,12 +211,11 @@ class EnrollmentRequest {
     Reference? organization,
     Reference? subject,
     Reference? coverage,
-  }) = _EnrollmentRequest;
+  
 }
 
-@freezed
 class EnrollmentResponse {
-  factory EnrollmentResponse({
+  
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
         Stu3ResourceType resourceType,
@@ -250,5 +241,5 @@ class EnrollmentResponse {
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-  }) = _EnrollmentResponse;
+  
 }

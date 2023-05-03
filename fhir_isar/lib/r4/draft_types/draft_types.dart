@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r4.dart';
 
-part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 /// [Population] A populatioof people with some set of grouping criteria.
-@freezed
+
 class Population {
   /// [Population] A populatioof people with some set of grouping criteria.
 
@@ -52,7 +51,7 @@ class Population {
   ///
   /// [physiologicalCondition] The existing physiological conditions of the
   ///  specific population to which this applies.
-  factory Population({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -95,11 +94,11 @@ class Population {
     /// [physiologicalCondition] The existing physiological conditions of the
     ///  specific population to which this applies.
     CodeableConcept? physiologicalCondition,
-  }) = _Population;
+  
 }
 
 /// [ProductShelfLife] The shelf-life and storage information for a medicinal product item or container can be described using this class.
-@freezed
+
 class ProductShelfLife {
   /// [ProductShelfLife] The shelf-life and storage information for a medicinal product item or container can be described using this class.
 
@@ -115,7 +114,7 @@ class ProductShelfLife {
   /// [type] This describes the shelf life, taking into account various scenarios such as shelf life of the packaged Medicinal Product itself, shelf life after transformation where necessary and shelf life after the first opening of a bottle, etc. The shelf life type shall be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
   ///
   /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
-  factory ProductShelfLife({
+  
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     String? id,
 
@@ -133,11 +132,11 @@ class ProductShelfLife {
 
     /// [specialPrecautionsForStorage] Special precautions for storage, if any, can be specified using an appropriate controlled vocabulary The controlled term and the controlled term identifier shall be specified.;
     List<CodeableConcept>? specialPrecautionsForStorage,
-  }) = _ProductShelfLife;
+  
 }
 
 /// [ProdCharacteristic] The marketing status describes the date when a
-@freezed
+
 class ProdCharacteristic {
   /// [ProdCharacteristic] The marketing status describes the date when a
 
@@ -221,7 +220,7 @@ class ProdCharacteristic {
   /// [scoring] Where applicable, the scoring can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
-  factory ProdCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -315,11 +314,11 @@ class ProdCharacteristic {
     /// controlled vocabulary shall be used The term and the term identifier shall
     ///  be used.
     CodeableConcept? scoring,
-  }) = _ProdCharacteristic;
+  
 }
 
 /// [MarketingStatus] The marketing status describes the date when a
-@freezed
+
 class MarketingStatus {
   /// [MarketingStatus] The marketing status describes the date when a
 
@@ -382,7 +381,7 @@ class MarketingStatus {
   ///  chain.
   ///
   /// [restoreDateElement] Extensions for restoreDate
-  factory MarketingStatus({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -447,5 +446,5 @@ class MarketingStatus {
 
     /// [restoreDateElement] Extensions for restoreDate
     @JsonKey(name: '_restoreDate') Element? restoreDateElement,
-  }) = _MarketingStatus;
+  
 }

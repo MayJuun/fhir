@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'patient_management.enums.dart';
-part 'patient_management.freezed.dart';
+
 part 'patient_management.g.dart';
 
-@freezed
 class Encounter {
-  factory Encounter({
+  
     @Default(Dstu2ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
         Dstu2ResourceType resourceType,
@@ -51,12 +50,11 @@ class Encounter {
     List<EncounterLocation>? location,
     Reference? serviceProvider,
     Reference? partOf,
-  }) = _Encounter;
+  
 }
 
-@freezed
 class EncounterStatusHistory {
-  factory EncounterStatusHistory({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -64,24 +62,22 @@ class EncounterStatusHistory {
         required EncounterHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
-  }) = _EncounterStatusHistory;
+  
 }
 
-@freezed
 class EncounterParticipant {
-  factory EncounterParticipant({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Period? period,
     Reference? individual,
-  }) = _EncounterParticipant;
+  
 }
 
-@freezed
 class EncounterHospitalization {
-  factory EncounterHospitalization({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -97,12 +93,11 @@ class EncounterHospitalization {
     Reference? destination,
     CodeableConcept? dischargeDisposition,
     List<Reference>? dischargeDiagnosis,
-  }) = _EncounterHospitalization;
+  
 }
 
-@freezed
 class EncounterLocation {
-  factory EncounterLocation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -111,12 +106,11 @@ class EncounterLocation {
         EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
-  }) = _EncounterLocation;
+  
 }
 
-@freezed
 class EpisodeOfCare {
-  factory EpisodeOfCare({
+  
     @Default(Dstu2ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
         Dstu2ResourceType resourceType,
@@ -143,12 +137,11 @@ class EpisodeOfCare {
     List<Reference>? referralRequest,
     Reference? careManager,
     List<EpisodeOfCareCareTeam>? careTeam,
-  }) = _EpisodeOfCare;
+  
 }
 
-@freezed
 class EpisodeOfCareStatusHistory {
-  factory EpisodeOfCareStatusHistory({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -156,24 +149,22 @@ class EpisodeOfCareStatusHistory {
         required EpisodeOfCareHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
-  }) = _EpisodeOfCareStatusHistory;
+  
 }
 
-@freezed
 class EpisodeOfCareCareTeam {
-  factory EpisodeOfCareCareTeam({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
     Period? period,
     Reference? member,
-  }) = _EpisodeOfCareCareTeam;
+  
 }
 
-@freezed
 class Communication {
-  factory Communication({
+  
     @Default(Dstu2ResourceType.Communication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
         Dstu2ResourceType resourceType,
@@ -204,12 +195,11 @@ class Communication {
     List<CodeableConcept>? reason,
     Reference? subject,
     Reference? requestDetail,
-  }) = _Communication;
+  
 }
 
-@freezed
 class CommunicationPayload {
-  factory CommunicationPayload({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -217,12 +207,11 @@ class CommunicationPayload {
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationPayload;
+  
 }
 
-@freezed
 class Flag {
-  factory Flag({
+  
     @Default(Dstu2ResourceType.Flag)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
         Dstu2ResourceType resourceType,
@@ -245,5 +234,5 @@ class Flag {
     Reference? encounter,
     Reference? author,
     required CodeableConcept code,
-  }) = _Flag;
+  
 }

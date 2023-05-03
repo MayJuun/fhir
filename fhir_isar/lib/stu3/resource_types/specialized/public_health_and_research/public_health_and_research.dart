@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'public_health_and_research.enums.dart';
-part 'public_health_and_research.freezed.dart';
+
 part 'public_health_and_research.g.dart';
 
-@freezed
 class ResearchStudy {
-  factory ResearchStudy({
+  
     @Default(Stu3ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
         Stu3ResourceType resourceType,
@@ -51,23 +50,21 @@ class ResearchStudy {
     CodeableConcept? reasonStopped,
     List<Annotation>? note,
     List<ResearchStudyArm>? arm,
-  }) = _ResearchStudy;
+  
 }
 
-@freezed
 class ResearchStudyArm {
-  factory ResearchStudyArm({
+  
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ResearchStudyArm;
+  
 }
 
-@freezed
 class ResearchSubject {
-  factory ResearchSubject({
+  
     @Default(Stu3ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
         Stu3ResourceType resourceType,
@@ -92,5 +89,5 @@ class ResearchSubject {
     String? actualArm,
     @JsonKey(name: '_actualArm') Element? actualArmElement,
     Reference? consent,
-  }) = _ResearchSubject;
+  
 }

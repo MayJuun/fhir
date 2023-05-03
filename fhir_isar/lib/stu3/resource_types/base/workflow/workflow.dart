@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'workflow.enums.dart';
-part 'workflow.freezed.dart';
+
 part 'workflow.g.dart';
 
-@freezed
 class Appointment {
-  factory Appointment({
+  
     @Default(Stu3ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
         Stu3ResourceType resourceType,
@@ -56,24 +55,22 @@ class Appointment {
     List<Reference>? incomingReferral,
     required List<AppointmentParticipant> participant,
     List<Period>? requestedPeriod,
-  }) = _Appointment;
+  
 }
 
-@freezed
 class AppointmentParticipant {
-  factory AppointmentParticipant({
+  
     List<CodeableConcept>? type,
     Reference? actor,
     @JsonKey(name: 'required') AppointmentParticipantRequired? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     AppointmentParticipantStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-  }) = _AppointmentParticipant;
+  
 }
 
-@freezed
 class AppointmentResponse {
-  factory AppointmentResponse({
+  
     @Default(Stu3ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
         Stu3ResourceType resourceType,
@@ -99,12 +96,11 @@ class AppointmentResponse {
     @JsonKey(name: '_participantStatus') Element? participantStatusElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _AppointmentResponse;
+  
 }
 
-@freezed
 class ProcessRequest {
-  factory ProcessRequest({
+  
     @Default(Stu3ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
         Stu3ResourceType resourceType,
@@ -140,20 +136,18 @@ class ProcessRequest {
     List<String>? exclude,
     @JsonKey(name: '_exclude') List<Element?>? excludeElement,
     Period? period,
-  }) = _ProcessRequest;
+  
 }
 
-@freezed
 class ProcessRequestItem {
-  factory ProcessRequestItem({
+  
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-  }) = _ProcessRequestItem;
+  
 }
 
-@freezed
 class ProcessResponse {
-  factory ProcessResponse({
+  
     @Default(Stu3ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
         Stu3ResourceType resourceType,
@@ -183,21 +177,19 @@ class ProcessResponse {
     List<ProcessResponseProcessNote>? processNote,
     List<CodeableConcept>? error,
     List<Reference>? communicationRequest,
-  }) = _ProcessResponse;
+  
 }
 
-@freezed
 class ProcessResponseProcessNote {
-  factory ProcessResponseProcessNote({
+  
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ProcessResponseProcessNote;
+  
 }
 
-@freezed
 class RequestGroup {
-  factory RequestGroup({
+  
     @Default(Stu3ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
         Stu3ResourceType resourceType,
@@ -231,12 +223,11 @@ class RequestGroup {
     Reference? reasonReference,
     List<Annotation>? note,
     List<RequestGroupAction>? action,
-  }) = _RequestGroup;
+  
 }
 
-@freezed
 class RequestGroupAction {
-  factory RequestGroupAction({
+  
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
@@ -269,12 +260,11 @@ class RequestGroupAction {
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
     Reference? resource,
     List<RequestGroupAction>? action,
-  }) = _RequestGroupAction;
+  
 }
 
-@freezed
 class RequestGroupCondition {
-  factory RequestGroupCondition({
+  
     String? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
@@ -283,24 +273,22 @@ class RequestGroupCondition {
     @JsonKey(name: '_language') Element? languageElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _RequestGroupCondition;
+  
 }
 
-@freezed
 class RequestGroupRelatedAction {
-  factory RequestGroupRelatedAction({
+  
     Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     String? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,
-  }) = _RequestGroupRelatedAction;
+  
 }
 
-@freezed
 class Schedule {
-  factory Schedule({
+  
     @Default(Stu3ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
         Stu3ResourceType resourceType,
@@ -324,12 +312,11 @@ class Schedule {
     Period? planningHorizon,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Schedule;
+  
 }
 
-@freezed
 class Slot {
-  factory Slot({
+  
     @Default(Stu3ResourceType.Slot)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
         Stu3ResourceType resourceType,
@@ -359,12 +346,11 @@ class Slot {
     @JsonKey(name: '_overbooked') Element? overbookedElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Slot;
+  
 }
 
-@freezed
 class Task {
-  factory Task({
+  
     @Default(Stu3ResourceType.Task)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
         Stu3ResourceType resourceType,
@@ -413,30 +399,27 @@ class Task {
     TaskRestriction? restriction,
     List<TaskInput>? input,
     List<TaskOutput>? output,
-  }) = _Task;
+  
 }
 
-@freezed
 class TaskRequester {
-  factory TaskRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _TaskRequester;
+  
 }
 
-@freezed
 class TaskRestriction {
-  factory TaskRestriction({
+  
     Decimal? repetitions,
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
     Period? period,
     List<Reference>? recipient,
-  }) = _TaskRestriction;
+  
 }
 
-@freezed
 class TaskInput {
-  factory TaskInput({
+  
     required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -508,12 +491,11 @@ class TaskInput {
     DataRequirement? valueDataRequirement,
     ParameterDefinition? valueParameterDefinition,
     TriggerDefinition? valueTriggerDefinition,
-  }) = _TaskInput;
+  
 }
 
-@freezed
 class TaskOutput {
-  factory TaskOutput({
+  
     required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -585,5 +567,5 @@ class TaskOutput {
     DataRequirement? valueDataRequirement,
     ParameterDefinition? valueParameterDefinition,
     TriggerDefinition? valueTriggerDefinition,
-  }) = _TaskOutput;
+  
 }

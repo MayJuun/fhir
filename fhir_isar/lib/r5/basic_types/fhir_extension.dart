@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../r5.dart';
 
-part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 
 /// [extension_] Optional Extension Element - found in all resources.
-@freezed
+
 class FhirExtension {
   /// [extension_] Optional Extension Element - found in all resources.
   ///
@@ -245,7 +244,7 @@ class FhirExtension {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  factory FhirExtension({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -554,5 +553,5 @@ class FhirExtension {
     /// [valueMeta] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
     Meta? valueMeta,
-  }) = _FhirExtension;
+  
 }

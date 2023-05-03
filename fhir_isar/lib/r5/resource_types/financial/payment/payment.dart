@@ -2,18 +2,17 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'payment.freezed.dart';
 part 'payment.g.dart';
 
 /// [PaymentNotice] This resource provides the status of the payment for goods
 ///  and services rendered, and the request and response resource references.
-@freezed
+
 class PaymentNotice {
   /// [PaymentNotice] This resource provides the status of the payment for
   ///  goods and services rendered, and the request and response resource
@@ -111,7 +110,7 @@ class PaymentNotice {
   /// [paymentStatus] A code indicating whether payment has been sent or
   ///  cleared.
   ///
-  factory PaymentNotice({
+  
     /// [resourceType] This is a PaymentNotice resource
     @Default(R5ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
@@ -197,12 +196,12 @@ class PaymentNotice {
 
     /// [paymentStatus] A code indicating whether payment has been sent or cleared.
     CodeableConcept? paymentStatus,
-  }) = _PaymentNotice;
+  
 }
 
 /// [PaymentReconciliation] This resource provides the details including amount
 ///  of a payment and allocates the payment items being paid.
-@freezed
+
 class PaymentReconciliation {
   /// [PaymentReconciliation] This resource provides the details including
   ///  amount of a payment and allocates the payment items being paid.
@@ -364,7 +363,7 @@ class PaymentReconciliation {
   /// [processNote] A note that describes or explains the processing in a human
   ///  readable form.
   ///
-  factory PaymentReconciliation({
+  
     /// [resourceType] This is a PaymentReconciliation resource
     @Default(R5ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
@@ -525,12 +524,12 @@ class PaymentReconciliation {
 
     /// [processNote] A note that describes or explains the processing in a human readable form.
     List<PaymentReconciliationProcessNote>? processNote,
-  }) = _PaymentReconciliation;
+  
 }
 
 /// [PaymentReconciliationAllocation] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
-@freezed
+
 class PaymentReconciliationAllocation {
   /// [PaymentReconciliationAllocation] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
@@ -614,7 +613,7 @@ class PaymentReconciliationAllocation {
   /// [amount] The monetary amount allocated from the total payment to the
   ///  payable.
   ///
-  factory PaymentReconciliationAllocation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -695,12 +694,12 @@ class PaymentReconciliationAllocation {
 
     /// [amount] The monetary amount allocated from the total payment to the payable.
     Money? amount,
-  }) = _PaymentReconciliationAllocation;
+  
 }
 
 /// [PaymentReconciliationProcessNote] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
-@freezed
+
 class PaymentReconciliationProcessNote {
   /// [PaymentReconciliationProcessNote] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
@@ -740,7 +739,7 @@ class PaymentReconciliationProcessNote {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory PaymentReconciliationProcessNote({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -778,5 +777,5 @@ class PaymentReconciliationProcessNote {
 
     /// [textElement] ("_text") Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationProcessNote;
+  
 }

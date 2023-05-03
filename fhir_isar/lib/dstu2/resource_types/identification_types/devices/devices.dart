@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'devices.enums.dart';
-part 'devices.freezed.dart';
+
 part 'devices.g.dart';
 
-@freezed
 class Device {
-  factory Device({
+  
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
         Dstu2ResourceType resourceType,
@@ -50,12 +49,11 @@ class Device {
     List<ContactPoint>? contact,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-  }) = _Device;
+  
 }
 
-@freezed
 class DeviceComponent {
-  factory DeviceComponent({
+  
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
         Dstu2ResourceType resourceType,
@@ -79,25 +77,23 @@ class DeviceComponent {
         DeviceComponentMeasurementPrinciple? measurementPrinciple,
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
-  }) = _DeviceComponent;
+  
 }
 
-@freezed
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  factory DeviceComponentProductionSpecification({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
-  }) = _DeviceComponentProductionSpecification;
+  
 }
 
-@freezed
 class DeviceMetricCalibration {
-  factory DeviceMetricCalibration({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -108,5 +104,5 @@ class DeviceMetricCalibration {
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _DeviceMetricCalibration;
+  
 }

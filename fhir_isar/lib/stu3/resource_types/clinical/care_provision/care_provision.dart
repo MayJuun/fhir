@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'care_provision.enums.dart';
-part 'care_provision.freezed.dart';
+
 part 'care_provision.g.dart';
 
-@freezed
 class VisionPrescriptionDispense {
-  factory VisionPrescriptionDispense({
+  
     CodeableConcept? product,
     VisionPrescriptionDispenseEye? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
@@ -42,12 +41,11 @@ class VisionPrescriptionDispense {
     String? brand,
     @JsonKey(name: '_brand') Element? brandElement,
     List<Annotation>? note,
-  }) = _VisionPrescriptionDispense;
+  
 }
 
-@freezed
 class CarePlan {
-  factory CarePlan({
+  
     @Default(Stu3ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
         Stu3ResourceType resourceType,
@@ -85,23 +83,21 @@ class CarePlan {
     List<Reference>? goal,
     List<CarePlanActivity>? activity,
     List<Annotation>? note,
-  }) = _CarePlan;
+  
 }
 
-@freezed
 class CarePlanActivity {
-  factory CarePlanActivity({
+  
     List<CodeableConcept>? outcomeCodeableConcept,
     List<Reference>? outcomeReference,
     List<Annotation>? progress,
     Reference? reference,
     CarePlanDetail? detail,
-  }) = _CarePlanActivity;
+  
 }
 
-@freezed
 class CarePlanDetail {
-  factory CarePlanDetail({
+  
     CodeableConcept? category,
     Reference? definition,
     CodeableConcept? code,
@@ -126,12 +122,11 @@ class CarePlanDetail {
     Quantity? quantity,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CarePlanDetail;
+  
 }
 
-@freezed
 class CareTeam {
-  factory CareTeam({
+  
     @Default(Stu3ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
         Stu3ResourceType resourceType,
@@ -159,22 +154,20 @@ class CareTeam {
     List<Reference>? reasonReference,
     List<Reference>? managingOrganization,
     List<Annotation>? note,
-  }) = _CareTeam;
+  
 }
 
-@freezed
 class CareTeamParticipant {
-  factory CareTeamParticipant({
+  
     CodeableConcept? role,
     Reference? member,
     Reference? onBehalfOf,
     Period? period,
-  }) = _CareTeamParticipant;
+  
 }
 
-@freezed
 class Goal {
-  factory Goal({
+  
     @Default(Stu3ResourceType.Goal)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
         Stu3ResourceType resourceType,
@@ -208,12 +201,11 @@ class Goal {
     List<Annotation>? note,
     List<CodeableConcept>? outcomeCode,
     List<Reference>? outcomeReference,
-  }) = _Goal;
+  
 }
 
-@freezed
 class GoalTarget {
-  factory GoalTarget({
+  
     CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
@@ -221,12 +213,11 @@ class GoalTarget {
     Date? dueDate,
     @JsonKey(name: '_dueDate') Element? dueDateElement,
     FhirDuration? dueDuration,
-  }) = _GoalTarget;
+  
 }
 
-@freezed
 class NutritionOrder {
-  factory NutritionOrder({
+  
     @Default(Stu3ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
         Stu3ResourceType resourceType,
@@ -254,12 +245,11 @@ class NutritionOrder {
     NutritionOrderOralDiet? oralDiet,
     List<NutritionOrderSupplement>? supplement,
     NutritionOrderEnteralFormula? enteralFormula,
-  }) = _NutritionOrder;
+  
 }
 
-@freezed
 class NutritionOrderOralDiet {
-  factory NutritionOrderOralDiet({
+  
     List<CodeableConcept>? type,
     List<Timing>? schedule,
     List<NutritionOrderNutrient>? nutrient,
@@ -267,28 +257,25 @@ class NutritionOrderOralDiet {
     List<CodeableConcept>? fluidConsistencyType,
     String? instruction,
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderOralDiet;
+  
 }
 
-@freezed
 class NutritionOrderNutrient {
-  factory NutritionOrderNutrient({
+  
     CodeableConcept? modifier,
     Quantity? amount,
-  }) = _NutritionOrderNutrient;
+  
 }
 
-@freezed
 class NutritionOrderTexture {
-  factory NutritionOrderTexture({
+  
     CodeableConcept? modifier,
     CodeableConcept? foodType,
-  }) = _NutritionOrderTexture;
+  
 }
 
-@freezed
 class NutritionOrderSupplement {
-  factory NutritionOrderSupplement({
+  
     CodeableConcept? type,
     String? productName,
     @JsonKey(name: '_productName') Element? productNameElement,
@@ -296,12 +283,11 @@ class NutritionOrderSupplement {
     Quantity? quantity,
     String? instruction,
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderSupplement;
+  
 }
 
-@freezed
 class NutritionOrderEnteralFormula {
-  factory NutritionOrderEnteralFormula({
+  
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
@@ -316,22 +302,20 @@ class NutritionOrderEnteralFormula {
     String? administrationInstruction,
     @JsonKey(name: '_administrationInstruction')
         Element? administrationInstructionElement,
-  }) = _NutritionOrderEnteralFormula;
+  
 }
 
-@freezed
 class NutritionOrderAdministration {
-  factory NutritionOrderAdministration({
+  
     Timing? schedule,
     Quantity? quantity,
     Quantity? rateSimpleQuantity,
     Ratio? rateRatio,
-  }) = _NutritionOrderAdministration;
+  
 }
 
-@freezed
 class ProcedureRequest {
-  factory ProcedureRequest({
+  
     @Default(Stu3ResourceType.ProcedureRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
         Stu3ResourceType resourceType,
@@ -381,20 +365,18 @@ class ProcedureRequest {
     List<CodeableConcept>? bodySite,
     List<Annotation>? note,
     List<Reference>? relevantHistory,
-  }) = _ProcedureRequest;
+  
 }
 
-@freezed
 class ProcedureRequestRequester {
-  factory ProcedureRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _ProcedureRequestRequester;
+  
 }
 
-@freezed
 class ReferralRequest {
-  factory ReferralRequest({
+  
     @Default(Stu3ResourceType.ReferralRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
         Stu3ResourceType resourceType,
@@ -438,20 +420,18 @@ class ReferralRequest {
     List<Reference>? supportingInfo,
     List<Annotation>? note,
     List<Reference>? relevantHistory,
-  }) = _ReferralRequest;
+  
 }
 
-@freezed
 class ReferralRequestRequester {
-  factory ReferralRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _ReferralRequestRequester;
+  
 }
 
-@freezed
 class RiskAssessment {
-  factory RiskAssessment({
+  
     @Default(Stu3ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
         Stu3ResourceType resourceType,
@@ -487,12 +467,11 @@ class RiskAssessment {
     @JsonKey(name: '_mitigation') Element? mitigationElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _RiskAssessment;
+  
 }
 
-@freezed
 class RiskAssessmentPrediction {
-  factory RiskAssessmentPrediction({
+  
     required CodeableConcept outcome,
     Decimal? probabilityDecimal,
     @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
@@ -504,12 +483,11 @@ class RiskAssessmentPrediction {
     Range? whenRange,
     String? rationale,
     @JsonKey(name: '_rationale') Element? rationaleElement,
-  }) = _RiskAssessmentPrediction;
+  
 }
 
-@freezed
 class VisionPrescription {
-  factory VisionPrescription({
+  
     @Default(Stu3ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
         Stu3ResourceType resourceType,
@@ -534,5 +512,5 @@ class VisionPrescription {
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
     List<VisionPrescriptionDispense>? dispense,
-  }) = _VisionPrescription;
+  
 }

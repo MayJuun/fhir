@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
-@freezed
 class Endpoint {
-  factory Endpoint({
+  
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
         R4ResourceType resourceType,
@@ -43,12 +41,11 @@ class Endpoint {
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
-  }) = _Endpoint;
+  
 }
 
-@freezed
 class HealthcareService {
-  factory HealthcareService({
+  
     @Default(R4ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
         R4ResourceType resourceType,
@@ -93,24 +90,22 @@ class HealthcareService {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
-  }) = _HealthcareService;
+  
 }
 
-@freezed
 class HealthcareServiceEligibility {
-  factory HealthcareServiceEligibility({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     Markdown? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _HealthcareServiceEligibility;
+  
 }
 
-@freezed
 class HealthcareServiceAvailableTime {
-  factory HealthcareServiceAvailableTime({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -122,24 +117,22 @@ class HealthcareServiceAvailableTime {
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
-  }) = _HealthcareServiceAvailableTime;
+  
 }
 
-@freezed
 class HealthcareServiceNotAvailable {
-  factory HealthcareServiceNotAvailable({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
-  }) = _HealthcareServiceNotAvailable;
+  
 }
 
-@freezed
 class Location {
-  factory Location({
+  
     @Default(R4ResourceType.Location)
     @JsonKey(unknownEnumValue: R4ResourceType.Location)
         R4ResourceType resourceType,
@@ -177,12 +170,11 @@ class Location {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
-  }) = _Location;
+  
 }
 
-@freezed
 class LocationPosition {
-  factory LocationPosition({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -192,12 +184,11 @@ class LocationPosition {
     @JsonKey(name: '_latitude') Element? latitudeElement,
     Decimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
-  }) = _LocationPosition;
+  
 }
 
-@freezed
 class LocationHoursOfOperation {
-  factory LocationHoursOfOperation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -209,12 +200,11 @@ class LocationHoursOfOperation {
     @JsonKey(name: '_openingTime') Element? openingTimeElement,
     Time? closingTime,
     @JsonKey(name: '_closingTime') Element? closingTimeElement,
-  }) = _LocationHoursOfOperation;
+  
 }
 
-@freezed
 class Organization {
-  factory Organization({
+  
     @Default(R4ResourceType.Organization)
     @JsonKey(unknownEnumValue: R4ResourceType.Organization)
         R4ResourceType resourceType,
@@ -241,12 +231,11 @@ class Organization {
     Reference? partOf,
     List<OrganizationContact>? contact,
     List<Reference>? endpoint,
-  }) = _Organization;
+  
 }
 
-@freezed
 class OrganizationContact {
-  factory OrganizationContact({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -254,12 +243,11 @@ class OrganizationContact {
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
-  }) = _OrganizationContact;
+  
 }
 
-@freezed
 class OrganizationAffiliation {
-  factory OrganizationAffiliation({
+  
     @Default(R4ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
         R4ResourceType resourceType,
@@ -286,5 +274,5 @@ class OrganizationAffiliation {
     List<Reference>? healthcareService,
     List<ContactPoint>? telecom,
     List<Reference>? endpoint,
-  }) = _OrganizationAffiliation;
+  
 }

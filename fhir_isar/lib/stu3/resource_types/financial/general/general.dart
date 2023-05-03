@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'general.enums.dart';
-part 'general.freezed.dart';
+
 part 'general.g.dart';
 
-@freezed
 class Account {
-  factory Account({
+  
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
         Stu3ResourceType resourceType,
@@ -43,31 +42,28 @@ class Account {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<AccountGuarantor>? guarantor,
-  }) = _Account;
+  
 }
 
-@freezed
 class AccountCoverage {
-  factory AccountCoverage({
+  
     required Reference coverage,
     Decimal? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
-  }) = _AccountCoverage;
+  
 }
 
-@freezed
 class AccountGuarantor {
-  factory AccountGuarantor({
+  
     required Reference party,
     Boolean? onHold,
     @JsonKey(name: '_onHold') Element? onHoldElement,
     Period? period,
-  }) = _AccountGuarantor;
+  
 }
 
-@freezed
 class ChargeItem {
-  factory ChargeItem({
+  
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
         Stu3ResourceType resourceType,
@@ -112,20 +108,18 @@ class ChargeItem {
     List<Reference>? account,
     List<Annotation>? note,
     List<Reference>? supportingInformation,
-  }) = _ChargeItem;
+  
 }
 
-@freezed
 class ChargeItemParticipant {
-  factory ChargeItemParticipant({
+  
     CodeableConcept? role,
     required Reference actor,
-  }) = _ChargeItemParticipant;
+  
 }
 
-@freezed
 class Contract {
-  factory Contract({
+  
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
         Stu3ResourceType resourceType,
@@ -165,29 +159,26 @@ class Contract {
     List<ContractFriendly>? friendly,
     List<ContractLegal>? legal,
     List<ContractRule>? rule,
-  }) = _Contract;
+  
 }
 
-@freezed
 class ContractAgent {
-  factory ContractAgent({
+  
     required Reference actor,
     List<CodeableConcept>? role,
-  }) = _ContractAgent;
+  
 }
 
-@freezed
 class ContractSigner {
-  factory ContractSigner({
+  
     required Coding type,
     required Reference party,
     required List<Signature> signature,
-  }) = _ContractSigner;
+  
 }
 
-@freezed
 class ContractValuedItem {
-  factory ContractValuedItem({
+  
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -200,12 +191,11 @@ class ContractValuedItem {
     Decimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Money? net,
-  }) = _ContractValuedItem;
+  
 }
 
-@freezed
 class ContractTerm {
-  factory ContractTerm({
+  
     Identifier? identifier,
     String? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -221,20 +211,18 @@ class ContractTerm {
     @JsonKey(name: '_text') Element? textElement,
     List<ContractValuedItem1>? valuedItem,
     List<ContractTerm>? group,
-  }) = _ContractTerm;
+  
 }
 
-@freezed
 class ContractAgent1 {
-  factory ContractAgent1({
+  
     required Reference actor,
     List<CodeableConcept>? role,
-  }) = _ContractAgent1;
+  
 }
 
-@freezed
 class ContractValuedItem1 {
-  factory ContractValuedItem1({
+  
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -247,36 +235,32 @@ class ContractValuedItem1 {
     Decimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Money? net,
-  }) = _ContractValuedItem1;
+  
 }
 
-@freezed
 class ContractFriendly {
-  factory ContractFriendly({
+  
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _ContractFriendly;
+  
 }
 
-@freezed
 class ContractLegal {
-  factory ContractLegal({
+  
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _ContractLegal;
+  
 }
 
-@freezed
 class ContractRule {
-  factory ContractRule({
+  
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _ContractRule;
+  
 }
 
-@freezed
 class ExplanationOfBenefit {
-  factory ExplanationOfBenefit({
+  
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
         Stu3ResourceType resourceType,
@@ -333,29 +317,26 @@ class ExplanationOfBenefit {
     CodeableConcept? form,
     List<ExplanationOfBenefitProcessNote>? processNote,
     List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
-  }) = _ExplanationOfBenefit;
+  
 }
 
-@freezed
 class ExplanationOfBenefitRelated {
-  factory ExplanationOfBenefitRelated({
+  
     Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
-  }) = _ExplanationOfBenefitRelated;
+  
 }
 
-@freezed
 class ExplanationOfBenefitPayee {
-  factory ExplanationOfBenefitPayee({
+  
     CodeableConcept? type,
     Reference? party,
-  }) = _ExplanationOfBenefitPayee;
+  
 }
 
-@freezed
 class ExplanationOfBenefitInformation {
-  factory ExplanationOfBenefitInformation({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept category,
@@ -369,12 +350,11 @@ class ExplanationOfBenefitInformation {
     Attachment? valueAttachment,
     Reference? valueReference,
     Coding? reason,
-  }) = _ExplanationOfBenefitInformation;
+  
 }
 
-@freezed
 class ExplanationOfBenefitCareTeam {
-  factory ExplanationOfBenefitCareTeam({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference provider,
@@ -382,56 +362,51 @@ class ExplanationOfBenefitCareTeam {
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
     CodeableConcept? qualification,
-  }) = _ExplanationOfBenefitCareTeam;
+  
 }
 
-@freezed
 class ExplanationOfBenefitDiagnosis {
-  factory ExplanationOfBenefitDiagnosis({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
     List<CodeableConcept>? type,
     CodeableConcept? packageCode,
-  }) = _ExplanationOfBenefitDiagnosis;
+  
 }
 
-@freezed
 class ExplanationOfBenefitProcedure {
-  factory ExplanationOfBenefitProcedure({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
-  }) = _ExplanationOfBenefitProcedure;
+  
 }
 
-@freezed
 class ExplanationOfBenefitInsurance {
-  factory ExplanationOfBenefitInsurance({
+  
     Reference? coverage,
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
-  }) = _ExplanationOfBenefitInsurance;
+  
 }
 
-@freezed
 class ExplanationOfBenefitAccident {
-  factory ExplanationOfBenefitAccident({
+  
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
     Reference? locationReference,
-  }) = _ExplanationOfBenefitAccident;
+  
 }
 
-@freezed
 class ExplanationOfBenefitItem {
-  factory ExplanationOfBenefitItem({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<PositiveInt>? careTeamLinkId,
@@ -467,23 +442,21 @@ class ExplanationOfBenefitItem {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail>? detail,
-  }) = _ExplanationOfBenefitItem;
+  
 }
 
-@freezed
 class ExplanationOfBenefitAdjudication {
-  factory ExplanationOfBenefitAdjudication({
+  
     required CodeableConcept category,
     CodeableConcept? reason,
     Money? amount,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ExplanationOfBenefitAdjudication;
+  
 }
 
-@freezed
 class ExplanationOfBenefitSubDetail {
-  factory ExplanationOfBenefitSubDetail({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept type,
@@ -501,12 +474,11 @@ class ExplanationOfBenefitSubDetail {
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitSubDetail;
+  
 }
 
-@freezed
 class ExplanationOfBenefitAddItem {
-  factory ExplanationOfBenefitAddItem({
+  
     List<Id>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
@@ -518,12 +490,11 @@ class ExplanationOfBenefitAddItem {
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail1>? detail,
-  }) = _ExplanationOfBenefitAddItem;
+  
 }
 
-@freezed
 class ExplanationOfBenefitDetail1 {
-  factory ExplanationOfBenefitDetail1({
+  
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
@@ -532,12 +503,11 @@ class ExplanationOfBenefitDetail1 {
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitDetail1;
+  
 }
 
-@freezed
 class ExplanationOfBenefitPayment {
-  factory ExplanationOfBenefitPayment({
+  
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
@@ -545,25 +515,23 @@ class ExplanationOfBenefitPayment {
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
     Identifier? identifier,
-  }) = _ExplanationOfBenefitPayment;
+  
 }
 
-@freezed
 class ExplanationOfBenefitProcessNote {
-  factory ExplanationOfBenefitProcessNote({
+  
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     CodeableConcept? language,
-  }) = _ExplanationOfBenefitProcessNote;
+  
 }
 
-@freezed
 class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
-  factory ExplanationOfBenefitBenefitBalance({
+  
     required CodeableConcept category,
     CodeableConcept? subCategory,
     Boolean? excluded,
@@ -576,5 +544,5 @@ class ExplanationOfBenefitBenefitBalance
     CodeableConcept? unit,
     CodeableConcept? term,
     List<ExplanationOfBenefitFinancial>? financial,
-  }) = _ExplanationOfBenefitBenefitBalance;
+  
 }

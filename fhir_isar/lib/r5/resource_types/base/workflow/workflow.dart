@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 /// [Appointment] A booking of a healthcare event among patient(s),
 ///  practitioner(s), related person(s) and/or device(s) for a specific
 ///  date/time. This may result in one or more Encounter(s).
-@freezed
+
 class Appointment {
   /// [Appointment] A booking of a healthcare event among patient(s),
   ///  practitioner(s), related person(s) and/or device(s) for a specific
@@ -210,7 +209,7 @@ class Appointment {
   /// [recurrenceTemplate] The details of the recurrence pattern or template
   ///  that is used to generate recurring appointments.
   ///
-  factory Appointment({
+  
     /// [resourceType] This is a Appointment resource
     @Default(R5ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
@@ -454,13 +453,13 @@ class Appointment {
     /// [recurrenceTemplate] The details of the recurrence pattern or template
     ///  that is used to generate recurring appointments.
     List<AppointmentRecurrenceTemplate>? recurrenceTemplate,
-  }) = _Appointment;
+  
 }
 
 /// [AppointmentParticipant] A booking of a healthcare event among patient(s),
 ///  practitioner(s), related person(s) and/or device(s) for a specific
 ///  date/time. This may result in one or more Encounter(s).
-@freezed
+
 class AppointmentParticipant {
   /// [AppointmentParticipant] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -510,7 +509,7 @@ class AppointmentParticipant {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  factory AppointmentParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -561,13 +560,13 @@ class AppointmentParticipant {
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
-  }) = _AppointmentParticipant;
+  
 }
 
 /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
-@freezed
+
 class AppointmentRecurrenceTemplate {
   /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -638,7 +637,7 @@ class AppointmentRecurrenceTemplate {
   /// [excludingRecurrenceIdElement] ("_excludingRecurrenceId") Extensions for
   ///  excludingRecurrenceId
   ///
-  factory AppointmentRecurrenceTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -720,13 +719,13 @@ class AppointmentRecurrenceTemplate {
     ///  for excludingRecurrenceId
     @JsonKey(name: '_excludingRecurrenceId')
         List<Element>? excludingRecurrenceIdElement,
-  }) = _AppointmentRecurrenceTemplate;
+  
 }
 
 /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
-@freezed
+
 class AppointmentWeeklyTemplate {
   /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -798,7 +797,7 @@ class AppointmentWeeklyTemplate {
   ///
   /// [weekIntervalElement] ("_weekInterval") Extensions for weekInterval
   ///
-  factory AppointmentWeeklyTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -881,13 +880,13 @@ class AppointmentWeeklyTemplate {
 
     /// [weekIntervalElement] ("_weekInterval") Extensions for weekInterval
     @JsonKey(name: '_weekInterval') Element? weekIntervalElement,
-  }) = _AppointmentWeeklyTemplate;
+  
 }
 
 /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
-@freezed
+
 class AppointmentMonthlyTemplate {
   /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -937,7 +936,7 @@ class AppointmentMonthlyTemplate {
   ///
   /// [monthIntervalElement] ("_monthInterval") Extensions for monthInterval
   ///
-  factory AppointmentMonthlyTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -987,13 +986,13 @@ class AppointmentMonthlyTemplate {
 
     /// [monthIntervalElement] ("_monthInterval") Extensions for monthInterval
     @JsonKey(name: '_monthInterval') Element? monthIntervalElement,
-  }) = _AppointmentMonthlyTemplate;
+  
 }
 
 /// [AppointmentYearlyTemplate] A booking of a healthcare event among
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
-@freezed
+
 class AppointmentYearlyTemplate {
   /// [AppointmentYearlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -1031,7 +1030,7 @@ class AppointmentYearlyTemplate {
   ///
   /// [yearIntervalElement] ("_yearInterval") Extensions for yearInterval
   ///
-  factory AppointmentYearlyTemplate({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1065,12 +1064,12 @@ class AppointmentYearlyTemplate {
 
     /// [yearIntervalElement] ("_yearInterval") Extensions for yearInterval
     @JsonKey(name: '_yearInterval') Element? yearIntervalElement,
-  }) = _AppointmentYearlyTemplate;
+  
 }
 
 /// [AppointmentResponse] A reply to an appointment request for a patient
 ///  and/or practitioner(s), such as a confirmation or rejection.
-@freezed
+
 class AppointmentResponse {
   /// [AppointmentResponse] A reply to an appointment request for a patient
   ///  and/or practitioner(s), such as a confirmation or rejection.
@@ -1192,7 +1191,7 @@ class AppointmentResponse {
   ///
   /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
   ///
-  factory AppointmentResponse({
+  
     /// [resourceType] This is a AppointmentResponse resource
     @Default(R5ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
@@ -1344,12 +1343,12 @@ class AppointmentResponse {
 
     /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
     @JsonKey(name: '_recurrenceId') Element? recurrenceIdElement,
-  }) = _AppointmentResponse;
+  
 }
 
 /// [Schedule] A container for slots of time that may be available for booking
 ///  appointments.
-@freezed
+
 class Schedule {
   /// [Schedule] A container for slots of time that may be available for
   ///  booking appointments.
@@ -1447,7 +1446,7 @@ class Schedule {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory Schedule({
+  
     /// [resourceType] This is a Schedule resource
     @Default(R5ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
@@ -1565,12 +1564,12 @@ class Schedule {
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Schedule;
+  
 }
 
 /// [Slot] A slot of time on a schedule that may be available for booking
 ///  appointments.
-@freezed
+
 class Slot {
   /// [Slot] A slot of time on a schedule that may be available for booking
   ///  appointments.
@@ -1674,7 +1673,7 @@ class Slot {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory Slot({
+  
     /// [resourceType] This is a Slot resource
     @Default(R5ResourceType.Slot)
     @JsonKey(unknownEnumValue: R5ResourceType.Slot)
@@ -1802,11 +1801,11 @@ class Slot {
 
     /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Slot;
+  
 }
 
 /// [Task] A task to be performed.
-@freezed
+
 class Task {
   /// [Task] A task to be performed.
 
@@ -1979,7 +1978,7 @@ class Task {
   ///
   /// [output] Outputs produced by the Task.
   ///
-  factory Task({
+  
     /// [resourceType] This is a Task resource
     @Default(R5ResourceType.Task)
     @JsonKey(unknownEnumValue: R5ResourceType.Task)
@@ -2204,11 +2203,11 @@ class Task {
 
     /// [output] Outputs produced by the Task.
     List<TaskOutput>? output,
-  }) = _Task;
+  
 }
 
 /// [TaskRestriction] A task to be performed.
-@freezed
+
 class TaskRestriction {
   /// [TaskRestriction] A task to be performed.
 
@@ -2250,7 +2249,7 @@ class TaskRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  factory TaskRestriction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2294,11 +2293,11 @@ class TaskRestriction {
     /// [recipient] For requests that are targeted to more than one potential
     ///  recipient/target, to identify who is fulfillment is sought for.
     List<Reference>? recipient,
-  }) = _TaskRestriction;
+  
 }
 
 /// [TaskInput] A task to be performed.
-@freezed
+
 class TaskInput {
   /// [TaskInput] A task to be performed.
 
@@ -2484,7 +2483,7 @@ class TaskInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  factory TaskInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2747,11 +2746,11 @@ class TaskInput {
 
     /// [valueMeta] The value of the input parameter as a basic type.
     Meta? valueMeta,
-  }) = _TaskInput;
+  
 }
 
 /// [TaskOutput] A task to be performed.
-@freezed
+
 class TaskOutput {
   /// [TaskOutput] A task to be performed.
 
@@ -2938,7 +2937,7 @@ class TaskOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  factory TaskOutput({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3203,11 +3202,11 @@ class TaskOutput {
 
     /// [valueMeta] The value of the Output parameter as a basic type.
     Meta? valueMeta,
-  }) = _TaskOutput;
+  
 }
 
 /// [Transport] Record of transport of item.
-@freezed
+
 class Transport {
   /// [Transport] Record of transport of item.
 
@@ -3383,7 +3382,7 @@ class Transport {
   ///
   /// [history] The transport event prior to this one.
   ///
-  factory Transport({
+  
     /// [resourceType] This is a Transport resource
     @Default(R5ResourceType.Transport)
     @JsonKey(unknownEnumValue: R5ResourceType.Transport)
@@ -3614,11 +3613,11 @@ class Transport {
 
     /// [history] The transport event prior to this one.
     Reference? history,
-  }) = _Transport;
+  
 }
 
 /// [TransportRestriction] Record of transport of item.
-@freezed
+
 class TransportRestriction {
   /// [TransportRestriction] Record of transport of item.
 
@@ -3658,7 +3657,7 @@ class TransportRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  factory TransportRestriction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3700,11 +3699,11 @@ class TransportRestriction {
     /// [recipient] For requests that are targeted to more than one potential
     ///  recipient/target, to identify who is fulfillment is sought for.
     List<Reference>? recipient,
-  }) = _TransportRestriction;
+  
 }
 
 /// [TransportInput] Record of transport of item.
-@freezed
+
 class TransportInput {
   /// [TransportInput] Record of transport of item.
 
@@ -3890,7 +3889,7 @@ class TransportInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  factory TransportInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4153,11 +4152,11 @@ class TransportInput {
 
     /// [valueMeta] The value of the input parameter as a basic type.
     Meta? valueMeta,
-  }) = _TransportInput;
+  
 }
 
 /// [TransportOutput] Record of transport of item.
-@freezed
+
 class TransportOutput {
   /// [TransportOutput] Record of transport of item.
 
@@ -4344,7 +4343,7 @@ class TransportOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  factory TransportOutput({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4609,12 +4608,12 @@ class TransportOutput {
 
     /// [valueMeta] The value of the Output parameter as a basic type.
     Meta? valueMeta,
-  }) = _TransportOutput;
+  
 }
 
 /// [VerificationResult] Describes validation requirements, source(s), status
 ///  and dates for one or more elements.
-@freezed
+
 class VerificationResult {
   /// [VerificationResult] Describes validation requirements, source(s), status
   ///  and dates for one or more elements.
@@ -4723,7 +4722,7 @@ class VerificationResult {
   ///
   /// [validator] Information about the entity validating information.
   ///
-  factory VerificationResult({
+  
     /// [resourceType] This is a VerificationResult resource
     @Default(R5ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
@@ -4861,12 +4860,12 @@ class VerificationResult {
 
     /// [validator] Information about the entity validating information.
     List<VerificationResultValidator>? validator,
-  }) = _VerificationResult;
+  
 }
 
 /// [VerificationResultPrimarySource] Describes validation requirements,
 ///  source(s), status and dates for one or more elements.
-@freezed
+
 class VerificationResultPrimarySource {
   /// [VerificationResultPrimarySource] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -4920,7 +4919,7 @@ class VerificationResultPrimarySource {
   /// [pushTypeAvailable] Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
   ///
-  factory VerificationResultPrimarySource({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4980,12 +4979,12 @@ class VerificationResultPrimarySource {
     /// [pushTypeAvailable] Type of alerts/updates the primary source can send
     ///  (specific requested changes; any changes; as defined by source).
     List<CodeableConcept>? pushTypeAvailable,
-  }) = _VerificationResultPrimarySource;
+  
 }
 
 /// [VerificationResultAttestation] Describes validation requirements,
 ///  source(s), status and dates for one or more elements.
-@freezed
+
 class VerificationResultAttestation {
   /// [VerificationResultAttestation] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -5049,7 +5048,7 @@ class VerificationResultAttestation {
   /// [sourceSignature] Signed assertion by the attestation source that they
   ///  have attested to the information.
   ///
-  factory VerificationResultAttestation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5122,12 +5121,12 @@ class VerificationResultAttestation {
     /// [sourceSignature] Signed assertion by the attestation source that they
     ///  have attested to the information.
     Signature? sourceSignature,
-  }) = _VerificationResultAttestation;
+  
 }
 
 /// [VerificationResultValidator] Describes validation requirements, source(s),
 ///  status and dates for one or more elements.
-@freezed
+
 class VerificationResultValidator {
   /// [VerificationResultValidator] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -5170,7 +5169,7 @@ class VerificationResultValidator {
   /// [attestationSignature] Signed assertion by the validator that they have
   ///  validated the information.
   ///
-  factory VerificationResultValidator({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5213,5 +5212,5 @@ class VerificationResultValidator {
     /// [attestationSignature] Signed assertion by the validator that they have
     ///  validated the information.
     Signature? attestationSignature,
-  }) = _VerificationResultValidator;
+  
 }

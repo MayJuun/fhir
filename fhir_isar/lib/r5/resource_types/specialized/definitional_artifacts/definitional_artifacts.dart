@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
 /// [ActivityDefinition] This resource allows for the definition of some
 ///  activity to be performed, independent of a particular patient,
 ///  practitioner, or other performance context.
-@freezed
+
 class ActivityDefinition {
   /// [ActivityDefinition] This resource allows for the definition of some
   ///  activity to be performed, independent of a particular patient,
@@ -353,7 +352,7 @@ class ActivityDefinition {
   ///  value would be used to specify an expression that calculated the weight,
   ///  and the path on the request resource that would contain the result.
   ///
-  factory ActivityDefinition({
+  
     /// [resourceType] This is a ActivityDefinition resource
     @Default(R5ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
@@ -635,13 +634,13 @@ class ActivityDefinition {
 
     /// [dynamicValue] Dynamic values that will be evaluated to produce values for elements of the resulting resource. For example, if the dosage of a medication must be computed based on the patient's weight, a dynamic value would be used to specify an expression that calculated the weight, and the path on the request resource that would contain the result.
     List<ActivityDefinitionDynamicValue>? dynamicValue,
-  }) = _ActivityDefinition;
+  
 }
 
 /// [ActivityDefinitionParticipant] This resource allows for the definition of
 ///  some activity to be performed, independent of a particular patient,
 ///  practitioner, or other performance context.
-@freezed
+
 class ActivityDefinitionParticipant {
   /// [ActivityDefinitionParticipant] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
@@ -689,7 +688,7 @@ class ActivityDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  factory ActivityDefinitionParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -733,13 +732,13 @@ class ActivityDefinitionParticipant {
 
     /// [function_] ("function") Indicates how the actor will be involved in the action - author, reviewer, witness, etc.
     @JsonKey(name: 'function') CodeableConcept? function_,
-  }) = _ActivityDefinitionParticipant;
+  
 }
 
 /// [ActivityDefinitionDynamicValue] This resource allows for the definition of
 ///  some activity to be performed, independent of a particular patient,
 ///  practitioner, or other performance context.
-@freezed
+
 class ActivityDefinitionDynamicValue {
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
@@ -787,7 +786,7 @@ class ActivityDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory ActivityDefinitionDynamicValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -822,13 +821,13 @@ class ActivityDefinitionDynamicValue {
 
     /// [expression] An expression specifying the value of the customized element.
     required Expression expression,
-  }) = _ActivityDefinitionDynamicValue;
+  
 }
 
 /// [ActorDefinition] Describes an actor - a human or an application that plays
 ///  a role in data exchange, and that may have obligations associated with the
 ///  role the actor plays.
-@freezed
+
 class ActorDefinition {
   /// [ActorDefinition] Describes an actor - a human or an application that
   ///  plays a role in data exchange, and that may have obligations associated
@@ -1014,7 +1013,7 @@ class ActorDefinition {
   ///  another IG (which IG must be listed in the dependencies). This actor
   ///  inherits all the obligations etc as defined in the other IG.
   ///
-  factory ActorDefinition({
+  
     /// [resourceType] This is a ActorDefinition resource
     @Default(R5ResourceType.ActorDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
@@ -1173,12 +1172,12 @@ class ActorDefinition {
 
     /// [derivedFrom] A url that identifies the definition of this actor in another IG (which IG must be listed in the dependencies). This actor inherits all the obligations etc as defined in the other IG.
     List<Canonical>? derivedFrom,
-  }) = _ActorDefinition;
+  
 }
 
 /// [ConditionDefinition] A definition of a condition and information relevant
 ///  to managing it.
-@freezed
+
 class ConditionDefinition {
   /// [ConditionDefinition] A definition of a condition and information
   ///  relevant to managing it.
@@ -1424,7 +1423,7 @@ class ConditionDefinition {
   ///
   /// [plan] Plan that is appropriate.
   ///
-  factory ConditionDefinition({
+  
     /// [resourceType] This is a ConditionDefinition resource
     @Default(R5ResourceType.ConditionDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
@@ -1652,12 +1651,12 @@ class ConditionDefinition {
 
     /// [plan] Plan that is appropriate.
     List<ConditionDefinitionPlan>? plan,
-  }) = _ConditionDefinition;
+  
 }
 
 /// [ConditionDefinitionObservation] A definition of a condition and
 ///  information relevant to managing it.
-@freezed
+
 class ConditionDefinitionObservation {
   /// [ConditionDefinitionObservation] A definition of a condition and
   ///  information relevant to managing it.
@@ -1693,7 +1692,7 @@ class ConditionDefinitionObservation {
   ///
   /// [code] Code for relevant Observation.
   ///
-  factory ConditionDefinitionObservation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1725,12 +1724,12 @@ class ConditionDefinitionObservation {
 
     /// [code] Code for relevant Observation.
     CodeableConcept? code,
-  }) = _ConditionDefinitionObservation;
+  
 }
 
 /// [ConditionDefinitionMedication] A definition of a condition and information
 ///  relevant to managing it.
-@freezed
+
 class ConditionDefinitionMedication {
   /// [ConditionDefinitionMedication] A definition of a condition and
   ///  information relevant to managing it.
@@ -1766,7 +1765,7 @@ class ConditionDefinitionMedication {
   ///
   /// [code] Code for relevant Medication.
   ///
-  factory ConditionDefinitionMedication({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1798,12 +1797,12 @@ class ConditionDefinitionMedication {
 
     /// [code] Code for relevant Medication.
     CodeableConcept? code,
-  }) = _ConditionDefinitionMedication;
+  
 }
 
 /// [ConditionDefinitionPrecondition] A definition of a condition and
 ///  information relevant to managing it.
-@freezed
+
 class ConditionDefinitionPrecondition {
   /// [ConditionDefinitionPrecondition] A definition of a condition and
   ///  information relevant to managing it.
@@ -1845,7 +1844,7 @@ class ConditionDefinitionPrecondition {
   ///
   /// [valueQuantity] Value of Observation.
   ///
-  factory ConditionDefinitionPrecondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1886,12 +1885,12 @@ class ConditionDefinitionPrecondition {
 
     /// [valueQuantity] Value of Observation.
     Quantity? valueQuantity,
-  }) = _ConditionDefinitionPrecondition;
+  
 }
 
 /// [ConditionDefinitionQuestionnaire] A definition of a condition and
 ///  information relevant to managing it.
-@freezed
+
 class ConditionDefinitionQuestionnaire {
   /// [ConditionDefinitionQuestionnaire] A definition of a condition and
   ///  information relevant to managing it.
@@ -1929,7 +1928,7 @@ class ConditionDefinitionQuestionnaire {
   ///
   /// [reference] Specific Questionnaire.
   ///
-  factory ConditionDefinitionQuestionnaire({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1964,12 +1963,12 @@ class ConditionDefinitionQuestionnaire {
 
     /// [reference] Specific Questionnaire.
     required Reference reference,
-  }) = _ConditionDefinitionQuestionnaire;
+  
 }
 
 /// [ConditionDefinitionPlan] A definition of a condition and information
 ///  relevant to managing it.
-@freezed
+
 class ConditionDefinitionPlan {
   /// [ConditionDefinitionPlan] A definition of a condition and information
   ///  relevant to managing it.
@@ -2005,7 +2004,7 @@ class ConditionDefinitionPlan {
   ///
   /// [reference] The actual plan.
   ///
-  factory ConditionDefinitionPlan({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2037,12 +2036,12 @@ class ConditionDefinitionPlan {
 
     /// [reference] The actual plan.
     required Reference reference,
-  }) = _ConditionDefinitionPlan;
+  
 }
 
 /// [DeviceDefinition] The characteristics, operational status and capabilities
 ///  of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinition {
   /// [DeviceDefinition] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -2196,7 +2195,7 @@ class DeviceDefinition {
   ///
   /// [chargeItem] Billing code or reference associated with the device.
   ///
-  factory DeviceDefinition({
+  
     /// [resourceType] This is a DeviceDefinition resource
     @Default(R5ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
@@ -2331,12 +2330,12 @@ class DeviceDefinition {
 
     /// [chargeItem] Billing code or reference associated with the device.
     List<DeviceDefinitionChargeItem>? chargeItem,
-  }) = _DeviceDefinition;
+  
 }
 
 /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational
 ///  status and capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionUdiDeviceIdentifier
     with _$DeviceDefinitionUdiDeviceIdentifier {
   /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational
@@ -2389,7 +2388,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [marketDistribution] Indicates where and when the device is available on
   ///  the market.
   ///
-  factory DeviceDefinitionUdiDeviceIdentifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2436,12 +2435,12 @@ class DeviceDefinitionUdiDeviceIdentifier
 
     /// [marketDistribution] Indicates where and when the device is available on the market.
     List<DeviceDefinitionMarketDistribution>? marketDistribution,
-  }) = _DeviceDefinitionUdiDeviceIdentifier;
+  
 }
 
 /// [DeviceDefinitionMarketDistribution] The characteristics, operational
 ///  status and capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionMarketDistribution
     with _$DeviceDefinitionMarketDistribution {
   /// [DeviceDefinitionMarketDistribution] The characteristics, operational
@@ -2485,7 +2484,7 @@ class DeviceDefinitionMarketDistribution
   /// [subJurisdictionElement] ("_subJurisdiction") Extensions for
   ///  subJurisdiction
   ///
-  factory DeviceDefinitionMarketDistribution({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2520,12 +2519,12 @@ class DeviceDefinitionMarketDistribution
 
     /// [subJurisdictionElement] ("_subJurisdiction") Extensions for subJurisdiction
     @JsonKey(name: '_subJurisdiction') Element? subJurisdictionElement,
-  }) = _DeviceDefinitionMarketDistribution;
+  
 }
 
 /// [DeviceDefinitionRegulatoryIdentifier] The characteristics, operational
 ///  status and capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionRegulatoryIdentifier
     with _$DeviceDefinitionRegulatoryIdentifier {
   /// [DeviceDefinitionRegulatoryIdentifier] The characteristics, operational
@@ -2577,7 +2576,7 @@ class DeviceDefinitionRegulatoryIdentifier
   ///
   /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
   ///
-  factory DeviceDefinitionRegulatoryIdentifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2627,12 +2626,12 @@ class DeviceDefinitionRegulatoryIdentifier
 
     /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-  }) = _DeviceDefinitionRegulatoryIdentifier;
+  
 }
 
 /// [DeviceDefinitionDeviceName] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionDeviceName {
   /// [DeviceDefinitionDeviceName] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -2675,7 +2674,7 @@ class DeviceDefinitionDeviceName {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory DeviceDefinitionDeviceName({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2713,12 +2712,12 @@ class DeviceDefinitionDeviceName {
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _DeviceDefinitionDeviceName;
+  
 }
 
 /// [DeviceDefinitionClassification] The characteristics, operational status
 ///  and capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionClassification {
   /// [DeviceDefinitionClassification] The characteristics, operational status
   ///  and capabilities of a medical-related component of a medical device.
@@ -2755,7 +2754,7 @@ class DeviceDefinitionClassification {
   /// [justification] Further information qualifying this classification of the
   ///  device model.
   ///
-  factory DeviceDefinitionClassification({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2787,12 +2786,12 @@ class DeviceDefinitionClassification {
 
     /// [justification] Further information qualifying this classification of the device model.
     List<RelatedArtifact>? justification,
-  }) = _DeviceDefinitionClassification;
+  
 }
 
 /// [DeviceDefinitionHasPart] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionHasPart {
   /// [DeviceDefinitionHasPart] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -2830,7 +2829,7 @@ class DeviceDefinitionHasPart {
   ///
   /// [countElement] ("_count") Extensions for count
   ///
-  factory DeviceDefinitionHasPart({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2865,12 +2864,12 @@ class DeviceDefinitionHasPart {
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,
-  }) = _DeviceDefinitionHasPart;
+  
 }
 
 /// [DeviceDefinitionPackaging] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionPackaging {
   /// [DeviceDefinitionPackaging] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -2918,7 +2917,7 @@ class DeviceDefinitionPackaging {
   ///
   /// [packaging] Allows packages within packages.
   ///
-  factory DeviceDefinitionPackaging({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2965,12 +2964,12 @@ class DeviceDefinitionPackaging {
 
     /// [packaging] Allows packages within packages.
     List<DeviceDefinitionPackaging>? packaging,
-  }) = _DeviceDefinitionPackaging;
+  
 }
 
 /// [DeviceDefinitionDistributor] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionDistributor {
   /// [DeviceDefinitionDistributor] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3008,7 +3007,7 @@ class DeviceDefinitionDistributor {
   ///
   /// [organizationReference] Distributor as an Organization resource.
   ///
-  factory DeviceDefinitionDistributor({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3043,12 +3042,12 @@ class DeviceDefinitionDistributor {
 
     /// [organizationReference] Distributor as an Organization resource.
     List<Reference>? organizationReference,
-  }) = _DeviceDefinitionDistributor;
+  
 }
 
 /// [DeviceDefinitionVersion] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionVersion {
   /// [DeviceDefinitionVersion] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3090,7 +3089,7 @@ class DeviceDefinitionVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory DeviceDefinitionVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3128,12 +3127,12 @@ class DeviceDefinitionVersion {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _DeviceDefinitionVersion;
+  
 }
 
 /// [DeviceDefinitionProperty] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionProperty {
   /// [DeviceDefinitionProperty] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3192,7 +3191,7 @@ class DeviceDefinitionProperty {
   /// [valueAttachment] Property value - the data type depends on the property
   ///  type.
   ///
-  factory DeviceDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3251,12 +3250,12 @@ class DeviceDefinitionProperty {
 
     /// [valueAttachment] Property value - the data type depends on the property type.
     Attachment? valueAttachment,
-  }) = _DeviceDefinitionProperty;
+  
 }
 
 /// [DeviceDefinitionLink] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionLink {
   /// [DeviceDefinitionLink] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3293,7 +3292,7 @@ class DeviceDefinitionLink {
   ///
   /// [relatedDevice] A reference to the linked device.
   ///
-  factory DeviceDefinitionLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3325,12 +3324,12 @@ class DeviceDefinitionLink {
 
     /// [relatedDevice] A reference to the linked device.
     required CodeableReference relatedDevice,
-  }) = _DeviceDefinitionLink;
+  
 }
 
 /// [DeviceDefinitionMaterial] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionMaterial {
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3377,7 +3376,7 @@ class DeviceDefinitionMaterial {
   /// [allergenicIndicatorElement] ("_allergenicIndicator") Extensions for
   ///  allergenicIndicator
   ///
-  factory DeviceDefinitionMaterial({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3418,12 +3417,12 @@ class DeviceDefinitionMaterial {
 
     /// [allergenicIndicatorElement] ("_allergenicIndicator") Extensions for allergenicIndicator
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
-  }) = _DeviceDefinitionMaterial;
+  
 }
 
 /// [DeviceDefinitionGuideline] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionGuideline {
   /// [DeviceDefinitionGuideline] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3479,7 +3478,7 @@ class DeviceDefinitionGuideline {
   ///
   /// [intendedUseElement] ("_intendedUse") Extensions for intendedUse
   ///
-  factory DeviceDefinitionGuideline({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3532,12 +3531,12 @@ class DeviceDefinitionGuideline {
 
     /// [intendedUseElement] ("_intendedUse") Extensions for intendedUse
     @JsonKey(name: '_intendedUse') Element? intendedUseElement,
-  }) = _DeviceDefinitionGuideline;
+  
 }
 
 /// [DeviceDefinitionCorrectiveAction] The characteristics, operational status
 ///  and capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionCorrectiveAction {
   /// [DeviceDefinitionCorrectiveAction] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
@@ -3585,7 +3584,7 @@ class DeviceDefinitionCorrectiveAction {
   ///
   /// [period] Start and end dates of the  corrective action.
   ///
-  factory DeviceDefinitionCorrectiveAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3626,12 +3625,12 @@ class DeviceDefinitionCorrectiveAction {
 
     /// [period] Start and end dates of the  corrective action.
     required Period period,
-  }) = _DeviceDefinitionCorrectiveAction;
+  
 }
 
 /// [DeviceDefinitionChargeItem] The characteristics, operational status and
 ///  capabilities of a medical-related component of a medical device.
-@freezed
+
 class DeviceDefinitionChargeItem {
   /// [DeviceDefinitionChargeItem] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3672,7 +3671,7 @@ class DeviceDefinitionChargeItem {
   ///
   /// [useContext] The context to which this charge item applies.
   ///
-  factory DeviceDefinitionChargeItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3710,12 +3709,12 @@ class DeviceDefinitionChargeItem {
 
     /// [useContext] The context to which this charge item applies.
     List<UsageContext>? useContext,
-  }) = _DeviceDefinitionChargeItem;
+  
 }
 
 /// [EventDefinition] The EventDefinition resource provides a reusable
 ///  description of when a particular event can occur.
-@freezed
+
 class EventDefinition {
   /// [EventDefinition] The EventDefinition resource provides a reusable
   ///  description of when a particular event can occur.
@@ -3934,7 +3933,7 @@ class EventDefinition {
   ///  one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
   ///
-  factory EventDefinition({
+  
     /// [resourceType] This is a EventDefinition resource
     @Default(R5ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
@@ -4123,11 +4122,11 @@ class EventDefinition {
 
     /// [trigger] The trigger element defines when the event occurs. If more than one trigger condition is specified, the event fires whenever any one of the trigger conditions is met.
     required List<TriggerDefinition> trigger,
-  }) = _EventDefinition;
+  
 }
 
 /// [ExampleScenario] Example of workflow instance.
-@freezed
+
 class ExampleScenario {
   /// [ExampleScenario] Example of workflow instance.
 
@@ -4297,7 +4296,7 @@ class ExampleScenario {
   /// [process] A group of operations that represents a significant step within
   ///  a scenario.
   ///
-  factory ExampleScenario({
+  
     /// [resourceType] This is a ExampleScenario resource
     @Default(R5ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
@@ -4441,11 +4440,11 @@ class ExampleScenario {
 
     /// [process] A group of operations that represents a significant step within a scenario.
     List<ExampleScenarioProcess>? process,
-  }) = _ExampleScenario;
+  
 }
 
 /// [ExampleScenarioActor] Example of workflow instance.
-@freezed
+
 class ExampleScenarioActor {
   /// [ExampleScenarioActor] Example of workflow instance.
 
@@ -4494,7 +4493,7 @@ class ExampleScenarioActor {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ExampleScenarioActor({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4544,11 +4543,11 @@ class ExampleScenarioActor {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioActor;
+  
 }
 
 /// [ExampleScenarioInstance] Example of workflow instance.
-@freezed
+
 class ExampleScenarioInstance {
   /// [ExampleScenarioInstance] Example of workflow instance.
 
@@ -4623,7 +4622,7 @@ class ExampleScenarioInstance {
   /// [containedInstance] References to other instances that can be found
   ///  within this instance (e.g. the observations contained in a bundle).
   ///
-  factory ExampleScenarioInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4698,11 +4697,11 @@ class ExampleScenarioInstance {
 
     /// [containedInstance] References to other instances that can be found within this instance (e.g. the observations contained in a bundle).
     List<ExampleScenarioContainedInstance>? containedInstance,
-  }) = _ExampleScenarioInstance;
+  
 }
 
 /// [ExampleScenarioVersion] Example of workflow instance.
-@freezed
+
 class ExampleScenarioVersion {
   /// [ExampleScenarioVersion] Example of workflow instance.
 
@@ -4750,7 +4749,7 @@ class ExampleScenarioVersion {
   /// [content] Points to an instance (typically an example) that shows the
   ///  data that would flow at this point in the scenario.
   ///
-  factory ExampleScenarioVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4797,11 +4796,11 @@ class ExampleScenarioVersion {
 
     /// [content] Points to an instance (typically an example) that shows the data that would flow at this point in the scenario.
     Reference? content,
-  }) = _ExampleScenarioVersion;
+  
 }
 
 /// [ExampleScenarioContainedInstance] Example of workflow instance.
-@freezed
+
 class ExampleScenarioContainedInstance {
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
 
@@ -4843,7 +4842,7 @@ class ExampleScenarioContainedInstance {
   /// [versionReferenceElement] ("_versionReference") Extensions for
   ///  versionReference
   ///
-  factory ExampleScenarioContainedInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4881,11 +4880,11 @@ class ExampleScenarioContainedInstance {
 
     /// [versionReferenceElement] ("_versionReference") Extensions for versionReference
     @JsonKey(name: '_versionReference') Element? versionReferenceElement,
-  }) = _ExampleScenarioContainedInstance;
+  
 }
 
 /// [ExampleScenarioProcess] Example of workflow instance.
-@freezed
+
 class ExampleScenarioProcess {
   /// [ExampleScenarioProcess] Example of workflow instance.
 
@@ -4937,7 +4936,7 @@ class ExampleScenarioProcess {
   ///
   /// [step] A significant action that occurs as part of the process.
   ///
-  factory ExampleScenarioProcess({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4990,11 +4989,11 @@ class ExampleScenarioProcess {
 
     /// [step] A significant action that occurs as part of the process.
     List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioProcess;
+  
 }
 
 /// [ExampleScenarioStep] Example of workflow instance.
-@freezed
+
 class ExampleScenarioStep {
   /// [ExampleScenarioStep] Example of workflow instance.
 
@@ -5047,7 +5046,7 @@ class ExampleScenarioStep {
   ///
   /// [pauseElement] ("_pause") Extensions for pause
   ///
-  factory ExampleScenarioStep({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5097,11 +5096,11 @@ class ExampleScenarioStep {
 
     /// [pauseElement] ("_pause") Extensions for pause
     @JsonKey(name: '_pause') Element? pauseElement,
-  }) = _ExampleScenarioStep;
+  
 }
 
 /// [ExampleScenarioOperation] Example of workflow instance.
-@freezed
+
 class ExampleScenarioOperation {
   /// [ExampleScenarioOperation] Example of workflow instance.
 
@@ -5168,7 +5167,7 @@ class ExampleScenarioOperation {
   /// [response] A reference to the instance that is transmitted from receiver
   ///  to requester as part of the operation's synchronous response (if any).
   ///
-  factory ExampleScenarioOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5239,11 +5238,11 @@ class ExampleScenarioOperation {
 
     /// [response] A reference to the instance that is transmitted from receiver to requester as part of the operation's synchronous response (if any).
     ExampleScenarioContainedInstance? response,
-  }) = _ExampleScenarioOperation;
+  
 }
 
 /// [ExampleScenarioAlternative] Example of workflow instance.
-@freezed
+
 class ExampleScenarioAlternative {
   /// [ExampleScenarioAlternative] Example of workflow instance.
 
@@ -5286,7 +5285,7 @@ class ExampleScenarioAlternative {
   /// [step] Indicates the operation, sub-process or scenario that happens if
   ///  the alternative option is selected.
   ///
-  factory ExampleScenarioAlternative({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5327,13 +5326,13 @@ class ExampleScenarioAlternative {
 
     /// [step] Indicates the operation, sub-process or scenario that happens if the alternative option is selected.
     List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioAlternative;
+  
 }
 
 /// [ObservationDefinition] Set of definitional characteristics for a kind of
 ///  observation or measurement produced or consumed by an orderable health
 ///  care service.
-@freezed
+
 class ObservationDefinition {
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
   ///  observation or measurement produced or consumed by an orderable health
@@ -5597,7 +5596,7 @@ class ObservationDefinition {
   /// [component] Some observations have multiple component observations,
   ///  expressed as separate code value pairs.
   ///
-  factory ObservationDefinition({
+  
     /// [resourceType] This is a ObservationDefinition resource
     @Default(R5ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
@@ -5830,13 +5829,13 @@ class ObservationDefinition {
 
     /// [component] Some observations have multiple component observations, expressed as separate code value pairs.
     List<ObservationDefinitionComponent>? component,
-  }) = _ObservationDefinition;
+  
 }
 
 /// [ObservationDefinitionQuantitativeDetails] Set of definitional
 ///  characteristics for a kind of observation or measurement produced or
 ///  consumed by an orderable health care service.
-@freezed
+
 class ObservationDefinitionQuantitativeDetails
     with _$ObservationDefinitionQuantitativeDetails {
   /// [ObservationDefinitionQuantitativeDetails] Set of definitional
@@ -5889,7 +5888,7 @@ class ObservationDefinitionQuantitativeDetails
   /// [decimalPrecisionElement] ("_decimalPrecision") Extensions for
   ///  decimalPrecision
   ///
-  factory ObservationDefinitionQuantitativeDetails({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5933,13 +5932,13 @@ class ObservationDefinitionQuantitativeDetails
 
     /// [decimalPrecisionElement] ("_decimalPrecision") Extensions for decimalPrecision
     @JsonKey(name: '_decimalPrecision') Element? decimalPrecisionElement,
-  }) = _ObservationDefinitionQuantitativeDetails;
+  
 }
 
 /// [ObservationDefinitionQualifiedValue] Set of definitional characteristics
 ///  for a kind of observation or measurement produced or consumed by an
 ///  orderable health care service.
-@freezed
+
 class ObservationDefinitionQualifiedValue
     with _$ObservationDefinitionQualifiedValue {
   /// [ObservationDefinitionQualifiedValue] Set of definitional characteristics
@@ -6013,7 +6012,7 @@ class ObservationDefinitionQualifiedValue
   /// [criticalCodedValueSet] The set of critical coded results for qualitative
   ///  observations  that match the criteria of this set of qualified values.
   ///
-  factory ObservationDefinitionQualifiedValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6084,13 +6083,13 @@ class ObservationDefinitionQualifiedValue
 
     /// [criticalCodedValueSet] The set of critical coded results for qualitative observations  that match the criteria of this set of qualified values.
     Canonical? criticalCodedValueSet,
-  }) = _ObservationDefinitionQualifiedValue;
+  
 }
 
 /// [ObservationDefinitionComponent] Set of definitional characteristics for a
 ///  kind of observation or measurement produced or consumed by an orderable
 ///  health care service.
-@freezed
+
 class ObservationDefinitionComponent {
   /// [ObservationDefinitionComponent] Set of definitional characteristics for
   ///  a kind of observation or measurement produced or consumed by an
@@ -6139,7 +6138,7 @@ class ObservationDefinitionComponent {
   ///  a set of conditions -  provides a range for quantitative and ordinal
   ///  observations and a collection of value sets for qualitative observations.
   ///
-  factory ObservationDefinitionComponent({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6181,7 +6180,7 @@ class ObservationDefinitionComponent {
 
     /// [qualifiedValue] A set of qualified values associated with a context and a set of conditions -  provides a range for quantitative and ordinal observations and a collection of value sets for qualitative observations.
     List<ObservationDefinitionQualifiedValue>? qualifiedValue,
-  }) = _ObservationDefinitionComponent;
+  
 }
 
 /// [PlanDefinition] This resource allows for the definition of various types
@@ -6189,7 +6188,7 @@ class ObservationDefinitionComponent {
 ///  is general enough to support the description of a broad range of clinical
 ///  and non-clinical artifacts such as clinical decision support rules, order
 ///  sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinition {
   /// [PlanDefinition] This resource allows for the definition of various types
   ///  of plans as a sharable, consumable, and executable artifact. The
@@ -6467,7 +6466,7 @@ class PlanDefinition {
   ///  the pre-condition for performing the service.  For example "pain", "on
   ///  flare-up", etc.
   ///
-  factory PlanDefinition({
+  
     /// [resourceType] This is a PlanDefinition resource
     @Default(R5ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
@@ -6683,7 +6682,7 @@ class PlanDefinition {
 
     /// [asNeededCodeableConcept] If a CodeableConcept is present, it indicates the pre-condition for performing the service.  For example "pain", "on flare-up", etc.
     CodeableConcept? asNeededCodeableConcept,
-  }) = _PlanDefinition;
+  
 }
 
 /// [PlanDefinitionGoal] This resource allows for the definition of various
@@ -6691,7 +6690,7 @@ class PlanDefinition {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionGoal {
   /// [PlanDefinitionGoal] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -6750,7 +6749,7 @@ class PlanDefinitionGoal {
   ///
   /// [target] Indicates what should be done and within what timeframe.
   ///
-  factory PlanDefinitionGoal({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6797,7 +6796,7 @@ class PlanDefinitionGoal {
 
     /// [target] Indicates what should be done and within what timeframe.
     List<PlanDefinitionTarget>? target,
-  }) = _PlanDefinitionGoal;
+  
 }
 
 /// [PlanDefinitionTarget] This resource allows for the definition of various
@@ -6805,7 +6804,7 @@ class PlanDefinitionGoal {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionTarget {
   /// [PlanDefinitionTarget] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -6913,7 +6912,7 @@ class PlanDefinitionTarget {
   /// [due] Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
   ///
-  factory PlanDefinitionTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -6975,7 +6974,7 @@ class PlanDefinitionTarget {
 
     /// [due] Indicates the timeframe after the start of the goal in which the goal should be met.
     FhirDuration? due,
-  }) = _PlanDefinitionTarget;
+  
 }
 
 /// [PlanDefinitionActor] This resource allows for the definition of various
@@ -6983,7 +6982,7 @@ class PlanDefinitionTarget {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionActor {
   /// [PlanDefinitionActor] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -7033,7 +7032,7 @@ class PlanDefinitionActor {
   /// [option] The characteristics of the candidates that could serve as the
   ///  actor.
   ///
-  factory PlanDefinitionActor({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7074,7 +7073,7 @@ class PlanDefinitionActor {
 
     /// [option] The characteristics of the candidates that could serve as the actor.
     required List<PlanDefinitionOption> option,
-  }) = _PlanDefinitionActor;
+  
 }
 
 /// [PlanDefinitionOption] This resource allows for the definition of various
@@ -7082,7 +7081,7 @@ class PlanDefinitionActor {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionOption {
   /// [PlanDefinitionOption] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -7131,7 +7130,7 @@ class PlanDefinitionOption {
   /// [role] The role the participant should play in performing the described
   ///  action.
   ///
-  factory PlanDefinitionOption({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7172,7 +7171,7 @@ class PlanDefinitionOption {
 
     /// [role] The role the participant should play in performing the described action.
     CodeableConcept? role,
-  }) = _PlanDefinitionOption;
+  
 }
 
 /// [PlanDefinitionAction] This resource allows for the definition of various
@@ -7180,7 +7179,7 @@ class PlanDefinitionOption {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionAction {
   /// [PlanDefinitionAction] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -7393,7 +7392,7 @@ class PlanDefinitionAction {
   ///  sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
   ///
-  factory PlanDefinitionAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7569,7 +7568,7 @@ class PlanDefinitionAction {
 
     /// [action] Sub actions that are contained within the action. The behavior of this action determines the functionality of the sub-actions. For example, a selection behavior of at-most-one indicates that of the sub-actions, at most one may be chosen as part of realizing the action definition.
     List<PlanDefinitionAction>? action,
-  }) = _PlanDefinitionAction;
+  
 }
 
 /// [PlanDefinitionCondition] This resource allows for the definition of
@@ -7577,7 +7576,7 @@ class PlanDefinitionAction {
 ///  The resource is general enough to support the description of a broad range
 ///  of clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionCondition {
   /// [PlanDefinitionCondition] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -7624,7 +7623,7 @@ class PlanDefinitionCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
   ///
-  factory PlanDefinitionCondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7659,7 +7658,7 @@ class PlanDefinitionCondition {
 
     /// [expression] An expression that returns true or false, indicating whether the condition is satisfied.
     Expression? expression,
-  }) = _PlanDefinitionCondition;
+  
 }
 
 /// [PlanDefinitionInput] This resource allows for the definition of various
@@ -7667,7 +7666,7 @@ class PlanDefinitionCondition {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionInput {
   /// [PlanDefinitionInput] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -7720,7 +7719,7 @@ class PlanDefinitionInput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory PlanDefinitionInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7761,7 +7760,7 @@ class PlanDefinitionInput {
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
-  }) = _PlanDefinitionInput;
+  
 }
 
 /// [PlanDefinitionOutput] This resource allows for the definition of various
@@ -7769,7 +7768,7 @@ class PlanDefinitionInput {
 ///  resource is general enough to support the description of a broad range of
 ///  clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionOutput {
   /// [PlanDefinitionOutput] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -7821,7 +7820,7 @@ class PlanDefinitionOutput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory PlanDefinitionOutput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7862,7 +7861,7 @@ class PlanDefinitionOutput {
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
-  }) = _PlanDefinitionOutput;
+  
 }
 
 /// [PlanDefinitionRelatedAction] This resource allows for the definition of
@@ -7870,7 +7869,7 @@ class PlanDefinitionOutput {
 ///  The resource is general enough to support the description of a broad range
 ///  of clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionRelatedAction {
   /// [PlanDefinitionRelatedAction] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -7924,7 +7923,7 @@ class PlanDefinitionRelatedAction {
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   ///
-  factory PlanDefinitionRelatedAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -7968,7 +7967,7 @@ class PlanDefinitionRelatedAction {
 
     /// [offsetRange] A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.
     Range? offsetRange,
-  }) = _PlanDefinitionRelatedAction;
+  
 }
 
 /// [PlanDefinitionParticipant] This resource allows for the definition of
@@ -7976,7 +7975,7 @@ class PlanDefinitionRelatedAction {
 ///  The resource is general enough to support the description of a broad range
 ///  of clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionParticipant {
   /// [PlanDefinitionParticipant] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -8035,7 +8034,7 @@ class PlanDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  factory PlanDefinitionParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8085,7 +8084,7 @@ class PlanDefinitionParticipant {
 
     /// [function_] ("function") Indicates how the actor will be involved in the action - author, reviewer, witness, etc.
     @JsonKey(name: 'function') CodeableConcept? function_,
-  }) = _PlanDefinitionParticipant;
+  
 }
 
 /// [PlanDefinitionDynamicValue] This resource allows for the definition of
@@ -8093,7 +8092,7 @@ class PlanDefinitionParticipant {
 ///  The resource is general enough to support the description of a broad range
 ///  of clinical and non-clinical artifacts such as clinical decision support
 ///  rules, order sets, protocols, and drug quality specifications.
-@freezed
+
 class PlanDefinitionDynamicValue {
   /// [PlanDefinitionDynamicValue] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -8147,7 +8146,7 @@ class PlanDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory PlanDefinitionDynamicValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8182,14 +8181,14 @@ class PlanDefinitionDynamicValue {
 
     /// [expression] An expression specifying the value of the customized element.
     Expression? expression,
-  }) = _PlanDefinitionDynamicValue;
+  
 }
 
 /// [Questionnaire] A structured set of questions intended to guide the
 ///  collection of answers from end-users. Questionnaires provide detailed
 ///  control over order, presentation, phraseology and grouping to allow
 ///  coherent, consistent data collection.
-@freezed
+
 class Questionnaire {
   /// [Questionnaire] A structured set of questions intended to guide the
   ///  collection of answers from end-users. Questionnaires provide detailed
@@ -8405,7 +8404,7 @@ class Questionnaire {
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
   ///
-  factory Questionnaire({
+  
     /// [resourceType] This is a Questionnaire resource
     @Default(R5ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
@@ -8588,14 +8587,14 @@ class Questionnaire {
 
     /// [item] A particular question, question grouping or display text that is part of the questionnaire.
     List<QuestionnaireItem>? item,
-  }) = _Questionnaire;
+  
 }
 
 /// [QuestionnaireItem] A structured set of questions intended to guide the
 ///  collection of answers from end-users. Questionnaires provide detailed
 ///  control over order, presentation, phraseology and grouping to allow
 ///  coherent, consistent data collection.
-@freezed
+
 class QuestionnaireItem {
   /// [QuestionnaireItem] A structured set of questions intended to guide the
   ///  collection of answers from end-users. Questionnaires provide detailed
@@ -8722,7 +8721,7 @@ class QuestionnaireItem {
   /// [item] Text, questions and other groups to be nested beneath a question
   ///  or group.
   ///
-  factory QuestionnaireItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -8838,14 +8837,14 @@ class QuestionnaireItem {
 
     /// [item] Text, questions and other groups to be nested beneath a question or group.
     List<QuestionnaireItem>? item,
-  }) = _QuestionnaireItem;
+  
 }
 
 /// [QuestionnaireEnableWhen] A structured set of questions intended to guide
 ///  the collection of answers from end-users. Questionnaires provide detailed
 ///  control over order, presentation, phraseology and grouping to allow
 ///  coherent, consistent data collection.
-@freezed
+
 class QuestionnaireEnableWhen {
   /// [QuestionnaireEnableWhen] A structured set of questions intended to guide
   ///  the collection of answers from end-users. Questionnaires provide
@@ -8965,7 +8964,7 @@ class QuestionnaireEnableWhen {
   ///  different behavior is desired (all must match, at least 2 must match,
   ///  etc.), consider using the enableWhenExpression extension.
   ///
-  factory QuestionnaireEnableWhen({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9054,14 +9053,14 @@ class QuestionnaireEnableWhen {
 
     /// [answerReference] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
     Reference? answerReference,
-  }) = _QuestionnaireEnableWhen;
+  
 }
 
 /// [QuestionnaireAnswerOption] A structured set of questions intended to guide
 ///  the collection of answers from end-users. Questionnaires provide detailed
 ///  control over order, presentation, phraseology and grouping to allow
 ///  coherent, consistent data collection.
-@freezed
+
 class QuestionnaireAnswerOption {
   /// [QuestionnaireAnswerOption] A structured set of questions intended to
   ///  guide the collection of answers from end-users. Questionnaires provide
@@ -9129,7 +9128,7 @@ class QuestionnaireAnswerOption {
   /// [initialSelectedElement] ("_initialSelected") Extensions for
   ///  initialSelected
   ///
-  factory QuestionnaireAnswerOption({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9191,14 +9190,14 @@ class QuestionnaireAnswerOption {
 
     /// [initialSelectedElement] ("_initialSelected") Extensions for initialSelected
     @JsonKey(name: '_initialSelected') Element? initialSelectedElement,
-  }) = _QuestionnaireAnswerOption;
+  
 }
 
 /// [QuestionnaireInitial] A structured set of questions intended to guide the
 ///  collection of answers from end-users. Questionnaires provide detailed
 ///  control over order, presentation, phraseology and grouping to allow
 ///  coherent, consistent data collection.
-@freezed
+
 class QuestionnaireInitial {
   /// [QuestionnaireInitial] A structured set of questions intended to guide
   ///  the collection of answers from end-users. Questionnaires provide
@@ -9274,7 +9273,7 @@ class QuestionnaireInitial {
   ///
   /// [valueReference] The actual value to for an initial answer.
   ///
-  factory QuestionnaireInitial({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9360,13 +9359,13 @@ class QuestionnaireInitial {
 
     /// [valueReference] The actual value to for an initial answer.
     Reference? valueReference,
-  }) = _QuestionnaireInitial;
+  
 }
 
 /// [Requirements] A set of requirements - a list of features or behaviors of
 ///  designed systems that are necessary to achieve organizational or
 ///  regulatory goals.
-@freezed
+
 class Requirements {
   /// [Requirements] A set of requirements - a list of features or behaviors of
   ///  designed systems that are necessary to achieve organizational or
@@ -9537,7 +9536,7 @@ class Requirements {
   ///
   /// [statement] The actual statement of requirement, in markdown format.
   ///
-  factory Requirements({
+  
     /// [resourceType] This is a Requirements resource
     @Default(R5ResourceType.Requirements)
     @JsonKey(unknownEnumValue: R5ResourceType.Requirements)
@@ -9681,13 +9680,13 @@ class Requirements {
 
     /// [statement] The actual statement of requirement, in markdown format.
     List<RequirementsStatement>? statement,
-  }) = _Requirements;
+  
 }
 
 /// [RequirementsStatement] A set of requirements - a list of features or
 ///  behaviors of designed systems that are necessary to achieve organizational
 ///  or regulatory goals.
-@freezed
+
 class RequirementsStatement {
   /// [RequirementsStatement] A set of requirements - a list of features or
   ///  behaviors of designed systems that are necessary to achieve
@@ -9770,7 +9769,7 @@ class RequirementsStatement {
   /// [source] Who asked for this statement to be a requirement. By default,
   ///  it's assumed that the publisher knows who it is if it matters.
   ///
-  factory RequirementsStatement({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -9853,11 +9852,11 @@ class RequirementsStatement {
 
     /// [source] Who asked for this statement to be a requirement. By default, it's assumed that the publisher knows who it is if it matters.
     List<Reference>? source,
-  }) = _RequirementsStatement;
+  
 }
 
 /// [SpecimenDefinition] A kind of specimen with associated set of requirements.
-@freezed
+
 class SpecimenDefinition {
   /// [SpecimenDefinition] A kind of specimen with associated set of
   ///  requirements.
@@ -10074,7 +10073,7 @@ class SpecimenDefinition {
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
   ///
-  factory SpecimenDefinition({
+  
     /// [resourceType] This is a SpecimenDefinition resource
     @Default(R5ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
@@ -10275,12 +10274,12 @@ class SpecimenDefinition {
 
     /// [typeTested] Specimen conditioned in a container as expected by the testing laboratory.
     List<SpecimenDefinitionTypeTested>? typeTested,
-  }) = _SpecimenDefinition;
+  
 }
 
 /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
 ///  requirements.
-@freezed
+
 class SpecimenDefinitionTypeTested {
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
   ///  requirements.
@@ -10347,7 +10346,7 @@ class SpecimenDefinitionTypeTested {
   /// [testingDestination] Where the specimen will be tested: e.g., lab,
   ///  sector, device or any combination of these.
   ///
-  factory SpecimenDefinitionTypeTested({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10415,12 +10414,12 @@ class SpecimenDefinitionTypeTested {
 
     /// [testingDestination] Where the specimen will be tested: e.g., lab, sector, device or any combination of these.
     List<CodeableConcept>? testingDestination,
-  }) = _SpecimenDefinitionTypeTested;
+  
 }
 
 /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
 ///  requirements.
-@freezed
+
 class SpecimenDefinitionContainer {
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
   ///  requirements.
@@ -10482,7 +10481,7 @@ class SpecimenDefinitionContainer {
   ///
   /// [preparationElement] ("_preparation") Extensions for preparation
   ///
-  factory SpecimenDefinitionContainer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10544,12 +10543,12 @@ class SpecimenDefinitionContainer {
 
     /// [preparationElement] ("_preparation") Extensions for preparation
     @JsonKey(name: '_preparation') Element? preparationElement,
-  }) = _SpecimenDefinitionContainer;
+  
 }
 
 /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
 ///  requirements.
-@freezed
+
 class SpecimenDefinitionAdditive {
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
   ///  requirements.
@@ -10589,7 +10588,7 @@ class SpecimenDefinitionAdditive {
   ///  preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
   ///
-  factory SpecimenDefinitionAdditive({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10621,12 +10620,12 @@ class SpecimenDefinitionAdditive {
 
     /// [additiveReference] Substance introduced in the kind of container to preserve, maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.
     Reference? additiveReference,
-  }) = _SpecimenDefinitionAdditive;
+  
 }
 
 /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
 ///  requirements.
-@freezed
+
 class SpecimenDefinitionHandling {
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
   ///  requirements.
@@ -10673,7 +10672,7 @@ class SpecimenDefinitionHandling {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory SpecimenDefinitionHandling({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -10714,5 +10713,5 @@ class SpecimenDefinitionHandling {
 
     /// [instructionElement] ("_instruction") Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _SpecimenDefinitionHandling;
+  
 }

@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'definitional_artifacts.enums.dart';
-part 'definitional_artifacts.freezed.dart';
+
 part 'definitional_artifacts.g.dart';
 
-@freezed
 class ActivityDefinition {
-  factory ActivityDefinition({
+  
     @Default(Stu3ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
         Stu3ResourceType resourceType,
@@ -82,21 +81,19 @@ class ActivityDefinition {
     List<CodeableConcept>? bodySite,
     Reference? transform,
     List<ActivityDefinitionDynamicValue>? dynamicValue,
-  }) = _ActivityDefinition;
+  
 }
 
-@freezed
 class ActivityDefinitionParticipant {
-  factory ActivityDefinitionParticipant({
+  
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
-  }) = _ActivityDefinitionParticipant;
+  
 }
 
-@freezed
 class ActivityDefinitionDynamicValue {
-  factory ActivityDefinitionDynamicValue({
+  
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
@@ -105,12 +102,11 @@ class ActivityDefinitionDynamicValue {
     @JsonKey(name: '_language') Element? languageElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _ActivityDefinitionDynamicValue;
+  
 }
 
-@freezed
 class PlanDefinition {
-  factory PlanDefinition({
+  
     @Default(Stu3ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
         Stu3ResourceType resourceType,
@@ -164,12 +160,11 @@ class PlanDefinition {
     @JsonKey(name: 'library') List<Reference>? library_,
     List<PlanDefinitionGoal>? goal,
     List<PlanDefinitionAction>? action,
-  }) = _PlanDefinition;
+  
 }
 
-@freezed
 class PlanDefinitionGoal {
-  factory PlanDefinitionGoal({
+  
     CodeableConcept? category,
     required CodeableConcept description,
     CodeableConcept? priority,
@@ -177,23 +172,21 @@ class PlanDefinitionGoal {
     List<CodeableConcept>? addresses,
     List<RelatedArtifact>? documentation,
     List<PlanDefinitionTarget>? target,
-  }) = _PlanDefinitionGoal;
+  
 }
 
-@freezed
 class PlanDefinitionTarget {
-  factory PlanDefinitionTarget({
+  
     CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
     CodeableConcept? detailCodeableConcept,
     FhirDuration? due,
-  }) = _PlanDefinitionTarget;
+  
 }
 
-@freezed
 class PlanDefinitionAction {
-  factory PlanDefinitionAction({
+  
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
@@ -234,12 +227,11 @@ class PlanDefinitionAction {
     Reference? transform,
     List<PlanDefinitionDynamicValue>? dynamicValue,
     List<PlanDefinitionAction>? action,
-  }) = _PlanDefinitionAction;
+  
 }
 
-@freezed
 class PlanDefinitionCondition {
-  factory PlanDefinitionCondition({
+  
     PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
@@ -248,33 +240,30 @@ class PlanDefinitionCondition {
     @JsonKey(name: '_language') Element? languageElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _PlanDefinitionCondition;
+  
 }
 
-@freezed
 class PlanDefinitionRelatedAction {
-  factory PlanDefinitionRelatedAction({
+  
     Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     PlanDefinitionRelatedActionRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,
-  }) = _PlanDefinitionRelatedAction;
+  
 }
 
-@freezed
 class PlanDefinitionParticipant {
-  factory PlanDefinitionParticipant({
+  
     PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
-  }) = _PlanDefinitionParticipant;
+  
 }
 
-@freezed
 class PlanDefinitionDynamicValue {
-  factory PlanDefinitionDynamicValue({
+  
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
@@ -283,12 +272,11 @@ class PlanDefinitionDynamicValue {
     @JsonKey(name: '_language') Element? languageElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _PlanDefinitionDynamicValue;
+  
 }
 
-@freezed
 class Questionnaire {
-  factory Questionnaire({
+  
     @Default(Stu3ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
         Stu3ResourceType resourceType,
@@ -337,12 +325,11 @@ class Questionnaire {
     List<String>? subjectType,
     @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     List<QuestionnaireItem>? item,
-  }) = _Questionnaire;
+  
 }
 
-@freezed
 class QuestionnaireItem {
-  factory QuestionnaireItem({
+  
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? definition,
@@ -387,12 +374,11 @@ class QuestionnaireItem {
     Quantity? initialQuantity,
     Reference? initialReference,
     List<QuestionnaireItem>? item,
-  }) = _QuestionnaireItem;
+  
 }
 
-@freezed
 class QuestionnaireEnableWhen {
-  factory QuestionnaireEnableWhen({
+  
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
     Boolean? hasAnswer,
@@ -417,12 +403,11 @@ class QuestionnaireEnableWhen {
     Coding? answerCoding,
     Quantity? answerQuantity,
     Reference? answerReference,
-  }) = _QuestionnaireEnableWhen;
+  
 }
 
-@freezed
 class QuestionnaireOption {
-  factory QuestionnaireOption({
+  
     Decimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     Date? valueDate,
@@ -432,12 +417,11 @@ class QuestionnaireOption {
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
     Coding? valueCoding,
-  }) = _QuestionnaireOption;
+  
 }
 
-@freezed
 class ServiceDefinition {
-  factory ServiceDefinition({
+  
     @Default(Stu3ResourceType.ServiceDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
         Stu3ResourceType resourceType,
@@ -490,5 +474,5 @@ class ServiceDefinition {
     List<TriggerDefinition>? trigger,
     List<DataRequirement>? dataRequirement,
     Reference? operationDefinition,
-  }) = _ServiceDefinition;
+  
 }

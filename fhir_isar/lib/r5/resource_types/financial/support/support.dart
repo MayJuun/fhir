@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'support.freezed.dart';
 part 'support.g.dart';
 
 /// [Coverage] Financial instrument which may be used to reimburse or pay for
 ///  health care products and services. Includes both insurance and
 ///  self-payment.
-@freezed
+
 class Coverage {
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   ///  health care products and services. Includes both insurance and
@@ -156,7 +155,7 @@ class Coverage {
   /// [insurancePlan] The insurance plan details, benefits and costs, which
   ///  constitute this insurance coverage.
   ///
-  factory Coverage({
+  
     /// [resourceType] This is a Coverage resource
     @Default(R5ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
@@ -275,13 +274,13 @@ class Coverage {
 
     /// [insurancePlan] The insurance plan details, benefits and costs, which constitute this insurance coverage.
     Reference? insurancePlan,
-  }) = _Coverage;
+  
 }
 
 /// [CoveragePaymentBy] Financial instrument which may be used to reimburse or
 ///  pay for health care products and services. Includes both insurance and
 ///  self-payment.
-@freezed
+
 class CoveragePaymentBy {
   /// [CoveragePaymentBy] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
@@ -322,7 +321,7 @@ class CoveragePaymentBy {
   ///
   /// [responsibilityElement] ("_responsibility") Extensions for responsibility
   ///
-  factory CoveragePaymentBy({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -357,13 +356,13 @@ class CoveragePaymentBy {
 
     /// [responsibilityElement] ("_responsibility") Extensions for responsibility
     @JsonKey(name: '_responsibility') Element? responsibilityElement,
-  }) = _CoveragePaymentBy;
+  
 }
 
 /// [CoverageClass] Financial instrument which may be used to reimburse or pay
 ///  for health care products and services. Includes both insurance and
 ///  self-payment.
-@freezed
+
 class CoverageClass {
   /// [CoverageClass] Financial instrument which may be used to reimburse or
   ///  pay for health care products and services. Includes both insurance and
@@ -408,7 +407,7 @@ class CoverageClass {
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  factory CoverageClass({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -446,13 +445,13 @@ class CoverageClass {
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
-  }) = _CoverageClass;
+  
 }
 
 /// [CoverageCostToBeneficiary] Financial instrument which may be used to
 ///  reimburse or pay for health care products and services. Includes both
 ///  insurance and self-payment.
-@freezed
+
 class CoverageCostToBeneficiary {
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   ///  reimburse or pay for health care products and services. Includes both
@@ -506,7 +505,7 @@ class CoverageCostToBeneficiary {
   /// [exception] A suite of codes indicating exceptions or reductions to
   ///  patient costs and their effective periods.
   ///
-  factory CoverageCostToBeneficiary({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -556,13 +555,13 @@ class CoverageCostToBeneficiary {
 
     /// [exception] A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
     List<CoverageException>? exception,
-  }) = _CoverageCostToBeneficiary;
+  
 }
 
 /// [CoverageException] Financial instrument which may be used to reimburse or
 ///  pay for health care products and services. Includes both insurance and
 ///  self-payment.
-@freezed
+
 class CoverageException {
   /// [CoverageException] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
@@ -600,7 +599,7 @@ class CoverageException {
   ///
   /// [period] The timeframe the exception is in force.
   ///
-  factory CoverageException({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -632,7 +631,7 @@ class CoverageException {
 
     /// [period] The timeframe the exception is in force.
     Period? period,
-  }) = _CoverageException;
+  
 }
 
 /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
@@ -640,7 +639,7 @@ class CoverageException {
 ///  respond, in the form of an CoverageEligibilityResponse, with information
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
-@freezed
+
 class CoverageEligibilityRequest {
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
@@ -761,7 +760,7 @@ class CoverageEligibilityRequest {
   ///  and/or an authorization prior to service delivery may be required by the
   ///  payor.
   ///
-  factory CoverageEligibilityRequest({
+  
     /// [resourceType] This is a CoverageEligibilityRequest resource
     @Default(R5ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
@@ -859,7 +858,7 @@ class CoverageEligibilityRequest {
 
     /// [item] Service categories or billable services for which benefit details and/or an authorization prior to service delivery may be required by the payor.
     List<CoverageEligibilityRequestItem>? item,
-  }) = _CoverageEligibilityRequest;
+  
 }
 
 /// [CoverageEligibilityRequestSupportingInfo] The CoverageEligibilityRequest
@@ -867,7 +866,7 @@ class CoverageEligibilityRequest {
 ///  to respond, in the form of an CoverageEligibilityResponse, with
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
-@freezed
+
 class CoverageEligibilityRequestSupportingInfo
     with _$CoverageEligibilityRequestSupportingInfo {
   /// [CoverageEligibilityRequestSupportingInfo] The CoverageEligibilityRequest
@@ -919,7 +918,7 @@ class CoverageEligibilityRequestSupportingInfo
   ///
   /// [appliesToAllElement] ("_appliesToAll") Extensions for appliesToAll
   ///
-  factory CoverageEligibilityRequestSupportingInfo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -960,7 +959,7 @@ class CoverageEligibilityRequestSupportingInfo
 
     /// [appliesToAllElement] ("_appliesToAll") Extensions for appliesToAll
     @JsonKey(name: '_appliesToAll') Element? appliesToAllElement,
-  }) = _CoverageEligibilityRequestSupportingInfo;
+  
 }
 
 /// [CoverageEligibilityRequestInsurance] The CoverageEligibilityRequest
@@ -968,7 +967,7 @@ class CoverageEligibilityRequestSupportingInfo
 ///  to respond, in the form of an CoverageEligibilityResponse, with
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
-@freezed
+
 class CoverageEligibilityRequestInsurance
     with _$CoverageEligibilityRequestInsurance {
   /// [CoverageEligibilityRequestInsurance] The CoverageEligibilityRequest
@@ -1023,7 +1022,7 @@ class CoverageEligibilityRequestInsurance
   /// [businessArrangementElement] ("_businessArrangement") Extensions for
   ///  businessArrangement
   ///
-  factory CoverageEligibilityRequestInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1064,7 +1063,7 @@ class CoverageEligibilityRequestInsurance
 
     /// [businessArrangementElement] ("_businessArrangement") Extensions for businessArrangement
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
-  }) = _CoverageEligibilityRequestInsurance;
+  
 }
 
 /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
@@ -1072,7 +1071,7 @@ class CoverageEligibilityRequestInsurance
 ///  respond, in the form of an CoverageEligibilityResponse, with information
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
-@freezed
+
 class CoverageEligibilityRequestItem {
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
@@ -1140,7 +1139,7 @@ class CoverageEligibilityRequestItem {
   /// [detail] The plan/proposal/order describing the proposed service in
   ///  detail.
   ///
-  factory CoverageEligibilityRequestItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1200,7 +1199,7 @@ class CoverageEligibilityRequestItem {
 
     /// [detail] The plan/proposal/order describing the proposed service in detail.
     List<Reference>? detail,
-  }) = _CoverageEligibilityRequestItem;
+  
 }
 
 /// [CoverageEligibilityRequestDiagnosis] The CoverageEligibilityRequest
@@ -1208,7 +1207,7 @@ class CoverageEligibilityRequestItem {
 ///  to respond, in the form of an CoverageEligibilityResponse, with
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
-@freezed
+
 class CoverageEligibilityRequestDiagnosis
     with _$CoverageEligibilityRequestDiagnosis {
   /// [CoverageEligibilityRequestDiagnosis] The CoverageEligibilityRequest
@@ -1253,7 +1252,7 @@ class CoverageEligibilityRequestDiagnosis
   /// [diagnosisReference] The nature of illness or problem in a coded form or
   ///  as a reference to an external defined Condition.
   ///
-  factory CoverageEligibilityRequestDiagnosis({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1285,12 +1284,12 @@ class CoverageEligibilityRequestDiagnosis
 
     /// [diagnosisReference] The nature of illness or problem in a coded form or as a reference to an external defined Condition.
     Reference? diagnosisReference,
-  }) = _CoverageEligibilityRequestDiagnosis;
+  
 }
 
 /// [CoverageEligibilityResponse] This resource provides eligibility and plan
 ///  details from the processing of an CoverageEligibilityRequest resource.
-@freezed
+
 class CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   ///  details from the processing of an CoverageEligibilityRequest resource.
@@ -1411,7 +1410,7 @@ class CoverageEligibilityResponse {
   ///
   /// [error] Errors encountered during the processing of the request.
   ///
-  factory CoverageEligibilityResponse({
+  
     /// [resourceType] This is a CoverageEligibilityResponse resource
     @Default(R5ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
@@ -1521,13 +1520,13 @@ class CoverageEligibilityResponse {
 
     /// [error] Errors encountered during the processing of the request.
     List<CoverageEligibilityResponseError>? error,
-  }) = _CoverageEligibilityResponse;
+  
 }
 
 /// [CoverageEligibilityResponseInsurance] This resource provides eligibility
 ///  and plan details from the processing of an CoverageEligibilityRequest
 ///  resource.
-@freezed
+
 class CoverageEligibilityResponseInsurance
     with _$CoverageEligibilityResponseInsurance {
   /// [CoverageEligibilityResponseInsurance] This resource provides eligibility
@@ -1578,7 +1577,7 @@ class CoverageEligibilityResponseInsurance
   /// [item] Benefits and optionally current balances, and authorization
   ///  details by category or service.
   ///
-  factory CoverageEligibilityResponseInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1619,12 +1618,12 @@ class CoverageEligibilityResponseInsurance
 
     /// [item] Benefits and optionally current balances, and authorization details by category or service.
     List<CoverageEligibilityResponseItem>? item,
-  }) = _CoverageEligibilityResponseInsurance;
+  
 }
 
 /// [CoverageEligibilityResponseItem] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
-@freezed
+
 class CoverageEligibilityResponseItem {
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
@@ -1709,7 +1708,7 @@ class CoverageEligibilityResponseItem {
   /// [authorizationUrlElement] ("_authorizationUrl") Extensions for
   ///  authorizationUrl
   ///
-  factory CoverageEligibilityResponseItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1793,12 +1792,12 @@ class CoverageEligibilityResponseItem {
 
     /// [authorizationUrlElement] ("_authorizationUrl") Extensions for authorizationUrl
     @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement,
-  }) = _CoverageEligibilityResponseItem;
+  
 }
 
 /// [CoverageEligibilityResponseBenefit] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
-@freezed
+
 class CoverageEligibilityResponseBenefit
     with _$CoverageEligibilityResponseBenefit {
   /// [CoverageEligibilityResponseBenefit] This resource provides eligibility
@@ -1861,7 +1860,7 @@ class CoverageEligibilityResponseBenefit
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
   ///
-  factory CoverageEligibilityResponseBenefit({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1920,12 +1919,12 @@ class CoverageEligibilityResponseBenefit
 
     /// [usedMoney] The quantity of the benefit which have been consumed to date.
     Money? usedMoney,
-  }) = _CoverageEligibilityResponseBenefit;
+  
 }
 
 /// [CoverageEligibilityResponseError] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
-@freezed
+
 class CoverageEligibilityResponseError {
   /// [CoverageEligibilityResponseError] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
@@ -1962,7 +1961,7 @@ class CoverageEligibilityResponseError {
   /// [code] An error code,from a specified code system, which details why the
   ///  eligibility check could not be performed.
   ///
-  factory CoverageEligibilityResponseError({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1991,12 +1990,12 @@ class CoverageEligibilityResponseError {
 
     /// [code] An error code,from a specified code system, which details why the eligibility check could not be performed.
     required CodeableConcept code,
-  }) = _CoverageEligibilityResponseError;
+  
 }
 
 /// [EnrollmentRequest] This resource provides the insurance enrollment details
 ///  to the insurer regarding a specified coverage.
-@freezed
+
 class EnrollmentRequest {
   /// [EnrollmentRequest] This resource provides the insurance enrollment
   ///  details to the insurer regarding a specified coverage.
@@ -2078,7 +2077,7 @@ class EnrollmentRequest {
   /// [coverage] Reference to the program or plan identification, underwriter
   ///  or payor.
   ///
-  factory EnrollmentRequest({
+  
     /// [resourceType] This is a EnrollmentRequest resource
     @Default(R5ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
@@ -2146,12 +2145,12 @@ class EnrollmentRequest {
 
     /// [coverage] Reference to the program or plan identification, underwriter or payor.
     Reference? coverage,
-  }) = _EnrollmentRequest;
+  
 }
 
 /// [EnrollmentResponse] This resource provides enrollment and plan details
 ///  from the processing of an EnrollmentRequest resource.
-@freezed
+
 class EnrollmentResponse {
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   ///  from the processing of an EnrollmentRequest resource.
@@ -2239,7 +2238,7 @@ class EnrollmentResponse {
   /// [requestProvider] The practitioner who is responsible for the services
   ///  rendered to the patient.
   ///
-  factory EnrollmentResponse({
+  
     /// [resourceType] This is a EnrollmentResponse resource
     @Default(R5ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
@@ -2316,5 +2315,5 @@ class EnrollmentResponse {
 
     /// [requestProvider] The practitioner who is responsible for the services rendered to the patient.
     Reference? requestProvider,
-  }) = _EnrollmentResponse;
+  
 }

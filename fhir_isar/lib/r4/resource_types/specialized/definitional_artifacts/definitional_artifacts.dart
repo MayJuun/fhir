@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
 
 /// [ActivityDefinition] This resource allows for the definition of some
-@freezed
+
 class ActivityDefinition {
   /// [ActivityDefinition] This resource allows for the definition of some
 
@@ -306,7 +305,7 @@ class ActivityDefinition {
   /// medication must be computed based on the patient's weight, a dynamic value
   /// would be used to specify an expression that calculated the weight, and the
   ///  path on the request resource that would contain the result.
-  factory ActivityDefinition({
+  
     @Default(R4ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
 
@@ -707,11 +706,11 @@ class ActivityDefinition {
     /// would be used to specify an expression that calculated the weight, and the
     ///  path on the request resource that would contain the result.
     List<ActivityDefinitionDynamicValue>? dynamicValue,
-  }) = _ActivityDefinition;
+  
 }
 
 /// [ActivityDefinitionParticipant] This resource allows for the definition
-@freezed
+
 class ActivityDefinitionParticipant {
   /// [ActivityDefinitionParticipant] This resource allows for the definition
 
@@ -749,7 +748,7 @@ class ActivityDefinitionParticipant {
   ///
   /// [role] The role the participant should play in performing the described
   ///  action.
-  factory ActivityDefinitionParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -786,11 +785,11 @@ class ActivityDefinitionParticipant {
     /// [role] The role the participant should play in performing the described
     ///  action.
     CodeableConcept? role,
-  }) = _ActivityDefinitionParticipant;
+  
 }
 
 /// [ActivityDefinitionDynamicValue] This resource allows for the definition
-@freezed
+
 class ActivityDefinitionDynamicValue {
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
 
@@ -835,7 +834,7 @@ class ActivityDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  factory ActivityDefinitionDynamicValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -879,11 +878,11 @@ class ActivityDefinitionDynamicValue {
     /// [expression] An expression specifying the value of the customized
     ///  element.
     required Expression expression,
-  }) = _ActivityDefinitionDynamicValue;
+  
 }
 
 /// [DeviceDefinition] The characteristics, operational status and
-@freezed
+
 class DeviceDefinition {
   /// [DeviceDefinition] The characteristics, operational status and
 
@@ -1013,7 +1012,7 @@ class DeviceDefinition {
   ///
   /// [material] A substance used to create the material(s) of which the device
   ///  is made.
-  factory DeviceDefinition({
+  
     @Default(R4ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
 
@@ -1187,10 +1186,9 @@ class DeviceDefinition {
     /// [material] A substance used to create the material(s) of which the device
     ///  is made.
     List<DeviceDefinitionMaterial>? material,
-  }) = _DeviceDefinition;
+  
 }
 
-@freezed
 class DeviceDefinitionUdiDeviceIdentifier
     with _$DeviceDefinitionUdiDeviceIdentifier {
   /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational
@@ -1234,7 +1232,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [jurisdiction] The jurisdiction to which the deviceIdentifier applies.
   ///
   /// [jurisdictionElement] Extensions for jurisdiction
-  factory DeviceDefinitionUdiDeviceIdentifier({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1281,11 +1279,11 @@ class DeviceDefinitionUdiDeviceIdentifier
 
     /// [jurisdictionElement] Extensions for jurisdiction
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-  }) = _DeviceDefinitionUdiDeviceIdentifier;
+  
 }
 
 /// [DeviceDefinitionSpecialization] The characteristics, operational status
-@freezed
+
 class DeviceDefinitionSpecialization {
   /// [DeviceDefinitionSpecialization] The characteristics, operational status
 
@@ -1324,7 +1322,7 @@ class DeviceDefinitionSpecialization {
   ///  communicate.
   ///
   /// [versionElement] Extensions for version
-  factory DeviceDefinitionSpecialization({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1364,11 +1362,11 @@ class DeviceDefinitionSpecialization {
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
-  }) = _DeviceDefinitionSpecialization;
+  
 }
 
 /// [DeviceDefinitionCapability] The characteristics, operational status and
-@freezed
+
 class DeviceDefinitionCapability {
   /// [DeviceDefinitionCapability] The characteristics, operational status and
 
@@ -1402,7 +1400,7 @@ class DeviceDefinitionCapability {
   /// [type] Type of capability.
   ///
   /// [description] Description of capability.
-  factory DeviceDefinitionCapability({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1435,11 +1433,11 @@ class DeviceDefinitionCapability {
 
     /// [description] Description of capability.
     List<CodeableConcept>? description,
-  }) = _DeviceDefinitionCapability;
+  
 }
 
 /// [DeviceDefinitionProperty] The characteristics, operational status and
-@freezed
+
 class DeviceDefinitionProperty {
   /// [DeviceDefinitionProperty] The characteristics, operational status and
 
@@ -1476,7 +1474,7 @@ class DeviceDefinitionProperty {
   /// [valueQuantity] Property value as a quantity.
   ///
   /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
-  factory DeviceDefinitionProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1513,11 +1511,11 @@ class DeviceDefinitionProperty {
 
     /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
     List<CodeableConcept>? valueCode,
-  }) = _DeviceDefinitionProperty;
+  
 }
 
 /// [DeviceDefinitionMaterial] The characteristics, operational status and
-@freezed
+
 class DeviceDefinitionMaterial {
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
 
@@ -1558,7 +1556,7 @@ class DeviceDefinitionMaterial {
   ///  allergen.
   ///
   /// [allergenicIndicatorElement] Extensions for allergenicIndicator
-  factory DeviceDefinitionMaterial({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1601,11 +1599,11 @@ class DeviceDefinitionMaterial {
 
     /// [allergenicIndicatorElement] Extensions for allergenicIndicator
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
-  }) = _DeviceDefinitionMaterial;
+  
 }
 
 /// [EventDefinition] The EventDefinition resource provides a reusable
-@freezed
+
 class EventDefinition {
   /// [EventDefinition] The EventDefinition resource provides a reusable
 
@@ -1804,7 +1802,7 @@ class EventDefinition {
   /// [trigger] The trigger element defines when the event occurs. If more than
   /// one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
-  factory EventDefinition({
+  
     @Default(R4ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
 
@@ -2073,11 +2071,11 @@ class EventDefinition {
     /// one trigger condition is specified, the event fires whenever any one of
     ///  the trigger conditions is met.
     required List<TriggerDefinition> trigger,
-  }) = _EventDefinition;
+  
 }
 
 /// [ObservationDefinition] Set of definitional characteristics for a kind of
-@freezed
+
 class ObservationDefinition {
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
 
@@ -2181,7 +2179,7 @@ class ObservationDefinition {
   ///
   /// [criticalCodedValueSet] The set of critical coded results for the
   ///  observation conforming to this ObservationDefinition.
-  factory ObservationDefinition({
+  
     @Default(R4ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
 
@@ -2314,10 +2312,9 @@ class ObservationDefinition {
     /// [criticalCodedValueSet] The set of critical coded results for the
     ///  observation conforming to this ObservationDefinition.
     Reference? criticalCodedValueSet,
-  }) = _ObservationDefinition;
+  
 }
 
-@freezed
 class ObservationDefinitionQuantitativeDetails
     with _$ObservationDefinitionQuantitativeDetails {
   /// [ObservationDefinitionQuantitativeDetails] Set of definitional
@@ -2363,7 +2360,7 @@ class ObservationDefinitionQuantitativeDetails
   ///  results of such observations are of type Quantity.
   ///
   /// [decimalPrecisionElement] Extensions for decimalPrecision
-  factory ObservationDefinitionQuantitativeDetails({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2412,11 +2409,11 @@ class ObservationDefinitionQuantitativeDetails
 
     /// [decimalPrecisionElement] Extensions for decimalPrecision
     @JsonKey(name: '_decimalPrecision') Element? decimalPrecisionElement,
-  }) = _ObservationDefinitionQuantitativeDetails;
+  
 }
 
 /// [PlanDefinitionGoal] This resource allows for the definition of various
-@freezed
+
 class PlanDefinitionGoal {
   /// [PlanDefinitionGoal] This resource allows for the definition of various
 
@@ -2470,7 +2467,7 @@ class PlanDefinitionGoal {
   ///  resources.
   ///
   /// [target] Indicates what should be done and within what timeframe.
-  factory PlanDefinitionGoal({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2525,11 +2522,11 @@ class PlanDefinitionGoal {
 
     /// [target] Indicates what should be done and within what timeframe.
     List<PlanDefinitionTarget>? target,
-  }) = _PlanDefinitionGoal;
+  
 }
 
 /// [PlanDefinitionTarget] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionTarget {
   /// [PlanDefinitionTarget] This resource allows for the definition of
 
@@ -2589,7 +2586,7 @@ class PlanDefinitionTarget {
   ///
   /// [due] Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
-  factory PlanDefinitionTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2648,11 +2645,11 @@ class PlanDefinitionTarget {
     /// [due] Indicates the timeframe after the start of the goal in which the
     ///  goal should be met.
     FhirDuration? due,
-  }) = _PlanDefinitionTarget;
+  
 }
 
 /// [PlanDefinitionAction] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionAction {
   /// [PlanDefinitionAction] This resource allows for the definition of
 
@@ -2820,7 +2817,7 @@ class PlanDefinitionAction {
   /// example, a selection behavior of at-most-one indicates that of the
   /// sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
-  factory PlanDefinitionAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3032,11 +3029,11 @@ class PlanDefinitionAction {
     /// sub-actions, at most one may be chosen as part of realizing the action
     ///  definition.
     List<PlanDefinitionAction>? action,
-  }) = _PlanDefinitionAction;
+  
 }
 
 /// [PlanDefinitionCondition] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionCondition {
   /// [PlanDefinitionCondition] This resource allows for the definition of
 
@@ -3076,7 +3073,7 @@ class PlanDefinitionCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
-  factory PlanDefinitionCondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3113,11 +3110,11 @@ class PlanDefinitionCondition {
     /// [expression] An expression that returns true or false, indicating whether
     ///  the condition is satisfied.
     Expression? expression,
-  }) = _PlanDefinitionCondition;
+  
 }
 
 /// [PlanDefinitionRelatedAction] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionRelatedAction {
   /// [PlanDefinitionRelatedAction] This resource allows for the definition of
 
@@ -3164,7 +3161,7 @@ class PlanDefinitionRelatedAction {
   ///
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
-  factory PlanDefinitionRelatedAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3211,11 +3208,11 @@ class PlanDefinitionRelatedAction {
     /// [offsetRange] A duration or range of durations to apply to the
     ///  relationship. For example, 30-60 minutes before.
     Range? offsetRange,
-  }) = _PlanDefinitionRelatedAction;
+  
 }
 
 /// [PlanDefinitionParticipant] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionParticipant {
   /// [PlanDefinitionParticipant] This resource allows for the definition of
 
@@ -3255,7 +3252,7 @@ class PlanDefinitionParticipant {
   ///
   /// [role] The role the participant should play in performing the described
   ///  action.
-  factory PlanDefinitionParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3292,11 +3289,11 @@ class PlanDefinitionParticipant {
     /// [role] The role the participant should play in performing the described
     ///  action.
     CodeableConcept? role,
-  }) = _PlanDefinitionParticipant;
+  
 }
 
 /// [PlanDefinitionDynamicValue] This resource allows for the definition of
-@freezed
+
 class PlanDefinitionDynamicValue {
   /// [PlanDefinitionDynamicValue] This resource allows for the definition of
 
@@ -3343,7 +3340,7 @@ class PlanDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  factory PlanDefinitionDynamicValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3387,11 +3384,11 @@ class PlanDefinitionDynamicValue {
     /// [expression] An expression specifying the value of the customized
     ///  element.
     Expression? expression,
-  }) = _PlanDefinitionDynamicValue;
+  
 }
 
 /// [Questionnaire] A structured set of questions intended to guide the
-@freezed
+
 class Questionnaire {
   /// [Questionnaire] A structured set of questions intended to guide the
 
@@ -3566,7 +3563,7 @@ class Questionnaire {
   ///
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
-  factory Questionnaire({
+  
     @Default(R4ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
 
@@ -3800,11 +3797,11 @@ class Questionnaire {
     /// [item] A particular question, question grouping or display text that is
     ///  part of the questionnaire.
     List<QuestionnaireItem>? item,
-  }) = _Questionnaire;
+  
 }
 
 /// [QuestionnaireItem] A structured set of questions intended to guide the
-@freezed
+
 class QuestionnaireItem {
   /// [QuestionnaireItem] A structured set of questions intended to guide the
 
@@ -3923,7 +3920,7 @@ class QuestionnaireItem {
   ///
   /// [item] Text, questions and other groups to be nested beneath a question
   ///  or group.
-  factory QuestionnaireItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4048,11 +4045,11 @@ class QuestionnaireItem {
     /// [item] Text, questions and other groups to be nested beneath a question
     ///  or group.
     List<QuestionnaireItem>? item,
-  }) = _QuestionnaireItem;
+  
 }
 
 /// [QuestionnaireEnableWhen] A structured set of questions intended to
-@freezed
+
 class QuestionnaireEnableWhen {
   /// [QuestionnaireEnableWhen] A structured set of questions intended to
 
@@ -4137,7 +4134,7 @@ class QuestionnaireEnableWhen {
   ///
   /// [answerReference] A value that the referenced question is tested using
   ///  the specified operator in order for the item to be enabled.
-  factory QuestionnaireEnableWhen({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4238,11 +4235,11 @@ class QuestionnaireEnableWhen {
     /// [answerReference] A value that the referenced question is tested using
     ///  the specified operator in order for the item to be enabled.
     Reference? answerReference,
-  }) = _QuestionnaireEnableWhen;
+  
 }
 
 /// [QuestionnaireAnswerOption] A structured set of questions intended to
-@freezed
+
 class QuestionnaireAnswerOption {
   /// [QuestionnaireAnswerOption] A structured set of questions intended to
 
@@ -4305,7 +4302,7 @@ class QuestionnaireAnswerOption {
   ///  list of possible answers is initially shown.
   ///
   /// [initialSelectedElement] Extensions for initialSelected
-  factory QuestionnaireAnswerOption({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4375,11 +4372,11 @@ class QuestionnaireAnswerOption {
 
     /// [initialSelectedElement] Extensions for initialSelected
     @JsonKey(name: '_initialSelected') Element? initialSelectedElement,
-  }) = _QuestionnaireAnswerOption;
+  
 }
 
 /// [QuestionnaireInitial] A structured set of questions intended to guide
-@freezed
+
 class QuestionnaireInitial {
   /// [QuestionnaireInitial] A structured set of questions intended to guide
 
@@ -4451,7 +4448,7 @@ class QuestionnaireInitial {
   /// [valueQuantity] The actual value to for an initial answer.
   ///
   /// [valueReference] The actual value to for an initial answer.
-  factory QuestionnaireInitial({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4538,11 +4535,11 @@ class QuestionnaireInitial {
 
     /// [valueReference] The actual value to for an initial answer.
     Reference? valueReference,
-  }) = _QuestionnaireInitial;
+  
 }
 
 /// [SpecimenDefinition] A kind of specimen with associated set of
-@freezed
+
 class SpecimenDefinition {
   /// [SpecimenDefinition] A kind of specimen with associated set of
 
@@ -4616,7 +4613,7 @@ class SpecimenDefinition {
   ///
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
-  factory SpecimenDefinition({
+  
     @Default(R4ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
 
@@ -4709,11 +4706,11 @@ class SpecimenDefinition {
     /// [typeTested] Specimen conditioned in a container as expected by the
     ///  testing laboratory.
     List<SpecimenDefinitionTypeTested>? typeTested,
-  }) = _SpecimenDefinition;
+  
 }
 
 /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
-@freezed
+
 class SpecimenDefinitionTypeTested {
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
 
@@ -4770,7 +4767,7 @@ class SpecimenDefinitionTypeTested {
   ///
   /// [handling] Set of instructions for preservation/transport of the specimen
   ///  at a defined temperature interval, prior the testing process.
-  factory SpecimenDefinitionTypeTested({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4835,11 +4832,11 @@ class SpecimenDefinitionTypeTested {
     /// [handling] Set of instructions for preservation/transport of the specimen
     ///  at a defined temperature interval, prior the testing process.
     List<SpecimenDefinitionHandling>? handling,
-  }) = _SpecimenDefinitionTypeTested;
+  
 }
 
 /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
-@freezed
+
 class SpecimenDefinitionContainer {
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
 
@@ -4898,7 +4895,7 @@ class SpecimenDefinitionContainer {
   ///  for this kind of specimen.
   ///
   /// [preparationElement] Extensions for preparation
-  factory SpecimenDefinitionContainer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4966,11 +4963,11 @@ class SpecimenDefinitionContainer {
 
     /// [preparationElement] Extensions for preparation
     @JsonKey(name: '_preparation') Element? preparationElement,
-  }) = _SpecimenDefinitionContainer;
+  
 }
 
 /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
-@freezed
+
 class SpecimenDefinitionAdditive {
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
 
@@ -5008,7 +5005,7 @@ class SpecimenDefinitionAdditive {
   /// [additiveReference] Substance introduced in the kind of container to
   /// preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
-  factory SpecimenDefinitionAdditive({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5045,11 +5042,11 @@ class SpecimenDefinitionAdditive {
     /// preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
     ///  EDTA.
     Reference? additiveReference,
-  }) = _SpecimenDefinitionAdditive;
+  
 }
 
 /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
-@freezed
+
 class SpecimenDefinitionHandling {
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
 
@@ -5094,7 +5091,7 @@ class SpecimenDefinitionHandling {
   ///  transport of the specimen. For instance, 'Protect from light exposure'.
   ///
   /// [instructionElement] Extensions for instruction
-  factory SpecimenDefinitionHandling({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5141,5 +5138,5 @@ class SpecimenDefinitionHandling {
 
     /// [instructionElement] Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _SpecimenDefinitionHandling;
+  
 }

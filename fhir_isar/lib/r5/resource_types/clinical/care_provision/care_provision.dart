@@ -2,20 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 /// [CarePlan] Describes the intention of how one or more practitioners intend
 ///  to deliver care for a particular patient, group or community for a period
 ///  of time, possibly limited to care for a specific condition or set of
 ///  conditions.
-@freezed
+
 class CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners
   ///  intend to deliver care for a particular patient, group or community for
@@ -165,7 +164,7 @@ class CarePlan {
   ///
   /// [note] General notes about the care plan not covered elsewhere.
   ///
-  factory CarePlan({
+  
     /// [resourceType] This is a CarePlan resource
     @Default(R5ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
@@ -293,14 +292,14 @@ class CarePlan {
 
     /// [note] General notes about the care plan not covered elsewhere.
     List<Annotation>? note,
-  }) = _CarePlan;
+  
 }
 
 /// [CarePlanActivity] Describes the intention of how one or more practitioners
 ///  intend to deliver care for a particular patient, group or community for a
 ///  period of time, possibly limited to care for a specific condition or set
 ///  of conditions.
-@freezed
+
 class CarePlanActivity {
   /// [CarePlanActivity] Describes the intention of how one or more
   ///  practitioners intend to deliver care for a particular patient, group or
@@ -354,7 +353,7 @@ class CarePlanActivity {
   ///  for a general care plan system (e.g. form driven) that doesn't know
   ///  about specific resources such as procedure etc.
   ///
-  factory CarePlanActivity({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -392,14 +391,14 @@ class CarePlanActivity {
 
     /// [plannedActivityDetail] A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.
     CarePlanPlannedActivityDetail? plannedActivityDetail,
-  }) = _CarePlanActivity;
+  
 }
 
 /// [CarePlanPlannedActivityDetail] Describes the intention of how one or more
 ///  practitioners intend to deliver care for a particular patient, group or
 ///  community for a period of time, possibly limited to care for a specific
 ///  condition or set of conditions.
-@freezed
+
 class CarePlanPlannedActivityDetail {
   /// [CarePlanPlannedActivityDetail] Describes the intention of how one or
   ///  more practitioners intend to deliver care for a particular patient,
@@ -528,7 +527,7 @@ class CarePlanPlannedActivityDetail {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory CarePlanPlannedActivityDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -638,12 +637,12 @@ class CarePlanPlannedActivityDetail {
 
     /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CarePlanPlannedActivityDetail;
+  
 }
 
 /// [CareTeam] The Care Team includes all the people and organizations who plan
 ///  to participate in the coordination and delivery of care.
-@freezed
+
 class CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who
   ///  plan to participate in the coordination and delivery of care.
@@ -740,7 +739,7 @@ class CareTeam {
   ///
   /// [note] Comments made about the CareTeam.
   ///
-  factory CareTeam({
+  
     /// [resourceType] This is a CareTeam resource
     @Default(R5ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
@@ -820,13 +819,13 @@ class CareTeam {
 
     /// [note] Comments made about the CareTeam.
     List<Annotation>? note,
-  }) = _CareTeam;
+  
 }
 
 /// [CareTeamParticipant] The Care Team includes all the people and
 ///  organizations who plan to participate in the coordination and delivery of
 ///  care.
-@freezed
+
 class CareTeamParticipant {
   /// [CareTeamParticipant] The Care Team includes all the people and
   ///  organizations who plan to participate in the coordination and delivery
@@ -875,7 +874,7 @@ class CareTeamParticipant {
   /// [coverageTiming] When the member is generally available within this care
   ///  team.
   ///
-  factory CareTeamParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -916,14 +915,14 @@ class CareTeamParticipant {
 
     /// [coverageTiming] When the member is generally available within this care team.
     Timing? coverageTiming,
-  }) = _CareTeamParticipant;
+  
 }
 
 /// [Goal] Describes the intended objective(s) for a patient, group or
 ///  organization care, for example, weight loss, restoring an activity of
 ///  daily living, obtaining herd immunity via immunization, meeting a process
 ///  improvement objective, etc.
-@freezed
+
 class Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
   ///  organization care, for example, weight loss, restoring an activity of
@@ -1048,7 +1047,7 @@ class Goal {
   /// [outcome] Identifies the change (or lack of change) at the point when the
   ///  status of the goal is assessed.
   ///
-  factory Goal({
+  
     /// [resourceType] This is a Goal resource
     @Default(R5ResourceType.Goal)
     @JsonKey(unknownEnumValue: R5ResourceType.Goal)
@@ -1155,14 +1154,14 @@ class Goal {
 
     /// [outcome] Identifies the change (or lack of change) at the point when the status of the goal is assessed.
     List<CodeableReference>? outcome,
-  }) = _Goal;
+  
 }
 
 /// [GoalTarget] Describes the intended objective(s) for a patient, group or
 ///  organization care, for example, weight loss, restoring an activity of
 ///  daily living, obtaining herd immunity via immunization, meeting a process
 ///  improvement objective, etc.
-@freezed
+
 class GoalTarget {
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
   ///  organization care, for example, weight loss, restoring an activity of
@@ -1271,7 +1270,7 @@ class GoalTarget {
   /// [dueDuration] Indicates either the date or the duration after start by
   ///  which the goal should be met.
   ///
-  factory GoalTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1339,7 +1338,7 @@ class GoalTarget {
 
     /// [dueDuration] Indicates either the date or the duration after start by which the goal should be met.
     FhirDuration? dueDuration,
-  }) = _GoalTarget;
+  
 }
 
 /// [NutritionIntake] A record of food or fluid that is being consumed by a
@@ -1352,7 +1351,7 @@ class GoalTarget {
 ///  or fluids consumed.   The consumption information may come from sources
 ///  such as the patient's memory, from a nutrition label,  or from a clinician
 ///  documenting observed intake.
-@freezed
+
 class NutritionIntake {
   /// [NutritionIntake] A record of food or fluid that is being consumed by a
   ///  patient.   A NutritionIntake may indicate that the patient may be
@@ -1511,7 +1510,7 @@ class NutritionIntake {
   /// [note] Provides extra information about the Nutrition Intake that is not
   ///  conveyed by the other attributes.
   ///
-  factory NutritionIntake({
+  
     /// [resourceType] This is a NutritionIntake resource
     @Default(R5ResourceType.NutritionIntake)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
@@ -1633,7 +1632,7 @@ class NutritionIntake {
 
     /// [note] Provides extra information about the Nutrition Intake that is not conveyed by the other attributes.
     List<Annotation>? note,
-  }) = _NutritionIntake;
+  
 }
 
 /// [NutritionIntakeConsumedItem] A record of food or fluid that is being
@@ -1646,7 +1645,7 @@ class NutritionIntake {
 ///  tracks food or fluids consumed.   The consumption information may come
 ///  from sources such as the patient's memory, from a nutrition label,  or
 ///  from a clinician documenting observed intake.
-@freezed
+
 class NutritionIntakeConsumedItem {
   /// [NutritionIntakeConsumedItem] A record of food or fluid that is being
   ///  consumed by a patient.   A NutritionIntake may indicate that the patient
@@ -1719,7 +1718,7 @@ class NutritionIntakeConsumedItem {
   /// [notConsumedReason] Document the reason the food or fluid was not
   ///  consumed, such as refused, held, etc.
   ///
-  factory NutritionIntakeConsumedItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1769,7 +1768,7 @@ class NutritionIntakeConsumedItem {
 
     /// [notConsumedReason] Document the reason the food or fluid was not consumed, such as refused, held, etc.
     CodeableConcept? notConsumedReason,
-  }) = _NutritionIntakeConsumedItem;
+  
 }
 
 /// [NutritionIntakeIngredientLabel] A record of food or fluid that is being
@@ -1782,7 +1781,7 @@ class NutritionIntakeConsumedItem {
 ///  tracks food or fluids consumed.   The consumption information may come
 ///  from sources such as the patient's memory, from a nutrition label,  or
 ///  from a clinician documenting observed intake.
-@freezed
+
 class NutritionIntakeIngredientLabel {
   /// [NutritionIntakeIngredientLabel] A record of food or fluid that is being
   ///  consumed by a patient.   A NutritionIntake may indicate that the patient
@@ -1835,7 +1834,7 @@ class NutritionIntakeIngredientLabel {
   ///
   /// [amount] Total amount of nutrient consumed.
   ///
-  factory NutritionIntakeIngredientLabel({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1867,7 +1866,7 @@ class NutritionIntakeIngredientLabel {
 
     /// [amount] Total amount of nutrient consumed.
     required Quantity amount,
-  }) = _NutritionIntakeIngredientLabel;
+  
 }
 
 /// [NutritionIntakePerformer] A record of food or fluid that is being consumed
@@ -1880,7 +1879,7 @@ class NutritionIntakeIngredientLabel {
 ///  or fluids consumed.   The consumption information may come from sources
 ///  such as the patient's memory, from a nutrition label,  or from a clinician
 ///  documenting observed intake.
-@freezed
+
 class NutritionIntakePerformer {
   /// [NutritionIntakePerformer] A record of food or fluid that is being
   ///  consumed by a patient.   A NutritionIntake may indicate that the patient
@@ -1932,7 +1931,7 @@ class NutritionIntakePerformer {
   ///
   /// [actor] Who performed the intake.
   ///
-  factory NutritionIntakePerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1964,12 +1963,12 @@ class NutritionIntakePerformer {
 
     /// [actor] Who performed the intake.
     required Reference actor,
-  }) = _NutritionIntakePerformer;
+  
 }
 
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
 ///  oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
   ///  oral nutritional supplement to a patient/resident.
@@ -2130,7 +2129,7 @@ class NutritionOrder {
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
   ///
-  factory NutritionOrder({
+  
     /// [resourceType] This is a NutritionOrder resource
     @Default(R5ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
@@ -2258,12 +2257,12 @@ class NutritionOrder {
 
     /// [note] Comments made about the {{title}} by the requester, performer, subject or other participants.
     List<Annotation>? note,
-  }) = _NutritionOrder;
+  
 }
 
 /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderOralDiet {
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2316,7 +2315,7 @@ class NutritionOrderOralDiet {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory NutritionOrderOralDiet({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2363,12 +2362,12 @@ class NutritionOrderOralDiet {
 
     /// [instructionElement] ("_instruction") Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderOralDiet;
+  
 }
 
 /// [NutritionOrderSchedule] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderSchedule {
   /// [NutritionOrderSchedule] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2412,7 +2411,7 @@ class NutritionOrderSchedule {
   /// [asNeededFor] Indicates whether the product is only taken based on a
   ///  precondition for taking the product.
   ///
-  factory NutritionOrderSchedule({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2450,12 +2449,12 @@ class NutritionOrderSchedule {
 
     /// [asNeededFor] Indicates whether the product is only taken based on a precondition for taking the product.
     CodeableConcept? asNeededFor,
-  }) = _NutritionOrderSchedule;
+  
 }
 
 /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderNutrient {
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2492,7 +2491,7 @@ class NutritionOrderNutrient {
   ///
   /// [amount] The quantity of the specified nutrient to include in diet.
   ///
-  factory NutritionOrderNutrient({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2524,12 +2523,12 @@ class NutritionOrderNutrient {
 
     /// [amount] The quantity of the specified nutrient to include in diet.
     Quantity? amount,
-  }) = _NutritionOrderNutrient;
+  
 }
 
 /// [NutritionOrderTexture] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderTexture {
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2567,7 +2566,7 @@ class NutritionOrderTexture {
   /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture
   ///  modification applies to.  This could be all foods types.
   ///
-  factory NutritionOrderTexture({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2599,12 +2598,12 @@ class NutritionOrderTexture {
 
     /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture modification applies to.  This could be all foods types.
     CodeableConcept? foodType,
-  }) = _NutritionOrderTexture;
+  
 }
 
 /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderSupplement {
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2653,7 +2652,7 @@ class NutritionOrderSupplement {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory NutritionOrderSupplement({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2700,12 +2699,12 @@ class NutritionOrderSupplement {
 
     /// [instructionElement] ("_instruction") Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderSupplement;
+  
 }
 
 /// [NutritionOrderSchedule1] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderSchedule1 {
   /// [NutritionOrderSchedule1] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2749,7 +2748,7 @@ class NutritionOrderSchedule1 {
   /// [asNeededFor] Indicates whether the supplement is only taken based on a
   ///  precondition for taking the supplement.
   ///
-  factory NutritionOrderSchedule1({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2787,12 +2786,12 @@ class NutritionOrderSchedule1 {
 
     /// [asNeededFor] Indicates whether the supplement is only taken based on a precondition for taking the supplement.
     CodeableConcept? asNeededFor,
-  }) = _NutritionOrderSchedule1;
+  
 }
 
 /// [NutritionOrderEnteralFormula] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderEnteralFormula {
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
@@ -2865,7 +2864,7 @@ class NutritionOrderEnteralFormula {
   /// [administrationInstructionElement] ("_administrationInstruction")
   ///  Extensions for administrationInstruction
   ///
-  factory NutritionOrderEnteralFormula({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2926,12 +2925,12 @@ class NutritionOrderEnteralFormula {
     /// [administrationInstructionElement] ("_administrationInstruction") Extensions for administrationInstruction
     @JsonKey(name: '_administrationInstruction')
         Element? administrationInstructionElement,
-  }) = _NutritionOrderEnteralFormula;
+  
 }
 
 /// [NutritionOrderAdditive] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderAdditive {
   /// [NutritionOrderAdditive] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2975,7 +2974,7 @@ class NutritionOrderAdditive {
   /// [quantity] The amount of additive to be given in addition or to be mixed
   ///  in with the base formula.
   ///
-  factory NutritionOrderAdditive({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3013,12 +3012,12 @@ class NutritionOrderAdditive {
 
     /// [quantity] The amount of additive to be given in addition or to be mixed in with the base formula.
     Quantity? quantity,
-  }) = _NutritionOrderAdditive;
+  
 }
 
 /// [NutritionOrderAdministration] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderAdministration {
   /// [NutritionOrderAdministration] A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
@@ -3061,7 +3060,7 @@ class NutritionOrderAdministration {
   /// [rateRatio] The rate of administration of formula via a feeding pump,
   ///  e.g. 60 mL per hour, according to the specified schedule.
   ///
-  factory NutritionOrderAdministration({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3099,12 +3098,12 @@ class NutritionOrderAdministration {
 
     /// [rateRatio] The rate of administration of formula via a feeding pump, e.g. 60 mL per hour, according to the specified schedule.
     Ratio? rateRatio,
-  }) = _NutritionOrderAdministration;
+  
 }
 
 /// [NutritionOrderSchedule2] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
-@freezed
+
 class NutritionOrderSchedule2 {
   /// [NutritionOrderSchedule2] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -3148,7 +3147,7 @@ class NutritionOrderSchedule2 {
   /// [asNeededFor] Indicates whether the enteral formula is only taken based
   ///  on a precondition for taking the enteral formula.
   ///
-  factory NutritionOrderSchedule2({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3186,13 +3185,13 @@ class NutritionOrderSchedule2 {
 
     /// [asNeededFor] Indicates whether the enteral formula is only taken based on a precondition for taking the enteral formula.
     CodeableConcept? asNeededFor,
-  }) = _NutritionOrderSchedule2;
+  
 }
 
 /// [RequestOrchestration] A set of related requests that can be used to
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
-@freezed
+
 class RequestOrchestration {
   /// [RequestOrchestration] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
@@ -3321,7 +3320,7 @@ class RequestOrchestration {
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
   ///
-  factory RequestOrchestration({
+  
     /// [resourceType] This is a RequestOrchestration resource
     @Default(R5ResourceType.RequestOrchestration)
     @JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
@@ -3435,13 +3434,13 @@ class RequestOrchestration {
 
     /// [action] The actions, if any, produced by the evaluation of the artifact.
     List<RequestOrchestrationAction>? action,
-  }) = _RequestOrchestration;
+  
 }
 
 /// [RequestOrchestrationAction] A set of related requests that can be used to
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
-@freezed
+
 class RequestOrchestrationAction {
   /// [RequestOrchestrationAction] A set of related requests that can be used
   ///  to capture intended activities that have inter-dependencies such as
@@ -3617,7 +3616,7 @@ class RequestOrchestrationAction {
   ///
   /// [action] Sub actions.
   ///
-  factory RequestOrchestrationAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3784,13 +3783,13 @@ class RequestOrchestrationAction {
 
     /// [action] Sub actions.
     List<RequestOrchestrationAction>? action,
-  }) = _RequestOrchestrationAction;
+  
 }
 
 /// [RequestOrchestrationCondition] A set of related requests that can be used
 ///  to capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
-@freezed
+
 class RequestOrchestrationCondition {
   /// [RequestOrchestrationCondition] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
@@ -3831,7 +3830,7 @@ class RequestOrchestrationCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
   ///
-  factory RequestOrchestrationCondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3866,13 +3865,13 @@ class RequestOrchestrationCondition {
 
     /// [expression] An expression that returns true or false, indicating whether or not the condition is satisfied.
     Expression? expression,
-  }) = _RequestOrchestrationCondition;
+  
 }
 
 /// [RequestOrchestrationInput] A set of related requests that can be used to
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
-@freezed
+
 class RequestOrchestrationInput {
   /// [RequestOrchestrationInput] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
@@ -3921,7 +3920,7 @@ class RequestOrchestrationInput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory RequestOrchestrationInput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3962,13 +3961,13 @@ class RequestOrchestrationInput {
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
-  }) = _RequestOrchestrationInput;
+  
 }
 
 /// [RequestOrchestrationOutput] A set of related requests that can be used to
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
-@freezed
+
 class RequestOrchestrationOutput {
   /// [RequestOrchestrationOutput] A set of related requests that can be used
   ///  to capture intended activities that have inter-dependencies such as
@@ -4016,7 +4015,7 @@ class RequestOrchestrationOutput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory RequestOrchestrationOutput({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4057,13 +4056,13 @@ class RequestOrchestrationOutput {
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
-  }) = _RequestOrchestrationOutput;
+  
 }
 
 /// [RequestOrchestrationRelatedAction] A set of related requests that can be
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
-@freezed
+
 class RequestOrchestrationRelatedAction
     with _$RequestOrchestrationRelatedAction {
   /// [RequestOrchestrationRelatedAction] A set of related requests that can be
@@ -4112,7 +4111,7 @@ class RequestOrchestrationRelatedAction
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   ///
-  factory RequestOrchestrationRelatedAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4156,13 +4155,13 @@ class RequestOrchestrationRelatedAction
 
     /// [offsetRange] A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.
     Range? offsetRange,
-  }) = _RequestOrchestrationRelatedAction;
+  
 }
 
 /// [RequestOrchestrationParticipant] A set of related requests that can be
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
-@freezed
+
 class RequestOrchestrationParticipant {
   /// [RequestOrchestrationParticipant] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
@@ -4216,7 +4215,7 @@ class RequestOrchestrationParticipant {
   ///
   /// [actorReference] A reference to the actual participant.
   ///
-  factory RequestOrchestrationParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4269,13 +4268,13 @@ class RequestOrchestrationParticipant {
 
     /// [actorReference] A reference to the actual participant.
     Reference? actorReference,
-  }) = _RequestOrchestrationParticipant;
+  
 }
 
 /// [RequestOrchestrationDynamicValue] A set of related requests that can be
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
-@freezed
+
 class RequestOrchestrationDynamicValue {
   /// [RequestOrchestrationDynamicValue] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
@@ -4323,7 +4322,7 @@ class RequestOrchestrationDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory RequestOrchestrationDynamicValue({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4358,12 +4357,12 @@ class RequestOrchestrationDynamicValue {
 
     /// [expression] An expression specifying the value of the customized element.
     Expression? expression,
-  }) = _RequestOrchestrationDynamicValue;
+  
 }
 
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
 ///  other subject as well as the likelihood of each outcome.
-@freezed
+
 class RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
   ///  other subject as well as the likelihood of each outcome.
@@ -4475,7 +4474,7 @@ class RiskAssessment {
   ///
   /// [note] Additional comments about the risk assessment.
   ///
-  factory RiskAssessment({
+  
     /// [resourceType] This is a RiskAssessment resource
     @Default(R5ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
@@ -4576,12 +4575,12 @@ class RiskAssessment {
 
     /// [note] Additional comments about the risk assessment.
     List<Annotation>? note,
-  }) = _RiskAssessment;
+  
 }
 
 /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
 ///  patient or other subject as well as the likelihood of each outcome.
-@freezed
+
 class RiskAssessmentPrediction {
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
   ///  patient or other subject as well as the likelihood of each outcome.
@@ -4646,7 +4645,7 @@ class RiskAssessmentPrediction {
   ///
   /// [rationaleElement] ("_rationale") Extensions for rationale
   ///
-  factory RiskAssessmentPrediction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4705,12 +4704,12 @@ class RiskAssessmentPrediction {
 
     /// [rationaleElement] ("_rationale") Extensions for rationale
     @JsonKey(name: '_rationale') Element? rationaleElement,
-  }) = _RiskAssessmentPrediction;
+  
 }
 
 /// [ServiceRequest] A record of a request for service such as diagnostic
 ///  investigations, treatments, or operations to be performed.
-@freezed
+
 class ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
   ///  investigations, treatments, or operations to be performed.
@@ -4929,7 +4928,7 @@ class ServiceRequest {
   ///
   /// [relevantHistory] Key events in the history of the request.
   ///
-  factory ServiceRequest({
+  
     /// [resourceType] This is a ServiceRequest resource
     @Default(R5ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
@@ -5111,12 +5110,12 @@ class ServiceRequest {
 
     /// [relevantHistory] Key events in the history of the request.
     List<Reference>? relevantHistory,
-  }) = _ServiceRequest;
+  
 }
 
 /// [VisionPrescription] An authorization for the provision of glasses and/or
 ///  contact lenses to a patient.
-@freezed
+
 class VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
   ///  contact lenses to a patient.
@@ -5207,7 +5206,7 @@ class VisionPrescription {
   ///  specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
   ///
-  factory VisionPrescription({
+  
     /// [resourceType] This is a VisionPrescription resource
     @Default(R5ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
@@ -5281,12 +5280,12 @@ class VisionPrescription {
 
     /// [lensSpecification] Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
     required List<VisionPrescriptionLensSpecification> lensSpecification,
-  }) = _VisionPrescription;
+  
 }
 
 /// [VisionPrescriptionLensSpecification] An authorization for the provision of
 ///  glasses and/or contact lenses to a patient.
-@freezed
+
 class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
   /// [VisionPrescriptionLensSpecification] An authorization for the provision
@@ -5370,7 +5369,7 @@ class VisionPrescriptionLensSpecification
   ///
   /// [note] Notes for special requirements such as coatings and lens materials.
   ///
-  factory VisionPrescriptionLensSpecification({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5468,12 +5467,12 @@ class VisionPrescriptionLensSpecification
 
     /// [note] Notes for special requirements such as coatings and lens materials.
     List<Annotation>? note,
-  }) = _VisionPrescriptionLensSpecification;
+  
 }
 
 /// [VisionPrescriptionPrism] An authorization for the provision of glasses
 ///  and/or contact lenses to a patient.
-@freezed
+
 class VisionPrescriptionPrism {
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses
   ///  and/or contact lenses to a patient.
@@ -5514,7 +5513,7 @@ class VisionPrescriptionPrism {
   ///
   /// [baseElement] ("_base") Extensions for base
   ///
-  factory VisionPrescriptionPrism({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -5552,5 +5551,5 @@ class VisionPrescriptionPrism {
 
     /// [baseElement] ("_base") Extensions for base
     @JsonKey(name: '_base') Element? baseElement,
-  }) = _VisionPrescriptionPrism;
+  
 }

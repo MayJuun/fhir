@@ -2,39 +2,36 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../stu3.dart';
 
 part 'special_types.enums.dart';
-part 'special_types.freezed.dart';
+
 part 'special_types.g.dart';
 
-@freezed
 class Narrative {
-  factory Narrative({
+  
     NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
-  }) = _Narrative;
+  
 }
 
-@freezed
 class Reference {
-  factory Reference({
+  
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     Identifier? identifier,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-  }) = _Reference;
+  
 }
 
-@freezed
 class Meta {
-  factory Meta({
+  
     Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
@@ -43,12 +40,11 @@ class Meta {
     @JsonKey(name: '_profile') List<Element?>? profileElement,
     List<Coding>? security,
     List<Coding>? tag,
-  }) = _Meta;
+  
 }
 
-@freezed
 class ElementDefinition {
-  factory ElementDefinition({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? path,
@@ -346,12 +342,11 @@ class ElementDefinition {
     @JsonKey(name: '_isSummary') Element? isSummaryElement,
     ElementDefinitionBinding? binding,
     List<ElementDefinitionMapping>? mapping,
-  }) = _ElementDefinition;
+  
 }
 
-@freezed
 class ElementDefinitionSlicing {
-  factory ElementDefinitionSlicing({
+  
     List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -359,34 +354,31 @@ class ElementDefinitionSlicing {
     @JsonKey(name: '_ordered') Element? orderedElement,
     ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
-  }) = _ElementDefinitionSlicing;
+  
 }
 
-@freezed
 class ElementDefinitionDiscriminator {
-  factory ElementDefinitionDiscriminator({
+  
     ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-  }) = _ElementDefinitionDiscriminator;
+  
 }
 
-@freezed
 class ElementDefinitionBase {
-  factory ElementDefinitionBase({
+  
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     Decimal? min,
     @JsonKey(name: '_min') Element? minElement,
     String? max,
     @JsonKey(name: '_max') Element? maxElement,
-  }) = _ElementDefinitionBase;
+  
 }
 
-@freezed
 class ElementDefinitionType {
-  factory ElementDefinitionType({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -398,12 +390,11 @@ class ElementDefinitionType {
     @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
     ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
-  }) = _ElementDefinitionType;
+  
 }
 
-@freezed
 class ElementDefinitionExample {
-  factory ElementDefinitionExample({
+  
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     Boolean? valueBoolean,
@@ -476,12 +467,11 @@ class ElementDefinitionExample {
     DataRequirement? valueDataRequirement,
     ParameterDefinition? valueParameterDefinition,
     TriggerDefinition? valueTriggerDefinition,
-  }) = _ElementDefinitionExample;
+  
 }
 
-@freezed
 class ElementDefinitionConstraint {
-  factory ElementDefinitionConstraint({
+  
     String? key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
@@ -496,12 +486,11 @@ class ElementDefinitionConstraint {
     @JsonKey(name: '_xpath') Element? xpathElement,
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
-  }) = _ElementDefinitionConstraint;
+  
 }
 
-@freezed
 class ElementDefinitionBinding {
-  factory ElementDefinitionBinding({
+  
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -510,12 +499,11 @@ class ElementDefinitionBinding {
     String? valueSetUri,
     @JsonKey(name: '_valueSetUri') Element? valueSetUriElement,
     Reference? valueSetReference,
-  }) = _ElementDefinitionBinding;
+  
 }
 
-@freezed
 class ElementDefinitionMapping {
-  factory ElementDefinitionMapping({
+  
     Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? language,
@@ -524,12 +512,11 @@ class ElementDefinitionMapping {
     @JsonKey(name: '_map') Element? mapElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _ElementDefinitionMapping;
+  
 }
 
-@freezed
 class Dosage {
-  factory Dosage({
+  
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     String? text,
@@ -552,5 +539,5 @@ class Dosage {
     Ratio? rateRatio,
     Range? rateRange,
     Quantity? rateSimpleQuantity,
-  }) = _Dosage;
+  
 }

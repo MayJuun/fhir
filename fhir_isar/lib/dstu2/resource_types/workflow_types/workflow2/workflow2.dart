@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'workflow2.enums.dart';
-part 'workflow2.freezed.dart';
+
 part 'workflow2.g.dart';
 
-@freezed
 class ProcessRequest {
-  factory ProcessRequest({
+  
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
         Dstu2ResourceType resourceType,
@@ -43,22 +42,20 @@ class ProcessRequest {
     List<String>? include,
     List<String>? exclude,
     Period? period,
-  }) = _ProcessRequest;
+  
 }
 
-@freezed
 class ProcessRequestItem {
-  factory ProcessRequestItem({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Integer sequenceLinkId,
-  }) = _ProcessRequestItem;
+  
 }
 
-@freezed
 class ProcessResponse {
-  factory ProcessResponse({
+  
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
         Dstu2ResourceType resourceType,
@@ -83,23 +80,21 @@ class ProcessResponse {
     Coding? form,
     List<ProcessResponseNotes>? notes,
     List<Coding>? error,
-  }) = _ProcessResponse;
+  
 }
 
-@freezed
 class ProcessResponseNotes {
-  factory ProcessResponseNotes({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
     String? text,
-  }) = _ProcessResponseNotes;
+  
 }
 
-@freezed
 class SupplyRequest {
-  factory SupplyRequest({
+  
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
         Dstu2ResourceType resourceType,
@@ -126,23 +121,21 @@ class SupplyRequest {
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
     SupplyRequestWhen? when,
-  }) = _SupplyRequest;
+  
 }
 
-@freezed
 class SupplyRequestWhen {
-  factory SupplyRequestWhen({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     Timing? schedule,
-  }) = _SupplyRequestWhen;
+  
 }
 
-@freezed
 class SupplyDelivery {
-  factory SupplyDelivery({
+  
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
         Dstu2ResourceType resourceType,
@@ -169,5 +162,5 @@ class SupplyDelivery {
     FhirDateTime? time,
     Reference? destination,
     List<Reference>? receiver,
-  }) = _SupplyDelivery;
+  
 }

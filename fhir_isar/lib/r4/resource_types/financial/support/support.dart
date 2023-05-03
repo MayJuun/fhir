@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'support.freezed.dart';
 part 'support.g.dart';
 
-@freezed
 class Coverage {
-  factory Coverage({
+  
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
         R4ResourceType resourceType,
@@ -50,12 +48,11 @@ class Coverage {
     Boolean? subrogation,
     @JsonKey(name: '_subrogation') Element? subrogationElement,
     List<Reference>? contract,
-  }) = _Coverage;
+  
 }
 
-@freezed
 class CoverageClass {
-  factory CoverageClass({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -64,12 +61,11 @@ class CoverageClass {
     @JsonKey(name: '_value') Element? valueElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-  }) = _CoverageClass;
+  
 }
 
-@freezed
 class CoverageCostToBeneficiary {
-  factory CoverageCostToBeneficiary({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -77,23 +73,21 @@ class CoverageCostToBeneficiary {
     Quantity? valueQuantity,
     Money? valueMoney,
     List<CoverageException>? exception,
-  }) = _CoverageCostToBeneficiary;
+  
 }
 
-@freezed
 class CoverageException {
-  factory CoverageException({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     Period? period,
-  }) = _CoverageException;
+  
 }
 
-@freezed
 class CoverageEligibilityRequest {
-  factory CoverageEligibilityRequest({
+  
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
         R4ResourceType resourceType,
@@ -126,13 +120,12 @@ class CoverageEligibilityRequest {
     List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
     List<CoverageEligibilityRequestInsurance>? insurance,
     List<CoverageEligibilityRequestItem>? item,
-  }) = _CoverageEligibilityRequest;
+  
 }
 
-@freezed
 class CoverageEligibilityRequestSupportingInfo
     with _$CoverageEligibilityRequestSupportingInfo {
-  factory CoverageEligibilityRequestSupportingInfo({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -141,25 +134,23 @@ class CoverageEligibilityRequestSupportingInfo
     required Reference information,
     Boolean? appliesToAll,
     @JsonKey(name: '_appliesToAll') Element? appliesToAllElement,
-  }) = _CoverageEligibilityRequestSupportingInfo;
+  
 }
 
-@freezed
 class CoverageEligibilityRequestDiagnosis
     with _$CoverageEligibilityRequestDiagnosis {
-  factory CoverageEligibilityRequestDiagnosis({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
-  }) = _CoverageEligibilityRequestDiagnosis;
+  
 }
 
-@freezed
 class CoverageEligibilityResponseInsurance
     with _$CoverageEligibilityResponseInsurance {
-  factory CoverageEligibilityResponseInsurance({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -168,13 +159,12 @@ class CoverageEligibilityResponseInsurance
     @JsonKey(name: '_inforce') Element? inforceElement,
     Period? benefitPeriod,
     List<CoverageEligibilityResponseItem>? item,
-  }) = _CoverageEligibilityResponseInsurance;
+  
 }
 
-@freezed
 class CoverageEligibilityResponseBenefit
     with _$CoverageEligibilityResponseBenefit {
-  factory CoverageEligibilityResponseBenefit({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -189,12 +179,11 @@ class CoverageEligibilityResponseBenefit
     String? usedString,
     @JsonKey(name: '_usedString') Element? usedStringElement,
     Money? usedMoney,
-  }) = _CoverageEligibilityResponseBenefit;
+  
 }
 
-@freezed
 class EnrollmentResponse {
-  factory EnrollmentResponse({
+  
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
         R4ResourceType resourceType,
@@ -220,5 +209,5 @@ class EnrollmentResponse {
     @JsonKey(name: '_created') Element? createdElement,
     Reference? organization,
     Reference? requestProvider,
-  }) = _EnrollmentResponse;
+  
 }

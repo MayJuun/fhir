@@ -2,13 +2,12 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'summary.freezed.dart';
 part 'summary.g.dart';
 
 /// [AdverseEvent] An event (i.e. any change to current patient status) that
@@ -23,7 +22,7 @@ part 'summary.g.dart';
 ///  domain specific implementation guides when implementing the AdverseEvent
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
-@freezed
+
 class AdverseEvent {
   /// [AdverseEvent] An event (i.e. any change to current patient status) that
   ///  may be related to unintended effects on a patient or research subject.
@@ -198,7 +197,7 @@ class AdverseEvent {
   /// [note] Comments made about the adverse event by the performer, subject or
   ///  other participants.
   ///
-  factory AdverseEvent({
+  
     /// [resourceType] This is a AdverseEvent resource
     @Default(R5ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
@@ -336,7 +335,7 @@ class AdverseEvent {
 
     /// [note] Comments made about the adverse event by the performer, subject or other participants.
     List<Annotation>? note,
-  }) = _AdverseEvent;
+  
 }
 
 /// [AdverseEventParticipant] An event (i.e. any change to current patient
@@ -351,7 +350,7 @@ class AdverseEvent {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventParticipant {
   /// [AdverseEventParticipant] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -408,7 +407,7 @@ class AdverseEventParticipant {
   ///
   /// [actor] Indicates who or what participated in the event.
   ///
-  factory AdverseEventParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -440,7 +439,7 @@ class AdverseEventParticipant {
 
     /// [actor] Indicates who or what participated in the event.
     required Reference actor,
-  }) = _AdverseEventParticipant;
+  
 }
 
 /// [AdverseEventSuspectEntity] An event (i.e. any change to current patient
@@ -455,7 +454,7 @@ class AdverseEventParticipant {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventSuspectEntity {
   /// [AdverseEventSuspectEntity] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -517,7 +516,7 @@ class AdverseEventSuspectEntity {
   ///
   /// [causality] Information on the possible cause of the event.
   ///
-  factory AdverseEventSuspectEntity({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -552,7 +551,7 @@ class AdverseEventSuspectEntity {
 
     /// [causality] Information on the possible cause of the event.
     AdverseEventCausality? causality,
-  }) = _AdverseEventSuspectEntity;
+  
 }
 
 /// [AdverseEventCausality] An event (i.e. any change to current patient
@@ -567,7 +566,7 @@ class AdverseEventSuspectEntity {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventCausality {
   /// [AdverseEventCausality] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -627,7 +626,7 @@ class AdverseEventCausality {
   ///
   /// [author] The author of the information on the possible cause of the event.
   ///
-  factory AdverseEventCausality({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -662,7 +661,7 @@ class AdverseEventCausality {
 
     /// [author] The author of the information on the possible cause of the event.
     Reference? author,
-  }) = _AdverseEventCausality;
+  
 }
 
 /// [AdverseEventContributingFactor] An event (i.e. any change to current
@@ -677,7 +676,7 @@ class AdverseEventCausality {
 ///  two concepts, we recommend consulting the domain specific implementation
 ///  guides when implementing the AdverseEvent Resource. The implementation
 ///  guides include specific extensions, value sets and constraints.
-@freezed
+
 class AdverseEventContributingFactor {
   /// [AdverseEventContributingFactor] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -735,7 +734,7 @@ class AdverseEventContributingFactor {
   /// [itemCodeableConcept] The item that is suspected to have increased the
   ///  probability or severity of the adverse event.
   ///
-  factory AdverseEventContributingFactor({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -767,7 +766,7 @@ class AdverseEventContributingFactor {
 
     /// [itemCodeableConcept] The item that is suspected to have increased the probability or severity of the adverse event.
     CodeableConcept? itemCodeableConcept,
-  }) = _AdverseEventContributingFactor;
+  
 }
 
 /// [AdverseEventPreventiveAction] An event (i.e. any change to current patient
@@ -782,7 +781,7 @@ class AdverseEventContributingFactor {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventPreventiveAction {
   /// [AdverseEventPreventiveAction] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -839,7 +838,7 @@ class AdverseEventPreventiveAction {
   /// [itemCodeableConcept] The action that contributed to avoiding the adverse
   ///  event.
   ///
-  factory AdverseEventPreventiveAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -871,7 +870,7 @@ class AdverseEventPreventiveAction {
 
     /// [itemCodeableConcept] The action that contributed to avoiding the adverse event.
     CodeableConcept? itemCodeableConcept,
-  }) = _AdverseEventPreventiveAction;
+  
 }
 
 /// [AdverseEventMitigatingAction] An event (i.e. any change to current patient
@@ -886,7 +885,7 @@ class AdverseEventPreventiveAction {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventMitigatingAction {
   /// [AdverseEventMitigatingAction] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -944,7 +943,7 @@ class AdverseEventMitigatingAction {
   /// [itemCodeableConcept] The ameliorating action taken after the adverse
   ///  event occured in order to reduce the extent of harm.
   ///
-  factory AdverseEventMitigatingAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -976,7 +975,7 @@ class AdverseEventMitigatingAction {
 
     /// [itemCodeableConcept] The ameliorating action taken after the adverse event occured in order to reduce the extent of harm.
     CodeableConcept? itemCodeableConcept,
-  }) = _AdverseEventMitigatingAction;
+  
 }
 
 /// [AdverseEventSupportingInfo] An event (i.e. any change to current patient
@@ -991,7 +990,7 @@ class AdverseEventMitigatingAction {
 ///  consulting the domain specific implementation guides when implementing the
 ///  AdverseEvent Resource. The implementation guides include specific
 ///  extensions, value sets and constraints.
-@freezed
+
 class AdverseEventSupportingInfo {
   /// [AdverseEventSupportingInfo] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -1065,7 +1064,7 @@ class AdverseEventSupportingInfo {
   ///  (MSDS).  Supporting information is not a contributing factor, preventive
   ///  action, or mitigating action.
   ///
-  factory AdverseEventSupportingInfo({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1097,13 +1096,13 @@ class AdverseEventSupportingInfo {
 
     /// [itemCodeableConcept] Relevant past history for the subject. In a clinical care context, an example being a patient had an adverse event following a pencillin administration and the patient had a previously documented penicillin allergy. In a clinical trials context, an example is a bunion or rash that was present prior to the study. Additionally, the supporting item can be a document that is relevant to this instance of the adverse event that is not part of the subject's medical history. For example, a clinical note, staff list, or material safety data sheet (MSDS).  Supporting information is not a contributing factor, preventive action, or mitigating action.
     CodeableConcept? itemCodeableConcept,
-  }) = _AdverseEventSupportingInfo;
+  
 }
 
 /// [AllergyIntolerance] Risk of harmful or undesirable physiological response
 ///  which is specific to an individual and associated with exposure to a
 ///  substance.
-@freezed
+
 class AllergyIntolerance {
   /// [AllergyIntolerance] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
@@ -1251,7 +1250,7 @@ class AllergyIntolerance {
   /// [reaction] Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
   ///
-  factory AllergyIntolerance({
+  
     /// [resourceType] This is a AllergyIntolerance resource
     @Default(R5ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
@@ -1367,13 +1366,13 @@ class AllergyIntolerance {
 
     /// [reaction] Details about each adverse reaction event linked to exposure to the identified substance.
     List<AllergyIntoleranceReaction>? reaction,
-  }) = _AllergyIntolerance;
+  
 }
 
 /// [AllergyIntoleranceParticipant] Risk of harmful or undesirable
 ///  physiological response which is specific to an individual and associated
 ///  with exposure to a substance.
-@freezed
+
 class AllergyIntoleranceParticipant {
   /// [AllergyIntoleranceParticipant] Risk of harmful or undesirable
   ///  physiological response which is specific to an individual and associated
@@ -1413,7 +1412,7 @@ class AllergyIntoleranceParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the allergy or intolerance.
   ///
-  factory AllergyIntoleranceParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1445,13 +1444,13 @@ class AllergyIntoleranceParticipant {
 
     /// [actor] Indicates who or what participated in the activities related to the allergy or intolerance.
     required Reference actor,
-  }) = _AllergyIntoleranceParticipant;
+  
 }
 
 /// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological
 ///  response which is specific to an individual and associated with exposure
 ///  to a substance.
-@freezed
+
 class AllergyIntoleranceReaction {
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
@@ -1520,7 +1519,7 @@ class AllergyIntoleranceReaction {
   /// [note] Additional text about the adverse reaction event not captured in
   ///  other fields.
   ///
-  factory AllergyIntoleranceReaction({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1576,7 +1575,7 @@ class AllergyIntoleranceReaction {
 
     /// [note] Additional text about the adverse reaction event not captured in other fields.
     List<Annotation>? note,
-  }) = _AllergyIntoleranceReaction;
+  
 }
 
 /// [ClinicalImpression] A record of a clinical assessment performed to
@@ -1587,7 +1586,7 @@ class AllergyIntoleranceReaction {
 ///  This resource is called "ClinicalImpression" rather than
 ///  "ClinicalAssessment" to avoid confusion with the recording of assessment
 ///  tools such as Apgar score.
-@freezed
+
 class ClinicalImpression {
   /// [ClinicalImpression] A record of a clinical assessment performed to
   ///  determine what problem(s) may affect the patient and before planning the
@@ -1733,7 +1732,7 @@ class ClinicalImpression {
   ///  impression itself was made, though supplemental notes by the original
   ///  author could also appear.
   ///
-  factory ClinicalImpression({
+  
     /// [resourceType] This is a ClinicalImpression resource
     @Default(R5ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
@@ -1852,7 +1851,7 @@ class ClinicalImpression {
 
     /// [note] Commentary about the impression, typically recorded after the impression itself was made, though supplemental notes by the original author could also appear.
     List<Annotation>? note,
-  }) = _ClinicalImpression;
+  
 }
 
 /// [ClinicalImpressionFinding] A record of a clinical assessment performed to
@@ -1863,7 +1862,7 @@ class ClinicalImpression {
 ///  This resource is called "ClinicalImpression" rather than
 ///  "ClinicalAssessment" to avoid confusion with the recording of assessment
 ///  tools such as Apgar score.
-@freezed
+
 class ClinicalImpressionFinding {
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
   ///  to determine what problem(s) may affect the patient and before planning
@@ -1914,7 +1913,7 @@ class ClinicalImpressionFinding {
   ///
   /// [basisElement] ("_basis") Extensions for basis
   ///
-  factory ClinicalImpressionFinding({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1949,12 +1948,12 @@ class ClinicalImpressionFinding {
 
     /// [basisElement] ("_basis") Extensions for basis
     @JsonKey(name: '_basis') Element? basisElement,
-  }) = _ClinicalImpressionFinding;
+  
 }
 
 /// [Condition] A clinical condition, problem, diagnosis, or other event,
 ///  situation, issue, or clinical concept that has risen to a level of concern.
-@freezed
+
 class Condition {
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   ///  situation, issue, or clinical concept that has risen to a level of
@@ -2119,7 +2118,7 @@ class Condition {
   ///  notes/comments entry  for description of the Condition, its diagnosis
   ///  and prognosis.
   ///
-  factory Condition({
+  
     /// [resourceType] This is a Condition resource
     @Default(R5ResourceType.Condition)
     @JsonKey(unknownEnumValue: R5ResourceType.Condition)
@@ -2247,13 +2246,13 @@ class Condition {
 
     /// [note] Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
     List<Annotation>? note,
-  }) = _Condition;
+  
 }
 
 /// [ConditionParticipant] A clinical condition, problem, diagnosis, or other
 ///  event, situation, issue, or clinical concept that has risen to a level of
 ///  concern.
-@freezed
+
 class ConditionParticipant {
   /// [ConditionParticipant] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
@@ -2293,7 +2292,7 @@ class ConditionParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the condition.
   ///
-  factory ConditionParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2325,12 +2324,12 @@ class ConditionParticipant {
 
     /// [actor] Indicates who or what participated in the activities related to the condition.
     required Reference actor,
-  }) = _ConditionParticipant;
+  
 }
 
 /// [ConditionStage] A clinical condition, problem, diagnosis, or other event,
 ///  situation, issue, or clinical concept that has risen to a level of concern.
-@freezed
+
 class ConditionStage {
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
@@ -2374,7 +2373,7 @@ class ConditionStage {
   ///
   /// [type] The kind of staging, such as pathological or clinical staging.
   ///
-  factory ConditionStage({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2409,14 +2408,14 @@ class ConditionStage {
 
     /// [type] The kind of staging, such as pathological or clinical staging.
     CodeableConcept? type,
-  }) = _ConditionStage;
+  
 }
 
 /// [DetectedIssue] Indicates an actual or potential clinical issue with or
 ///  between one or more active or proposed clinical actions for a patient;
 ///  e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, etc.
-@freezed
+
 class DetectedIssue {
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   ///  between one or more active or proposed clinical actions for a patient;
@@ -2536,7 +2535,7 @@ class DetectedIssue {
   ///  known mitigating factors that may reduce/eliminate the need for any
   ///  action.
   ///
-  factory DetectedIssue({
+  
     /// [resourceType] This is a DetectedIssue resource
     @Default(R5ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
@@ -2634,14 +2633,14 @@ class DetectedIssue {
 
     /// [mitigation] Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
     List<DetectedIssueMitigation>? mitigation,
-  }) = _DetectedIssue;
+  
 }
 
 /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
 ///  with or between one or more active or proposed clinical actions for a
 ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, etc.
-@freezed
+
 class DetectedIssueEvidence {
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
@@ -2682,7 +2681,7 @@ class DetectedIssueEvidence {
   /// [detail] Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
   ///
-  factory DetectedIssueEvidence({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2714,14 +2713,14 @@ class DetectedIssueEvidence {
 
     /// [detail] Links to resources that constitute evidence for the detected issue such as a GuidanceResponse or MeasureReport.
     List<Reference>? detail,
-  }) = _DetectedIssueEvidence;
+  
 }
 
 /// [DetectedIssueMitigation] Indicates an actual or potential clinical issue
 ///  with or between one or more active or proposed clinical actions for a
 ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, etc.
-@freezed
+
 class DetectedIssueMitigation {
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
@@ -2768,7 +2767,7 @@ class DetectedIssueMitigation {
   /// [author] Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
   ///
-  factory DetectedIssueMitigation({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2806,12 +2805,12 @@ class DetectedIssueMitigation {
 
     /// [author] Identifies the practitioner who determined the mitigation and takes responsibility for the mitigation step occurring.
     Reference? author,
-  }) = _DetectedIssueMitigation;
+  
 }
 
 /// [FamilyMemberHistory] Significant health conditions for a person related to
 ///  the patient relevant in the context of care for the patient.
-@freezed
+
 class FamilyMemberHistory {
   /// [FamilyMemberHistory] Significant health conditions for a person related
   ///  to the patient relevant in the context of care for the patient.
@@ -2982,7 +2981,7 @@ class FamilyMemberHistory {
   ///  more than one procedure per resource, though there is nothing stopping
   ///  multiple resources - one per procedure.
   ///
-  factory FamilyMemberHistory({
+  
     /// [resourceType] This is a FamilyMemberHistory resource
     @Default(R5ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
@@ -3137,12 +3136,12 @@ class FamilyMemberHistory {
 
     /// [procedure] The significant Procedures (or procedure) that the family member had. This is a repeating section to allow a system to represent more than one procedure per resource, though there is nothing stopping multiple resources - one per procedure.
     List<FamilyMemberHistoryProcedure>? procedure,
-  }) = _FamilyMemberHistory;
+  
 }
 
 /// [FamilyMemberHistoryParticipant] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
-@freezed
+
 class FamilyMemberHistoryParticipant {
   /// [FamilyMemberHistoryParticipant] Significant health conditions for a
   ///  person related to the patient relevant in the context of care for the
@@ -3182,7 +3181,7 @@ class FamilyMemberHistoryParticipant {
   /// [actor] Indicates who or what participated in the activities related to
   ///  the family member history.
   ///
-  factory FamilyMemberHistoryParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3214,12 +3213,12 @@ class FamilyMemberHistoryParticipant {
 
     /// [actor] Indicates who or what participated in the activities related to the family member history.
     required Reference actor,
-  }) = _FamilyMemberHistoryParticipant;
+  
 }
 
 /// [FamilyMemberHistoryCondition] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
-@freezed
+
 class FamilyMemberHistoryCondition {
   /// [FamilyMemberHistoryCondition] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
@@ -3287,7 +3286,7 @@ class FamilyMemberHistoryCondition {
   /// [note] An area where general notes can be placed about this specific
   ///  condition.
   ///
-  factory FamilyMemberHistoryCondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3343,12 +3342,12 @@ class FamilyMemberHistoryCondition {
 
     /// [note] An area where general notes can be placed about this specific condition.
     List<Annotation>? note,
-  }) = _FamilyMemberHistoryCondition;
+  
 }
 
 /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
-@freezed
+
 class FamilyMemberHistoryProcedure {
   /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
@@ -3428,7 +3427,7 @@ class FamilyMemberHistoryProcedure {
   /// [note] An area where general notes can be placed about this specific
   ///  procedure.
   ///
-  factory FamilyMemberHistoryProcedure({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3490,7 +3489,7 @@ class FamilyMemberHistoryProcedure {
 
     /// [note] An area where general notes can be placed about this specific procedure.
     List<Annotation>? note,
-  }) = _FamilyMemberHistoryProcedure;
+  
 }
 
 /// [Procedure] An action that is or was performed on or for a patient,
@@ -3499,7 +3498,7 @@ class FamilyMemberHistoryProcedure {
 ///  like long term services, counseling, or hypnotherapy.  This can be a
 ///  quality or safety inspection for a location, organization, or device.
 ///  This can be an accreditation procedure on a practitioner for licensing.
-@freezed
+
 class Procedure {
   /// [Procedure] An action that is or was performed on or for a patient,
   ///  practitioner, device, organization, or location. For example, this can
@@ -3728,7 +3727,7 @@ class Procedure {
   ///  interpretation. This extension should not be used if more specific
   ///  inline elements or extensions are available.
   ///
-  factory Procedure({
+  
     /// [resourceType] This is a Procedure resource
     @Default(R5ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R5ResourceType.Procedure)
@@ -3889,7 +3888,7 @@ class Procedure {
 
     /// [supportingInfo] Other resources from the patient record that may be relevant to the procedure.  The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension should not be used if more specific inline elements or extensions are available.
     List<Reference>? supportingInfo,
-  }) = _Procedure;
+  
 }
 
 /// [ProcedurePerformer] An action that is or was performed on or for a
@@ -3899,7 +3898,7 @@ class Procedure {
 ///  can be a quality or safety inspection for a location, organization, or
 ///  device.  This can be an accreditation procedure on a practitioner for
 ///  licensing.
-@freezed
+
 class ProcedurePerformer {
   /// [ProcedurePerformer] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,
@@ -3952,7 +3951,7 @@ class ProcedurePerformer {
   ///
   /// [period] Time period during which the performer performed the procedure.
   ///
-  factory ProcedurePerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3990,7 +3989,7 @@ class ProcedurePerformer {
 
     /// [period] Time period during which the performer performed the procedure.
     Period? period,
-  }) = _ProcedurePerformer;
+  
 }
 
 /// [ProcedureFocalDevice] An action that is or was performed on or for a
@@ -4000,7 +3999,7 @@ class ProcedurePerformer {
 ///  can be a quality or safety inspection for a location, organization, or
 ///  device.  This can be an accreditation procedure on a practitioner for
 ///  licensing.
-@freezed
+
 class ProcedureFocalDevice {
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,
@@ -4048,7 +4047,7 @@ class ProcedureFocalDevice {
   /// [manipulated] The device that was manipulated (changed) during the
   ///  procedure.
   ///
-  factory ProcedureFocalDevice({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -4080,5 +4079,5 @@ class ProcedureFocalDevice {
 
     /// [manipulated] The device that was manipulated (changed) during the procedure.
     required Reference manipulated,
-  }) = _ProcedureFocalDevice;
+  
 }

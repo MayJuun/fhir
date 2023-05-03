@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'payment.enums.dart';
-part 'payment.freezed.dart';
+
 part 'payment.g.dart';
 
-@freezed
 class PaymentNotice {
-  factory PaymentNotice({
+  
     @Default(Dstu2ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
@@ -39,12 +38,11 @@ class PaymentNotice {
     Reference? request,
     Reference? response,
     required Coding paymentStatus,
-  }) = _PaymentNotice;
+  
 }
 
-@freezed
 class PaymentReconciliation {
-  factory PaymentReconciliation({
+  
     @Default(Dstu2ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
@@ -77,12 +75,11 @@ class PaymentReconciliation {
     Coding? form,
     required Quantity total,
     List<PaymentReconciliationNote>? note,
-  }) = _PaymentReconciliation;
+  
 }
 
-@freezed
 class PaymentReconciliationDetail {
-  factory PaymentReconciliationDetail({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -94,12 +91,11 @@ class PaymentReconciliationDetail {
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Quantity? amount,
-  }) = _PaymentReconciliationDetail;
+  
 }
 
-@freezed
 class PaymentReconciliationNote {
-  factory PaymentReconciliationNote({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -107,5 +103,5 @@ class PaymentReconciliationNote {
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationNote;
+  
 }

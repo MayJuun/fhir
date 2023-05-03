@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
 /// [ResearchStudy] A process where a researcher or organization plans and
-@freezed
+
 class ResearchStudy {
   /// [ResearchStudy] A process where a researcher or organization plans and
 
@@ -157,7 +156,7 @@ class ResearchStudy {
   /// [objective] A goal that the study is aiming to achieve in terms of a
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
-  factory ResearchStudy({
+  
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
 
@@ -338,11 +337,11 @@ class ResearchStudy {
     /// scientific question to be answered by the analysis of data collected
     ///  during the study.
     List<ResearchStudyObjective>? objective,
-  }) = _ResearchStudy;
+  
 }
 
 /// [ResearchStudyArm] A process where a researcher or organization plans
-@freezed
+
 class ResearchStudyArm {
   /// [ResearchStudyArm] A process where a researcher or organization plans
 
@@ -389,7 +388,7 @@ class ResearchStudyArm {
   ///  would be followed by a subject adhering to this arm.
   ///
   /// [descriptionElement] Extensions for description
-  factory ResearchStudyArm({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -433,11 +432,11 @@ class ResearchStudyArm {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ResearchStudyArm;
+  
 }
 
 /// [ResearchStudyObjective] A process where a researcher or organization
-@freezed
+
 class ResearchStudyObjective {
   /// [ResearchStudyObjective] A process where a researcher or organization
 
@@ -478,7 +477,7 @@ class ResearchStudyObjective {
   /// [nameElement] Extensions for name
   ///
   /// [type] The kind of study objective.
-  factory ResearchStudyObjective({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -514,11 +513,11 @@ class ResearchStudyObjective {
 
     /// [type] The kind of study objective.
     CodeableConcept? type,
-  }) = _ResearchStudyObjective;
+  
 }
 
 /// [ResearchSubject] A physical entity which is the primary unit of
-@freezed
+
 class ResearchSubject {
   /// [ResearchSubject] A physical entity which is the primary unit of
 
@@ -604,7 +603,7 @@ class ResearchSubject {
   ///
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
-  factory ResearchSubject({
+  
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
 
@@ -715,5 +714,5 @@ class ResearchSubject {
     /// [consent] A record of the patient's informed agreement to participate in
     ///  the study.
     Reference? consent,
-  }) = _ResearchSubject;
+  
 }

@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'medication_and_immunization.enums.dart';
-part 'medication_and_immunization.freezed.dart';
+
 part 'medication_and_immunization.g.dart';
 
-@freezed
 class Medication {
-  factory Medication({
+  
     @Default(Dstu2ResourceType.Medication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
         Dstu2ResourceType resourceType,
@@ -33,12 +32,11 @@ class Medication {
     Reference? manufacturer,
     MedicationProduct? product,
     MedicationPackage? package,
-  }) = _Medication;
+  
 }
 
-@freezed
 class MedicationProduct {
-  factory MedicationProduct({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -46,23 +44,21 @@ class MedicationProduct {
     CodeableConcept? form,
     List<MedicationProductIngredient>? ingredient,
     List<MedicationProductBatch>? batch,
-  }) = _MedicationProduct;
+  
 }
 
-@freezed
 class MedicationProductIngredient {
-  factory MedicationProductIngredient({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
     Ratio? amount,
-  }) = _MedicationProductIngredient;
+  
 }
 
-@freezed
 class MedicationProductBatch {
-  factory MedicationProductBatch({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -70,35 +66,32 @@ class MedicationProductBatch {
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
     FhirDateTime? expirationDate,
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
-  }) = _MedicationProductBatch;
+  
 }
 
-@freezed
 class MedicationPackage {
-  factory MedicationPackage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     CodeableConcept? container,
     List<MedicationPackageContent>? content,
-  }) = _MedicationPackage;
+  
 }
 
-@freezed
 class MedicationPackageContent {
-  factory MedicationPackageContent({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference item,
     Quantity? amount,
-  }) = _MedicationPackageContent;
+  
 }
 
-@freezed
 class MedicationOrder {
-  factory MedicationOrder({
+  
     @Default(Dstu2ResourceType.MedicationOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
         Dstu2ResourceType resourceType,
@@ -130,12 +123,11 @@ class MedicationOrder {
     MedicationOrderDispenseRequest? dispenseRequest,
     MedicationOrderSubstitution? substitution,
     Reference? priorPrescription,
-  }) = _MedicationOrder;
+  
 }
 
-@freezed
 class MedicationOrderDosageInstruction {
-  factory MedicationOrderDosageInstruction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -153,23 +145,21 @@ class MedicationOrderDosageInstruction {
     Ratio? rateRatio,
     Range? rateRange,
     Ratio? maxDosePerPeriod,
-  }) = _MedicationOrderDosageInstruction;
+  
 }
 
-@freezed
 class MedicationOrderSubstitution {
-  factory MedicationOrderSubstitution({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
     CodeableConcept? reason,
-  }) = _MedicationOrderSubstitution;
+  
 }
 
-@freezed
 class MedicationAdministration {
-  factory MedicationAdministration({
+  
     @Default(Dstu2ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
         Dstu2ResourceType resourceType,
@@ -202,12 +192,11 @@ class MedicationAdministration {
     List<Reference>? device,
     String? note,
     MedicationAdministrationDosage? dosage,
-  }) = _MedicationAdministration;
+  
 }
 
-@freezed
 class MedicationAdministrationDosage {
-  factory MedicationAdministrationDosage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -220,12 +209,11 @@ class MedicationAdministrationDosage {
     Quantity? quantity,
     Ratio? rateRatio,
     Range? rateRange,
-  }) = _MedicationAdministrationDosage;
+  
 }
 
-@freezed
 class MedicationDispense {
-  factory MedicationDispense({
+  
     @Default(Dstu2ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
         Dstu2ResourceType resourceType,
@@ -260,13 +248,12 @@ class MedicationDispense {
     String? note,
     List<MedicationDispenseDosageInstruction>? dosageInstruction,
     MedicationDispenseSubstitution? substitution,
-  }) = _MedicationDispense;
+  
 }
 
-@freezed
 class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
-  factory MedicationDispenseDosageInstruction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -284,12 +271,11 @@ class MedicationDispenseDosageInstruction
     Ratio? rateRatio,
     Range? rateRange,
     Ratio? maxDosePerPeriod,
-  }) = _MedicationDispenseDosageInstruction;
+  
 }
 
-@freezed
 class MedicationStatement {
-  factory MedicationStatement({
+  
     @Default(Dstu2ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
         Dstu2ResourceType resourceType,
@@ -323,12 +309,11 @@ class MedicationStatement {
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
     List<MedicationStatementDosage>? dosage,
-  }) = _MedicationStatement;
+  
 }
 
-@freezed
 class MedicationStatementDosage {
-  factory MedicationStatementDosage({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -345,12 +330,11 @@ class MedicationStatementDosage {
     Ratio? rateRatio,
     Range? rateRange,
     Ratio? maxDosePerPeriod,
-  }) = _MedicationStatementDosage;
+  
 }
 
-@freezed
 class Immunization {
-  factory Immunization({
+  
     @Default(Dstu2ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
         Dstu2ResourceType resourceType,
@@ -389,23 +373,21 @@ class Immunization {
     ImmunizationExplanation? explanation,
     List<ImmunizationReaction>? reaction,
     List<ImmunizationVaccinationProtocol>? vaccinationProtocol,
-  }) = _Immunization;
+  
 }
 
-@freezed
 class ImmunizationExplanation {
-  factory ImmunizationExplanation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? reason,
     List<CodeableConcept>? reasonNotGiven,
-  }) = _ImmunizationExplanation;
+  
 }
 
-@freezed
 class ImmunizationReaction {
-  factory ImmunizationReaction({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -414,12 +396,11 @@ class ImmunizationReaction {
     Reference? detail,
     Boolean? reported,
     @JsonKey(name: '_reported') Element? reportedElement,
-  }) = _ImmunizationReaction;
+  
 }
 
-@freezed
 class ImmunizationVaccinationProtocol {
-  factory ImmunizationVaccinationProtocol({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -432,12 +413,11 @@ class ImmunizationVaccinationProtocol {
     List<CodeableConcept>? targetDisease,
     required CodeableConcept doseStatus,
     CodeableConcept? doseStatusReason,
-  }) = _ImmunizationVaccinationProtocol;
+  
 }
 
-@freezed
 class ImmunizationRecommendation {
-  factory ImmunizationRecommendation({
+  
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
         Dstu2ResourceType resourceType,
@@ -455,13 +435,12 @@ class ImmunizationRecommendation {
     required Reference patient,
     @JsonKey(required: true)
         required List<ImmunizationRecommendationRecommendation> recommendation,
-  }) = _ImmunizationRecommendation;
+  
 }
 
-@freezed
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
-  factory ImmunizationRecommendationRecommendation({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -473,7 +452,7 @@ class ImmunizationRecommendationRecommendation
     ImmunizationRecommendationRecommendationProtocol? protocol,
     List<Reference>? supportingImmunization,
     List<Reference>? supportingPatientInformation,
-  }) = _ImmunizationRecommendationRecommendation;
+  
 
   String toYaml() => json2yaml(toJson());
 
@@ -493,17 +472,16 @@ class ImmunizationRecommendationRecommendation
       _$ImmunizationRecommendationRecommendationFromJson(json);
 }
 
-@freezed
 class ImmunizationRecommendationRecommendationDateCriterion
     with _$ImmunizationRecommendationRecommendationDateCriterion {
-  factory ImmunizationRecommendationRecommendationDateCriterion({
+  
     Id? id,
     FhirExtension? extensio,
     FhirExtension? modifier,
     required CodeableConcept code,
     required FhirDateTime value,
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ImmunizationRecommendationRecommendationDateCriterion;
+  
 
   String toYaml() => json2yaml(toJson());
 
@@ -524,10 +502,9 @@ class ImmunizationRecommendationRecommendationDateCriterion
       _$ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
 }
 
-@freezed
 class ImmunizationRecommendationRecommendationProtocol
     with _$ImmunizationRecommendationRecommendationProtocol {
-  factory ImmunizationRecommendationRecommendationProtocol({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExten,
@@ -536,7 +513,7 @@ class ImmunizationRecommendationRecommendationProtocol
     Reference? authority,
     String? series,
     @JsonKey(name: '_series') Element? seriesElement,
-  }) = _ImmunizationRecommendationRecommendationProtocol;
+  
 
   String toYaml() => json2yaml(toJson());
 

@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'support.enums.dart';
-part 'support.freezed.dart';
+
 part 'support.g.dart';
 
-@freezed
 class Coverage {
-  factory Coverage({
+  
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
         Dstu2ResourceType resourceType,
@@ -45,12 +44,11 @@ class Coverage {
     Identifier? network,
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,
-  }) = _Coverage;
+  
 }
 
-@freezed
 class EligibilityRequest {
-  factory EligibilityRequest({
+  
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
         Dstu2ResourceType resourceType,
@@ -72,12 +70,11 @@ class EligibilityRequest {
     Reference? target,
     Reference? provider,
     Reference? organization,
-  }) = _EligibilityRequest;
+  
 }
 
-@freezed
 class EligibilityResponse {
-  factory EligibilityResponse({
+  
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
         Dstu2ResourceType resourceType,
@@ -105,12 +102,11 @@ class EligibilityResponse {
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-  }) = _EligibilityResponse;
+  
 }
 
-@freezed
 class EnrollmentRequest {
-  factory EnrollmentRequest({
+  
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
         Dstu2ResourceType resourceType,
@@ -135,12 +131,11 @@ class EnrollmentRequest {
     required Reference subject,
     required Reference coverage,
     required Coding relationship,
-  }) = _EnrollmentRequest;
+  
 }
 
-@freezed
 class EnrollmentResponse {
-  factory EnrollmentResponse({
+  
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
         Dstu2ResourceType resourceType,
@@ -168,5 +163,5 @@ class EnrollmentResponse {
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-  }) = _EnrollmentResponse;
+  
 }

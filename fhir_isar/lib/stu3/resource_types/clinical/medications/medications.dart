@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'medications.enums.dart';
-part 'medications.freezed.dart';
+
 part 'medications.g.dart';
 
-@freezed
 class Immunization {
-  factory Immunization({
+  
     @Default(Stu3ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
         Stu3ResourceType resourceType,
@@ -55,39 +54,35 @@ class Immunization {
     ImmunizationExplanation? explanation,
     List<ImmunizationReaction>? reaction,
     List<ImmunizationVaccinationProtocol>? vaccinationProtocol,
-  }) = _Immunization;
+  
 }
 
-@freezed
 class ImmunizationPractitioner {
-  factory ImmunizationPractitioner({
+  
     CodeableConcept? role,
     required Reference actor,
-  }) = _ImmunizationPractitioner;
+  
 }
 
-@freezed
 class ImmunizationExplanation {
-  factory ImmunizationExplanation({
+  
     List<CodeableConcept>? reason,
     List<CodeableConcept>? reasonNotGiven,
-  }) = _ImmunizationExplanation;
+  
 }
 
-@freezed
 class ImmunizationReaction {
-  factory ImmunizationReaction({
+  
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? detail,
     Boolean? reported,
     @JsonKey(name: '_reported') Element? reportedElement,
-  }) = _ImmunizationReaction;
+  
 }
 
-@freezed
 class ImmunizationVaccinationProtocol {
-  factory ImmunizationVaccinationProtocol({
+  
     Decimal? doseSequence,
     @JsonKey(name: '_doseSequence') Element? doseSequenceElement,
     String? description,
@@ -100,12 +95,11 @@ class ImmunizationVaccinationProtocol {
     required List<CodeableConcept> targetDisease,
     required CodeableConcept doseStatus,
     CodeableConcept? doseStatusReason,
-  }) = _ImmunizationVaccinationProtocol;
+  
 }
 
-@freezed
 class ImmunizationRecommendation {
-  factory ImmunizationRecommendation({
+  
     @Default(Stu3ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
         Stu3ResourceType resourceType,
@@ -122,13 +116,12 @@ class ImmunizationRecommendation {
     List<Identifier>? identifier,
     required Reference patient,
     required List<ImmunizationRecommendationRecommendation> recommendation,
-  }) = _ImmunizationRecommendation;
+  
 }
 
-@freezed
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
-  factory ImmunizationRecommendationRecommendation({
+  
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? vaccineCode,
@@ -140,51 +133,46 @@ class ImmunizationRecommendationRecommendation
     ImmunizationRecommendationProtocol? protocol,
     List<Reference>? supportingImmunization,
     List<Reference>? supportingPatientInformation,
-  }) = _ImmunizationRecommendationRecommendation;
+  
 }
 
-@freezed
 class MedicationIngredient {
-  factory MedicationIngredient({
+  
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     Boolean? isActive,
     @JsonKey(name: '_isActive') Element? isActiveElement,
     Ratio? amount,
-  }) = _MedicationIngredient;
+  
 }
 
-@freezed
 class MedicationPackage {
-  factory MedicationPackage({
+  
     CodeableConcept? container,
     List<MedicationContent>? content,
     List<MedicationBatch>? batch,
-  }) = _MedicationPackage;
+  
 }
 
-@freezed
 class MedicationContent {
-  factory MedicationContent({
+  
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     Quantity? amount,
-  }) = _MedicationContent;
+  
 }
 
-@freezed
 class MedicationBatch {
-  factory MedicationBatch({
+  
     String? lotNumber,
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
     Date? expirationDate,
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
-  }) = _MedicationBatch;
+  
 }
 
-@freezed
 class MedicationAdministration {
-  factory MedicationAdministration({
+  
     @Default(Stu3ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
         Stu3ResourceType resourceType,
@@ -223,21 +211,19 @@ class MedicationAdministration {
     List<Annotation>? note,
     MedicationAdministrationDosage? dosage,
     List<Reference>? eventHistory,
-  }) = _MedicationAdministration;
+  
 }
 
-@freezed
 class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
-  factory MedicationAdministrationPerformer({
+  
     required Reference actor,
     Reference? onBehalfOf,
-  }) = _MedicationAdministrationPerformer;
+  
 }
 
-@freezed
 class MedicationDispense {
-  factory MedicationDispense({
+  
     @Default(Stu3ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
         Stu3ResourceType resourceType,
@@ -281,31 +267,28 @@ class MedicationDispense {
     CodeableConcept? notDoneReasonCodeableConcept,
     Reference? notDoneReasonReference,
     List<Reference>? eventHistory,
-  }) = _MedicationDispense;
+  
 }
 
-@freezed
 class MedicationDispensePerformer {
-  factory MedicationDispensePerformer({
+  
     required Reference actor,
     Reference? onBehalfOf,
-  }) = _MedicationDispensePerformer;
+  
 }
 
-@freezed
 class MedicationDispenseSubstitution {
-  factory MedicationDispenseSubstitution({
+  
     Boolean? wasSubstituted,
     @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
     CodeableConcept? type,
     List<CodeableConcept>? reason,
     List<Reference>? responsibleParty,
-  }) = _MedicationDispenseSubstitution;
+  
 }
 
-@freezed
 class MedicationRequest {
-  factory MedicationRequest({
+  
     @Default(Stu3ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
         Stu3ResourceType resourceType,
@@ -348,20 +331,18 @@ class MedicationRequest {
     Reference? priorPrescription,
     List<Reference>? detectedIssue,
     List<Reference>? eventHistory,
-  }) = _MedicationRequest;
+  
 }
 
-@freezed
 class MedicationRequestRequester {
-  factory MedicationRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _MedicationRequestRequester;
+  
 }
 
-@freezed
 class MedicationRequestDispenseRequest {
-  factory MedicationRequestDispenseRequest({
+  
     Period? validityPeriod,
     Decimal? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
@@ -369,12 +350,11 @@ class MedicationRequestDispenseRequest {
     Quantity? quantity,
     FhirDuration? expectedSupplyDuration,
     Reference? performer,
-  }) = _MedicationRequestDispenseRequest;
+  
 }
 
-@freezed
 class MedicationStatement {
-  factory MedicationStatement({
+  
     @Default(Stu3ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
         Stu3ResourceType resourceType,
@@ -412,5 +392,5 @@ class MedicationStatement {
     List<Reference>? reasonReference,
     List<Annotation>? note,
     List<Dosage>? dosage,
-  }) = _MedicationStatement;
+  
 }

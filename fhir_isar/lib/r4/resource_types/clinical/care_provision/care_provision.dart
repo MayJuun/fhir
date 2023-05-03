@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
 /// [CarePlan] Describes the intention of how one or more practitioners
-@freezed
+
 class CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners
 
@@ -156,7 +155,7 @@ class CarePlan {
   ///  education, etc.
   ///
   /// [note] General notes about the care plan not covered elsewhere.
-  factory CarePlan({
+  
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
 
@@ -344,11 +343,11 @@ class CarePlan {
 
     /// [note] General notes about the care plan not covered elsewhere.
     List<Annotation>? note,
-  }) = _CarePlan;
+  
 }
 
 /// [CarePlanActivity] Describes the intention of how one or more
-@freezed
+
 class CarePlanActivity {
   /// [CarePlanActivity] Describes the intention of how one or more
 
@@ -399,7 +398,7 @@ class CarePlanActivity {
   /// [detail] A simple summary of a planned activity suitable for a general
   /// care plan system (e.g. form driven) that doesn't know about specific
   ///  resources such as procedure etc.
-  factory CarePlanActivity({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -450,11 +449,11 @@ class CarePlanActivity {
     /// care plan system (e.g. form driven) that doesn't know about specific
     ///  resources such as procedure etc.
     CarePlanDetail? detail,
-  }) = _CarePlanActivity;
+  
 }
 
 /// [CarePlanDetail] Describes the intention of how one or more
-@freezed
+
 class CarePlanDetail {
   /// [CarePlanDetail] Describes the intention of how one or more
 
@@ -569,7 +568,7 @@ class CarePlanDetail {
   ///  route, etc.
   ///
   /// [descriptionElement] Extensions for description
-  factory CarePlanDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -705,11 +704,11 @@ class CarePlanDetail {
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CarePlanDetail;
+  
 }
 
 /// [CareTeam] The Care Team includes all the people and organizations who
-@freezed
+
 class CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who
 
@@ -809,7 +808,7 @@ class CareTeam {
   ///  members).
   ///
   /// [note] Comments made about the CareTeam.
-  factory CareTeam({
+  
     @Default(R4ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
 
@@ -936,11 +935,11 @@ class CareTeam {
 
     /// [note] Comments made about the CareTeam.
     List<Annotation>? note,
-  }) = _CareTeam;
+  
 }
 
 /// [CareTeamParticipant] The Care Team includes all the people and
-@freezed
+
 class CareTeamParticipant {
   /// [CareTeamParticipant] The Care Team includes all the people and
 
@@ -983,7 +982,7 @@ class CareTeamParticipant {
   ///
   /// [period] Indicates when the specific member or organization did (or is
   ///  intended to) come into effect and end.
-  factory CareTeamParticipant({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1026,11 +1025,11 @@ class CareTeamParticipant {
     /// [period] Indicates when the specific member or organization did (or is
     ///  intended to) come into effect and end.
     Period? period,
-  }) = _CareTeamParticipant;
+  
 }
 
 /// [Goal] Describes the intended objective(s) for a patient, group or
-@freezed
+
 class Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
 
@@ -1146,7 +1145,7 @@ class Goal {
   ///  the status of the goal is assessed.
   ///
   /// [outcomeReference] Details of what's changed (or not changed).
-  factory Goal({
+  
     @Default(R4ResourceType.Goal)
     @JsonKey(unknownEnumValue: R4ResourceType.Goal)
 
@@ -1296,11 +1295,11 @@ class Goal {
 
     /// [outcomeReference] Details of what's changed (or not changed).
     List<Reference>? outcomeReference,
-  }) = _Goal;
+  
 }
 
 /// [GoalTarget] Describes the intended objective(s) for a patient, group or
-@freezed
+
 class GoalTarget {
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
 
@@ -1399,7 +1398,7 @@ class GoalTarget {
   ///
   /// [dueDuration] Indicates either the date or the duration after start by
   ///  which the goal should be met.
-  factory GoalTarget({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1507,11 +1506,11 @@ class GoalTarget {
     /// [dueDuration] Indicates either the date or the duration after start by
     ///  which the goal should be met.
     FhirDuration? dueDuration,
-  }) = _GoalTarget;
+  
 }
 
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
-@freezed
+
 class NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
 
@@ -1645,7 +1644,7 @@ class NutritionOrder {
   ///
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
-  factory NutritionOrder({
+  
     @Default(R4ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
 
@@ -1817,11 +1816,11 @@ class NutritionOrder {
     /// [note] Comments made about the {{title}} by the requester, performer,
     ///  subject or other participants.
     List<Annotation>? note,
-  }) = _NutritionOrder;
+  
 }
 
 /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
-@freezed
+
 class NutritionOrderOralDiet {
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
 
@@ -1874,7 +1873,7 @@ class NutritionOrderOralDiet {
   ///  pertaining to the oral diet.
   ///
   /// [instructionElement] Extensions for instruction
-  factory NutritionOrderOralDiet({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1931,11 +1930,11 @@ class NutritionOrderOralDiet {
 
     /// [instructionElement] Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderOralDiet;
+  
 }
 
 /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
-@freezed
+
 class NutritionOrderNutrient {
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
 
@@ -1970,7 +1969,7 @@ class NutritionOrderNutrient {
   ///  sodium.
   ///
   /// [amount] The quantity of the specified nutrient to include in diet.
-  factory NutritionOrderNutrient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2004,11 +2003,11 @@ class NutritionOrderNutrient {
 
     /// [amount] The quantity of the specified nutrient to include in diet.
     Quantity? amount,
-  }) = _NutritionOrderNutrient;
+  
 }
 
 /// [NutritionOrderTexture] A request to supply a diet, formula feeding
-@freezed
+
 class NutritionOrderTexture {
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
 
@@ -2044,7 +2043,7 @@ class NutritionOrderTexture {
   ///
   /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture
   ///  modification applies to.  This could be all foods types.
-  factory NutritionOrderTexture({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2079,11 +2078,11 @@ class NutritionOrderTexture {
     /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture
     ///  modification applies to.  This could be all foods types.
     CodeableConcept? foodType,
-  }) = _NutritionOrderTexture;
+  
 }
 
 /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
-@freezed
+
 class NutritionOrderSupplement {
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
 
@@ -2132,7 +2131,7 @@ class NutritionOrderSupplement {
   ///  pertaining to the oral supplement.
   ///
   /// [instructionElement] Extensions for instruction
-  factory NutritionOrderSupplement({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2185,11 +2184,11 @@ class NutritionOrderSupplement {
 
     /// [instructionElement] Extensions for instruction
     @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderSupplement;
+  
 }
 
 /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
-@freezed
+
 class NutritionOrderEnteralFormula {
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
 
@@ -2260,7 +2259,7 @@ class NutritionOrderEnteralFormula {
   ///  instructions or additional instructions or information.
   ///
   /// [administrationInstructionElement] Extensions for administrationInstruction
-  factory NutritionOrderEnteralFormula({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2344,11 +2343,11 @@ class NutritionOrderEnteralFormula {
 
         /// [administrationInstructionElement] Extensions for administrationInstruction
         Element? administrationInstructionElement,
-  }) = _NutritionOrderEnteralFormula;
+  
 }
 
 /// [NutritionOrderAdministration] A request to supply a diet, formula
-@freezed
+
 class NutritionOrderAdministration {
   /// [NutritionOrderAdministration] A request to supply a diet, formula
 
@@ -2390,7 +2389,7 @@ class NutritionOrderAdministration {
   ///
   /// [rateRatio] The rate of administration of formula via a feeding pump,
   ///  e.g. 60 mL per hour, according to the specified schedule.
-  factory NutritionOrderAdministration({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2433,11 +2432,11 @@ class NutritionOrderAdministration {
     /// [rateRatio] The rate of administration of formula via a feeding pump,
     ///  e.g. 60 mL per hour, according to the specified schedule.
     Ratio? rateRatio,
-  }) = _NutritionOrderAdministration;
+  
 }
 
 /// [RequestGroup] A group of related requests that can be used to capture
-@freezed
+
 class RequestGroup {
   /// [RequestGroup] A group of related requests that can be used to capture
 
@@ -2560,7 +2559,7 @@ class RequestGroup {
   ///  the response.
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
-  factory RequestGroup({
+  
     @Default(R4ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
 
@@ -2723,11 +2722,11 @@ class RequestGroup {
 
     /// [action] The actions, if any, produced by the evaluation of the artifact.
     List<RequestGroupAction>? action,
-  }) = _RequestGroup;
+  
 }
 
 /// [RequestGroupAction] A group of related requests that can be used to
-@freezed
+
 class RequestGroupAction {
   /// [RequestGroupAction] A group of related requests that can be used to
 
@@ -2852,7 +2851,7 @@ class RequestGroupAction {
   ///  CommunicationRequest).
   ///
   /// [action] Sub actions.
-  factory RequestGroupAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3008,11 +3007,11 @@ class RequestGroupAction {
 
     /// [action] Sub actions.
     List<RequestGroupAction>? action,
-  }) = _RequestGroupAction;
+  
 }
 
 /// [RequestGroupCondition] A group of related requests that can be used to
-@freezed
+
 class RequestGroupCondition {
   /// [RequestGroupCondition] A group of related requests that can be used to
 
@@ -3050,7 +3049,7 @@ class RequestGroupCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
-  factory RequestGroupCondition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3087,11 +3086,11 @@ class RequestGroupCondition {
     /// [expression] An expression that returns true or false, indicating whether
     ///  or not the condition is satisfied.
     Expression? expression,
-  }) = _RequestGroupCondition;
+  
 }
 
 /// [RequestGroupRelatedAction] A group of related requests that can be used
-@freezed
+
 class RequestGroupRelatedAction {
   /// [RequestGroupRelatedAction] A group of related requests that can be used
 
@@ -3136,7 +3135,7 @@ class RequestGroupRelatedAction {
   ///
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
-  factory RequestGroupRelatedAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3183,11 +3182,11 @@ class RequestGroupRelatedAction {
     /// [offsetRange] A duration or range of durations to apply to the
     ///  relationship. For example, 30-60 minutes before.
     Range? offsetRange,
-  }) = _RequestGroupRelatedAction;
+  
 }
 
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
-@freezed
+
 class RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
 
@@ -3298,7 +3297,7 @@ class RiskAssessment {
   /// [mitigationElement] Extensions for mitigation
   ///
   /// [note] Additional comments about the risk assessment.
-  factory RiskAssessment({
+  
     @Default(R4ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
 
@@ -3444,11 +3443,11 @@ class RiskAssessment {
 
     /// [note] Additional comments about the risk assessment.
     List<Annotation>? note,
-  }) = _RiskAssessment;
+  
 }
 
 /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
-@freezed
+
 class RiskAssessmentPrediction {
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
 
@@ -3510,7 +3509,7 @@ class RiskAssessmentPrediction {
   ///  prediction.
   ///
   /// [rationaleElement] Extensions for rationale
-  factory RiskAssessmentPrediction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3580,11 +3579,11 @@ class RiskAssessmentPrediction {
 
     /// [rationaleElement] Extensions for rationale
     @JsonKey(name: '_rationale') Element? rationaleElement,
-  }) = _RiskAssessmentPrediction;
+  
 }
 
 /// [ServiceRequest] A record of a request for service such as diagnostic
-@freezed
+
 class ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
 
@@ -3795,7 +3794,7 @@ class ServiceRequest {
   /// [patientInstructionElement] Extensions for patientInstruction
   ///
   /// [relevantHistory] Key events in the history of the request.
-  factory ServiceRequest({
+  
     @Default(R4ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
 
@@ -4073,11 +4072,11 @@ class ServiceRequest {
 
     /// [relevantHistory] Key events in the history of the request.
     List<Reference>? relevantHistory,
-  }) = _ServiceRequest;
+  
 }
 
 /// [VisionPrescription] An authorization for the provision of glasses and/or
-@freezed
+
 class VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
 
@@ -4165,7 +4164,7 @@ class VisionPrescription {
   /// [lensSpecification] Contain the details of  the individual lens
   /// specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
-  factory VisionPrescription({
+  
     @Default(R4ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
 
@@ -4278,10 +4277,9 @@ class VisionPrescription {
     /// specifications and serves as the authorization for the fullfillment by
     ///  certified professionals.
     required List<VisionPrescriptionLensSpecification> lensSpecification,
-  }) = _VisionPrescription;
+  
 }
 
-@freezed
 class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
   /// [VisionPrescriptionLensSpecification] An authorization for the provision
@@ -4362,7 +4360,7 @@ class VisionPrescriptionLensSpecification
   ///
   /// [note] Notes for special requirements such as coatings and lens
   ///  materials.
-  factory VisionPrescriptionLensSpecification({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4465,5 +4463,5 @@ class VisionPrescriptionLensSpecification
     /// [note] Notes for special requirements such as coatings and lens
     ///  materials.
     List<Annotation>? note,
-  }) = _VisionPrescriptionLensSpecification;
+  
 }

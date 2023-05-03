@@ -2,20 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
 
 /// [Communication] A clinical or business level record of information being
 ///  transmitted or shared; e.g. an alert that was sent to a responsible
 ///  provider, a public health agency communication to a provider/reporter in
 ///  response to a case report for a reportable condition.
-@freezed
+
 class Communication {
   /// [Communication] A clinical or business level record of information being
   ///  transmitted or shared; e.g. an alert that was sent to a responsible
@@ -156,7 +155,7 @@ class Communication {
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
   ///
-  factory Communication({
+  
     /// [resourceType] This is a Communication resource
     @Default(R5ResourceType.Communication)
     @JsonKey(unknownEnumValue: R5ResourceType.Communication)
@@ -278,14 +277,14 @@ class Communication {
 
     /// [note] Additional notes or commentary about the communication by the sender, receiver or other interested parties.
     List<Annotation>? note,
-  }) = _Communication;
+  
 }
 
 /// [CommunicationPayload] A clinical or business level record of information
 ///  being transmitted or shared; e.g. an alert that was sent to a responsible
 ///  provider, a public health agency communication to a provider/reporter in
 ///  response to a case report for a reportable condition.
-@freezed
+
 class CommunicationPayload {
   /// [CommunicationPayload] A clinical or business level record of information
   ///  being transmitted or shared; e.g. an alert that was sent to a
@@ -332,7 +331,7 @@ class CommunicationPayload {
   /// [contentCodeableConcept] A communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationPayload({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -367,14 +366,14 @@ class CommunicationPayload {
 
     /// [contentCodeableConcept] A communicated content (or for multi-part communications, one portion of the communication).
     CodeableConcept? contentCodeableConcept,
-  }) = _CommunicationPayload;
+  
 }
 
 /// [CommunicationRequest] A request to convey information; e.g. the CDS system
 ///  proposes that an alert be sent to a responsible provider, the CDS system
 ///  proposes that the public health agency be notified about a reportable
 ///  condition.
-@freezed
+
 class CommunicationRequest {
   /// [CommunicationRequest] A request to convey information; e.g. the CDS
   ///  system proposes that an alert be sent to a responsible provider, the CDS
@@ -522,7 +521,7 @@ class CommunicationRequest {
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
   ///
-  factory CommunicationRequest({
+  
     /// [resourceType] This is a CommunicationRequest resource
     @Default(R5ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
@@ -650,14 +649,14 @@ class CommunicationRequest {
 
     /// [note] Comments made about the request by the requester, sender, recipient, subject or other participants.
     List<Annotation>? note,
-  }) = _CommunicationRequest;
+  
 }
 
 /// [CommunicationRequestPayload] A request to convey information; e.g. the CDS
 ///  system proposes that an alert be sent to a responsible provider, the CDS
 ///  system proposes that the public health agency be notified about a
 ///  reportable condition.
-@freezed
+
 class CommunicationRequestPayload {
   /// [CommunicationRequestPayload] A request to convey information; e.g. the
   ///  CDS system proposes that an alert be sent to a responsible provider, the
@@ -702,7 +701,7 @@ class CommunicationRequestPayload {
   /// [contentCodeableConcept] The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationRequestPayload({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -737,11 +736,11 @@ class CommunicationRequestPayload {
 
     /// [contentCodeableConcept] The communicated content (or for multi-part communications, one portion of the communication).
     CodeableConcept? contentCodeableConcept,
-  }) = _CommunicationRequestPayload;
+  
 }
 
 /// [DeviceDispense] A record of dispensation of a device.
-@freezed
+
 class DeviceDispense {
   /// [DeviceDispense] A record of dispensation of a device.
 
@@ -861,7 +860,7 @@ class DeviceDispense {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   ///
-  factory DeviceDispense({
+  
     /// [resourceType] This is a DeviceDispense resource
     @Default(R5ResourceType.DeviceDispense)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDispense)
@@ -974,11 +973,11 @@ class DeviceDispense {
 
     /// [eventHistory] A summary of the events of interest that have occurred, such as when the dispense was verified.
     List<Reference>? eventHistory,
-  }) = _DeviceDispense;
+  
 }
 
 /// [DeviceDispensePerformer] A record of dispensation of a device.
-@freezed
+
 class DeviceDispensePerformer {
   /// [DeviceDispensePerformer] A record of dispensation of a device.
 
@@ -1014,7 +1013,7 @@ class DeviceDispensePerformer {
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the device.
   ///
-  factory DeviceDispensePerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1046,13 +1045,13 @@ class DeviceDispensePerformer {
 
     /// [actor] The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the device.
     required Reference actor,
-  }) = _DeviceDispensePerformer;
+  
 }
 
 /// [DeviceRequest] Represents a request for a patient to employ a medical
 ///  device. The device may be an implantable device, or an external assistive
 ///  device, such as a walker.
-@freezed
+
 class DeviceRequest {
   /// [DeviceRequest] Represents a request for a patient to employ a medical
   ///  device. The device may be an implantable device, or an external
@@ -1229,7 +1228,7 @@ class DeviceRequest {
   ///
   /// [relevantHistory] Key events in the history of the request.
   ///
-  factory DeviceRequest({
+  
     /// [resourceType] This is a DeviceRequest resource
     @Default(R5ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
@@ -1384,13 +1383,13 @@ class DeviceRequest {
 
     /// [relevantHistory] Key events in the history of the request.
     List<Reference>? relevantHistory,
-  }) = _DeviceRequest;
+  
 }
 
 /// [DeviceRequestParameter] Represents a request for a patient to employ a
 ///  medical device. The device may be an implantable device, or an external
 ///  assistive device, such as a walker.
-@freezed
+
 class DeviceRequestParameter {
   /// [DeviceRequestParameter] Represents a request for a patient to employ a
   ///  medical device. The device may be an implantable device, or an external
@@ -1436,7 +1435,7 @@ class DeviceRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory DeviceRequestParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1480,12 +1479,12 @@ class DeviceRequestParameter {
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _DeviceRequestParameter;
+  
 }
 
 /// [DeviceUsage] A record of a device being used by a patient where the record
 ///  is the result of a report from the patient or a clinician.
-@freezed
+
 class DeviceUsage {
   /// [DeviceUsage] A record of a device being used by a patient where the
   ///  record is the result of a report from the patient or a clinician.
@@ -1607,7 +1606,7 @@ class DeviceUsage {
   ///  may include for example a comment, an instruction, or a note associated
   ///  with the statement.
   ///
-  factory DeviceUsage({
+  
     /// [resourceType] This is a DeviceUsage resource
     @Default(R5ResourceType.DeviceUsage)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
@@ -1714,12 +1713,12 @@ class DeviceUsage {
 
     /// [note] Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
     List<Annotation>? note,
-  }) = _DeviceUsage;
+  
 }
 
 /// [DeviceUsageAdherence] A record of a device being used by a patient where
 ///  the record is the result of a report from the patient or a clinician.
-@freezed
+
 class DeviceUsageAdherence {
   /// [DeviceUsageAdherence] A record of a device being used by a patient where
   ///  the record is the result of a report from the patient or a clinician.
@@ -1755,7 +1754,7 @@ class DeviceUsageAdherence {
   ///
   /// [reason] Reason for adherence type.
   ///
-  factory DeviceUsageAdherence({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -1787,13 +1786,13 @@ class DeviceUsageAdherence {
 
     /// [reason] Reason for adherence type.
     required List<CodeableConcept> reason,
-  }) = _DeviceUsageAdherence;
+  
 }
 
 /// [GuidanceResponse] A guidance response is the formal response to a guidance
 ///  request, including any output parameters returned by the evaluation, as
 ///  well as the description of any proposed actions to be taken.
-@freezed
+
 class GuidanceResponse {
   /// [GuidanceResponse] A guidance response is the formal response to a
   ///  guidance request, including any output parameters returned by the
@@ -1936,7 +1935,7 @@ class GuidanceResponse {
   ///  required in order to proceed with the evaluation. A subsequent request
   ///  to the service should include this data.
   ///
-  factory GuidanceResponse({
+  
     /// [resourceType] This is a GuidanceResponse resource
     @Default(R5ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
@@ -2037,11 +2036,11 @@ class GuidanceResponse {
 
     /// [dataRequirement] If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
     List<DataRequirement>? dataRequirement,
-  }) = _GuidanceResponse;
+  
 }
 
 /// [InventoryReport] A report of inventory or stock items.
-@freezed
+
 class InventoryReport {
   /// [InventoryReport] A report of inventory or stock items.
 
@@ -2133,7 +2132,7 @@ class InventoryReport {
   ///
   /// [note] A note associated with the InventoryReport.
   ///
-  factory InventoryReport({
+  
     /// [resourceType] This is a InventoryReport resource
     @Default(R5ResourceType.InventoryReport)
     @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
@@ -2213,11 +2212,11 @@ class InventoryReport {
 
     /// [note] A note associated with the InventoryReport.
     Annotation? note,
-  }) = _InventoryReport;
+  
 }
 
 /// [InventoryReportInventoryListing] A report of inventory or stock items.
-@freezed
+
 class InventoryReportInventoryListing {
   /// [InventoryReportInventoryListing] A report of inventory or stock items.
 
@@ -2258,7 +2257,7 @@ class InventoryReportInventoryListing {
   ///
   /// [items] The item or items in this listing.
   ///
-  factory InventoryReportInventoryListing({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2299,11 +2298,11 @@ class InventoryReportInventoryListing {
 
     /// [items] The item or items in this listing.
     List<InventoryReportItems>? items,
-  }) = _InventoryReportInventoryListing;
+  
 }
 
 /// [InventoryReportItems] A report of inventory or stock items.
-@freezed
+
 class InventoryReportItems {
   /// [InventoryReportItems] A report of inventory or stock items.
 
@@ -2356,7 +2355,7 @@ class InventoryReportItems {
   /// [manufacturingDateElement] ("_manufacturingDate") Extensions for
   ///  manufacturingDate
   ///
-  factory InventoryReportItems({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2415,11 +2414,11 @@ class InventoryReportItems {
 
     /// [manufacturingDateElement] ("_manufacturingDate") Extensions for manufacturingDate
     @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement,
-  }) = _InventoryReportItems;
+  
 }
 
 /// [SupplyDelivery] Record of delivery of what is supplied.
-@freezed
+
 class SupplyDelivery {
   /// [SupplyDelivery] Record of delivery of what is supplied.
 
@@ -2518,7 +2517,7 @@ class SupplyDelivery {
   /// [receiver] Identifies the individual or organization that received the
   ///  delivery.
   ///
-  factory SupplyDelivery({
+  
     /// [resourceType] This is a SupplyDelivery resource
     @Default(R5ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
@@ -2604,11 +2603,11 @@ class SupplyDelivery {
 
     /// [receiver] Identifies the individual or organization that received the delivery.
     List<Reference>? receiver,
-  }) = _SupplyDelivery;
+  
 }
 
 /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
-@freezed
+
 class SupplyDeliverySuppliedItem {
   /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
 
@@ -2651,7 +2650,7 @@ class SupplyDeliverySuppliedItem {
   ///  resource representing the details of the item or a code that identifies
   ///  the item from a known list.
   ///
-  factory SupplyDeliverySuppliedItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -2686,13 +2685,13 @@ class SupplyDeliverySuppliedItem {
 
     /// [itemReference] Identifies the medication, substance, device or biologically derived product being supplied. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.
     Reference? itemReference,
-  }) = _SupplyDeliverySuppliedItem;
+  
 }
 
 /// [SupplyRequest] A record of a request to deliver a medication, substance or
 ///  device used in the healthcare setting to a particular destination for a
 ///  particular person or organization.
-@freezed
+
 class SupplyRequest {
   /// [SupplyRequest] A record of a request to deliver a medication, substance
   ///  or device used in the healthcare setting to a particular destination for
@@ -2809,7 +2808,7 @@ class SupplyRequest {
   ///
   /// [deliverTo] Where the supply is destined to go.
   ///
-  factory SupplyRequest({
+  
     /// [resourceType] This is a SupplyRequest resource
     @Default(R5ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
@@ -2916,13 +2915,13 @@ class SupplyRequest {
 
     /// [deliverTo] Where the supply is destined to go.
     Reference? deliverTo,
-  }) = _SupplyRequest;
+  
 }
 
 /// [SupplyRequestParameter] A record of a request to deliver a medication,
 ///  substance or device used in the healthcare setting to a particular
 ///  destination for a particular person or organization.
-@freezed
+
 class SupplyRequestParameter {
   /// [SupplyRequestParameter] A record of a request to deliver a medication,
   ///  substance or device used in the healthcare setting to a particular
@@ -2968,7 +2967,7 @@ class SupplyRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory SupplyRequestParameter({
+  
     /// [id] Unique id for the element within a resource (for internal
     /// references). This may be any string value that does not contain spaces.
     String? id,
@@ -3012,5 +3011,5 @@ class SupplyRequestParameter {
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _SupplyRequestParameter;
+  
 }

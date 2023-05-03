@@ -2,20 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 /// [Group] Represents a defined collection of entities that may be discussed
 ///  or acted upon collectively but which are not expected to act collectively,
 ///  and are not formally or legally recognized; i.e. a collection of entities
 ///  that isn't an Organization.
-@freezed
+
 class Group {
   /// [Group] Represents a defined collection of entities that may be discussed
   ///  or acted upon collectively but which are not expected to act
@@ -132,7 +131,7 @@ class Group {
   ///
   /// [member] Identifies the resource instances that are members of the group.
   ///
-  factory Group({
+  
     /// [resourceType] This is a Group resource
     @Default(R5ResourceType.Group)
     @JsonKey(unknownEnumValue: R5ResourceType.Group)
@@ -271,14 +270,14 @@ class Group {
     /// [member] Identifies the resource instances that are members of the
     ///  group.
     List<GroupMember>? member,
-  }) = _Group;
+  
 }
 
 /// [GroupCharacteristic] Represents a defined collection of entities that may
 ///  be discussed or acted upon collectively but which are not expected to act
 ///  collectively, and are not formally or legally recognized; i.e. a
 ///  collection of entities that isn't an Organization.
-@freezed
+
 class GroupCharacteristic {
   /// [GroupCharacteristic] Represents a defined collection of entities that
   ///  may be discussed or acted upon collectively but which are not expected
@@ -341,7 +340,7 @@ class GroupCharacteristic {
   /// [period] The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
   ///
-  factory GroupCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -406,14 +405,14 @@ class GroupCharacteristic {
     /// [period] The period over which the characteristic is tested; e.g. the
     ///  patient had an operation during the month of June.
     Period? period,
-  }) = _GroupCharacteristic;
+  
 }
 
 /// [GroupMember] Represents a defined collection of entities that may be
 ///  discussed or acted upon collectively but which are not expected to act
 ///  collectively, and are not formally or legally recognized; i.e. a
 ///  collection of entities that isn't an Organization.
-@freezed
+
 class GroupMember {
   /// [GroupMember] Represents a defined collection of entities that may be
   ///  discussed or acted upon collectively but which are not expected to act
@@ -460,7 +459,7 @@ class GroupMember {
   ///
   /// [inactiveElement] ("_inactive") Extensions for inactive
   ///
-  factory GroupMember({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -503,12 +502,12 @@ class GroupMember {
 
     /// [inactiveElement] ("_inactive") Extensions for inactive
     @JsonKey(name: '_inactive') Element? inactiveElement,
-  }) = _GroupMember;
+  
 }
 
 /// [Patient] Demographics and other administrative information about an
 ///  individual or animal receiving care or other health-related services.
-@freezed
+
 class Patient {
   /// [Patient] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
@@ -638,7 +637,7 @@ class Patient {
   /// [link] Link to a Patient or RelatedPerson resource that concerns the same
   ///  actual individual.
   ///
-  factory Patient({
+  
     /// [resourceType] This is a Patient resource
     @Default(R5ResourceType.Patient)
     @JsonKey(unknownEnumValue: R5ResourceType.Patient)
@@ -803,12 +802,12 @@ class Patient {
     /// [link] Link to a Patient or RelatedPerson resource that concerns the
     ///  same actual individual.
     List<PatientLink>? link,
-  }) = _Patient;
+  
 }
 
 /// [PatientContact] Demographics and other administrative information about an
 ///  individual or animal receiving care or other health-related services.
-@freezed
+
 class PatientContact {
   /// [PatientContact] Demographics and other administrative information about
   ///  an individual or animal receiving care or other health-related services.
@@ -861,7 +860,7 @@ class PatientContact {
   /// [period] The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
   ///
-  factory PatientContact({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -918,13 +917,13 @@ class PatientContact {
     /// [period] The period during which this contact person or organization is
     ///  valid to be contacted relating to this patient.
     Period? period,
-  }) = _PatientContact;
+  
 }
 
 /// [PatientCommunication] Demographics and other administrative information
 ///  about an individual or animal receiving care or other health-related
 ///  services.
-@freezed
+
 class PatientCommunication {
   /// [PatientCommunication] Demographics and other administrative information
   ///  about an individual or animal receiving care or other health-related
@@ -968,7 +967,7 @@ class PatientCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory PatientCommunication({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1009,12 +1008,12 @@ class PatientCommunication {
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
-  }) = _PatientCommunication;
+  
 }
 
 /// [PatientLink] Demographics and other administrative information about an
 ///  individual or animal receiving care or other health-related services.
-@freezed
+
 class PatientLink {
   /// [PatientLink] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
@@ -1054,7 +1053,7 @@ class PatientLink {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory PatientLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1093,12 +1092,12 @@ class PatientLink {
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _PatientLink;
+  
 }
 
 /// [Person] Demographics and administrative information about a person
 ///  independent of a specific health-related context.
-@freezed
+
 class Person {
   /// [Person] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
@@ -1205,7 +1204,7 @@ class Person {
   ///
   /// [link] Link to a resource that concerns the same actual person.
   ///
-  factory Person({
+  
     /// [resourceType] This is a Person resource
     @Default(R5ResourceType.Person)
     @JsonKey(unknownEnumValue: R5ResourceType.Person)
@@ -1339,12 +1338,12 @@ class Person {
 
     /// [link] Link to a resource that concerns the same actual person.
     List<PersonLink>? link,
-  }) = _Person;
+  
 }
 
 /// [PersonCommunication] Demographics and administrative information about a
 ///  person independent of a specific health-related context.
-@freezed
+
 class PersonCommunication {
   /// [PersonCommunication] Demographics and administrative information about a
   ///  person independent of a specific health-related context.
@@ -1386,7 +1385,7 @@ class PersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory PersonCommunication({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1427,12 +1426,12 @@ class PersonCommunication {
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
-  }) = _PersonCommunication;
+  
 }
 
 /// [PersonLink] Demographics and administrative information about a person
 ///  independent of a specific health-related context.
-@freezed
+
 class PersonLink {
   /// [PersonLink] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
@@ -1471,7 +1470,7 @@ class PersonLink {
   ///
   /// [assuranceElement] ("_assurance") Extensions for assurance
   ///
-  factory PersonLink({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1509,12 +1508,12 @@ class PersonLink {
 
     /// [assuranceElement] ("_assurance") Extensions for assurance
     @JsonKey(name: '_assurance') Element? assuranceElement,
-  }) = _PersonLink;
+  
 }
 
 /// [Practitioner] A person who is directly or indirectly involved in the
 ///  provisioning of healthcare or related services.
-@freezed
+
 class Practitioner {
   /// [Practitioner] A person who is directly or indirectly involved in the
   ///  provisioning of healthcare or related services.
@@ -1622,7 +1621,7 @@ class Practitioner {
   /// [communication] A language the practitioner can use in patient
   ///  communication.
   ///
-  factory Practitioner({
+  
     /// [resourceType] This is a Practitioner resource
     @Default(R5ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
@@ -1755,12 +1754,12 @@ class Practitioner {
     /// [communication] A language the practitioner can use in patient
     ///  communication.
     List<CodeableConcept>? communication,
-  }) = _Practitioner;
+  
 }
 
 /// [PractitionerQualification] A person who is directly or indirectly involved
 ///  in the provisioning of healthcare or related services.
-@freezed
+
 class PractitionerQualification {
   /// [PractitionerQualification] A person who is directly or indirectly
   ///  involved in the provisioning of healthcare or related services.
@@ -1800,7 +1799,7 @@ class PractitionerQualification {
   ///
   /// [issuer] Organization that regulates and issues the qualification.
   ///
-  factory PractitionerQualification({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1840,12 +1839,12 @@ class PractitionerQualification {
 
     /// [issuer] Organization that regulates and issues the qualification.
     Reference? issuer,
-  }) = _PractitionerQualification;
+  
 }
 
 /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
 ///  that a practitioner may perform at an organization for a period of time.
-@freezed
+
 class PractitionerRole {
   /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
   ///  that a practitioner may perform at an organization for a period of time.
@@ -1943,7 +1942,7 @@ class PractitionerRole {
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
   ///
-  factory PractitionerRole({
+  
     /// [resourceType] This is a PractitionerRole resource
     @Default(R5ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
@@ -2064,13 +2063,13 @@ class PractitionerRole {
     /// [endpoint] Technical endpoints providing access to services operated
     ///  for the practitioner with this role.
     List<Reference>? endpoint,
-  }) = _PractitionerRole;
+  
 }
 
 /// [RelatedPerson] Information about a person that is involved in a patient's
 ///  health or the care for a patient, but who is not the target of healthcare,
 ///  nor has a formal responsibility in the care process.
-@freezed
+
 class RelatedPerson {
   /// [RelatedPerson] Information about a person that is involved in a
   ///  patient's health or the care for a patient, but who is not the target of
@@ -2169,7 +2168,7 @@ class RelatedPerson {
   /// [communication] A language which may be used to communicate with the
   ///  related person about the patient's health.
   ///
-  factory RelatedPerson({
+  
     /// [resourceType] This is a RelatedPerson resource
     @Default(R5ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
@@ -2289,13 +2288,13 @@ class RelatedPerson {
     /// [communication] A language which may be used to communicate with the
     ///  related person about the patient's health.
     List<RelatedPersonCommunication>? communication,
-  }) = _RelatedPerson;
+  
 }
 
 /// [RelatedPersonCommunication] Information about a person that is involved in
 ///  a patient's health or the care for a patient, but who is not the target of
 ///  healthcare, nor has a formal responsibility in the care process.
-@freezed
+
 class RelatedPersonCommunication {
   /// [RelatedPersonCommunication] Information about a person that is involved
   ///  in a patient's health or the care for a patient, but who is not the
@@ -2341,7 +2340,7 @@ class RelatedPersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory RelatedPersonCommunication({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2382,5 +2381,5 @@ class RelatedPersonCommunication {
 
     /// [preferredElement] ("_preferred") Extensions for preferred
     @JsonKey(name: '_preferred') Element? preferredElement,
-  }) = _RelatedPersonCommunication;
+  
 }

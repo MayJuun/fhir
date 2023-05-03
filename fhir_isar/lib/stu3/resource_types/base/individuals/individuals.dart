@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'individuals.enums.dart';
-part 'individuals.freezed.dart';
+
 part 'individuals.g.dart';
 
-@freezed
 class Group {
-  factory Group({
+  
     @Default(Stu3ResourceType.Group)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
         Stu3ResourceType resourceType,
@@ -42,12 +41,11 @@ class Group {
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-  }) = _Group;
+  
 }
 
-@freezed
 class GroupCharacteristic {
-  factory GroupCharacteristic({
+  
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
@@ -57,22 +55,20 @@ class GroupCharacteristic {
     Boolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     Period? period,
-  }) = _GroupCharacteristic;
+  
 }
 
-@freezed
 class GroupMember {
-  factory GroupMember({
+  
     required Reference entity,
     Period? period,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
-  }) = _GroupMember;
+  
 }
 
-@freezed
 class Patient {
-  factory Patient({
+  
     @Default(Stu3ResourceType.Patient)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
         Stu3ResourceType resourceType,
@@ -114,12 +110,11 @@ class Patient {
     List<Reference>? generalPractitioner,
     Reference? managingOrganization,
     List<PatientLink>? link,
-  }) = _Patient;
+  
 }
 
-@freezed
 class PatientContact {
-  factory PatientContact({
+  
     List<CodeableConcept>? relationship,
     HumanName? name,
     List<ContactPoint>? telecom,
@@ -128,39 +123,35 @@ class PatientContact {
     @JsonKey(name: '_gender') Element? genderElement,
     Reference? organization,
     Period? period,
-  }) = _PatientContact;
+  
 }
 
-@freezed
 class PatientAnimal {
-  factory PatientAnimal({
+  
     required CodeableConcept species,
     CodeableConcept? breed,
     CodeableConcept? genderStatus,
-  }) = _PatientAnimal;
+  
 }
 
-@freezed
 class PatientCommunication {
-  factory PatientCommunication({
+  
     required CodeableConcept language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
-  }) = _PatientCommunication;
+  
 }
 
-@freezed
 class PatientLink {
-  factory PatientLink({
+  
     required Reference other,
     PatientLinkType? type,
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _PatientLink;
+  
 }
 
-@freezed
 class Person {
-  factory Person({
+  
     @Default(Stu3ResourceType.Person)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
         Stu3ResourceType resourceType,
@@ -187,21 +178,19 @@ class Person {
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     List<PersonLink>? link,
-  }) = _Person;
+  
 }
 
-@freezed
 class PersonLink {
-  factory PersonLink({
+  
     required Reference target,
     PersonLinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
-  }) = _PersonLink;
+  
 }
 
-@freezed
 class Practitioner {
-  factory Practitioner({
+  
     @Default(Stu3ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
         Stu3ResourceType resourceType,
@@ -228,22 +217,20 @@ class Practitioner {
     List<Attachment>? photo,
     List<PractitionerQualification>? qualification,
     List<CodeableConcept>? communication,
-  }) = _Practitioner;
+  
 }
 
-@freezed
 class PractitionerQualification {
-  factory PractitionerQualification({
+  
     List<Identifier>? identifier,
     required CodeableConcept code,
     Period? period,
     Reference? issuer,
-  }) = _PractitionerQualification;
+  
 }
 
-@freezed
 class PractitionerRole {
-  factory PractitionerRole({
+  
     @Default(Stu3ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
         Stu3ResourceType resourceType,
@@ -274,12 +261,11 @@ class PractitionerRole {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
-  }) = _PractitionerRole;
+  
 }
 
-@freezed
 class PractitionerRoleAvailableTime {
-  factory PractitionerRoleAvailableTime({
+  
     List<String>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
@@ -288,21 +274,19 @@ class PractitionerRoleAvailableTime {
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
-  }) = _PractitionerRoleAvailableTime;
+  
 }
 
-@freezed
 class PractitionerRoleNotAvailable {
-  factory PractitionerRoleNotAvailable({
+  
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
-  }) = _PractitionerRoleNotAvailable;
+  
 }
 
-@freezed
 class RelatedPerson {
-  factory RelatedPerson({
+  
     @Default(Stu3ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
         Stu3ResourceType resourceType,
@@ -330,5 +314,5 @@ class RelatedPerson {
     List<Address>? address,
     List<Attachment>? photo,
     Period? period,
-  }) = _RelatedPerson;
+  
 }

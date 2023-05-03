@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'request_and_response.enums.dart';
-part 'request_and_response.freezed.dart';
+
 part 'request_and_response.g.dart';
 
-@freezed
 class Communication {
-  factory Communication({
+  
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
         Stu3ResourceType resourceType,
@@ -52,22 +51,20 @@ class Communication {
     List<Reference>? reasonReference,
     List<CommunicationPayload>? payload,
     List<Annotation>? note,
-  }) = _Communication;
+  
 }
 
-@freezed
 class CommunicationPayload {
-  factory CommunicationPayload({
+  
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationPayload;
+  
 }
 
-@freezed
 class CommunicationRequest {
-  factory CommunicationRequest({
+  
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
         Stu3ResourceType resourceType,
@@ -106,30 +103,27 @@ class CommunicationRequest {
     List<CodeableConcept>? reasonCode,
     List<Reference>? reasonReference,
     List<Annotation>? note,
-  }) = _CommunicationRequest;
+  
 }
 
-@freezed
 class CommunicationRequestPayload {
-  factory CommunicationRequestPayload({
+  
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
-  }) = _CommunicationRequestPayload;
+  
 }
 
-@freezed
 class CommunicationRequestRequester {
-  factory CommunicationRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _CommunicationRequestRequester;
+  
 }
 
-@freezed
 class DeviceRequest {
-  factory DeviceRequest({
+  
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
         Stu3ResourceType resourceType,
@@ -171,20 +165,18 @@ class DeviceRequest {
     List<Reference>? supportingInfo,
     List<Annotation>? note,
     List<Reference>? relevantHistory,
-  }) = _DeviceRequest;
+  
 }
 
-@freezed
 class DeviceRequestRequester {
-  factory DeviceRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _DeviceRequestRequester;
+  
 }
 
-@freezed
 class DeviceUseStatement {
-  factory DeviceUseStatement({
+  
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
         Stu3ResourceType resourceType,
@@ -214,12 +206,11 @@ class DeviceUseStatement {
     List<CodeableConcept>? indication,
     CodeableConcept? bodySite,
     List<Annotation>? note,
-  }) = _DeviceUseStatement;
+  
 }
 
-@freezed
 class SupplyDelivery {
-  factory SupplyDelivery({
+  
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
         Stu3ResourceType resourceType,
@@ -248,21 +239,19 @@ class SupplyDelivery {
     Reference? supplier,
     Reference? destination,
     List<Reference>? receiver,
-  }) = _SupplyDelivery;
+  
 }
 
-@freezed
 class SupplyDeliverySuppliedItem {
-  factory SupplyDeliverySuppliedItem({
+  
     Quantity? quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
-  }) = _SupplyDeliverySuppliedItem;
+  
 }
 
-@freezed
 class SupplyRequest {
-  factory SupplyRequest({
+  
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
         Stu3ResourceType resourceType,
@@ -295,22 +284,20 @@ class SupplyRequest {
     Reference? reasonReference,
     Reference? deliverFrom,
     Reference? deliverTo,
-  }) = _SupplyRequest;
+  
 }
 
-@freezed
 class SupplyRequestOrderedItem {
-  factory SupplyRequestOrderedItem({
+  
     required Quantity quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
-  }) = _SupplyRequestOrderedItem;
+  
 }
 
-@freezed
 class SupplyRequestRequester {
-  factory SupplyRequestRequester({
+  
     required Reference agent,
     Reference? onBehalfOf,
-  }) = _SupplyRequestRequester;
+  
 }

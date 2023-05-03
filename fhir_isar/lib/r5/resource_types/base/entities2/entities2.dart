@@ -2,20 +2,19 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r5.dart';
 
-part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
 /// [BiologicallyDerivedProduct] This resource reflects an instance of a
 ///  biologically derived product. A material substance originating from a
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
-@freezed
+
 class BiologicallyDerivedProduct {
   /// [BiologicallyDerivedProduct] This resource reflects an instance of a
   ///  biologically derived product. A material substance originating from a
@@ -124,7 +123,7 @@ class BiologicallyDerivedProduct {
   /// [property] A property that is specific to this BiologicallyDerviedProduct
   ///  instance.
   ///
-  factory BiologicallyDerivedProduct({
+  
     /// [resourceType] This is a BiologicallyDerivedProduct resource
     @Default(R5ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
@@ -253,14 +252,14 @@ class BiologicallyDerivedProduct {
     /// [property] A property that is specific to this
     ///  BiologicallyDerviedProduct instance.
     List<BiologicallyDerivedProductProperty>? property,
-  }) = _BiologicallyDerivedProduct;
+  
 }
 
 /// [BiologicallyDerivedProductCollection] This resource reflects an instance
 ///  of a biologically derived product. A material substance originating from a
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
-@freezed
+
 class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
   /// [BiologicallyDerivedProductCollection] This resource reflects an instance
@@ -309,7 +308,7 @@ class BiologicallyDerivedProductCollection
   ///
   /// [collectedPeriod] Time of product collection.
   ///
-  factory BiologicallyDerivedProductCollection({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -355,14 +354,14 @@ class BiologicallyDerivedProductCollection
 
     /// [collectedPeriod] Time of product collection.
     Period? collectedPeriod,
-  }) = _BiologicallyDerivedProductCollection;
+  
 }
 
 /// [BiologicallyDerivedProductProperty] This resource reflects an instance of
 ///  a biologically derived product. A material substance originating from a
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
-@freezed
+
 class BiologicallyDerivedProductProperty
     with _$BiologicallyDerivedProductProperty {
   /// [BiologicallyDerivedProductProperty] This resource reflects an instance
@@ -426,7 +425,7 @@ class BiologicallyDerivedProductProperty
   ///
   /// [valueAttachment] Property values.
   ///
-  factory BiologicallyDerivedProductProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -494,13 +493,13 @@ class BiologicallyDerivedProductProperty
 
     /// [valueAttachment] Property values.
     Attachment? valueAttachment,
-  }) = _BiologicallyDerivedProductProperty;
+  
 }
 
 /// [Device] A type of a manufactured item that is used in the provision of
 ///  healthcare without being substantially changed through that activity. The
 ///  device may be a medical or non-medical device.
-@freezed
+
 class Device {
   /// [Device] A type of a manufactured item that is used in the provision of
   ///  healthcare without being substantially changed through that activity.
@@ -684,7 +683,7 @@ class Device {
   /// [parent] The higher level or encompassing device that this device is a
   ///  logical part of.
   ///
-  factory Device({
+  
     /// [resourceType] This is a Device resource
     @Default(R5ResourceType.Device)
     @JsonKey(unknownEnumValue: R5ResourceType.Device)
@@ -916,13 +915,13 @@ class Device {
     /// [parent] The higher level or encompassing device that this device is a
     ///  logical part of.
     Reference? parent,
-  }) = _Device;
+  
 }
 
 /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceUdiCarrier {
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1003,7 +1002,7 @@ class DeviceUdiCarrier {
   ///
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   ///
-  factory DeviceUdiCarrier({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1092,13 +1091,13 @@ class DeviceUdiCarrier {
 
     /// [entryTypeElement] ("_entryType") Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
-  }) = _DeviceUdiCarrier;
+  
 }
 
 /// [DeviceDeviceName] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceDeviceName {
   /// [DeviceDeviceName] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1142,7 +1141,7 @@ class DeviceDeviceName {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory DeviceDeviceName({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1185,13 +1184,13 @@ class DeviceDeviceName {
 
     /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
-  }) = _DeviceDeviceName;
+  
 }
 
 /// [DeviceVersion] A type of a manufactured item that is used in the provision
 ///  of healthcare without being substantially changed through that activity.
 ///  The device may be a medical or non-medical device.
-@freezed
+
 class DeviceVersion {
   /// [DeviceVersion] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1239,7 +1238,7 @@ class DeviceVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory DeviceVersion({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1287,13 +1286,13 @@ class DeviceVersion {
 
     /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _DeviceVersion;
+  
 }
 
 /// [DeviceSpecialization] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceSpecialization {
   /// [DeviceSpecialization] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1338,7 +1337,7 @@ class DeviceSpecialization {
   /// [category] Kind of standards that the device adheres to, e.g.,
   ///  communication, performance or communication.
   ///
-  factory DeviceSpecialization({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1381,13 +1380,13 @@ class DeviceSpecialization {
     /// [category] Kind of standards that the device adheres to, e.g.,
     ///  communication, performance or communication.
     Coding? category,
-  }) = _DeviceSpecialization;
+  
 }
 
 /// [DeviceProperty] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceProperty {
   /// [DeviceProperty] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1452,7 +1451,7 @@ class DeviceProperty {
   /// [valueAttachment] Property value - can be a code, quantity, boolean,
   ///  string or attachment.
   ///
-  factory DeviceProperty({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1522,13 +1521,13 @@ class DeviceProperty {
     /// [valueAttachment] Property value - can be a code, quantity, boolean,
     ///  string or attachment.
     Attachment? valueAttachment,
-  }) = _DeviceProperty;
+  
 }
 
 /// [DeviceOperation] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceOperation {
   /// [DeviceOperation] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1578,7 +1577,7 @@ class DeviceOperation {
   /// [duration] A measurement of time during the device's operation (e.g.,
   ///  days, hours, mins, etc).
   ///
-  factory DeviceOperation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1628,13 +1627,13 @@ class DeviceOperation {
     /// [duration] A measurement of time during the device's operation (e.g.,
     ///  days, hours, mins, etc).
     FhirDuration? duration,
-  }) = _DeviceOperation;
+  
 }
 
 /// [DeviceAssociation] A type of a manufactured item that is used in the
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
-@freezed
+
 class DeviceAssociation {
   /// [DeviceAssociation] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
@@ -1679,7 +1678,7 @@ class DeviceAssociation {
   /// [bodyStructure] The current anatomical location of the device in/on the
   ///  humanSubject where it is attached or placed.
   ///
-  factory DeviceAssociation({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1722,12 +1721,12 @@ class DeviceAssociation {
     /// [bodyStructure] The current anatomical location of the device in/on the
     ///  humanSubject where it is attached or placed.
     CodeableReference? bodyStructure,
-  }) = _DeviceAssociation;
+  
 }
 
 /// [DeviceMetric] Describes a measurement, calculation or setting capability
 ///  of a medical device.
-@freezed
+
 class DeviceMetric {
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
   ///  of a medical device.
@@ -1842,7 +1841,7 @@ class DeviceMetric {
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
   ///
-  factory DeviceMetric({
+  
     /// [resourceType] This is a DeviceMetric resource
     @Default(R5ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
@@ -1981,12 +1980,12 @@ class DeviceMetric {
     /// [calibration] Describes the calibrations that have been performed or
     ///  that are required to be performed.
     List<DeviceMetricCalibration>? calibration,
-  }) = _DeviceMetric;
+  
 }
 
 /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
 ///  capability of a medical device.
-@freezed
+
 class DeviceMetricCalibration {
   /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
   ///  capability of a medical device.
@@ -2030,7 +2029,7 @@ class DeviceMetricCalibration {
   ///
   /// [timeElement] ("_time") Extensions for time
   ///
-  factory DeviceMetricCalibration({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2076,11 +2075,11 @@ class DeviceMetricCalibration {
 
     /// [timeElement] ("_time") Extensions for time
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _DeviceMetricCalibration;
+  
 }
 
 /// [NutritionProduct] A food or supplement that is consumed by patients.
-@freezed
+
 class NutritionProduct {
   /// [NutritionProduct] A food or supplement that is consumed by patients.
 
@@ -2170,7 +2169,7 @@ class NutritionProduct {
   ///
   /// [note] Comments made about the product.
   ///
-  factory NutritionProduct({
+  
     /// [resourceType] This is a NutritionProduct resource
     @Default(R5ResourceType.NutritionProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
@@ -2281,12 +2280,12 @@ class NutritionProduct {
 
     /// [note] Comments made about the product.
     List<Annotation>? note,
-  }) = _NutritionProduct;
+  
 }
 
 /// [NutritionProductNutrient] A food or supplement that is consumed by
 ///  patients.
-@freezed
+
 class NutritionProductNutrient {
   /// [NutritionProductNutrient] A food or supplement that is consumed by
   ///  patients.
@@ -2323,7 +2322,7 @@ class NutritionProductNutrient {
   /// [amount] The amount of nutrient expressed in one or more units: X per
   ///  pack / per serving / per dose.
   ///
-  factory NutritionProductNutrient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2358,12 +2357,12 @@ class NutritionProductNutrient {
     /// [amount] The amount of nutrient expressed in one or more units: X per
     ///  pack / per serving / per dose.
     List<Ratio>? amount,
-  }) = _NutritionProductNutrient;
+  
 }
 
 /// [NutritionProductIngredient] A food or supplement that is consumed by
 ///  patients.
-@freezed
+
 class NutritionProductIngredient {
   /// [NutritionProductIngredient] A food or supplement that is consumed by
   ///  patients.
@@ -2399,7 +2398,7 @@ class NutritionProductIngredient {
   ///
   /// [amount] The amount of ingredient that is in the product.
   ///
-  factory NutritionProductIngredient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2433,12 +2432,12 @@ class NutritionProductIngredient {
 
     /// [amount] The amount of ingredient that is in the product.
     List<Ratio>? amount,
-  }) = _NutritionProductIngredient;
+  
 }
 
 /// [NutritionProductCharacteristic] A food or supplement that is consumed by
 ///  patients.
-@freezed
+
 class NutritionProductCharacteristic {
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by
   ///  patients.
@@ -2495,7 +2494,7 @@ class NutritionProductCharacteristic {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory NutritionProductCharacteristic({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2560,12 +2559,12 @@ class NutritionProductCharacteristic {
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-  }) = _NutritionProductCharacteristic;
+  
 }
 
 /// [NutritionProductInstance] A food or supplement that is consumed by
 ///  patients.
-@freezed
+
 class NutritionProductInstance {
   /// [NutritionProductInstance] A food or supplement that is consumed by
   ///  patients.
@@ -2625,7 +2624,7 @@ class NutritionProductInstance {
   ///  event during which material in this product from one or more biological
   ///  entities was obtained or pooled.
   ///
-  factory NutritionProductInstance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2692,11 +2691,11 @@ class NutritionProductInstance {
     ///  event during which material in this product from one or more
     ///  biological entities was obtained or pooled.
     Identifier? biologicalSourceEvent,
-  }) = _NutritionProductInstance;
+  
 }
 
 /// [Substance] A homogeneous material with a definite composition.
-@freezed
+
 class Substance {
   /// [Substance] A homogeneous material with a definite composition.
 
@@ -2788,7 +2787,7 @@ class Substance {
   ///
   /// [ingredient] A substance can be composed of other substances.
   ///
-  factory Substance({
+  
     /// [resourceType] This is a Substance resource
     @Default(R5ResourceType.Substance)
     @JsonKey(unknownEnumValue: R5ResourceType.Substance)
@@ -2903,11 +2902,11 @@ class Substance {
 
     /// [ingredient] A substance can be composed of other substances.
     List<SubstanceIngredient>? ingredient,
-  }) = _Substance;
+  
 }
 
 /// [SubstanceIngredient] A homogeneous material with a definite composition.
-@freezed
+
 class SubstanceIngredient {
   /// [SubstanceIngredient] A homogeneous material with a definite composition.
 
@@ -2946,7 +2945,7 @@ class SubstanceIngredient {
   /// [substanceReference] Another substance that is a component of this
   ///  substance.
   ///
-  factory SubstanceIngredient({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2986,5 +2985,5 @@ class SubstanceIngredient {
     /// [substanceReference] Another substance that is a component of this
     ///  substance.
     Reference? substanceReference,
-  }) = _SubstanceIngredient;
+  
 }

@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'summary.freezed.dart';
 part 'summary.g.dart';
 
-@freezed
 class AdverseEvent {
-  factory AdverseEvent({
+  
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
         R4ResourceType resourceType,
@@ -51,23 +49,21 @@ class AdverseEvent {
     List<Reference>? subjectMedicalHistory,
     List<Reference>? referenceDocument,
     List<Reference>? study,
-  }) = _AdverseEvent;
+  
 }
 
-@freezed
 class AdverseEventSuspectEntity {
-  factory AdverseEventSuspectEntity({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference instance,
     List<AdverseEventCausality>? causality,
-  }) = _AdverseEventSuspectEntity;
+  
 }
 
-@freezed
 class AdverseEventCausality {
-  factory AdverseEventCausality({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -76,12 +72,11 @@ class AdverseEventCausality {
     @JsonKey(name: '_productRelatedness') Element? productRelatednessElement,
     Reference? author,
     CodeableConcept? method,
-  }) = _AdverseEventCausality;
+  
 }
 
-@freezed
 class AllergyIntolerance {
-  factory AllergyIntolerance({
+  
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
         R4ResourceType resourceType,
@@ -122,12 +117,11 @@ class AllergyIntolerance {
     @JsonKey(name: '_lastOccurrence') Element? lastOccurrenceElement,
     List<Annotation>? note,
     List<AllergyIntoleranceReaction>? reaction,
-  }) = _AllergyIntolerance;
+  
 }
 
-@freezed
 class AllergyIntoleranceReaction {
-  factory AllergyIntoleranceReaction({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -141,12 +135,11 @@ class AllergyIntoleranceReaction {
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
-  }) = _AllergyIntoleranceReaction;
+  
 }
 
-@freezed
 class ClinicalImpression {
-  factory ClinicalImpression({
+  
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
         R4ResourceType resourceType,
@@ -187,23 +180,21 @@ class ClinicalImpression {
     List<Reference>? prognosisReference,
     List<Reference>? supportingInfo,
     List<Annotation>? note,
-  }) = _ClinicalImpression;
+  
 }
 
-@freezed
 class ClinicalImpressionInvestigation {
-  factory ClinicalImpressionInvestigation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
     List<Reference>? item,
-  }) = _ClinicalImpressionInvestigation;
+  
 }
 
-@freezed
 class ClinicalImpressionFinding {
-  factory ClinicalImpressionFinding({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -211,12 +202,11 @@ class ClinicalImpressionFinding {
     Reference? itemReference,
     String? basis,
     @JsonKey(name: '_basis') Element? basisElement,
-  }) = _ClinicalImpressionFinding;
+  
 }
 
-@freezed
 class Condition {
-  factory Condition({
+  
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
         R4ResourceType resourceType,
@@ -260,35 +250,32 @@ class Condition {
     List<ConditionStage>? stage,
     List<ConditionEvidence>? evidence,
     List<Annotation>? note,
-  }) = _Condition;
+  
 }
 
-@freezed
 class ConditionStage {
-  factory ConditionStage({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
     List<Reference>? assessment,
     CodeableConcept? type,
-  }) = _ConditionStage;
+  
 }
 
-@freezed
 class ConditionEvidence {
-  factory ConditionEvidence({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
     List<Reference>? detail,
-  }) = _ConditionEvidence;
+  
 }
 
-@freezed
 class DetectedIssue {
-  factory DetectedIssue({
+  
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
         R4ResourceType resourceType,
@@ -320,23 +307,21 @@ class DetectedIssue {
     FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     List<DetectedIssueMitigation>? mitigation,
-  }) = _DetectedIssue;
+  
 }
 
-@freezed
 class DetectedIssueEvidence {
-  factory DetectedIssueEvidence({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
     List<Reference>? detail,
-  }) = _DetectedIssueEvidence;
+  
 }
 
-@freezed
 class DetectedIssueMitigation {
-  factory DetectedIssueMitigation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -344,12 +329,11 @@ class DetectedIssueMitigation {
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? author,
-  }) = _DetectedIssueMitigation;
+  
 }
 
-@freezed
 class FamilyMemberHistory {
-  factory FamilyMemberHistory({
+  
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
         R4ResourceType resourceType,
@@ -400,12 +384,11 @@ class FamilyMemberHistory {
     List<Reference>? reasonReference,
     List<Annotation>? note,
     List<FamilyMemberHistoryCondition>? condition,
-  }) = _FamilyMemberHistory;
+  
 }
 
-@freezed
 class FamilyMemberHistoryCondition {
-  factory FamilyMemberHistoryCondition({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -419,12 +402,11 @@ class FamilyMemberHistoryCondition {
     String? onsetString,
     @JsonKey(name: '_onsetString') Element? onsetStringElement,
     List<Annotation>? note,
-  }) = _FamilyMemberHistoryCondition;
+  
 }
 
-@freezed
 class Procedure {
-  factory Procedure({
+  
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
         R4ResourceType resourceType,
@@ -474,28 +456,26 @@ class Procedure {
     List<ProcedureFocalDevice>? focalDevice,
     List<Reference>? usedReference,
     List<CodeableConcept>? usedCode,
-  }) = _Procedure;
+  
 }
 
-@freezed
 class ProcedurePerformer {
-  factory ProcedurePerformer({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
     required Reference actor,
     Reference? onBehalfOf,
-  }) = _ProcedurePerformer;
+  
 }
 
-@freezed
 class ProcedureFocalDevice {
-  factory ProcedureFocalDevice({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,
     required Reference manipulated,
-  }) = _ProcedureFocalDevice;
+  
 }

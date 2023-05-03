@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../stu3.dart';
 
 part 'entities.enums.dart';
-part 'entities.freezed.dart';
+
 part 'entities.g.dart';
 
-@freezed
 class Device {
-  factory Device({
+  
     @Default(Stu3ResourceType.Device)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
         Stu3ResourceType resourceType,
@@ -53,12 +52,11 @@ class Device {
     @JsonKey(name: '_url') Element? urlElement,
     List<Annotation>? note,
     List<CodeableConcept>? safety,
-  }) = _Device;
+  
 }
 
-@freezed
 class DeviceUdi {
-  factory DeviceUdi({
+  
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
     String? name,
@@ -73,12 +71,11 @@ class DeviceUdi {
     @JsonKey(name: '_issuer') Element? issuerElement,
     DeviceUdiEntryType? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
-  }) = _DeviceUdi;
+  
 }
 
-@freezed
 class DeviceComponent {
-  factory DeviceComponent({
+  
     @Default(Stu3ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
         Stu3ResourceType resourceType,
@@ -105,35 +102,32 @@ class DeviceComponent {
         Element? measurementPrincipleElement,
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
-  }) = _DeviceComponent;
+  
 }
 
-@freezed
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  factory DeviceComponentProductionSpecification({
+  
     CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
     @JsonKey(name: '_productionSpec') Element? productionSpecElement,
-  }) = _DeviceComponentProductionSpecification;
+  
 }
 
-@freezed
 class DeviceMetricCalibration {
-  factory DeviceMetricCalibration({
+  
     DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     DeviceMetricCalibrationState? state,
     @JsonKey(name: '_state') Element? stateElement,
     String? time,
     @JsonKey(name: '_time') Element? timeElement,
-  }) = _DeviceMetricCalibration;
+  
 }
 
-@freezed
 class Endpoint {
-  factory Endpoint({
+  
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
         Stu3ResourceType resourceType,
@@ -163,12 +157,11 @@ class Endpoint {
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
-  }) = _Endpoint;
+  
 }
 
-@freezed
 class HealthcareService {
-  factory HealthcareService({
+  
     @Default(Stu3ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
         Stu3ResourceType resourceType,
@@ -215,12 +208,11 @@ class HealthcareService {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
-  }) = _HealthcareService;
+  
 }
 
-@freezed
 class HealthcareServiceAvailableTime {
-  factory HealthcareServiceAvailableTime({
+  
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
@@ -229,21 +221,19 @@ class HealthcareServiceAvailableTime {
     @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
-  }) = _HealthcareServiceAvailableTime;
+  
 }
 
-@freezed
 class HealthcareServiceNotAvailable {
-  factory HealthcareServiceNotAvailable({
+  
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
-  }) = _HealthcareServiceNotAvailable;
+  
 }
 
-@freezed
 class Location {
-  factory Location({
+  
     @Default(Stu3ResourceType.Location)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
         Stu3ResourceType resourceType,
@@ -277,24 +267,22 @@ class Location {
     Reference? managingOrganization,
     Reference? partOf,
     List<Reference>? endpoint,
-  }) = _Location;
+  
 }
 
-@freezed
 class LocationPosition {
-  factory LocationPosition({
+  
     Decimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
     Decimal? latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
     Decimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
-  }) = _LocationPosition;
+  
 }
 
-@freezed
 class Organization {
-  factory Organization({
+  
     @Default(Stu3ResourceType.Organization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
         Stu3ResourceType resourceType,
@@ -321,22 +309,20 @@ class Organization {
     Reference? partOf,
     List<OrganizationContact>? contact,
     List<Reference>? endpoint,
-  }) = _Organization;
+  
 }
 
-@freezed
 class OrganizationContact {
-  factory OrganizationContact({
+  
     CodeableConcept? purpose,
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
-  }) = _OrganizationContact;
+  
 }
 
-@freezed
 class Substance {
-  factory Substance({
+  
     @Default(Stu3ResourceType.Substance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
         Stu3ResourceType resourceType,
@@ -359,24 +345,22 @@ class Substance {
     @JsonKey(name: '_description') Element? descriptionElement,
     List<SubstanceInstance>? instance,
     List<SubstanceIngredient>? ingredient,
-  }) = _Substance;
+  
 }
 
-@freezed
 class SubstanceInstance {
-  factory SubstanceInstance({
+  
     Identifier? identifier,
     String? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
     Quantity? quantity,
-  }) = _SubstanceInstance;
+  
 }
 
-@freezed
 class SubstanceIngredient {
-  factory SubstanceIngredient({
+  
     Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,
-  }) = _SubstanceIngredient;
+  
 }

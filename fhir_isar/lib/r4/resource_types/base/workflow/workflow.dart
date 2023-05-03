@@ -2,18 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
-@freezed
 class Appointment {
-  factory Appointment({
+  
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
         R4ResourceType resourceType,
@@ -58,12 +56,11 @@ class Appointment {
     List<Reference>? basedOn,
     required List<AppointmentParticipant> participant,
     List<Period>? requestedPeriod,
-  }) = _Appointment;
+  
 }
 
-@freezed
 class AppointmentParticipant {
-  factory AppointmentParticipant({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -74,12 +71,11 @@ class AppointmentParticipant {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
-  }) = _AppointmentParticipant;
+  
 }
 
-@freezed
 class AppointmentResponse {
-  factory AppointmentResponse({
+  
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
         R4ResourceType resourceType,
@@ -105,12 +101,11 @@ class AppointmentResponse {
     @JsonKey(name: '_participantStatus') Element? participantStatusElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _AppointmentResponse;
+  
 }
 
-@freezed
 class Schedule {
-  factory Schedule({
+  
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
         R4ResourceType resourceType,
@@ -134,12 +129,11 @@ class Schedule {
     Period? planningHorizon,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Schedule;
+  
 }
 
-@freezed
 class Slot {
-  factory Slot({
+  
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
         R4ResourceType resourceType,
@@ -169,12 +163,11 @@ class Slot {
     @JsonKey(name: '_overbooked') Element? overbookedElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _Slot;
+  
 }
 
-@freezed
 class Task {
-  factory Task({
+  
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
         R4ResourceType resourceType,
@@ -226,12 +219,11 @@ class Task {
     TaskRestriction? restriction,
     List<TaskInput>? input,
     List<TaskOutput>? output,
-  }) = _Task;
+  
 }
 
-@freezed
 class TaskRestriction {
-  factory TaskRestriction({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -239,12 +231,11 @@ class TaskRestriction {
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
     Period? period,
     List<Reference>? recipient,
-  }) = _TaskRestriction;
+  
 }
 
-@freezed
 class TaskInput {
-  factory TaskInput({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -318,12 +309,11 @@ class TaskInput {
     UsageContext? valueUsageContext,
     Dosage? valueDosage,
     Meta? valueMeta,
-  }) = _TaskInput;
+  
 }
 
-@freezed
 class TaskOutput {
-  factory TaskOutput({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -397,12 +387,11 @@ class TaskOutput {
     UsageContext? valueUsageContext,
     Dosage? valueDosage,
     Meta? valueMeta,
-  }) = _TaskOutput;
+  
 }
 
-@freezed
 class VerificationResult {
-  factory VerificationResult({
+  
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
         R4ResourceType resourceType,
@@ -435,12 +424,11 @@ class VerificationResult {
     List<VerificationResultPrimarySource>? primarySource,
     VerificationResultAttestation? attestation,
     List<VerificationResultValidator>? validator,
-  }) = _VerificationResult;
+  
 }
 
-@freezed
 class VerificationResultPrimarySource {
-  factory VerificationResultPrimarySource({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -452,12 +440,11 @@ class VerificationResultPrimarySource {
     @JsonKey(name: '_validationDate') Element? validationDateElement,
     CodeableConcept? canPushUpdates,
     List<CodeableConcept>? pushTypeAvailable,
-  }) = _VerificationResultPrimarySource;
+  
 }
 
-@freezed
 class VerificationResultAttestation {
-  factory VerificationResultAttestation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -474,12 +461,11 @@ class VerificationResultAttestation {
         Element? proxyIdentityCertificateElement,
     Signature? proxySignature,
     Signature? sourceSignature,
-  }) = _VerificationResultAttestation;
+  
 }
 
-@freezed
 class VerificationResultValidator {
-  factory VerificationResultValidator({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -487,5 +473,5 @@ class VerificationResultValidator {
     String? identityCertificate,
     @JsonKey(name: '_identityCertificate') Element? identityCertificateElement,
     Signature? attestationSignature,
-  }) = _VerificationResultValidator;
+  
 }

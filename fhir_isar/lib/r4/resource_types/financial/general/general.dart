@@ -2,17 +2,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'general.freezed.dart';
 part 'general.g.dart';
 
 /// [Account] A financial tool for tracking value accrued for a particular
-@freezed
+
 class Account {
   /// [Account] A financial tool for tracking value accrued for a particular
 
@@ -109,7 +108,7 @@ class Account {
   ///  payment options fall short.
   ///
   /// [partOf] Reference to a parent Account.
-  factory Account({
+  
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
 
@@ -233,11 +232,11 @@ class Account {
 
     /// [partOf] Reference to a parent Account.
     Reference? partOf,
-  }) = _Account;
+  
 }
 
 /// [AccountCoverage] A financial tool for tracking value accrued for a
-@freezed
+
 class AccountCoverage {
   /// [AccountCoverage] A financial tool for tracking value accrued for a
 
@@ -278,7 +277,7 @@ class AccountCoverage {
   /// [priority] The priority of the coverage in the context of this account.
   ///
   /// [priorityElement] Extensions for priority
-  factory AccountCoverage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -318,11 +317,11 @@ class AccountCoverage {
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
-  }) = _AccountCoverage;
+  
 }
 
 /// [AccountGuarantor] A financial tool for tracking value accrued for a
-@freezed
+
 class AccountGuarantor {
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
 
@@ -363,7 +362,7 @@ class AccountGuarantor {
   ///
   /// [period] The timeframe during which the guarantor accepts responsibility
   ///  for the account.
-  factory AccountGuarantor({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -404,11 +403,11 @@ class AccountGuarantor {
     /// [period] The timeframe during which the guarantor accepts responsibility
     ///  for the account.
     Period? period,
-  }) = _AccountGuarantor;
+  
 }
 
 /// [ChargeItem] The resource ChargeItem describes the provision of
-@freezed
+
 class ChargeItem {
   /// [ChargeItem] The resource ChargeItem describes the provision of
 
@@ -560,7 +559,7 @@ class ChargeItem {
   ///  participants.
   ///
   /// [supportingInformation] Further information supporting this charge.
-  factory ChargeItem({
+  
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
 
@@ -760,11 +759,11 @@ class ChargeItem {
 
     /// [supportingInformation] Further information supporting this charge.
     List<Reference>? supportingInformation,
-  }) = _ChargeItem;
+  
 }
 
 /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
-@freezed
+
 class ChargeItemPerformer {
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
 
@@ -804,7 +803,7 @@ class ChargeItemPerformer {
   ///
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
-  factory ChargeItemPerformer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -839,11 +838,11 @@ class ChargeItemPerformer {
     /// [actor] The device, practitioner, etc. who performed or participated in
     ///  the service.
     required Reference actor,
-  }) = _ChargeItemPerformer;
+  
 }
 
 /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
-@freezed
+
 class ChargeItemDefinition {
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
 
@@ -1023,7 +1022,7 @@ class ChargeItemDefinition {
   /// [propertyGroup] Group of properties which are applicable under the same
   /// conditions. If no applicability rules are established for the group, then
   ///  all properties always apply.
-  factory ChargeItemDefinition({
+  
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
 
@@ -1258,10 +1257,9 @@ class ChargeItemDefinition {
     /// conditions. If no applicability rules are established for the group, then
     ///  all properties always apply.
     List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
-  }) = _ChargeItemDefinition;
+  
 }
 
-@freezed
 class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
   /// [ChargeItemDefinitionApplicability] The ChargeItemDefinition resource
@@ -1311,7 +1309,7 @@ class ChargeItemDefinitionApplicability
   ///  resource to which this definition is applied.
   ///
   /// [expressionElement] Extensions for expression
-  factory ChargeItemDefinitionApplicability({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1362,11 +1360,11 @@ class ChargeItemDefinitionApplicability
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _ChargeItemDefinitionApplicability;
+  
 }
 
 /// [ContractContentDefinition] Legally enforceable, formally recorded
-@freezed
+
 class ContractContentDefinition {
   /// [ContractContentDefinition] Legally enforceable, formally recorded
 
@@ -1424,7 +1422,7 @@ class ContractContentDefinition {
   ///  publishing of the Contract precursor content.
   ///
   /// [copyrightElement] Extensions for copyright
-  factory ContractContentDefinition({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1488,11 +1486,11 @@ class ContractContentDefinition {
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _ContractContentDefinition;
+  
 }
 
 /// [ContractTerm] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractTerm {
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
 
@@ -1560,7 +1558,7 @@ class ContractTerm {
   ///  assigned some degree of responsibility for the activity taking place.
   ///
   /// [group] Nested group of Contract Provisions.
-  factory ContractTerm({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1640,11 +1638,11 @@ class ContractTerm {
 
     /// [group] Nested group of Contract Provisions.
     List<ContractTerm>? group,
-  }) = _ContractTerm;
+  
 }
 
 /// [ContractSecurityLabel] Legally enforceable, formally recorded
-@freezed
+
 class ContractSecurityLabel {
   /// [ContractSecurityLabel] Legally enforceable, formally recorded
 
@@ -1688,7 +1686,7 @@ class ContractSecurityLabel {
   ///
   /// [control] Security label privacy tag that species the manner in which
   ///  term and/or term elements are to be protected.
-  factory ContractSecurityLabel({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1734,11 +1732,11 @@ class ContractSecurityLabel {
     /// [control] Security label privacy tag that species the manner in which
     ///  term and/or term elements are to be protected.
     List<Coding>? control,
-  }) = _ContractSecurityLabel;
+  
 }
 
 /// [ContractOffer] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractOffer {
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
 
@@ -1799,7 +1797,7 @@ class ContractOffer {
   /// [securityLabelNumber] Security labels that protects the offer.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractOffer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1874,11 +1872,11 @@ class ContractOffer {
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
         List<Element>? securityLabelNumberElement,
-  }) = _ContractOffer;
+  
 }
 
 /// [ContractParty] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractParty {
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
 
@@ -1912,7 +1910,7 @@ class ContractParty {
   /// [reference] Participant in the offer.
   ///
   /// [role] How the party participates in the offer.
-  factory ContractParty({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -1945,11 +1943,11 @@ class ContractParty {
 
     /// [role] How the party participates in the offer.
     required CodeableConcept role,
-  }) = _ContractParty;
+  
 }
 
 /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractAnswer {
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
 
@@ -2055,7 +2053,7 @@ class ContractAnswer {
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
-  factory ContractAnswer({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2178,11 +2176,11 @@ class ContractAnswer {
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
     Reference? valueReference,
-  }) = _ContractAnswer;
+  
 }
 
 /// [ContractAsset] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractAsset {
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
 
@@ -2256,7 +2254,7 @@ class ContractAsset {
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
   ///
   /// [valuedItem] Contract Valued Item List.
-  factory ContractAsset({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2351,11 +2349,11 @@ class ContractAsset {
 
     /// [valuedItem] Contract Valued Item List.
     List<ContractValuedItem>? valuedItem,
-  }) = _ContractAsset;
+  
 }
 
 /// [ContractContext] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractContext {
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
 
@@ -2396,7 +2394,7 @@ class ContractContext {
   /// [text] Context description.
   ///
   /// [textElement] Extensions for text
-  factory ContractContext({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2438,11 +2436,11 @@ class ContractContext {
 
     /// [textElement] Extensions for text
     @JsonKey(name: '_text') Element? textElement,
-  }) = _ContractContext;
+  
 }
 
 /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
-@freezed
+
 class ContractValuedItem {
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
 
@@ -2533,7 +2531,7 @@ class ContractValuedItem {
   ///  are controlled by this condition.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractValuedItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2651,11 +2649,11 @@ class ContractValuedItem {
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
         List<Element>? securityLabelNumberElement,
-  }) = _ContractValuedItem;
+  
 }
 
 /// [ContractAction] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractAction {
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
 
@@ -2769,7 +2767,7 @@ class ContractAction {
   /// [securityLabelNumber] Security labels that protects the action.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractAction({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2922,11 +2920,11 @@ class ContractAction {
 
         /// [securityLabelNumberElement] Extensions for securityLabelNumber
         List<Element>? securityLabelNumberElement,
-  }) = _ContractAction;
+  
 }
 
 /// [ContractSubject] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractSubject {
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
 
@@ -2961,7 +2959,7 @@ class ContractSubject {
   ///  for.
   ///
   /// [role] Role type of agent assigned roles in this Contract.
-  factory ContractSubject({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -2995,11 +2993,11 @@ class ContractSubject {
 
     /// [role] Role type of agent assigned roles in this Contract.
     CodeableConcept? role,
-  }) = _ContractSubject;
+  
 }
 
 /// [ContractSigner] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractSigner {
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
 
@@ -3035,7 +3033,7 @@ class ContractSigner {
   /// [party] Party which is a signator to this Contract.
   ///
   /// [signature] Legally binding Contract DSIG signature contents in Base64.
-  factory ContractSigner({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3071,11 +3069,11 @@ class ContractSigner {
 
     /// [signature] Legally binding Contract DSIG signature contents in Base64.
     required List<Signature> signature,
-  }) = _ContractSigner;
+  
 }
 
 /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractFriendly {
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
 
@@ -3113,7 +3111,7 @@ class ContractFriendly {
   /// [contentReference] Human readable rendering of this Contract in a format
   /// and representation intended to enhance comprehension and ensure
   ///  understandability.
-  factory ContractFriendly({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3150,11 +3148,11 @@ class ContractFriendly {
     /// and representation intended to enhance comprehension and ensure
     ///  understandability.
     Reference? contentReference,
-  }) = _ContractFriendly;
+  
 }
 
 /// [ContractLegal] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractLegal {
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
 
@@ -3188,7 +3186,7 @@ class ContractLegal {
   /// [contentAttachment] Contract legal text in human renderable form.
   ///
   /// [contentReference] Contract legal text in human renderable form.
-  factory ContractLegal({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3221,11 +3219,11 @@ class ContractLegal {
 
     /// [contentReference] Contract legal text in human renderable form.
     Reference? contentReference,
-  }) = _ContractLegal;
+  
 }
 
 /// [ContractRule] Legally enforceable, formally recorded unilateral or
-@freezed
+
 class ContractRule {
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
 
@@ -3261,7 +3259,7 @@ class ContractRule {
   ///
   /// [contentReference] Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
-  factory ContractRule({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3296,11 +3294,11 @@ class ContractRule {
     /// [contentReference] Computable Contract conveyed using a policy rule
     ///  language (e.g. XACML, DKAL, SecPal).
     Reference? contentReference,
-  }) = _ContractRule;
+  
 }
 
 /// [ExplanationOfBenefit] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefit {
   /// [ExplanationOfBenefit] This resource provides: the claim details;
 
@@ -3501,7 +3499,7 @@ class ExplanationOfBenefit {
   /// [benefitPeriod] The term of the benefits documented in this response.
   ///
   /// [benefitBalance] Balance by Benefit Category.
-  factory ExplanationOfBenefit({
+  
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
 
@@ -3768,11 +3766,11 @@ class ExplanationOfBenefit {
 
     /// [benefitBalance] Balance by Benefit Category.
     List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
-  }) = _ExplanationOfBenefit;
+  
 }
 
 /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitRelated {
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
 
@@ -3811,7 +3809,7 @@ class ExplanationOfBenefitRelated {
   ///
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
-  factory ExplanationOfBenefitRelated({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3848,11 +3846,11 @@ class ExplanationOfBenefitRelated {
     /// [reference] An alternate organizational reference to the case or file to
     ///  which this particular claim pertains.
     Identifier? reference,
-  }) = _ExplanationOfBenefitRelated;
+  
 }
 
 /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitPayee {
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
 
@@ -3889,7 +3887,7 @@ class ExplanationOfBenefitPayee {
   ///
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
-  factory ExplanationOfBenefitPayee({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -3923,11 +3921,11 @@ class ExplanationOfBenefitPayee {
     /// [party] Reference to the individual or organization to whom any payment
     ///  will be made.
     Reference? party,
-  }) = _ExplanationOfBenefitPayee;
+  
 }
 
 /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitCareTeam {
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
 
@@ -3976,7 +3974,7 @@ class ExplanationOfBenefitCareTeam {
   ///
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  factory ExplanationOfBenefitCareTeam({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4027,10 +4025,9 @@ class ExplanationOfBenefitCareTeam {
     /// [qualification] The qualification of the practitioner which is applicable
     ///  for this service.
     CodeableConcept? qualification,
-  }) = _ExplanationOfBenefitCareTeam;
+  
 }
 
-@freezed
 class ExplanationOfBenefitSupportingInfo
     with _$ExplanationOfBenefitSupportingInfo {
   /// [ExplanationOfBenefitSupportingInfo] This resource provides: the claim
@@ -4105,7 +4102,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
-  factory ExplanationOfBenefitSupportingInfo({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4191,11 +4188,11 @@ class ExplanationOfBenefitSupportingInfo
     /// [reason] Provides the reason in the situation where a reason code is
     ///  required in addition to the content.
     Coding? reason,
-  }) = _ExplanationOfBenefitSupportingInfo;
+  
 }
 
 /// [ExplanationOfBenefitProcedure] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitProcedure {
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim
 
@@ -4245,7 +4242,7 @@ class ExplanationOfBenefitProcedure {
   ///  identifies the clinical intervention performed.
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
-  factory ExplanationOfBenefitProcedure({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4298,11 +4295,11 @@ class ExplanationOfBenefitProcedure {
 
     /// [udi] Unique Device Identifiers associated with this line item.
     List<Reference>? udi,
-  }) = _ExplanationOfBenefitProcedure;
+  
 }
 
 /// [ExplanationOfBenefitInsurance] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitInsurance {
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim
 
@@ -4350,7 +4347,7 @@ class ExplanationOfBenefitInsurance {
   ///  related to the prior authorization.
   ///
   /// [preAuthRefElement] Extensions for preAuthRef
-  factory ExplanationOfBenefitInsurance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4398,11 +4395,11 @@ class ExplanationOfBenefitInsurance {
 
     /// [preAuthRefElement] Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
-  }) = _ExplanationOfBenefitInsurance;
+  
 }
 
 /// [ExplanationOfBenefitAccident] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitAccident {
   /// [ExplanationOfBenefitAccident] This resource provides: the claim
 
@@ -4447,7 +4444,7 @@ class ExplanationOfBenefitAccident {
   /// [locationAddress] The physical location of the accident event.
   ///
   /// [locationReference] The physical location of the accident event.
-  factory ExplanationOfBenefitAccident({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4492,11 +4489,11 @@ class ExplanationOfBenefitAccident {
 
     /// [locationReference] The physical location of the accident event.
     Reference? locationReference,
-  }) = _ExplanationOfBenefitAccident;
+  
 }
 
 /// [ExplanationOfBenefitItem] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitItem {
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
 
@@ -4615,7 +4612,7 @@ class ExplanationOfBenefitItem {
   ///  or service then this is the result of the adjudication of this item.
   ///
   /// [detail] Second-tier of goods and services.
-  factory ExplanationOfBenefitItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4772,11 +4769,11 @@ class ExplanationOfBenefitItem {
 
     /// [detail] Second-tier of goods and services.
     List<ExplanationOfBenefitDetail>? detail,
-  }) = _ExplanationOfBenefitItem;
+  
 }
 
 /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitAdjudication {
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
 
@@ -4824,7 +4821,7 @@ class ExplanationOfBenefitAdjudication {
   ///  exclusive to the amount element above.
   ///
   /// [valueElement] Extensions for value
-  factory ExplanationOfBenefitAdjudication({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4872,11 +4869,11 @@ class ExplanationOfBenefitAdjudication {
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
-  }) = _ExplanationOfBenefitAdjudication;
+  
 }
 
 /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitSubDetail {
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
 
@@ -4953,7 +4950,7 @@ class ExplanationOfBenefitSubDetail {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5041,11 +5038,11 @@ class ExplanationOfBenefitSubDetail {
 
     /// [adjudication] The adjudication results.
     List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitSubDetail;
+  
 }
 
 /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitAddItem {
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
 
@@ -5148,7 +5145,7 @@ class ExplanationOfBenefitAddItem {
   /// [adjudication] The adjudication results.
   ///
   /// [detail] The second-tier service adjudications for payor added services.
-  factory ExplanationOfBenefitAddItem({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5280,11 +5277,11 @@ class ExplanationOfBenefitAddItem {
 
     /// [detail] The second-tier service adjudications for payor added services.
     List<ExplanationOfBenefitDetail1>? detail,
-  }) = _ExplanationOfBenefitAddItem;
+  
 }
 
 /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitDetail1 {
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
 
@@ -5349,7 +5346,7 @@ class ExplanationOfBenefitDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added
   ///  services.
-  factory ExplanationOfBenefitDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5420,11 +5417,11 @@ class ExplanationOfBenefitDetail1 {
     /// [subDetail] The third-tier service adjudications for payor added
     ///  services.
     List<ExplanationOfBenefitSubDetail1>? subDetail,
-  }) = _ExplanationOfBenefitDetail1;
+  
 }
 
 /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitSubDetail1 {
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
 
@@ -5486,7 +5483,7 @@ class ExplanationOfBenefitSubDetail1 {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5553,11 +5550,11 @@ class ExplanationOfBenefitSubDetail1 {
 
     /// [adjudication] The adjudication results.
     List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitSubDetail1;
+  
 }
 
 /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitTotal {
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
 
@@ -5597,7 +5594,7 @@ class ExplanationOfBenefitTotal {
   ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
-  factory ExplanationOfBenefitTotal({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5634,11 +5631,11 @@ class ExplanationOfBenefitTotal {
 
     /// [amount] Monetary total amount associated with the category.
     required Money amount,
-  }) = _ExplanationOfBenefitTotal;
+  
 }
 
 /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
-@freezed
+
 class ExplanationOfBenefitPayment {
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
 
@@ -5687,7 +5684,7 @@ class ExplanationOfBenefitPayment {
   /// [amount] Benefits payable less any payment adjustment.
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
-  factory ExplanationOfBenefitPayment({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5738,11 +5735,11 @@ class ExplanationOfBenefitPayment {
 
     /// [identifier] Issuer's unique identifier for the payment instrument.
     Identifier? identifier,
-  }) = _ExplanationOfBenefitPayment;
+  
 }
 
 /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
-@freezed
+
 class ExplanationOfBenefitProcessNote {
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
 
@@ -5788,7 +5785,7 @@ class ExplanationOfBenefitProcessNote {
   /// [textElement] Extensions for text
   ///
   /// [language] A code to define the language used in the text of the note.
-  factory ExplanationOfBenefitProcessNote({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5836,10 +5833,9 @@ class ExplanationOfBenefitProcessNote {
 
     /// [language] A code to define the language used in the text of the note.
     CodeableConcept? language,
-  }) = _ExplanationOfBenefitProcessNote;
+  
 }
 
-@freezed
 class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
   /// [ExplanationOfBenefitBenefitBalance] This resource provides: the claim
@@ -5897,7 +5893,7 @@ class ExplanationOfBenefitBenefitBalance
   ///  benefit' or 'maximum annual visits'.
   ///
   /// [financial] Benefits Used to date.
-  factory ExplanationOfBenefitBenefitBalance({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -5962,11 +5958,11 @@ class ExplanationOfBenefitBenefitBalance
 
     /// [financial] Benefits Used to date.
     List<ExplanationOfBenefitFinancial>? financial,
-  }) = _ExplanationOfBenefitBenefitBalance;
+  
 }
 
 /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
-@freezed
+
 class InsurancePlan {
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
 
@@ -6073,7 +6069,7 @@ class InsurancePlan {
   /// [coverage] Details about the coverage offered by the insurance product.
   ///
   /// [plan] Details about an insurance plan.
-  factory InsurancePlan({
+  
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
 
@@ -6211,11 +6207,11 @@ class InsurancePlan {
 
     /// [plan] Details about an insurance plan.
     List<InsurancePlanPlan>? plan,
-  }) = _InsurancePlan;
+  
 }
 
 /// [InsurancePlanContact] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanContact {
   /// [InsurancePlanContact] Details of a Health Insurance product/plan
 
@@ -6254,7 +6250,7 @@ class InsurancePlanContact {
   ///  by which the party may be contacted.
   ///
   /// [address] Visiting or postal addresses for the contact.
-  factory InsurancePlanContact({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6294,11 +6290,11 @@ class InsurancePlanContact {
 
     /// [address] Visiting or postal addresses for the contact.
     Address? address,
-  }) = _InsurancePlanContact;
+  
 }
 
 /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanCoverage {
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
 
@@ -6335,7 +6331,7 @@ class InsurancePlanCoverage {
   /// [network] Reference to the network that providing the type of coverage.
   ///
   /// [benefit] Specific benefits under this type of coverage.
-  factory InsurancePlanCoverage({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6372,11 +6368,11 @@ class InsurancePlanCoverage {
 
     /// [benefit] Specific benefits under this type of coverage.
     required List<InsurancePlanBenefit> benefit,
-  }) = _InsurancePlanCoverage;
+  
 }
 
 /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanBenefit {
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
 
@@ -6416,7 +6412,7 @@ class InsurancePlanBenefit {
   /// [requirementElement] Extensions for requirement
   ///
   /// [limit] The specific limits on the benefit.
-  factory InsurancePlanBenefit({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6457,11 +6453,11 @@ class InsurancePlanBenefit {
 
     /// [limit] The specific limits on the benefit.
     List<InsurancePlanLimit>? limit,
-  }) = _InsurancePlanBenefit;
+  
 }
 
 /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
-@freezed
+
 class InsurancePlanLimit {
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
 
@@ -6496,7 +6492,7 @@ class InsurancePlanLimit {
   ///  covered benefit.  For examples. wellness visits, or eyeglasses.
   ///
   /// [code] The specific limit on the benefit.
-  factory InsurancePlanLimit({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6530,11 +6526,11 @@ class InsurancePlanLimit {
 
     /// [code] The specific limit on the benefit.
     CodeableConcept? code,
-  }) = _InsurancePlanLimit;
+  
 }
 
 /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
-@freezed
+
 class InsurancePlanPlan {
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
 
@@ -6580,7 +6576,7 @@ class InsurancePlanPlan {
   ///
   /// [specificCost] Costs associated with the coverage provided by the
   ///  product.
-  factory InsurancePlanPlan({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6629,11 +6625,11 @@ class InsurancePlanPlan {
     /// [specificCost] Costs associated with the coverage provided by the
     ///  product.
     List<InsurancePlanSpecificCost>? specificCost,
-  }) = _InsurancePlanPlan;
+  
 }
 
 /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanGeneralCost {
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
 
@@ -6676,7 +6672,7 @@ class InsurancePlanGeneralCost {
   ///  this plan.
   ///
   /// [commentElement] Extensions for comment
-  factory InsurancePlanGeneralCost({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6722,11 +6718,11 @@ class InsurancePlanGeneralCost {
 
     /// [commentElement] Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _InsurancePlanGeneralCost;
+  
 }
 
 /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanSpecificCost {
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
 
@@ -6761,7 +6757,7 @@ class InsurancePlanSpecificCost {
   ///  Mental Health; Substance Abuse; Hospice, Home Health).
   ///
   /// [benefit] List of the specific benefits under this category of benefit.
-  factory InsurancePlanSpecificCost({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6795,11 +6791,11 @@ class InsurancePlanSpecificCost {
 
     /// [benefit] List of the specific benefits under this category of benefit.
     List<InsurancePlanBenefit1>? benefit,
-  }) = _InsurancePlanSpecificCost;
+  
 }
 
 /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
-@freezed
+
 class InsurancePlanBenefit1 {
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
 
@@ -6834,7 +6830,7 @@ class InsurancePlanBenefit1 {
   ///  speciality office visit; hospitalization; emergency room; urgent care).
   ///
   /// [cost] List of the costs associated with a specific benefit.
-  factory InsurancePlanBenefit1({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6868,11 +6864,11 @@ class InsurancePlanBenefit1 {
 
     /// [cost] List of the costs associated with a specific benefit.
     List<InsurancePlanCost>? cost,
-  }) = _InsurancePlanBenefit1;
+  
 }
 
 /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
-@freezed
+
 class InsurancePlanCost {
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
 
@@ -6914,7 +6910,7 @@ class InsurancePlanCost {
   ///
   /// [value] The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
-  factory InsurancePlanCost({
+  
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -6957,5 +6953,5 @@ class InsurancePlanCost {
     /// [value] The actual cost value. (some of the costs may be represented as
     ///  percentages rather than currency, e.g. 10% coinsurance).
     Quantity? value,
-  }) = _InsurancePlanCost;
+  
 }

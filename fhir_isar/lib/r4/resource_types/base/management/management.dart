@@ -4,18 +4,16 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../r4.dart';
 
-part 'management.freezed.dart';
 part 'management.g.dart';
 
-@freezed
 class Encounter {
-  factory Encounter({
+  
     @Default(R4ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
         R4ResourceType resourceType,
@@ -53,47 +51,43 @@ class Encounter {
     List<EncounterLocation>? location,
     Reference? serviceProvider,
     Reference? partOf,
-  }) = _Encounter;
+  
 }
 
-@freezed
 class EncounterStatusHistory {
-  factory EncounterStatusHistory({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
-  }) = _EncounterStatusHistory;
+  
 }
 
-@freezed
 class EncounterClassHistory {
-  factory EncounterClassHistory({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'class') required Coding class_,
     required Period period,
-  }) = _EncounterClassHistory;
+  
 }
 
-@freezed
 class EncounterParticipant {
-  factory EncounterParticipant({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Period? period,
     Reference? individual,
-  }) = _EncounterParticipant;
+  
 }
 
-@freezed
 class EncounterDiagnosis {
-  factory EncounterDiagnosis({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -101,12 +95,11 @@ class EncounterDiagnosis {
     CodeableConcept? use,
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
-  }) = _EncounterDiagnosis;
+  
 }
 
-@freezed
 class EncounterHospitalization {
-  factory EncounterHospitalization({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -119,12 +112,11 @@ class EncounterHospitalization {
     List<CodeableConcept>? specialArrangement,
     Reference? destination,
     CodeableConcept? dischargeDisposition,
-  }) = _EncounterHospitalization;
+  
 }
 
-@freezed
 class EncounterLocation {
-  factory EncounterLocation({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -133,12 +125,11 @@ class EncounterLocation {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? physicalType,
     Period? period,
-  }) = _EncounterLocation;
+  
 }
 
-@freezed
 class EpisodeOfCare {
-  factory EpisodeOfCare({
+  
     @Default(R4ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
         R4ResourceType resourceType,
@@ -165,24 +156,22 @@ class EpisodeOfCare {
     Reference? careManager,
     List<Reference>? team,
     List<Reference>? account,
-  }) = _EpisodeOfCare;
+  
 }
 
-@freezed
 class EpisodeOfCareStatusHistory {
-  factory EpisodeOfCareStatusHistory({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
-  }) = _EpisodeOfCareStatusHistory;
+  
 }
 
-@freezed
 class EpisodeOfCareDiagnosis {
-  factory EpisodeOfCareDiagnosis({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -190,12 +179,11 @@ class EpisodeOfCareDiagnosis {
     CodeableConcept? role,
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
-  }) = _EpisodeOfCareDiagnosis;
+  
 }
 
-@freezed
 class Flag {
-  factory Flag({
+  
     @Default(R4ResourceType.Flag)
     @JsonKey(unknownEnumValue: R4ResourceType.Flag)
         R4ResourceType resourceType,
@@ -218,12 +206,11 @@ class Flag {
     Period? period,
     Reference? encounter,
     Reference? author,
-  }) = _Flag;
+  
 }
 
-@freezed
 class Library {
-  factory Library({
+  
     @Default(R4ResourceType.Library)
     @JsonKey(unknownEnumValue: R4ResourceType.Library)
         R4ResourceType resourceType,
@@ -284,12 +271,11 @@ class Library {
     List<ParameterDefinition>? parameter,
     List<DataRequirement>? dataRequirement,
     List<Attachment>? content,
-  }) = _Library;
+  
 }
 
-@freezed
 class List_ {
-  factory List_({
+  
     @Default(R4ResourceType.List_)
     @JsonKey(unknownEnumValue: R4ResourceType.List_)
         R4ResourceType resourceType,
@@ -320,12 +306,11 @@ class List_ {
     List<Annotation>? note,
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
-  }) = _List_;
+  
 }
 
-@freezed
 class ListEntry {
-  factory ListEntry({
+  
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -335,5 +320,5 @@ class ListEntry {
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     required Reference item,
-  }) = _ListEntry;
+  
 }

@@ -2,19 +2,18 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import '../../../../dstu2.dart';
 
 part 'content.enums.dart';
-part 'content.freezed.dart';
+
 part 'content.g.dart';
 
-@freezed
 class StructureDefinition {
-  factory StructureDefinition({
+  
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
@@ -69,23 +68,21 @@ class StructureDefinition {
     FhirUri? base,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
+  
 }
 
-@freezed
 class StructureDefinitionContact {
-  factory StructureDefinitionContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _StructureDefinitionContact;
+  
 }
 
-@freezed
 class StructureDefinitionMapping {
-  factory StructureDefinitionMapping({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -98,32 +95,29 @@ class StructureDefinitionMapping {
     @JsonKey(name: '_name') Element? nameElement,
     String? comments,
     @JsonKey(name: '_comments') Element? commentElement,
-  }) = _StructureDefinitionMapping;
+  
 }
 
-@freezed
 class StructureDefinitionSnapshot {
-  factory StructureDefinitionSnapshot({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
+  
 }
 
-@freezed
 class StructureDefinitionDifferential {
-  factory StructureDefinitionDifferential({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
+  
 }
 
-@freezed
 class DataElement {
-  factory DataElement({
+  
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
         Dstu2ResourceType resourceType,
@@ -151,23 +145,21 @@ class DataElement {
         DataElementStringency? stringency,
     List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
-  }) = _DataElement;
+  
 }
 
-@freezed
 class DataElementContact {
-  factory DataElementContact({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
     List<ContactPoint>? telecom,
-  }) = _DataElementContact;
+  
 }
 
-@freezed
 class DataElementMapping {
-  factory DataElementMapping({
+  
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -180,5 +172,5 @@ class DataElementMapping {
     @JsonKey(name: '_name') Element? nameElement,
     String? comments,
     @JsonKey(name: '_comment') Element? commentElement,
-  }) = _DataElementMapping;
+  
 }
