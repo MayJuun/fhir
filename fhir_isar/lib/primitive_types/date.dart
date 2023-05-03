@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
 import 'fhir_date_time_base.dart';

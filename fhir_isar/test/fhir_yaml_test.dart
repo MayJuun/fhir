@@ -8,6 +8,7 @@ import 'dart:convert';
 // Package imports:
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
 import 'package:fhir/yaml/fhir_yaml.dart';

@@ -6,6 +6,7 @@ import 'dart:convert';
 // Package imports:
 import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
 import 'primitive_type_exceptions.dart';
