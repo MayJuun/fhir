@@ -1,6 +1,5 @@
 part of 'resource.dart';
 
-/// Creates a new [id] for the Resources that's passed
 Resource _newId(Resource resource) {
   switch (resource.resourceType) {
     case Stu3ResourceType.Account:

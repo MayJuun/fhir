@@ -1,5 +1,3 @@
-/// From Package: https://github.com/alexei-sintotski/json2yaml
-/// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart
 // ignore_for_file: use_raw_strings
 
 // Dart imports:

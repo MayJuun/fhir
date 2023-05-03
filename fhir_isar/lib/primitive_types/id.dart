@@ -11,7 +11,6 @@ import 'package:json_annotation/json_annotation.dart';
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-/// returns the same resource with a new ID (even if there is already an ID present)
 Id newId() => Id(const uuid.Uuid().v4());
 
 String newIdString() => const uuid.Uuid().v4();

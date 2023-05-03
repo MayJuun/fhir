@@ -99,10 +99,10 @@ class PaymentReconciliationProcessNote {
     @JsonKey(name: '_text') Element? textElement,
   
 
-  /// Produces a Yaml formatted String version of the object
+  
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts a [String] in YAML format as an argument
+  
   factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml
           is String
       ? PaymentReconciliationProcessNote.fromJson(

@@ -13,7 +13,6 @@ import 'primitive_type_exceptions.dart';
 class Code {
   const Code._(this._valueString, this._valueCode, this._isValid);
 
-  /// Construct a [Code] constant at compile time
   const Code.asConst(String code)
       : _valueString = code,
         _valueCode = code,

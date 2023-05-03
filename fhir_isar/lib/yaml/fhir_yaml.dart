@@ -1,28 +1,18 @@
-/// From Package: https://github.com/alexei-sintotski/json2yaml
-/// https://github.com/alexei-sintotski/json2yaml/blob/master/lib/src/json2yaml.dart
-
 // ignore_for_file: prefer_if_elements_to_conditional_expressions, noop_primitive_operations
 
-/// Yaml formatting control options
 enum YamlStyle {
-  /// Default formatting style applicable in most cases
   generic,
 
-  /// YAML formatting style following pubspec.yaml formatting conventions
   pubspecYaml,
 
-  /// YAML formatting style following pubspec.lock formatting conventions
   pubspecLock,
 }
 
-/// Converts JSON to YAML representation
 String json2yaml(
   Map<String, dynamic> json, {
   YamlStyle yamlStyle = YamlStyle.generic,
 }) =>
     _renderToYaml(json, 0, yamlStyle)
-
-        /// to make the formatting cleaner with fewer blank lines
         .replaceAll(RegExp(r'(?<=\n\s*)\-\s\s*'), '- ');
 
 String _renderToYaml(
@@ -57,16 +47,12 @@ String _formatValue(
   }
   if (value is String) {
     if (_isMultilineString(value)) {
-      /// if multiline but has characters that need to be escaped, we just
-      /// quote the whole line, and escape those characters
       if (_containsEscapeCharacters(value)) {
         return ' "${_withEscapes(value)}"';
       } else {
         var finalString = ' |2';
         final split = value.split('\n');
 
-        /// otherwise, we go ahead and format the string into more easily
-        /// readable lines
         for (var s = 0; s < split.length; s++) {
           finalString = [
             finalString,
@@ -80,9 +66,6 @@ String _formatValue(
       }
     }
 
-    /// if the String contains special characters, escape characters, quotes,
-    /// or begins or ends with blank space (which yaml interprets differently
-    /// than some other formats), we quote the whoe string again
     if (_containsSpecialCharacters(value) ||
         _containsEscapeCharacters(value) ||
         value.contains('"') ||
@@ -101,13 +84,10 @@ String _formatValue(
       return " ''";
     }
 
-    /// checks if it is an integer or a double
     if (_isNumber(value)) {
       return " '$value'";
     }
 
-    /// checks if the string is [true], [false], or [null], and quotes them or
-    /// else yaml will think they are booleans or null
     if (_isBooleanOrNullString(value)) {
       return " '$value'";
     }

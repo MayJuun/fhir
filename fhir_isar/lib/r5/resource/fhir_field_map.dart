@@ -6,8 +6,6 @@ class FhirField {
   final String type;
 }
 
-/// Because I don't want to root around in StructureDefinitions just to see
-/// what kind of an object something is or if it's a list, I'm using this
 final fhirFieldMap = {
   'Element': {
     'id': const FhirField(false, 'String'),
