@@ -11,7 +11,9 @@ Future<void> main() async {
         !file.contains('hive') &&
         file.contains('dart') &&
         !(file.contains('resource') && !file.contains('resource_types')) &&
-        !file.contains('transform.dart')) {
+        !file.contains('transform.dart') &&
+        !file.contains('primitive')) {
+      print(file);
       final fileText = await File(file).readAsString();
       final fileList = fileText.split('\n');
       var newText = '';
@@ -43,7 +45,7 @@ Future<void> main() async {
                 newText += varList.sublist(0, varList.length - 2).join(' ');
                 newText += ' this.${varList.last}\n';
               } else {
-                print('VarList: $varList');
+                // print('VarList: $varList');
               }
             });
             newText += '});\n';
