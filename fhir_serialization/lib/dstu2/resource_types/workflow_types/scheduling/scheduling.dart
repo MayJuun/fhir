@@ -77,6 +77,7 @@ class Appointment {
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentParticipant {
   const AppointmentParticipant({
     required this.id,
@@ -104,6 +105,7 @@ class AppointmentParticipant {
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentResponse {
   const AppointmentResponse({
     @Default(Dstu2ResourceType.AppointmentResponse) required this.resourceType,
@@ -159,6 +161,7 @@ class AppointmentResponse {
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
 
+@JsonSerializable()
 class Schedule {
   const Schedule({
     @Default(Dstu2ResourceType.Schedule) required this.resourceType,
@@ -201,6 +204,7 @@ class Schedule {
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);
 }
 
+@JsonSerializable()
 class Slot {
   const Slot({
     @Default(Dstu2ResourceType.Slot) required this.resourceType,

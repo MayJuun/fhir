@@ -84,6 +84,7 @@ class AdverseEvent {
   Map<String, dynamic> toJson() => _$AdverseEventToJson(this);
 }
 
+@JsonSerializable()
 class AdverseEventSuspectEntity {
   const AdverseEventSuspectEntity({
     required this.id,
@@ -102,6 +103,7 @@ class AdverseEventSuspectEntity {
   Map<String, dynamic> toJson() => _$AdverseEventSuspectEntityToJson(this);
 }
 
+@JsonSerializable()
 class AdverseEventCausality {
   const AdverseEventCausality({
     required this.id,
@@ -127,6 +129,7 @@ class AdverseEventCausality {
   Map<String, dynamic> toJson() => _$AdverseEventCausalityToJson(this);
 }
 
+@JsonSerializable()
 class AllergyIntolerance {
   const AllergyIntolerance({
     @Default(R4ResourceType.AllergyIntolerance) required this.resourceType,
@@ -211,6 +214,7 @@ class AllergyIntolerance {
   Map<String, dynamic> toJson() => _$AllergyIntoleranceToJson(this);
 }
 
+@JsonSerializable()
 class AllergyIntoleranceReaction {
   const AllergyIntoleranceReaction({
     required this.id,
@@ -245,6 +249,7 @@ class AllergyIntoleranceReaction {
   Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalImpression {
   const ClinicalImpression({
     @Default(R4ResourceType.ClinicalImpression) required this.resourceType,
@@ -329,6 +334,7 @@ class ClinicalImpression {
   Map<String, dynamic> toJson() => _$ClinicalImpressionToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalImpressionInvestigation {
   const ClinicalImpressionInvestigation({
     required this.id,
@@ -348,6 +354,7 @@ class ClinicalImpressionInvestigation {
       _$ClinicalImpressionInvestigationToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalImpressionFinding {
   const ClinicalImpressionFinding({
     required this.id,
@@ -370,6 +377,7 @@ class ClinicalImpressionFinding {
   Map<String, dynamic> toJson() => _$ClinicalImpressionFindingToJson(this);
 }
 
+@JsonSerializable()
 class Condition {
   const Condition({
     @Default(R4ResourceType.Condition) required this.resourceType,
@@ -460,6 +468,7 @@ class Condition {
   Map<String, dynamic> toJson() => _$ConditionToJson(this);
 }
 
+@JsonSerializable()
 class ConditionStage {
   const ConditionStage({
     required this.id,
@@ -480,6 +489,7 @@ class ConditionStage {
   Map<String, dynamic> toJson() => _$ConditionStageToJson(this);
 }
 
+@JsonSerializable()
 class ConditionEvidence {
   const ConditionEvidence({
     required this.id,
@@ -498,6 +508,7 @@ class ConditionEvidence {
   Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);
 }
 
+@JsonSerializable()
 class DetectedIssue {
   const DetectedIssue({
     @Default(R4ResourceType.DetectedIssue) required this.resourceType,
@@ -565,6 +576,7 @@ class DetectedIssue {
   Map<String, dynamic> toJson() => _$DetectedIssueToJson(this);
 }
 
+@JsonSerializable()
 class DetectedIssueEvidence {
   const DetectedIssueEvidence({
     required this.id,
@@ -583,6 +595,7 @@ class DetectedIssueEvidence {
   Map<String, dynamic> toJson() => _$DetectedIssueEvidenceToJson(this);
 }
 
+@JsonSerializable()
 class DetectedIssueMitigation {
   const DetectedIssueMitigation({
     required this.id,
@@ -605,6 +618,7 @@ class DetectedIssueMitigation {
   Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
 
+@JsonSerializable()
 class FamilyMemberHistory {
   const FamilyMemberHistory({
     @Default(R4ResourceType.FamilyMemberHistory) required this.resourceType,
@@ -709,6 +723,7 @@ class FamilyMemberHistory {
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryToJson(this);
 }
 
+@JsonSerializable()
 class FamilyMemberHistoryCondition {
   const FamilyMemberHistoryCondition({
     required this.id,
@@ -744,6 +759,7 @@ class FamilyMemberHistoryCondition {
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }
 
+@JsonSerializable()
 class Procedure {
   const Procedure({
     @Default(R4ResourceType.Procedure) required this.resourceType,
@@ -846,6 +862,7 @@ class Procedure {
   Map<String, dynamic> toJson() => _$ProcedureToJson(this);
 }
 
+@JsonSerializable()
 class ProcedurePerformer {
   const ProcedurePerformer({
     required this.id,
@@ -866,6 +883,7 @@ class ProcedurePerformer {
   Map<String, dynamic> toJson() => _$ProcedurePerformerToJson(this);
 }
 
+@JsonSerializable()
 class ProcedureFocalDevice {
   const ProcedureFocalDevice({
     required this.id,

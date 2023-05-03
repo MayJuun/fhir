@@ -75,6 +75,7 @@ class CarePlan {
   Map<String, dynamic> toJson() => _$CarePlanToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanRelatedPlan {
   const CarePlanRelatedPlan({
     required this.id,
@@ -93,6 +94,7 @@ class CarePlanRelatedPlan {
   Map<String, dynamic> toJson() => _$CarePlanRelatedPlanToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanParticipant {
   const CarePlanParticipant({
     required this.id,
@@ -111,6 +113,7 @@ class CarePlanParticipant {
   Map<String, dynamic> toJson() => _$CarePlanParticipantToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanActivity {
   const CarePlanActivity({
     required this.id,
@@ -135,6 +138,7 @@ class CarePlanActivity {
   Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanActivityDetail {
   const CarePlanActivityDetail({
     required this.id,
@@ -193,6 +197,7 @@ class CarePlanActivityDetail {
   Map<String, dynamic> toJson() => _$CarePlanActivityDetailToJson(this);
 }
 
+@JsonSerializable()
 class Goal {
   const Goal({
     @Default(Dstu2ResourceType.Goal) required this.resourceType,
@@ -260,6 +265,7 @@ class Goal {
   Map<String, dynamic> toJson() => _$GoalToJson(this);
 }
 
+@JsonSerializable()
 class GoalOutcome {
   const GoalOutcome({
     required this.id,
@@ -278,6 +284,7 @@ class GoalOutcome {
   Map<String, dynamic> toJson() => _$GoalOutcomeToJson(this);
 }
 
+@JsonSerializable()
 class ReferralRequest {
   const ReferralRequest({
     @Default(Dstu2ResourceType.ReferralRequest) required this.resourceType,
@@ -337,6 +344,7 @@ class ReferralRequest {
   Map<String, dynamic> toJson() => _$ReferralRequestToJson(this);
 }
 
+@JsonSerializable()
 class ProcedureRequest {
   const ProcedureRequest({
     @Default(Dstu2ResourceType.ProcedureRequest) required this.resourceType,
@@ -401,6 +409,7 @@ class ProcedureRequest {
   Map<String, dynamic> toJson() => _$ProcedureRequestToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrder {
   const NutritionOrder({
     @Default(Dstu2ResourceType.NutritionOrder) required this.resourceType,
@@ -460,6 +469,7 @@ class NutritionOrder {
   Map<String, dynamic> toJson() => _$NutritionOrderToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderOralDiet {
   const NutritionOrderOralDiet({
     required this.id,
@@ -490,6 +500,7 @@ class NutritionOrderOralDiet {
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderSupplement {
   const NutritionOrderSupplement({
     required this.id,
@@ -520,6 +531,7 @@ class NutritionOrderSupplement {
   Map<String, dynamic> toJson() => _$NutritionOrderSupplementToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderEnteralFormula {
   const NutritionOrderEnteralFormula({
     required this.id,
@@ -528,7 +540,7 @@ class NutritionOrderEnteralFormula {
     @JsonKey(name: 'fhir_comments') required this.fhirComments,
     required this.baseFormulaType,
     required this.baseFormulaProductName,
-    @JsonKey('_baseFormulaProductName')
+    @JsonKey(name: '_baseFormulaProductName')
         required this.baseFormulaProductNameElement,
     required this.additiveType,
     @JsonKey(name: '_additiveProductName')
@@ -539,7 +551,7 @@ class NutritionOrderEnteralFormula {
     required this.administration,
     required this.maxVolumeToDeliver,
     required this.administrationInstruction,
-    @JsonKey('_administrationInstruction')
+    @JsonKey(name: '_administrationInstruction')
         required this.administrationInstructionElement,
   });
   final Id? id;
@@ -565,6 +577,7 @@ class NutritionOrderEnteralFormula {
   Map<String, dynamic> toJson() => _$NutritionOrderEnteralFormulaToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderOralDietNutrient {
   const NutritionOrderOralDietNutrient({
     required this.id,
@@ -585,6 +598,7 @@ class NutritionOrderOralDietNutrient {
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietNutrientToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderOralDietTexture {
   const NutritionOrderOralDietTexture({
     required this.id,
@@ -605,6 +619,7 @@ class NutritionOrderOralDietTexture {
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietTextureToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderEnteralFormulaAdministration {
   const NutritionOrderEnteralFormulaAdministration({
     required this.id,
@@ -630,6 +645,7 @@ class NutritionOrderEnteralFormulaAdministration {
       _$NutritionOrderEnteralFormulaAdministrationToJson(this);
 }
 
+@JsonSerializable()
 class VisionPrescription {
   const VisionPrescription({
     @Default(Dstu2ResourceType.VisionPrescription) required this.resourceType,

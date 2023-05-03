@@ -26,6 +26,7 @@ class ContactDetail {
   Map<String, dynamic> toJson() => _$ContactDetailToJson(this);
 }
 
+@JsonSerializable()
 class Contributor {
   const Contributor({
     required this.id,
@@ -48,6 +49,7 @@ class Contributor {
   Map<String, dynamic> toJson() => _$ContributorToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirement {
   const DataRequirement({
     required this.id,
@@ -84,6 +86,7 @@ class DataRequirement {
   Map<String, dynamic> toJson() => _$DataRequirementToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementCodeFilter {
   const DataRequirementCodeFilter({
     required this.id,
@@ -110,6 +113,7 @@ class DataRequirementCodeFilter {
   Map<String, dynamic> toJson() => _$DataRequirementCodeFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementDateFilter {
   const DataRequirementDateFilter({
     required this.id,
@@ -140,15 +144,16 @@ class DataRequirementDateFilter {
   Map<String, dynamic> toJson() => _$DataRequirementDateFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementSort {
   const DataRequirementSort({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.path,
-    @JsonKey('__path') required this.pathElement,
+    @JsonKey(name: '__path') required this.pathElement,
     required this.direction,
-    @JsonKey('__direction') required this.directionElement,
+    @JsonKey(name: '__direction') required this.directionElement,
   });
   final String? id;
 
@@ -166,6 +171,7 @@ class DataRequirementSort {
   Map<String, dynamic> toJson() => _$DataRequirementSortToJson(this);
 }
 
+@JsonSerializable()
 class ParameterDefinition {
   const ParameterDefinition({
     required this.id,
@@ -204,20 +210,21 @@ class ParameterDefinition {
   Map<String, dynamic> toJson() => _$ParameterDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class RelatedArtifact {
   const RelatedArtifact({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.label,
-    @JsonKey('__label') required this.labelElement,
+    @JsonKey(name: '__label') required this.labelElement,
     required this.display,
-    @JsonKey('__display') required this.displayElement,
+    @JsonKey(name: '__display') required this.displayElement,
     required this.citation,
-    @JsonKey('__citation') required this.citationElement,
+    @JsonKey(name: '__citation') required this.citationElement,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.document,
     required this.resource,
   });
@@ -247,20 +254,21 @@ class RelatedArtifact {
   Map<String, dynamic> toJson() => _$RelatedArtifactToJson(this);
 }
 
+@JsonSerializable()
 class TriggerDefinition {
   const TriggerDefinition({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.timingTiming,
     required this.timingReference,
     required this.timingDate,
-    @JsonKey('__timingDate') required this.timingDateElement,
+    @JsonKey(name: '__timingDate') required this.timingDateElement,
     required this.timingDateTime,
-    @JsonKey('__timingDateTime') required this.timingDateTimeElement,
+    @JsonKey(name: '__timingDateTime') required this.timingDateTimeElement,
     required this.data,
     required this.condition,
   });
@@ -289,6 +297,7 @@ class TriggerDefinition {
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class UsageContext {
   const UsageContext({
     required this.id,
@@ -311,20 +320,21 @@ class UsageContext {
   Map<String, dynamic> toJson() => _$UsageContextToJson(this);
 }
 
+@JsonSerializable()
 class Expression {
   const Expression({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.expression,
-    @JsonKey('__expression') required this.expressionElement,
+    @JsonKey(name: '__expression') required this.expressionElement,
     required this.reference,
-    @JsonKey('__reference') required this.referenceElement,
+    @JsonKey(name: '__reference') required this.referenceElement,
   });
   final String? id;
 

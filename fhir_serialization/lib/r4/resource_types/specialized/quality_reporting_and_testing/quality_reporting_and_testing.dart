@@ -12,49 +12,49 @@ class Measure {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.subtitle,
-    @JsonKey('__subtitle') required this.subtitleElement,
+    @JsonKey(name: '__subtitle') required this.subtitleElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.subjectCodeableConcept,
     required this.subjectReference,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.purpose,
-    @JsonKey('__purpose') required this.purposeElement,
+    @JsonKey(name: '__purpose') required this.purposeElement,
     required this.usage,
-    @JsonKey('__usage') required this.usageElement,
+    @JsonKey(name: '__usage') required this.usageElement,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.approvalDate,
-    @JsonKey('__approvalDate') required this.approvalDateElement,
+    @JsonKey(name: '__approvalDate') required this.approvalDateElement,
     required this.lastReviewDate,
-    @JsonKey('__lastReviewDate') required this.lastReviewDateElement,
+    @JsonKey(name: '__lastReviewDate') required this.lastReviewDateElement,
     required this.effectivePeriod,
     required this.topic,
     required this.author,
@@ -62,26 +62,26 @@ class Measure {
     required this.reviewer,
     required this.endorser,
     required this.relatedArtifact,
-    @JsonKey('_library') required this.library_,
+    @JsonKey(name: '_library') required this.library_,
     required this.disclaimer,
-    @JsonKey('__disclaimer') required this.disclaimerElement,
+    @JsonKey(name: '__disclaimer') required this.disclaimerElement,
     required this.scoring,
     required this.compositeScoring,
     required this.type,
     required this.riskAdjustment,
-    @JsonKey('__riskAdjustment') required this.riskAdjustmentElement,
+    @JsonKey(name: '__riskAdjustment') required this.riskAdjustmentElement,
     required this.rateAggregation,
-    @JsonKey('__rateAggregation') required this.rateAggregationElement,
+    @JsonKey(name: '__rateAggregation') required this.rateAggregationElement,
     required this.rationale,
-    @JsonKey('__rationale') required this.rationaleElement,
+    @JsonKey(name: '__rationale') required this.rationaleElement,
     required this.clinicalRecommendationStatement,
-    @JsonKey('__clinicalRecommendationStatement')
+    @JsonKey(name: '__clinicalRecommendationStatement')
         required this.clinicalRecommendationStatementElement,
     required this.improvementNotation,
     required this.definition,
-    @JsonKey('__definition') required this.definitionElement,
+    @JsonKey(name: '__definition') required this.definitionElement,
     required this.guidance,
-    @JsonKey('__guidance') required this.guidanceElement,
+    @JsonKey(name: '__guidance') required this.guidanceElement,
     required this.group,
     required this.supplementalData,
   });
@@ -191,6 +191,7 @@ class Measure {
   Map<String, dynamic> toJson() => _$MeasureToJson(this);
 }
 
+@JsonSerializable()
 class MeasureGroup {
   const MeasureGroup({
     required this.id,
@@ -215,6 +216,7 @@ class MeasureGroup {
   Map<String, dynamic> toJson() => _$MeasureGroupToJson(this);
 }
 
+@JsonSerializable()
 class MeasurePopulation {
   const MeasurePopulation({
     required this.id,
@@ -237,6 +239,7 @@ class MeasurePopulation {
   Map<String, dynamic> toJson() => _$MeasurePopulationToJson(this);
 }
 
+@JsonSerializable()
 class MeasureStratifier {
   const MeasureStratifier({
     required this.id,
@@ -261,6 +264,7 @@ class MeasureStratifier {
   Map<String, dynamic> toJson() => _$MeasureStratifierToJson(this);
 }
 
+@JsonSerializable()
 class MeasureComponent {
   const MeasureComponent({
     required this.id,
@@ -283,6 +287,7 @@ class MeasureComponent {
   Map<String, dynamic> toJson() => _$MeasureComponentToJson(this);
 }
 
+@JsonSerializable()
 class MeasureSupplementalData {
   const MeasureSupplementalData({
     required this.id,
@@ -307,28 +312,29 @@ class MeasureSupplementalData {
   Map<String, dynamic> toJson() => _$MeasureSupplementalDataToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReport {
   const MeasureReport({
     @Default(R4ResourceType.MeasureReport) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.measure,
     required this.subject,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.reporter,
     required this.period,
     required this.improvementNotation,
@@ -371,6 +377,7 @@ class MeasureReport {
   Map<String, dynamic> toJson() => _$MeasureReportToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportGroup {
   const MeasureReportGroup({
     required this.id,
@@ -393,6 +400,7 @@ class MeasureReportGroup {
   Map<String, dynamic> toJson() => _$MeasureReportGroupToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportPopulation {
   const MeasureReportPopulation({
     required this.id,
@@ -415,6 +423,7 @@ class MeasureReportPopulation {
   Map<String, dynamic> toJson() => _$MeasureReportPopulationToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportStratifier {
   const MeasureReportStratifier({
     required this.id,
@@ -433,6 +442,7 @@ class MeasureReportStratifier {
   Map<String, dynamic> toJson() => _$MeasureReportStratifierToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportStratum {
   const MeasureReportStratum({
     required this.id,
@@ -455,6 +465,7 @@ class MeasureReportStratum {
   Map<String, dynamic> toJson() => _$MeasureReportStratumToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportComponent {
   const MeasureReportComponent({
     required this.id,
@@ -473,6 +484,7 @@ class MeasureReportComponent {
   Map<String, dynamic> toJson() => _$MeasureReportComponentToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportPopulation1 {
   const MeasureReportPopulation1({
     required this.id,
@@ -495,33 +507,34 @@ class MeasureReportPopulation1 {
   Map<String, dynamic> toJson() => _$MeasureReportPopulation1ToJson(this);
 }
 
+@JsonSerializable()
 class TestReport {
   const TestReport({
     @Default(R4ResourceType.TestReport) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.testScript,
     required this.result,
-    @JsonKey('__result') required this.resultElement,
+    @JsonKey(name: '__result') required this.resultElement,
     required this.score,
-    @JsonKey('__score') required this.scoreElement,
+    @JsonKey(name: '__score') required this.scoreElement,
     required this.tester,
-    @JsonKey('__tester') required this.testerElement,
+    @JsonKey(name: '__tester') required this.testerElement,
     required this.issued,
-    @JsonKey('__issued') required this.issuedElement,
+    @JsonKey(name: '__issued') required this.issuedElement,
     required this.participant,
     required this.setup,
     required this.test,
@@ -570,6 +583,7 @@ class TestReport {
   Map<String, dynamic> toJson() => _$TestReportToJson(this);
 }
 
+@JsonSerializable()
 class TestReportParticipant {
   const TestReportParticipant({
     required this.id,
@@ -596,6 +610,7 @@ class TestReportParticipant {
   Map<String, dynamic> toJson() => _$TestReportParticipantToJson(this);
 }
 
+@JsonSerializable()
 class TestReportSetup {
   const TestReportSetup({
     required this.id,
@@ -612,6 +627,7 @@ class TestReportSetup {
   Map<String, dynamic> toJson() => _$TestReportSetupToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction {
   const TestReportAction({
     required this.id,
@@ -630,6 +646,7 @@ class TestReportAction {
   Map<String, dynamic> toJson() => _$TestReportActionToJson(this);
 }
 
+@JsonSerializable()
 class TestReportOperation {
   const TestReportOperation({
     required this.id,
@@ -656,6 +673,7 @@ class TestReportOperation {
   Map<String, dynamic> toJson() => _$TestReportOperationToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAssert {
   const TestReportAssert({
     required this.id,
@@ -682,6 +700,7 @@ class TestReportAssert {
   Map<String, dynamic> toJson() => _$TestReportAssertToJson(this);
 }
 
+@JsonSerializable()
 class TestReportTest {
   const TestReportTest({
     required this.id,
@@ -706,6 +725,7 @@ class TestReportTest {
   Map<String, dynamic> toJson() => _$TestReportTestToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction1 {
   const TestReportAction1({
     required this.id,
@@ -724,6 +744,7 @@ class TestReportAction1 {
   Map<String, dynamic> toJson() => _$TestReportAction1ToJson(this);
 }
 
+@JsonSerializable()
 class TestReportTeardown {
   const TestReportTeardown({
     required this.id,
@@ -740,6 +761,7 @@ class TestReportTeardown {
   Map<String, dynamic> toJson() => _$TestReportTeardownToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction2 {
   const TestReportAction2({
     required this.id,
@@ -756,45 +778,46 @@ class TestReportAction2 {
   Map<String, dynamic> toJson() => _$TestReportAction2ToJson(this);
 }
 
+@JsonSerializable()
 class TestScript {
   const TestScript({
     @Default(R4ResourceType.TestScript) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.purpose,
-    @JsonKey('__purpose') required this.purposeElement,
+    @JsonKey(name: '__purpose') required this.purposeElement,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.origin,
     required this.destination,
     required this.metadata,
@@ -870,6 +893,7 @@ class TestScript {
   Map<String, dynamic> toJson() => _$TestScriptToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptOrigin {
   const TestScriptOrigin({
     required this.id,
@@ -890,6 +914,7 @@ class TestScriptOrigin {
   Map<String, dynamic> toJson() => _$TestScriptOriginToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptDestination {
   const TestScriptDestination({
     required this.id,
@@ -910,6 +935,7 @@ class TestScriptDestination {
   Map<String, dynamic> toJson() => _$TestScriptDestinationToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptMetadata {
   const TestScriptMetadata({
     required this.id,
@@ -928,6 +954,7 @@ class TestScriptMetadata {
   Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptLink {
   const TestScriptLink({
     required this.id,
@@ -950,6 +977,7 @@ class TestScriptLink {
   Map<String, dynamic> toJson() => _$TestScriptLinkToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptCapability {
   const TestScriptCapability({
     required this.id,
@@ -990,6 +1018,7 @@ class TestScriptCapability {
   Map<String, dynamic> toJson() => _$TestScriptCapabilityToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptFixture {
   const TestScriptFixture({
     required this.id,
@@ -1014,6 +1043,7 @@ class TestScriptFixture {
   Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptVariable {
   const TestScriptVariable({
     required this.id,
@@ -1060,6 +1090,7 @@ class TestScriptVariable {
   Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptSetup {
   const TestScriptSetup({
     required this.id,
@@ -1076,6 +1107,7 @@ class TestScriptSetup {
   Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction {
   const TestScriptAction({
     required this.id,
@@ -1094,6 +1126,7 @@ class TestScriptAction {
   Map<String, dynamic> toJson() => _$TestScriptActionToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptOperation {
   const TestScriptOperation({
     required this.id,
@@ -1172,6 +1205,7 @@ class TestScriptOperation {
   Map<String, dynamic> toJson() => _$TestScriptOperationToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRequestHeader {
   const TestScriptRequestHeader({
     required this.id,
@@ -1194,56 +1228,60 @@ class TestScriptRequestHeader {
   Map<String, dynamic> toJson() => _$TestScriptRequestHeaderToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAssert {
   const TestScriptAssert({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.label,
-    @JsonKey('__label') required this.labelElement,
+    @JsonKey(name: '__label') required this.labelElement,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.direction,
-    @JsonKey('__direction') required this.directionElement,
+    @JsonKey(name: '__direction') required this.directionElement,
     required this.compareToSourceId,
-    @JsonKey('__compareToSourceId') required this.compareToSourceIdElement,
+    @JsonKey(name: '__compareToSourceId')
+        required this.compareToSourceIdElement,
     required this.compareToSourceExpression,
-    @JsonKey('__compareToSourceExpression')
+    @JsonKey(name: '__compareToSourceExpression')
         required this.compareToSourceExpressionElement,
     required this.compareToSourcePath,
-    @JsonKey('__compareToSourcePath') required this.compareToSourcePathElement,
+    @JsonKey(name: '__compareToSourcePath')
+        required this.compareToSourcePathElement,
     required this.contentType,
-    @JsonKey('__contentType') required this.contentTypeElement,
+    @JsonKey(name: '__contentType') required this.contentTypeElement,
     required this.expression,
-    @JsonKey('__expression') required this.expressionElement,
+    @JsonKey(name: '__expression') required this.expressionElement,
     required this.headerField,
-    @JsonKey('__headerField') required this.headerFieldElement,
+    @JsonKey(name: '__headerField') required this.headerFieldElement,
     required this.minimumId,
-    @JsonKey('__minimumId') required this.minimumIdElement,
+    @JsonKey(name: '__minimumId') required this.minimumIdElement,
     required this.navigationLinks,
-    @JsonKey('__navigationLinks') required this.navigationLinksElement,
-    @JsonKey('_operator') required this.operator_,
-    @JsonKey('__operator') required this.operatorElement,
+    @JsonKey(name: '__navigationLinks') required this.navigationLinksElement,
+    @JsonKey(name: '_operator') required this.operator_,
+    @JsonKey(name: '__operator') required this.operatorElement,
     required this.path,
-    @JsonKey('__path') required this.pathElement,
+    @JsonKey(name: '__path') required this.pathElement,
     required this.requestMethod,
-    @JsonKey('__requestMethod') required this.requestMethodElement,
+    @JsonKey(name: '__requestMethod') required this.requestMethodElement,
     required this.requestURL,
-    @JsonKey('__requestURL') required this.requestURLElement,
+    @JsonKey(name: '__requestURL') required this.requestURLElement,
     required this.resource,
-    @JsonKey('__resource') required this.resourceElement,
+    @JsonKey(name: '__resource') required this.resourceElement,
     required this.response,
-    @JsonKey('__response') required this.responseElement,
+    @JsonKey(name: '__response') required this.responseElement,
     required this.responseCode,
-    @JsonKey('__responseCode') required this.responseCodeElement,
+    @JsonKey(name: '__responseCode') required this.responseCodeElement,
     required this.sourceId,
-    @JsonKey('__sourceId') required this.sourceIdElement,
+    @JsonKey(name: '__sourceId') required this.sourceIdElement,
     required this.validateProfileId,
-    @JsonKey('__validateProfileId') required this.validateProfileIdElement,
+    @JsonKey(name: '__validateProfileId')
+        required this.validateProfileIdElement,
     required this.value,
-    @JsonKey('__value') required this.valueElement,
+    @JsonKey(name: '__value') required this.valueElement,
     required this.warningOnly,
-    @JsonKey('__warningOnly') required this.warningOnlyElement,
+    @JsonKey(name: '__warningOnly') required this.warningOnlyElement,
   });
   final String? id;
 
@@ -1321,6 +1359,7 @@ class TestScriptAssert {
   Map<String, dynamic> toJson() => _$TestScriptAssertToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTest {
   const TestScriptTest({
     required this.id,
@@ -1345,6 +1384,7 @@ class TestScriptTest {
   Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction1 {
   const TestScriptAction1({
     required this.id,
@@ -1363,6 +1403,7 @@ class TestScriptAction1 {
   Map<String, dynamic> toJson() => _$TestScriptAction1ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTeardown {
   const TestScriptTeardown({
     required this.id,
@@ -1379,6 +1420,7 @@ class TestScriptTeardown {
   Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction2 {
   const TestScriptAction2({
     required this.id,

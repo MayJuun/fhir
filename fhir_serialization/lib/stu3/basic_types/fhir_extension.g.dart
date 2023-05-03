@@ -207,7 +207,10 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) =>
       valueMeta: json['valueMeta'] == null
           ? null
           : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
-      valueElementDefinition: json['valueElementDefinition'],
+      valueElementDefinition: json['valueElementDefinition'] == null
+          ? null
+          : ElementDefinition.fromJson(
+              json['valueElementDefinition'] as Map<String, dynamic>),
       valueContactDetail: json['valueContactDetail'] == null
           ? null
           : ContactDetail.fromJson(
@@ -319,7 +322,8 @@ Map<String, dynamic> _$FhirExtensionToJson(FhirExtension instance) {
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueTiming', instance.valueTiming?.toJson());
   writeNotNull('valueMeta', instance.valueMeta?.toJson());
-  writeNotNull('valueElementDefinition', instance.valueElementDefinition);
+  writeNotNull(
+      'valueElementDefinition', instance.valueElementDefinition?.toJson());
   writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
   writeNotNull('valueContributor', instance.valueContributor?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());

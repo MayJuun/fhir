@@ -12,51 +12,51 @@ class ActivityDefinition {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.subtitle,
-    @JsonKey('__subtitle') required this.subtitleElement,
+    @JsonKey(name: '__subtitle') required this.subtitleElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.subjectCodeableConcept,
     required this.subjectReference,
     required this.subjectCanonical,
-    @JsonKey('__subjectCanonical') required this.subjectCanonicalElement,
+    @JsonKey(name: '__subjectCanonical') required this.subjectCanonicalElement,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.purpose,
-    @JsonKey('__purpose') required this.purposeElement,
+    @JsonKey(name: '__purpose') required this.purposeElement,
     required this.usage,
-    @JsonKey('__usage') required this.usageElement,
+    @JsonKey(name: '__usage') required this.usageElement,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.approvalDate,
-    @JsonKey('__approvalDate') required this.approvalDateElement,
+    @JsonKey(name: '__approvalDate') required this.approvalDateElement,
     required this.lastReviewDate,
-    @JsonKey('__lastReviewDate') required this.lastReviewDateElement,
+    @JsonKey(name: '__lastReviewDate') required this.lastReviewDateElement,
     required this.effectivePeriod,
     required this.topic,
     required this.author,
@@ -64,20 +64,20 @@ class ActivityDefinition {
     required this.reviewer,
     required this.endorser,
     required this.relatedArtifact,
-    @JsonKey('_library') required this.library_,
+    @JsonKey(name: '_library') required this.library_,
     required this.kind,
-    @JsonKey('__kind') required this.kindElement,
+    @JsonKey(name: '__kind') required this.kindElement,
     required this.profile,
     required this.code,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.priority,
-    @JsonKey('__priority') required this.priorityElement,
+    @JsonKey(name: '__priority') required this.priorityElement,
     required this.doNotPerform,
-    @JsonKey('__doNotPerform') required this.doNotPerformElement,
+    @JsonKey(name: '__doNotPerform') required this.doNotPerformElement,
     required this.timingTiming,
     required this.timingDateTime,
-    @JsonKey('__timingDateTime') required this.timingDateTimeElement,
+    @JsonKey(name: '__timingDateTime') required this.timingDateTimeElement,
     required this.timingAge,
     required this.timingPeriod,
     required this.timingRange,
@@ -211,6 +211,7 @@ class ActivityDefinition {
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionParticipant {
   const ActivityDefinitionParticipant({
     required this.id,
@@ -231,6 +232,7 @@ class ActivityDefinitionParticipant {
   Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionDynamicValue {
   const ActivityDefinitionDynamicValue({
     required this.id,
@@ -251,31 +253,33 @@ class ActivityDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinition {
   const DeviceDefinition({
     @Default(R4ResourceType.DeviceDefinition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.udiDeviceIdentifier,
     required this.manufacturerString,
-    @JsonKey('__manufacturerString') required this.manufacturerStringElement,
+    @JsonKey(name: '__manufacturerString')
+        required this.manufacturerStringElement,
     required this.manufacturerReference,
     required this.deviceName,
     required this.modelNumber,
-    @JsonKey('__modelNumber') required this.modelNumberElement,
+    @JsonKey(name: '__modelNumber') required this.modelNumberElement,
     required this.type,
     required this.specialization,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.safety,
     required this.shelfLifeStorage,
     required this.physicalCharacteristics,
@@ -285,9 +289,10 @@ class DeviceDefinition {
     required this.owner,
     required this.contact,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.onlineInformation,
-    @JsonKey('__onlineInformation') required this.onlineInformationElement,
+    @JsonKey(name: '__onlineInformation')
+        required this.onlineInformationElement,
     required this.note,
     required this.quantity,
     required this.parentDevice,
@@ -345,6 +350,7 @@ class DeviceDefinition {
   Map<String, dynamic> toJson() => _$DeviceDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionUdiDeviceIdentifier {
   const DeviceDefinitionUdiDeviceIdentifier({
     required this.id,
@@ -374,6 +380,7 @@ class DeviceDefinitionUdiDeviceIdentifier {
       _$DeviceDefinitionUdiDeviceIdentifierToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionSpecialization {
   const DeviceDefinitionSpecialization({
     required this.id,
@@ -396,6 +403,7 @@ class DeviceDefinitionSpecialization {
   Map<String, dynamic> toJson() => _$DeviceDefinitionSpecializationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionCapability {
   const DeviceDefinitionCapability({
     required this.id,
@@ -414,6 +422,7 @@ class DeviceDefinitionCapability {
   Map<String, dynamic> toJson() => _$DeviceDefinitionCapabilityToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionProperty {
   const DeviceDefinitionProperty({
     required this.id,
@@ -434,6 +443,7 @@ class DeviceDefinitionProperty {
   Map<String, dynamic> toJson() => _$DeviceDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionMaterial {
   const DeviceDefinitionMaterial({
     required this.id,
@@ -459,55 +469,56 @@ class DeviceDefinitionMaterial {
   Map<String, dynamic> toJson() => _$DeviceDefinitionMaterialToJson(this);
 }
 
+@JsonSerializable()
 class EventDefinition {
   const EventDefinition({
     @Default(R4ResourceType.EventDefinition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.subtitle,
-    @JsonKey('__subtitle') required this.subtitleElement,
+    @JsonKey(name: '__subtitle') required this.subtitleElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.subjectCodeableConcept,
     required this.subjectReference,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.purpose,
-    @JsonKey('__purpose') required this.purposeElement,
+    @JsonKey(name: '__purpose') required this.purposeElement,
     required this.usage,
-    @JsonKey('__usage') required this.usageElement,
+    @JsonKey(name: '__usage') required this.usageElement,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.approvalDate,
-    @JsonKey('__approvalDate') required this.approvalDateElement,
+    @JsonKey(name: '__approvalDate') required this.approvalDateElement,
     required this.lastReviewDate,
-    @JsonKey('__lastReviewDate') required this.lastReviewDateElement,
+    @JsonKey(name: '__lastReviewDate') required this.lastReviewDateElement,
     required this.effectivePeriod,
     required this.topic,
     required this.author,
@@ -595,30 +606,33 @@ class EventDefinition {
   Map<String, dynamic> toJson() => _$EventDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinition {
   const ObservationDefinition({
     @Default(R4ResourceType.ObservationDefinition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.category,
     required this.code,
     required this.identifier,
     required this.permittedDataType,
-    @JsonKey('__permittedDataType') required this.permittedDataTypeElement,
+    @JsonKey(name: '__permittedDataType')
+        required this.permittedDataTypeElement,
     required this.multipleResultsAllowed,
-    @JsonKey('__multipleResultsAllowed')
+    @JsonKey(name: '__multipleResultsAllowed')
         required this.multipleResultsAllowedElement,
     required this.method,
     required this.preferredReportName,
-    @JsonKey('__preferredReportName') required this.preferredReportNameElement,
+    @JsonKey(name: '__preferredReportName')
+        required this.preferredReportNameElement,
     required this.quantitativeDetails,
     required this.qualifiedInterval,
     required this.validCodedValueSet,
@@ -664,6 +678,7 @@ class ObservationDefinition {
   Map<String, dynamic> toJson() => _$ObservationDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinitionQuantitativeDetails {
   const ObservationDefinitionQuantitativeDetails({
     required this.id,
@@ -693,6 +708,7 @@ class ObservationDefinitionQuantitativeDetails {
       _$ObservationDefinitionQuantitativeDetailsToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionGoal {
   const PlanDefinitionGoal({
     required this.id,
@@ -721,6 +737,7 @@ class PlanDefinitionGoal {
   Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionTarget {
   const PlanDefinitionTarget({
     required this.id,
@@ -745,6 +762,7 @@ class PlanDefinitionTarget {
   Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionAction {
   const PlanDefinitionAction({
     required this.id,
@@ -861,6 +879,7 @@ class PlanDefinitionAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionCondition {
   const PlanDefinitionCondition({
     required this.id,
@@ -881,6 +900,7 @@ class PlanDefinitionCondition {
   Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionRelatedAction {
   const PlanDefinitionRelatedAction({
     required this.id,
@@ -907,6 +927,7 @@ class PlanDefinitionRelatedAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionParticipant {
   const PlanDefinitionParticipant({
     required this.id,
@@ -927,6 +948,7 @@ class PlanDefinitionParticipant {
   Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionDynamicValue {
   const PlanDefinitionDynamicValue({
     required this.id,
@@ -947,52 +969,53 @@ class PlanDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class Questionnaire {
   const Questionnaire({
     @Default(R4ResourceType.Questionnaire) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.derivedFrom,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.subjectType,
-    @JsonKey('__subjectType') required this.subjectTypeElement,
+    @JsonKey(name: '__subjectType') required this.subjectTypeElement,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.purpose,
-    @JsonKey('__purpose') required this.purposeElement,
+    @JsonKey(name: '__purpose') required this.purposeElement,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.approvalDate,
-    @JsonKey('__approvalDate') required this.approvalDateElement,
+    @JsonKey(name: '__approvalDate') required this.approvalDateElement,
     required this.lastReviewDate,
-    @JsonKey('__lastReviewDate') required this.lastReviewDateElement,
+    @JsonKey(name: '__lastReviewDate') required this.lastReviewDateElement,
     required this.effectivePeriod,
     required this.code,
     required this.item,
@@ -1066,6 +1089,7 @@ class Questionnaire {
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireItem {
   const QuestionnaireItem({
     required this.id,
@@ -1132,6 +1156,7 @@ class QuestionnaireItem {
   Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireEnableWhen {
   const QuestionnaireEnableWhen({
     required this.id,
@@ -1188,6 +1213,7 @@ class QuestionnaireEnableWhen {
   Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireAnswerOption {
   const QuestionnaireAnswerOption({
     required this.id,
@@ -1226,6 +1252,7 @@ class QuestionnaireAnswerOption {
   Map<String, dynamic> toJson() => _$QuestionnaireAnswerOptionToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireInitial {
   const QuestionnaireInitial({
     required this.id,
@@ -1280,24 +1307,25 @@ class QuestionnaireInitial {
   Map<String, dynamic> toJson() => _$QuestionnaireInitialToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinition {
   const SpecimenDefinition({
     @Default(R4ResourceType.SpecimenDefinition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.typeCollected,
     required this.patientPreparation,
     required this.timeAspect,
-    @JsonKey('__timeAspect') required this.timeAspectElement,
+    @JsonKey(name: '__timeAspect') required this.timeAspectElement,
     required this.collection,
     required this.typeTested,
   });
@@ -1328,6 +1356,7 @@ class SpecimenDefinition {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionTypeTested {
   const SpecimenDefinitionTypeTested({
     required this.id,
@@ -1364,6 +1393,7 @@ class SpecimenDefinitionTypeTested {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionTypeTestedToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionContainer {
   const SpecimenDefinitionContainer({
     required this.id,
@@ -1403,6 +1433,7 @@ class SpecimenDefinitionContainer {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionContainerToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionAdditive {
   const SpecimenDefinitionAdditive({
     required this.id,
@@ -1421,6 +1452,7 @@ class SpecimenDefinitionAdditive {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionAdditiveToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionHandling {
   const SpecimenDefinitionHandling({
     required this.id,

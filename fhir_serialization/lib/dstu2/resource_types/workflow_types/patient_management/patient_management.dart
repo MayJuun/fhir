@@ -81,6 +81,7 @@ class Encounter {
   Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
 
+@JsonSerializable()
 class EncounterStatusHistory {
   const EncounterStatusHistory({
     required this.id,
@@ -102,6 +103,7 @@ class EncounterStatusHistory {
   Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
 }
 
+@JsonSerializable()
 class EncounterParticipant {
   const EncounterParticipant({
     required this.id,
@@ -122,6 +124,7 @@ class EncounterParticipant {
   Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
 }
 
+@JsonSerializable()
 class EncounterHospitalization {
   const EncounterHospitalization({
     required this.id,
@@ -160,6 +163,7 @@ class EncounterHospitalization {
   Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
 }
 
+@JsonSerializable()
 class EncounterLocation {
   const EncounterLocation({
     required this.id,
@@ -183,6 +187,7 @@ class EncounterLocation {
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCare {
   const EpisodeOfCare({
     @Default(Dstu2ResourceType.EpisodeOfCare) required this.resourceType,
@@ -238,6 +243,7 @@ class EpisodeOfCare {
   Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCareStatusHistory {
   const EpisodeOfCareStatusHistory({
     required this.id,
@@ -259,6 +265,7 @@ class EpisodeOfCareStatusHistory {
   Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCareCareTeam {
   const EpisodeOfCareCareTeam({
     required this.id,
@@ -279,6 +286,7 @@ class EpisodeOfCareCareTeam {
   Map<String, dynamic> toJson() => _$EpisodeOfCareCareTeamToJson(this);
 }
 
+@JsonSerializable()
 class Communication {
   const Communication({
     @Default(Dstu2ResourceType.Communication) required this.resourceType,
@@ -342,6 +350,7 @@ class Communication {
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationPayload {
   const CommunicationPayload({
     required this.id,
@@ -364,6 +373,7 @@ class CommunicationPayload {
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
 
+@JsonSerializable()
 class Flag {
   const Flag({
     @Default(Dstu2ResourceType.Flag) required this.resourceType,

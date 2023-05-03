@@ -101,6 +101,7 @@ class ValueSet {
   Map<String, dynamic> toJson() => _$ValueSetToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetContact {
   const ValueSetContact({
     required this.id,
@@ -121,6 +122,7 @@ class ValueSetContact {
   Map<String, dynamic> toJson() => _$ValueSetContactToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetCodeSystem {
   const ValueSetCodeSystem({
     required this.id,
@@ -151,6 +153,7 @@ class ValueSetCodeSystem {
   Map<String, dynamic> toJson() => _$ValueSetCodeSystemToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetCodeSystemConcept {
   const ValueSetCodeSystemConcept({
     required this.id,
@@ -183,6 +186,7 @@ class ValueSetCodeSystemConcept {
   Map<String, dynamic> toJson() => _$ValueSetCodeSystemConceptToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetConceptDesignation {
   const ValueSetConceptDesignation({
     required this.id,
@@ -207,6 +211,7 @@ class ValueSetConceptDesignation {
   Map<String, dynamic> toJson() => _$ValueSetConceptDesignationToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetCompose {
   const ValueSetCompose({
     required this.id,
@@ -229,6 +234,7 @@ class ValueSetCompose {
   Map<String, dynamic> toJson() => _$ValueSetComposeToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetComposeInclude {
   const ValueSetComposeInclude({
     required this.id,
@@ -257,6 +263,7 @@ class ValueSetComposeInclude {
   Map<String, dynamic> toJson() => _$ValueSetComposeIncludeToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetIncludeConcept {
   const ValueSetIncludeConcept({
     required this.id,
@@ -283,6 +290,7 @@ class ValueSetIncludeConcept {
   Map<String, dynamic> toJson() => _$ValueSetIncludeConceptToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetIncludeFilter {
   const ValueSetIncludeFilter({
     required this.id,
@@ -311,6 +319,7 @@ class ValueSetIncludeFilter {
   Map<String, dynamic> toJson() => _$ValueSetIncludeFilterToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetExpansion {
   const ValueSetExpansion({
     required this.id,
@@ -347,6 +356,7 @@ class ValueSetExpansion {
   Map<String, dynamic> toJson() => _$ValueSetExpansionToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetExpansionParameter {
   const ValueSetExpansionParameter({
     required this.id,
@@ -391,6 +401,7 @@ class ValueSetExpansionParameter {
   Map<String, dynamic> toJson() => _$ValueSetExpansionParameterToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetExpansionContains {
   const ValueSetExpansionContains({
     required this.id,
@@ -429,6 +440,7 @@ class ValueSetExpansionContains {
   Map<String, dynamic> toJson() => _$ValueSetExpansionContainsToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMap {
   const ConceptMap({
     @Default(Dstu2ResourceType.ConceptMap) required this.resourceType,
@@ -518,6 +530,7 @@ class ConceptMap {
   Map<String, dynamic> toJson() => _$ConceptMapToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapContact {
   const ConceptMapContact({
     required this.id,
@@ -536,6 +549,7 @@ class ConceptMapContact {
   Map<String, dynamic> toJson() => _$ConceptMapContactToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapElement {
   const ConceptMapElement({
     required this.id,
@@ -558,6 +572,7 @@ class ConceptMapElement {
   Map<String, dynamic> toJson() => _$ConceptMapElementToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapElementTarget {
   const ConceptMapElementTarget({
     required this.id,
@@ -591,6 +606,7 @@ class ConceptMapElementTarget {
   Map<String, dynamic> toJson() => _$ConceptMapElementTargetToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapTargetDependsOn {
   const ConceptMapTargetDependsOn({
     required this.id,
@@ -611,6 +627,7 @@ class ConceptMapTargetDependsOn {
   Map<String, dynamic> toJson() => _$ConceptMapTargetDependsOnToJson(this);
 }
 
+@JsonSerializable()
 class NamingSystem {
   const NamingSystem({
     @Default(Dstu2ResourceType.NamingSystem) required this.resourceType,
@@ -685,6 +702,7 @@ class NamingSystem {
   Map<String, dynamic> toJson() => _$NamingSystemToJson(this);
 }
 
+@JsonSerializable()
 class NamingSystemContact {
   const NamingSystemContact({
     required this.id,
@@ -703,6 +721,7 @@ class NamingSystemContact {
   Map<String, dynamic> toJson() => _$NamingSystemContactToJson(this);
 }
 
+@JsonSerializable()
 class NamingSystemUniqueId {
   const NamingSystemUniqueId({
     required this.id,

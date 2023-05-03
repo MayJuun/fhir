@@ -12,25 +12,25 @@ class Account {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.subject,
     required this.servicePeriod,
     required this.coverage,
     required this.owner,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.guarantor,
     required this.partOf,
   });
@@ -70,6 +70,7 @@ class Account {
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
+@JsonSerializable()
 class AccountCoverage {
   const AccountCoverage({
     required this.id,
@@ -90,6 +91,7 @@ class AccountCoverage {
   Map<String, dynamic> toJson() => _$AccountCoverageToJson(this);
 }
 
+@JsonSerializable()
 class AccountGuarantor {
   const AccountGuarantor({
     required this.id,
@@ -112,31 +114,33 @@ class AccountGuarantor {
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItem {
   const ChargeItem({
     @Default(R4ResourceType.ChargeItem) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.definitionUri,
-    @JsonKey('__definitionUri') required this.definitionUriElement,
+    @JsonKey(name: '__definitionUri') required this.definitionUriElement,
     required this.definitionCanonical,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.partOf,
     required this.code,
     required this.subject,
     required this.context,
     required this.occurrenceDateTime,
-    @JsonKey('__occurrenceDateTime') required this.occurrenceDateTimeElement,
+    @JsonKey(name: '__occurrenceDateTime')
+        required this.occurrenceDateTimeElement,
     required this.occurrencePeriod,
     required this.occurrenceTiming,
     required this.performer,
@@ -146,13 +150,13 @@ class ChargeItem {
     required this.quantity,
     required this.bodysite,
     required this.factorOverride,
-    @JsonKey('__factorOverride') required this.factorOverrideElement,
+    @JsonKey(name: '__factorOverride') required this.factorOverrideElement,
     required this.priceOverride,
     required this.overrideReason,
-    @JsonKey('__overrideReason') required this.overrideReasonElement,
+    @JsonKey(name: '__overrideReason') required this.overrideReasonElement,
     required this.enterer,
     required this.enteredDate,
-    @JsonKey('__enteredDate') required this.enteredDateElement,
+    @JsonKey(name: '__enteredDate') required this.enteredDateElement,
     required this.reason,
     required this.service,
     required this.productReference,
@@ -221,6 +225,7 @@ class ChargeItem {
   Map<String, dynamic> toJson() => _$ChargeItemToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItemPerformer {
   const ChargeItemPerformer({
     required this.id,
@@ -239,49 +244,50 @@ class ChargeItemPerformer {
   Map<String, dynamic> toJson() => _$ChargeItemPerformerToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItemDefinition {
   const ChargeItemDefinition({
     @Default(R4ResourceType.ChargeItemDefinition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.url,
-    @JsonKey('__url') required this.urlElement,
+    @JsonKey(name: '__url') required this.urlElement,
     required this.identifier,
     required this.version,
-    @JsonKey('__version') required this.versionElement,
+    @JsonKey(name: '__version') required this.versionElement,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.derivedFromUri,
-    @JsonKey('__derivedFromUri') required this.derivedFromUriElement,
+    @JsonKey(name: '__derivedFromUri') required this.derivedFromUriElement,
     required this.partOf,
     required this.replaces,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.experimental,
-    @JsonKey('__experimental') required this.experimentalElement,
+    @JsonKey(name: '__experimental') required this.experimentalElement,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.publisher,
-    @JsonKey('__publisher') required this.publisherElement,
+    @JsonKey(name: '__publisher') required this.publisherElement,
     required this.contact,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.useContext,
     required this.jurisdiction,
     required this.copyright,
-    @JsonKey('__copyright') required this.copyrightElement,
+    @JsonKey(name: '__copyright') required this.copyrightElement,
     required this.approvalDate,
-    @JsonKey('__approvalDate') required this.approvalDateElement,
+    @JsonKey(name: '__approvalDate') required this.approvalDateElement,
     required this.lastReviewDate,
-    @JsonKey('__lastReviewDate') required this.lastReviewDateElement,
+    @JsonKey(name: '__lastReviewDate') required this.lastReviewDateElement,
     required this.effectivePeriod,
     required this.code,
     required this.instance,
@@ -354,6 +360,7 @@ class ChargeItemDefinition {
   Map<String, dynamic> toJson() => _$ChargeItemDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItemDefinitionApplicability {
   const ChargeItemDefinitionApplicability({
     required this.id,
@@ -383,6 +390,7 @@ class ChargeItemDefinitionApplicability {
       _$ChargeItemDefinitionApplicabilityToJson(this);
 }
 
+@JsonSerializable()
 class ContractContentDefinition {
   const ContractContentDefinition({
     required this.id,
@@ -415,6 +423,7 @@ class ContractContentDefinition {
   Map<String, dynamic> toJson() => _$ContractContentDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ContractTerm {
   const ContractTerm({
     required this.id,
@@ -459,6 +468,7 @@ class ContractTerm {
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
+@JsonSerializable()
 class ContractSecurityLabel {
   const ContractSecurityLabel({
     required this.id,
@@ -483,10 +493,11 @@ class ContractSecurityLabel {
   Map<String, dynamic> toJson() => _$ContractSecurityLabelToJson(this);
 }
 
+@JsonSerializable()
 class ContractOffer {
   const ContractOffer({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.party,
@@ -496,11 +507,12 @@ class ContractOffer {
     required this.decisionMode,
     required this.answer,
     required this.text,
-    @JsonKey('__text') required this.textElement,
+    @JsonKey(name: '__text') required this.textElement,
     required this.linkId,
-    @JsonKey('__linkId') required this.linkIdElement,
+    @JsonKey(name: '__linkId') required this.linkIdElement,
     required this.securityLabelNumber,
-    @JsonKey('__securityLabelNumber') required this.securityLabelNumberElement,
+    @JsonKey(name: '__securityLabelNumber')
+        required this.securityLabelNumberElement,
   });
   final String? id;
 
@@ -527,6 +539,7 @@ class ContractOffer {
   Map<String, dynamic> toJson() => _$ContractOfferToJson(this);
 }
 
+@JsonSerializable()
 class ContractParty {
   const ContractParty({
     required this.id,
@@ -545,6 +558,7 @@ class ContractParty {
   Map<String, dynamic> toJson() => _$ContractPartyToJson(this);
 }
 
+@JsonSerializable()
 class ContractAnswer {
   const ContractAnswer({
     required this.id,
@@ -599,10 +613,11 @@ class ContractAnswer {
   Map<String, dynamic> toJson() => _$ContractAnswerToJson(this);
 }
 
+@JsonSerializable()
 class ContractAsset {
   const ContractAsset({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.scope,
     required this.type,
@@ -611,17 +626,18 @@ class ContractAsset {
     required this.relationship,
     required this.context,
     required this.condition,
-    @JsonKey('__condition') required this.conditionElement,
+    @JsonKey(name: '__condition') required this.conditionElement,
     required this.periodType,
     required this.period,
     required this.usePeriod,
     required this.text,
-    @JsonKey('__text') required this.textElement,
+    @JsonKey(name: '__text') required this.textElement,
     required this.linkId,
-    @JsonKey('__linkId') required this.linkIdElement,
+    @JsonKey(name: '__linkId') required this.linkIdElement,
     required this.answer,
     required this.securityLabelNumber,
-    @JsonKey('__securityLabelNumber') required this.securityLabelNumberElement,
+    @JsonKey(name: '__securityLabelNumber')
+        required this.securityLabelNumberElement,
     required this.valuedItem,
   });
   final String? id;
@@ -656,6 +672,7 @@ class ContractAsset {
   Map<String, dynamic> toJson() => _$ContractAssetToJson(this);
 }
 
+@JsonSerializable()
 class ContractContext {
   const ContractContext({
     required this.id,
@@ -678,33 +695,35 @@ class ContractContext {
   Map<String, dynamic> toJson() => _$ContractContextToJson(this);
 }
 
+@JsonSerializable()
 class ContractValuedItem {
   const ContractValuedItem({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.entityCodeableConcept,
     required this.entityReference,
     required this.identifier,
     required this.effectiveTime,
-    @JsonKey('__effectiveTime') required this.effectiveTimeElement,
+    @JsonKey(name: '__effectiveTime') required this.effectiveTimeElement,
     required this.quantity,
     required this.unitPrice,
     required this.factor,
-    @JsonKey('__factor') required this.factorElement,
+    @JsonKey(name: '__factor') required this.factorElement,
     required this.points,
-    @JsonKey('__points') required this.pointsElement,
+    @JsonKey(name: '__points') required this.pointsElement,
     required this.net,
     required this.payment,
-    @JsonKey('__payment') required this.paymentElement,
+    @JsonKey(name: '__payment') required this.paymentElement,
     required this.paymentDate,
-    @JsonKey('__paymentDate') required this.paymentDateElement,
+    @JsonKey(name: '__paymentDate') required this.paymentDateElement,
     required this.responsible,
     required this.recipient,
     required this.linkId,
-    @JsonKey('__linkId') required this.linkIdElement,
+    @JsonKey(name: '__linkId') required this.linkIdElement,
     required this.securityLabelNumber,
-    @JsonKey('__securityLabelNumber') required this.securityLabelNumberElement,
+    @JsonKey(name: '__securityLabelNumber')
+        required this.securityLabelNumberElement,
   });
   final String? id;
 
@@ -744,43 +763,46 @@ class ContractValuedItem {
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
+@JsonSerializable()
 class ContractAction {
   const ContractAction({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.doNotPerform,
-    @JsonKey('__doNotPerform') required this.doNotPerformElement,
+    @JsonKey(name: '__doNotPerform') required this.doNotPerformElement,
     required this.type,
     required this.subject,
     required this.intent,
     required this.linkId,
-    @JsonKey('__linkId') required this.linkIdElement,
+    @JsonKey(name: '__linkId') required this.linkIdElement,
     required this.status,
     required this.context,
     required this.contextLinkId,
-    @JsonKey('__contextLinkId') required this.contextLinkIdElement,
+    @JsonKey(name: '__contextLinkId') required this.contextLinkIdElement,
     required this.occurrenceDateTime,
-    @JsonKey('__occurrenceDateTime') required this.occurrenceDateTimeElement,
+    @JsonKey(name: '__occurrenceDateTime')
+        required this.occurrenceDateTimeElement,
     required this.occurrencePeriod,
     required this.occurrenceTiming,
     required this.requester,
     required this.requesterLinkId,
-    @JsonKey('__requesterLinkId') required this.requesterLinkIdElement,
+    @JsonKey(name: '__requesterLinkId') required this.requesterLinkIdElement,
     required this.performerType,
     required this.performerRole,
     required this.performer,
     required this.performerLinkId,
-    @JsonKey('__performerLinkId') required this.performerLinkIdElement,
+    @JsonKey(name: '__performerLinkId') required this.performerLinkIdElement,
     required this.reasonCode,
     required this.reasonReference,
     required this.reason,
-    @JsonKey('__reason') required this.reasonElement,
+    @JsonKey(name: '__reason') required this.reasonElement,
     required this.reasonLinkId,
-    @JsonKey('__reasonLinkId') required this.reasonLinkIdElement,
+    @JsonKey(name: '__reasonLinkId') required this.reasonLinkIdElement,
     required this.note,
     required this.securityLabelNumber,
-    @JsonKey('__securityLabelNumber') required this.securityLabelNumberElement,
+    @JsonKey(name: '__securityLabelNumber')
+        required this.securityLabelNumberElement,
   });
   final String? id;
 
@@ -832,6 +854,7 @@ class ContractAction {
   Map<String, dynamic> toJson() => _$ContractActionToJson(this);
 }
 
+@JsonSerializable()
 class ContractSubject {
   const ContractSubject({
     required this.id,
@@ -850,6 +873,7 @@ class ContractSubject {
   Map<String, dynamic> toJson() => _$ContractSubjectToJson(this);
 }
 
+@JsonSerializable()
 class ContractSigner {
   const ContractSigner({
     required this.id,
@@ -870,6 +894,7 @@ class ContractSigner {
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
+@JsonSerializable()
 class ContractFriendly {
   const ContractFriendly({
     required this.id,
@@ -888,6 +913,7 @@ class ContractFriendly {
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
+@JsonSerializable()
 class ContractLegal {
   const ContractLegal({
     required this.id,
@@ -906,6 +932,7 @@ class ContractLegal {
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
+@JsonSerializable()
 class ContractRule {
   const ContractRule({
     required this.id,
@@ -924,30 +951,31 @@ class ContractRule {
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefit {
   const ExplanationOfBenefit({
     @Default(R4ResourceType.ExplanationOfBenefit) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.subType,
     required this.use,
-    @JsonKey('__use') required this.useElement,
+    @JsonKey(name: '__use') required this.useElement,
     required this.patient,
     required this.billablePeriod,
     required this.created,
-    @JsonKey('__created') required this.createdElement,
+    @JsonKey(name: '__created') required this.createdElement,
     required this.enterer,
     required this.insurer,
     required this.provider,
@@ -963,18 +991,18 @@ class ExplanationOfBenefit {
     required this.claim,
     required this.claimResponse,
     required this.outcome,
-    @JsonKey('__outcome') required this.outcomeElement,
+    @JsonKey(name: '__outcome') required this.outcomeElement,
     required this.disposition,
-    @JsonKey('__disposition') required this.dispositionElement,
+    @JsonKey(name: '__disposition') required this.dispositionElement,
     required this.preAuthRef,
-    @JsonKey('__preAuthRef') required this.preAuthRefElement,
+    @JsonKey(name: '__preAuthRef') required this.preAuthRefElement,
     required this.preAuthRefPeriod,
     required this.careTeam,
     required this.supportingInfo,
     required this.diagnosis,
     required this.procedure,
     required this.precedence,
-    @JsonKey('__precedence') required this.precedenceElement,
+    @JsonKey(name: '__precedence') required this.precedenceElement,
     required this.insurance,
     required this.accident,
     required this.item,
@@ -1064,6 +1092,7 @@ class ExplanationOfBenefit {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitRelated {
   const ExplanationOfBenefitRelated({
     required this.id,
@@ -1084,6 +1113,7 @@ class ExplanationOfBenefitRelated {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitRelatedToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitPayee {
   const ExplanationOfBenefitPayee({
     required this.id,
@@ -1102,6 +1132,7 @@ class ExplanationOfBenefitPayee {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPayeeToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitCareTeam {
   const ExplanationOfBenefitCareTeam({
     required this.id,
@@ -1130,6 +1161,7 @@ class ExplanationOfBenefitCareTeam {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitCareTeamToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitSupportingInfo {
   const ExplanationOfBenefitSupportingInfo({
     required this.id,
@@ -1177,6 +1209,7 @@ class ExplanationOfBenefitSupportingInfo {
       _$ExplanationOfBenefitSupportingInfoToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitProcedure {
   const ExplanationOfBenefitProcedure({
     required this.id,
@@ -1207,6 +1240,7 @@ class ExplanationOfBenefitProcedure {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitProcedureToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitInsurance {
   const ExplanationOfBenefitInsurance({
     required this.id,
@@ -1231,6 +1265,7 @@ class ExplanationOfBenefitInsurance {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAccident {
   const ExplanationOfBenefitAccident({
     required this.id,
@@ -1255,28 +1290,32 @@ class ExplanationOfBenefitAccident {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAccidentToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitItem {
   const ExplanationOfBenefitItem({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.sequence,
-    @JsonKey('__sequence') required this.sequenceElement,
+    @JsonKey(name: '__sequence') required this.sequenceElement,
     required this.careTeamSequence,
-    @JsonKey('__careTeamSequence') required this.careTeamSequenceElement,
+    @JsonKey(name: '__careTeamSequence') required this.careTeamSequenceElement,
     required this.diagnosisSequence,
-    @JsonKey('__diagnosisSequence') required this.diagnosisSequenceElement,
+    @JsonKey(name: '__diagnosisSequence')
+        required this.diagnosisSequenceElement,
     required this.procedureSequence,
-    @JsonKey('__procedureSequence') required this.procedureSequenceElement,
+    @JsonKey(name: '__procedureSequence')
+        required this.procedureSequenceElement,
     required this.informationSequence,
-    @JsonKey('__informationSequence') required this.informationSequenceElement,
+    @JsonKey(name: '__informationSequence')
+        required this.informationSequenceElement,
     required this.revenue,
     required this.category,
     required this.productOrService,
     required this.modifier,
     required this.programCode,
     required this.servicedDate,
-    @JsonKey('__servicedDate') required this.servicedDateElement,
+    @JsonKey(name: '__servicedDate') required this.servicedDateElement,
     required this.servicedPeriod,
     required this.locationCodeableConcept,
     required this.locationAddress,
@@ -1284,14 +1323,14 @@ class ExplanationOfBenefitItem {
     required this.quantity,
     required this.unitPrice,
     required this.factor,
-    @JsonKey('__factor') required this.factorElement,
+    @JsonKey(name: '__factor') required this.factorElement,
     required this.net,
     required this.udi,
     required this.bodySite,
     required this.subSite,
     required this.encounter,
     required this.noteNumber,
-    @JsonKey('__noteNumber') required this.noteNumberElement,
+    @JsonKey(name: '__noteNumber') required this.noteNumberElement,
     required this.adjudication,
     required this.detail,
   });
@@ -1346,6 +1385,7 @@ class ExplanationOfBenefitItem {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitItemToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAdjudication {
   const ExplanationOfBenefitAdjudication({
     required this.id,
@@ -1372,6 +1412,7 @@ class ExplanationOfBenefitAdjudication {
       _$ExplanationOfBenefitAdjudicationToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitSubDetail {
   const ExplanationOfBenefitSubDetail({
     required this.id,
@@ -1418,23 +1459,25 @@ class ExplanationOfBenefitSubDetail {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAddItem {
   const ExplanationOfBenefitAddItem({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.itemSequence,
-    @JsonKey('__itemSequence') required this.itemSequenceElement,
+    @JsonKey(name: '__itemSequence') required this.itemSequenceElement,
     required this.detailSequence,
-    @JsonKey('__detailSequence') required this.detailSequenceElement,
+    @JsonKey(name: '__detailSequence') required this.detailSequenceElement,
     required this.subDetailSequence,
-    @JsonKey('__subDetailSequence') required this.subDetailSequenceElement,
+    @JsonKey(name: '__subDetailSequence')
+        required this.subDetailSequenceElement,
     required this.provider,
     required this.productOrService,
     required this.modifier,
     required this.programCode,
     required this.servicedDate,
-    @JsonKey('__servicedDate') required this.servicedDateElement,
+    @JsonKey(name: '__servicedDate') required this.servicedDateElement,
     required this.servicedPeriod,
     required this.locationCodeableConcept,
     required this.locationAddress,
@@ -1442,12 +1485,12 @@ class ExplanationOfBenefitAddItem {
     required this.quantity,
     required this.unitPrice,
     required this.factor,
-    @JsonKey('__factor') required this.factorElement,
+    @JsonKey(name: '__factor') required this.factorElement,
     required this.net,
     required this.bodySite,
     required this.subSite,
     required this.noteNumber,
-    @JsonKey('__noteNumber') required this.noteNumberElement,
+    @JsonKey(name: '__noteNumber') required this.noteNumberElement,
     required this.adjudication,
     required this.detail,
   });
@@ -1493,6 +1536,7 @@ class ExplanationOfBenefitAddItem {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAddItemToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitDetail1 {
   const ExplanationOfBenefitDetail1({
     required this.id,
@@ -1529,6 +1573,7 @@ class ExplanationOfBenefitDetail1 {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetail1ToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitSubDetail1 {
   const ExplanationOfBenefitSubDetail1({
     required this.id,
@@ -1563,6 +1608,7 @@ class ExplanationOfBenefitSubDetail1 {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetail1ToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitTotal {
   const ExplanationOfBenefitTotal({
     required this.id,
@@ -1581,6 +1627,7 @@ class ExplanationOfBenefitTotal {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitTotalToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitPayment {
   const ExplanationOfBenefitPayment({
     required this.id,
@@ -1609,6 +1656,7 @@ class ExplanationOfBenefitPayment {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPaymentToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitProcessNote {
   const ExplanationOfBenefitProcessNote({
     required this.id,
@@ -1638,6 +1686,7 @@ class ExplanationOfBenefitProcessNote {
       _$ExplanationOfBenefitProcessNoteToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitBenefitBalance {
   const ExplanationOfBenefitBenefitBalance({
     required this.id,
@@ -1677,27 +1726,28 @@ class ExplanationOfBenefitBenefitBalance {
       _$ExplanationOfBenefitBenefitBalanceToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlan {
   const InsurancePlan({
     @Default(R4ResourceType.InsurancePlan) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.alias,
-    @JsonKey('__alias') required this.aliasElement,
+    @JsonKey(name: '__alias') required this.aliasElement,
     required this.period,
     required this.ownedBy,
     required this.administeredBy,
@@ -1747,6 +1797,7 @@ class InsurancePlan {
   Map<String, dynamic> toJson() => _$InsurancePlanToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanContact {
   const InsurancePlanContact({
     required this.id,
@@ -1769,6 +1820,7 @@ class InsurancePlanContact {
   Map<String, dynamic> toJson() => _$InsurancePlanContactToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanCoverage {
   const InsurancePlanCoverage({
     required this.id,
@@ -1789,6 +1841,7 @@ class InsurancePlanCoverage {
   Map<String, dynamic> toJson() => _$InsurancePlanCoverageToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanBenefit {
   const InsurancePlanBenefit({
     required this.id,
@@ -1811,6 +1864,7 @@ class InsurancePlanBenefit {
   Map<String, dynamic> toJson() => _$InsurancePlanBenefitToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanLimit {
   const InsurancePlanLimit({
     required this.id,
@@ -1829,6 +1883,7 @@ class InsurancePlanLimit {
   Map<String, dynamic> toJson() => _$InsurancePlanLimitToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanPlan {
   const InsurancePlanPlan({
     required this.id,
@@ -1855,6 +1910,7 @@ class InsurancePlanPlan {
   Map<String, dynamic> toJson() => _$InsurancePlanPlanToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanGeneralCost {
   const InsurancePlanGeneralCost({
     required this.id,
@@ -1881,6 +1937,7 @@ class InsurancePlanGeneralCost {
   Map<String, dynamic> toJson() => _$InsurancePlanGeneralCostToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanSpecificCost {
   const InsurancePlanSpecificCost({
     required this.id,
@@ -1899,6 +1956,7 @@ class InsurancePlanSpecificCost {
   Map<String, dynamic> toJson() => _$InsurancePlanSpecificCostToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanBenefit1 {
   const InsurancePlanBenefit1({
     required this.id,
@@ -1917,6 +1975,7 @@ class InsurancePlanBenefit1 {
   Map<String, dynamic> toJson() => _$InsurancePlanBenefit1ToJson(this);
 }
 
+@JsonSerializable()
 class InsurancePlanCost {
   const InsurancePlanCost({
     required this.id,

@@ -124,6 +124,7 @@ class CodeSystem {
   Map<String, dynamic> toJson() => _$CodeSystemToJson(this);
 }
 
+@JsonSerializable()
 class CodeSystemFilter {
   const CodeSystemFilter({
     required this.code,
@@ -148,6 +149,7 @@ class CodeSystemFilter {
   Map<String, dynamic> toJson() => _$CodeSystemFilterToJson(this);
 }
 
+@JsonSerializable()
 class CodeSystemProperty {
   const CodeSystemProperty({
     required this.code,
@@ -172,6 +174,7 @@ class CodeSystemProperty {
   Map<String, dynamic> toJson() => _$CodeSystemPropertyToJson(this);
 }
 
+@JsonSerializable()
 class CodeSystemConcept {
   const CodeSystemConcept({
     @JsonKey(name: 'extension') required this.extension_,
@@ -200,6 +203,7 @@ class CodeSystemConcept {
   Map<String, dynamic> toJson() => _$CodeSystemConceptToJson(this);
 }
 
+@JsonSerializable()
 class CodeSystemDesignation {
   const CodeSystemDesignation({
     required this.language,
@@ -218,6 +222,7 @@ class CodeSystemDesignation {
   Map<String, dynamic> toJson() => _$CodeSystemDesignationToJson(this);
 }
 
+@JsonSerializable()
 class CodeSystemProperty1 {
   const CodeSystemProperty1({
     required this.code,
@@ -252,6 +257,7 @@ class CodeSystemProperty1 {
   Map<String, dynamic> toJson() => _$CodeSystemProperty1ToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMap {
   const ConceptMap({
     @Default(Stu3ResourceType.ConceptMap) required this.resourceType,
@@ -348,6 +354,7 @@ class ConceptMap {
   Map<String, dynamic> toJson() => _$ConceptMapToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapGroup {
   const ConceptMapGroup({
     required this.source,
@@ -376,6 +383,7 @@ class ConceptMapGroup {
   Map<String, dynamic> toJson() => _$ConceptMapGroupToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapElement {
   const ConceptMapElement({
     required this.code,
@@ -394,6 +402,7 @@ class ConceptMapElement {
   Map<String, dynamic> toJson() => _$ConceptMapElementToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapTarget {
   const ConceptMapTarget({
     required this.code,
@@ -422,6 +431,7 @@ class ConceptMapTarget {
   Map<String, dynamic> toJson() => _$ConceptMapTargetToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapDependsOn {
   const ConceptMapDependsOn({
     required this.property,
@@ -446,6 +456,7 @@ class ConceptMapDependsOn {
   Map<String, dynamic> toJson() => _$ConceptMapDependsOnToJson(this);
 }
 
+@JsonSerializable()
 class ConceptMapUnmapped {
   const ConceptMapUnmapped({
     required this.mode,
@@ -470,6 +481,7 @@ class ConceptMapUnmapped {
   Map<String, dynamic> toJson() => _$ConceptMapUnmappedToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfile {
   const ExpansionProfile({
     @Default(Stu3ResourceType.ExpansionProfile) required this.resourceType,
@@ -518,7 +530,7 @@ class ExpansionProfile {
     required this.excludeNotForUI,
     @JsonKey(name: '_excludeNotForUI') required this.excludeNotForUIElement,
     required this.excludePostCoordinated,
-    @JsonKey('__excludePostCoordinated')
+    @JsonKey(name: '__excludePostCoordinated')
         required this.excludePostCoordinatedElement,
     required this.displayLanguage,
     @JsonKey(name: '_displayLanguage') required this.displayLanguageElement,
@@ -581,6 +593,7 @@ class ExpansionProfile {
   Map<String, dynamic> toJson() => _$ExpansionProfileToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileFixedVersion {
   const ExpansionProfileFixedVersion({
     required this.system,
@@ -601,6 +614,7 @@ class ExpansionProfileFixedVersion {
   Map<String, dynamic> toJson() => _$ExpansionProfileFixedVersionToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileExcludedSystem {
   const ExpansionProfileExcludedSystem({
     required this.system,
@@ -617,6 +631,7 @@ class ExpansionProfileExcludedSystem {
   Map<String, dynamic> toJson() => _$ExpansionProfileExcludedSystemToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileDesignation {
   const ExpansionProfileDesignation({
     required this.include,
@@ -629,6 +644,7 @@ class ExpansionProfileDesignation {
   Map<String, dynamic> toJson() => _$ExpansionProfileDesignationToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileInclude {
   const ExpansionProfileInclude({
     required this.designation,
@@ -639,6 +655,7 @@ class ExpansionProfileInclude {
   Map<String, dynamic> toJson() => _$ExpansionProfileIncludeToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileDesignation1 {
   const ExpansionProfileDesignation1({
     required this.language,
@@ -653,6 +670,7 @@ class ExpansionProfileDesignation1 {
   Map<String, dynamic> toJson() => _$ExpansionProfileDesignation1ToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileExclude {
   const ExpansionProfileExclude({
     required this.designation,
@@ -663,6 +681,7 @@ class ExpansionProfileExclude {
   Map<String, dynamic> toJson() => _$ExpansionProfileExcludeToJson(this);
 }
 
+@JsonSerializable()
 class ExpansionProfileDesignation2 {
   const ExpansionProfileDesignation2({
     required this.language,
@@ -677,6 +696,7 @@ class ExpansionProfileDesignation2 {
   Map<String, dynamic> toJson() => _$ExpansionProfileDesignation2ToJson(this);
 }
 
+@JsonSerializable()
 class NamingSystem {
   const NamingSystem({
     @Default(Stu3ResourceType.NamingSystem) required this.resourceType,
@@ -751,6 +771,7 @@ class NamingSystem {
   Map<String, dynamic> toJson() => _$NamingSystemToJson(this);
 }
 
+@JsonSerializable()
 class NamingSystemUniqueId {
   const NamingSystemUniqueId({
     required this.type,
@@ -777,6 +798,7 @@ class NamingSystemUniqueId {
   Map<String, dynamic> toJson() => _$NamingSystemUniqueIdToJson(this);
 }
 
+@JsonSerializable()
 class ValueSet {
   const ValueSet({
     @Default(Stu3ResourceType.ValueSet) required this.resourceType,
@@ -871,6 +893,7 @@ class ValueSet {
   Map<String, dynamic> toJson() => _$ValueSetToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetCompose {
   const ValueSetCompose({
     required this.lockedDate,
@@ -891,6 +914,7 @@ class ValueSetCompose {
   Map<String, dynamic> toJson() => _$ValueSetComposeToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetInclude {
   const ValueSetInclude({
     @JsonKey(name: 'extension') required this.extension_,
@@ -917,6 +941,7 @@ class ValueSetInclude {
   Map<String, dynamic> toJson() => _$ValueSetIncludeToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetConcept {
   const ValueSetConcept({
     @JsonKey(name: 'extension') required this.extension_,
@@ -937,6 +962,7 @@ class ValueSetConcept {
   Map<String, dynamic> toJson() => _$ValueSetConceptToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetDesignation {
   const ValueSetDesignation({
     required this.language,
@@ -955,6 +981,7 @@ class ValueSetDesignation {
   Map<String, dynamic> toJson() => _$ValueSetDesignationToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetFilter {
   const ValueSetFilter({
     required this.property,
@@ -975,6 +1002,7 @@ class ValueSetFilter {
   Map<String, dynamic> toJson() => _$ValueSetFilterToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetExpansion {
   const ValueSetExpansion({
     required this.identifier,
@@ -1003,6 +1031,7 @@ class ValueSetExpansion {
   Map<String, dynamic> toJson() => _$ValueSetExpansionToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetParameter {
   const ValueSetParameter({
     required this.name,
@@ -1039,6 +1068,7 @@ class ValueSetParameter {
   Map<String, dynamic> toJson() => _$ValueSetParameterToJson(this);
 }
 
+@JsonSerializable()
 class ValueSetContains {
   const ValueSetContains({
     required this.system,

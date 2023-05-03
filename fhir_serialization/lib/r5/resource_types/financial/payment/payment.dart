@@ -66,6 +66,7 @@ class PaymentNotice {
   Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliation {
   const PaymentReconciliation({
     @Default(R5ResourceType.PaymentReconciliation) required this.resourceType,
@@ -176,6 +177,7 @@ class PaymentReconciliation {
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliationAllocation {
   const PaymentReconciliationAllocation({
     required this.id,
@@ -188,7 +190,7 @@ class PaymentReconciliationAllocation {
     @JsonKey(name: '_targetItemString') required this.targetItemStringElement,
     required this.targetItemIdentifier,
     required this.targetItemPositiveInt,
-    @JsonKey('__targetItemPositiveInt')
+    @JsonKey(name: '__targetItemPositiveInt')
         required this.targetItemPositiveIntElement,
     required this.encounter,
     required this.account,
@@ -229,6 +231,7 @@ class PaymentReconciliationAllocation {
       _$PaymentReconciliationAllocationToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliationProcessNote {
   const PaymentReconciliationProcessNote({
     required this.id,

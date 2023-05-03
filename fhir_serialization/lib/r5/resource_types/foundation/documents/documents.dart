@@ -86,6 +86,7 @@ class Composition {
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
 
+@JsonSerializable()
 class CompositionAttester {
   const CompositionAttester({
     required this.id,
@@ -108,6 +109,7 @@ class CompositionAttester {
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
 
+@JsonSerializable()
 class CompositionEvent {
   const CompositionEvent({
     required this.id,
@@ -128,6 +130,7 @@ class CompositionEvent {
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
 
+@JsonSerializable()
 class CompositionSection {
   const CompositionSection({
     required this.id,
@@ -166,6 +169,7 @@ class CompositionSection {
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifest {
   const DocumentManifest({
     @Default(R5ResourceType.DocumentManifest) required this.resourceType,
@@ -228,6 +232,7 @@ class DocumentManifest {
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifestRelated {
   const DocumentManifestRelated({
     required this.id,
@@ -246,6 +251,7 @@ class DocumentManifestRelated {
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReference {
   const DocumentReference({
     @Default(R5ResourceType.DocumentReference) required this.resourceType,
@@ -324,6 +330,7 @@ class DocumentReference {
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceAttester {
   const DocumentReferenceAttester({
     required this.id,
@@ -346,6 +353,7 @@ class DocumentReferenceAttester {
   Map<String, dynamic> toJson() => _$DocumentReferenceAttesterToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceRelatesTo {
   const DocumentReferenceRelatesTo({
     required this.id,
@@ -364,6 +372,7 @@ class DocumentReferenceRelatesTo {
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContent {
   const DocumentReferenceContent({
     required this.id,
@@ -382,6 +391,7 @@ class DocumentReferenceContent {
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceProfile {
   const DocumentReferenceProfile({
     required this.id,

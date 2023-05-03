@@ -25,7 +25,7 @@ class CapabilityStatement {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -136,6 +136,7 @@ class CapabilityStatement {
   Map<String, dynamic> toJson() => _$CapabilityStatementToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementSoftware {
   const CapabilityStatementSoftware({
     required this.id,
@@ -162,6 +163,7 @@ class CapabilityStatementSoftware {
   Map<String, dynamic> toJson() => _$CapabilityStatementSoftwareToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementImplementation {
   const CapabilityStatementImplementation({
     required this.id,
@@ -188,6 +190,7 @@ class CapabilityStatementImplementation {
       _$CapabilityStatementImplementationToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementRest {
   const CapabilityStatementRest({
     required this.id,
@@ -222,6 +225,7 @@ class CapabilityStatementRest {
   Map<String, dynamic> toJson() => _$CapabilityStatementRestToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementSecurity {
   const CapabilityStatementSecurity({
     required this.id,
@@ -246,6 +250,7 @@ class CapabilityStatementSecurity {
   Map<String, dynamic> toJson() => _$CapabilityStatementSecurityToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementResource {
   const CapabilityStatementResource({
     required this.id,
@@ -322,6 +327,7 @@ class CapabilityStatementResource {
   Map<String, dynamic> toJson() => _$CapabilityStatementResourceToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementInteraction {
   const CapabilityStatementInteraction({
     required this.id,
@@ -344,6 +350,7 @@ class CapabilityStatementInteraction {
   Map<String, dynamic> toJson() => _$CapabilityStatementInteractionToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementSearchParam {
   const CapabilityStatementSearchParam({
     required this.id,
@@ -372,6 +379,7 @@ class CapabilityStatementSearchParam {
   Map<String, dynamic> toJson() => _$CapabilityStatementSearchParamToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementOperation {
   const CapabilityStatementOperation({
     required this.id,
@@ -396,6 +404,7 @@ class CapabilityStatementOperation {
   Map<String, dynamic> toJson() => _$CapabilityStatementOperationToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementInteraction1 {
   const CapabilityStatementInteraction1({
     required this.id,
@@ -419,6 +428,7 @@ class CapabilityStatementInteraction1 {
       _$CapabilityStatementInteraction1ToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementMessaging {
   const CapabilityStatementMessaging({
     required this.id,
@@ -445,6 +455,7 @@ class CapabilityStatementMessaging {
   Map<String, dynamic> toJson() => _$CapabilityStatementMessagingToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementEndpoint {
   const CapabilityStatementEndpoint({
     required this.id,
@@ -465,6 +476,7 @@ class CapabilityStatementEndpoint {
   Map<String, dynamic> toJson() => _$CapabilityStatementEndpointToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementSupportedMessage {
   const CapabilityStatementSupportedMessage({
     required this.id,
@@ -487,6 +499,7 @@ class CapabilityStatementSupportedMessage {
       _$CapabilityStatementSupportedMessageToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatementDocument {
   const CapabilityStatementDocument({
     required this.id,
@@ -511,6 +524,7 @@ class CapabilityStatementDocument {
   Map<String, dynamic> toJson() => _$CapabilityStatementDocumentToJson(this);
 }
 
+@JsonSerializable()
 class CompartmentDefinition {
   const CompartmentDefinition({
     @Default(R5ResourceType.CompartmentDefinition) required this.resourceType,
@@ -530,7 +544,7 @@ class CompartmentDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -615,6 +629,7 @@ class CompartmentDefinition {
   Map<String, dynamic> toJson() => _$CompartmentDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class CompartmentDefinitionResource {
   const CompartmentDefinitionResource({
     required this.id,
@@ -649,6 +664,7 @@ class CompartmentDefinitionResource {
   Map<String, dynamic> toJson() => _$CompartmentDefinitionResourceToJson(this);
 }
 
+@JsonSerializable()
 class GraphDefinition {
   const GraphDefinition({
     @Default(R5ResourceType.GraphDefinition) required this.resourceType,
@@ -668,7 +684,7 @@ class GraphDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -751,6 +767,7 @@ class GraphDefinition {
   Map<String, dynamic> toJson() => _$GraphDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class GraphDefinitionNode {
   const GraphDefinitionNode({
     required this.id,
@@ -779,6 +796,7 @@ class GraphDefinitionNode {
   Map<String, dynamic> toJson() => _$GraphDefinitionNodeToJson(this);
 }
 
+@JsonSerializable()
 class GraphDefinitionLink {
   const GraphDefinitionLink({
     required this.id,
@@ -827,6 +845,7 @@ class GraphDefinitionLink {
   Map<String, dynamic> toJson() => _$GraphDefinitionLinkToJson(this);
 }
 
+@JsonSerializable()
 class GraphDefinitionCompartment {
   const GraphDefinitionCompartment({
     required this.id,
@@ -861,6 +880,7 @@ class GraphDefinitionCompartment {
   Map<String, dynamic> toJson() => _$GraphDefinitionCompartmentToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuide {
   const ImplementationGuide({
     @Default(R5ResourceType.ImplementationGuide) required this.resourceType,
@@ -880,7 +900,7 @@ class ImplementationGuide {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -975,6 +995,7 @@ class ImplementationGuide {
   Map<String, dynamic> toJson() => _$ImplementationGuideToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideDependsOn {
   const ImplementationGuideDependsOn({
     required this.id,
@@ -1003,6 +1024,7 @@ class ImplementationGuideDependsOn {
   Map<String, dynamic> toJson() => _$ImplementationGuideDependsOnToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideGlobal {
   const ImplementationGuideGlobal({
     required this.id,
@@ -1023,6 +1045,7 @@ class ImplementationGuideGlobal {
   Map<String, dynamic> toJson() => _$ImplementationGuideGlobalToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideDefinition {
   const ImplementationGuideDefinition({
     required this.id,
@@ -1047,6 +1070,7 @@ class ImplementationGuideDefinition {
   Map<String, dynamic> toJson() => _$ImplementationGuideDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideGrouping {
   const ImplementationGuideGrouping({
     required this.id,
@@ -1069,6 +1093,7 @@ class ImplementationGuideGrouping {
   Map<String, dynamic> toJson() => _$ImplementationGuideGroupingToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideResource {
   const ImplementationGuideResource({
     required this.id,
@@ -1107,6 +1132,7 @@ class ImplementationGuideResource {
   Map<String, dynamic> toJson() => _$ImplementationGuideResourceToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuidePage {
   const ImplementationGuidePage({
     required this.id,
@@ -1147,6 +1173,7 @@ class ImplementationGuidePage {
   Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideParameter {
   const ImplementationGuideParameter({
     required this.id,
@@ -1167,6 +1194,7 @@ class ImplementationGuideParameter {
   Map<String, dynamic> toJson() => _$ImplementationGuideParameterToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideTemplate {
   const ImplementationGuideTemplate({
     required this.id,
@@ -1193,6 +1221,7 @@ class ImplementationGuideTemplate {
   Map<String, dynamic> toJson() => _$ImplementationGuideTemplateToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideManifest {
   const ImplementationGuideManifest({
     required this.id,
@@ -1223,6 +1252,7 @@ class ImplementationGuideManifest {
   Map<String, dynamic> toJson() => _$ImplementationGuideManifestToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideResource1 {
   const ImplementationGuideResource1({
     required this.id,
@@ -1249,6 +1279,7 @@ class ImplementationGuideResource1 {
   Map<String, dynamic> toJson() => _$ImplementationGuideResource1ToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuidePage1 {
   const ImplementationGuidePage1({
     required this.id,
@@ -1275,6 +1306,7 @@ class ImplementationGuidePage1 {
   Map<String, dynamic> toJson() => _$ImplementationGuidePage1ToJson(this);
 }
 
+@JsonSerializable()
 class MessageDefinition {
   const MessageDefinition({
     @Default(R5ResourceType.MessageDefinition) required this.resourceType,
@@ -1294,7 +1326,7 @@ class MessageDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1395,6 +1427,7 @@ class MessageDefinition {
   Map<String, dynamic> toJson() => _$MessageDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class MessageDefinitionFocus {
   const MessageDefinitionFocus({
     required this.id,
@@ -1423,6 +1456,7 @@ class MessageDefinitionFocus {
   Map<String, dynamic> toJson() => _$MessageDefinitionFocusToJson(this);
 }
 
+@JsonSerializable()
 class MessageDefinitionAllowedResponse {
   const MessageDefinitionAllowedResponse({
     required this.id,
@@ -1445,6 +1479,7 @@ class MessageDefinitionAllowedResponse {
       _$MessageDefinitionAllowedResponseToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinition {
   const OperationDefinition({
     @Default(R5ResourceType.OperationDefinition) required this.resourceType,
@@ -1464,7 +1499,7 @@ class OperationDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1581,6 +1616,7 @@ class OperationDefinition {
   Map<String, dynamic> toJson() => _$OperationDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionParameter {
   const OperationDefinitionParameter({
     required this.id,
@@ -1639,6 +1675,7 @@ class OperationDefinitionParameter {
   Map<String, dynamic> toJson() => _$OperationDefinitionParameterToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionBinding {
   const OperationDefinitionBinding({
     required this.id,
@@ -1659,6 +1696,7 @@ class OperationDefinitionBinding {
   Map<String, dynamic> toJson() => _$OperationDefinitionBindingToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionReferencedFrom {
   const OperationDefinitionReferencedFrom({
     required this.id,
@@ -1683,6 +1721,7 @@ class OperationDefinitionReferencedFrom {
       _$OperationDefinitionReferencedFromToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionOverload {
   const OperationDefinitionOverload({
     required this.id,
@@ -1705,6 +1744,7 @@ class OperationDefinitionOverload {
   Map<String, dynamic> toJson() => _$OperationDefinitionOverloadToJson(this);
 }
 
+@JsonSerializable()
 class SearchParameter {
   const SearchParameter({
     @JsonKey(name: '_constraint') this.constraintElement,
@@ -1762,7 +1802,7 @@ class SearchParameterComponent {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1873,6 +1913,7 @@ class SearchParameterComponent {
   Map<String, dynamic> toJson() => _$SearchParameterComponentToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinition {
   const StructureDefinition({
     @Default(R5ResourceType.StructureDefinition) required this.resourceType,
@@ -1892,7 +1933,7 @@ class StructureDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -2003,6 +2044,7 @@ class StructureDefinition {
   Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionMapping {
   const StructureDefinitionMapping({
     required this.id,
@@ -2033,6 +2075,7 @@ class StructureDefinitionMapping {
   Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionContext {
   const StructureDefinitionContext({
     required this.id,
@@ -2055,6 +2098,7 @@ class StructureDefinitionContext {
   Map<String, dynamic> toJson() => _$StructureDefinitionContextToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionSnapshot {
   const StructureDefinitionSnapshot({
     required this.id,
@@ -2071,6 +2115,7 @@ class StructureDefinitionSnapshot {
   Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionDifferential {
   const StructureDefinitionDifferential({
     required this.id,
@@ -2088,6 +2133,7 @@ class StructureDefinitionDifferential {
       _$StructureDefinitionDifferentialToJson(this);
 }
 
+@JsonSerializable()
 class StructureMap {
   const StructureMap({
     @Default(R5ResourceType.StructureMap) required this.resourceType,
@@ -2107,7 +2153,7 @@ class StructureMap {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -2188,6 +2234,7 @@ class StructureMap {
   Map<String, dynamic> toJson() => _$StructureMapToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapStructure {
   const StructureMapStructure({
     required this.id,
@@ -2216,6 +2263,7 @@ class StructureMapStructure {
   Map<String, dynamic> toJson() => _$StructureMapStructureToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapGroup {
   const StructureMapGroup({
     required this.id,
@@ -2250,6 +2298,7 @@ class StructureMapGroup {
   Map<String, dynamic> toJson() => _$StructureMapGroupToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapInput {
   const StructureMapInput({
     required this.id,
@@ -2280,6 +2329,7 @@ class StructureMapInput {
   Map<String, dynamic> toJson() => _$StructureMapInputToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapRule {
   const StructureMapRule({
     required this.id,
@@ -2310,6 +2360,7 @@ class StructureMapRule {
   Map<String, dynamic> toJson() => _$StructureMapRuleToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapSource {
   const StructureMapSource({
     required this.id,
@@ -2368,6 +2419,7 @@ class StructureMapSource {
   Map<String, dynamic> toJson() => _$StructureMapSourceToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapTarget {
   const StructureMapTarget({
     required this.id,
@@ -2408,6 +2460,7 @@ class StructureMapTarget {
   Map<String, dynamic> toJson() => _$StructureMapTargetToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapParameter {
   const StructureMapParameter({
     required this.id,
@@ -2454,6 +2507,7 @@ class StructureMapParameter {
   Map<String, dynamic> toJson() => _$StructureMapParameterToJson(this);
 }
 
+@JsonSerializable()
 class StructureMapDependent {
   const StructureMapDependent({
     required this.id,

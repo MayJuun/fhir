@@ -90,6 +90,7 @@ class Communication {
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationPayload {
   const CommunicationPayload({
     required this.id,
@@ -110,6 +111,7 @@ class CommunicationPayload {
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequest {
   const CommunicationRequest({
     @Default(R5ResourceType.CommunicationRequest) required this.resourceType,
@@ -199,6 +201,7 @@ class CommunicationRequest {
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequestPayload {
   const CommunicationRequestPayload({
     required this.id,
@@ -219,6 +222,7 @@ class CommunicationRequestPayload {
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDispense {
   const DeviceDispense({
     @Default(R5ResourceType.DeviceDispense) required this.resourceType,
@@ -297,6 +301,7 @@ class DeviceDispense {
   Map<String, dynamic> toJson() => _$DeviceDispenseToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDispensePerformer {
   const DeviceDispensePerformer({
     required this.id,
@@ -315,6 +320,7 @@ class DeviceDispensePerformer {
   Map<String, dynamic> toJson() => _$DeviceDispensePerformerToJson(this);
 }
 
+@JsonSerializable()
 class DeviceRequest {
   const DeviceRequest({
     @Default(R5ResourceType.DeviceRequest) required this.resourceType,
@@ -422,6 +428,7 @@ class DeviceRequest {
   Map<String, dynamic> toJson() => _$DeviceRequestToJson(this);
 }
 
+@JsonSerializable()
 class DeviceRequestParameter {
   const DeviceRequestParameter({
     required this.id,
@@ -448,6 +455,7 @@ class DeviceRequestParameter {
   Map<String, dynamic> toJson() => _$DeviceRequestParameterToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUsage {
   const DeviceUsage({
     @Default(R5ResourceType.DeviceUsage) required this.resourceType,
@@ -522,6 +530,7 @@ class DeviceUsage {
   Map<String, dynamic> toJson() => _$DeviceUsageToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUsageAdherence {
   const DeviceUsageAdherence({
     required this.id,
@@ -540,6 +549,7 @@ class DeviceUsageAdherence {
   Map<String, dynamic> toJson() => _$DeviceUsageAdherenceToJson(this);
 }
 
+@JsonSerializable()
 class GuidanceResponse {
   const GuidanceResponse({
     @Default(R5ResourceType.GuidanceResponse) required this.resourceType,
@@ -611,6 +621,7 @@ class GuidanceResponse {
   Map<String, dynamic> toJson() => _$GuidanceResponseToJson(this);
 }
 
+@JsonSerializable()
 class InventoryReport {
   const InventoryReport({
     @Default(R5ResourceType.InventoryReport) required this.resourceType,
@@ -667,6 +678,7 @@ class InventoryReport {
   Map<String, dynamic> toJson() => _$InventoryReportToJson(this);
 }
 
+@JsonSerializable()
 class InventoryReportInventoryListing {
   const InventoryReportInventoryListing({
     required this.id,
@@ -692,6 +704,7 @@ class InventoryReportInventoryListing {
       _$InventoryReportInventoryListingToJson(this);
 }
 
+@JsonSerializable()
 class InventoryReportItems {
   const InventoryReportItems({
     required this.id,
@@ -728,6 +741,7 @@ class InventoryReportItems {
   Map<String, dynamic> toJson() => _$InventoryReportItemsToJson(this);
 }
 
+@JsonSerializable()
 class SupplyDelivery {
   const SupplyDelivery({
     @Default(R5ResourceType.SupplyDelivery) required this.resourceType,
@@ -789,6 +803,7 @@ class SupplyDelivery {
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
 
+@JsonSerializable()
 class SupplyDeliverySuppliedItem {
   const SupplyDeliverySuppliedItem({
     required this.id,
@@ -809,6 +824,7 @@ class SupplyDeliverySuppliedItem {
   Map<String, dynamic> toJson() => _$SupplyDeliverySuppliedItemToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequest {
   const SupplyRequest({
     @Default(R5ResourceType.SupplyRequest) required this.resourceType,
@@ -884,6 +900,7 @@ class SupplyRequest {
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequestParameter {
   const SupplyRequestParameter({
     required this.id,

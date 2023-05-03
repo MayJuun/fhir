@@ -82,6 +82,7 @@ class Coverage {
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
+@JsonSerializable()
 class CoverageGrouping {
   const CoverageGrouping({
     required this.group,
@@ -138,6 +139,7 @@ class CoverageGrouping {
   Map<String, dynamic> toJson() => _$CoverageGroupingToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityRequest {
   const EligibilityRequest({
     @Default(Stu3ResourceType.EligibilityRequest) required this.resourceType,
@@ -209,6 +211,7 @@ class EligibilityRequest {
   Map<String, dynamic> toJson() => _$EligibilityRequestToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityResponse {
   const EligibilityResponse({
     @Default(Stu3ResourceType.EligibilityResponse) required this.resourceType,
@@ -273,6 +276,7 @@ class EligibilityResponse {
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityResponseInsurance {
   const EligibilityResponseInsurance({
     required this.coverage,
@@ -287,6 +291,7 @@ class EligibilityResponseInsurance {
   Map<String, dynamic> toJson() => _$EligibilityResponseInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityResponseBenefitBalance {
   const EligibilityResponseBenefitBalance({
     required this.category,
@@ -322,6 +327,7 @@ class EligibilityResponseBenefitBalance {
       _$EligibilityResponseBenefitBalanceToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityResponseError {
   const EligibilityResponseError({
     required this.code,
@@ -332,6 +338,7 @@ class EligibilityResponseError {
   Map<String, dynamic> toJson() => _$EligibilityResponseErrorToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentRequest {
   const EnrollmentRequest({
     @Default(Stu3ResourceType.EnrollmentRequest) required this.resourceType,
@@ -382,6 +389,7 @@ class EnrollmentRequest {
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentResponse {
   const EnrollmentResponse({
     @Default(Stu3ResourceType.EnrollmentResponse) required this.resourceType,

@@ -48,6 +48,7 @@ class Medication {
   Map<String, dynamic> toJson() => _$MedicationToJson(this);
 }
 
+@JsonSerializable()
 class MedicationProduct {
   const MedicationProduct({
     required this.id,
@@ -70,6 +71,7 @@ class MedicationProduct {
   Map<String, dynamic> toJson() => _$MedicationProductToJson(this);
 }
 
+@JsonSerializable()
 class MedicationProductIngredient {
   const MedicationProductIngredient({
     required this.id,
@@ -88,6 +90,7 @@ class MedicationProductIngredient {
   Map<String, dynamic> toJson() => _$MedicationProductIngredientToJson(this);
 }
 
+@JsonSerializable()
 class MedicationProductBatch {
   const MedicationProductBatch({
     required this.id,
@@ -110,6 +113,7 @@ class MedicationProductBatch {
   Map<String, dynamic> toJson() => _$MedicationProductBatchToJson(this);
 }
 
+@JsonSerializable()
 class MedicationPackage {
   const MedicationPackage({
     required this.id,
@@ -130,6 +134,7 @@ class MedicationPackage {
   Map<String, dynamic> toJson() => _$MedicationPackageToJson(this);
 }
 
+@JsonSerializable()
 class MedicationPackageContent {
   const MedicationPackageContent({
     required this.id,
@@ -148,6 +153,7 @@ class MedicationPackageContent {
   Map<String, dynamic> toJson() => _$MedicationPackageContentToJson(this);
 }
 
+@JsonSerializable()
 class MedicationOrder {
   const MedicationOrder({
     @Default(Dstu2ResourceType.MedicationOrder) required this.resourceType,
@@ -213,6 +219,7 @@ class MedicationOrder {
   Map<String, dynamic> toJson() => _$MedicationOrderToJson(this);
 }
 
+@JsonSerializable()
 class MedicationOrderDosageInstruction {
   const MedicationOrderDosageInstruction({
     required this.id,
@@ -257,6 +264,7 @@ class MedicationOrderDosageInstruction {
       _$MedicationOrderDosageInstructionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationOrderSubstitution {
   const MedicationOrderSubstitution({
     required this.id,
@@ -275,6 +283,7 @@ class MedicationOrderSubstitution {
   Map<String, dynamic> toJson() => _$MedicationOrderSubstitutionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationAdministration {
   const MedicationAdministration({
     @Default(Dstu2ResourceType.MedicationAdministration)
@@ -342,6 +351,7 @@ class MedicationAdministration {
   Map<String, dynamic> toJson() => _$MedicationAdministrationToJson(this);
 }
 
+@JsonSerializable()
 class MedicationAdministrationDosage {
   const MedicationAdministrationDosage({
     required this.id,
@@ -374,6 +384,7 @@ class MedicationAdministrationDosage {
   Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
 }
 
+@JsonSerializable()
 class MedicationDispense {
   const MedicationDispense({
     @Default(Dstu2ResourceType.MedicationDispense) required this.resourceType,
@@ -445,6 +456,7 @@ class MedicationDispense {
   Map<String, dynamic> toJson() => _$MedicationDispenseToJson(this);
 }
 
+@JsonSerializable()
 class MedicationDispenseDosageInstruction {
   const MedicationDispenseDosageInstruction({
     required this.id,
@@ -489,6 +501,7 @@ class MedicationDispenseDosageInstruction {
       _$MedicationDispenseDosageInstructionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationStatement {
   const MedicationStatement({
     @Default(Dstu2ResourceType.MedicationStatement) required this.resourceType,
@@ -558,6 +571,7 @@ class MedicationStatement {
   Map<String, dynamic> toJson() => _$MedicationStatementToJson(this);
 }
 
+@JsonSerializable()
 class MedicationStatementDosage {
   const MedicationStatementDosage({
     required this.id,
@@ -598,6 +612,7 @@ class MedicationStatementDosage {
   Map<String, dynamic> toJson() => _$MedicationStatementDosageToJson(this);
 }
 
+@JsonSerializable()
 class Immunization {
   const Immunization({
     @Default(Dstu2ResourceType.Immunization) required this.resourceType,
@@ -677,6 +692,7 @@ class Immunization {
   Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationExplanation {
   const ImmunizationExplanation({
     required this.id,
@@ -695,6 +711,7 @@ class ImmunizationExplanation {
   Map<String, dynamic> toJson() => _$ImmunizationExplanationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationReaction {
   const ImmunizationReaction({
     required this.id,
@@ -719,6 +736,7 @@ class ImmunizationReaction {
   Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationVaccinationProtocol {
   const ImmunizationVaccinationProtocol({
     required this.id,
@@ -752,6 +770,7 @@ class ImmunizationVaccinationProtocol {
       _$ImmunizationVaccinationProtocolToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationRecommendation {
   const ImmunizationRecommendation({
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
@@ -790,6 +809,7 @@ class ImmunizationRecommendation {
   Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationRecommendationRecommendation {
   const ImmunizationRecommendationRecommendation({
     this.id,

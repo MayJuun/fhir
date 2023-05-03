@@ -71,6 +71,7 @@ class Media {
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
+@JsonSerializable()
 class Binary {
   const Binary({
     @Default(Dstu2ResourceType.Binary) required this.resourceType,
@@ -98,6 +99,7 @@ class Binary {
   Map<String, dynamic> toJson() => _$BinaryToJson(this);
 }
 
+@JsonSerializable()
 class Bundle {
   const Bundle({
     @Default(Dstu2ResourceType.Bundle) required this.resourceType,
@@ -133,6 +135,7 @@ class Bundle {
   Map<String, dynamic> toJson() => _$BundleToJson(this);
 }
 
+@JsonSerializable()
 class BundleLink {
   const BundleLink({
     required this.id,
@@ -157,6 +160,7 @@ class BundleLink {
   Map<String, dynamic> toJson() => _$BundleLinkToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntry {
   const BundleEntry({
     required this.id,
@@ -187,6 +191,7 @@ class BundleEntry {
   Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntrySearch {
   const BundleEntrySearch({
     required this.id,
@@ -211,6 +216,7 @@ class BundleEntrySearch {
   Map<String, dynamic> toJson() => _$BundleEntrySearchToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntryRequest {
   const BundleEntryRequest({
     required this.id,
@@ -252,6 +258,7 @@ class BundleEntryRequest {
   Map<String, dynamic> toJson() => _$BundleEntryRequestToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntryResponse {
   const BundleEntryResponse({
     required this.id,
@@ -284,6 +291,7 @@ class BundleEntryResponse {
   Map<String, dynamic> toJson() => _$BundleEntryResponseToJson(this);
 }
 
+@JsonSerializable()
 class Basic {
   const Basic({
     @Default(Dstu2ResourceType.Basic) required this.resourceType,

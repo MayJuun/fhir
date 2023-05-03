@@ -72,6 +72,7 @@ class Coverage {
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityRequest {
   const EligibilityRequest({
     @Default(Dstu2ResourceType.EligibilityRequest) required this.resourceType,
@@ -118,6 +119,7 @@ class EligibilityRequest {
   Map<String, dynamic> toJson() => _$EligibilityRequestToJson(this);
 }
 
+@JsonSerializable()
 class EligibilityResponse {
   const EligibilityResponse({
     @Default(Dstu2ResourceType.EligibilityResponse) required this.resourceType,
@@ -175,6 +177,7 @@ class EligibilityResponse {
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentRequest {
   const EnrollmentRequest({
     @Default(Dstu2ResourceType.EnrollmentRequest) required this.resourceType,
@@ -227,6 +230,7 @@ class EnrollmentRequest {
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentResponse {
   const EnrollmentResponse({
     @Default(Dstu2ResourceType.EnrollmentResponse) required this.resourceType,

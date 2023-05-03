@@ -74,6 +74,7 @@ class TestReport {
   Map<String, dynamic> toJson() => _$TestReportToJson(this);
 }
 
+@JsonSerializable()
 class TestReportParticipant {
   const TestReportParticipant({
     required this.type,
@@ -94,6 +95,7 @@ class TestReportParticipant {
   Map<String, dynamic> toJson() => _$TestReportParticipantToJson(this);
 }
 
+@JsonSerializable()
 class TestReportSetup {
   const TestReportSetup({
     required this.action,
@@ -104,6 +106,7 @@ class TestReportSetup {
   Map<String, dynamic> toJson() => _$TestReportSetupToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction {
   const TestReportAction({
     required this.operation,
@@ -116,6 +119,7 @@ class TestReportAction {
   Map<String, dynamic> toJson() => _$TestReportActionToJson(this);
 }
 
+@JsonSerializable()
 class TestReportOperation {
   const TestReportOperation({
     required this.result,
@@ -136,6 +140,7 @@ class TestReportOperation {
   Map<String, dynamic> toJson() => _$TestReportOperationToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAssert {
   const TestReportAssert({
     required this.result,
@@ -156,6 +161,7 @@ class TestReportAssert {
   Map<String, dynamic> toJson() => _$TestReportAssertToJson(this);
 }
 
+@JsonSerializable()
 class TestReportTest {
   const TestReportTest({
     required this.name,
@@ -174,6 +180,7 @@ class TestReportTest {
   Map<String, dynamic> toJson() => _$TestReportTestToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction1 {
   const TestReportAction1({
     required this.operation,
@@ -186,6 +193,7 @@ class TestReportAction1 {
   Map<String, dynamic> toJson() => _$TestReportAction1ToJson(this);
 }
 
+@JsonSerializable()
 class TestReportTeardown {
   const TestReportTeardown({
     required this.action,
@@ -196,6 +204,7 @@ class TestReportTeardown {
   Map<String, dynamic> toJson() => _$TestReportTeardownToJson(this);
 }
 
+@JsonSerializable()
 class TestReportAction2 {
   const TestReportAction2({
     required this.operation,
@@ -206,6 +215,7 @@ class TestReportAction2 {
   Map<String, dynamic> toJson() => _$TestReportAction2ToJson(this);
 }
 
+@JsonSerializable()
 class TestScript {
   const TestScript({
     @Default(Stu3ResourceType.TestScript) required this.resourceType,
@@ -310,6 +320,7 @@ class TestScript {
   Map<String, dynamic> toJson() => _$TestScriptToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptOrigin {
   const TestScriptOrigin({
     required this.index,
@@ -324,6 +335,7 @@ class TestScriptOrigin {
   Map<String, dynamic> toJson() => _$TestScriptOriginToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptDestination {
   const TestScriptDestination({
     required this.index,
@@ -338,6 +350,7 @@ class TestScriptDestination {
   Map<String, dynamic> toJson() => _$TestScriptDestinationToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptMetadata {
   const TestScriptMetadata({
     required this.link,
@@ -350,6 +363,7 @@ class TestScriptMetadata {
   Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptLink {
   const TestScriptLink({
     required this.url,
@@ -366,6 +380,7 @@ class TestScriptLink {
   Map<String, dynamic> toJson() => _$TestScriptLinkToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptCapability {
   const TestScriptCapability({
     @JsonKey(name: 'required') required this.required_,
@@ -400,6 +415,7 @@ class TestScriptCapability {
   Map<String, dynamic> toJson() => _$TestScriptCapabilityToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptFixture {
   const TestScriptFixture({
     required this.autocreate,
@@ -418,6 +434,7 @@ class TestScriptFixture {
   Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptVariable {
   const TestScriptVariable({
     required this.name,
@@ -458,6 +475,7 @@ class TestScriptVariable {
   Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRule {
   const TestScriptRule({
     required this.resource,
@@ -470,6 +488,7 @@ class TestScriptRule {
   Map<String, dynamic> toJson() => _$TestScriptRuleToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptParam {
   const TestScriptParam({
     required this.name,
@@ -486,6 +505,7 @@ class TestScriptParam {
   Map<String, dynamic> toJson() => _$TestScriptParamToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRuleset {
   const TestScriptRuleset({
     required this.resource,
@@ -498,6 +518,7 @@ class TestScriptRuleset {
   Map<String, dynamic> toJson() => _$TestScriptRulesetToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRule1 {
   const TestScriptRule1({
     required this.ruleId,
@@ -512,6 +533,7 @@ class TestScriptRule1 {
   Map<String, dynamic> toJson() => _$TestScriptRule1ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptParam1 {
   const TestScriptParam1({
     required this.name,
@@ -528,6 +550,7 @@ class TestScriptParam1 {
   Map<String, dynamic> toJson() => _$TestScriptParam1ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptSetup {
   const TestScriptSetup({
     required this.action,
@@ -538,6 +561,7 @@ class TestScriptSetup {
   Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction {
   const TestScriptAction({
     required this.operation,
@@ -550,6 +574,7 @@ class TestScriptAction {
   Map<String, dynamic> toJson() => _$TestScriptActionToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptOperation {
   const TestScriptOperation({
     required this.type,
@@ -618,6 +643,7 @@ class TestScriptOperation {
   Map<String, dynamic> toJson() => _$TestScriptOperationToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRequestHeader {
   const TestScriptRequestHeader({
     required this.field,
@@ -634,6 +660,7 @@ class TestScriptRequestHeader {
   Map<String, dynamic> toJson() => _$TestScriptRequestHeaderToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAssert {
   const TestScriptAssert({
     required this.label,
@@ -645,7 +672,7 @@ class TestScriptAssert {
     required this.compareToSourceId,
     @JsonKey(name: '_compareToSourceId') required this.compareToSourceIdElement,
     required this.compareToSourceExpression,
-    @JsonKey('__compareToSourceExpression')
+    @JsonKey(name: '__compareToSourceExpression')
         required this.compareToSourceExpressionElement,
     required this.compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath')
@@ -737,6 +764,7 @@ class TestScriptAssert {
   Map<String, dynamic> toJson() => _$TestScriptAssertToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRule2 {
   const TestScriptRule2({
     required this.ruleId,
@@ -751,6 +779,7 @@ class TestScriptRule2 {
   Map<String, dynamic> toJson() => _$TestScriptRule2ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptParam2 {
   const TestScriptParam2({
     required this.name,
@@ -767,6 +796,7 @@ class TestScriptParam2 {
   Map<String, dynamic> toJson() => _$TestScriptParam2ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRuleset1 {
   const TestScriptRuleset1({
     required this.rulesetId,
@@ -781,6 +811,7 @@ class TestScriptRuleset1 {
   Map<String, dynamic> toJson() => _$TestScriptRuleset1ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptRule3 {
   const TestScriptRule3({
     required this.ruleId,
@@ -795,6 +826,7 @@ class TestScriptRule3 {
   Map<String, dynamic> toJson() => _$TestScriptRule3ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptParam3 {
   const TestScriptParam3({
     required this.name,
@@ -811,6 +843,7 @@ class TestScriptParam3 {
   Map<String, dynamic> toJson() => _$TestScriptParam3ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTest {
   const TestScriptTest({
     required this.name,
@@ -829,6 +862,7 @@ class TestScriptTest {
   Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction1 {
   const TestScriptAction1({
     required this.operation,
@@ -841,6 +875,7 @@ class TestScriptAction1 {
   Map<String, dynamic> toJson() => _$TestScriptAction1ToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTeardown {
   const TestScriptTeardown({
     required this.action,
@@ -851,6 +886,7 @@ class TestScriptTeardown {
   Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptAction2 {
   const TestScriptAction2({
     required this.operation,

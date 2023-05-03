@@ -85,6 +85,7 @@ class Conformance {
   Map<String, dynamic> toJson() => _$ConformanceToJson(this);
 }
 
+@JsonSerializable()
 class CapabilityStatement {
   const CapabilityStatement({
     @Default(Dstu2ResourceType.CapabilityStatement) required this.resourceType,
@@ -162,6 +163,7 @@ class CapabilityStatement {
   Map<String, dynamic> toJson() => _$CapabilityStatementToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceContact {
   const ConformanceContact({
     required this.id,
@@ -180,6 +182,7 @@ class ConformanceContact {
   Map<String, dynamic> toJson() => _$ConformanceContactToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceSoftware {
   const ConformanceSoftware({
     required this.id,
@@ -200,6 +203,7 @@ class ConformanceSoftware {
   Map<String, dynamic> toJson() => _$ConformanceSoftwareToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceImplementation {
   const ConformanceImplementation({
     required this.id,
@@ -218,6 +222,7 @@ class ConformanceImplementation {
   Map<String, dynamic> toJson() => _$ConformanceImplementationToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceRest {
   const ConformanceRest({
     required this.id,
@@ -255,6 +260,7 @@ class ConformanceRest {
   Map<String, dynamic> toJson() => _$ConformanceRestToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceMessaging {
   const ConformanceMessaging({
     required this.id,
@@ -279,6 +285,7 @@ class ConformanceMessaging {
   Map<String, dynamic> toJson() => _$ConformanceMessagingToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceDocument {
   const ConformanceDocument({
     required this.id,
@@ -301,6 +308,7 @@ class ConformanceDocument {
   Map<String, dynamic> toJson() => _$ConformanceDocumentToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceRestSecurity {
   const ConformanceRestSecurity({
     required this.id,
@@ -325,6 +333,7 @@ class ConformanceRestSecurity {
   Map<String, dynamic> toJson() => _$ConformanceRestSecurityToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceRestResource {
   const ConformanceRestResource({
     required this.id,
@@ -376,6 +385,7 @@ class ConformanceRestResource {
   Map<String, dynamic> toJson() => _$ConformanceRestResourceToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceResourceInteraction {
   const ConformanceResourceInteraction({
     required this.id,
@@ -395,6 +405,7 @@ class ConformanceResourceInteraction {
   Map<String, dynamic> toJson() => _$ConformanceResourceInteractionToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceRestOperation {
   const ConformanceRestOperation({
     required this.id,
@@ -415,6 +426,7 @@ class ConformanceRestOperation {
   Map<String, dynamic> toJson() => _$ConformanceRestOperationToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceMessagingEndpoint {
   const ConformanceMessagingEndpoint({
     required this.id,
@@ -435,6 +447,7 @@ class ConformanceMessagingEndpoint {
   Map<String, dynamic> toJson() => _$ConformanceMessagingEndpointToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceMessagingEvent {
   const ConformanceMessagingEvent({
     required this.id,
@@ -465,6 +478,7 @@ class ConformanceMessagingEvent {
   Map<String, dynamic> toJson() => _$ConformanceMessagingEventToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceSecurityCertificate {
   const ConformanceSecurityCertificate({
     required this.id,
@@ -485,6 +499,7 @@ class ConformanceSecurityCertificate {
   Map<String, dynamic> toJson() => _$ConformanceSecurityCertificateToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceRestInteraction {
   const ConformanceRestInteraction({
     required this.id,
@@ -504,6 +519,7 @@ class ConformanceRestInteraction {
   Map<String, dynamic> toJson() => _$ConformanceRestInteractionToJson(this);
 }
 
+@JsonSerializable()
 class ConformanceResourceSearchParam {
   const ConformanceResourceSearchParam({
     required this.id,
@@ -535,6 +551,7 @@ class ConformanceResourceSearchParam {
   Map<String, dynamic> toJson() => _$ConformanceResourceSearchParamToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinition {
   const OperationDefinition({
     @Default(Dstu2ResourceType.OperationDefinition) required this.resourceType,
@@ -600,6 +617,7 @@ class OperationDefinition {
   Map<String, dynamic> toJson() => _$OperationDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionContact {
   const OperationDefinitionContact({
     required this.id,
@@ -618,6 +636,7 @@ class OperationDefinitionContact {
   Map<String, dynamic> toJson() => _$OperationDefinitionContactToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionParameter {
   const OperationDefinitionParameter({
     required this.id,
@@ -652,6 +671,7 @@ class OperationDefinitionParameter {
   Map<String, dynamic> toJson() => _$OperationDefinitionParameterToJson(this);
 }
 
+@JsonSerializable()
 class OperationDefinitionParameterBinding {
   const OperationDefinitionParameterBinding({
     required this.id,
@@ -675,6 +695,7 @@ class OperationDefinitionParameterBinding {
       _$OperationDefinitionParameterBindingToJson(this);
 }
 
+@JsonSerializable()
 class SearchParameterContact {
   const SearchParameterContact({
     required this.id,

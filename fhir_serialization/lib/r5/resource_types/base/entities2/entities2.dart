@@ -67,6 +67,7 @@ class BiologicallyDerivedProduct {
   Map<String, dynamic> toJson() => _$BiologicallyDerivedProductToJson(this);
 }
 
+@JsonSerializable()
 class BiologicallyDerivedProductCollection {
   const BiologicallyDerivedProductCollection({
     required this.id,
@@ -94,6 +95,7 @@ class BiologicallyDerivedProductCollection {
       _$BiologicallyDerivedProductCollectionToJson(this);
 }
 
+@JsonSerializable()
 class BiologicallyDerivedProductProperty {
   const BiologicallyDerivedProductProperty({
     required this.id,
@@ -137,6 +139,7 @@ class BiologicallyDerivedProductProperty {
       _$BiologicallyDerivedProductPropertyToJson(this);
 }
 
+@JsonSerializable()
 class Device {
   const Device({
     @Default(R5ResourceType.Device) required this.resourceType,
@@ -248,6 +251,7 @@ class Device {
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUdiCarrier {
   const DeviceUdiCarrier({
     required this.id,
@@ -286,6 +290,7 @@ class DeviceUdiCarrier {
   Map<String, dynamic> toJson() => _$DeviceUdiCarrierToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDeviceName {
   const DeviceDeviceName({
     required this.id,
@@ -308,6 +313,7 @@ class DeviceDeviceName {
   Map<String, dynamic> toJson() => _$DeviceDeviceNameToJson(this);
 }
 
+@JsonSerializable()
 class DeviceVersion {
   const DeviceVersion({
     required this.id,
@@ -334,6 +340,7 @@ class DeviceVersion {
   Map<String, dynamic> toJson() => _$DeviceVersionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceSpecialization {
   const DeviceSpecialization({
     required this.id,
@@ -356,6 +363,7 @@ class DeviceSpecialization {
   Map<String, dynamic> toJson() => _$DeviceSpecializationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceProperty {
   const DeviceProperty({
     required this.id,
@@ -392,6 +400,7 @@ class DeviceProperty {
   Map<String, dynamic> toJson() => _$DevicePropertyToJson(this);
 }
 
+@JsonSerializable()
 class DeviceOperation {
   const DeviceOperation({
     required this.id,
@@ -418,6 +427,7 @@ class DeviceOperation {
   Map<String, dynamic> toJson() => _$DeviceOperationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceAssociation {
   const DeviceAssociation({
     required this.id,
@@ -440,6 +450,7 @@ class DeviceAssociation {
   Map<String, dynamic> toJson() => _$DeviceAssociationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceMetric {
   const DeviceMetric({
     @Default(R5ResourceType.DeviceMetric) required this.resourceType,
@@ -496,6 +507,7 @@ class DeviceMetric {
   Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
 }
 
+@JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
     required this.id,
@@ -522,6 +534,7 @@ class DeviceMetricCalibration {
   Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }
 
+@JsonSerializable()
 class NutritionProduct {
   const NutritionProduct({
     @Default(R5ResourceType.NutritionProduct) required this.resourceType,
@@ -574,6 +587,7 @@ class NutritionProduct {
   Map<String, dynamic> toJson() => _$NutritionProductToJson(this);
 }
 
+@JsonSerializable()
 class NutritionProductNutrient {
   const NutritionProductNutrient({
     required this.id,
@@ -592,6 +606,7 @@ class NutritionProductNutrient {
   Map<String, dynamic> toJson() => _$NutritionProductNutrientToJson(this);
 }
 
+@JsonSerializable()
 class NutritionProductIngredient {
   const NutritionProductIngredient({
     required this.id,
@@ -610,6 +625,7 @@ class NutritionProductIngredient {
   Map<String, dynamic> toJson() => _$NutritionProductIngredientToJson(this);
 }
 
+@JsonSerializable()
 class NutritionProductCharacteristic {
   const NutritionProductCharacteristic({
     required this.id,
@@ -644,6 +660,7 @@ class NutritionProductCharacteristic {
   Map<String, dynamic> toJson() => _$NutritionProductCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class NutritionProductInstance {
   const NutritionProductInstance({
     required this.id,
@@ -680,6 +697,7 @@ class NutritionProductInstance {
   Map<String, dynamic> toJson() => _$NutritionProductInstanceToJson(this);
 }
 
+@JsonSerializable()
 class Substance {
   const Substance({
     @Default(R5ResourceType.Substance) required this.resourceType,
@@ -736,6 +754,7 @@ class Substance {
   Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
     required this.id,

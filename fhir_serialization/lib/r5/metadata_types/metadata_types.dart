@@ -26,6 +26,7 @@ class ContactDetail {
   Map<String, dynamic> toJson() => _$ContactDetailToJson(this);
 }
 
+@JsonSerializable()
 class ExtendedContactDetail {
   const ExtendedContactDetail({
     this.id,
@@ -50,6 +51,7 @@ class ExtendedContactDetail {
   Map<String, dynamic> toJson() => _$ExtendedContactDetailToJson(this);
 }
 
+@JsonSerializable()
 class VirtualServiceDetail {
   const VirtualServiceDetail({
     this.id,
@@ -88,6 +90,7 @@ class VirtualServiceDetail {
   Map<String, dynamic> toJson() => _$VirtualServiceDetailToJson(this);
 }
 
+@JsonSerializable()
 class Availability {
   const Availability({
     this.id,
@@ -104,6 +107,7 @@ class Availability {
   Map<String, dynamic> toJson() => _$AvailabilityToJson(this);
 }
 
+@JsonSerializable()
 class AvailabilityAvailableTime {
   const AvailabilityAvailableTime({
     this.id,
@@ -134,6 +138,7 @@ class AvailabilityAvailableTime {
   Map<String, dynamic> toJson() => _$AvailabilityAvailableTimeToJson(this);
 }
 
+@JsonSerializable()
 class AvailabilityNotAvailableTime {
   const AvailabilityNotAvailableTime({
     this.id,
@@ -154,6 +159,7 @@ class AvailabilityNotAvailableTime {
   Map<String, dynamic> toJson() => _$AvailabilityNotAvailableTimeToJson(this);
 }
 
+@JsonSerializable()
 class MonetaryComponent {
   const MonetaryComponent({
     this.id,
@@ -178,6 +184,7 @@ class MonetaryComponent {
   Map<String, dynamic> toJson() => _$MonetaryComponentToJson(this);
 }
 
+@JsonSerializable()
 class Contributor {
   const Contributor({
     this.id,
@@ -200,6 +207,7 @@ class Contributor {
   Map<String, dynamic> toJson() => _$ContributorToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirement {
   const DataRequirement({
     this.id,
@@ -238,6 +246,7 @@ class DataRequirement {
   Map<String, dynamic> toJson() => _$DataRequirementToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementCodeFilter {
   const DataRequirementCodeFilter({
     this.id,
@@ -264,6 +273,7 @@ class DataRequirementCodeFilter {
   Map<String, dynamic> toJson() => _$DataRequirementCodeFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementDateFilter {
   const DataRequirementDateFilter({
     this.id,
@@ -294,6 +304,7 @@ class DataRequirementDateFilter {
   Map<String, dynamic> toJson() => _$DataRequirementDateFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementValueFilter {
   const DataRequirementValueFilter({
     this.id,
@@ -328,6 +339,7 @@ class DataRequirementValueFilter {
   Map<String, dynamic> toJson() => _$DataRequirementValueFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementSort {
   const DataRequirementSort({
     this.id,
@@ -350,6 +362,7 @@ class DataRequirementSort {
   Map<String, dynamic> toJson() => _$DataRequirementSortToJson(this);
 }
 
+@JsonSerializable()
 class ParameterDefinition {
   const ParameterDefinition({
     this.id,
@@ -388,6 +401,7 @@ class ParameterDefinition {
   Map<String, dynamic> toJson() => _$ParameterDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class RelatedArtifact {
   const RelatedArtifact({
     this.id,
@@ -432,6 +446,7 @@ class RelatedArtifact {
   Map<String, dynamic> toJson() => _$RelatedArtifactToJson(this);
 }
 
+@JsonSerializable()
 class TriggerDefinition {
   const TriggerDefinition({
     this.id,
@@ -472,6 +487,7 @@ class TriggerDefinition {
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class UsageContext {
   const UsageContext({
     this.id,
@@ -494,6 +510,7 @@ class UsageContext {
   Map<String, dynamic> toJson() => _$UsageContextToJson(this);
 }
 
+@JsonSerializable()
 class Expression {
   const Expression({
     this.id,

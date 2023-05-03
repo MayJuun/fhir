@@ -81,6 +81,7 @@ class Device {
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
+@JsonSerializable()
 class DeviceComponent {
   const DeviceComponent({
     @Default(Dstu2ResourceType.DeviceComponent) required this.resourceType,
@@ -130,6 +131,7 @@ class DeviceComponent {
   Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
 }
 
+@JsonSerializable()
 class DeviceComponentProductionSpecification {
   const DeviceComponentProductionSpecification({
     required this.id,
@@ -152,6 +154,7 @@ class DeviceComponentProductionSpecification {
       _$DeviceComponentProductionSpecificationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
     required this.id,

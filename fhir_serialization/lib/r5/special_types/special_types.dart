@@ -26,6 +26,7 @@ class Narrative {
   Map<String, dynamic> toJson() => _$NarrativeToJson(this);
 }
 
+@JsonSerializable()
 class CodeableReference {
   const CodeableReference({
     this.id,
@@ -42,6 +43,7 @@ class CodeableReference {
   Map<String, dynamic> toJson() => _$CodeableReferenceToJson(this);
 }
 
+@JsonSerializable()
 class Reference {
   const Reference({
     this.id,
@@ -68,6 +70,7 @@ class Reference {
   Map<String, dynamic> toJson() => _$ReferenceToJson(this);
 }
 
+@JsonSerializable()
 class Meta {
   const Meta({
     this.id,
@@ -97,6 +100,7 @@ class Meta {
   Map<String, dynamic> toJson() => _$MetaToJson(this);
 }
 
+@JsonSerializable()
 class Dosage {
   const Dosage({
     this.id,
@@ -146,6 +150,7 @@ class Dosage {
   Map<String, dynamic> toJson() => _$DosageToJson(this);
 }
 
+@JsonSerializable()
 class DosageDoseAndRate {
   const DosageDoseAndRate({
     this.id,
@@ -172,6 +177,7 @@ class DosageDoseAndRate {
   Map<String, dynamic> toJson() => _$DosageDoseAndRateToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinition {
   const ElementDefinition({
     this.id,
@@ -824,6 +830,7 @@ class ElementDefinition {
   Map<String, dynamic> toJson() => _$ElementDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionSlicing {
   const ElementDefinitionSlicing({
     this.id,
@@ -852,6 +859,7 @@ class ElementDefinitionSlicing {
   Map<String, dynamic> toJson() => _$ElementDefinitionSlicingToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionDiscriminator {
   const ElementDefinitionDiscriminator({
     this.id,
@@ -874,6 +882,7 @@ class ElementDefinitionDiscriminator {
   Map<String, dynamic> toJson() => _$ElementDefinitionDiscriminatorToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionBase {
   const ElementDefinitionBase({
     this.id,
@@ -900,6 +909,7 @@ class ElementDefinitionBase {
   Map<String, dynamic> toJson() => _$ElementDefinitionBaseToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionType {
   const ElementDefinitionType({
     this.id,
@@ -930,6 +940,7 @@ class ElementDefinitionType {
   Map<String, dynamic> toJson() => _$ElementDefinitionTypeToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionExample {
   const ElementDefinitionExample({
     this.id,
@@ -1096,6 +1107,7 @@ class ElementDefinitionExample {
   Map<String, dynamic> toJson() => _$ElementDefinitionExampleToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionConstraint {
   const ElementDefinitionConstraint({
     this.id,
@@ -1136,6 +1148,7 @@ class ElementDefinitionConstraint {
   Map<String, dynamic> toJson() => _$ElementDefinitionConstraintToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionObligation {
   const ElementDefinitionObligation({
     this.id,
@@ -1172,6 +1185,7 @@ class ElementDefinitionObligation {
   Map<String, dynamic> toJson() => _$ElementDefinitionObligationToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionBinding {
   const ElementDefinitionBinding({
     this.id,
@@ -1198,6 +1212,7 @@ class ElementDefinitionBinding {
   Map<String, dynamic> toJson() => _$ElementDefinitionBindingToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionAdditional {
   const ElementDefinitionAdditional({
     this.id,
@@ -1232,6 +1247,7 @@ class ElementDefinitionAdditional {
   Map<String, dynamic> toJson() => _$ElementDefinitionAdditionalToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionMapping {
   const ElementDefinitionMapping({
     this.id,

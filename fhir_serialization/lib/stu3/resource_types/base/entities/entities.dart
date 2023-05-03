@@ -87,6 +87,7 @@ class Device {
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUdi {
   const DeviceUdi({
     required this.deviceIdentifier,
@@ -123,6 +124,7 @@ class DeviceUdi {
   Map<String, dynamic> toJson() => _$DeviceUdiToJson(this);
 }
 
+@JsonSerializable()
 class DeviceComponent {
   const DeviceComponent({
     @Default(Stu3ResourceType.DeviceComponent) required this.resourceType,
@@ -145,7 +147,7 @@ class DeviceComponent {
     required this.operationalStatus,
     required this.parameterGroup,
     required this.measurementPrinciple,
-    @JsonKey('__measurementPrinciple')
+    @JsonKey(name: '__measurementPrinciple')
         required this.measurementPrincipleElement,
     required this.productionSpecification,
     required this.languageCode,
@@ -179,6 +181,7 @@ class DeviceComponent {
   Map<String, dynamic> toJson() => _$DeviceComponentToJson(this);
 }
 
+@JsonSerializable()
 class DeviceComponentProductionSpecification {
   const DeviceComponentProductionSpecification({
     required this.specType,
@@ -198,6 +201,7 @@ class DeviceComponentProductionSpecification {
       _$DeviceComponentProductionSpecificationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
     required this.type,
@@ -218,6 +222,7 @@ class DeviceMetricCalibration {
   Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }
 
+@JsonSerializable()
 class Endpoint {
   const Endpoint({
     @Default(Stu3ResourceType.Endpoint) required this.resourceType,
@@ -280,6 +285,7 @@ class Endpoint {
   Map<String, dynamic> toJson() => _$EndpointToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareService {
   const HealthcareService({
     @Default(Stu3ResourceType.HealthcareService) required this.resourceType,
@@ -324,7 +330,7 @@ class HealthcareService {
     required this.availableTime,
     required this.notAvailable,
     required this.availabilityExceptions,
-    @JsonKey('__availabilityExceptions')
+    @JsonKey(name: '__availabilityExceptions')
         required this.availabilityExceptionsElement,
     required this.endpoint,
   });
@@ -377,6 +383,7 @@ class HealthcareService {
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceAvailableTime {
   const HealthcareServiceAvailableTime({
     required this.daysOfWeek,
@@ -402,6 +409,7 @@ class HealthcareServiceAvailableTime {
   Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceNotAvailable {
   const HealthcareServiceNotAvailable({
     required this.description,
@@ -416,6 +424,7 @@ class HealthcareServiceNotAvailable {
   Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 
+@JsonSerializable()
 class Location {
   const Location({
     @Default(Stu3ResourceType.Location) required this.resourceType,
@@ -486,6 +495,7 @@ class Location {
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
+@JsonSerializable()
 class LocationPosition {
   const LocationPosition({
     required this.longitude,
@@ -506,6 +516,7 @@ class LocationPosition {
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
+@JsonSerializable()
 class Organization {
   const Organization({
     @Default(Stu3ResourceType.Organization) required this.resourceType,
@@ -562,6 +573,7 @@ class Organization {
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationContact {
   const OrganizationContact({
     required this.purpose,
@@ -578,6 +590,7 @@ class OrganizationContact {
   Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }
 
+@JsonSerializable()
 class Substance {
   const Substance({
     @Default(Stu3ResourceType.Substance) required this.resourceType,
@@ -626,6 +639,7 @@ class Substance {
   Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceInstance {
   const SubstanceInstance({
     required this.identifier,
@@ -642,6 +656,7 @@ class SubstanceInstance {
   Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
     required this.quantity,

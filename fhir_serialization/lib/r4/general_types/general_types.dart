@@ -34,6 +34,7 @@ class Annotation {
   Map<String, dynamic> toJson() => _$AnnotationToJson(this);
 }
 
+@JsonSerializable()
 class Attachment {
   const Attachment({
     required this.id,
@@ -78,6 +79,7 @@ class Attachment {
   Map<String, dynamic> toJson() => _$AttachmentToJson(this);
 }
 
+@JsonSerializable()
 class Identifier {
   const Identifier({
     required this.id,
@@ -108,6 +110,7 @@ class Identifier {
   Map<String, dynamic> toJson() => _$IdentifierToJson(this);
 }
 
+@JsonSerializable()
 class CodeableConcept {
   const CodeableConcept({
     required this.id,
@@ -126,6 +129,7 @@ class CodeableConcept {
   Map<String, dynamic> toJson() => _$CodeableConceptToJson(this);
 }
 
+@JsonSerializable()
 class Coding {
   const Coding({
     required this.id,
@@ -157,6 +161,7 @@ class Coding {
   Map<String, dynamic> toJson() => _$CodingToJson(this);
 }
 
+@JsonSerializable()
 class Quantity {
   const Quantity({
     required this.id,
@@ -190,6 +195,7 @@ class Quantity {
   Map<String, dynamic> toJson() => _$QuantityToJson(this);
 }
 
+@JsonSerializable()
 class FhirDuration {
   const FhirDuration({
     required this.id,
@@ -223,6 +229,7 @@ class FhirDuration {
   Map<String, dynamic> toJson() => _$FhirDurationToJson(this);
 }
 
+@JsonSerializable()
 class Distance {
   const Distance({
     required this.id,
@@ -256,6 +263,7 @@ class Distance {
   Map<String, dynamic> toJson() => _$DistanceToJson(this);
 }
 
+@JsonSerializable()
 class Count {
   const Count({
     required this.id,
@@ -288,6 +296,7 @@ class Count {
   Map<String, dynamic> toJson() => _$CountToJson(this);
 }
 
+@JsonSerializable()
 class Money {
   const Money({
     required this.id,
@@ -307,6 +316,7 @@ class Money {
   Map<String, dynamic> toJson() => _$MoneyToJson(this);
 }
 
+@JsonSerializable()
 class Age {
   const Age({
     required this.id,
@@ -338,6 +348,7 @@ class Age {
   Map<String, dynamic> toJson() => _$AgeToJson(this);
 }
 
+@JsonSerializable()
 class Range {
   const Range({
     required this.id,
@@ -353,6 +364,7 @@ class Range {
   Map<String, dynamic> toJson() => _$RangeToJson(this);
 }
 
+@JsonSerializable()
 class Period {
   const Period({
     required this.id,
@@ -372,6 +384,7 @@ class Period {
   Map<String, dynamic> toJson() => _$PeriodToJson(this);
 }
 
+@JsonSerializable()
 class Ratio {
   const Ratio({
     required this.id,
@@ -387,6 +400,7 @@ class Ratio {
   Map<String, dynamic> toJson() => _$RatioToJson(this);
 }
 
+@JsonSerializable()
 class RatioRange {
   const RatioRange({
     required this.id,
@@ -405,6 +419,7 @@ class RatioRange {
   Map<String, dynamic> toJson() => _$RatioRangeToJson(this);
 }
 
+@JsonSerializable()
 class SampledData {
   const SampledData({
     required this.id,
@@ -443,6 +458,7 @@ class SampledData {
   Map<String, dynamic> toJson() => _$SampledDataToJson(this);
 }
 
+@JsonSerializable()
 class Signature {
   const Signature({
     required this.id,
@@ -477,6 +493,7 @@ class Signature {
   Map<String, dynamic> toJson() => _$SignatureToJson(this);
 }
 
+@JsonSerializable()
 class HumanName {
   const HumanName({
     required this.id,
@@ -515,6 +532,7 @@ class HumanName {
   Map<String, dynamic> toJson() => _$HumanNameToJson(this);
 }
 
+@JsonSerializable()
 class Address {
   const Address({
     required this.id,
@@ -565,6 +583,7 @@ class Address {
   Map<String, dynamic> toJson() => _$AddressToJson(this);
 }
 
+@JsonSerializable()
 class ContactPoint {
   const ContactPoint({
     required this.id,
@@ -596,6 +615,7 @@ class ContactPoint {
   Map<String, dynamic> toJson() => _$ContactPointToJson(this);
 }
 
+@JsonSerializable()
 class Timing {
   const Timing({
     required this.id,
@@ -617,6 +637,7 @@ class Timing {
   Map<String, dynamic> toJson() => _$TimingToJson(this);
 }
 
+@JsonSerializable()
 class TimingRepeat {
   const TimingRepeat({
     required this.id,

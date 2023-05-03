@@ -117,6 +117,7 @@ class ResearchStudy {
   Map<String, dynamic> toJson() => _$ResearchStudyToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyLabel {
   const ResearchStudyLabel({
     required this.id,
@@ -137,6 +138,7 @@ class ResearchStudyLabel {
   Map<String, dynamic> toJson() => _$ResearchStudyLabelToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyAssociatedParty {
   const ResearchStudyAssociatedParty({
     required this.id,
@@ -163,6 +165,7 @@ class ResearchStudyAssociatedParty {
   Map<String, dynamic> toJson() => _$ResearchStudyAssociatedPartyToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyProgressStatus {
   const ResearchStudyProgressStatus({
     required this.id,
@@ -185,6 +188,7 @@ class ResearchStudyProgressStatus {
   Map<String, dynamic> toJson() => _$ResearchStudyProgressStatusToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyRecruitment {
   const ResearchStudyRecruitment({
     required this.id,
@@ -211,6 +215,7 @@ class ResearchStudyRecruitment {
   Map<String, dynamic> toJson() => _$ResearchStudyRecruitmentToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyComparisonGroup {
   const ResearchStudyComparisonGroup({
     required this.id,
@@ -241,6 +246,7 @@ class ResearchStudyComparisonGroup {
   Map<String, dynamic> toJson() => _$ResearchStudyComparisonGroupToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyObjective {
   const ResearchStudyObjective({
     required this.id,
@@ -265,6 +271,7 @@ class ResearchStudyObjective {
   Map<String, dynamic> toJson() => _$ResearchStudyObjectiveToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyOutcomeMeasure {
   const ResearchStudyOutcomeMeasure({
     required this.id,
@@ -291,6 +298,7 @@ class ResearchStudyOutcomeMeasure {
   Map<String, dynamic> toJson() => _$ResearchStudyOutcomeMeasureToJson(this);
 }
 
+@JsonSerializable()
 class ResearchSubject {
   const ResearchSubject({
     @Default(R5ResourceType.ResearchSubject) required this.resourceType,
@@ -345,6 +353,7 @@ class ResearchSubject {
   Map<String, dynamic> toJson() => _$ResearchSubjectToJson(this);
 }
 
+@JsonSerializable()
 class ResearchSubjectProgress {
   const ResearchSubjectProgress({
     required this.id,

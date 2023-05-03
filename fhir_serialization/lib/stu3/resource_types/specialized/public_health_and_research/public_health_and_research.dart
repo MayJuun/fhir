@@ -84,6 +84,7 @@ class ResearchStudy {
   Map<String, dynamic> toJson() => _$ResearchStudyToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyArm {
   const ResearchStudyArm({
     required this.name,
@@ -102,6 +103,7 @@ class ResearchStudyArm {
   Map<String, dynamic> toJson() => _$ResearchStudyArmToJson(this);
 }
 
+@JsonSerializable()
 class ResearchSubject {
   const ResearchSubject({
     @Default(Stu3ResourceType.ResearchSubject) required this.resourceType,

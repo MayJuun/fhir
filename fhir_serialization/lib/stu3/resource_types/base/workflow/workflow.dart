@@ -94,6 +94,7 @@ class Appointment {
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentParticipant {
   const AppointmentParticipant({
     required this.type,
@@ -114,6 +115,7 @@ class AppointmentParticipant {
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentResponse {
   const AppointmentResponse({
     @Default(Stu3ResourceType.AppointmentResponse) required this.resourceType,
@@ -168,6 +170,7 @@ class AppointmentResponse {
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
 
+@JsonSerializable()
 class ProcessRequest {
   const ProcessRequest({
     @Default(Stu3ResourceType.ProcessRequest) required this.resourceType,
@@ -242,6 +245,7 @@ class ProcessRequest {
   Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
 }
 
+@JsonSerializable()
 class ProcessRequestItem {
   const ProcessRequestItem({
     required this.sequenceLinkId,
@@ -254,6 +258,7 @@ class ProcessRequestItem {
   Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
 }
 
+@JsonSerializable()
 class ProcessResponse {
   const ProcessResponse({
     @Default(Stu3ResourceType.ProcessResponse) required this.resourceType,
@@ -316,6 +321,7 @@ class ProcessResponse {
   Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
 }
 
+@JsonSerializable()
 class ProcessResponseProcessNote {
   const ProcessResponseProcessNote({
     required this.type,
@@ -330,6 +336,7 @@ class ProcessResponseProcessNote {
   Map<String, dynamic> toJson() => _$ProcessResponseProcessNoteToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroup {
   const RequestGroup({
     @Default(Stu3ResourceType.RequestGroup) required this.resourceType,
@@ -400,6 +407,7 @@ class RequestGroup {
   Map<String, dynamic> toJson() => _$RequestGroupToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupAction {
   const RequestGroupAction({
     required this.label,
@@ -473,6 +481,7 @@ class RequestGroupAction {
   Map<String, dynamic> toJson() => _$RequestGroupActionToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupCondition {
   const RequestGroupCondition({
     required this.kind,
@@ -497,6 +506,7 @@ class RequestGroupCondition {
   Map<String, dynamic> toJson() => _$RequestGroupConditionToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupRelatedAction {
   const RequestGroupRelatedAction({
     required this.actionId,
@@ -517,6 +527,7 @@ class RequestGroupRelatedAction {
   Map<String, dynamic> toJson() => _$RequestGroupRelatedActionToJson(this);
 }
 
+@JsonSerializable()
 class Schedule {
   const Schedule({
     @Default(Stu3ResourceType.Schedule) required this.resourceType,
@@ -567,6 +578,7 @@ class Schedule {
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);
 }
 
+@JsonSerializable()
 class Slot {
   const Slot({
     @Default(Stu3ResourceType.Slot) required this.resourceType,
@@ -628,6 +640,7 @@ class Slot {
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }
 
+@JsonSerializable()
 class Task {
   const Task({
     @Default(Stu3ResourceType.Task) required this.resourceType,
@@ -727,6 +740,7 @@ class Task {
   Map<String, dynamic> toJson() => _$TaskToJson(this);
 }
 
+@JsonSerializable()
 class TaskRequester {
   const TaskRequester({
     required this.agent,
@@ -739,6 +753,7 @@ class TaskRequester {
   Map<String, dynamic> toJson() => _$TaskRequesterToJson(this);
 }
 
+@JsonSerializable()
 class TaskRestriction {
   const TaskRestriction({
     required this.repetitions,
@@ -755,6 +770,7 @@ class TaskRestriction {
   Map<String, dynamic> toJson() => _$TaskRestrictionToJson(this);
 }
 
+@JsonSerializable()
 class TaskInput {
   const TaskInput({
     required this.type,
@@ -905,6 +921,7 @@ class TaskInput {
   Map<String, dynamic> toJson() => _$TaskInputToJson(this);
 }
 
+@JsonSerializable()
 class TaskOutput {
   const TaskOutput({
     required this.type,

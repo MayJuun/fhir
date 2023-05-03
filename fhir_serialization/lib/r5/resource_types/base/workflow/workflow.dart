@@ -114,6 +114,7 @@ class Appointment {
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentParticipant {
   const AppointmentParticipant({
     required this.id,
@@ -142,6 +143,7 @@ class AppointmentParticipant {
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentRecurrenceTemplate {
   const AppointmentRecurrenceTemplate({
     required this.id,
@@ -162,7 +164,7 @@ class AppointmentRecurrenceTemplate {
     required this.excludingDate,
     @JsonKey(name: '_excludingDate') required this.excludingDateElement,
     required this.excludingRecurrenceId,
-    @JsonKey('__excludingRecurrenceId')
+    @JsonKey(name: '__excludingRecurrenceId')
         required this.excludingRecurrenceIdElement,
   });
   final String? id;
@@ -189,6 +191,7 @@ class AppointmentRecurrenceTemplate {
   Map<String, dynamic> toJson() => _$AppointmentRecurrenceTemplateToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentWeeklyTemplate {
   const AppointmentWeeklyTemplate({
     required this.id,
@@ -235,6 +238,7 @@ class AppointmentWeeklyTemplate {
   Map<String, dynamic> toJson() => _$AppointmentWeeklyTemplateToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentMonthlyTemplate {
   const AppointmentMonthlyTemplate({
     required this.id,
@@ -261,6 +265,7 @@ class AppointmentMonthlyTemplate {
   Map<String, dynamic> toJson() => _$AppointmentMonthlyTemplateToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentYearlyTemplate {
   const AppointmentYearlyTemplate({
     required this.id,
@@ -279,6 +284,7 @@ class AppointmentYearlyTemplate {
   Map<String, dynamic> toJson() => _$AppointmentYearlyTemplateToJson(this);
 }
 
+@JsonSerializable()
 class AppointmentResponse {
   const AppointmentResponse({
     @Default(R5ResourceType.AppointmentResponse) required this.resourceType,
@@ -349,6 +355,7 @@ class AppointmentResponse {
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);
 }
 
+@JsonSerializable()
 class Schedule {
   const Schedule({
     @Default(R5ResourceType.Schedule) required this.resourceType,
@@ -403,6 +410,7 @@ class Schedule {
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);
 }
 
+@JsonSerializable()
 class Slot {
   const Slot({
     @Default(R5ResourceType.Slot) required this.resourceType,
@@ -464,6 +472,7 @@ class Slot {
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }
 
+@JsonSerializable()
 class Task {
   const Task({
     @Default(R5ResourceType.Task) required this.resourceType,
@@ -573,6 +582,7 @@ class Task {
   Map<String, dynamic> toJson() => _$TaskToJson(this);
 }
 
+@JsonSerializable()
 class TaskRestriction {
   const TaskRestriction({
     required this.id,
@@ -595,6 +605,7 @@ class TaskRestriction {
   Map<String, dynamic> toJson() => _$TaskRestrictionToJson(this);
 }
 
+@JsonSerializable()
 class TaskInput {
   const TaskInput({
     required this.id,
@@ -759,6 +770,7 @@ class TaskInput {
   Map<String, dynamic> toJson() => _$TaskInputToJson(this);
 }
 
+@JsonSerializable()
 class TaskOutput {
   const TaskOutput({
     required this.id,
@@ -923,6 +935,7 @@ class TaskOutput {
   Map<String, dynamic> toJson() => _$TaskOutputToJson(this);
 }
 
+@JsonSerializable()
 class Transport {
   const Transport({
     @Default(R5ResourceType.Transport) required this.resourceType,
@@ -1035,6 +1048,7 @@ class Transport {
   Map<String, dynamic> toJson() => _$TransportToJson(this);
 }
 
+@JsonSerializable()
 class TransportRestriction {
   const TransportRestriction({
     required this.id,
@@ -1057,6 +1071,7 @@ class TransportRestriction {
   Map<String, dynamic> toJson() => _$TransportRestrictionToJson(this);
 }
 
+@JsonSerializable()
 class TransportInput {
   const TransportInput({
     required this.id,
@@ -1221,6 +1236,7 @@ class TransportInput {
   Map<String, dynamic> toJson() => _$TransportInputToJson(this);
 }
 
+@JsonSerializable()
 class TransportOutput {
   const TransportOutput({
     required this.id,
@@ -1385,6 +1401,7 @@ class TransportOutput {
   Map<String, dynamic> toJson() => _$TransportOutputToJson(this);
 }
 
+@JsonSerializable()
 class VerificationResult {
   const VerificationResult({
     @Default(R5ResourceType.VerificationResult) required this.resourceType,
@@ -1453,6 +1470,7 @@ class VerificationResult {
   Map<String, dynamic> toJson() => _$VerificationResultToJson(this);
 }
 
+@JsonSerializable()
 class VerificationResultPrimarySource {
   const VerificationResultPrimarySource({
     required this.id,
@@ -1484,6 +1502,7 @@ class VerificationResultPrimarySource {
       _$VerificationResultPrimarySourceToJson(this);
 }
 
+@JsonSerializable()
 class VerificationResultAttestation {
   const VerificationResultAttestation({
     required this.id,
@@ -1495,10 +1514,10 @@ class VerificationResultAttestation {
     required this.date,
     @JsonKey(name: '_date') required this.dateElement,
     required this.sourceIdentityCertificate,
-    @JsonKey('__sourceIdentityCertificate')
+    @JsonKey(name: '__sourceIdentityCertificate')
         required this.sourceIdentityCertificateElement,
     required this.proxyIdentityCertificate,
-    @JsonKey('__proxyIdentityCertificate')
+    @JsonKey(name: '__proxyIdentityCertificate')
         required this.proxyIdentityCertificateElement,
     required this.proxySignature,
     required this.sourceSignature,
@@ -1524,6 +1543,7 @@ class VerificationResultAttestation {
   Map<String, dynamic> toJson() => _$VerificationResultAttestationToJson(this);
 }
 
+@JsonSerializable()
 class VerificationResultValidator {
   const VerificationResultValidator({
     required this.id,

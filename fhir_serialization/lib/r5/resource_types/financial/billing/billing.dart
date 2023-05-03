@@ -101,6 +101,7 @@ class Claim {
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
 }
 
+@JsonSerializable()
 class ClaimRelated {
   const ClaimRelated({
     required this.id,
@@ -121,6 +122,7 @@ class ClaimRelated {
   Map<String, dynamic> toJson() => _$ClaimRelatedToJson(this);
 }
 
+@JsonSerializable()
 class ClaimPayee {
   const ClaimPayee({
     required this.id,
@@ -139,6 +141,7 @@ class ClaimPayee {
   Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
 }
 
+@JsonSerializable()
 class ClaimCareTeam {
   const ClaimCareTeam({
     required this.id,
@@ -167,6 +170,7 @@ class ClaimCareTeam {
   Map<String, dynamic> toJson() => _$ClaimCareTeamToJson(this);
 }
 
+@JsonSerializable()
 class ClaimSupportingInfo {
   const ClaimSupportingInfo({
     required this.id,
@@ -213,6 +217,7 @@ class ClaimSupportingInfo {
   Map<String, dynamic> toJson() => _$ClaimSupportingInfoToJson(this);
 }
 
+@JsonSerializable()
 class ClaimDiagnosis {
   const ClaimDiagnosis({
     required this.id,
@@ -239,6 +244,7 @@ class ClaimDiagnosis {
   Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class ClaimProcedure {
   const ClaimProcedure({
     required this.id,
@@ -269,6 +275,7 @@ class ClaimProcedure {
   Map<String, dynamic> toJson() => _$ClaimProcedureToJson(this);
 }
 
+@JsonSerializable()
 class ClaimInsurance {
   const ClaimInsurance({
     required this.id,
@@ -306,6 +313,7 @@ class ClaimInsurance {
   Map<String, dynamic> toJson() => _$ClaimInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class ClaimAccident {
   const ClaimAccident({
     required this.id,
@@ -330,6 +338,7 @@ class ClaimAccident {
   Map<String, dynamic> toJson() => _$ClaimAccidentToJson(this);
 }
 
+@JsonSerializable()
 class ClaimItem {
   const ClaimItem({
     required this.id,
@@ -340,11 +349,14 @@ class ClaimItem {
     required this.careTeamSequence,
     @JsonKey(name: '_careTeamSequence') required this.careTeamSequenceElement,
     required this.diagnosisSequence,
-    @JsonKey('__diagnosisSequence') required this.diagnosisSequenceElement,
+    @JsonKey(name: '__diagnosisSequence')
+        required this.diagnosisSequenceElement,
     required this.procedureSequence,
-    @JsonKey('__procedureSequence') required this.procedureSequenceElement,
+    @JsonKey(name: '__procedureSequence')
+        required this.procedureSequenceElement,
     required this.informationSequence,
-    @JsonKey('__informationSequence') required this.informationSequenceElement,
+    @JsonKey(name: '__informationSequence')
+        required this.informationSequenceElement,
     required this.revenue,
     required this.category,
     required this.productOrService,
@@ -413,6 +425,7 @@ class ClaimItem {
   Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimBodySite {
   const ClaimBodySite({
     required this.id,
@@ -431,6 +444,7 @@ class ClaimBodySite {
   Map<String, dynamic> toJson() => _$ClaimBodySiteToJson(this);
 }
 
+@JsonSerializable()
 class ClaimDetail {
   const ClaimDetail({
     required this.id,
@@ -479,6 +493,7 @@ class ClaimDetail {
   Map<String, dynamic> toJson() => _$ClaimDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimSubDetail {
   const ClaimSubDetail({
     required this.id,
@@ -525,6 +540,7 @@ class ClaimSubDetail {
   Map<String, dynamic> toJson() => _$ClaimSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponse {
   const ClaimResponse({
     @Default(R5ResourceType.ClaimResponse) required this.resourceType,
@@ -627,6 +643,7 @@ class ClaimResponse {
   Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseItem {
   const ClaimResponseItem({
     required this.id,
@@ -655,6 +672,7 @@ class ClaimResponseItem {
   Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseAdjudication {
   const ClaimResponseAdjudication({
     required this.id,
@@ -679,6 +697,7 @@ class ClaimResponseAdjudication {
   Map<String, dynamic> toJson() => _$ClaimResponseAdjudicationToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseDetail {
   const ClaimResponseDetail({
     required this.id,
@@ -707,6 +726,7 @@ class ClaimResponseDetail {
   Map<String, dynamic> toJson() => _$ClaimResponseDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseSubDetail {
   const ClaimResponseSubDetail({
     required this.id,
@@ -733,6 +753,7 @@ class ClaimResponseSubDetail {
   Map<String, dynamic> toJson() => _$ClaimResponseSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseAddItem {
   const ClaimResponseAddItem({
     required this.id,
@@ -743,7 +764,8 @@ class ClaimResponseAddItem {
     required this.detailSequence,
     @JsonKey(name: '_detailSequence') required this.detailSequenceElement,
     required this.subdetailSequence,
-    @JsonKey('__subdetailSequence') required this.subdetailSequenceElement,
+    @JsonKey(name: '__subdetailSequence')
+        required this.subdetailSequenceElement,
     required this.provider,
     required this.revenue,
     required this.productOrService,
@@ -808,6 +830,7 @@ class ClaimResponseAddItem {
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseBodySite {
   const ClaimResponseBodySite({
     required this.id,
@@ -826,6 +849,7 @@ class ClaimResponseBodySite {
   Map<String, dynamic> toJson() => _$ClaimResponseBodySiteToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseDetail1 {
   const ClaimResponseDetail1({
     required this.id,
@@ -870,6 +894,7 @@ class ClaimResponseDetail1 {
   Map<String, dynamic> toJson() => _$ClaimResponseDetail1ToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseSubDetail1 {
   const ClaimResponseSubDetail1({
     required this.id,
@@ -912,6 +937,7 @@ class ClaimResponseSubDetail1 {
   Map<String, dynamic> toJson() => _$ClaimResponseSubDetail1ToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseTotal {
   const ClaimResponseTotal({
     required this.id,
@@ -930,6 +956,7 @@ class ClaimResponseTotal {
   Map<String, dynamic> toJson() => _$ClaimResponseTotalToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponsePayment {
   const ClaimResponsePayment({
     required this.id,
@@ -958,6 +985,7 @@ class ClaimResponsePayment {
   Map<String, dynamic> toJson() => _$ClaimResponsePaymentToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseProcessNote {
   const ClaimResponseProcessNote({
     required this.id,
@@ -986,6 +1014,7 @@ class ClaimResponseProcessNote {
   Map<String, dynamic> toJson() => _$ClaimResponseProcessNoteToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseInsurance {
   const ClaimResponseInsurance({
     required this.id,
@@ -1017,6 +1046,7 @@ class ClaimResponseInsurance {
   Map<String, dynamic> toJson() => _$ClaimResponseInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseError {
   const ClaimResponseError({
     required this.id,
@@ -1045,6 +1075,7 @@ class ClaimResponseError {
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
 }
 
+@JsonSerializable()
 class Invoice {
   const Invoice({
     @Default(R5ResourceType.Invoice) required this.resourceType,
@@ -1125,6 +1156,7 @@ class Invoice {
   Map<String, dynamic> toJson() => _$InvoiceToJson(this);
 }
 
+@JsonSerializable()
 class InvoiceParticipant {
   const InvoiceParticipant({
     required this.id,
@@ -1143,6 +1175,7 @@ class InvoiceParticipant {
   Map<String, dynamic> toJson() => _$InvoiceParticipantToJson(this);
 }
 
+@JsonSerializable()
 class InvoiceLineItem {
   const InvoiceLineItem({
     required this.id,

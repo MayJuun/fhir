@@ -1,5 +1,3 @@
-// ignore_for_file: flutter_style_todos
-
 import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
@@ -63,6 +61,7 @@ class AdministrableProductDefinition {
   Map<String, dynamic> toJson() => _$AdministrableProductDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class AdministrableProductDefinitionProperty {
   const AdministrableProductDefinitionProperty({
     required this.id,
@@ -98,6 +97,7 @@ class AdministrableProductDefinitionProperty {
       _$AdministrableProductDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class AdministrableProductDefinitionRouteOfAdministration {
   const AdministrableProductDefinitionRouteOfAdministration({
     required this.id,
@@ -129,6 +129,7 @@ class AdministrableProductDefinitionRouteOfAdministration {
       _$AdministrableProductDefinitionRouteOfAdministrationToJson(this);
 }
 
+@JsonSerializable()
 class AdministrableProductDefinitionTargetSpecies {
   const AdministrableProductDefinitionTargetSpecies({
     required this.id,
@@ -150,6 +151,7 @@ class AdministrableProductDefinitionTargetSpecies {
       _$AdministrableProductDefinitionTargetSpeciesToJson(this);
 }
 
+@JsonSerializable()
 class AdministrableProductDefinitionWithdrawalPeriod {
   const AdministrableProductDefinitionWithdrawalPeriod({
     required this.id,
@@ -158,7 +160,7 @@ class AdministrableProductDefinitionWithdrawalPeriod {
     required this.tissue,
     required this.value,
     required this.supportingInformation,
-    @JsonKey('__supportingInformation')
+    @JsonKey(name: '__supportingInformation')
         required this.supportingInformationElement,
   });
 
@@ -177,6 +179,7 @@ class AdministrableProductDefinitionWithdrawalPeriod {
       _$AdministrableProductDefinitionWithdrawalPeriodToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinition {
   const ClinicalUseDefinition({
     @Default(R5ResourceType.ClinicalUseDefinition) required this.resourceType,
@@ -233,6 +236,7 @@ class ClinicalUseDefinition {
   Map<String, dynamic> toJson() => _$ClinicalUseDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionContraindication {
   const ClinicalUseDefinitionContraindication({
     required this.id,
@@ -262,6 +266,7 @@ class ClinicalUseDefinitionContraindication {
       _$ClinicalUseDefinitionContraindicationToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionOtherTherapy {
   const ClinicalUseDefinitionOtherTherapy({
     required this.id,
@@ -283,6 +288,7 @@ class ClinicalUseDefinitionOtherTherapy {
       _$ClinicalUseDefinitionOtherTherapyToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionIndication {
   const ClinicalUseDefinitionIndication({
     required this.id,
@@ -318,6 +324,7 @@ class ClinicalUseDefinitionIndication {
       _$ClinicalUseDefinitionIndicationToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionInteraction {
   const ClinicalUseDefinitionInteraction({
     required this.id,
@@ -344,6 +351,7 @@ class ClinicalUseDefinitionInteraction {
       _$ClinicalUseDefinitionInteractionToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionInteractant {
   const ClinicalUseDefinitionInteractant({
     required this.id,
@@ -364,6 +372,7 @@ class ClinicalUseDefinitionInteractant {
       _$ClinicalUseDefinitionInteractantToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionUndesirableEffect {
   const ClinicalUseDefinitionUndesirableEffect({
     required this.id,
@@ -387,6 +396,7 @@ class ClinicalUseDefinitionUndesirableEffect {
       _$ClinicalUseDefinitionUndesirableEffectToJson(this);
 }
 
+@JsonSerializable()
 class ClinicalUseDefinitionWarning {
   const ClinicalUseDefinitionWarning({
     required this.id,
@@ -407,6 +417,7 @@ class ClinicalUseDefinitionWarning {
   Map<String, dynamic> toJson() => _$ClinicalUseDefinitionWarningToJson(this);
 }
 
+@JsonSerializable()
 class Ingredient {
   const Ingredient({
     @Default(R5ResourceType.Ingredient) required this.resourceType,
@@ -460,6 +471,7 @@ class Ingredient {
   Map<String, dynamic> toJson() => _$IngredientToJson(this);
 }
 
+@JsonSerializable()
 class IngredientManufacturer {
   const IngredientManufacturer({
     required this.id,
@@ -480,6 +492,7 @@ class IngredientManufacturer {
   Map<String, dynamic> toJson() => _$IngredientManufacturerToJson(this);
 }
 
+@JsonSerializable()
 class IngredientSubstance {
   const IngredientSubstance({
     required this.id,
@@ -498,6 +511,7 @@ class IngredientSubstance {
   Map<String, dynamic> toJson() => _$IngredientSubstanceToJson(this);
 }
 
+@JsonSerializable()
 class IngredientStrength {
   const IngredientStrength({
     required this.id,
@@ -546,6 +560,7 @@ class IngredientStrength {
   Map<String, dynamic> toJson() => _$IngredientStrengthToJson(this);
 }
 
+@JsonSerializable()
 class IngredientReferenceStrength {
   const IngredientReferenceStrength({
     required this.id,
@@ -574,6 +589,7 @@ class IngredientReferenceStrength {
   Map<String, dynamic> toJson() => _$IngredientReferenceStrengthToJson(this);
 }
 
+@JsonSerializable()
 class ManufacturedItemDefinition {
   const ManufacturedItemDefinition({
     @Default(R5ResourceType.ManufacturedItemDefinition)
@@ -629,6 +645,7 @@ class ManufacturedItemDefinition {
   Map<String, dynamic> toJson() => _$ManufacturedItemDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ManufacturedItemDefinitionProperty {
   const ManufacturedItemDefinitionProperty({
     required this.id,
@@ -662,6 +679,7 @@ class ManufacturedItemDefinitionProperty {
       _$ManufacturedItemDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class ManufacturedItemDefinitionComponent {
   const ManufacturedItemDefinitionComponent({
     this.id,
@@ -718,6 +736,7 @@ class ManufacturedItemDefinitionConstituent {
       _$ManufacturedItemDefinitionConstituentToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinition {
   const MedicinalProductDefinition({
     @Default(R5ResourceType.MedicinalProductDefinition)
@@ -815,6 +834,7 @@ class MedicinalProductDefinition {
   Map<String, dynamic> toJson() => _$MedicinalProductDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionContact {
   const MedicinalProductDefinitionContact({
     required this.id,
@@ -836,6 +856,7 @@ class MedicinalProductDefinitionContact {
       _$MedicinalProductDefinitionContactToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionName {
   const MedicinalProductDefinitionName({
     required this.id,
@@ -860,6 +881,7 @@ class MedicinalProductDefinitionName {
   Map<String, dynamic> toJson() => _$MedicinalProductDefinitionNameToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionPart {
   const MedicinalProductDefinitionPart({
     required this.id,
@@ -880,6 +902,7 @@ class MedicinalProductDefinitionPart {
   Map<String, dynamic> toJson() => _$MedicinalProductDefinitionPartToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionUsage {
   const MedicinalProductDefinitionUsage({
     required this.id,
@@ -901,6 +924,7 @@ class MedicinalProductDefinitionUsage {
       _$MedicinalProductDefinitionUsageToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionCrossReference {
   const MedicinalProductDefinitionCrossReference({
     required this.id,
@@ -922,6 +946,7 @@ class MedicinalProductDefinitionCrossReference {
       _$MedicinalProductDefinitionCrossReferenceToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionOperation {
   const MedicinalProductDefinitionOperation({
     required this.id,
@@ -947,6 +972,7 @@ class MedicinalProductDefinitionOperation {
       _$MedicinalProductDefinitionOperationToJson(this);
 }
 
+@JsonSerializable()
 class MedicinalProductDefinitionCharacteristic {
   const MedicinalProductDefinitionCharacteristic({
     required this.id,
@@ -988,6 +1014,7 @@ class MedicinalProductDefinitionCharacteristic {
       _$MedicinalProductDefinitionCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class PackagedProductDefinition {
   const PackagedProductDefinition({
     @Default(R5ResourceType.PackagedProductDefinition)
@@ -1058,6 +1085,7 @@ class PackagedProductDefinition {
   Map<String, dynamic> toJson() => _$PackagedProductDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class PackagedProductDefinitionLegalStatusOfSupply {
   const PackagedProductDefinitionLegalStatusOfSupply({
     required this.id,
@@ -1079,6 +1107,7 @@ class PackagedProductDefinitionLegalStatusOfSupply {
       _$PackagedProductDefinitionLegalStatusOfSupplyToJson(this);
 }
 
+@JsonSerializable()
 class PackagedProductDefinitionPackaging {
   const PackagedProductDefinitionPackaging({
     required this.id,
@@ -1122,6 +1151,7 @@ class PackagedProductDefinitionPackaging {
       _$PackagedProductDefinitionPackagingToJson(this);
 }
 
+@JsonSerializable()
 class PackagedProductDefinitionProperty {
   const PackagedProductDefinitionProperty({
     required this.id,
@@ -1155,6 +1185,7 @@ class PackagedProductDefinitionProperty {
       _$PackagedProductDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class PackagedProductDefinitionContainedItem {
   const PackagedProductDefinitionContainedItem({
     required this.id,
@@ -1176,6 +1207,7 @@ class PackagedProductDefinitionContainedItem {
       _$PackagedProductDefinitionContainedItemToJson(this);
 }
 
+@JsonSerializable()
 class RegulatedAuthorization {
   const RegulatedAuthorization({
     @Default(R5ResourceType.RegulatedAuthorization) required this.resourceType,
@@ -1240,6 +1272,7 @@ class RegulatedAuthorization {
   Map<String, dynamic> toJson() => _$RegulatedAuthorizationToJson(this);
 }
 
+@JsonSerializable()
 class RegulatedAuthorizationCase {
   const RegulatedAuthorizationCase({
     required this.id,
@@ -1268,6 +1301,7 @@ class RegulatedAuthorizationCase {
   Map<String, dynamic> toJson() => _$RegulatedAuthorizationCaseToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinition {
   const SubstanceDefinition({
     @Default(R5ResourceType.SubstanceDefinition) required this.resourceType,
@@ -1350,6 +1384,7 @@ class SubstanceDefinition {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionMoiety {
   const SubstanceDefinitionMoiety({
     required this.id,
@@ -1388,6 +1423,7 @@ class SubstanceDefinitionMoiety {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionMoietyToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionCharacterization {
   const SubstanceDefinitionCharacterization({
     required this.id,
@@ -1415,6 +1451,7 @@ class SubstanceDefinitionCharacterization {
       _$SubstanceDefinitionCharacterizationToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionProperty {
   const SubstanceDefinitionProperty({
     required this.id,
@@ -1445,6 +1482,7 @@ class SubstanceDefinitionProperty {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionMolecularWeight {
   const SubstanceDefinitionMolecularWeight({
     required this.id,
@@ -1468,6 +1506,7 @@ class SubstanceDefinitionMolecularWeight {
       _$SubstanceDefinitionMolecularWeightToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionStructure {
   const SubstanceDefinitionStructure({
     required this.id,
@@ -1478,7 +1517,7 @@ class SubstanceDefinitionStructure {
     required this.molecularFormula,
     @JsonKey(name: '_molecularFormula') required this.molecularFormulaElement,
     required this.molecularFormulaByMoiety,
-    @JsonKey('__molecularFormulaByMoiety')
+    @JsonKey(name: '__molecularFormulaByMoiety')
         required this.molecularFormulaByMoietyElement,
     required this.molecularWeight,
     required this.technique,
@@ -1504,6 +1543,7 @@ class SubstanceDefinitionStructure {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionStructureToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionRepresentation {
   const SubstanceDefinitionRepresentation({
     required this.id,
@@ -1531,6 +1571,7 @@ class SubstanceDefinitionRepresentation {
       _$SubstanceDefinitionRepresentationToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionCode {
   const SubstanceDefinitionCode({
     required this.id,
@@ -1557,6 +1598,7 @@ class SubstanceDefinitionCode {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionCodeToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionName {
   const SubstanceDefinitionName({
     required this.id,
@@ -1597,6 +1639,7 @@ class SubstanceDefinitionName {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionNameToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionOfficial {
   const SubstanceDefinitionOfficial({
     required this.id,
@@ -1619,6 +1662,7 @@ class SubstanceDefinitionOfficial {
   Map<String, dynamic> toJson() => _$SubstanceDefinitionOfficialToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionRelationship {
   const SubstanceDefinitionRelationship({
     required this.id,
@@ -1658,6 +1702,7 @@ class SubstanceDefinitionRelationship {
       _$SubstanceDefinitionRelationshipToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceDefinitionSourceMaterial {
   const SubstanceDefinitionSourceMaterial({
     required this.id,
@@ -1685,6 +1730,7 @@ class SubstanceDefinitionSourceMaterial {
       _$SubstanceDefinitionSourceMaterialToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceNucleicAcid {
   const SubstanceNucleicAcid({
     @Default(R5ResourceType.SubstanceNucleicAcid) required this.resourceType,
@@ -1730,6 +1776,7 @@ class SubstanceNucleicAcid {
   Map<String, dynamic> toJson() => _$SubstanceNucleicAcidToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceNucleicAcidSubunit {
   const SubstanceNucleicAcidSubunit({
     required this.id,
@@ -1766,6 +1813,7 @@ class SubstanceNucleicAcidSubunit {
   Map<String, dynamic> toJson() => _$SubstanceNucleicAcidSubunitToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceNucleicAcidLinkage {
   const SubstanceNucleicAcidLinkage({
     required this.id,
@@ -1794,6 +1842,7 @@ class SubstanceNucleicAcidLinkage {
   Map<String, dynamic> toJson() => _$SubstanceNucleicAcidLinkageToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceNucleicAcidSugar {
   const SubstanceNucleicAcidSugar({
     required this.id,
@@ -1818,6 +1867,7 @@ class SubstanceNucleicAcidSugar {
   Map<String, dynamic> toJson() => _$SubstanceNucleicAcidSugarToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymer {
   const SubstancePolymer({
     @Default(R5ResourceType.SubstancePolymer) required this.resourceType,
@@ -1864,6 +1914,7 @@ class SubstancePolymer {
   Map<String, dynamic> toJson() => _$SubstancePolymerToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerMonomerSet {
   const SubstancePolymerMonomerSet({
     required this.id,
@@ -1882,6 +1933,7 @@ class SubstancePolymerMonomerSet {
   Map<String, dynamic> toJson() => _$SubstancePolymerMonomerSetToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerStartingMaterial {
   const SubstancePolymerStartingMaterial({
     required this.id,
@@ -1908,13 +1960,14 @@ class SubstancePolymerStartingMaterial {
       _$SubstancePolymerStartingMaterialToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerRepeat {
   const SubstancePolymerRepeat({
     required this.id,
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     required this.averageMolecularFormula,
-    @JsonKey('__averageMolecularFormula')
+    @JsonKey(name: '__averageMolecularFormula')
         required this.averageMolecularFormulaElement,
     required this.repeatUnitAmountType,
     required this.repeatUnit,
@@ -1932,6 +1985,7 @@ class SubstancePolymerRepeat {
   Map<String, dynamic> toJson() => _$SubstancePolymerRepeatToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerRepeatUnit {
   const SubstancePolymerRepeatUnit({
     required this.id,
@@ -1961,6 +2015,7 @@ class SubstancePolymerRepeatUnit {
   Map<String, dynamic> toJson() => _$SubstancePolymerRepeatUnitToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerDegreeOfPolymerisation {
   const SubstancePolymerDegreeOfPolymerisation({
     required this.id,
@@ -1992,6 +2047,7 @@ class SubstancePolymerDegreeOfPolymerisation {
       _$SubstancePolymerDegreeOfPolymerisationToJson(this);
 }
 
+@JsonSerializable()
 class SubstancePolymerStructuralRepresentation {
   const SubstancePolymerStructuralRepresentation({
     required this.id,
@@ -2019,6 +2075,7 @@ class SubstancePolymerStructuralRepresentation {
       _$SubstancePolymerStructuralRepresentationToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceProtein {
   const SubstanceProtein({
     @Default(R5ResourceType.SubstanceProtein) required this.resourceType,
@@ -2061,6 +2118,7 @@ class SubstanceProtein {
   Map<String, dynamic> toJson() => _$SubstanceProteinToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceProteinSubunit {
   const SubstanceProteinSubunit({
     required this.id,
@@ -2075,11 +2133,11 @@ class SubstanceProteinSubunit {
     required this.sequenceAttachment,
     required this.nTerminalModificationId,
     required this.nTerminalModification,
-    @JsonKey('__nTerminalModification')
+    @JsonKey(name: '__nTerminalModification')
         required this.nTerminalModificationElement,
     required this.cTerminalModificationId,
     required this.cTerminalModification,
-    @JsonKey('__cTerminalModification')
+    @JsonKey(name: '__cTerminalModification')
         required this.cTerminalModificationElement,
   });
   final String? id;
@@ -2105,6 +2163,7 @@ class SubstanceProteinSubunit {
   Map<String, dynamic> toJson() => _$SubstanceProteinSubunitToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceReferenceInformation {
   const SubstanceReferenceInformation({
     @Default(R5ResourceType.SubstanceReferenceInformation)
@@ -2147,6 +2206,7 @@ class SubstanceReferenceInformation {
   Map<String, dynamic> toJson() => _$SubstanceReferenceInformationToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceReferenceInformationGene {
   const SubstanceReferenceInformationGene({
     required this.id,
@@ -2170,6 +2230,7 @@ class SubstanceReferenceInformationGene {
       _$SubstanceReferenceInformationGeneToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceReferenceInformationGeneElement {
   const SubstanceReferenceInformationGeneElement({
     required this.id,
@@ -2193,6 +2254,7 @@ class SubstanceReferenceInformationGeneElement {
       _$SubstanceReferenceInformationGeneElementToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceReferenceInformationTarget {
   const SubstanceReferenceInformationTarget({
     required this.id,
@@ -2232,6 +2294,7 @@ class SubstanceReferenceInformationTarget {
       _$SubstanceReferenceInformationTargetToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterial {
   const SubstanceSourceMaterial({
     @Default(R5ResourceType.SubstanceSourceMaterial) required this.resourceType,
@@ -2253,10 +2316,11 @@ class SubstanceSourceMaterial {
     @JsonKey(name: '_organismName') required this.organismNameElement,
     required this.parentSubstanceId,
     required this.parentSubstanceName,
-    @JsonKey('__parentSubstanceName') required this.parentSubstanceNameElement,
+    @JsonKey(name: '__parentSubstanceName')
+        required this.parentSubstanceNameElement,
     required this.countryOfOrigin,
     required this.geographicalLocation,
-    @JsonKey('__geographicalLocation')
+    @JsonKey(name: '__geographicalLocation')
         required this.geographicalLocationElement,
     required this.developmentStage,
     required this.fractionDescription,
@@ -2297,6 +2361,7 @@ class SubstanceSourceMaterial {
   Map<String, dynamic> toJson() => _$SubstanceSourceMaterialToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialFractionDescription {
   const SubstanceSourceMaterialFractionDescription({
     required this.id,
@@ -2320,6 +2385,7 @@ class SubstanceSourceMaterialFractionDescription {
       _$SubstanceSourceMaterialFractionDescriptionToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialOrganism {
   const SubstanceSourceMaterialOrganism({
     required this.id,
@@ -2330,7 +2396,7 @@ class SubstanceSourceMaterialOrganism {
     required this.species,
     required this.intraspecificType,
     required this.intraspecificDescription,
-    @JsonKey('__intraspecificDescription')
+    @JsonKey(name: '__intraspecificDescription')
         required this.intraspecificDescriptionElement,
     required this.author,
     required this.hybrid,
@@ -2355,6 +2421,7 @@ class SubstanceSourceMaterialOrganism {
       _$SubstanceSourceMaterialOrganismToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialAuthor {
   const SubstanceSourceMaterialAuthor({
     required this.id,
@@ -2375,6 +2442,7 @@ class SubstanceSourceMaterialAuthor {
   Map<String, dynamic> toJson() => _$SubstanceSourceMaterialAuthorToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialHybrid {
   const SubstanceSourceMaterialHybrid({
     required this.id,
@@ -2384,13 +2452,13 @@ class SubstanceSourceMaterialHybrid {
     @JsonKey(name: '_maternalOrganismId')
         required this.maternalOrganismIdElement,
     required this.maternalOrganismName,
-    @JsonKey('__maternalOrganismName')
+    @JsonKey(name: '__maternalOrganismName')
         required this.maternalOrganismNameElement,
     required this.paternalOrganismId,
     @JsonKey(name: '_paternalOrganismId')
         required this.paternalOrganismIdElement,
     required this.paternalOrganismName,
-    @JsonKey('__paternalOrganismName')
+    @JsonKey(name: '__paternalOrganismName')
         required this.paternalOrganismNameElement,
     required this.hybridType,
   });
@@ -2413,6 +2481,7 @@ class SubstanceSourceMaterialHybrid {
   Map<String, dynamic> toJson() => _$SubstanceSourceMaterialHybridToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialOrganismGeneral {
   const SubstanceSourceMaterialOrganismGeneral({
     required this.id,
@@ -2438,6 +2507,7 @@ class SubstanceSourceMaterialOrganismGeneral {
       _$SubstanceSourceMaterialOrganismGeneralToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceSourceMaterialPartDescription {
   const SubstanceSourceMaterialPartDescription({
     required this.id,

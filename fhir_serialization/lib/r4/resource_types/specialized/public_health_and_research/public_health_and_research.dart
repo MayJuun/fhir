@@ -12,20 +12,20 @@ class ResearchStudy {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.protocol,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.primaryPurposeType,
     required this.phase,
     required this.category,
@@ -36,7 +36,7 @@ class ResearchStudy {
     required this.keyword,
     required this.location,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.enrollment,
     required this.period,
     required this.sponsor,
@@ -96,6 +96,7 @@ class ResearchStudy {
   Map<String, dynamic> toJson() => _$ResearchStudyToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyArm {
   const ResearchStudyArm({
     required this.id,
@@ -120,6 +121,7 @@ class ResearchStudyArm {
   Map<String, dynamic> toJson() => _$ResearchStudyArmToJson(this);
 }
 
+@JsonSerializable()
 class ResearchStudyObjective {
   const ResearchStudyObjective({
     required this.id,
@@ -140,29 +142,30 @@ class ResearchStudyObjective {
   Map<String, dynamic> toJson() => _$ResearchStudyObjectiveToJson(this);
 }
 
+@JsonSerializable()
 class ResearchSubject {
   const ResearchSubject({
     @Default(R4ResourceType.ResearchSubject) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.period,
     required this.study,
     required this.individual,
     required this.assignedArm,
-    @JsonKey('__assignedArm') required this.assignedArmElement,
+    @JsonKey(name: '__assignedArm') required this.assignedArmElement,
     required this.actualArm,
-    @JsonKey('__actualArm') required this.actualArmElement,
+    @JsonKey(name: '__actualArm') required this.actualArmElement,
     required this.consent,
   });
   final R4ResourceType resourceType;

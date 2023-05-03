@@ -25,7 +25,7 @@ class ActivityDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -198,6 +198,7 @@ class ActivityDefinition {
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionParticipant {
   const ActivityDefinitionParticipant({
     required this.id,
@@ -224,6 +225,7 @@ class ActivityDefinitionParticipant {
   Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionDynamicValue {
   const ActivityDefinitionDynamicValue({
     required this.id,
@@ -244,6 +246,7 @@ class ActivityDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class ActorDefinition {
   const ActorDefinition({
     @Default(R5ResourceType.ActorDefinition) required this.resourceType,
@@ -263,7 +266,7 @@ class ActorDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -354,6 +357,7 @@ class ActorDefinition {
   Map<String, dynamic> toJson() => _$ActorDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinition {
   const ConditionDefinition({
     @Default(R5ResourceType.ConditionDefinition) required this.resourceType,
@@ -373,7 +377,7 @@ class ConditionDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -510,6 +514,7 @@ class ConditionDefinition {
   Map<String, dynamic> toJson() => _$ConditionDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinitionObservation {
   const ConditionDefinitionObservation({
     required this.id,
@@ -528,6 +533,7 @@ class ConditionDefinitionObservation {
   Map<String, dynamic> toJson() => _$ConditionDefinitionObservationToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinitionMedication {
   const ConditionDefinitionMedication({
     required this.id,
@@ -546,6 +552,7 @@ class ConditionDefinitionMedication {
   Map<String, dynamic> toJson() => _$ConditionDefinitionMedicationToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinitionPrecondition {
   const ConditionDefinitionPrecondition({
     required this.id,
@@ -571,6 +578,7 @@ class ConditionDefinitionPrecondition {
       _$ConditionDefinitionPreconditionToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinitionQuestionnaire {
   const ConditionDefinitionQuestionnaire({
     required this.id,
@@ -593,6 +601,7 @@ class ConditionDefinitionQuestionnaire {
       _$ConditionDefinitionQuestionnaireToJson(this);
 }
 
+@JsonSerializable()
 class ConditionDefinitionPlan {
   const ConditionDefinitionPlan({
     required this.id,
@@ -611,6 +620,7 @@ class ConditionDefinitionPlan {
   Map<String, dynamic> toJson() => _$ConditionDefinitionPlanToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinition {
   const DeviceDefinition({
     @Default(R5ResourceType.DeviceDefinition) required this.resourceType,
@@ -651,7 +661,7 @@ class DeviceDefinition {
     required this.parentDevice,
     required this.material,
     required this.productionIdentifierInUDI,
-    @JsonKey('__productionIdentifierInUDI')
+    @JsonKey(name: '__productionIdentifierInUDI')
         required this.productionIdentifierInUDIElement,
     required this.guideline,
     required this.correctiveAction,
@@ -705,6 +715,7 @@ class DeviceDefinition {
   Map<String, dynamic> toJson() => _$DeviceDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionUdiDeviceIdentifier {
   const DeviceDefinitionUdiDeviceIdentifier({
     required this.id,
@@ -736,6 +747,7 @@ class DeviceDefinitionUdiDeviceIdentifier {
       _$DeviceDefinitionUdiDeviceIdentifierToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionMarketDistribution {
   const DeviceDefinitionMarketDistribution({
     required this.id,
@@ -759,6 +771,7 @@ class DeviceDefinitionMarketDistribution {
       _$DeviceDefinitionMarketDistributionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionRegulatoryIdentifier {
   const DeviceDefinitionRegulatoryIdentifier({
     required this.id,
@@ -792,6 +805,7 @@ class DeviceDefinitionRegulatoryIdentifier {
       _$DeviceDefinitionRegulatoryIdentifierToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionDeviceName {
   const DeviceDefinitionDeviceName({
     required this.id,
@@ -814,6 +828,7 @@ class DeviceDefinitionDeviceName {
   Map<String, dynamic> toJson() => _$DeviceDefinitionDeviceNameToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionClassification {
   const DeviceDefinitionClassification({
     required this.id,
@@ -832,6 +847,7 @@ class DeviceDefinitionClassification {
   Map<String, dynamic> toJson() => _$DeviceDefinitionClassificationToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionHasPart {
   const DeviceDefinitionHasPart({
     required this.id,
@@ -852,6 +868,7 @@ class DeviceDefinitionHasPart {
   Map<String, dynamic> toJson() => _$DeviceDefinitionHasPartToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionPackaging {
   const DeviceDefinitionPackaging({
     required this.id,
@@ -880,6 +897,7 @@ class DeviceDefinitionPackaging {
   Map<String, dynamic> toJson() => _$DeviceDefinitionPackagingToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionDistributor {
   const DeviceDefinitionDistributor({
     required this.id,
@@ -900,6 +918,7 @@ class DeviceDefinitionDistributor {
   Map<String, dynamic> toJson() => _$DeviceDefinitionDistributorToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionVersion {
   const DeviceDefinitionVersion({
     required this.id,
@@ -922,6 +941,7 @@ class DeviceDefinitionVersion {
   Map<String, dynamic> toJson() => _$DeviceDefinitionVersionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionProperty {
   const DeviceDefinitionProperty({
     required this.id,
@@ -958,6 +978,7 @@ class DeviceDefinitionProperty {
   Map<String, dynamic> toJson() => _$DeviceDefinitionPropertyToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionLink {
   const DeviceDefinitionLink({
     required this.id,
@@ -976,6 +997,7 @@ class DeviceDefinitionLink {
   Map<String, dynamic> toJson() => _$DeviceDefinitionLinkToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionMaterial {
   const DeviceDefinitionMaterial({
     required this.id,
@@ -1001,6 +1023,7 @@ class DeviceDefinitionMaterial {
   Map<String, dynamic> toJson() => _$DeviceDefinitionMaterialToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionGuideline {
   const DeviceDefinitionGuideline({
     required this.id,
@@ -1033,6 +1056,7 @@ class DeviceDefinitionGuideline {
   Map<String, dynamic> toJson() => _$DeviceDefinitionGuidelineToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionCorrectiveAction {
   const DeviceDefinitionCorrectiveAction({
     required this.id,
@@ -1059,6 +1083,7 @@ class DeviceDefinitionCorrectiveAction {
       _$DeviceDefinitionCorrectiveActionToJson(this);
 }
 
+@JsonSerializable()
 class DeviceDefinitionChargeItem {
   const DeviceDefinitionChargeItem({
     required this.id,
@@ -1081,6 +1106,7 @@ class DeviceDefinitionChargeItem {
   Map<String, dynamic> toJson() => _$DeviceDefinitionChargeItemToJson(this);
 }
 
+@JsonSerializable()
 class EventDefinition {
   const EventDefinition({
     @Default(R5ResourceType.EventDefinition) required this.resourceType,
@@ -1100,7 +1126,7 @@ class EventDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1211,6 +1237,7 @@ class EventDefinition {
   Map<String, dynamic> toJson() => _$EventDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenario {
   const ExampleScenario({
     @Default(R5ResourceType.ExampleScenario) required this.resourceType,
@@ -1230,7 +1257,7 @@ class ExampleScenario {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1311,6 +1338,7 @@ class ExampleScenario {
   Map<String, dynamic> toJson() => _$ExampleScenarioToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioActor {
   const ExampleScenarioActor({
     required this.id,
@@ -1341,6 +1369,7 @@ class ExampleScenarioActor {
   Map<String, dynamic> toJson() => _$ExampleScenarioActorToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioInstance {
   const ExampleScenarioInstance({
     required this.id,
@@ -1352,7 +1381,7 @@ class ExampleScenarioInstance {
     required this.structureVersion,
     @JsonKey(name: '_structureVersion') required this.structureVersionElement,
     required this.structureProfileCanonical,
-    @JsonKey('__structureProfileCanonical')
+    @JsonKey(name: '__structureProfileCanonical')
         required this.structureProfileCanonicalElement,
     required this.structureProfileUri,
     @JsonKey(name: '_structureProfileUri')
@@ -1390,6 +1419,7 @@ class ExampleScenarioInstance {
   Map<String, dynamic> toJson() => _$ExampleScenarioInstanceToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioVersion {
   const ExampleScenarioVersion({
     required this.id,
@@ -1418,6 +1448,7 @@ class ExampleScenarioVersion {
   Map<String, dynamic> toJson() => _$ExampleScenarioVersionToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioContainedInstance {
   const ExampleScenarioContainedInstance({
     required this.id,
@@ -1442,6 +1473,7 @@ class ExampleScenarioContainedInstance {
       _$ExampleScenarioContainedInstanceToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioProcess {
   const ExampleScenarioProcess({
     required this.id,
@@ -1474,6 +1506,7 @@ class ExampleScenarioProcess {
   Map<String, dynamic> toJson() => _$ExampleScenarioProcessToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioStep {
   const ExampleScenarioStep({
     required this.id,
@@ -1504,6 +1537,7 @@ class ExampleScenarioStep {
   Map<String, dynamic> toJson() => _$ExampleScenarioStepToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioOperation {
   const ExampleScenarioOperation({
     required this.id,
@@ -1548,6 +1582,7 @@ class ExampleScenarioOperation {
   Map<String, dynamic> toJson() => _$ExampleScenarioOperationToJson(this);
 }
 
+@JsonSerializable()
 class ExampleScenarioAlternative {
   const ExampleScenarioAlternative({
     required this.id,
@@ -1572,6 +1607,7 @@ class ExampleScenarioAlternative {
   Map<String, dynamic> toJson() => _$ExampleScenarioAlternativeToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinition {
   const ObservationDefinition({
     @Default(R5ResourceType.ObservationDefinition) required this.resourceType,
@@ -1591,7 +1627,7 @@ class ObservationDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1636,9 +1672,10 @@ class ObservationDefinition {
     required this.category,
     required this.code,
     required this.permittedDataType,
-    @JsonKey('__permittedDataType') required this.permittedDataTypeElement,
+    @JsonKey(name: '__permittedDataType')
+        required this.permittedDataTypeElement,
     required this.multipleResultsAllowed,
-    @JsonKey('__multipleResultsAllowed')
+    @JsonKey(name: '__multipleResultsAllowed')
         required this.multipleResultsAllowedElement,
     required this.bodySite,
     required this.method,
@@ -1734,6 +1771,7 @@ class ObservationDefinition {
   Map<String, dynamic> toJson() => _$ObservationDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinitionQuantitativeDetails {
   const ObservationDefinitionQuantitativeDetails({
     required this.id,
@@ -1763,6 +1801,7 @@ class ObservationDefinitionQuantitativeDetails {
       _$ObservationDefinitionQuantitativeDetailsToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinitionQualifiedValue {
   const ObservationDefinitionQualifiedValue({
     required this.id,
@@ -1810,6 +1849,7 @@ class ObservationDefinitionQualifiedValue {
       _$ObservationDefinitionQualifiedValueToJson(this);
 }
 
+@JsonSerializable()
 class ObservationDefinitionComponent {
   const ObservationDefinitionComponent({
     required this.id,
@@ -1817,7 +1857,8 @@ class ObservationDefinitionComponent {
     required this.modifierExtension,
     required this.code,
     required this.permittedDataType,
-    @JsonKey('__permittedDataType') required this.permittedDataTypeElement,
+    @JsonKey(name: '__permittedDataType')
+        required this.permittedDataTypeElement,
     required this.quantitativeDetails,
     required this.qualifiedValue,
   });
@@ -1835,6 +1876,7 @@ class ObservationDefinitionComponent {
   Map<String, dynamic> toJson() => _$ObservationDefinitionComponentToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinition {
   const PlanDefinition({
     @Default(R5ResourceType.PlanDefinition) required this.resourceType,
@@ -1854,7 +1896,7 @@ class PlanDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1983,6 +2025,7 @@ class PlanDefinition {
   Map<String, dynamic> toJson() => _$PlanDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionGoal {
   const PlanDefinitionGoal({
     required this.id,
@@ -2011,6 +2054,7 @@ class PlanDefinitionGoal {
   Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionTarget {
   const PlanDefinitionTarget({
     required this.id,
@@ -2049,6 +2093,7 @@ class PlanDefinitionTarget {
   Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionActor {
   const PlanDefinitionActor({
     required this.id,
@@ -2073,6 +2118,7 @@ class PlanDefinitionActor {
   Map<String, dynamic> toJson() => _$PlanDefinitionActorToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionOption {
   const PlanDefinitionOption({
     required this.id,
@@ -2097,6 +2143,7 @@ class PlanDefinitionOption {
   Map<String, dynamic> toJson() => _$PlanDefinitionOptionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionAction {
   const PlanDefinitionAction({
     required this.id,
@@ -2213,6 +2260,7 @@ class PlanDefinitionAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionCondition {
   const PlanDefinitionCondition({
     required this.id,
@@ -2233,6 +2281,7 @@ class PlanDefinitionCondition {
   Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionInput {
   const PlanDefinitionInput({
     required this.id,
@@ -2257,6 +2306,7 @@ class PlanDefinitionInput {
   Map<String, dynamic> toJson() => _$PlanDefinitionInputToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionOutput {
   const PlanDefinitionOutput({
     required this.id,
@@ -2281,6 +2331,7 @@ class PlanDefinitionOutput {
   Map<String, dynamic> toJson() => _$PlanDefinitionOutputToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionRelatedAction {
   const PlanDefinitionRelatedAction({
     required this.id,
@@ -2307,6 +2358,7 @@ class PlanDefinitionRelatedAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionParticipant {
   const PlanDefinitionParticipant({
     required this.id,
@@ -2337,6 +2389,7 @@ class PlanDefinitionParticipant {
   Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionDynamicValue {
   const PlanDefinitionDynamicValue({
     required this.id,
@@ -2357,6 +2410,7 @@ class PlanDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class Questionnaire {
   const Questionnaire({
     @Default(R5ResourceType.Questionnaire) required this.resourceType,
@@ -2376,7 +2430,7 @@ class Questionnaire {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -2483,6 +2537,7 @@ class Questionnaire {
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireItem {
   const QuestionnaireItem({
     required this.id,
@@ -2557,6 +2612,7 @@ class QuestionnaireItem {
   Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireEnableWhen {
   const QuestionnaireEnableWhen({
     required this.id,
@@ -2613,6 +2669,7 @@ class QuestionnaireEnableWhen {
   Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireAnswerOption {
   const QuestionnaireAnswerOption({
     required this.id,
@@ -2651,6 +2708,7 @@ class QuestionnaireAnswerOption {
   Map<String, dynamic> toJson() => _$QuestionnaireAnswerOptionToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireInitial {
   const QuestionnaireInitial({
     required this.id,
@@ -2705,6 +2763,7 @@ class QuestionnaireInitial {
   Map<String, dynamic> toJson() => _$QuestionnaireInitialToJson(this);
 }
 
+@JsonSerializable()
 class Requirements {
   const Requirements({
     @Default(R5ResourceType.Requirements) required this.resourceType,
@@ -2724,7 +2783,7 @@ class Requirements {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -2805,6 +2864,7 @@ class Requirements {
   Map<String, dynamic> toJson() => _$RequirementsToJson(this);
 }
 
+@JsonSerializable()
 class RequirementsStatement {
   const RequirementsStatement({
     required this.id,
@@ -2857,6 +2917,7 @@ class RequirementsStatement {
   Map<String, dynamic> toJson() => _$RequirementsStatementToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinition {
   const SpecimenDefinition({
     @Default(R5ResourceType.SpecimenDefinition) required this.resourceType,
@@ -2876,7 +2937,7 @@ class SpecimenDefinition {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -2995,6 +3056,7 @@ class SpecimenDefinition {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionTypeTested {
   const SpecimenDefinitionTypeTested({
     required this.id,
@@ -3037,6 +3099,7 @@ class SpecimenDefinitionTypeTested {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionTypeTestedToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionContainer {
   const SpecimenDefinitionContainer({
     required this.id,
@@ -3076,6 +3139,7 @@ class SpecimenDefinitionContainer {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionContainerToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionAdditive {
   const SpecimenDefinitionAdditive({
     required this.id,
@@ -3094,6 +3158,7 @@ class SpecimenDefinitionAdditive {
   Map<String, dynamic> toJson() => _$SpecimenDefinitionAdditiveToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenDefinitionHandling {
   const SpecimenDefinitionHandling({
     required this.id,

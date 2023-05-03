@@ -208,3 +208,247 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.ValueSet: 'ValueSet',
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
+
+PaymentReconciliation _$PaymentReconciliationFromJson(
+        Map<String, dynamic> json) =>
+    PaymentReconciliation(
+      resourceType:
+          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      outcome: $enumDecodeNullable(
+          _$PaymentReconciliationOutcomeEnumMap, json['outcome']),
+      outcomeElement: json['outcomeElement'] == null
+          ? null
+          : Element.fromJson(json['outcomeElement'] as Map<String, dynamic>),
+      disposition: json['disposition'] as String?,
+      dispositionElement: json['dispositionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['dispositionElement'] as Map<String, dynamic>),
+      ruleset: json['ruleset'] == null
+          ? null
+          : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
+      originalRuleset: json['originalRuleset'] == null
+          ? null
+          : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
+      created: json['created'] == null
+          ? null
+          : FhirDateTime.fromJson(json['created']),
+      createdElement: json['createdElement'] == null
+          ? null
+          : Element.fromJson(json['createdElement'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      organization: json['organization'] == null
+          ? null
+          : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+      requestProvider: json['requestProvider'] == null
+          ? null
+          : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
+      requestOrganization: json['requestOrganization'] == null
+          ? null
+          : Reference.fromJson(
+              json['requestOrganization'] as Map<String, dynamic>),
+      detail: (json['detail'] as List<dynamic>?)
+          ?.map((e) =>
+              PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      form: json['form'] == null
+          ? null
+          : Coding.fromJson(json['form'] as Map<String, dynamic>),
+      total: Quantity.fromJson(json['total'] as Map<String, dynamic>),
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) =>
+              PaymentReconciliationNote.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$PaymentReconciliationToJson(
+    PaymentReconciliation instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull(
+      'outcome', _$PaymentReconciliationOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcomeElement', instance.outcomeElement?.toJson());
+  writeNotNull('disposition', instance.disposition);
+  writeNotNull('dispositionElement', instance.dispositionElement?.toJson());
+  writeNotNull('ruleset', instance.ruleset?.toJson());
+  writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('createdElement', instance.createdElement?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('requestProvider', instance.requestProvider?.toJson());
+  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
+  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
+  writeNotNull('form', instance.form?.toJson());
+  val['total'] = instance.total.toJson();
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+const _$PaymentReconciliationOutcomeEnumMap = {
+  PaymentReconciliationOutcome.complete: 'complete',
+  PaymentReconciliationOutcome.error: 'error',
+  PaymentReconciliationOutcome.unknown: 'unknown',
+};
+
+PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
+        Map<String, dynamic> json) =>
+    PaymentReconciliationDetail(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: Coding.fromJson(json['type'] as Map<String, dynamic>),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      responce: json['responce'] == null
+          ? null
+          : Reference.fromJson(json['responce'] as Map<String, dynamic>),
+      submitter: json['submitter'] == null
+          ? null
+          : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
+      payee: json['payee'] == null
+          ? null
+          : Reference.fromJson(json['payee'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['dateElement'] == null
+          ? null
+          : Element.fromJson(json['dateElement'] as Map<String, dynamic>),
+      amount: json['amount'] == null
+          ? null
+          : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$PaymentReconciliationDetailToJson(
+    PaymentReconciliationDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('responce', instance.responce?.toJson());
+  writeNotNull('submitter', instance.submitter?.toJson());
+  writeNotNull('payee', instance.payee?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('dateElement', instance.dateElement?.toJson());
+  writeNotNull('amount', instance.amount?.toJson());
+  return val;
+}
+
+PaymentReconciliationNote _$PaymentReconciliationNoteFromJson(
+        Map<String, dynamic> json) =>
+    PaymentReconciliationNote(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: json['type'] == null
+          ? null
+          : Coding.fromJson(json['type'] as Map<String, dynamic>),
+      typeElement: json['typeElement'] == null
+          ? null
+          : Element.fromJson(json['typeElement'] as Map<String, dynamic>),
+      text: json['text'] as String?,
+      textElement: json['textElement'] == null
+          ? null
+          : Element.fromJson(json['textElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$PaymentReconciliationNoteToJson(
+    PaymentReconciliationNote instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('typeElement', instance.typeElement?.toJson());
+  writeNotNull('text', instance.text);
+  writeNotNull('textElement', instance.textElement?.toJson());
+  return val;
+}

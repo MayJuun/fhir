@@ -69,6 +69,7 @@ class Group {
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
+@JsonSerializable()
 class GroupCharacteristic {
   const GroupCharacteristic({
     required this.id,
@@ -103,6 +104,7 @@ class GroupCharacteristic {
   Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class GroupMember {
   const GroupMember({
     required this.id,
@@ -125,6 +127,7 @@ class GroupMember {
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }
 
+@JsonSerializable()
 class Patient {
   const Patient({
     @Default(R5ResourceType.Patient) required this.resourceType,
@@ -154,10 +157,10 @@ class Patient {
     required this.address,
     required this.maritalStatus,
     required this.multipleBirthBoolean,
-    @JsonKey('__multipleBirthBoolean')
+    @JsonKey(name: '__multipleBirthBoolean')
         required this.multipleBirthBooleanElement,
     required this.multipleBirthInteger,
-    @JsonKey('__multipleBirthInteger')
+    @JsonKey(name: '__multipleBirthInteger')
         required this.multipleBirthIntegerElement,
     required this.photo,
     required this.contact,
@@ -209,6 +212,7 @@ class Patient {
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
 
+@JsonSerializable()
 class PatientContact {
   const PatientContact({
     required this.id,
@@ -239,6 +243,7 @@ class PatientContact {
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
 
+@JsonSerializable()
 class PatientCommunication {
   const PatientCommunication({
     required this.id,
@@ -259,6 +264,7 @@ class PatientCommunication {
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
 
+@JsonSerializable()
 class PatientLink {
   const PatientLink({
     required this.id,
@@ -279,6 +285,7 @@ class PatientLink {
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
 
+@JsonSerializable()
 class Person {
   const Person({
     @Default(R5ResourceType.Person) required this.resourceType,
@@ -346,6 +353,7 @@ class Person {
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
+@JsonSerializable()
 class PersonCommunication {
   const PersonCommunication({
     required this.id,
@@ -366,6 +374,7 @@ class PersonCommunication {
   Map<String, dynamic> toJson() => _$PersonCommunicationToJson(this);
 }
 
+@JsonSerializable()
 class PersonLink {
   const PersonLink({
     required this.id,
@@ -386,6 +395,7 @@ class PersonLink {
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
 
+@JsonSerializable()
 class Practitioner {
   const Practitioner({
     @Default(R5ResourceType.Practitioner) required this.resourceType,
@@ -450,6 +460,7 @@ class Practitioner {
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
 
+@JsonSerializable()
 class PractitionerQualification {
   const PractitionerQualification({
     required this.id,
@@ -472,6 +483,7 @@ class PractitionerQualification {
   Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }
 
+@JsonSerializable()
 class PractitionerRole {
   const PractitionerRole({
     @Default(R5ResourceType.PractitionerRole) required this.resourceType,
@@ -528,6 +540,7 @@ class PractitionerRole {
   Map<String, dynamic> toJson() => _$PractitionerRoleToJson(this);
 }
 
+@JsonSerializable()
 class RelatedPerson {
   const RelatedPerson({
     @Default(R5ResourceType.RelatedPerson) required this.resourceType,
@@ -588,6 +601,7 @@ class RelatedPerson {
   Map<String, dynamic> toJson() => _$RelatedPersonToJson(this);
 }
 
+@JsonSerializable()
 class RelatedPersonCommunication {
   const RelatedPersonCommunication({
     required this.id,

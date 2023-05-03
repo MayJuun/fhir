@@ -70,7 +70,7 @@ class Measure {
     required this.rationale,
     @JsonKey(name: '_rationale') required this.rationaleElement,
     required this.clinicalRecommendationStatement,
-    @JsonKey('__clinicalRecommendationStatement')
+    @JsonKey(name: '__clinicalRecommendationStatement')
         required this.clinicalRecommendationStatementElement,
     required this.improvementNotation,
     @JsonKey(name: '_improvementNotation')
@@ -161,6 +161,7 @@ class Measure {
   Map<String, dynamic> toJson() => _$MeasureToJson(this);
 }
 
+@JsonSerializable()
 class MeasureGroup {
   const MeasureGroup({
     required this.identifier,
@@ -183,6 +184,7 @@ class MeasureGroup {
   Map<String, dynamic> toJson() => _$MeasureGroupToJson(this);
 }
 
+@JsonSerializable()
 class MeasurePopulation {
   const MeasurePopulation({
     required this.identifier,
@@ -207,6 +209,7 @@ class MeasurePopulation {
   Map<String, dynamic> toJson() => _$MeasurePopulationToJson(this);
 }
 
+@JsonSerializable()
 class MeasureStratifier {
   const MeasureStratifier({
     required this.identifier,
@@ -225,6 +228,7 @@ class MeasureStratifier {
   Map<String, dynamic> toJson() => _$MeasureStratifierToJson(this);
 }
 
+@JsonSerializable()
 class MeasureSupplementalData {
   const MeasureSupplementalData({
     required this.identifier,
@@ -245,6 +249,7 @@ class MeasureSupplementalData {
   Map<String, dynamic> toJson() => _$MeasureSupplementalDataToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReport {
   const MeasureReport({
     @Default(Stu3ResourceType.MeasureReport) required this.resourceType,
@@ -301,6 +306,7 @@ class MeasureReport {
   Map<String, dynamic> toJson() => _$MeasureReportToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportGroup {
   const MeasureReportGroup({
     required this.identifier,
@@ -319,6 +325,7 @@ class MeasureReportGroup {
   Map<String, dynamic> toJson() => _$MeasureReportGroupToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportPopulation {
   const MeasureReportPopulation({
     required this.identifier,
@@ -337,6 +344,7 @@ class MeasureReportPopulation {
   Map<String, dynamic> toJson() => _$MeasureReportPopulationToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportStratifier {
   const MeasureReportStratifier({
     required this.identifier,
@@ -349,6 +357,7 @@ class MeasureReportStratifier {
   Map<String, dynamic> toJson() => _$MeasureReportStratifierToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportStratum {
   const MeasureReportStratum({
     required this.value,
@@ -367,6 +376,7 @@ class MeasureReportStratum {
   Map<String, dynamic> toJson() => _$MeasureReportStratumToJson(this);
 }
 
+@JsonSerializable()
 class MeasureReportPopulation1 {
   const MeasureReportPopulation1({
     required this.identifier,

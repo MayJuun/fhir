@@ -60,6 +60,7 @@ class MessageHeader {
   Map<String, dynamic> toJson() => _$MessageHeaderToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderResponse {
   const MessageHeaderResponse({
     required this.id,
@@ -84,6 +85,7 @@ class MessageHeaderResponse {
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderSource {
   const MessageHeaderSource({
     required this.id,
@@ -116,6 +118,7 @@ class MessageHeaderSource {
   Map<String, dynamic> toJson() => _$MessageHeaderSourceToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderDestination {
   const MessageHeaderDestination({
     required this.id,
@@ -140,6 +143,7 @@ class MessageHeaderDestination {
   Map<String, dynamic> toJson() => _$MessageHeaderDestinationToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcome {
   const OperationOutcome({
     @Default(Dstu2ResourceType.OperationOutcome) required this.resourceType,
@@ -174,6 +178,7 @@ class OperationOutcome {
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcomeIssue {
   const OperationOutcomeIssue({
     required this.id,
@@ -199,6 +204,7 @@ class OperationOutcomeIssue {
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
 
+@JsonSerializable()
 class Parameters {
   const Parameters({
     @Default(Dstu2ResourceType.Parameters) required this.resourceType,
@@ -223,6 +229,7 @@ class Parameters {
   Map<String, dynamic> toJson() => _$ParametersToJson(this);
 }
 
+@JsonSerializable()
 class ParametersParameter {
   const ParametersParameter({
     required this.id,
@@ -311,6 +318,7 @@ class ParametersParameter {
   Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
 }
 
+@JsonSerializable()
 class Subscription {
   const Subscription({
     @Default(Dstu2ResourceType.Subscription) required this.resourceType,
@@ -368,6 +376,7 @@ class Subscription {
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionChannel {
   const SubscriptionChannel({
     required this.id,

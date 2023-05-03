@@ -12,34 +12,34 @@ class CarePlan {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
     required this.instantiatesUri,
-    @JsonKey('__instantiatesUri') required this.instantiatesUriElement,
+    @JsonKey(name: '__instantiatesUri') required this.instantiatesUriElement,
     required this.basedOn,
     required this.replaces,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.category,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.subject,
     required this.encounter,
     required this.period,
     required this.created,
-    @JsonKey('__created') required this.createdElement,
+    @JsonKey(name: '__created') required this.createdElement,
     required this.author,
     required this.contributor,
     required this.careTeam,
@@ -103,6 +103,7 @@ class CarePlan {
   Map<String, dynamic> toJson() => _$CarePlanToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanActivity {
   const CarePlanActivity({
     required this.id,
@@ -127,6 +128,7 @@ class CarePlanActivity {
   Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
 
+@JsonSerializable()
 class CarePlanDetail {
   const CarePlanDetail({
     required this.id,
@@ -193,25 +195,26 @@ class CarePlanDetail {
   Map<String, dynamic> toJson() => _$CarePlanDetailToJson(this);
 }
 
+@JsonSerializable()
 class CareTeam {
   const CareTeam({
     @Default(R4ResourceType.CareTeam) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.category,
     required this.name,
-    @JsonKey('__name') required this.nameElement,
+    @JsonKey(name: '__name') required this.nameElement,
     required this.subject,
     required this.encounter,
     required this.period,
@@ -258,6 +261,7 @@ class CareTeam {
   Map<String, dynamic> toJson() => _$CareTeamToJson(this);
 }
 
+@JsonSerializable()
 class CareTeamParticipant {
   const CareTeamParticipant({
     required this.id,
@@ -280,35 +284,36 @@ class CareTeamParticipant {
   Map<String, dynamic> toJson() => _$CareTeamParticipantToJson(this);
 }
 
+@JsonSerializable()
 class Goal {
   const Goal({
     @Default(R4ResourceType.Goal) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.lifecycleStatus,
-    @JsonKey('__lifecycleStatus') required this.lifecycleStatusElement,
+    @JsonKey(name: '__lifecycleStatus') required this.lifecycleStatusElement,
     required this.achievementStatus,
     required this.category,
     required this.priority,
     required this.description,
     required this.subject,
     required this.startDate,
-    @JsonKey('__startDate') required this.startDateElement,
+    @JsonKey(name: '__startDate') required this.startDateElement,
     required this.startCodeableConcept,
     required this.target,
     required this.statusDate,
-    @JsonKey('__statusDate') required this.statusDateElement,
+    @JsonKey(name: '__statusDate') required this.statusDateElement,
     required this.statusReason,
-    @JsonKey('__statusReason') required this.statusReasonElement,
+    @JsonKey(name: '__statusReason') required this.statusReasonElement,
     required this.expressedBy,
     required this.addresses,
     required this.note,
@@ -358,6 +363,7 @@ class Goal {
   Map<String, dynamic> toJson() => _$GoalToJson(this);
 }
 
+@JsonSerializable()
 class GoalTarget {
   const GoalTarget({
     required this.id,
@@ -400,33 +406,34 @@ class GoalTarget {
   Map<String, dynamic> toJson() => _$GoalTargetToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrder {
   const NutritionOrder({
     @Default(R4ResourceType.NutritionOrder) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
     required this.instantiatesUri,
-    @JsonKey('__instantiatesUri') required this.instantiatesUriElement,
+    @JsonKey(name: '__instantiatesUri') required this.instantiatesUriElement,
     required this.instantiates,
-    @JsonKey('__instantiates') required this.instantiatesElement,
+    @JsonKey(name: '__instantiates') required this.instantiatesElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.patient,
     required this.encounter,
     required this.dateTime,
-    @JsonKey('__dateTime') required this.dateTimeElement,
+    @JsonKey(name: '__dateTime') required this.dateTimeElement,
     required this.orderer,
     required this.allergyIntolerance,
     required this.foodPreferenceModifier,
@@ -482,6 +489,7 @@ class NutritionOrder {
   Map<String, dynamic> toJson() => _$NutritionOrderToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderOralDiet {
   const NutritionOrderOralDiet({
     required this.id,
@@ -510,6 +518,7 @@ class NutritionOrderOralDiet {
   Map<String, dynamic> toJson() => _$NutritionOrderOralDietToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderNutrient {
   const NutritionOrderNutrient({
     required this.id,
@@ -528,6 +537,7 @@ class NutritionOrderNutrient {
   Map<String, dynamic> toJson() => _$NutritionOrderNutrientToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderTexture {
   const NutritionOrderTexture({
     required this.id,
@@ -546,6 +556,7 @@ class NutritionOrderTexture {
   Map<String, dynamic> toJson() => _$NutritionOrderTextureToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderSupplement {
   const NutritionOrderSupplement({
     required this.id,
@@ -574,24 +585,26 @@ class NutritionOrderSupplement {
   Map<String, dynamic> toJson() => _$NutritionOrderSupplementToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderEnteralFormula {
   const NutritionOrderEnteralFormula({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.baseFormulaType,
     required this.baseFormulaProductName,
-    @JsonKey('__baseFormulaProductName')
+    @JsonKey(name: '__baseFormulaProductName')
         required this.baseFormulaProductNameElement,
     required this.additiveType,
     required this.additiveProductName,
-    @JsonKey('__additiveProductName') required this.additiveProductNameElement,
+    @JsonKey(name: '__additiveProductName')
+        required this.additiveProductNameElement,
     required this.caloricDensity,
     required this.routeofAdministration,
     required this.administration,
     required this.maxVolumeToDeliver,
     required this.administrationInstruction,
-    @JsonKey('__administrationInstruction')
+    @JsonKey(name: '__administrationInstruction')
         required this.administrationInstructionElement,
   });
   final String? id;
@@ -618,6 +631,7 @@ class NutritionOrderEnteralFormula {
   Map<String, dynamic> toJson() => _$NutritionOrderEnteralFormulaToJson(this);
 }
 
+@JsonSerializable()
 class NutritionOrderAdministration {
   const NutritionOrderAdministration({
     required this.id,
@@ -640,39 +654,40 @@ class NutritionOrderAdministration {
   Map<String, dynamic> toJson() => _$NutritionOrderAdministrationToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroup {
   const RequestGroup({
     @Default(R4ResourceType.RequestGroup) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
-    @JsonKey('__instantiatesCanonical')
+    @JsonKey(name: '__instantiatesCanonical')
         required this.instantiatesCanonicalElement,
     required this.instantiatesUri,
-    @JsonKey('__instantiatesUri') required this.instantiatesUriElement,
+    @JsonKey(name: '__instantiatesUri') required this.instantiatesUriElement,
     required this.basedOn,
     required this.replaces,
     required this.groupIdentifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.priority,
-    @JsonKey('__priority') required this.priorityElement,
+    @JsonKey(name: '__priority') required this.priorityElement,
     required this.code,
     required this.subject,
     required this.encounter,
     required this.authoredOn,
-    @JsonKey('__authoredOn') required this.authoredOnElement,
+    @JsonKey(name: '__authoredOn') required this.authoredOnElement,
     required this.author,
     required this.reasonCode,
     required this.reasonReference,
@@ -728,6 +743,7 @@ class RequestGroup {
   Map<String, dynamic> toJson() => _$RequestGroupToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupAction {
   const RequestGroupAction({
     required this.id,
@@ -813,6 +829,7 @@ class RequestGroupAction {
   Map<String, dynamic> toJson() => _$RequestGroupActionToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupCondition {
   const RequestGroupCondition({
     required this.id,
@@ -833,6 +850,7 @@ class RequestGroupCondition {
   Map<String, dynamic> toJson() => _$RequestGroupConditionToJson(this);
 }
 
+@JsonSerializable()
 class RequestGroupRelatedAction {
   const RequestGroupRelatedAction({
     required this.id,
@@ -859,30 +877,32 @@ class RequestGroupRelatedAction {
   Map<String, dynamic> toJson() => _$RequestGroupRelatedActionToJson(this);
 }
 
+@JsonSerializable()
 class RiskAssessment {
   const RiskAssessment({
     @Default(R4ResourceType.RiskAssessment) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.parent,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.method,
     required this.code,
     required this.subject,
     required this.encounter,
     required this.occurrenceDateTime,
-    @JsonKey('__occurrenceDateTime') required this.occurrenceDateTimeElement,
+    @JsonKey(name: '__occurrenceDateTime')
+        required this.occurrenceDateTimeElement,
     required this.occurrencePeriod,
     required this.condition,
     required this.performer,
@@ -891,7 +911,7 @@ class RiskAssessment {
     required this.basis,
     required this.prediction,
     required this.mitigation,
-    @JsonKey('__mitigation') required this.mitigationElement,
+    @JsonKey(name: '__mitigation') required this.mitigationElement,
     required this.note,
   });
   final R4ResourceType resourceType;
@@ -937,6 +957,7 @@ class RiskAssessment {
   Map<String, dynamic> toJson() => _$RiskAssessmentToJson(this);
 }
 
+@JsonSerializable()
 class RiskAssessmentPrediction {
   const RiskAssessmentPrediction({
     required this.id,
@@ -974,35 +995,36 @@ class RiskAssessmentPrediction {
   Map<String, dynamic> toJson() => _$RiskAssessmentPredictionToJson(this);
 }
 
+@JsonSerializable()
 class ServiceRequest {
   const ServiceRequest({
     @Default(R4ResourceType.ServiceRequest) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
     required this.instantiatesUri,
-    @JsonKey('__instantiatesUri') required this.instantiatesUriElement,
+    @JsonKey(name: '__instantiatesUri') required this.instantiatesUriElement,
     required this.basedOn,
     required this.replaces,
     required this.requisition,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.category,
     required this.priority,
-    @JsonKey('__priority') required this.priorityElement,
+    @JsonKey(name: '__priority') required this.priorityElement,
     required this.doNotPerform,
-    @JsonKey('__doNotPerform') required this.doNotPerformElement,
+    @JsonKey(name: '__doNotPerform') required this.doNotPerformElement,
     required this.code,
     required this.orderDetail,
     required this.quantityQuantity,
@@ -1011,14 +1033,15 @@ class ServiceRequest {
     required this.subject,
     required this.encounter,
     required this.occurrenceDateTime,
-    @JsonKey('__occurrenceDateTime') required this.occurrenceDateTimeElement,
+    @JsonKey(name: '__occurrenceDateTime')
+        required this.occurrenceDateTimeElement,
     required this.occurrencePeriod,
     required this.occurrenceTiming,
     required this.asNeededBoolean,
-    @JsonKey('__asNeededBoolean') required this.asNeededBooleanElement,
+    @JsonKey(name: '__asNeededBoolean') required this.asNeededBooleanElement,
     required this.asNeededCodeableConcept,
     required this.authoredOn,
-    @JsonKey('__authoredOn') required this.authoredOnElement,
+    @JsonKey(name: '__authoredOn') required this.authoredOnElement,
     required this.requester,
     required this.performerType,
     required this.performer,
@@ -1032,7 +1055,8 @@ class ServiceRequest {
     required this.bodySite,
     required this.note,
     required this.patientInstruction,
-    @JsonKey('__patientInstruction') required this.patientInstructionElement,
+    @JsonKey(name: '__patientInstruction')
+        required this.patientInstructionElement,
     required this.relevantHistory,
   });
   final R4ResourceType resourceType;
@@ -1110,28 +1134,29 @@ class ServiceRequest {
   Map<String, dynamic> toJson() => _$ServiceRequestToJson(this);
 }
 
+@JsonSerializable()
 class VisionPrescription {
   const VisionPrescription({
     @Default(R4ResourceType.VisionPrescription) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.created,
-    @JsonKey('__created') required this.createdElement,
+    @JsonKey(name: '__created') required this.createdElement,
     required this.patient,
     required this.encounter,
     required this.dateWritten,
-    @JsonKey('__dateWritten') required this.dateWrittenElement,
+    @JsonKey(name: '__dateWritten') required this.dateWrittenElement,
     required this.prescriber,
     required this.lensSpecification,
   });
@@ -1168,6 +1193,7 @@ class VisionPrescription {
   Map<String, dynamic> toJson() => _$VisionPrescriptionToJson(this);
 }
 
+@JsonSerializable()
 class VisionPrescriptionLensSpecification {
   const VisionPrescriptionLensSpecification({
     required this.id,

@@ -92,6 +92,7 @@ class Communication {
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationPayload {
   const CommunicationPayload({
     required this.id,
@@ -114,6 +115,7 @@ class CommunicationPayload {
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequest {
   const CommunicationRequest({
     @Default(R4ResourceType.CommunicationRequest) required this.resourceType,
@@ -201,6 +203,7 @@ class CommunicationRequest {
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequestPayload {
   const CommunicationRequestPayload({
     required this.id,
@@ -223,6 +226,7 @@ class CommunicationRequestPayload {
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
+@JsonSerializable()
 class DeviceRequest {
   const DeviceRequest({
     @Default(R4ResourceType.DeviceRequest) required this.resourceType,
@@ -320,6 +324,7 @@ class DeviceRequest {
   Map<String, dynamic> toJson() => _$DeviceRequestToJson(this);
 }
 
+@JsonSerializable()
 class DeviceRequestParameter {
   const DeviceRequestParameter({
     required this.id,
@@ -346,6 +351,7 @@ class DeviceRequestParameter {
   Map<String, dynamic> toJson() => _$DeviceRequestParameterToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUseStatement {
   const DeviceUseStatement({
     @Default(R4ResourceType.DeviceUseStatement) required this.resourceType,
@@ -412,6 +418,7 @@ class DeviceUseStatement {
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
 }
 
+@JsonSerializable()
 class GuidanceResponse {
   const GuidanceResponse({
     @Default(R4ResourceType.GuidanceResponse) required this.resourceType,
@@ -485,6 +492,7 @@ class GuidanceResponse {
   Map<String, dynamic> toJson() => _$GuidanceResponseToJson(this);
 }
 
+@JsonSerializable()
 class SupplyDelivery {
   const SupplyDelivery({
     @Default(R4ResourceType.SupplyDelivery) required this.resourceType,
@@ -546,6 +554,7 @@ class SupplyDelivery {
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
 }
 
+@JsonSerializable()
 class SupplyDeliverySuppliedItem {
   const SupplyDeliverySuppliedItem({
     required this.id,
@@ -566,6 +575,7 @@ class SupplyDeliverySuppliedItem {
   Map<String, dynamic> toJson() => _$SupplyDeliverySuppliedItemToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequest {
   const SupplyRequest({
     @Default(R4ResourceType.SupplyRequest) required this.resourceType,
@@ -641,6 +651,7 @@ class SupplyRequest {
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequestParameter {
   const SupplyRequestParameter({
     required this.id,

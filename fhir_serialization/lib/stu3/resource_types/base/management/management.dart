@@ -84,6 +84,7 @@ class Encounter {
   Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
 
+@JsonSerializable()
 class EncounterStatusHistory {
   const EncounterStatusHistory({
     required this.status,
@@ -98,6 +99,7 @@ class EncounterStatusHistory {
   Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
 }
 
+@JsonSerializable()
 class EncounterClassHistory {
   const EncounterClassHistory({
     @JsonKey(name: 'class') required this.class_,
@@ -110,6 +112,7 @@ class EncounterClassHistory {
   Map<String, dynamic> toJson() => _$EncounterClassHistoryToJson(this);
 }
 
+@JsonSerializable()
 class EncounterParticipant {
   const EncounterParticipant({
     required this.type,
@@ -124,6 +127,7 @@ class EncounterParticipant {
   Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
 }
 
+@JsonSerializable()
 class EncounterDiagnosis {
   const EncounterDiagnosis({
     required this.condition,
@@ -140,6 +144,7 @@ class EncounterDiagnosis {
   Map<String, dynamic> toJson() => _$EncounterDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class EncounterHospitalization {
   const EncounterHospitalization({
     required this.preAdmissionIdentifier,
@@ -166,6 +171,7 @@ class EncounterHospitalization {
   Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
 }
 
+@JsonSerializable()
 class EncounterLocation {
   const EncounterLocation({
     required this.location,
@@ -182,6 +188,7 @@ class EncounterLocation {
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCare {
   const EpisodeOfCare({
     @Default(Stu3ResourceType.EpisodeOfCare) required this.resourceType,
@@ -238,6 +245,7 @@ class EpisodeOfCare {
   Map<String, dynamic> toJson() => _$EpisodeOfCareToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCareStatusHistory {
   const EpisodeOfCareStatusHistory({
     required this.status,
@@ -252,6 +260,7 @@ class EpisodeOfCareStatusHistory {
   Map<String, dynamic> toJson() => _$EpisodeOfCareStatusHistoryToJson(this);
 }
 
+@JsonSerializable()
 class EpisodeOfCareDiagnosis {
   const EpisodeOfCareDiagnosis({
     required this.condition,
@@ -268,6 +277,7 @@ class EpisodeOfCareDiagnosis {
   Map<String, dynamic> toJson() => _$EpisodeOfCareDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class Flag {
   const Flag({
     @Default(Stu3ResourceType.Flag) required this.resourceType,
@@ -315,6 +325,7 @@ class Flag {
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }
 
+@JsonSerializable()
 class Library {
   const Library({
     @Default(Stu3ResourceType.Library) required this.resourceType,
@@ -425,6 +436,7 @@ class Library {
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
 }
 
+@JsonSerializable()
 class List_ {
   const List_({
     @Default(Stu3ResourceType.List_) required this.resourceType,
@@ -488,6 +500,7 @@ class List_ {
   Map<String, dynamic> toJson() => _$List_ToJson(this);
 }
 
+@JsonSerializable()
 class ListEntry {
   const ListEntry({
     required this.flag,

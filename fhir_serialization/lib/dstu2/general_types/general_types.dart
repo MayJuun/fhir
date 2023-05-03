@@ -18,17 +18,18 @@ class Period {
     this.end,
     @JsonKey(name: '_end') this.endElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  FhirDateTime? start;
-  Element? startElement;
-  FhirDateTime? end;
-  Element? endElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final FhirDateTime? start;
+  final Element? startElement;
+  final FhirDateTime? end;
+  final Element? endElement;
   factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
   Map<String, dynamic> toJson() => _$PeriodToJson(this);
 }
 
+@JsonSerializable()
 class Coding {
   const Coding({
     this.id,
@@ -45,23 +46,24 @@ class Coding {
     this.userSelected,
     @JsonKey(name: '_userSelected') this.userSelectedElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  FhirUri? system;
-  Element? systemElement;
-  String? version;
-  Element? versionElement;
-  Code? code;
-  Element? codeElement;
-  String? display;
-  Element? displayElement;
-  Boolean? userSelected;
-  Element? userSelectedElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final FhirUri? system;
+  final Element? systemElement;
+  final String? version;
+  final Element? versionElement;
+  final Code? code;
+  final Element? codeElement;
+  final String? display;
+  final Element? displayElement;
+  final Boolean? userSelected;
+  final Element? userSelectedElement;
   factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
   Map<String, dynamic> toJson() => _$CodingToJson(this);
 }
 
+@JsonSerializable()
 class Range {
   const Range({
     this.id,
@@ -69,14 +71,15 @@ class Range {
     this.low,
     this.high,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  Quantity? low;
-  Quantity? high;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final Quantity? low;
+  final Quantity? high;
   factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
   Map<String, dynamic> toJson() => _$RangeToJson(this);
 }
 
+@JsonSerializable()
 class Quantity {
   const Quantity({
     this.id,
@@ -93,25 +96,25 @@ class Quantity {
     this.code,
     @JsonKey(name: '_code') this.codeElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  Decimal? value;
-  Element? valueElement;
-  @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-  QuantityComparator? comparator;
-  Element? comparatorElement;
-  String? unit;
-  Element? unitElement;
-  FhirUri? system;
-  Element? systemElement;
-  Code? code;
-  Element? codeElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final Decimal? value;
+  final Element? valueElement;
+  final QuantityComparator? comparator;
+  final Element? comparatorElement;
+  final String? unit;
+  final Element? unitElement;
+  final FhirUri? system;
+  final Element? systemElement;
+  final Code? code;
+  final Element? codeElement;
   factory Quantity.fromJson(Map<String, dynamic> json) =>
       _$QuantityFromJson(json);
   Map<String, dynamic> toJson() => _$QuantityToJson(this);
 }
 
+@JsonSerializable()
 class Attachment {
   const Attachment({
     this.id,
@@ -134,30 +137,31 @@ class Attachment {
     this.creation,
     @JsonKey(name: '_creation') this.creationElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  Code? contentType;
-  Element? contentTypeElement;
-  Code? language;
-  Element? languageElement;
-  Base64Binary? data;
-  Element? dataElement;
-  FhirUri? url;
-  Element? urlElement;
-  UnsignedInt? size;
-  Element? sizeElement;
-  Base64Binary? hash;
-  Element? hashElement;
-  String? title;
-  Element? titleElement;
-  FhirDateTime? creation;
-  Element? creationElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final Code? contentType;
+  final Element? contentTypeElement;
+  final Code? language;
+  final Element? languageElement;
+  final Base64Binary? data;
+  final Element? dataElement;
+  final FhirUri? url;
+  final Element? urlElement;
+  final UnsignedInt? size;
+  final Element? sizeElement;
+  final Base64Binary? hash;
+  final Element? hashElement;
+  final String? title;
+  final Element? titleElement;
+  final FhirDateTime? creation;
+  final Element? creationElement;
   factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
   Map<String, dynamic> toJson() => _$AttachmentToJson(this);
 }
 
+@JsonSerializable()
 class Ratio {
   const Ratio({
     this.id,
@@ -165,14 +169,15 @@ class Ratio {
     this.numerator,
     this.denominator,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  Quantity? numerator;
-  Quantity? denominator;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final Quantity? numerator;
+  final Quantity? denominator;
   factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
   Map<String, dynamic> toJson() => _$RatioToJson(this);
 }
 
+@JsonSerializable()
 class Annotation {
   const Annotation({
     this.id,
@@ -186,21 +191,22 @@ class Annotation {
     required this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  Reference? authorReference;
-  String? authorString;
-  Element? authorStringElement;
-  FhirDateTime? time;
-  Element? timeElement;
-  String text;
-  Element? textElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final Reference? authorReference;
+  final String? authorString;
+  final Element? authorStringElement;
+  final FhirDateTime? time;
+  final Element? timeElement;
+  final String text;
+  final Element? textElement;
   factory Annotation.fromJson(Map<String, dynamic> json) =>
       _$AnnotationFromJson(json);
   Map<String, dynamic> toJson() => _$AnnotationToJson(this);
 }
 
+@JsonSerializable()
 class SampledData {
   const SampledData({
     this.id,
@@ -219,26 +225,27 @@ class SampledData {
     required this.data,
     @JsonKey(name: '_data') this.dataElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  Quantity origin;
-  Decimal period;
-  Element? periodElement;
-  Decimal? factor;
-  Element? factorElement;
-  Decimal? lowerLimit;
-  Element? lowerLimitElement;
-  Decimal? upperLimit;
-  Element? upperLimitElement;
-  PositiveInt dimensions;
-  Element? dimensionsElement;
-  String data;
-  Element? dataElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final Quantity origin;
+  final Decimal period;
+  final Element? periodElement;
+  final Decimal? factor;
+  final Element? factorElement;
+  final Decimal? lowerLimit;
+  final Element? lowerLimitElement;
+  final Decimal? upperLimit;
+  final Element? upperLimitElement;
+  final PositiveInt dimensions;
+  final Element? dimensionsElement;
+  final String data;
+  final Element? dataElement;
   factory SampledData.fromJson(Map<String, dynamic> json) =>
       _$SampledDataFromJson(json);
   Map<String, dynamic> toJson() => _$SampledDataToJson(this);
 }
 
+@JsonSerializable()
 class CodeableConcept {
   const CodeableConcept({
     this.id,
@@ -248,17 +255,18 @@ class CodeableConcept {
     this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  List<Coding>? coding;
-  String? text;
-  Element? textElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final List<Coding>? coding;
+  final String? text;
+  final Element? textElement;
   factory CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeableConceptFromJson(json);
   Map<String, dynamic> toJson() => _$CodeableConceptToJson(this);
 }
 
+@JsonSerializable()
 class Identifier {
   const Identifier({
     this.id,
@@ -274,23 +282,24 @@ class Identifier {
     this.period,
     this.assigner,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  IdentifierUse? use;
-  Element? useElement;
-  CodeableConcept? type;
-  FhirUri? system;
-  Element? systemElement;
-  String? value;
-  Element? valueElement;
-  Period? period;
-  Reference? assigner;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final IdentifierUse? use;
+  final Element? useElement;
+  final CodeableConcept? type;
+  final FhirUri? system;
+  final Element? systemElement;
+  final String? value;
+  final Element? valueElement;
+  final Period? period;
+  final Reference? assigner;
   factory Identifier.fromJson(Map<String, dynamic> json) =>
       _$IdentifierFromJson(json);
   Map<String, dynamic> toJson() => _$IdentifierToJson(this);
 }
 
+@JsonSerializable()
 class Signature {
   const Signature({
     this.id,
@@ -307,24 +316,25 @@ class Signature {
     @JsonKey(name: '_data') this.dataElement,
     @JsonKey(name: '_contentType') this.contentTypeElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<Coding> type;
-  Instant when;
-  Element? whenElement;
-  FhirUri? whoUri;
-  Reference? whoReference;
-  Code contentType;
-  Base64Binary blob;
-  Element? targetFormatElement;
-  Element? sigFormatElement;
-  Element? dataElement;
-  Element? contentTypeElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<Coding> type;
+  final Instant when;
+  final Element? whenElement;
+  final FhirUri? whoUri;
+  final Reference? whoReference;
+  final Code contentType;
+  final Base64Binary blob;
+  final Element? targetFormatElement;
+  final Element? sigFormatElement;
+  final Element? dataElement;
+  final Element? contentTypeElement;
   factory Signature.fromJson(Map<String, dynamic> json) =>
       _$SignatureFromJson(json);
   Map<String, dynamic> toJson() => _$SignatureToJson(this);
 }
 
+@JsonSerializable()
 class Timing {
   const Timing({
     this.id,
@@ -335,17 +345,18 @@ class Timing {
     this.repeat,
     this.code,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  List<FhirDateTime>? event;
-  Element? eventElement;
-  TimingRepeat? repeat;
-  CodeableConcept? code;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final List<FhirDateTime>? event;
+  final Element? eventElement;
+  final TimingRepeat? repeat;
+  final CodeableConcept? code;
   factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
   Map<String, dynamic> toJson() => _$TimingToJson(this);
 }
 
+@JsonSerializable()
 class Address {
   const Address({
     this.id,
@@ -371,33 +382,34 @@ class Address {
     @JsonKey(name: '_country') this.countryElement,
     this.period,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  AddressUse? use;
-  Element? useElement;
-  AddressType? type;
-  Element? typeElement;
-  String? text;
-  Element? textElement;
-  List<String>? line;
-  Element? lineElement;
-  String? city;
-  Element? cityElement;
-  String? district;
-  Element? districtElement;
-  String? state;
-  Element? stateElement;
-  String? postalCode;
-  Element? postalCodeElement;
-  String? country;
-  Element? countryElement;
-  Period? period;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final AddressUse? use;
+  final Element? useElement;
+  final AddressType? type;
+  final Element? typeElement;
+  final String? text;
+  final Element? textElement;
+  final List<String>? line;
+  final Element? lineElement;
+  final String? city;
+  final Element? cityElement;
+  final String? district;
+  final Element? districtElement;
+  final String? state;
+  final Element? stateElement;
+  final String? postalCode;
+  final Element? postalCodeElement;
+  final String? country;
+  final Element? countryElement;
+  final Period? period;
   factory Address.fromJson(Map<String, dynamic> json) =>
       _$AddressFromJson(json);
   Map<String, dynamic> toJson() => _$AddressToJson(this);
 }
 
+@JsonSerializable()
 class HumanName {
   const HumanName({
     this.id,
@@ -417,27 +429,28 @@ class HumanName {
     @JsonKey(name: '_suffix') this.suffixElement,
     this.period,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  HumanNameUse? use;
-  Element? useElement;
-  String? text;
-  Element? textElement;
-  List<String>? family;
-  List<Element?>? familyElement;
-  List<String>? given;
-  List<Element?>? givenElement;
-  List<String>? prefix;
-  Element? prefixElement;
-  List<String>? suffix;
-  Element? suffixElement;
-  Period? period;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final HumanNameUse? use;
+  final Element? useElement;
+  final String? text;
+  final Element? textElement;
+  final List<String>? family;
+  final List<Element?>? familyElement;
+  final List<String>? given;
+  final List<Element?>? givenElement;
+  final List<String>? prefix;
+  final Element? prefixElement;
+  final List<String>? suffix;
+  final Element? suffixElement;
+  final Period? period;
   factory HumanName.fromJson(Map<String, dynamic> json) =>
       _$HumanNameFromJson(json);
   Map<String, dynamic> toJson() => _$HumanNameToJson(this);
 }
 
+@JsonSerializable()
 class ContactPoint {
   const ContactPoint({
     this.id,
@@ -453,24 +466,24 @@ class ContactPoint {
     @JsonKey(name: '_rank') this.rankElement,
     this.period,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-  ContactPointSystem? system;
-  Element? systemElement;
-  String? value;
-  Element? valueElement;
-  ContactPointUse? use;
-  Element? useElement;
-  PositiveInt? rank;
-  Element? rankElement;
-  Period? period;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final ContactPointSystem? system;
+  final Element? systemElement;
+  final String? value;
+  final Element? valueElement;
+  final ContactPointUse? use;
+  final Element? useElement;
+  final PositiveInt? rank;
+  final Element? rankElement;
+  final Period? period;
   factory ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$ContactPointFromJson(json);
   Map<String, dynamic> toJson() => _$ContactPointToJson(this);
 }
 
+@JsonSerializable()
 class TimingRepeat {
   const TimingRepeat({
     this.id,
@@ -500,32 +513,32 @@ class TimingRepeat {
     this.when,
     @JsonKey(name: '_when') this.whenElement,
   });
-  Id? id;
-  List<FhirExtension>? extension_;
-  List<String>? fhirComments;
-  Quantity? boundsQuantity;
-  Range? boundsRange;
-  Period? boundsPeriod;
-  Integer? count;
-  Element? countElement;
-  Decimal? duration;
-  Element? durationElement;
-  Decimal? durationMax;
-  Element? durationMaxElement;
-  RepeatUnits? durationUnits;
-  Element? durationUnitElement;
-  Integer? frequency;
-  Element? frequencyElement;
-  Integer? frequencyMax;
-  Element? frequencyMaxElement;
-  Decimal? period;
-  Element? periodElement;
-  Decimal? periodMax;
-  Element? periodMaxElement;
-  RepeatUnits? periodUnits;
-  Element? periodUnitElement;
-  Code? when;
-  Element? whenElement;
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<String>? fhirComments;
+  final Quantity? boundsQuantity;
+  final Range? boundsRange;
+  final Period? boundsPeriod;
+  final Integer? count;
+  final Element? countElement;
+  final Decimal? duration;
+  final Element? durationElement;
+  final Decimal? durationMax;
+  final Element? durationMaxElement;
+  final RepeatUnits? durationUnits;
+  final Element? durationUnitElement;
+  final Integer? frequency;
+  final Element? frequencyElement;
+  final Integer? frequencyMax;
+  final Element? frequencyMaxElement;
+  final Decimal? period;
+  final Element? periodElement;
+  final Decimal? periodMax;
+  final Element? periodMaxElement;
+  final RepeatUnits? periodUnits;
+  final Element? periodUnitElement;
+  final Code? when;
+  final Element? whenElement;
   factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$TimingRepeatFromJson(json);
   Map<String, dynamic> toJson() => _$TimingRepeatToJson(this);

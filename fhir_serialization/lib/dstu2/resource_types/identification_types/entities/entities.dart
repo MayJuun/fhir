@@ -70,6 +70,7 @@ class Location {
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
+@JsonSerializable()
 class LocationPosition {
   const LocationPosition({
     required this.id,
@@ -96,6 +97,7 @@ class LocationPosition {
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
+@JsonSerializable()
 class Substance {
   const Substance({
     @Default(Dstu2ResourceType.Substance) required this.resourceType,
@@ -140,6 +142,7 @@ class Substance {
   Map<String, dynamic> toJson() => _$SubstanceToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceInstance {
   const SubstanceInstance({
     required this.id,
@@ -162,6 +165,7 @@ class SubstanceInstance {
   Map<String, dynamic> toJson() => _$SubstanceInstanceToJson(this);
 }
 
+@JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
     required this.id,
@@ -180,6 +184,7 @@ class SubstanceIngredient {
   Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
 }
 
+@JsonSerializable()
 class Person {
   const Person({
     @Default(Dstu2ResourceType.Person) required this.resourceType,
@@ -235,6 +240,7 @@ class Person {
   Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
 
+@JsonSerializable()
 class PersonLink {
   const PersonLink({
     required this.id,
@@ -255,6 +261,7 @@ class PersonLink {
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }
 
+@JsonSerializable()
 class Contract {
   const Contract({
     @Default(Dstu2ResourceType.Contract) required this.resourceType,
@@ -325,6 +332,7 @@ class Contract {
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
 
+@JsonSerializable()
 class ContractActor {
   const ContractActor({
     required this.id,
@@ -343,6 +351,7 @@ class ContractActor {
   Map<String, dynamic> toJson() => _$ContractActorToJson(this);
 }
 
+@JsonSerializable()
 class ContractValuedItem {
   const ContractValuedItem({
     required this.id,
@@ -383,6 +392,7 @@ class ContractValuedItem {
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
+@JsonSerializable()
 class ContractSigner {
   const ContractSigner({
     required this.id,
@@ -403,6 +413,7 @@ class ContractSigner {
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
+@JsonSerializable()
 class ContractTerm {
   const ContractTerm({
     required this.id,
@@ -445,6 +456,7 @@ class ContractTerm {
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
+@JsonSerializable()
 class ContractTermActor {
   const ContractTermActor({
     required this.id,
@@ -463,6 +475,7 @@ class ContractTermActor {
   Map<String, dynamic> toJson() => _$ContractTermActorToJson(this);
 }
 
+@JsonSerializable()
 class ContractFriendly {
   const ContractFriendly({
     required this.id,
@@ -481,6 +494,7 @@ class ContractFriendly {
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
+@JsonSerializable()
 class ContractLegal {
   const ContractLegal({
     required this.id,
@@ -499,6 +513,7 @@ class ContractLegal {
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
+@JsonSerializable()
 class ContractRule {
   const ContractRule({
     required this.id,

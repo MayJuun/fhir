@@ -30,6 +30,7 @@ class Population {
   Map<String, dynamic> toJson() => _$PopulationToJson(this);
 }
 
+@JsonSerializable()
 class ProductShelfLife {
   const ProductShelfLife({
     this.id,
@@ -54,6 +55,7 @@ class ProductShelfLife {
   Map<String, dynamic> toJson() => _$ProductShelfLifeToJson(this);
 }
 
+@JsonSerializable()
 class MarketingStatus {
   const MarketingStatus({
     this.id,

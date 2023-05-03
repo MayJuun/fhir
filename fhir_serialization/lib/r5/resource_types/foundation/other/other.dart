@@ -47,6 +47,7 @@ class Basic {
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
+@JsonSerializable()
 class Binary {
   const Binary({
     @Default(R5ResourceType.Binary) required this.resourceType,
@@ -78,6 +79,7 @@ class Binary {
   Map<String, dynamic> toJson() => _$BinaryToJson(this);
 }
 
+@JsonSerializable()
 class Bundle {
   const Bundle({
     @Default(R5ResourceType.Bundle) required this.resourceType,
@@ -121,6 +123,7 @@ class Bundle {
   Map<String, dynamic> toJson() => _$BundleToJson(this);
 }
 
+@JsonSerializable()
 class BundleLink {
   const BundleLink({
     required this.id,
@@ -143,6 +146,7 @@ class BundleLink {
   Map<String, dynamic> toJson() => _$BundleLinkToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntry {
   const BundleEntry({
     required this.id,
@@ -171,6 +175,7 @@ class BundleEntry {
   Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
 }
 
+@JsonSerializable()
 class BundleSearch {
   const BundleSearch({
     required this.id,
@@ -193,6 +198,7 @@ class BundleSearch {
   Map<String, dynamic> toJson() => _$BundleSearchToJson(this);
 }
 
+@JsonSerializable()
 class BundleRequest {
   const BundleRequest({
     required this.id,
@@ -231,6 +237,7 @@ class BundleRequest {
   Map<String, dynamic> toJson() => _$BundleRequestToJson(this);
 }
 
+@JsonSerializable()
 class BundleResponse {
   const BundleResponse({
     required this.id,
@@ -263,6 +270,7 @@ class BundleResponse {
   Map<String, dynamic> toJson() => _$BundleResponseToJson(this);
 }
 
+@JsonSerializable()
 class Linkage {
   const Linkage({
     @Default(R5ResourceType.Linkage) required this.resourceType,
@@ -301,6 +309,7 @@ class Linkage {
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
 
+@JsonSerializable()
 class LinkageItem {
   const LinkageItem({
     required this.id,
@@ -321,6 +330,7 @@ class LinkageItem {
   Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeader {
   const MessageHeader({
     @Default(R5ResourceType.MessageHeader) required this.resourceType,
@@ -377,6 +387,7 @@ class MessageHeader {
   Map<String, dynamic> toJson() => _$MessageHeaderToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderDestination {
   const MessageHeaderDestination({
     required this.id,
@@ -403,6 +414,7 @@ class MessageHeaderDestination {
   Map<String, dynamic> toJson() => _$MessageHeaderDestinationToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderSource {
   const MessageHeaderSource({
     required this.id,
@@ -435,6 +447,7 @@ class MessageHeaderSource {
   Map<String, dynamic> toJson() => _$MessageHeaderSourceToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderResponse {
   const MessageHeaderResponse({
     required this.id,
@@ -457,6 +470,7 @@ class MessageHeaderResponse {
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcome {
   const OperationOutcome({
     @Default(R5ResourceType.OperationOutcome) required this.resourceType,
@@ -489,6 +503,7 @@ class OperationOutcome {
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcomeIssue {
   const OperationOutcomeIssue({
     required this.id,
@@ -525,6 +540,7 @@ class OperationOutcomeIssue {
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
 
+@JsonSerializable()
 class Parameters {
   const Parameters({
     @Default(R5ResourceType.Parameters) required this.resourceType,
@@ -549,6 +565,7 @@ class Parameters {
   Map<String, dynamic> toJson() => _$ParametersToJson(this);
 }
 
+@JsonSerializable()
 class ParametersParameter {
   const ParametersParameter({
     required this.id,
@@ -719,6 +736,7 @@ class ParametersParameter {
   Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
 }
 
+@JsonSerializable()
 class Subscription {
   const Subscription({
     @Default(R5ResourceType.Subscription) required this.resourceType,
@@ -805,6 +823,7 @@ class Subscription {
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionFilterBy {
   const SubscriptionFilterBy({
     required this.id,
@@ -835,6 +854,7 @@ class SubscriptionFilterBy {
   Map<String, dynamic> toJson() => _$SubscriptionFilterByToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionStatus {
   const SubscriptionStatus({
     @Default(R5ResourceType.SubscriptionStatus) required this.resourceType,
@@ -853,7 +873,7 @@ class SubscriptionStatus {
     required this.type,
     @JsonKey(name: '_type') required this.typeElement,
     required this.eventsSinceSubscriptionStart,
-    @JsonKey('__eventsSinceSubscriptionStart')
+    @JsonKey(name: '__eventsSinceSubscriptionStart')
         required this.eventsSinceSubscriptionStartElement,
     required this.notificationEvent,
     required this.subscription,
@@ -887,6 +907,7 @@ class SubscriptionStatus {
   Map<String, dynamic> toJson() => _$SubscriptionStatusToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionStatusNotificationEvent {
   const SubscriptionStatusNotificationEvent({
     required this.id,
@@ -916,6 +937,7 @@ class SubscriptionStatusNotificationEvent {
       _$SubscriptionStatusNotificationEventToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopic {
   const SubscriptionTopic({
     @Default(R5ResourceType.SubscriptionTopic) required this.resourceType,
@@ -935,7 +957,7 @@ class SubscriptionTopic {
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
     required this.versionAlgorithmString,
-    @JsonKey('__versionAlgorithmString')
+    @JsonKey(name: '__versionAlgorithmString')
         required this.versionAlgorithmStringElement,
     required this.versionAlgorithmCoding,
     required this.name,
@@ -1030,6 +1052,7 @@ class SubscriptionTopic {
   Map<String, dynamic> toJson() => _$SubscriptionTopicToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicResourceTrigger {
   const SubscriptionTopicResourceTrigger({
     required this.id,
@@ -1040,7 +1063,7 @@ class SubscriptionTopicResourceTrigger {
     required this.resource,
     @JsonKey(name: '_resource') required this.resourceElement,
     required this.supportedInteraction,
-    @JsonKey('__supportedInteraction')
+    @JsonKey(name: '__supportedInteraction')
         required this.supportedInteractionElement,
     required this.queryCriteria,
     required this.fhirPathCriteria,
@@ -1066,6 +1089,7 @@ class SubscriptionTopicResourceTrigger {
       _$SubscriptionTopicResourceTriggerToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicQueryCriteria {
   const SubscriptionTopicQueryCriteria({
     required this.id,
@@ -1100,6 +1124,7 @@ class SubscriptionTopicQueryCriteria {
   Map<String, dynamic> toJson() => _$SubscriptionTopicQueryCriteriaToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicEventTrigger {
   const SubscriptionTopicEventTrigger({
     required this.id,
@@ -1124,6 +1149,7 @@ class SubscriptionTopicEventTrigger {
   Map<String, dynamic> toJson() => _$SubscriptionTopicEventTriggerToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicCanFilterBy {
   const SubscriptionTopicCanFilterBy({
     required this.id,
@@ -1158,6 +1184,7 @@ class SubscriptionTopicCanFilterBy {
   Map<String, dynamic> toJson() => _$SubscriptionTopicCanFilterByToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicNotificationShape {
   const SubscriptionTopicNotificationShape({
     required this.id,

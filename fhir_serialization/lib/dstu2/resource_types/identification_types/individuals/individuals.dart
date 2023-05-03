@@ -38,10 +38,10 @@ class Patient {
     required this.address,
     required this.maritalStatus,
     required this.multipleBirthBoolean,
-    @JsonKey('__multipleBirthBoolean')
+    @JsonKey(name: '__multipleBirthBoolean')
         required this.multipleBirthBooleanElement,
     required this.multipleBirthInteger,
-    @JsonKey('__multipleBirthInteger')
+    @JsonKey(name: '__multipleBirthInteger')
         required this.multipleBirthIntegerElement,
     required this.photo,
     required this.contact,
@@ -96,6 +96,7 @@ class Patient {
   Map<String, dynamic> toJson() => _$PatientToJson(this);
 }
 
+@JsonSerializable()
 class PatientContact {
   const PatientContact({
     required this.id,
@@ -126,6 +127,7 @@ class PatientContact {
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
 }
 
+@JsonSerializable()
 class PatientAnimal {
   const PatientAnimal({
     required this.id,
@@ -146,6 +148,7 @@ class PatientAnimal {
   Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
 }
 
+@JsonSerializable()
 class PatientCommunication {
   const PatientCommunication({
     required this.id,
@@ -166,6 +169,7 @@ class PatientCommunication {
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
 }
 
+@JsonSerializable()
 class PatientLink {
   const PatientLink({
     required this.id,
@@ -186,6 +190,7 @@ class PatientLink {
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }
 
+@JsonSerializable()
 class Practitioner {
   const Practitioner({
     @Default(Dstu2ResourceType.Practitioner) required this.resourceType,
@@ -245,6 +250,7 @@ class Practitioner {
   Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
 
+@JsonSerializable()
 class PractitionerPractitionerRole {
   const PractitionerPractitionerRole({
     required this.id,
@@ -273,6 +279,7 @@ class PractitionerPractitionerRole {
   Map<String, dynamic> toJson() => _$PractitionerPractitionerRoleToJson(this);
 }
 
+@JsonSerializable()
 class PractitionerQualification {
   const PractitionerQualification({
     required this.id,
@@ -295,6 +302,7 @@ class PractitionerQualification {
   Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }
 
+@JsonSerializable()
 class RelatedPerson {
   const RelatedPerson({
     @Default(Dstu2ResourceType.RelatedPerson) required this.resourceType,

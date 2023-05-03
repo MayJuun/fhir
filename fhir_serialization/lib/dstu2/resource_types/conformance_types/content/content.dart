@@ -137,6 +137,7 @@ class StructureDefinitionContact {
   Map<String, dynamic> toJson() => _$StructureDefinitionContactToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionMapping {
   const StructureDefinitionMapping({
     required this.id,
@@ -169,6 +170,7 @@ class StructureDefinitionMapping {
   Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionSnapshot {
   const StructureDefinitionSnapshot({
     required this.id,
@@ -185,6 +187,7 @@ class StructureDefinitionSnapshot {
   Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
 }
 
+@JsonSerializable()
 class StructureDefinitionDifferential {
   const StructureDefinitionDifferential({
     required this.id,
@@ -202,6 +205,7 @@ class StructureDefinitionDifferential {
       _$StructureDefinitionDifferentialToJson(this);
 }
 
+@JsonSerializable()
 class DataElement {
   const DataElement({
     @Default(Dstu2ResourceType.DataElement) required this.resourceType,
@@ -258,6 +262,7 @@ class DataElement {
   Map<String, dynamic> toJson() => _$DataElementToJson(this);
 }
 
+@JsonSerializable()
 class DataElementContact {
   const DataElementContact({
     required this.id,
@@ -276,6 +281,7 @@ class DataElementContact {
   Map<String, dynamic> toJson() => _$DataElementContactToJson(this);
 }
 
+@JsonSerializable()
 class DataElementMapping {
   const DataElementMapping({
     required this.id,

@@ -68,6 +68,7 @@ class Endpoint {
   Map<String, dynamic> toJson() => _$EndpointToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareService {
   const HealthcareService({
     @Default(R4ResourceType.HealthcareService) required this.resourceType,
@@ -110,7 +111,7 @@ class HealthcareService {
     required this.availableTime,
     required this.notAvailable,
     required this.availabilityExceptions,
-    @JsonKey('__availabilityExceptions')
+    @JsonKey(name: '__availabilityExceptions')
         required this.availabilityExceptionsElement,
     required this.endpoint,
   });
@@ -161,6 +162,7 @@ class HealthcareService {
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceEligibility {
   const HealthcareServiceEligibility({
     required this.id,
@@ -181,6 +183,7 @@ class HealthcareServiceEligibility {
   Map<String, dynamic> toJson() => _$HealthcareServiceEligibilityToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceAvailableTime {
   const HealthcareServiceAvailableTime({
     required this.id,
@@ -212,6 +215,7 @@ class HealthcareServiceAvailableTime {
   Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceNotAvailable {
   const HealthcareServiceNotAvailable({
     required this.id,
@@ -232,6 +236,7 @@ class HealthcareServiceNotAvailable {
   Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 
+@JsonSerializable()
 class Location {
   const Location({
     @Default(R4ResourceType.Location) required this.resourceType,
@@ -266,7 +271,7 @@ class Location {
     required this.partOf,
     required this.hoursOfOperation,
     required this.availabilityExceptions,
-    @JsonKey('__availabilityExceptions')
+    @JsonKey(name: '__availabilityExceptions')
         required this.availabilityExceptionsElement,
     required this.endpoint,
   });
@@ -310,6 +315,7 @@ class Location {
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
+@JsonSerializable()
 class LocationPosition {
   const LocationPosition({
     required this.id,
@@ -336,6 +342,7 @@ class LocationPosition {
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
+@JsonSerializable()
 class LocationHoursOfOperation {
   const LocationHoursOfOperation({
     required this.id,
@@ -366,6 +373,7 @@ class LocationHoursOfOperation {
   Map<String, dynamic> toJson() => _$LocationHoursOfOperationToJson(this);
 }
 
+@JsonSerializable()
 class Organization {
   const Organization({
     @Default(R4ResourceType.Organization) required this.resourceType,
@@ -422,6 +430,7 @@ class Organization {
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationContact {
   const OrganizationContact({
     required this.id,
@@ -444,6 +453,7 @@ class OrganizationContact {
   Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationAffiliation {
   const OrganizationAffiliation({
     @Default(R4ResourceType.OrganizationAffiliation) required this.resourceType,

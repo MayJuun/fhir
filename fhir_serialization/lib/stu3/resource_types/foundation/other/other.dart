@@ -49,6 +49,7 @@ class Basic {
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
+@JsonSerializable()
 class Binary {
   const Binary({
     @Default(Stu3ResourceType.Binary) required this.resourceType,
@@ -88,6 +89,7 @@ class Binary {
   Map<String, dynamic> toJson() => _$BinaryToJson(this);
 }
 
+@JsonSerializable()
 class Bundle {
   const Bundle({
     @Default(Stu3ResourceType.Bundle) required this.resourceType,
@@ -133,6 +135,7 @@ class Bundle {
   Map<String, dynamic> toJson() => _$BundleToJson(this);
 }
 
+@JsonSerializable()
 class BundleLink {
   const BundleLink({
     required this.relation,
@@ -149,6 +152,7 @@ class BundleLink {
   Map<String, dynamic> toJson() => _$BundleLinkToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntry {
   const BundleEntry({
     required this.link,
@@ -171,6 +175,7 @@ class BundleEntry {
   Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
 }
 
+@JsonSerializable()
 class BundleSearch {
   const BundleSearch({
     required this.mode,
@@ -187,6 +192,7 @@ class BundleSearch {
   Map<String, dynamic> toJson() => _$BundleSearchToJson(this);
 }
 
+@JsonSerializable()
 class BundleRequest {
   const BundleRequest({
     required this.method,
@@ -219,6 +225,7 @@ class BundleRequest {
   Map<String, dynamic> toJson() => _$BundleRequestToJson(this);
 }
 
+@JsonSerializable()
 class BundleResponse {
   const BundleResponse({
     required this.status,
@@ -245,6 +252,7 @@ class BundleResponse {
   Map<String, dynamic> toJson() => _$BundleResponseToJson(this);
 }
 
+@JsonSerializable()
 class Linkage {
   const Linkage({
     @Default(Stu3ResourceType.Linkage) required this.resourceType,
@@ -283,6 +291,7 @@ class Linkage {
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
 
+@JsonSerializable()
 class LinkageItem {
   const LinkageItem({
     required this.type,
@@ -297,6 +306,7 @@ class LinkageItem {
   Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
 }
 
+@JsonSerializable()
 class Media {
   const Media({
     @Default(Stu3ResourceType.Media) required this.resourceType,
@@ -377,6 +387,7 @@ class Media {
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeader {
   const MessageHeader({
     @Default(Stu3ResourceType.MessageHeader) required this.resourceType,
@@ -433,6 +444,7 @@ class MessageHeader {
   Map<String, dynamic> toJson() => _$MessageHeaderToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderDestination {
   const MessageHeaderDestination({
     required this.name,
@@ -451,6 +463,7 @@ class MessageHeaderDestination {
   Map<String, dynamic> toJson() => _$MessageHeaderDestinationToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderSource {
   const MessageHeaderSource({
     required this.name,
@@ -477,6 +490,7 @@ class MessageHeaderSource {
   Map<String, dynamic> toJson() => _$MessageHeaderSourceToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderResponse {
   const MessageHeaderResponse({
     required this.identifier,
@@ -495,6 +509,7 @@ class MessageHeaderResponse {
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcome {
   const OperationOutcome({
     @Default(Stu3ResourceType.OperationOutcome) required this.resourceType,
@@ -527,6 +542,7 @@ class OperationOutcome {
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcomeIssue {
   const OperationOutcomeIssue({
     required this.severity,
@@ -557,6 +573,7 @@ class OperationOutcomeIssue {
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
 
+@JsonSerializable()
 class Parameters {
   const Parameters({
     @Default(Stu3ResourceType.Parameters) required this.resourceType,
@@ -589,6 +606,7 @@ class Parameters {
   Map<String, dynamic> toJson() => _$ParametersToJson(this);
 }
 
+@JsonSerializable()
 class ParametersParameter {
   const ParametersParameter({
     required this.name,
@@ -745,6 +763,7 @@ class ParametersParameter {
   Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
 }
 
+@JsonSerializable()
 class Subscription {
   const Subscription({
     @Default(Stu3ResourceType.Subscription) required this.resourceType,
@@ -801,6 +820,7 @@ class Subscription {
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionChannel {
   const SubscriptionChannel({
     required this.type,

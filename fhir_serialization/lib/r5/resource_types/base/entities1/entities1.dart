@@ -74,6 +74,7 @@ class Endpoint {
   Map<String, dynamic> toJson() => _$EndpointToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareService {
   const HealthcareService({
     @Default(R5ResourceType.HealthcareService) required this.resourceType,
@@ -161,6 +162,7 @@ class HealthcareService {
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceEligibility {
   const HealthcareServiceEligibility({
     required this.id,
@@ -181,6 +183,7 @@ class HealthcareServiceEligibility {
   Map<String, dynamic> toJson() => _$HealthcareServiceEligibilityToJson(this);
 }
 
+@JsonSerializable()
 class Location {
   const Location({
     @Default(R5ResourceType.Location) required this.resourceType,
@@ -257,6 +260,7 @@ class Location {
   Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
+@JsonSerializable()
 class LocationPosition {
   const LocationPosition({
     required this.id,
@@ -283,6 +287,7 @@ class LocationPosition {
   Map<String, dynamic> toJson() => _$LocationPositionToJson(this);
 }
 
+@JsonSerializable()
 class Organization {
   const Organization({
     @Default(R5ResourceType.Organization) required this.resourceType,
@@ -341,6 +346,7 @@ class Organization {
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationQualification {
   const OrganizationQualification({
     required this.id,
@@ -363,6 +369,7 @@ class OrganizationQualification {
   Map<String, dynamic> toJson() => _$OrganizationQualificationToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationAffiliation {
   const OrganizationAffiliation({
     @Default(R5ResourceType.OrganizationAffiliation) required this.resourceType,

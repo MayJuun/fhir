@@ -66,6 +66,7 @@ class AuditEvent {
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventAgent {
   const AuditEventAgent({
     required this.role,
@@ -104,6 +105,7 @@ class AuditEventAgent {
   Map<String, dynamic> toJson() => _$AuditEventAgentToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventNetwork {
   const AuditEventNetwork({
     required this.address,
@@ -120,6 +122,7 @@ class AuditEventNetwork {
   Map<String, dynamic> toJson() => _$AuditEventNetworkToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
     required this.site,
@@ -136,6 +139,7 @@ class AuditEventSource {
   Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventEntity {
   const AuditEventEntity({
     required this.identifier,
@@ -170,6 +174,7 @@ class AuditEventEntity {
   Map<String, dynamic> toJson() => _$AuditEventEntityToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventDetail {
   const AuditEventDetail({
     required this.type,
@@ -186,6 +191,7 @@ class AuditEventDetail {
   Map<String, dynamic> toJson() => _$AuditEventDetailToJson(this);
 }
 
+@JsonSerializable()
 class Consent {
   const Consent({
     @Default(Stu3ResourceType.Consent) required this.resourceType,
@@ -262,6 +268,7 @@ class Consent {
   Map<String, dynamic> toJson() => _$ConsentToJson(this);
 }
 
+@JsonSerializable()
 class ConsentActor {
   const ConsentActor({
     required this.role,
@@ -274,6 +281,7 @@ class ConsentActor {
   Map<String, dynamic> toJson() => _$ConsentActorToJson(this);
 }
 
+@JsonSerializable()
 class ConsentPolicy {
   const ConsentPolicy({
     required this.authority,
@@ -290,6 +298,7 @@ class ConsentPolicy {
   Map<String, dynamic> toJson() => _$ConsentPolicyToJson(this);
 }
 
+@JsonSerializable()
 class ConsentData {
   const ConsentData({
     required this.meaning,
@@ -304,6 +313,7 @@ class ConsentData {
   Map<String, dynamic> toJson() => _$ConsentDataToJson(this);
 }
 
+@JsonSerializable()
 class ConsentExcept {
   const ConsentExcept({
     required this.type,
@@ -334,6 +344,7 @@ class ConsentExcept {
   Map<String, dynamic> toJson() => _$ConsentExceptToJson(this);
 }
 
+@JsonSerializable()
 class ConsentActor1 {
   const ConsentActor1({
     required this.role,
@@ -346,6 +357,7 @@ class ConsentActor1 {
   Map<String, dynamic> toJson() => _$ConsentActor1ToJson(this);
 }
 
+@JsonSerializable()
 class ConsentData1 {
   const ConsentData1({
     required this.meaning,
@@ -360,6 +372,7 @@ class ConsentData1 {
   Map<String, dynamic> toJson() => _$ConsentData1ToJson(this);
 }
 
+@JsonSerializable()
 class Provenance {
   const Provenance({
     @Default(Stu3ResourceType.Provenance) required this.resourceType,
@@ -414,6 +427,7 @@ class Provenance {
   Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
     required this.role,
@@ -438,6 +452,7 @@ class ProvenanceAgent {
   Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
     required this.role,

@@ -51,6 +51,7 @@ class Order {
   Map<String, dynamic> toJson() => _$OrderToJson(this);
 }
 
+@JsonSerializable()
 class OrderWhen {
   const OrderWhen({
     required this.id,
@@ -71,6 +72,7 @@ class OrderWhen {
   Map<String, dynamic> toJson() => _$OrderWhenToJson(this);
 }
 
+@JsonSerializable()
 class OrderResponse {
   const OrderResponse({
     @Default(Dstu2ResourceType.OrderResponse) required this.resourceType,
@@ -114,6 +116,7 @@ class OrderResponse {
   Map<String, dynamic> toJson() => _$OrderResponseToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequest {
   const CommunicationRequest({
     @Default(Dstu2ResourceType.CommunicationRequest) required this.resourceType,
@@ -179,6 +182,7 @@ class CommunicationRequest {
   Map<String, dynamic> toJson() => _$CommunicationRequestToJson(this);
 }
 
+@JsonSerializable()
 class CommunicationRequestPayload {
   const CommunicationRequestPayload({
     required this.id,
@@ -201,6 +205,7 @@ class CommunicationRequestPayload {
   Map<String, dynamic> toJson() => _$CommunicationRequestPayloadToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUseRequest {
   const DeviceUseRequest({
     @Default(Dstu2ResourceType.DeviceUseRequest) required this.resourceType,
@@ -269,6 +274,7 @@ class DeviceUseRequest {
   Map<String, dynamic> toJson() => _$DeviceUseRequestToJson(this);
 }
 
+@JsonSerializable()
 class DeviceUseStatement {
   const DeviceUseStatement({
     @Default(Dstu2ResourceType.DeviceUseStatement) required this.resourceType,

@@ -60,6 +60,7 @@ class Organization {
   Map<String, dynamic> toJson() => _$OrganizationToJson(this);
 }
 
+@JsonSerializable()
 class OrganizationContact {
   const OrganizationContact({
     required this.id,
@@ -84,6 +85,7 @@ class OrganizationContact {
   Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareService {
   const HealthcareService({
     @Default(Dstu2ResourceType.HealthcareService) required this.resourceType,
@@ -123,7 +125,7 @@ class HealthcareService {
     required this.availableTime,
     required this.notAvailable,
     required this.availabilityExceptions,
-    @JsonKey('__availabilityExceptions')
+    @JsonKey(name: '__availabilityExceptions')
         required this.availabilityExceptionsElement,
   });
   final Dstu2ResourceType resourceType;
@@ -169,6 +171,7 @@ class HealthcareService {
   Map<String, dynamic> toJson() => _$HealthcareServiceToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceServiceType {
   const HealthcareServiceServiceType({
     required this.id,
@@ -187,6 +190,7 @@ class HealthcareServiceServiceType {
   Map<String, dynamic> toJson() => _$HealthcareServiceServiceTypeToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceAvailableTime {
   const HealthcareServiceAvailableTime({
     required this.id,
@@ -218,6 +222,7 @@ class HealthcareServiceAvailableTime {
   Map<String, dynamic> toJson() => _$HealthcareServiceAvailableTimeToJson(this);
 }
 
+@JsonSerializable()
 class HealthcareServiceNotAvailable {
   const HealthcareServiceNotAvailable({
     required this.id,
@@ -238,6 +243,7 @@ class HealthcareServiceNotAvailable {
   Map<String, dynamic> toJson() => _$HealthcareServiceNotAvailableToJson(this);
 }
 
+@JsonSerializable()
 class Group {
   const Group({
     @Default(Dstu2ResourceType.Group) required this.resourceType,
@@ -291,6 +297,7 @@ class Group {
   Map<String, dynamic> toJson() => _$GroupToJson(this);
 }
 
+@JsonSerializable()
 class GroupCharacteristic {
   const GroupCharacteristic({
     required this.id,
@@ -321,6 +328,7 @@ class GroupCharacteristic {
   Map<String, dynamic> toJson() => _$GroupCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class GroupMember {
   const GroupMember({
     required this.id,

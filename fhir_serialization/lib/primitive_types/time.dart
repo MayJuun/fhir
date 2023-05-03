@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:yaml/yaml.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
 import 'comparator.dart';

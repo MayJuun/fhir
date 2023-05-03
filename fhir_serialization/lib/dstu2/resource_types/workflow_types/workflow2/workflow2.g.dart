@@ -221,3 +221,437 @@ const _$ProcessRequestActionEnumMap = {
   ProcessRequestAction.status: 'status',
   ProcessRequestAction.unknown: 'unknown',
 };
+
+ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) =>
+    ProcessRequestItem(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      sequenceLinkId: Integer.fromJson(json['sequenceLinkId']),
+    );
+
+Map<String, dynamic> _$ProcessRequestItemToJson(ProcessRequestItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['sequenceLinkId'] = instance.sequenceLinkId.toJson();
+  return val;
+}
+
+ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
+    ProcessResponse(
+      resourceType:
+          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      outcome: json['outcome'] == null
+          ? null
+          : Coding.fromJson(json['outcome'] as Map<String, dynamic>),
+      disposition: json['disposition'] as String?,
+      ruleset: json['ruleset'] == null
+          ? null
+          : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
+      originalRuleset: json['originalRuleset'] == null
+          ? null
+          : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
+      created: json['created'] == null
+          ? null
+          : FhirDateTime.fromJson(json['created']),
+      organization: json['organization'] == null
+          ? null
+          : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+      requestProvider: json['requestProvider'] == null
+          ? null
+          : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
+      requestOrganization: json['requestOrganization'] == null
+          ? null
+          : Reference.fromJson(
+              json['requestOrganization'] as Map<String, dynamic>),
+      form: json['form'] == null
+          ? null
+          : Coding.fromJson(json['form'] as Map<String, dynamic>),
+      notes: (json['notes'] as List<dynamic>?)
+          ?.map((e) => ProcessResponseNotes.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      error: (json['error'] as List<dynamic>?)
+          ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ProcessResponseToJson(ProcessResponse instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('request', instance.request?.toJson());
+  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('disposition', instance.disposition);
+  writeNotNull('ruleset', instance.ruleset?.toJson());
+  writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
+  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('requestProvider', instance.requestProvider?.toJson());
+  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
+  writeNotNull('form', instance.form?.toJson());
+  writeNotNull('notes', instance.notes?.map((e) => e.toJson()).toList());
+  writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+ProcessResponseNotes _$ProcessResponseNotesFromJson(
+        Map<String, dynamic> json) =>
+    ProcessResponseNotes(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: json['type'] == null
+          ? null
+          : Coding.fromJson(json['type'] as Map<String, dynamic>),
+      text: json['text'] as String?,
+    );
+
+Map<String, dynamic> _$ProcessResponseNotesToJson(
+    ProcessResponseNotes instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('text', instance.text);
+  return val;
+}
+
+SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) =>
+    SupplyRequest(
+      resourceType:
+          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      patient: json['patient'] == null
+          ? null
+          : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      source: json['source'] == null
+          ? null
+          : Reference.fromJson(json['source'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      status: $enumDecodeNullable(_$SupplyRequestStatusEnumMap, json['status']),
+      statusElement: json['statusElement'] == null
+          ? null
+          : Element.fromJson(json['statusElement'] as Map<String, dynamic>),
+      kind: json['kind'] == null
+          ? null
+          : CodeableConcept.fromJson(json['kind'] as Map<String, dynamic>),
+      orderedItem: json['orderedItem'] == null
+          ? null
+          : Reference.fromJson(json['orderedItem'] as Map<String, dynamic>),
+      supplier: (json['supplier'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reasonCodeableConcept: json['reasonCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['reasonCodeableConcept'] as Map<String, dynamic>),
+      reasonReference: json['reasonReference'] == null
+          ? null
+          : Reference.fromJson(json['reasonReference'] as Map<String, dynamic>),
+      when: json['when'] == null
+          ? null
+          : SupplyRequestWhen.fromJson(json['when'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('status', _$SupplyRequestStatusEnumMap[instance.status]);
+  writeNotNull('statusElement', instance.statusElement?.toJson());
+  writeNotNull('kind', instance.kind?.toJson());
+  writeNotNull('orderedItem', instance.orderedItem?.toJson());
+  writeNotNull('supplier', instance.supplier?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
+  writeNotNull('reasonReference', instance.reasonReference?.toJson());
+  writeNotNull('when', instance.when?.toJson());
+  return val;
+}
+
+const _$SupplyRequestStatusEnumMap = {
+  SupplyRequestStatus.requested: 'requested',
+  SupplyRequestStatus.completed: 'completed',
+  SupplyRequestStatus.failed: 'failed',
+  SupplyRequestStatus.cancelled: 'cancelled',
+  SupplyRequestStatus.unknown: 'unknown',
+};
+
+SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) =>
+    SupplyRequestWhen(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      schedule: json['schedule'] == null
+          ? null
+          : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$SupplyRequestWhenToJson(SupplyRequestWhen instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('schedule', instance.schedule?.toJson());
+  return val;
+}
+
+SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) =>
+    SupplyDelivery(
+      resourceType:
+          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      status:
+          $enumDecodeNullable(_$SupplyDeliveryStatusEnumMap, json['status']),
+      statusElement: json['statusElement'] == null
+          ? null
+          : Element.fromJson(json['statusElement'] as Map<String, dynamic>),
+      patient: json['patient'] == null
+          ? null
+          : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      type: json['type'] == null
+          ? null
+          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      quantity: json['quantity'] == null
+          ? null
+          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      suppliedItem: json['suppliedItem'] == null
+          ? null
+          : Reference.fromJson(json['suppliedItem'] as Map<String, dynamic>),
+      supplier: json['supplier'] == null
+          ? null
+          : Reference.fromJson(json['supplier'] as Map<String, dynamic>),
+      whenPrepared: json['whenPrepared'] == null
+          ? null
+          : Period.fromJson(json['whenPrepared'] as Map<String, dynamic>),
+      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      destination: json['destination'] == null
+          ? null
+          : Reference.fromJson(json['destination'] as Map<String, dynamic>),
+      receiver: (json['receiver'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('status', _$SupplyDeliveryStatusEnumMap[instance.status]);
+  writeNotNull('statusElement', instance.statusElement?.toJson());
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('suppliedItem', instance.suppliedItem?.toJson());
+  writeNotNull('supplier', instance.supplier?.toJson());
+  writeNotNull('whenPrepared', instance.whenPrepared?.toJson());
+  writeNotNull('time', instance.time?.toJson());
+  writeNotNull('destination', instance.destination?.toJson());
+  writeNotNull('receiver', instance.receiver?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+const _$SupplyDeliveryStatusEnumMap = {
+  SupplyDeliveryStatus.in_progress: 'in-progress',
+  SupplyDeliveryStatus.completed: 'completed',
+  SupplyDeliveryStatus.abandoned: 'abandoned',
+  SupplyDeliveryStatus.unknown: 'unknown',
+};

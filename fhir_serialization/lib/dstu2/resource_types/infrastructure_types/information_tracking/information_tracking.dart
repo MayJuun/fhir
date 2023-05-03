@@ -67,6 +67,7 @@ class Questionnaire {
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireGroup {
   const QuestionnaireGroup({
     required this.id,
@@ -103,6 +104,7 @@ class QuestionnaireGroup {
   Map<String, dynamic> toJson() => _$QuestionnaireGroupToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireGroupQuestion {
   const QuestionnaireGroupQuestion({
     required this.id,
@@ -139,6 +141,7 @@ class QuestionnaireGroupQuestion {
   Map<String, dynamic> toJson() => _$QuestionnaireGroupQuestionToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponse {
   const QuestionnaireResponse({
     @Default(Dstu2ResourceType.QuestionnaireResponse)
@@ -195,6 +198,7 @@ class QuestionnaireResponse {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseGroup {
   const QuestionnaireResponseGroup({
     required this.id,
@@ -227,6 +231,7 @@ class QuestionnaireResponseGroup {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseGroupToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseGroupQuestion {
   const QuestionnaireResponseGroupQuestion({
     required this.id,
@@ -253,6 +258,7 @@ class QuestionnaireResponseGroupQuestion {
       _$QuestionnaireResponseGroupQuestionToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
     required this.id,
@@ -277,6 +283,7 @@ class ProvenanceAgent {
   Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
     required this.id,
@@ -307,6 +314,7 @@ class ProvenanceEntity {
   Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceAgentRelatedAgent {
   const ProvenanceAgentRelatedAgent({
     required this.id,
@@ -325,6 +333,7 @@ class ProvenanceAgentRelatedAgent {
   Map<String, dynamic> toJson() => _$ProvenanceAgentRelatedAgentToJson(this);
 }
 
+@JsonSerializable()
 class AuditEvent {
   const AuditEvent({
     @Default(Dstu2ResourceType.AuditEvent) required this.resourceType,
@@ -363,6 +372,7 @@ class AuditEvent {
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventEvent {
   const AuditEventEvent({
     required this.id,
@@ -391,6 +401,7 @@ class AuditEventEvent {
   Map<String, dynamic> toJson() => _$AuditEventEventToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventParticipant {
   const AuditEventParticipant({
     required this.id,
@@ -429,6 +440,7 @@ class AuditEventParticipant {
   Map<String, dynamic> toJson() => _$AuditEventParticipantToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
     required this.id,
@@ -451,6 +463,7 @@ class AuditEventSource {
   Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventObject {
   const AuditEventObject({
     required this.id,
@@ -487,6 +500,7 @@ class AuditEventObject {
   Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventParticipantNetwork {
   const AuditEventParticipantNetwork({
     required this.id,
@@ -509,6 +523,7 @@ class AuditEventParticipantNetwork {
   Map<String, dynamic> toJson() => _$AuditEventParticipantNetworkToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventObjectDetail {
   const AuditEventObjectDetail({
     required this.id,

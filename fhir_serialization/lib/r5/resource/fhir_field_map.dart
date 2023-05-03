@@ -1,5 +1,6 @@
 part of 'resource.dart';
 
+@JsonSerializable()
 class FhirField {
   const FhirField(this.isList, this.type);
   final bool isList;

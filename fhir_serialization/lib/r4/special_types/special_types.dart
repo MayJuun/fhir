@@ -26,6 +26,7 @@ class Narrative {
   Map<String, dynamic> toJson() => _$NarrativeToJson(this);
 }
 
+@JsonSerializable()
 class CodeableReference {
   const CodeableReference({
     required this.id,
@@ -42,17 +43,18 @@ class CodeableReference {
   Map<String, dynamic> toJson() => _$CodeableReferenceToJson(this);
 }
 
+@JsonSerializable()
 class Reference {
   const Reference({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.reference,
-    @JsonKey(name: '_reference') required this.referenceElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.identifier,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.reference,
+    @JsonKey(name: '_reference') this.referenceElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.identifier,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -68,6 +70,7 @@ class Reference {
   Map<String, dynamic> toJson() => _$ReferenceToJson(this);
 }
 
+@JsonSerializable()
 class Meta {
   const Meta({
     required this.id,
@@ -97,6 +100,7 @@ class Meta {
   Map<String, dynamic> toJson() => _$MetaToJson(this);
 }
 
+@JsonSerializable()
 class Dosage {
   const Dosage({
     required this.id,
@@ -147,6 +151,7 @@ class Dosage {
   Map<String, dynamic> toJson() => _$DosageToJson(this);
 }
 
+@JsonSerializable()
 class DosageDoseAndRate {
   const DosageDoseAndRate({
     required this.id,
@@ -173,6 +178,7 @@ class DosageDoseAndRate {
   Map<String, dynamic> toJson() => _$DosageDoseAndRateToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinition {
   const ElementDefinition({
     Boolean? mustSupport,
@@ -192,82 +198,88 @@ class ElementDefinition {
 class ElementDefinitionSlicing {
   const ElementDefinitionSlicing({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.path,
-    @JsonKey('__path') required this.pathElement,
+    @JsonKey(name: '__path') required this.pathElement,
     required this.representation,
-    @JsonKey('__representation') required this.representationElement,
+    @JsonKey(name: '__representation') required this.representationElement,
     required this.sliceName,
-    @JsonKey('__sliceName') required this.sliceNameElement,
+    @JsonKey(name: '__sliceName') required this.sliceNameElement,
     required this.sliceIsConstraining,
-    @JsonKey('__sliceIsConstraining') required this.sliceIsConstrainingElement,
+    @JsonKey(name: '__sliceIsConstraining')
+        required this.sliceIsConstrainingElement,
     required this.label,
-    @JsonKey('__label') required this.labelElement,
+    @JsonKey(name: '__label') required this.labelElement,
     required this.code,
     required this.slicing,
     required this.short,
-    @JsonKey('__short') required this.shortElement,
+    @JsonKey(name: '__short') required this.shortElement,
     required this.definition,
-    @JsonKey('__definition') required this.definitionElement,
+    @JsonKey(name: '__definition') required this.definitionElement,
     required this.comment,
-    @JsonKey('__comment') required this.commentElement,
+    @JsonKey(name: '__comment') required this.commentElement,
     required this.requirements,
-    @JsonKey('__requirements') required this.requirementsElement,
+    @JsonKey(name: '__requirements') required this.requirementsElement,
     required this.alias,
-    @JsonKey('__alias') required this.aliasElement,
+    @JsonKey(name: '__alias') required this.aliasElement,
     required this.min,
-    @JsonKey('__min') required this.minElement,
+    @JsonKey(name: '__min') required this.minElement,
     required this.max,
-    @JsonKey('__max') required this.maxElement,
+    @JsonKey(name: '__max') required this.maxElement,
     required this.base,
     required this.contentReference,
-    @JsonKey('__contentReference') required this.contentReferenceElement,
+    @JsonKey(name: '__contentReference') required this.contentReferenceElement,
     required this.type,
     required this.defaultValueBase64Binary,
-    @JsonKey('__defaultValueBase64Binary')
+    @JsonKey(name: '__defaultValueBase64Binary')
         required this.defaultValueBase64BinaryElement,
     required this.defaultValueBoolean,
-    @JsonKey('__defaultValueBoolean') required this.defaultValueBooleanElement,
+    @JsonKey(name: '__defaultValueBoolean')
+        required this.defaultValueBooleanElement,
     required this.defaultValueCanonical,
-    @JsonKey('__defaultValueCanonical')
+    @JsonKey(name: '__defaultValueCanonical')
         required this.defaultValueCanonicalElement,
     required this.defaultValueCode,
-    @JsonKey('__defaultValueCode') required this.defaultValueCodeElement,
+    @JsonKey(name: '__defaultValueCode') required this.defaultValueCodeElement,
     required this.defaultValueDate,
-    @JsonKey('__defaultValueDate') required this.defaultValueDateElement,
+    @JsonKey(name: '__defaultValueDate') required this.defaultValueDateElement,
     required this.defaultValueDateTime,
-    @JsonKey('__defaultValueDateTime')
+    @JsonKey(name: '__defaultValueDateTime')
         required this.defaultValueDateTimeElement,
     required this.defaultValueDecimal,
-    @JsonKey('__defaultValueDecimal') required this.defaultValueDecimalElement,
+    @JsonKey(name: '__defaultValueDecimal')
+        required this.defaultValueDecimalElement,
     required this.defaultValueId,
-    @JsonKey('__defaultValueId') required this.defaultValueIdElement,
+    @JsonKey(name: '__defaultValueId') required this.defaultValueIdElement,
     required this.defaultValueInstant,
-    @JsonKey('__defaultValueInstant') required this.defaultValueInstantElement,
+    @JsonKey(name: '__defaultValueInstant')
+        required this.defaultValueInstantElement,
     required this.defaultValueInteger,
-    @JsonKey('__defaultValueInteger') required this.defaultValueIntegerElement,
+    @JsonKey(name: '__defaultValueInteger')
+        required this.defaultValueIntegerElement,
     required this.defaultValueMarkdown,
-    @JsonKey('__defaultValueMarkdown')
+    @JsonKey(name: '__defaultValueMarkdown')
         required this.defaultValueMarkdownElement,
     required this.defaultValueOid,
-    @JsonKey('__defaultValueOid') required this.defaultValueOidElement,
+    @JsonKey(name: '__defaultValueOid') required this.defaultValueOidElement,
     required this.defaultValuePositiveInt,
-    @JsonKey('__defaultValuePositiveInt')
+    @JsonKey(name: '__defaultValuePositiveInt')
         required this.defaultValuePositiveIntElement,
     required this.defaultValueString,
-    @JsonKey('__defaultValueString') required this.defaultValueStringElement,
+    @JsonKey(name: '__defaultValueString')
+        required this.defaultValueStringElement,
     required this.defaultValueTime,
-    @JsonKey('__defaultValueTime') required this.defaultValueTimeElement,
+    @JsonKey(name: '__defaultValueTime') required this.defaultValueTimeElement,
     required this.defaultValueUnsignedInt,
-    @JsonKey('__defaultValueUnsignedInt')
+    @JsonKey(name: '__defaultValueUnsignedInt')
         required this.defaultValueUnsignedIntElement,
     required this.defaultValueUri,
-    @JsonKey('__defaultValueUri') required this.defaultValueUriElement,
+    @JsonKey(name: '__defaultValueUri') required this.defaultValueUriElement,
     required this.defaultValueUrl,
-    @JsonKey('__defaultValueUrl') required this.defaultValueUrlElement,
+    @JsonKey(name: '__defaultValueUrl') required this.defaultValueUrlElement,
     required this.defaultValueUuid,
-    @JsonKey('__defaultValueUuid') required this.defaultValueUuidElement,
+    @JsonKey(name: '__defaultValueUuid') required this.defaultValueUuidElement,
     required this.defaultValueAddress,
     required this.defaultValueAge,
     required this.defaultValueAnnotation,
@@ -301,47 +313,49 @@ class ElementDefinitionSlicing {
     required this.defaultValueUsageContext,
     required this.defaultValueDosage,
     required this.meaningWhenMissing,
-    @JsonKey('__meaningWhenMissing') required this.meaningWhenMissingElement,
+    @JsonKey(name: '__meaningWhenMissing')
+        required this.meaningWhenMissingElement,
     required this.orderMeaning,
-    @JsonKey('__orderMeaning') required this.orderMeaningElement,
+    @JsonKey(name: '__orderMeaning') required this.orderMeaningElement,
     required this.fixedBase64Binary,
-    @JsonKey('__fixedBase64Binary') required this.fixedBase64BinaryElement,
+    @JsonKey(name: '__fixedBase64Binary')
+        required this.fixedBase64BinaryElement,
     required this.fixedBoolean,
-    @JsonKey('__fixedBoolean') required this.fixedBooleanElement,
+    @JsonKey(name: '__fixedBoolean') required this.fixedBooleanElement,
     required this.fixedCanonical,
-    @JsonKey('__fixedCanonical') required this.fixedCanonicalElement,
+    @JsonKey(name: '__fixedCanonical') required this.fixedCanonicalElement,
     required this.fixedCode,
-    @JsonKey('__fixedCode') required this.fixedCodeElement,
+    @JsonKey(name: '__fixedCode') required this.fixedCodeElement,
     required this.fixedDate,
-    @JsonKey('__fixedDate') required this.fixedDateElement,
+    @JsonKey(name: '__fixedDate') required this.fixedDateElement,
     required this.fixedDateTime,
-    @JsonKey('__fixedDateTime') required this.fixedDateTimeElement,
+    @JsonKey(name: '__fixedDateTime') required this.fixedDateTimeElement,
     required this.fixedDecimal,
-    @JsonKey('__fixedDecimal') required this.fixedDecimalElement,
+    @JsonKey(name: '__fixedDecimal') required this.fixedDecimalElement,
     required this.fixedId,
-    @JsonKey('__fixedId') required this.fixedIdElement,
+    @JsonKey(name: '__fixedId') required this.fixedIdElement,
     required this.fixedInstant,
-    @JsonKey('__fixedInstant') required this.fixedInstantElement,
+    @JsonKey(name: '__fixedInstant') required this.fixedInstantElement,
     required this.fixedInteger,
-    @JsonKey('__fixedInteger') required this.fixedIntegerElement,
+    @JsonKey(name: '__fixedInteger') required this.fixedIntegerElement,
     required this.fixedMarkdown,
-    @JsonKey('__fixedMarkdown') required this.fixedMarkdownElement,
+    @JsonKey(name: '__fixedMarkdown') required this.fixedMarkdownElement,
     required this.fixedOid,
-    @JsonKey('__fixedOid') required this.fixedOidElement,
+    @JsonKey(name: '__fixedOid') required this.fixedOidElement,
     required this.fixedPositiveInt,
-    @JsonKey('__fixedPositiveInt') required this.fixedPositiveIntElement,
+    @JsonKey(name: '__fixedPositiveInt') required this.fixedPositiveIntElement,
     required this.fixedString,
-    @JsonKey('__fixedString') required this.fixedStringElement,
+    @JsonKey(name: '__fixedString') required this.fixedStringElement,
     required this.fixedTime,
-    @JsonKey('__fixedTime') required this.fixedTimeElement,
+    @JsonKey(name: '__fixedTime') required this.fixedTimeElement,
     required this.fixedUnsignedInt,
-    @JsonKey('__fixedUnsignedInt') required this.fixedUnsignedIntElement,
+    @JsonKey(name: '__fixedUnsignedInt') required this.fixedUnsignedIntElement,
     required this.fixedUri,
-    @JsonKey('__fixedUri') required this.fixedUriElement,
+    @JsonKey(name: '__fixedUri') required this.fixedUriElement,
     required this.fixedUrl,
-    @JsonKey('__fixedUrl') required this.fixedUrlElement,
+    @JsonKey(name: '__fixedUrl') required this.fixedUrlElement,
     required this.fixedUuid,
-    @JsonKey('__fixedUuid') required this.fixedUuidElement,
+    @JsonKey(name: '__fixedUuid') required this.fixedUuidElement,
     required this.fixedAddress,
     required this.fixedAge,
     required this.fixedAnnotation,
@@ -375,43 +389,46 @@ class ElementDefinitionSlicing {
     required this.fixedUsageContext,
     required this.fixedDosage,
     required this.patternBase64Binary,
-    @JsonKey('__patternBase64Binary') required this.patternBase64BinaryElement,
+    @JsonKey(name: '__patternBase64Binary')
+        required this.patternBase64BinaryElement,
     required this.patternBoolean,
-    @JsonKey('__patternBoolean') required this.patternBooleanElement,
+    @JsonKey(name: '__patternBoolean') required this.patternBooleanElement,
     required this.patternCanonical,
-    @JsonKey('__patternCanonical') required this.patternCanonicalElement,
+    @JsonKey(name: '__patternCanonical') required this.patternCanonicalElement,
     required this.patternCode,
-    @JsonKey('__patternCode') required this.patternCodeElement,
+    @JsonKey(name: '__patternCode') required this.patternCodeElement,
     required this.patternDate,
-    @JsonKey('__patternDate') required this.patternDateElement,
+    @JsonKey(name: '__patternDate') required this.patternDateElement,
     required this.patternDateTime,
-    @JsonKey('__patternDateTime') required this.patternDateTimeElement,
+    @JsonKey(name: '__patternDateTime') required this.patternDateTimeElement,
     required this.patternDecimal,
-    @JsonKey('__patternDecimal') required this.patternDecimalElement,
+    @JsonKey(name: '__patternDecimal') required this.patternDecimalElement,
     required this.patternId,
-    @JsonKey('__patternId') required this.patternIdElement,
+    @JsonKey(name: '__patternId') required this.patternIdElement,
     required this.patternInstant,
-    @JsonKey('__patternInstant') required this.patternInstantElement,
+    @JsonKey(name: '__patternInstant') required this.patternInstantElement,
     required this.patternInteger,
-    @JsonKey('__patternInteger') required this.patternIntegerElement,
+    @JsonKey(name: '__patternInteger') required this.patternIntegerElement,
     required this.patternMarkdown,
-    @JsonKey('__patternMarkdown') required this.patternMarkdownElement,
+    @JsonKey(name: '__patternMarkdown') required this.patternMarkdownElement,
     required this.patternOid,
-    @JsonKey('__patternOid') required this.patternOidElement,
+    @JsonKey(name: '__patternOid') required this.patternOidElement,
     required this.patternPositiveInt,
-    @JsonKey('__patternPositiveInt') required this.patternPositiveIntElement,
+    @JsonKey(name: '__patternPositiveInt')
+        required this.patternPositiveIntElement,
     required this.patternString,
-    @JsonKey('__patternString') required this.patternStringElement,
+    @JsonKey(name: '__patternString') required this.patternStringElement,
     required this.patternTime,
-    @JsonKey('__patternTime') required this.patternTimeElement,
+    @JsonKey(name: '__patternTime') required this.patternTimeElement,
     required this.patternUnsignedInt,
-    @JsonKey('__patternUnsignedInt') required this.patternUnsignedIntElement,
+    @JsonKey(name: '__patternUnsignedInt')
+        required this.patternUnsignedIntElement,
     required this.patternUri,
-    @JsonKey('__patternUri') required this.patternUriElement,
+    @JsonKey(name: '__patternUri') required this.patternUriElement,
     required this.patternUrl,
-    @JsonKey('__patternUrl') required this.patternUrlElement,
+    @JsonKey(name: '__patternUrl') required this.patternUrlElement,
     required this.patternUuid,
-    @JsonKey('__patternUuid') required this.patternUuidElement,
+    @JsonKey(name: '__patternUuid') required this.patternUuidElement,
     required this.patternAddress,
     required this.patternAge,
     required this.patternAnnotation,
@@ -446,54 +463,58 @@ class ElementDefinitionSlicing {
     required this.patternDosage,
     required this.example,
     required this.minValueDate,
-    @JsonKey('__minValueDate') required this.minValueDateElement,
+    @JsonKey(name: '__minValueDate') required this.minValueDateElement,
     required this.minValueDateTime,
-    @JsonKey('__minValueDateTime') required this.minValueDateTimeElement,
+    @JsonKey(name: '__minValueDateTime') required this.minValueDateTimeElement,
     required this.minValueInstant,
-    @JsonKey('__minValueInstant') required this.minValueInstantElement,
+    @JsonKey(name: '__minValueInstant') required this.minValueInstantElement,
     required this.minValueTime,
-    @JsonKey('__minValueTime') required this.minValueTimeElement,
+    @JsonKey(name: '__minValueTime') required this.minValueTimeElement,
     required this.minValueDecimal,
-    @JsonKey('__minValueDecimal') required this.minValueDecimalElement,
+    @JsonKey(name: '__minValueDecimal') required this.minValueDecimalElement,
     required this.minValueInteger,
-    @JsonKey('__minValueInteger') required this.minValueIntegerElement,
+    @JsonKey(name: '__minValueInteger') required this.minValueIntegerElement,
     required this.minValuePositiveInt,
-    @JsonKey('__minValuePositiveInt') required this.minValuePositiveIntElement,
+    @JsonKey(name: '__minValuePositiveInt')
+        required this.minValuePositiveIntElement,
     required this.minValueUnsignedInt,
-    @JsonKey('__minValueUnsignedInt') required this.minValueUnsignedIntElement,
+    @JsonKey(name: '__minValueUnsignedInt')
+        required this.minValueUnsignedIntElement,
     required this.minValueQuantity,
     required this.maxValueDate,
-    @JsonKey('__maxValueDate') required this.maxValueDateElement,
+    @JsonKey(name: '__maxValueDate') required this.maxValueDateElement,
     required this.maxValueDateTime,
-    @JsonKey('__maxValueDateTime') required this.maxValueDateTimeElement,
+    @JsonKey(name: '__maxValueDateTime') required this.maxValueDateTimeElement,
     required this.maxValueInstant,
-    @JsonKey('__maxValueInstant') required this.maxValueInstantElement,
+    @JsonKey(name: '__maxValueInstant') required this.maxValueInstantElement,
     required this.maxValueTime,
-    @JsonKey('__maxValueTime') required this.maxValueTimeElement,
+    @JsonKey(name: '__maxValueTime') required this.maxValueTimeElement,
     required this.maxValueDecimal,
-    @JsonKey('__maxValueDecimal') required this.maxValueDecimalElement,
+    @JsonKey(name: '__maxValueDecimal') required this.maxValueDecimalElement,
     required this.maxValueInteger,
-    @JsonKey('__maxValueInteger') required this.maxValueIntegerElement,
+    @JsonKey(name: '__maxValueInteger') required this.maxValueIntegerElement,
     required this.maxValuePositiveInt,
-    @JsonKey('__maxValuePositiveInt') required this.maxValuePositiveIntElement,
+    @JsonKey(name: '__maxValuePositiveInt')
+        required this.maxValuePositiveIntElement,
     required this.maxValueUnsignedInt,
-    @JsonKey('__maxValueUnsignedInt') required this.maxValueUnsignedIntElement,
+    @JsonKey(name: '__maxValueUnsignedInt')
+        required this.maxValueUnsignedIntElement,
     required this.maxValueQuantity,
     required this.maxLength,
-    @JsonKey('__maxLength') required this.maxLengthElement,
+    @JsonKey(name: '__maxLength') required this.maxLengthElement,
     required this.condition,
-    @JsonKey('__condition') required this.conditionElement,
+    @JsonKey(name: '__condition') required this.conditionElement,
     required this.constraint,
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.discriminator,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.ordered,
-    @JsonKey('__ordered') required this.orderedElement,
+    @JsonKey(name: '__ordered') required this.orderedElement,
     required this.rules,
-    @JsonKey('__rules') required this.rulesElement,
+    @JsonKey(name: '__rules') required this.rulesElement,
   });
   final String? id;
 
@@ -893,15 +914,16 @@ class ElementDefinitionSlicing {
   Map<String, dynamic> toJson() => _$ElementDefinitionSlicingToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionDiscriminator {
   const ElementDefinitionDiscriminator({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.path,
-    @JsonKey('__path') required this.pathElement,
+    @JsonKey(name: '__path') required this.pathElement,
   });
   final String? id;
 
@@ -919,6 +941,7 @@ class ElementDefinitionDiscriminator {
   Map<String, dynamic> toJson() => _$ElementDefinitionDiscriminatorToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionBase {
   const ElementDefinitionBase({
     required this.id,
@@ -945,20 +968,21 @@ class ElementDefinitionBase {
   Map<String, dynamic> toJson() => _$ElementDefinitionBaseToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionType {
   const ElementDefinitionType({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.code,
-    @JsonKey('__code') required this.codeElement,
+    @JsonKey(name: '__code') required this.codeElement,
     required this.profile,
-    @JsonKey('__profile') required this.profileElement,
+    @JsonKey(name: '__profile') required this.profileElement,
     required this.targetProfile,
     required this.aggregation,
-    @JsonKey('__aggregation') required this.aggregationElement,
+    @JsonKey(name: '__aggregation') required this.aggregationElement,
     required this.versioning,
-    @JsonKey('__versioning') required this.versioningElement,
+    @JsonKey(name: '__versioning') required this.versioningElement,
   });
   final String? id;
 
@@ -983,6 +1007,7 @@ class ElementDefinitionType {
   Map<String, dynamic> toJson() => _$ElementDefinitionTypeToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionExample {
   const ElementDefinitionExample({
     required this.id,
@@ -1143,23 +1168,24 @@ class ElementDefinitionExample {
   Map<String, dynamic> toJson() => _$ElementDefinitionExampleToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionConstraint {
   const ElementDefinitionConstraint({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.key,
-    @JsonKey('__key') required this.keyElement,
+    @JsonKey(name: '__key') required this.keyElement,
     required this.requirements,
-    @JsonKey('__requirements') required this.requirementsElement,
+    @JsonKey(name: '__requirements') required this.requirementsElement,
     required this.severity,
-    @JsonKey('__severity') required this.severityElement,
+    @JsonKey(name: '__severity') required this.severityElement,
     required this.human,
-    @JsonKey('__human') required this.humanElement,
+    @JsonKey(name: '__human') required this.humanElement,
     required this.expression,
-    @JsonKey('__expression') required this.expressionElement,
+    @JsonKey(name: '__expression') required this.expressionElement,
     required this.xpath,
-    @JsonKey('__xpath') required this.xpathElement,
+    @JsonKey(name: '__xpath') required this.xpathElement,
     required this.source,
   });
   final String? id;
@@ -1191,15 +1217,16 @@ class ElementDefinitionConstraint {
   Map<String, dynamic> toJson() => _$ElementDefinitionConstraintToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionBinding {
   const ElementDefinitionBinding({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.strength,
-    @JsonKey('__strength') required this.strengthElement,
+    @JsonKey(name: '__strength') required this.strengthElement,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.valueSet,
   });
   final String? id;
@@ -1219,6 +1246,7 @@ class ElementDefinitionBinding {
   Map<String, dynamic> toJson() => _$ElementDefinitionBindingToJson(this);
 }
 
+@JsonSerializable()
 class ElementDefinitionMapping {
   const ElementDefinitionMapping({
     required this.id,

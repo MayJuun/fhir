@@ -290,3 +290,144 @@ const _$ResearchStudyStatusEnumMap = {
   ResearchStudyStatus.entered_in_error: 'entered-in-error',
   ResearchStudyStatus.unknown: 'unknown',
 };
+
+ResearchStudyArm _$ResearchStudyArmFromJson(Map<String, dynamic> json) =>
+    ResearchStudyArm(
+      name: json['name'] as String?,
+      nameElement: json['nameElement'] == null
+          ? null
+          : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['descriptionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['descriptionElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ResearchStudyArmToJson(ResearchStudyArm instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('nameElement', instance.nameElement?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
+  return val;
+}
+
+ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) =>
+    ResearchSubject(
+      resourceType:
+          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      status:
+          $enumDecodeNullable(_$ResearchSubjectStatusEnumMap, json['status']),
+      statusElement: json['statusElement'] == null
+          ? null
+          : Element.fromJson(json['statusElement'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      study: Reference.fromJson(json['study'] as Map<String, dynamic>),
+      individual:
+          Reference.fromJson(json['individual'] as Map<String, dynamic>),
+      assignedArm: json['assignedArm'] as String?,
+      assignedArmElement: json['assignedArmElement'] == null
+          ? null
+          : Element.fromJson(
+              json['assignedArmElement'] as Map<String, dynamic>),
+      actualArm: json['actualArm'] as String?,
+      actualArmElement: json['actualArmElement'] == null
+          ? null
+          : Element.fromJson(json['actualArmElement'] as Map<String, dynamic>),
+      consent: json['consent'] == null
+          ? null
+          : Reference.fromJson(json['consent'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ResearchSubjectToJson(ResearchSubject instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
+  writeNotNull('statusElement', instance.statusElement?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  val['study'] = instance.study.toJson();
+  val['individual'] = instance.individual.toJson();
+  writeNotNull('assignedArm', instance.assignedArm);
+  writeNotNull('assignedArmElement', instance.assignedArmElement?.toJson());
+  writeNotNull('actualArm', instance.actualArm);
+  writeNotNull('actualArmElement', instance.actualArmElement?.toJson());
+  writeNotNull('consent', instance.consent?.toJson());
+  return val;
+}
+
+const _$ResearchSubjectStatusEnumMap = {
+  ResearchSubjectStatus.candidate: 'candidate',
+  ResearchSubjectStatus.enrolled: 'enrolled',
+  ResearchSubjectStatus.active: 'active',
+  ResearchSubjectStatus.suspended: 'suspended',
+  ResearchSubjectStatus.withdrawn: 'withdrawn',
+  ResearchSubjectStatus.completed: 'completed',
+  ResearchSubjectStatus.unknown: 'unknown',
+};

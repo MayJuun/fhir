@@ -12,18 +12,18 @@ class Basic {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.code,
     required this.subject,
     required this.created,
-    @JsonKey('__created') required this.createdElement,
+    @JsonKey(name: '__created') required this.createdElement,
     required this.author,
   });
   final R4ResourceType resourceType;
@@ -51,20 +51,21 @@ class Basic {
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }
 
+@JsonSerializable()
 class Binary {
   const Binary({
     @Default(R4ResourceType.Binary) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.contentType,
-    @JsonKey('__contentType') required this.contentTypeElement,
+    @JsonKey(name: '__contentType') required this.contentTypeElement,
     required this.securityContext,
     required this.data,
-    @JsonKey('__data') required this.dataElement,
+    @JsonKey(name: '__data') required this.dataElement,
   });
   final R4ResourceType resourceType;
   final String? id;
@@ -86,22 +87,23 @@ class Binary {
   Map<String, dynamic> toJson() => _$BinaryToJson(this);
 }
 
+@JsonSerializable()
 class Bundle {
   const Bundle({
     @Default(R4ResourceType.Bundle) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.identifier,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.timestamp,
-    @JsonKey('__timestamp') required this.timestampElement,
+    @JsonKey(name: '__timestamp') required this.timestampElement,
     required this.total,
-    @JsonKey('__total') required this.totalElement,
+    @JsonKey(name: '__total') required this.totalElement,
     required this.link,
     required this.entry,
     required this.signature,
@@ -132,6 +134,7 @@ class Bundle {
   Map<String, dynamic> toJson() => _$BundleToJson(this);
 }
 
+@JsonSerializable()
 class BundleLink {
   const BundleLink({
     required this.id,
@@ -154,6 +157,7 @@ class BundleLink {
   Map<String, dynamic> toJson() => _$BundleLinkToJson(this);
 }
 
+@JsonSerializable()
 class BundleEntry {
   const BundleEntry({
     required this.id,
@@ -182,6 +186,7 @@ class BundleEntry {
   Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
 }
 
+@JsonSerializable()
 class BundleSearch {
   const BundleSearch({
     required this.id,
@@ -204,6 +209,7 @@ class BundleSearch {
   Map<String, dynamic> toJson() => _$BundleSearchToJson(this);
 }
 
+@JsonSerializable()
 class BundleRequest {
   const BundleRequest({
     required this.id,
@@ -242,6 +248,7 @@ class BundleRequest {
   Map<String, dynamic> toJson() => _$BundleRequestToJson(this);
 }
 
+@JsonSerializable()
 class BundleResponse {
   const BundleResponse({
     required this.id,
@@ -274,21 +281,22 @@ class BundleResponse {
   Map<String, dynamic> toJson() => _$BundleResponseToJson(this);
 }
 
+@JsonSerializable()
 class Linkage {
   const Linkage({
     @Default(R4ResourceType.Linkage) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.active,
-    @JsonKey('__active') required this.activeElement,
+    @JsonKey(name: '__active') required this.activeElement,
     required this.author,
     required this.item,
   });
@@ -316,6 +324,7 @@ class Linkage {
   Map<String, dynamic> toJson() => _$LinkageToJson(this);
 }
 
+@JsonSerializable()
 class LinkageItem {
   const LinkageItem({
     required this.id,
@@ -336,22 +345,23 @@ class LinkageItem {
   Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeader {
   const MessageHeader({
     @Default(R4ResourceType.MessageHeader) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.eventCoding,
     required this.eventUri,
-    @JsonKey('__eventUri') required this.eventUriElement,
+    @JsonKey(name: '__eventUri') required this.eventUriElement,
     required this.destination,
     required this.sender,
     required this.enterer,
@@ -396,6 +406,7 @@ class MessageHeader {
   Map<String, dynamic> toJson() => _$MessageHeaderToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderDestination {
   const MessageHeaderDestination({
     required this.id,
@@ -422,6 +433,7 @@ class MessageHeaderDestination {
   Map<String, dynamic> toJson() => _$MessageHeaderDestinationToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderSource {
   const MessageHeaderSource({
     required this.id,
@@ -454,6 +466,7 @@ class MessageHeaderSource {
   Map<String, dynamic> toJson() => _$MessageHeaderSourceToJson(this);
 }
 
+@JsonSerializable()
 class MessageHeaderResponse {
   const MessageHeaderResponse({
     required this.id,
@@ -478,18 +491,19 @@ class MessageHeaderResponse {
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcome {
   const OperationOutcome({
     @Default(R4ResourceType.OperationOutcome) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.issue,
   });
@@ -513,6 +527,7 @@ class OperationOutcome {
   Map<String, dynamic> toJson() => _$OperationOutcomeToJson(this);
 }
 
+@JsonSerializable()
 class OperationOutcomeIssue {
   const OperationOutcomeIssue({
     required this.id,
@@ -549,15 +564,16 @@ class OperationOutcomeIssue {
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }
 
+@JsonSerializable()
 class Parameters {
   const Parameters({
     @Default(R4ResourceType.Parameters) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.parameter,
   });
   final R4ResourceType resourceType;
@@ -575,6 +591,7 @@ class Parameters {
   Map<String, dynamic> toJson() => _$ParametersToJson(this);
 }
 
+@JsonSerializable()
 class ParametersParameter {
   const ParametersParameter({
     required this.id,
@@ -735,30 +752,31 @@ class ParametersParameter {
   Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
 }
 
+@JsonSerializable()
 class Subscription {
   const Subscription({
     @Default(R4ResourceType.Subscription) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.contact,
     required this.end,
-    @JsonKey('__end') required this.endElement,
+    @JsonKey(name: '__end') required this.endElement,
     required this.reason,
-    @JsonKey('__reason') required this.reasonElement,
+    @JsonKey(name: '__reason') required this.reasonElement,
     required this.criteria,
-    @JsonKey('__criteria') required this.criteriaElement,
+    @JsonKey(name: '__criteria') required this.criteriaElement,
     required this.error,
-    @JsonKey('__error') required this.errorElement,
+    @JsonKey(name: '__error') required this.errorElement,
     required this.channel,
   });
   final R4ResourceType resourceType;
@@ -797,6 +815,7 @@ class Subscription {
   Map<String, dynamic> toJson() => _$SubscriptionToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionChannel {
   const SubscriptionChannel({
     required this.id,
@@ -827,24 +846,25 @@ class SubscriptionChannel {
   Map<String, dynamic> toJson() => _$SubscriptionChannelToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionStatus {
   const SubscriptionStatus({
     @Default(R4ResourceType.SubscriptionStatus) required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.eventsSinceSubscriptionStart,
-    @JsonKey('__eventsSinceSubscriptionStart')
+    @JsonKey(name: '__eventsSinceSubscriptionStart')
         required this.eventsSinceSubscriptionStartElement,
     required this.notificationEvent,
     required this.subscription,
@@ -882,6 +902,7 @@ class SubscriptionStatus {
   Map<String, dynamic> toJson() => _$SubscriptionStatusToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionStatusNotificationEvent {
   const SubscriptionStatusNotificationEvent({
     required this.id,
@@ -911,6 +932,7 @@ class SubscriptionStatusNotificationEvent {
       _$SubscriptionStatusNotificationEventToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopic {
   const SubscriptionTopic({
     @Default(R4ResourceType.SubscriptionTopic) required this.resourceType,
@@ -1009,6 +1031,7 @@ class SubscriptionTopic {
   Map<String, dynamic> toJson() => _$SubscriptionTopicToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicResourceTrigger {
   const SubscriptionTopicResourceTrigger({
     required this.id,
@@ -1019,7 +1042,7 @@ class SubscriptionTopicResourceTrigger {
     required this.resource,
     @JsonKey(name: '_resource') required this.resourceElement,
     required this.supportedInteraction,
-    @JsonKey('__supportedInteraction')
+    @JsonKey(name: '__supportedInteraction')
         required this.supportedInteractionElement,
     required this.queryCriteria,
     required this.fhirPathCriteria,
@@ -1045,6 +1068,7 @@ class SubscriptionTopicResourceTrigger {
       _$SubscriptionTopicResourceTriggerToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicQueryCriteria {
   const SubscriptionTopicQueryCriteria({
     required this.id,
@@ -1079,6 +1103,7 @@ class SubscriptionTopicQueryCriteria {
   Map<String, dynamic> toJson() => _$SubscriptionTopicQueryCriteriaToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicEventTrigger {
   const SubscriptionTopicEventTrigger({
     required this.id,
@@ -1103,6 +1128,7 @@ class SubscriptionTopicEventTrigger {
   Map<String, dynamic> toJson() => _$SubscriptionTopicEventTriggerToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicCanFilterBy {
   const SubscriptionTopicCanFilterBy({
     required this.id,
@@ -1137,6 +1163,7 @@ class SubscriptionTopicCanFilterBy {
   Map<String, dynamic> toJson() => _$SubscriptionTopicCanFilterByToJson(this);
 }
 
+@JsonSerializable()
 class SubscriptionTopicNotificationShape {
   const SubscriptionTopicNotificationShape({
     required this.id,

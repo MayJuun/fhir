@@ -67,6 +67,7 @@ class ProcessRequest {
   Map<String, dynamic> toJson() => _$ProcessRequestToJson(this);
 }
 
+@JsonSerializable()
 class ProcessRequestItem {
   const ProcessRequestItem({
     required this.id,
@@ -83,6 +84,7 @@ class ProcessRequestItem {
   Map<String, dynamic> toJson() => _$ProcessRequestItemToJson(this);
 }
 
+@JsonSerializable()
 class ProcessResponse {
   const ProcessResponse({
     @Default(Dstu2ResourceType.ProcessResponse) required this.resourceType,
@@ -135,6 +137,7 @@ class ProcessResponse {
   Map<String, dynamic> toJson() => _$ProcessResponseToJson(this);
 }
 
+@JsonSerializable()
 class ProcessResponseNotes {
   const ProcessResponseNotes({
     required this.id,
@@ -153,6 +156,7 @@ class ProcessResponseNotes {
   Map<String, dynamic> toJson() => _$ProcessResponseNotesToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequest {
   const SupplyRequest({
     @Default(Dstu2ResourceType.SupplyRequest) required this.resourceType,
@@ -208,6 +212,7 @@ class SupplyRequest {
   Map<String, dynamic> toJson() => _$SupplyRequestToJson(this);
 }
 
+@JsonSerializable()
 class SupplyRequestWhen {
   const SupplyRequestWhen({
     required this.id,
@@ -226,6 +231,7 @@ class SupplyRequestWhen {
   Map<String, dynamic> toJson() => _$SupplyRequestWhenToJson(this);
 }
 
+@JsonSerializable()
 class SupplyDelivery {
   const SupplyDelivery({
     @Default(Dstu2ResourceType.SupplyDelivery) required this.resourceType,

@@ -22,6 +22,7 @@ class ContactDetail {
   Map<String, dynamic> toJson() => _$ContactDetailToJson(this);
 }
 
+@JsonSerializable()
 class Contributor {
   const Contributor({
     required this.type,
@@ -40,6 +41,7 @@ class Contributor {
   Map<String, dynamic> toJson() => _$ContributorToJson(this);
 }
 
+@JsonSerializable()
 class RelatedArtifact {
   const RelatedArtifact({
     required this.type,
@@ -68,6 +70,7 @@ class RelatedArtifact {
   Map<String, dynamic> toJson() => _$RelatedArtifactToJson(this);
 }
 
+@JsonSerializable()
 class UsageContext {
   const UsageContext({
     required this.code,
@@ -84,6 +87,7 @@ class UsageContext {
   Map<String, dynamic> toJson() => _$UsageContextToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirement {
   const DataRequirement({
     required this.type,
@@ -108,6 +112,7 @@ class DataRequirement {
   Map<String, dynamic> toJson() => _$DataRequirementToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementCodeFilter {
   const DataRequirementCodeFilter({
     required this.path,
@@ -134,6 +139,7 @@ class DataRequirementCodeFilter {
   Map<String, dynamic> toJson() => _$DataRequirementCodeFilterToJson(this);
 }
 
+@JsonSerializable()
 class DataRequirementDateFilter {
   const DataRequirementDateFilter({
     required this.path,
@@ -154,6 +160,7 @@ class DataRequirementDateFilter {
   Map<String, dynamic> toJson() => _$DataRequirementDateFilterToJson(this);
 }
 
+@JsonSerializable()
 class ParameterDefinition {
   const ParameterDefinition({
     required this.name,
@@ -188,6 +195,7 @@ class ParameterDefinition {
   Map<String, dynamic> toJson() => _$ParameterDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class TriggerDefinition {
   const TriggerDefinition({
     required this.type,

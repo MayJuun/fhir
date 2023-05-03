@@ -124,6 +124,7 @@ class Citation {
   Map<String, dynamic> toJson() => _$CitationToJson(this);
 }
 
+@JsonSerializable()
 class CitationSummary {
   const CitationSummary({
     required this.id,
@@ -144,6 +145,7 @@ class CitationSummary {
   Map<String, dynamic> toJson() => _$CitationSummaryToJson(this);
 }
 
+@JsonSerializable()
 class CitationClassification {
   const CitationClassification({
     required this.id,
@@ -162,6 +164,7 @@ class CitationClassification {
   Map<String, dynamic> toJson() => _$CitationClassificationToJson(this);
 }
 
+@JsonSerializable()
 class CitationStatusDate {
   const CitationStatusDate({
     required this.id,
@@ -184,6 +187,7 @@ class CitationStatusDate {
   Map<String, dynamic> toJson() => _$CitationStatusDateToJson(this);
 }
 
+@JsonSerializable()
 class CitationRelatesTo {
   const CitationRelatesTo({
     required this.id,
@@ -212,6 +216,7 @@ class CitationRelatesTo {
   Map<String, dynamic> toJson() => _$CitationRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class CitationCitedArtifact {
   const CitationCitedArtifact({
     required this.id,
@@ -258,6 +263,7 @@ class CitationCitedArtifact {
   Map<String, dynamic> toJson() => _$CitationCitedArtifactToJson(this);
 }
 
+@JsonSerializable()
 class CitationVersion {
   const CitationVersion({
     required this.id,
@@ -278,6 +284,7 @@ class CitationVersion {
   Map<String, dynamic> toJson() => _$CitationVersionToJson(this);
 }
 
+@JsonSerializable()
 class CitationStatusDate1 {
   const CitationStatusDate1({
     required this.id,
@@ -300,6 +307,7 @@ class CitationStatusDate1 {
   Map<String, dynamic> toJson() => _$CitationStatusDate1ToJson(this);
 }
 
+@JsonSerializable()
 class CitationTitle {
   const CitationTitle({
     required this.id,
@@ -322,6 +330,7 @@ class CitationTitle {
   Map<String, dynamic> toJson() => _$CitationTitleToJson(this);
 }
 
+@JsonSerializable()
 class CitationAbstract {
   const CitationAbstract({
     required this.id,
@@ -348,6 +357,7 @@ class CitationAbstract {
   Map<String, dynamic> toJson() => _$CitationAbstractToJson(this);
 }
 
+@JsonSerializable()
 class CitationPart {
   const CitationPart({
     required this.id,
@@ -370,6 +380,7 @@ class CitationPart {
   Map<String, dynamic> toJson() => _$CitationPartToJson(this);
 }
 
+@JsonSerializable()
 class CitationRelatesTo1 {
   const CitationRelatesTo1({
     required this.id,
@@ -398,6 +409,7 @@ class CitationRelatesTo1 {
   Map<String, dynamic> toJson() => _$CitationRelatesTo1ToJson(this);
 }
 
+@JsonSerializable()
 class CitationPublicationForm {
   const CitationPublicationForm({
     required this.id,
@@ -450,6 +462,7 @@ class CitationPublicationForm {
   Map<String, dynamic> toJson() => _$CitationPublicationFormToJson(this);
 }
 
+@JsonSerializable()
 class CitationPublishedIn {
   const CitationPublishedIn({
     required this.id,
@@ -478,6 +491,7 @@ class CitationPublishedIn {
   Map<String, dynamic> toJson() => _$CitationPublishedInToJson(this);
 }
 
+@JsonSerializable()
 class CitationPeriodicRelease {
   const CitationPeriodicRelease({
     required this.id,
@@ -504,6 +518,7 @@ class CitationPeriodicRelease {
   Map<String, dynamic> toJson() => _$CitationPeriodicReleaseToJson(this);
 }
 
+@JsonSerializable()
 class CitationDateOfPublication {
   const CitationDateOfPublication({
     required this.id,
@@ -542,6 +557,7 @@ class CitationDateOfPublication {
   Map<String, dynamic> toJson() => _$CitationDateOfPublicationToJson(this);
 }
 
+@JsonSerializable()
 class CitationWebLocation {
   const CitationWebLocation({
     required this.id,
@@ -562,6 +578,7 @@ class CitationWebLocation {
   Map<String, dynamic> toJson() => _$CitationWebLocationToJson(this);
 }
 
+@JsonSerializable()
 class CitationClassification1 {
   const CitationClassification1({
     required this.id,
@@ -584,6 +601,7 @@ class CitationClassification1 {
   Map<String, dynamic> toJson() => _$CitationClassification1ToJson(this);
 }
 
+@JsonSerializable()
 class CitationWhoClassified {
   const CitationWhoClassified({
     required this.id,
@@ -613,6 +631,7 @@ class CitationWhoClassified {
   Map<String, dynamic> toJson() => _$CitationWhoClassifiedToJson(this);
 }
 
+@JsonSerializable()
 class CitationContributorship {
   const CitationContributorship({
     required this.id,
@@ -635,6 +654,7 @@ class CitationContributorship {
   Map<String, dynamic> toJson() => _$CitationContributorshipToJson(this);
 }
 
+@JsonSerializable()
 class CitationEntry {
   const CitationEntry({
     required this.id,
@@ -653,7 +673,7 @@ class CitationEntry {
     required this.role,
     required this.contributionInstance,
     required this.correspondingContact,
-    @JsonKey('__correspondingContact')
+    @JsonKey(name: '__correspondingContact')
         required this.correspondingContactElement,
     required this.listOrder,
     @JsonKey(name: '_listOrder') required this.listOrderElement,
@@ -683,6 +703,7 @@ class CitationEntry {
   Map<String, dynamic> toJson() => _$CitationEntryToJson(this);
 }
 
+@JsonSerializable()
 class CitationAffiliationInfo {
   const CitationAffiliationInfo({
     required this.id,
@@ -707,6 +728,7 @@ class CitationAffiliationInfo {
   Map<String, dynamic> toJson() => _$CitationAffiliationInfoToJson(this);
 }
 
+@JsonSerializable()
 class CitationContributionInstance {
   const CitationContributionInstance({
     required this.id,
@@ -727,6 +749,7 @@ class CitationContributionInstance {
   Map<String, dynamic> toJson() => _$CitationContributionInstanceToJson(this);
 }
 
+@JsonSerializable()
 class CitationSummary1 {
   const CitationSummary1({
     required this.id,
@@ -751,6 +774,7 @@ class CitationSummary1 {
   Map<String, dynamic> toJson() => _$CitationSummary1ToJson(this);
 }
 
+@JsonSerializable()
 class Evidence {
   const Evidence({
     @Default(R4ResourceType.Evidence) required this.resourceType,
@@ -855,6 +879,7 @@ class Evidence {
   Map<String, dynamic> toJson() => _$EvidenceToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVariableDefinition {
   const EvidenceVariableDefinition({
     required this.id,
@@ -883,6 +908,7 @@ class EvidenceVariableDefinition {
   Map<String, dynamic> toJson() => _$EvidenceVariableDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceStatistic {
   const EvidenceStatistic({
     required this.id,
@@ -923,6 +949,7 @@ class EvidenceStatistic {
   Map<String, dynamic> toJson() => _$EvidenceStatisticToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceSampleSize {
   const EvidenceSampleSize({
     required this.id,
@@ -934,7 +961,7 @@ class EvidenceSampleSize {
     required this.numberOfStudies,
     @JsonKey(name: '_numberOfStudies') required this.numberOfStudiesElement,
     required this.numberOfParticipants,
-    @JsonKey('__numberOfParticipants')
+    @JsonKey(name: '__numberOfParticipants')
         required this.numberOfParticipantsElement,
     required this.knownDataCount,
     @JsonKey(name: '_knownDataCount') required this.knownDataCountElement,
@@ -957,6 +984,7 @@ class EvidenceSampleSize {
   Map<String, dynamic> toJson() => _$EvidenceSampleSizeToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceAttributeEstimate {
   const EvidenceAttributeEstimate({
     required this.id,
@@ -989,6 +1017,7 @@ class EvidenceAttributeEstimate {
   Map<String, dynamic> toJson() => _$EvidenceAttributeEstimateToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceModelCharacteristic {
   const EvidenceModelCharacteristic({
     required this.id,
@@ -1011,6 +1040,7 @@ class EvidenceModelCharacteristic {
   Map<String, dynamic> toJson() => _$EvidenceModelCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVar {
   const EvidenceVar({
     required this.id,
@@ -1037,6 +1067,7 @@ class EvidenceVar {
   Map<String, dynamic> toJson() => _$EvidenceVarToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceCertainty {
   const EvidenceCertainty({
     required this.id,
@@ -1067,6 +1098,7 @@ class EvidenceCertainty {
   Map<String, dynamic> toJson() => _$EvidenceCertaintyToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceReport {
   const EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) required this.resourceType,
@@ -1143,6 +1175,7 @@ class EvidenceReport {
   Map<String, dynamic> toJson() => _$EvidenceReportToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceReportSubject {
   const EvidenceReportSubject({
     required this.id,
@@ -1161,6 +1194,7 @@ class EvidenceReportSubject {
   Map<String, dynamic> toJson() => _$EvidenceReportSubjectToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceReportCharacteristic {
   const EvidenceReportCharacteristic({
     required this.id,
@@ -1195,6 +1229,7 @@ class EvidenceReportCharacteristic {
   Map<String, dynamic> toJson() => _$EvidenceReportCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceReportRelatesTo {
   const EvidenceReportRelatesTo({
     required this.id,
@@ -1217,6 +1252,7 @@ class EvidenceReportRelatesTo {
   Map<String, dynamic> toJson() => _$EvidenceReportRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceReportSection {
   const EvidenceReportSection({
     required this.id,
@@ -1259,6 +1295,7 @@ class EvidenceReportSection {
   Map<String, dynamic> toJson() => _$EvidenceReportSectionToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVariable {
   const EvidenceVariable({
     @Default(R4ResourceType.EvidenceVariable) required this.resourceType,
@@ -1304,7 +1341,7 @@ class EvidenceVariable {
     required this.actual,
     @JsonKey(name: '_actual') required this.actualElement,
     required this.characteristicCombination,
-    @JsonKey('__characteristicCombination')
+    @JsonKey(name: '__characteristicCombination')
         required this.characteristicCombinationElement,
     required this.characteristic,
     required this.handling,
@@ -1365,6 +1402,7 @@ class EvidenceVariable {
   Map<String, dynamic> toJson() => _$EvidenceVariableToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVariableCharacteristic {
   const EvidenceVariableCharacteristic({
     required this.id,
@@ -1404,6 +1442,7 @@ class EvidenceVariableCharacteristic {
   Map<String, dynamic> toJson() => _$EvidenceVariableCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVariableTimeFromStart {
   const EvidenceVariableTimeFromStart({
     required this.id,
@@ -1428,6 +1467,7 @@ class EvidenceVariableTimeFromStart {
   Map<String, dynamic> toJson() => _$EvidenceVariableTimeFromStartToJson(this);
 }
 
+@JsonSerializable()
 class EvidenceVariableCategory {
   const EvidenceVariableCategory({
     required this.id,
@@ -1452,6 +1492,7 @@ class EvidenceVariableCategory {
   Map<String, dynamic> toJson() => _$EvidenceVariableCategoryToJson(this);
 }
 
+@JsonSerializable()
 class ResearchDefinition {
   const ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition) required this.resourceType,
@@ -1586,6 +1627,7 @@ class ResearchDefinition {
   Map<String, dynamic> toJson() => _$ResearchDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ResearchElementDefinition {
   const ResearchElementDefinition({
     @Default(R4ResourceType.ResearchElementDefinition)
@@ -1723,6 +1765,7 @@ class ResearchElementDefinition {
   Map<String, dynamic> toJson() => _$ResearchElementDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ResearchElementDefinitionCharacteristic {
   const ResearchElementDefinitionCharacteristic({
     this.id,

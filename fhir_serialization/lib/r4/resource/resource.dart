@@ -7,7 +7,6 @@ import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:xml2json/xml2json.dart';
 import 'package:yaml/yaml.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
 import '../../r4.dart';
@@ -16,8 +15,8 @@ part 'resource.g.dart';
 part 'fhir_field_map.dart';
 part 'resource_from_json.dart';
 part 'resource_from_xml.dart';
-part 'resource_new_id.dart';
-part 'resource_new_version.dart';
+// part 'resource_new_id.dart';
+// part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
 @JsonSerializable()
@@ -113,9 +112,9 @@ class Resource {
 
   String get path => '$resourceTypeString/$id';
 
-  Resource newIdIfNoId() => id == null ? _newId(this) : this;
+  // Resource newIdIfNoId() => id == null ? _newId(this) : this;
 
-  Resource newId() => _newId(this);
+  // Resource newId() => _newId(this);
 
-  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
+  // Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
 }

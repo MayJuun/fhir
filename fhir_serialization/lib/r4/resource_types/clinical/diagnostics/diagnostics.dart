@@ -12,21 +12,21 @@ class BodyStructure {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.active,
-    @JsonKey('__active') required this.activeElement,
+    @JsonKey(name: '__active') required this.activeElement,
     required this.morphology,
     required this.location,
     required this.locationQualifier,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.image,
     required this.patient,
   });
@@ -61,32 +61,34 @@ class BodyStructure {
   Map<String, dynamic> toJson() => _$BodyStructureToJson(this);
 }
 
+@JsonSerializable()
 class DiagnosticReport {
   const DiagnosticReport({
     @Default(R4ResourceType.DiagnosticReport) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.category,
     required this.code,
     required this.subject,
     required this.encounter,
     required this.effectiveDateTime,
-    @JsonKey('__effectiveDateTime') required this.effectiveDateTimeElement,
+    @JsonKey(name: '__effectiveDateTime')
+        required this.effectiveDateTimeElement,
     required this.effectivePeriod,
     required this.issued,
-    @JsonKey('__issued') required this.issuedElement,
+    @JsonKey(name: '__issued') required this.issuedElement,
     required this.performer,
     required this.resultsInterpreter,
     required this.specimen,
@@ -94,7 +96,7 @@ class DiagnosticReport {
     required this.imagingStudy,
     required this.media,
     required this.conclusion,
-    @JsonKey('__conclusion') required this.conclusionElement,
+    @JsonKey(name: '__conclusion') required this.conclusionElement,
     required this.conclusionCode,
     required this.presentedForm,
   });
@@ -144,6 +146,7 @@ class DiagnosticReport {
   Map<String, dynamic> toJson() => _$DiagnosticReportToJson(this);
 }
 
+@JsonSerializable()
 class DiagnosticReportMedia {
   const DiagnosticReportMedia({
     required this.id,
@@ -164,35 +167,37 @@ class DiagnosticReportMedia {
   Map<String, dynamic> toJson() => _$DiagnosticReportMediaToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudy {
   const ImagingStudy({
     @Default(R4ResourceType.ImagingStudy) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.modality,
     required this.subject,
     required this.encounter,
     required this.started,
-    @JsonKey('__started') required this.startedElement,
+    @JsonKey(name: '__started') required this.startedElement,
     required this.basedOn,
     required this.referrer,
     required this.interpreter,
     required this.endpoint,
     required this.numberOfSeries,
-    @JsonKey('__numberOfSeries') required this.numberOfSeriesElement,
+    @JsonKey(name: '__numberOfSeries') required this.numberOfSeriesElement,
     required this.numberOfInstances,
-    @JsonKey('__numberOfInstances') required this.numberOfInstancesElement,
+    @JsonKey(name: '__numberOfInstances')
+        required this.numberOfInstancesElement,
     required this.procedureReference,
     required this.procedureCode,
     required this.location,
@@ -200,7 +205,7 @@ class ImagingStudy {
     required this.reasonReference,
     required this.note,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.series,
   });
   final R4ResourceType resourceType;
@@ -252,6 +257,7 @@ class ImagingStudy {
   Map<String, dynamic> toJson() => _$ImagingStudyToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudySeries {
   const ImagingStudySeries({
     required this.id,
@@ -300,6 +306,7 @@ class ImagingStudySeries {
   Map<String, dynamic> toJson() => _$ImagingStudySeriesToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudyPerformer {
   const ImagingStudyPerformer({
     required this.id,
@@ -318,6 +325,7 @@ class ImagingStudyPerformer {
   Map<String, dynamic> toJson() => _$ImagingStudyPerformerToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudyInstance {
   const ImagingStudyInstance({
     required this.id,
@@ -346,48 +354,49 @@ class ImagingStudyInstance {
   Map<String, dynamic> toJson() => _$ImagingStudyInstanceToJson(this);
 }
 
+@JsonSerializable()
 class Media {
   const Media({
     @Default(R4ResourceType.Media) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.modality,
     required this.view,
     required this.subject,
     required this.encounter,
     required this.createdDateTime,
-    @JsonKey('__createdDateTime') required this.createdDateTimeElement,
+    @JsonKey(name: '__createdDateTime') required this.createdDateTimeElement,
     required this.createdPeriod,
     required this.issued,
-    @JsonKey('__issued') required this.issuedElement,
-    @JsonKey('_operator') required this.operator_,
+    @JsonKey(name: '__issued') required this.issuedElement,
+    @JsonKey(name: '_operator') required this.operator_,
     required this.reasonCode,
     required this.bodySite,
     required this.deviceName,
-    @JsonKey('__deviceName') required this.deviceNameElement,
+    @JsonKey(name: '__deviceName') required this.deviceNameElement,
     required this.device,
     required this.height,
-    @JsonKey('__height') required this.heightElement,
+    @JsonKey(name: '__height') required this.heightElement,
     required this.width,
-    @JsonKey('__width') required this.widthElement,
+    @JsonKey(name: '__width') required this.widthElement,
     required this.frames,
-    @JsonKey('__frames') required this.framesElement,
+    @JsonKey(name: '__frames') required this.framesElement,
     required this.duration,
-    @JsonKey('__duration') required this.durationElement,
+    @JsonKey(name: '__duration') required this.durationElement,
     required this.content,
     required this.note,
   });
@@ -449,24 +458,25 @@ class Media {
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequence {
   const MolecularSequence({
     @Default(R4ResourceType.MolecularSequence) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.type,
-    @JsonKey('__type') required this.typeElement,
+    @JsonKey(name: '__type') required this.typeElement,
     required this.coordinateSystem,
-    @JsonKey('__coordinateSystem') required this.coordinateSystemElement,
+    @JsonKey(name: '__coordinateSystem') required this.coordinateSystemElement,
     required this.patient,
     required this.specimen,
     required this.device,
@@ -475,10 +485,10 @@ class MolecularSequence {
     required this.referenceSeq,
     required this.variant,
     required this.observedSeq,
-    @JsonKey('__observedSeq') required this.observedSeqElement,
+    @JsonKey(name: '__observedSeq') required this.observedSeqElement,
     required this.quality,
     required this.readCoverage,
-    @JsonKey('__readCoverage') required this.readCoverageElement,
+    @JsonKey(name: '__readCoverage') required this.readCoverageElement,
     required this.repository,
     required this.pointer,
     required this.structureVariant,
@@ -526,6 +536,7 @@ class MolecularSequence {
   Map<String, dynamic> toJson() => _$MolecularSequenceToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceReferenceSeq {
   const MolecularSequenceReferenceSeq({
     required this.id,
@@ -571,6 +582,7 @@ class MolecularSequenceReferenceSeq {
   Map<String, dynamic> toJson() => _$MolecularSequenceReferenceSeqToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceVariant {
   const MolecularSequenceVariant({
     required this.id,
@@ -607,6 +619,7 @@ class MolecularSequenceVariant {
   Map<String, dynamic> toJson() => _$MolecularSequenceVariantToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceQuality {
   const MolecularSequenceQuality({
     required this.id,
@@ -673,6 +686,7 @@ class MolecularSequenceQuality {
   Map<String, dynamic> toJson() => _$MolecularSequenceQualityToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceRoc {
   const MolecularSequenceRoc({
     required this.id,
@@ -715,6 +729,7 @@ class MolecularSequenceRoc {
   Map<String, dynamic> toJson() => _$MolecularSequenceRocToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceRepository {
   const MolecularSequenceRepository({
     required this.id,
@@ -753,6 +768,7 @@ class MolecularSequenceRepository {
   Map<String, dynamic> toJson() => _$MolecularSequenceRepositoryToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceStructureVariant {
   const MolecularSequenceStructureVariant({
     required this.id,
@@ -784,6 +800,7 @@ class MolecularSequenceStructureVariant {
       _$MolecularSequenceStructureVariantToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceInner {
   const MolecularSequenceInner({
     required this.id,
@@ -806,53 +823,55 @@ class MolecularSequenceInner {
   Map<String, dynamic> toJson() => _$MolecularSequenceInnerToJson(this);
 }
 
+@JsonSerializable()
 class Observation {
   const Observation({
     @Default(R4ResourceType.Observation) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.category,
     required this.code,
     required this.subject,
     required this.focus,
     required this.encounter,
     required this.effectiveDateTime,
-    @JsonKey('__effectiveDateTime') required this.effectiveDateTimeElement,
+    @JsonKey(name: '__effectiveDateTime')
+        required this.effectiveDateTimeElement,
     required this.effectivePeriod,
     required this.effectiveTiming,
     required this.effectiveInstant,
-    @JsonKey('__effectiveInstant') required this.effectiveInstantElement,
+    @JsonKey(name: '__effectiveInstant') required this.effectiveInstantElement,
     required this.issued,
-    @JsonKey('__issued') required this.issuedElement,
+    @JsonKey(name: '__issued') required this.issuedElement,
     required this.performer,
     required this.valueQuantity,
     required this.valueCodeableConcept,
     required this.valueString,
-    @JsonKey('__valueString') required this.valueStringElement,
+    @JsonKey(name: '__valueString') required this.valueStringElement,
     required this.valueBoolean,
-    @JsonKey('__valueBoolean') required this.valueBooleanElement,
+    @JsonKey(name: '__valueBoolean') required this.valueBooleanElement,
     required this.valueInteger,
-    @JsonKey('__valueInteger') required this.valueIntegerElement,
+    @JsonKey(name: '__valueInteger') required this.valueIntegerElement,
     required this.valueRange,
     required this.valueRatio,
     required this.valueSampledData,
     required this.valueTime,
-    @JsonKey('__valueTime') required this.valueTimeElement,
+    @JsonKey(name: '__valueTime') required this.valueTimeElement,
     required this.valueDateTime,
-    @JsonKey('__valueDateTime') required this.valueDateTimeElement,
+    @JsonKey(name: '__valueDateTime') required this.valueDateTimeElement,
     required this.valuePeriod,
     required this.dataAbsentReason,
     required this.interpretation,
@@ -940,6 +959,7 @@ class Observation {
   Map<String, dynamic> toJson() => _$ObservationToJson(this);
 }
 
+@JsonSerializable()
 class ObservationReferenceRange {
   const ObservationReferenceRange({
     required this.id,
@@ -968,6 +988,7 @@ class ObservationReferenceRange {
   Map<String, dynamic> toJson() => _$ObservationReferenceRangeToJson(this);
 }
 
+@JsonSerializable()
 class ObservationComponent {
   const ObservationComponent({
     required this.id,
@@ -1022,30 +1043,31 @@ class ObservationComponent {
   Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponse {
   const QuestionnaireResponse({
     @Default(R4ResourceType.QuestionnaireResponse) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.partOf,
     required this.questionnaire,
-    @JsonKey('__questionnaire') required this.questionnaireElement,
+    @JsonKey(name: '__questionnaire') required this.questionnaireElement,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.subject,
     required this.encounter,
     required this.authored,
-    @JsonKey('__authored') required this.authoredElement,
+    @JsonKey(name: '__authored') required this.authoredElement,
     required this.author,
     required this.source,
     required this.item,
@@ -1086,6 +1108,7 @@ class QuestionnaireResponse {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseItem {
   const QuestionnaireResponseItem({
     required this.id,
@@ -1116,6 +1139,7 @@ class QuestionnaireResponseItem {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseItemToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseAnswer {
   const QuestionnaireResponseAnswer({
     required this.id,
@@ -1172,27 +1196,28 @@ class QuestionnaireResponseAnswer {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseAnswerToJson(this);
 }
 
+@JsonSerializable()
 class Specimen {
   const Specimen({
     @Default(R4ResourceType.Specimen) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.accessionIdentifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.subject,
     required this.receivedTime,
-    @JsonKey('__receivedTime') required this.receivedTimeElement,
+    @JsonKey(name: '__receivedTime') required this.receivedTimeElement,
     required this.parent,
     required this.request,
     required this.collection,
@@ -1237,6 +1262,7 @@ class Specimen {
   Map<String, dynamic> toJson() => _$SpecimenToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenCollection {
   const SpecimenCollection({
     required this.id,
@@ -1271,6 +1297,7 @@ class SpecimenCollection {
   Map<String, dynamic> toJson() => _$SpecimenCollectionToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenProcessing {
   const SpecimenProcessing({
     required this.id,
@@ -1299,6 +1326,7 @@ class SpecimenProcessing {
   Map<String, dynamic> toJson() => _$SpecimenProcessingToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenContainer {
   const SpecimenContainer({
     required this.id,

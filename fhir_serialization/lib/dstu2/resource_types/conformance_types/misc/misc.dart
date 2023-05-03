@@ -93,6 +93,7 @@ class ImplementationGuide {
   Map<String, dynamic> toJson() => _$ImplementationGuideToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideContact {
   const ImplementationGuideContact({
     required this.id,
@@ -111,6 +112,7 @@ class ImplementationGuideContact {
   Map<String, dynamic> toJson() => _$ImplementationGuideContactToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideDependency {
   const ImplementationGuideDependency({
     required this.id,
@@ -132,6 +134,7 @@ class ImplementationGuideDependency {
   Map<String, dynamic> toJson() => _$ImplementationGuideDependencyToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuidePackage {
   const ImplementationGuidePackage({
     required this.id,
@@ -153,6 +156,7 @@ class ImplementationGuidePackage {
   Map<String, dynamic> toJson() => _$ImplementationGuidePackageToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuideGlobal {
   const ImplementationGuideGlobal({
     required this.id,
@@ -173,6 +177,7 @@ class ImplementationGuideGlobal {
   Map<String, dynamic> toJson() => _$ImplementationGuideGlobalToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuidePage {
   const ImplementationGuidePage({
     required this.id,
@@ -201,6 +206,7 @@ class ImplementationGuidePage {
   Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
 }
 
+@JsonSerializable()
 class ImplementationGuidePackageResource {
   const ImplementationGuidePackageResource({
     required this.id,
@@ -234,6 +240,7 @@ class ImplementationGuidePackageResource {
       _$ImplementationGuidePackageResourceToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptContact {
   const TestScriptContact({
     required this.id,
@@ -252,6 +259,7 @@ class TestScriptContact {
   Map<String, dynamic> toJson() => _$TestScriptContactToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptMetadata {
   const TestScriptMetadata({
     required this.id,
@@ -271,6 +279,7 @@ class TestScriptMetadata {
   Map<String, dynamic> toJson() => _$TestScriptMetadataToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptMetadataLink {
   const TestScriptMetadataLink({
     required this.id,
@@ -293,6 +302,7 @@ class TestScriptMetadataLink {
   Map<String, dynamic> toJson() => _$TestScriptMetadataLinkToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptMetadataCapability {
   const TestScriptMetadataCapability({
     required this.id,
@@ -329,6 +339,7 @@ class TestScriptMetadataCapability {
   Map<String, dynamic> toJson() => _$TestScriptMetadataCapabilityToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptFixture {
   const TestScriptFixture({
     required this.id,
@@ -353,6 +364,7 @@ class TestScriptFixture {
   Map<String, dynamic> toJson() => _$TestScriptFixtureToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptVariable {
   const TestScriptVariable({
     required this.id,
@@ -383,6 +395,7 @@ class TestScriptVariable {
   Map<String, dynamic> toJson() => _$TestScriptVariableToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptSetup {
   const TestScriptSetup({
     required this.id,
@@ -401,6 +414,7 @@ class TestScriptSetup {
   Map<String, dynamic> toJson() => _$TestScriptSetupToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptSetupAction {
   const TestScriptSetupAction({
     required this.id,
@@ -421,6 +435,7 @@ class TestScriptSetupAction {
   Map<String, dynamic> toJson() => _$TestScriptSetupActionToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptActionOperation {
   const TestScriptActionOperation({
     required this.id,
@@ -490,6 +505,7 @@ class TestScriptActionOperation {
   Map<String, dynamic> toJson() => _$TestScriptActionOperationToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptOperationRequestHeader {
   const TestScriptOperationRequestHeader({
     required this.id,
@@ -514,6 +530,7 @@ class TestScriptOperationRequestHeader {
       _$TestScriptOperationRequestHeaderToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTest {
   const TestScriptTest({
     required this.id,
@@ -540,6 +557,7 @@ class TestScriptTest {
   Map<String, dynamic> toJson() => _$TestScriptTestToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTeardown {
   const TestScriptTeardown({
     required this.id,
@@ -556,6 +574,7 @@ class TestScriptTeardown {
   Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
+@JsonSerializable()
 class TestScriptTeardownAction {
   const TestScriptTeardownAction({
     required this.id,

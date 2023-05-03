@@ -64,6 +64,7 @@ class PaymentNotice {
   Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliation {
   const PaymentReconciliation({
     @Default(Stu3ResourceType.PaymentReconciliation) required this.resourceType,
@@ -128,6 +129,7 @@ class PaymentReconciliation {
   Map<String, dynamic> toJson() => _$PaymentReconciliationToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliationDetail {
   const PaymentReconciliationDetail({
     required this.type,
@@ -152,6 +154,7 @@ class PaymentReconciliationDetail {
   Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
 }
 
+@JsonSerializable()
 class PaymentReconciliationProcessNote {
   const PaymentReconciliationProcessNote({
     this.type,

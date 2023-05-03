@@ -88,6 +88,7 @@ class Coverage {
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
+@JsonSerializable()
 class CoveragePaymentBy {
   const CoveragePaymentBy({
     required this.id,
@@ -108,6 +109,7 @@ class CoveragePaymentBy {
   Map<String, dynamic> toJson() => _$CoveragePaymentByToJson(this);
 }
 
+@JsonSerializable()
 class CoverageClass {
   const CoverageClass({
     required this.id,
@@ -130,6 +132,7 @@ class CoverageClass {
   Map<String, dynamic> toJson() => _$CoverageClassToJson(this);
 }
 
+@JsonSerializable()
 class CoverageCostToBeneficiary {
   const CoverageCostToBeneficiary({
     required this.id,
@@ -160,6 +163,7 @@ class CoverageCostToBeneficiary {
   Map<String, dynamic> toJson() => _$CoverageCostToBeneficiaryToJson(this);
 }
 
+@JsonSerializable()
 class CoverageException {
   const CoverageException({
     required this.id,
@@ -178,6 +182,7 @@ class CoverageException {
   Map<String, dynamic> toJson() => _$CoverageExceptionToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequest {
   const CoverageEligibilityRequest({
     @Default(R5ResourceType.CoverageEligibilityRequest)
@@ -247,6 +252,7 @@ class CoverageEligibilityRequest {
   Map<String, dynamic> toJson() => _$CoverageEligibilityRequestToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestSupportingInfo {
   const CoverageEligibilityRequestSupportingInfo({
     required this.id,
@@ -274,6 +280,7 @@ class CoverageEligibilityRequestSupportingInfo {
       _$CoverageEligibilityRequestSupportingInfoToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestInsurance {
   const CoverageEligibilityRequestInsurance({
     required this.id,
@@ -302,13 +309,14 @@ class CoverageEligibilityRequestInsurance {
       _$CoverageEligibilityRequestInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestItem {
   const CoverageEligibilityRequestItem({
     required this.id,
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     required this.supportingInfoSequence,
-    @JsonKey('__supportingInfoSequence')
+    @JsonKey(name: '__supportingInfoSequence')
         required this.supportingInfoSequenceElement,
     required this.category,
     required this.productOrService,
@@ -340,6 +348,7 @@ class CoverageEligibilityRequestItem {
   Map<String, dynamic> toJson() => _$CoverageEligibilityRequestItemToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestDiagnosis {
   const CoverageEligibilityRequestDiagnosis({
     required this.id,
@@ -361,6 +370,7 @@ class CoverageEligibilityRequestDiagnosis {
       _$CoverageEligibilityRequestDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponse {
   const CoverageEligibilityResponse({
     @Default(R5ResourceType.CoverageEligibilityResponse)
@@ -438,6 +448,7 @@ class CoverageEligibilityResponse {
   Map<String, dynamic> toJson() => _$CoverageEligibilityResponseToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseInsurance {
   const CoverageEligibilityResponseInsurance({
     required this.id,
@@ -465,6 +476,7 @@ class CoverageEligibilityResponseInsurance {
       _$CoverageEligibilityResponseInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseItem {
   const CoverageEligibilityResponseItem({
     required this.id,
@@ -485,7 +497,7 @@ class CoverageEligibilityResponseItem {
     required this.term,
     required this.benefit,
     required this.authorizationRequired,
-    @JsonKey('__authorizationRequired')
+    @JsonKey(name: '__authorizationRequired')
         required this.authorizationRequiredElement,
     required this.authorizationSupporting,
     required this.authorizationUrl,
@@ -520,6 +532,7 @@ class CoverageEligibilityResponseItem {
       _$CoverageEligibilityResponseItemToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseBenefit {
   const CoverageEligibilityResponseBenefit({
     required this.id,
@@ -560,6 +573,7 @@ class CoverageEligibilityResponseBenefit {
       _$CoverageEligibilityResponseBenefitToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseError {
   const CoverageEligibilityResponseError({
     required this.id,
@@ -578,6 +592,7 @@ class CoverageEligibilityResponseError {
       _$CoverageEligibilityResponseErrorToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentRequest {
   const EnrollmentRequest({
     @Default(R5ResourceType.EnrollmentRequest) required this.resourceType,
@@ -626,6 +641,7 @@ class EnrollmentRequest {
   Map<String, dynamic> toJson() => _$EnrollmentRequestToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentResponse {
   const EnrollmentResponse({
     @Default(R5ResourceType.EnrollmentResponse) required this.resourceType,

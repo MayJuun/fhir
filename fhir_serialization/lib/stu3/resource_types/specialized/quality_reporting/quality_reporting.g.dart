@@ -420,3 +420,456 @@ const _$MeasureStatusEnumMap = {
   MeasureStatus.retired: 'retired',
   MeasureStatus.unknown: 'unknown',
 };
+
+MeasureGroup _$MeasureGroupFromJson(Map<String, dynamic> json) => MeasureGroup(
+      identifier:
+          Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      name: json['name'] as String?,
+      nameElement: json['nameElement'] == null
+          ? null
+          : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['descriptionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['descriptionElement'] as Map<String, dynamic>),
+      population: (json['population'] as List<dynamic>?)
+          ?.map((e) => MeasurePopulation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      stratifier: (json['stratifier'] as List<dynamic>?)
+          ?.map((e) => MeasureStratifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$MeasureGroupToJson(MeasureGroup instance) {
+  final val = <String, dynamic>{
+    'identifier': instance.identifier.toJson(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('nameElement', instance.nameElement?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
+  writeNotNull(
+      'population', instance.population?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'stratifier', instance.stratifier?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+MeasurePopulation _$MeasurePopulationFromJson(Map<String, dynamic> json) =>
+    MeasurePopulation(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      name: json['name'] as String?,
+      nameElement: json['nameElement'] == null
+          ? null
+          : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['descriptionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['descriptionElement'] as Map<String, dynamic>),
+      criteria: json['criteria'] as String?,
+      criteriaElement: json['criteriaElement'] == null
+          ? null
+          : Element.fromJson(json['criteriaElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasurePopulationToJson(MeasurePopulation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('nameElement', instance.nameElement?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
+  writeNotNull('criteria', instance.criteria);
+  writeNotNull('criteriaElement', instance.criteriaElement?.toJson());
+  return val;
+}
+
+MeasureStratifier _$MeasureStratifierFromJson(Map<String, dynamic> json) =>
+    MeasureStratifier(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      criteria: json['criteria'] as String?,
+      criteriaElement: json['criteriaElement'] == null
+          ? null
+          : Element.fromJson(json['criteriaElement'] as Map<String, dynamic>),
+      path: json['path'] as String?,
+      pathElement: json['pathElement'] == null
+          ? null
+          : Element.fromJson(json['pathElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureStratifierToJson(MeasureStratifier instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('criteria', instance.criteria);
+  writeNotNull('criteriaElement', instance.criteriaElement?.toJson());
+  writeNotNull('path', instance.path);
+  writeNotNull('pathElement', instance.pathElement?.toJson());
+  return val;
+}
+
+MeasureSupplementalData _$MeasureSupplementalDataFromJson(
+        Map<String, dynamic> json) =>
+    MeasureSupplementalData(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      usage: (json['usage'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      criteria: json['criteria'] as String?,
+      criteriaElement: json['criteriaElement'] == null
+          ? null
+          : Element.fromJson(json['criteriaElement'] as Map<String, dynamic>),
+      path: json['path'] as String?,
+      pathElement: json['pathElement'] == null
+          ? null
+          : Element.fromJson(json['pathElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureSupplementalDataToJson(
+    MeasureSupplementalData instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('usage', instance.usage?.map((e) => e.toJson()).toList());
+  writeNotNull('criteria', instance.criteria);
+  writeNotNull('criteriaElement', instance.criteriaElement?.toJson());
+  writeNotNull('path', instance.path);
+  writeNotNull('pathElement', instance.pathElement?.toJson());
+  return val;
+}
+
+MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
+    MeasureReport(
+      resourceType:
+          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      status: $enumDecodeNullable(_$MeasureReportStatusEnumMap, json['status']),
+      statusElement: json['statusElement'] == null
+          ? null
+          : Element.fromJson(json['statusElement'] as Map<String, dynamic>),
+      type: $enumDecodeNullable(_$MeasureReportTypeEnumMap, json['type']),
+      typeElement: json['typeElement'] == null
+          ? null
+          : Element.fromJson(json['typeElement'] as Map<String, dynamic>),
+      measure: Reference.fromJson(json['measure'] as Map<String, dynamic>),
+      patient: json['patient'] == null
+          ? null
+          : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['dateElement'] == null
+          ? null
+          : Element.fromJson(json['dateElement'] as Map<String, dynamic>),
+      reportingOrganization: json['reportingOrganization'] == null
+          ? null
+          : Reference.fromJson(
+              json['reportingOrganization'] as Map<String, dynamic>),
+      period: Period.fromJson(json['period'] as Map<String, dynamic>),
+      group: (json['group'] as List<dynamic>?)
+          ?.map((e) => MeasureReportGroup.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      evaluatedResources: json['evaluatedResources'] == null
+          ? null
+          : Reference.fromJson(
+              json['evaluatedResources'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('status', _$MeasureReportStatusEnumMap[instance.status]);
+  writeNotNull('statusElement', instance.statusElement?.toJson());
+  writeNotNull('type', _$MeasureReportTypeEnumMap[instance.type]);
+  writeNotNull('typeElement', instance.typeElement?.toJson());
+  val['measure'] = instance.measure.toJson();
+  writeNotNull('patient', instance.patient?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('dateElement', instance.dateElement?.toJson());
+  writeNotNull(
+      'reportingOrganization', instance.reportingOrganization?.toJson());
+  val['period'] = instance.period.toJson();
+  writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
+  writeNotNull('evaluatedResources', instance.evaluatedResources?.toJson());
+  return val;
+}
+
+const _$MeasureReportStatusEnumMap = {
+  MeasureReportStatus.complete: 'complete',
+  MeasureReportStatus.pending: 'pending',
+  MeasureReportStatus.error: 'error',
+  MeasureReportStatus.unknown: 'unknown',
+};
+
+const _$MeasureReportTypeEnumMap = {
+  MeasureReportType.individual: 'individual',
+  MeasureReportType.patient_list: 'patient-list',
+  MeasureReportType.summary: 'summary',
+  MeasureReportType.unknown: 'unknown',
+};
+
+MeasureReportGroup _$MeasureReportGroupFromJson(Map<String, dynamic> json) =>
+    MeasureReportGroup(
+      identifier:
+          Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      population: (json['population'] as List<dynamic>?)
+          ?.map((e) =>
+              MeasureReportPopulation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      measureScore: json['measureScore'] == null
+          ? null
+          : Decimal.fromJson(json['measureScore']),
+      measureScoreElement: json['measureScoreElement'] == null
+          ? null
+          : Element.fromJson(
+              json['measureScoreElement'] as Map<String, dynamic>),
+      stratifier: (json['stratifier'] as List<dynamic>?)
+          ?.map((e) =>
+              MeasureReportStratifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$MeasureReportGroupToJson(MeasureReportGroup instance) {
+  final val = <String, dynamic>{
+    'identifier': instance.identifier.toJson(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'population', instance.population?.map((e) => e.toJson()).toList());
+  writeNotNull('measureScore', instance.measureScore?.toJson());
+  writeNotNull('measureScoreElement', instance.measureScoreElement?.toJson());
+  writeNotNull(
+      'stratifier', instance.stratifier?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+MeasureReportPopulation _$MeasureReportPopulationFromJson(
+        Map<String, dynamic> json) =>
+    MeasureReportPopulation(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      count: json['count'] == null ? null : Decimal.fromJson(json['count']),
+      countElement: json['countElement'] == null
+          ? null
+          : Element.fromJson(json['countElement'] as Map<String, dynamic>),
+      patients: json['patients'] == null
+          ? null
+          : Reference.fromJson(json['patients'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureReportPopulationToJson(
+    MeasureReportPopulation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('count', instance.count?.toJson());
+  writeNotNull('countElement', instance.countElement?.toJson());
+  writeNotNull('patients', instance.patients?.toJson());
+  return val;
+}
+
+MeasureReportStratifier _$MeasureReportStratifierFromJson(
+        Map<String, dynamic> json) =>
+    MeasureReportStratifier(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      stratum: (json['stratum'] as List<dynamic>?)
+          ?.map((e) => MeasureReportStratum.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$MeasureReportStratifierToJson(
+    MeasureReportStratifier instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('stratum', instance.stratum?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+MeasureReportStratum _$MeasureReportStratumFromJson(
+        Map<String, dynamic> json) =>
+    MeasureReportStratum(
+      value: json['value'] as String?,
+      valueElement: json['valueElement'] == null
+          ? null
+          : Element.fromJson(json['valueElement'] as Map<String, dynamic>),
+      population: (json['population'] as List<dynamic>?)
+          ?.map((e) =>
+              MeasureReportPopulation1.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      measureScore: json['measureScore'] == null
+          ? null
+          : Decimal.fromJson(json['measureScore']),
+      measureScoreElement: json['measureScoreElement'] == null
+          ? null
+          : Element.fromJson(
+              json['measureScoreElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureReportStratumToJson(
+    MeasureReportStratum instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('value', instance.value);
+  writeNotNull('valueElement', instance.valueElement?.toJson());
+  writeNotNull(
+      'population', instance.population?.map((e) => e.toJson()).toList());
+  writeNotNull('measureScore', instance.measureScore?.toJson());
+  writeNotNull('measureScoreElement', instance.measureScoreElement?.toJson());
+  return val;
+}
+
+MeasureReportPopulation1 _$MeasureReportPopulation1FromJson(
+        Map<String, dynamic> json) =>
+    MeasureReportPopulation1(
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      code: json['code'] == null
+          ? null
+          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+      count: json['count'] == null ? null : Decimal.fromJson(json['count']),
+      countElement: json['countElement'] == null
+          ? null
+          : Element.fromJson(json['countElement'] as Map<String, dynamic>),
+      patients: json['patients'] == null
+          ? null
+          : Reference.fromJson(json['patients'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MeasureReportPopulation1ToJson(
+    MeasureReportPopulation1 instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('count', instance.count?.toJson());
+  writeNotNull('countElement', instance.countElement?.toJson());
+  writeNotNull('patients', instance.patients?.toJson());
+  return val;
+}

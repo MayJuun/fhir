@@ -68,6 +68,7 @@ class Account {
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
+@JsonSerializable()
 class AccountCoverage {
   const AccountCoverage({
     required this.coverage,
@@ -82,6 +83,7 @@ class AccountCoverage {
   Map<String, dynamic> toJson() => _$AccountCoverageToJson(this);
 }
 
+@JsonSerializable()
 class AccountGuarantor {
   const AccountGuarantor({
     required this.party,
@@ -98,6 +100,7 @@ class AccountGuarantor {
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItem {
   const ChargeItem({
     @Default(Stu3ResourceType.ChargeItem) required this.resourceType,
@@ -191,6 +194,7 @@ class ChargeItem {
   Map<String, dynamic> toJson() => _$ChargeItemToJson(this);
 }
 
+@JsonSerializable()
 class ChargeItemParticipant {
   const ChargeItemParticipant({
     required this.role,
@@ -203,6 +207,7 @@ class ChargeItemParticipant {
   Map<String, dynamic> toJson() => _$ChargeItemParticipantToJson(this);
 }
 
+@JsonSerializable()
 class Contract {
   const Contract({
     @Default(Stu3ResourceType.Contract) required this.resourceType,
@@ -285,6 +290,7 @@ class Contract {
   Map<String, dynamic> toJson() => _$ContractToJson(this);
 }
 
+@JsonSerializable()
 class ContractAgent {
   const ContractAgent({
     required this.actor,
@@ -297,6 +303,7 @@ class ContractAgent {
   Map<String, dynamic> toJson() => _$ContractAgentToJson(this);
 }
 
+@JsonSerializable()
 class ContractSigner {
   const ContractSigner({
     required this.type,
@@ -311,6 +318,7 @@ class ContractSigner {
   Map<String, dynamic> toJson() => _$ContractSignerToJson(this);
 }
 
+@JsonSerializable()
 class ContractValuedItem {
   const ContractValuedItem({
     required this.entityCodeableConcept,
@@ -343,6 +351,7 @@ class ContractValuedItem {
   Map<String, dynamic> toJson() => _$ContractValuedItemToJson(this);
 }
 
+@JsonSerializable()
 class ContractTerm {
   const ContractTerm({
     required this.identifier,
@@ -381,6 +390,7 @@ class ContractTerm {
   Map<String, dynamic> toJson() => _$ContractTermToJson(this);
 }
 
+@JsonSerializable()
 class ContractAgent1 {
   const ContractAgent1({
     required this.actor,
@@ -393,6 +403,7 @@ class ContractAgent1 {
   Map<String, dynamic> toJson() => _$ContractAgent1ToJson(this);
 }
 
+@JsonSerializable()
 class ContractValuedItem1 {
   const ContractValuedItem1({
     required this.entityCodeableConcept,
@@ -425,6 +436,7 @@ class ContractValuedItem1 {
   Map<String, dynamic> toJson() => _$ContractValuedItem1ToJson(this);
 }
 
+@JsonSerializable()
 class ContractFriendly {
   const ContractFriendly({
     required this.contentAttachment,
@@ -437,6 +449,7 @@ class ContractFriendly {
   Map<String, dynamic> toJson() => _$ContractFriendlyToJson(this);
 }
 
+@JsonSerializable()
 class ContractLegal {
   const ContractLegal({
     required this.contentAttachment,
@@ -449,6 +462,7 @@ class ContractLegal {
   Map<String, dynamic> toJson() => _$ContractLegalToJson(this);
 }
 
+@JsonSerializable()
 class ContractRule {
   const ContractRule({
     required this.contentAttachment,
@@ -461,6 +475,7 @@ class ContractRule {
   Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefit {
   const ExplanationOfBenefit({
     @Default(Stu3ResourceType.ExplanationOfBenefit) required this.resourceType,
@@ -577,6 +592,7 @@ class ExplanationOfBenefit {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitRelated {
   const ExplanationOfBenefitRelated({
     required this.claim,
@@ -591,6 +607,7 @@ class ExplanationOfBenefitRelated {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitRelatedToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitPayee {
   const ExplanationOfBenefitPayee({
     required this.type,
@@ -603,6 +620,7 @@ class ExplanationOfBenefitPayee {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPayeeToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitInformation {
   const ExplanationOfBenefitInformation({
     required this.sequence,
@@ -638,6 +656,7 @@ class ExplanationOfBenefitInformation {
       _$ExplanationOfBenefitInformationToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitCareTeam {
   const ExplanationOfBenefitCareTeam({
     required this.sequence,
@@ -660,6 +679,7 @@ class ExplanationOfBenefitCareTeam {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitCareTeamToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitDiagnosis {
   const ExplanationOfBenefitDiagnosis({
     required this.sequence,
@@ -680,6 +700,7 @@ class ExplanationOfBenefitDiagnosis {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitProcedure {
   const ExplanationOfBenefitProcedure({
     required this.sequence,
@@ -700,6 +721,7 @@ class ExplanationOfBenefitProcedure {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitProcedureToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitInsurance {
   const ExplanationOfBenefitInsurance({
     required this.coverage,
@@ -714,6 +736,7 @@ class ExplanationOfBenefitInsurance {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAccident {
   const ExplanationOfBenefitAccident({
     required this.date,
@@ -732,6 +755,7 @@ class ExplanationOfBenefitAccident {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAccidentToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitItem {
   const ExplanationOfBenefitItem({
     required this.sequence,
@@ -743,7 +767,8 @@ class ExplanationOfBenefitItem {
     required this.procedureLinkId,
     @JsonKey(name: '_procedureLinkId') required this.procedureLinkIdElement,
     required this.informationLinkId,
-    @JsonKey('__informationLinkId') required this.informationLinkIdElement,
+    @JsonKey(name: '__informationLinkId')
+        required this.informationLinkIdElement,
     required this.revenue,
     required this.category,
     required this.service,
@@ -809,6 +834,7 @@ class ExplanationOfBenefitItem {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitItemToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAdjudication {
   const ExplanationOfBenefitAdjudication({
     required this.category,
@@ -829,6 +855,7 @@ class ExplanationOfBenefitAdjudication {
       _$ExplanationOfBenefitAdjudicationToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitSubDetail {
   const ExplanationOfBenefitSubDetail({
     required this.sequence,
@@ -871,6 +898,7 @@ class ExplanationOfBenefitSubDetail {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitAddItem {
   const ExplanationOfBenefitAddItem({
     required this.sequenceLinkId,
@@ -901,6 +929,7 @@ class ExplanationOfBenefitAddItem {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitAddItemToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitDetail1 {
   const ExplanationOfBenefitDetail1({
     required this.revenue,
@@ -925,6 +954,7 @@ class ExplanationOfBenefitDetail1 {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetail1ToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitPayment {
   const ExplanationOfBenefitPayment({
     required this.type,
@@ -947,6 +977,7 @@ class ExplanationOfBenefitPayment {
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitPaymentToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitProcessNote {
   const ExplanationOfBenefitProcessNote({
     required this.number,
@@ -968,6 +999,7 @@ class ExplanationOfBenefitProcessNote {
       _$ExplanationOfBenefitProcessNoteToJson(this);
 }
 
+@JsonSerializable()
 class ExplanationOfBenefitBenefitBalance {
   const ExplanationOfBenefitBenefitBalance({
     required this.category,

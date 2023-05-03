@@ -211,3 +211,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
+
+FhirField _$FhirFieldFromJson(Map<String, dynamic> json) => FhirField(
+      json['isList'] as bool,
+      json['type'] as String,
+    );
+
+Map<String, dynamic> _$FhirFieldToJson(FhirField instance) => <String, dynamic>{
+      'isList': instance.isList,
+      'type': instance.type,
+    };

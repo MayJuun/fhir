@@ -146,6 +146,7 @@ class ActivityDefinition {
   Map<String, dynamic> toJson() => _$ActivityDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionParticipant {
   const ActivityDefinitionParticipant({
     required this.type,
@@ -160,6 +161,7 @@ class ActivityDefinitionParticipant {
   Map<String, dynamic> toJson() => _$ActivityDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class ActivityDefinitionDynamicValue {
   const ActivityDefinitionDynamicValue({
     required this.description,
@@ -184,6 +186,7 @@ class ActivityDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinition {
   const PlanDefinition({
     @Default(Stu3ResourceType.PlanDefinition) required this.resourceType,
@@ -294,6 +297,7 @@ class PlanDefinition {
   Map<String, dynamic> toJson() => _$PlanDefinitionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionGoal {
   const PlanDefinitionGoal({
     required this.category,
@@ -316,6 +320,7 @@ class PlanDefinitionGoal {
   Map<String, dynamic> toJson() => _$PlanDefinitionGoalToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionTarget {
   const PlanDefinitionTarget({
     required this.measure,
@@ -334,6 +339,7 @@ class PlanDefinitionTarget {
   Map<String, dynamic> toJson() => _$PlanDefinitionTargetToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionAction {
   const PlanDefinitionAction({
     required this.label,
@@ -423,6 +429,7 @@ class PlanDefinitionAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionCondition {
   const PlanDefinitionCondition({
     required this.kind,
@@ -447,6 +454,7 @@ class PlanDefinitionCondition {
   Map<String, dynamic> toJson() => _$PlanDefinitionConditionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionRelatedAction {
   const PlanDefinitionRelatedAction({
     required this.actionId,
@@ -467,6 +475,7 @@ class PlanDefinitionRelatedAction {
   Map<String, dynamic> toJson() => _$PlanDefinitionRelatedActionToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionParticipant {
   const PlanDefinitionParticipant({
     required this.type,
@@ -481,6 +490,7 @@ class PlanDefinitionParticipant {
   Map<String, dynamic> toJson() => _$PlanDefinitionParticipantToJson(this);
 }
 
+@JsonSerializable()
 class PlanDefinitionDynamicValue {
   const PlanDefinitionDynamicValue({
     required this.description,
@@ -505,6 +515,7 @@ class PlanDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
 }
 
+@JsonSerializable()
 class Questionnaire {
   const Questionnaire({
     @Default(Stu3ResourceType.Questionnaire) required this.resourceType,
@@ -605,6 +616,7 @@ class Questionnaire {
   Map<String, dynamic> toJson() => _$QuestionnaireToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireItem {
   const QuestionnaireItem({
     required this.linkId,
@@ -701,6 +713,7 @@ class QuestionnaireItem {
   Map<String, dynamic> toJson() => _$QuestionnaireItemToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireEnableWhen {
   const QuestionnaireEnableWhen({
     required this.question,
@@ -757,6 +770,7 @@ class QuestionnaireEnableWhen {
   Map<String, dynamic> toJson() => _$QuestionnaireEnableWhenToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireOption {
   const QuestionnaireOption({
     required this.valueInteger,
@@ -783,6 +797,7 @@ class QuestionnaireOption {
   Map<String, dynamic> toJson() => _$QuestionnaireOptionToJson(this);
 }
 
+@JsonSerializable()
 class ServiceDefinition {
   const ServiceDefinition({
     @Default(Stu3ResourceType.ServiceDefinition) required this.resourceType,

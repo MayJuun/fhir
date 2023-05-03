@@ -77,6 +77,7 @@ class Composition {
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
 
+@JsonSerializable()
 class CompositionAttester {
   const CompositionAttester({
     required this.id,
@@ -101,6 +102,7 @@ class CompositionAttester {
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
 
+@JsonSerializable()
 class CompositionEvent {
   const CompositionEvent({
     required this.id,
@@ -121,6 +123,7 @@ class CompositionEvent {
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
 
+@JsonSerializable()
 class CompositionSection {
   const CompositionSection({
     required this.id,
@@ -157,6 +160,7 @@ class CompositionSection {
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifest {
   const DocumentManifest({
     @Default(Dstu2ResourceType.DocumentManifest) required this.resourceType,
@@ -220,6 +224,7 @@ class DocumentManifest {
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifestContent {
   const DocumentManifestContent({
     required this.id,
@@ -238,6 +243,7 @@ class DocumentManifestContent {
   Map<String, dynamic> toJson() => _$DocumentManifestContentToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifestRelated {
   const DocumentManifestRelated({
     required this.id,
@@ -256,6 +262,7 @@ class DocumentManifestRelated {
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReference {
   const DocumentReference({
     @Default(Dstu2ResourceType.DocumentReference) required this.resourceType,
@@ -327,6 +334,7 @@ class DocumentReference {
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceRelatesTo {
   const DocumentReferenceRelatesTo({
     required this.id,
@@ -348,6 +356,7 @@ class DocumentReferenceRelatesTo {
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContent {
   const DocumentReferenceContent({
     required this.id,
@@ -366,6 +375,7 @@ class DocumentReferenceContent {
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContext {
   const DocumentReferenceContext({
     required this.id,
@@ -394,6 +404,7 @@ class DocumentReferenceContext {
   Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContextRelated {
   const DocumentReferenceContextRelated({
     required this.id,
@@ -413,6 +424,7 @@ class DocumentReferenceContextRelated {
       _$DocumentReferenceContextRelatedToJson(this);
 }
 
+@JsonSerializable()
 class List_ {
   const List_({
     @Default(Dstu2ResourceType.List_) required this.resourceType,
@@ -476,6 +488,7 @@ class List_ {
   Map<String, dynamic> toJson() => _$List_ToJson(this);
 }
 
+@JsonSerializable()
 class ListEntry {
   const ListEntry({
     required this.id,

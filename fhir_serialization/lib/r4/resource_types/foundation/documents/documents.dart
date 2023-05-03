@@ -12,27 +12,27 @@ class CatalogEntry {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.type,
     required this.orderable,
-    @JsonKey('__orderable') required this.orderableElement,
+    @JsonKey(name: '__orderable') required this.orderableElement,
     required this.referencedItem,
     required this.additionalIdentifier,
     required this.classification,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.validityPeriod,
     required this.validTo,
-    @JsonKey('__validTo') required this.validToElement,
+    @JsonKey(name: '__validTo') required this.validToElement,
     required this.lastUpdated,
-    @JsonKey('__lastUpdated') required this.lastUpdatedElement,
+    @JsonKey(name: '__lastUpdated') required this.lastUpdatedElement,
     required this.additionalCharacteristic,
     required this.additionalClassification,
     required this.relatedEntry,
@@ -77,6 +77,7 @@ class CatalogEntry {
   Map<String, dynamic> toJson() => _$CatalogEntryToJson(this);
 }
 
+@JsonSerializable()
 class CatalogEntryRelatedEntry {
   const CatalogEntryRelatedEntry({
     required this.id,
@@ -97,33 +98,34 @@ class CatalogEntryRelatedEntry {
   Map<String, dynamic> toJson() => _$CatalogEntryRelatedEntryToJson(this);
 }
 
+@JsonSerializable()
 class Composition {
   const Composition({
     @Default(R4ResourceType.Composition) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.category,
     required this.subject,
     required this.encounter,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.author,
     required this.title,
-    @JsonKey('__title') required this.titleElement,
+    @JsonKey(name: '__title') required this.titleElement,
     required this.confidentiality,
-    @JsonKey('__confidentiality') required this.confidentialityElement,
+    @JsonKey(name: '__confidentiality') required this.confidentialityElement,
     required this.attester,
     required this.custodian,
     required this.relatesTo,
@@ -172,6 +174,7 @@ class Composition {
   Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
 
+@JsonSerializable()
 class CompositionAttester {
   const CompositionAttester({
     required this.id,
@@ -196,6 +199,7 @@ class CompositionAttester {
   Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
 }
 
+@JsonSerializable()
 class CompositionRelatesTo {
   const CompositionRelatesTo({
     required this.id,
@@ -218,6 +222,7 @@ class CompositionRelatesTo {
   Map<String, dynamic> toJson() => _$CompositionRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class CompositionEvent {
   const CompositionEvent({
     required this.id,
@@ -238,6 +243,7 @@ class CompositionEvent {
   Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
 
+@JsonSerializable()
 class CompositionSection {
   const CompositionSection({
     required this.id,
@@ -276,33 +282,34 @@ class CompositionSection {
   Map<String, dynamic> toJson() => _$CompositionSectionToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifest {
   const DocumentManifest({
     @Default(R4ResourceType.DocumentManifest) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.type,
     required this.subject,
     required this.created,
-    @JsonKey('__created') required this.createdElement,
+    @JsonKey(name: '__created') required this.createdElement,
     required this.author,
     required this.recipient,
     required this.source,
-    @JsonKey('__source') required this.sourceElement,
+    @JsonKey(name: '__source') required this.sourceElement,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.content,
     required this.related,
   });
@@ -345,6 +352,7 @@ class DocumentManifest {
   Map<String, dynamic> toJson() => _$DocumentManifestToJson(this);
 }
 
+@JsonSerializable()
 class DocumentManifestRelated {
   const DocumentManifestRelated({
     required this.id,
@@ -363,36 +371,37 @@ class DocumentManifestRelated {
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReference {
   const DocumentReference({
     @Default(R4ResourceType.DocumentReference) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.docStatus,
-    @JsonKey('__docStatus') required this.docStatusElement,
+    @JsonKey(name: '__docStatus') required this.docStatusElement,
     required this.type,
     required this.category,
     required this.subject,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.author,
     required this.authenticator,
     required this.custodian,
     required this.relatesTo,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.securityLabel,
     required this.content,
     required this.context,
@@ -440,6 +449,7 @@ class DocumentReference {
   Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceRelatesTo {
   const DocumentReferenceRelatesTo({
     required this.id,
@@ -460,6 +470,7 @@ class DocumentReferenceRelatesTo {
   Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContent {
   const DocumentReferenceContent({
     required this.id,
@@ -478,6 +489,7 @@ class DocumentReferenceContent {
   Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
 
+@JsonSerializable()
 class DocumentReferenceContext {
   const DocumentReferenceContext({
     required this.id,

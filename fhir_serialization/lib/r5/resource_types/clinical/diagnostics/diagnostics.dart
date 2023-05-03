@@ -56,6 +56,7 @@ class BodyStructure {
   Map<String, dynamic> toJson() => _$BodyStructureToJson(this);
 }
 
+@JsonSerializable()
 class BodyStructureIncludedStructure {
   const BodyStructureIncludedStructure({
     required this.id,
@@ -76,6 +77,7 @@ class BodyStructureIncludedStructure {
   Map<String, dynamic> toJson() => _$BodyStructureIncludedStructureToJson(this);
 }
 
+@JsonSerializable()
 class BodyStructureExcludedStructure {
   const BodyStructureExcludedStructure({
     required this.id,
@@ -96,6 +98,7 @@ class BodyStructureExcludedStructure {
   Map<String, dynamic> toJson() => _$BodyStructureExcludedStructureToJson(this);
 }
 
+@JsonSerializable()
 class DiagnosticReport {
   const DiagnosticReport({
     @Default(R5ResourceType.DiagnosticReport) required this.resourceType,
@@ -178,6 +181,7 @@ class DiagnosticReport {
   Map<String, dynamic> toJson() => _$DiagnosticReportToJson(this);
 }
 
+@JsonSerializable()
 class DiagnosticReportSupportingInfo {
   const DiagnosticReportSupportingInfo({
     required this.id,
@@ -196,6 +200,7 @@ class DiagnosticReportSupportingInfo {
   Map<String, dynamic> toJson() => _$DiagnosticReportSupportingInfoToJson(this);
 }
 
+@JsonSerializable()
 class DiagnosticReportMedia {
   const DiagnosticReportMedia({
     required this.id,
@@ -216,6 +221,7 @@ class DiagnosticReportMedia {
   Map<String, dynamic> toJson() => _$DiagnosticReportMediaToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudy {
   const GenomicStudy({
     @Default(R5ResourceType.GenomicStudy) required this.resourceType,
@@ -282,6 +288,7 @@ class GenomicStudy {
   Map<String, dynamic> toJson() => _$GenomicStudyToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudyAnalysis {
   const GenomicStudyAnalysis({
     required this.id,
@@ -338,6 +345,7 @@ class GenomicStudyAnalysis {
   Map<String, dynamic> toJson() => _$GenomicStudyAnalysisToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudyInput {
   const GenomicStudyInput({
     required this.id,
@@ -360,6 +368,7 @@ class GenomicStudyInput {
   Map<String, dynamic> toJson() => _$GenomicStudyInputToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudyOutput {
   const GenomicStudyOutput({
     required this.id,
@@ -378,6 +387,7 @@ class GenomicStudyOutput {
   Map<String, dynamic> toJson() => _$GenomicStudyOutputToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudyPerformer {
   const GenomicStudyPerformer({
     required this.id,
@@ -396,6 +406,7 @@ class GenomicStudyPerformer {
   Map<String, dynamic> toJson() => _$GenomicStudyPerformerToJson(this);
 }
 
+@JsonSerializable()
 class GenomicStudyDevice {
   const GenomicStudyDevice({
     required this.id,
@@ -414,6 +425,7 @@ class GenomicStudyDevice {
   Map<String, dynamic> toJson() => _$GenomicStudyDeviceToJson(this);
 }
 
+@JsonSerializable()
 class ImagingSelection {
   const ImagingSelection({
     @Default(R5ResourceType.ImagingSelection) required this.resourceType,
@@ -493,6 +505,7 @@ class ImagingSelection {
   Map<String, dynamic> toJson() => _$ImagingSelectionToJson(this);
 }
 
+@JsonSerializable()
 class ImagingSelectionPerformer {
   const ImagingSelectionPerformer({
     required this.id,
@@ -511,6 +524,7 @@ class ImagingSelectionPerformer {
   Map<String, dynamic> toJson() => _$ImagingSelectionPerformerToJson(this);
 }
 
+@JsonSerializable()
 class ImagingSelectionInstance {
   const ImagingSelectionInstance({
     required this.id,
@@ -541,6 +555,7 @@ class ImagingSelectionInstance {
   Map<String, dynamic> toJson() => _$ImagingSelectionInstanceToJson(this);
 }
 
+@JsonSerializable()
 class ImagingSelectionImageRegion {
   const ImagingSelectionImageRegion({
     required this.id,
@@ -563,6 +578,7 @@ class ImagingSelectionImageRegion {
   Map<String, dynamic> toJson() => _$ImagingSelectionImageRegionToJson(this);
 }
 
+@JsonSerializable()
 class ImagingSelectionImageRegion1 {
   const ImagingSelectionImageRegion1({
     required this.id,
@@ -585,6 +601,7 @@ class ImagingSelectionImageRegion1 {
   Map<String, dynamic> toJson() => _$ImagingSelectionImageRegion1ToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudy {
   const ImagingStudy({
     @Default(R5ResourceType.ImagingStudy) required this.resourceType,
@@ -661,6 +678,7 @@ class ImagingStudy {
   Map<String, dynamic> toJson() => _$ImagingStudyToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudySeries {
   const ImagingStudySeries({
     required this.id,
@@ -709,6 +727,7 @@ class ImagingStudySeries {
   Map<String, dynamic> toJson() => _$ImagingStudySeriesToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudyPerformer {
   const ImagingStudyPerformer({
     required this.id,
@@ -727,6 +746,7 @@ class ImagingStudyPerformer {
   Map<String, dynamic> toJson() => _$ImagingStudyPerformerToJson(this);
 }
 
+@JsonSerializable()
 class ImagingStudyInstance {
   const ImagingStudyInstance({
     required this.id,
@@ -755,6 +775,7 @@ class ImagingStudyInstance {
   Map<String, dynamic> toJson() => _$ImagingStudyInstanceToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequence {
   const MolecularSequence({
     @Default(R5ResourceType.MolecularSequence) required this.resourceType,
@@ -807,6 +828,7 @@ class MolecularSequence {
   Map<String, dynamic> toJson() => _$MolecularSequenceToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceRelative {
   const MolecularSequenceRelative({
     required this.id,
@@ -833,6 +855,7 @@ class MolecularSequenceRelative {
   Map<String, dynamic> toJson() => _$MolecularSequenceRelativeToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceStartingSequence {
   const MolecularSequenceStartingSequence({
     required this.id,
@@ -878,6 +901,7 @@ class MolecularSequenceStartingSequence {
       _$MolecularSequenceStartingSequenceToJson(this);
 }
 
+@JsonSerializable()
 class MolecularSequenceEdit {
   const MolecularSequenceEdit({
     required this.id,
@@ -909,6 +933,7 @@ class MolecularSequenceEdit {
   Map<String, dynamic> toJson() => _$MolecularSequenceEditToJson(this);
 }
 
+@JsonSerializable()
 class Observation {
   const Observation({
     @Default(R5ResourceType.Observation) required this.resourceType,
@@ -924,7 +949,7 @@ class Observation {
     required this.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
-    @JsonKey('__instantiatesCanonical')
+    @JsonKey(name: '__instantiatesCanonical')
         required this.instantiatesCanonicalElement,
     required this.instantiatesReference,
     required this.basedOn,
@@ -1045,6 +1070,7 @@ class Observation {
   Map<String, dynamic> toJson() => _$ObservationToJson(this);
 }
 
+@JsonSerializable()
 class ObservationTriggeredBy {
   const ObservationTriggeredBy({
     required this.id,
@@ -1069,6 +1095,7 @@ class ObservationTriggeredBy {
   Map<String, dynamic> toJson() => _$ObservationTriggeredByToJson(this);
 }
 
+@JsonSerializable()
 class ObservationReferenceRange {
   const ObservationReferenceRange({
     required this.id,
@@ -1099,6 +1126,7 @@ class ObservationReferenceRange {
   Map<String, dynamic> toJson() => _$ObservationReferenceRangeToJson(this);
 }
 
+@JsonSerializable()
 class ObservationComponent {
   const ObservationComponent({
     required this.id,
@@ -1155,6 +1183,7 @@ class ObservationComponent {
   Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponse {
   const QuestionnaireResponse({
     @Default(R5ResourceType.QuestionnaireResponse) required this.resourceType,
@@ -1213,6 +1242,7 @@ class QuestionnaireResponse {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseItem {
   const QuestionnaireResponseItem({
     required this.id,
@@ -1243,6 +1273,7 @@ class QuestionnaireResponseItem {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseItemToJson(this);
 }
 
+@JsonSerializable()
 class QuestionnaireResponseAnswer {
   const QuestionnaireResponseAnswer({
     required this.id,
@@ -1299,6 +1330,7 @@ class QuestionnaireResponseAnswer {
   Map<String, dynamic> toJson() => _$QuestionnaireResponseAnswerToJson(this);
 }
 
+@JsonSerializable()
 class Specimen {
   const Specimen({
     @Default(R5ResourceType.Specimen) required this.resourceType,
@@ -1367,6 +1399,7 @@ class Specimen {
   Map<String, dynamic> toJson() => _$SpecimenToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenFeature {
   const SpecimenFeature({
     required this.id,
@@ -1387,6 +1420,7 @@ class SpecimenFeature {
   Map<String, dynamic> toJson() => _$SpecimenFeatureToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenCollection {
   const SpecimenCollection({
     required this.id,
@@ -1425,6 +1459,7 @@ class SpecimenCollection {
   Map<String, dynamic> toJson() => _$SpecimenCollectionToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenProcessing {
   const SpecimenProcessing({
     required this.id,
@@ -1453,6 +1488,7 @@ class SpecimenProcessing {
   Map<String, dynamic> toJson() => _$SpecimenProcessingToJson(this);
 }
 
+@JsonSerializable()
 class SpecimenContainer {
   const SpecimenContainer({
     required this.id,

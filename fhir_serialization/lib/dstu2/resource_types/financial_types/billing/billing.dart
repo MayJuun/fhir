@@ -66,6 +66,7 @@ class Account {
   Map<String, dynamic> toJson() => _$AccountToJson(this);
 }
 
+@JsonSerializable()
 class Claim {
   const Claim({
     @Default(Dstu2ResourceType.Claim) required this.resourceType,
@@ -157,6 +158,7 @@ class Claim {
   Map<String, dynamic> toJson() => _$ClaimToJson(this);
 }
 
+@JsonSerializable()
 class ClaimPayee {
   const ClaimPayee({
     required this.id,
@@ -179,6 +181,7 @@ class ClaimPayee {
   Map<String, dynamic> toJson() => _$ClaimPayeeToJson(this);
 }
 
+@JsonSerializable()
 class ClaimDiagnosis {
   const ClaimDiagnosis({
     required this.id,
@@ -199,6 +202,7 @@ class ClaimDiagnosis {
   Map<String, dynamic> toJson() => _$ClaimDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class ClaimCoverage {
   const ClaimCoverage({
     required this.id,
@@ -229,6 +233,7 @@ class ClaimCoverage {
   Map<String, dynamic> toJson() => _$ClaimCoverageToJson(this);
 }
 
+@JsonSerializable()
 class ClaimItem {
   const ClaimItem({
     required this.id,
@@ -283,6 +288,7 @@ class ClaimItem {
   Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimItemDetail {
   const ClaimItemDetail({
     required this.id,
@@ -321,6 +327,7 @@ class ClaimItemDetail {
   Map<String, dynamic> toJson() => _$ClaimItemDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimDetailSubDetail {
   const ClaimDetailSubDetail({
     required this.id,
@@ -357,6 +364,7 @@ class ClaimDetailSubDetail {
   Map<String, dynamic> toJson() => _$ClaimDetailSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimItemProsthesis {
   const ClaimItemProsthesis({
     required this.id,
@@ -377,6 +385,7 @@ class ClaimItemProsthesis {
   Map<String, dynamic> toJson() => _$ClaimItemProsthesisToJson(this);
 }
 
+@JsonSerializable()
 class ClaimMissingTeeth {
   const ClaimMissingTeeth({
     required this.id,
@@ -397,6 +406,7 @@ class ClaimMissingTeeth {
   Map<String, dynamic> toJson() => _$ClaimMissingTeethToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponse {
   const ClaimResponse({
     @Default(Dstu2ResourceType.ClaimResponse) required this.resourceType,
@@ -488,6 +498,7 @@ class ClaimResponse {
   Map<String, dynamic> toJson() => _$ClaimResponseToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseItem {
   const ClaimResponseItem({
     required this.id,
@@ -514,6 +525,7 @@ class ClaimResponseItem {
   Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseItemAdjudication {
   const ClaimResponseItemAdjudication({
     required this.id,
@@ -536,6 +548,7 @@ class ClaimResponseItemAdjudication {
   Map<String, dynamic> toJson() => _$ClaimResponseItemAdjudicationToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseItemDetail {
   const ClaimResponseItemDetail({
     required this.id,
@@ -556,6 +569,7 @@ class ClaimResponseItemDetail {
   Map<String, dynamic> toJson() => _$ClaimResponseItemDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseDetailSubDetail {
   const ClaimResponseDetailSubDetail({
     required this.id,
@@ -574,6 +588,7 @@ class ClaimResponseDetailSubDetail {
   Map<String, dynamic> toJson() => _$ClaimResponseDetailSubDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseAddItem {
   const ClaimResponseAddItem({
     required this.id,
@@ -600,6 +615,7 @@ class ClaimResponseAddItem {
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseAddItemDetail {
   const ClaimResponseAddItemDetail({
     required this.id,
@@ -620,6 +636,7 @@ class ClaimResponseAddItemDetail {
   Map<String, dynamic> toJson() => _$ClaimResponseAddItemDetailToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseError {
   const ClaimResponseError({
     required this.id,
@@ -642,6 +659,7 @@ class ClaimResponseError {
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseNote {
   const ClaimResponseNote({
     required this.id,
@@ -668,6 +686,7 @@ class ClaimResponseNote {
   Map<String, dynamic> toJson() => _$ClaimResponseNoteToJson(this);
 }
 
+@JsonSerializable()
 class ClaimResponseCoverage {
   const ClaimResponseCoverage({
     required this.id,

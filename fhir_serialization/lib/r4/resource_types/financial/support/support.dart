@@ -82,6 +82,7 @@ class Coverage {
   Map<String, dynamic> toJson() => _$CoverageToJson(this);
 }
 
+@JsonSerializable()
 class CoverageClass {
   const CoverageClass({
     required this.id,
@@ -106,6 +107,7 @@ class CoverageClass {
   Map<String, dynamic> toJson() => _$CoverageClassToJson(this);
 }
 
+@JsonSerializable()
 class CoverageCostToBeneficiary {
   const CoverageCostToBeneficiary({
     required this.id,
@@ -128,6 +130,7 @@ class CoverageCostToBeneficiary {
   Map<String, dynamic> toJson() => _$CoverageCostToBeneficiaryToJson(this);
 }
 
+@JsonSerializable()
 class CoverageException {
   const CoverageException({
     required this.id,
@@ -146,6 +149,7 @@ class CoverageException {
   Map<String, dynamic> toJson() => _$CoverageExceptionToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequest {
   const CoverageEligibilityRequest({
     @Default(R4ResourceType.CoverageEligibilityRequest)
@@ -215,6 +219,7 @@ class CoverageEligibilityRequest {
   Map<String, dynamic> toJson() => _$CoverageEligibilityRequestToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestSupportingInfo {
   const CoverageEligibilityRequestSupportingInfo({
     required this.id,
@@ -242,6 +247,7 @@ class CoverageEligibilityRequestSupportingInfo {
       _$CoverageEligibilityRequestSupportingInfoToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityRequestDiagnosis {
   const CoverageEligibilityRequestDiagnosis({
     required this.id,
@@ -263,6 +269,7 @@ class CoverageEligibilityRequestDiagnosis {
       _$CoverageEligibilityRequestDiagnosisToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseInsurance {
   const CoverageEligibilityResponseInsurance({
     required this.id,
@@ -290,6 +297,7 @@ class CoverageEligibilityResponseInsurance {
       _$CoverageEligibilityResponseInsuranceToJson(this);
 }
 
+@JsonSerializable()
 class CoverageEligibilityResponseBenefit {
   const CoverageEligibilityResponseBenefit({
     required this.id,
@@ -330,6 +338,7 @@ class CoverageEligibilityResponseBenefit {
       _$CoverageEligibilityResponseBenefitToJson(this);
 }
 
+@JsonSerializable()
 class EnrollmentResponse {
   const EnrollmentResponse({
     @Default(R4ResourceType.EnrollmentResponse) required this.resourceType,

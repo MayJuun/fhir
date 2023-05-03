@@ -12,35 +12,36 @@ class Immunization {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.statusReason,
     required this.vaccineCode,
     required this.patient,
     required this.encounter,
     required this.occurrenceDateTime,
-    @JsonKey('__occurrenceDateTime') required this.occurrenceDateTimeElement,
+    @JsonKey(name: '__occurrenceDateTime')
+        required this.occurrenceDateTimeElement,
     required this.occurrenceString,
-    @JsonKey('__occurrenceString') required this.occurrenceStringElement,
+    @JsonKey(name: '__occurrenceString') required this.occurrenceStringElement,
     required this.recorded,
-    @JsonKey('__recorded') required this.recordedElement,
+    @JsonKey(name: '__recorded') required this.recordedElement,
     required this.primarySource,
-    @JsonKey('__primarySource') required this.primarySourceElement,
+    @JsonKey(name: '__primarySource') required this.primarySourceElement,
     required this.reportOrigin,
     required this.location,
     required this.manufacturer,
     required this.lotNumber,
-    @JsonKey('__lotNumber') required this.lotNumberElement,
+    @JsonKey(name: '__lotNumber') required this.lotNumberElement,
     required this.expirationDate,
-    @JsonKey('__expirationDate') required this.expirationDateElement,
+    @JsonKey(name: '__expirationDate') required this.expirationDateElement,
     required this.site,
     required this.route,
     required this.doseQuantity,
@@ -49,7 +50,7 @@ class Immunization {
     required this.reasonCode,
     required this.reasonReference,
     required this.isSubpotent,
-    @JsonKey('__isSubpotent') required this.isSubpotentElement,
+    @JsonKey(name: '__isSubpotent') required this.isSubpotentElement,
     required this.subpotentReason,
     required this.education,
     required this.programEligibility,
@@ -121,6 +122,7 @@ class Immunization {
   Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationPerformer {
   const ImmunizationPerformer({
     required this.id,
@@ -139,6 +141,7 @@ class ImmunizationPerformer {
   Map<String, dynamic> toJson() => _$ImmunizationPerformerToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationEducation {
   const ImmunizationEducation({
     required this.id,
@@ -169,6 +172,7 @@ class ImmunizationEducation {
   Map<String, dynamic> toJson() => _$ImmunizationEducationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationReaction {
   const ImmunizationReaction({
     required this.id,
@@ -193,25 +197,27 @@ class ImmunizationReaction {
   Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationProtocolApplied {
   const ImmunizationProtocolApplied({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.series,
-    @JsonKey('__series') required this.seriesElement,
+    @JsonKey(name: '__series') required this.seriesElement,
     required this.authority,
     required this.targetDisease,
     required this.doseNumberPositiveInt,
-    @JsonKey('__doseNumberPositiveInt')
+    @JsonKey(name: '__doseNumberPositiveInt')
         required this.doseNumberPositiveIntElement,
     required this.doseNumberString,
-    @JsonKey('__doseNumberString') required this.doseNumberStringElement,
+    @JsonKey(name: '__doseNumberString') required this.doseNumberStringElement,
     required this.seriesDosesPositiveInt,
-    @JsonKey('__seriesDosesPositiveInt')
+    @JsonKey(name: '__seriesDosesPositiveInt')
         required this.seriesDosesPositiveIntElement,
     required this.seriesDosesString,
-    @JsonKey('__seriesDosesString') required this.seriesDosesStringElement,
+    @JsonKey(name: '__seriesDosesString')
+        required this.seriesDosesStringElement,
   });
   final String? id;
 
@@ -239,44 +245,46 @@ class ImmunizationProtocolApplied {
   Map<String, dynamic> toJson() => _$ImmunizationProtocolAppliedToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationEvaluation {
   const ImmunizationEvaluation({
     @Default(R4ResourceType.ImmunizationEvaluation) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.patient,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.authority,
     required this.targetDisease,
     required this.immunizationEvent,
     required this.doseStatus,
     required this.doseStatusReason,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.series,
-    @JsonKey('__series') required this.seriesElement,
+    @JsonKey(name: '__series') required this.seriesElement,
     required this.doseNumberPositiveInt,
-    @JsonKey('__doseNumberPositiveInt')
+    @JsonKey(name: '__doseNumberPositiveInt')
         required this.doseNumberPositiveIntElement,
     required this.doseNumberString,
-    @JsonKey('__doseNumberString') required this.doseNumberStringElement,
+    @JsonKey(name: '__doseNumberString') required this.doseNumberStringElement,
     required this.seriesDosesPositiveInt,
-    @JsonKey('__seriesDosesPositiveInt')
+    @JsonKey(name: '__seriesDosesPositiveInt')
         required this.seriesDosesPositiveIntElement,
     required this.seriesDosesString,
-    @JsonKey('__seriesDosesString') required this.seriesDosesStringElement,
+    @JsonKey(name: '__seriesDosesString')
+        required this.seriesDosesStringElement,
   });
   final R4ResourceType resourceType;
   final String? id;
@@ -328,6 +336,7 @@ class ImmunizationEvaluation {
   Map<String, dynamic> toJson() => _$ImmunizationEvaluationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationRecommendation {
   const ImmunizationRecommendation({
     @Default(R4ResourceType.ImmunizationRecommendation)
@@ -335,17 +344,17 @@ class ImmunizationRecommendation {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.patient,
     required this.date,
-    @JsonKey('__date') required this.dateElement,
+    @JsonKey(name: '__date') required this.dateElement,
     required this.authority,
     required this.recommendation,
   });
@@ -375,10 +384,11 @@ class ImmunizationRecommendation {
   Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
 }
 
+@JsonSerializable()
 class ImmunizationRecommendationRecommendation {
   const ImmunizationRecommendationRecommendation({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.vaccineCode,
     required this.targetDisease,
@@ -387,19 +397,20 @@ class ImmunizationRecommendationRecommendation {
     required this.forecastReason,
     required this.dateCriterion,
     required this.description,
-    @JsonKey('__description') required this.descriptionElement,
+    @JsonKey(name: '__description') required this.descriptionElement,
     required this.series,
-    @JsonKey('__series') required this.seriesElement,
+    @JsonKey(name: '__series') required this.seriesElement,
     required this.doseNumberPositiveInt,
-    @JsonKey('__doseNumberPositiveInt')
+    @JsonKey(name: '__doseNumberPositiveInt')
         required this.doseNumberPositiveIntElement,
     required this.doseNumberString,
-    @JsonKey('__doseNumberString') required this.doseNumberStringElement,
+    @JsonKey(name: '__doseNumberString') required this.doseNumberStringElement,
     required this.seriesDosesPositiveInt,
-    @JsonKey('__seriesDosesPositiveInt')
+    @JsonKey(name: '__seriesDosesPositiveInt')
         required this.seriesDosesPositiveIntElement,
     required this.seriesDosesString,
-    @JsonKey('__seriesDosesString') required this.seriesDosesStringElement,
+    @JsonKey(name: '__seriesDosesString')
+        required this.seriesDosesStringElement,
     required this.supportingImmunization,
     required this.supportingPatientInformation,
   });
@@ -441,6 +452,7 @@ class ImmunizationRecommendationRecommendation {
       _$ImmunizationRecommendationRecommendationToJson(this);
 }
 
+@JsonSerializable()
 class MedicationIngredient {
   const MedicationIngredient({
     required this.id,
@@ -465,6 +477,7 @@ class MedicationIngredient {
   Map<String, dynamic> toJson() => _$MedicationIngredientToJson(this);
 }
 
+@JsonSerializable()
 class MedicationBatch {
   const MedicationBatch({
     required this.id,
@@ -487,6 +500,7 @@ class MedicationBatch {
   Map<String, dynamic> toJson() => _$MedicationBatchToJson(this);
 }
 
+@JsonSerializable()
 class MedicationAdministration {
   const MedicationAdministration({
     @Default(R4ResourceType.MedicationAdministration)
@@ -494,19 +508,19 @@ class MedicationAdministration {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.instantiates,
-    @JsonKey('__instantiates') required this.instantiatesElement,
+    @JsonKey(name: '__instantiates') required this.instantiatesElement,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.statusReason,
     required this.category,
     required this.medicationCodeableConcept,
@@ -515,7 +529,8 @@ class MedicationAdministration {
     required this.context,
     required this.supportingInformation,
     required this.effectiveDateTime,
-    @JsonKey('__effectiveDateTime') required this.effectiveDateTimeElement,
+    @JsonKey(name: '__effectiveDateTime')
+        required this.effectiveDateTimeElement,
     required this.effectivePeriod,
     required this.performer,
     required this.reasonCode,
@@ -572,6 +587,7 @@ class MedicationAdministration {
   Map<String, dynamic> toJson() => _$MedicationAdministrationToJson(this);
 }
 
+@JsonSerializable()
 class MedicationAdministrationPerformer {
   const MedicationAdministrationPerformer({
     required this.id,
@@ -593,23 +609,24 @@ class MedicationAdministrationPerformer {
       _$MedicationAdministrationPerformerToJson(this);
 }
 
+@JsonSerializable()
 class MedicationDispense {
   const MedicationDispense({
     @Default(R4ResourceType.MedicationDispense) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.statusReasonCodeableConcept,
     required this.statusReasonReference,
     required this.category,
@@ -625,9 +642,9 @@ class MedicationDispense {
     required this.quantity,
     required this.daysSupply,
     required this.whenPrepared,
-    @JsonKey('__whenPrepared') required this.whenPreparedElement,
+    @JsonKey(name: '__whenPrepared') required this.whenPreparedElement,
     required this.whenHandedOver,
-    @JsonKey('__whenHandedOver') required this.whenHandedOverElement,
+    @JsonKey(name: '__whenHandedOver') required this.whenHandedOverElement,
     required this.destination,
     required this.receiver,
     required this.note,
@@ -687,6 +704,7 @@ class MedicationDispense {
   Map<String, dynamic> toJson() => _$MedicationDispenseToJson(this);
 }
 
+@JsonSerializable()
 class MedicationDispensePerformer {
   const MedicationDispensePerformer({
     required this.id,
@@ -705,6 +723,7 @@ class MedicationDispensePerformer {
   Map<String, dynamic> toJson() => _$MedicationDispensePerformerToJson(this);
 }
 
+@JsonSerializable()
 class MedicationDispenseSubstitution {
   const MedicationDispenseSubstitution({
     required this.id,
@@ -729,22 +748,23 @@ class MedicationDispenseSubstitution {
   Map<String, dynamic> toJson() => _$MedicationDispenseSubstitutionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledge {
   const MedicationKnowledge({
     @Default(R4ResourceType.MedicationKnowledge) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.code,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.manufacturer,
     required this.doseForm,
     required this.amount,
@@ -756,7 +776,7 @@ class MedicationKnowledge {
     required this.monograph,
     required this.ingredient,
     required this.preparationInstruction,
-    @JsonKey('__preparationInstruction')
+    @JsonKey(name: '__preparationInstruction')
         required this.preparationInstructionElement,
     required this.intendedRoute,
     required this.cost,
@@ -817,6 +837,7 @@ class MedicationKnowledge {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeRelatedMedicationKnowledge {
   const MedicationKnowledgeRelatedMedicationKnowledge({
     required this.id,
@@ -838,6 +859,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge {
       _$MedicationKnowledgeRelatedMedicationKnowledgeToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeIngredient {
   const MedicationKnowledgeIngredient({
     required this.id,
@@ -862,6 +884,7 @@ class MedicationKnowledgeIngredient {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeIngredientToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeCost {
   const MedicationKnowledgeCost({
     required this.id,
@@ -884,6 +907,7 @@ class MedicationKnowledgeCost {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeCostToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeMonitoringProgram {
   const MedicationKnowledgeMonitoringProgram({
     required this.id,
@@ -907,6 +931,7 @@ class MedicationKnowledgeMonitoringProgram {
       _$MedicationKnowledgeMonitoringProgramToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgePatientCharacteristics {
   const MedicationKnowledgePatientCharacteristics({
     required this.id,
@@ -932,6 +957,7 @@ class MedicationKnowledgePatientCharacteristics {
       _$MedicationKnowledgePatientCharacteristicsToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeDrugCharacteristic {
   const MedicationKnowledgeDrugCharacteristic({
     required this.id,
@@ -963,6 +989,7 @@ class MedicationKnowledgeDrugCharacteristic {
       _$MedicationKnowledgeDrugCharacteristicToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeSubstitution {
   const MedicationKnowledgeSubstitution({
     required this.id,
@@ -984,6 +1011,7 @@ class MedicationKnowledgeSubstitution {
       _$MedicationKnowledgeSubstitutionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeSchedule {
   const MedicationKnowledgeSchedule({
     required this.id,
@@ -1000,6 +1028,7 @@ class MedicationKnowledgeSchedule {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeScheduleToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeMaxDispense {
   const MedicationKnowledgeMaxDispense({
     required this.id,
@@ -1018,6 +1047,7 @@ class MedicationKnowledgeMaxDispense {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeMaxDispenseToJson(this);
 }
 
+@JsonSerializable()
 class MedicationKnowledgeKinetics {
   const MedicationKnowledgeKinetics({
     required this.id,
@@ -1038,32 +1068,33 @@ class MedicationKnowledgeKinetics {
   Map<String, dynamic> toJson() => _$MedicationKnowledgeKineticsToJson(this);
 }
 
+@JsonSerializable()
 class MedicationRequest {
   const MedicationRequest({
     @Default(R4ResourceType.MedicationRequest) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.statusReason,
     required this.intent,
-    @JsonKey('__intent') required this.intentElement,
+    @JsonKey(name: '__intent') required this.intentElement,
     required this.category,
     required this.priority,
-    @JsonKey('__priority') required this.priorityElement,
+    @JsonKey(name: '__priority') required this.priorityElement,
     required this.doNotPerform,
-    @JsonKey('__doNotPerform') required this.doNotPerformElement,
+    @JsonKey(name: '__doNotPerform') required this.doNotPerformElement,
     required this.reportedBoolean,
-    @JsonKey('__reportedBoolean') required this.reportedBooleanElement,
+    @JsonKey(name: '__reportedBoolean') required this.reportedBooleanElement,
     required this.reportedReference,
     required this.medicationCodeableConcept,
     required this.medicationReference,
@@ -1071,7 +1102,7 @@ class MedicationRequest {
     required this.encounter,
     required this.supportingInformation,
     required this.authoredOn,
-    @JsonKey('__authoredOn') required this.authoredOnElement,
+    @JsonKey(name: '__authoredOn') required this.authoredOnElement,
     required this.requester,
     required this.performer,
     required this.performerType,
@@ -1079,10 +1110,10 @@ class MedicationRequest {
     required this.reasonCode,
     required this.reasonReference,
     required this.instantiatesCanonical,
-    @JsonKey('__instantiatesCanonical')
+    @JsonKey(name: '__instantiatesCanonical')
         required this.instantiatesCanonicalElement,
     required this.instantiatesUri,
-    @JsonKey('__instantiatesUri') required this.instantiatesUriElement,
+    @JsonKey(name: '__instantiatesUri') required this.instantiatesUriElement,
     required this.basedOn,
     required this.groupIdentifier,
     required this.courseOfTherapyType,
@@ -1164,16 +1195,17 @@ class MedicationRequest {
   Map<String, dynamic> toJson() => _$MedicationRequestToJson(this);
 }
 
+@JsonSerializable()
 class MedicationRequestDispenseRequest {
   const MedicationRequestDispenseRequest({
     required this.id,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.initialFill,
     required this.dispenseInterval,
     required this.validityPeriod,
     required this.numberOfRepeatsAllowed,
-    @JsonKey('__numberOfRepeatsAllowed')
+    @JsonKey(name: '__numberOfRepeatsAllowed')
         required this.numberOfRepeatsAllowedElement,
     required this.quantity,
     required this.expectedSupplyDuration,
@@ -1199,6 +1231,7 @@ class MedicationRequestDispenseRequest {
       _$MedicationRequestDispenseRequestToJson(this);
 }
 
+@JsonSerializable()
 class MedicationRequestSubstitution {
   const MedicationRequestSubstitution({
     required this.id,
@@ -1221,24 +1254,25 @@ class MedicationRequestSubstitution {
   Map<String, dynamic> toJson() => _$MedicationRequestSubstitutionToJson(this);
 }
 
+@JsonSerializable()
 class MedicationStatement {
   const MedicationStatement({
     @Default(R4ResourceType.MedicationStatement) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.partOf,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.statusReason,
     required this.category,
     required this.medicationCodeableConcept,
@@ -1246,10 +1280,11 @@ class MedicationStatement {
     required this.subject,
     required this.context,
     required this.effectiveDateTime,
-    @JsonKey('__effectiveDateTime') required this.effectiveDateTimeElement,
+    @JsonKey(name: '__effectiveDateTime')
+        required this.effectiveDateTimeElement,
     required this.effectivePeriod,
     required this.dateAsserted,
-    @JsonKey('__dateAsserted') required this.dateAssertedElement,
+    @JsonKey(name: '__dateAsserted') required this.dateAssertedElement,
     required this.informationSource,
     required this.derivedFrom,
     required this.reasonCode,

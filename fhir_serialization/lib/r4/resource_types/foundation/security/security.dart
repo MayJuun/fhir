@@ -12,24 +12,24 @@ class AuditEvent {
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.type,
     required this.subtype,
     required this.action,
-    @JsonKey('__action') required this.actionElement,
+    @JsonKey(name: '__action') required this.actionElement,
     required this.period,
     required this.recorded,
-    @JsonKey('__recorded') required this.recordedElement,
+    @JsonKey(name: '__recorded') required this.recordedElement,
     required this.outcome,
-    @JsonKey('__outcome') required this.outcomeElement,
+    @JsonKey(name: '__outcome') required this.outcomeElement,
     required this.outcomeDesc,
-    @JsonKey('__outcomeDesc') required this.outcomeDescElement,
+    @JsonKey(name: '__outcomeDesc') required this.outcomeDescElement,
     required this.purposeOfEvent,
     required this.agent,
     required this.source,
@@ -73,6 +73,7 @@ class AuditEvent {
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventAgent {
   const AuditEventAgent({
     required this.id,
@@ -117,6 +118,7 @@ class AuditEventAgent {
   Map<String, dynamic> toJson() => _$AuditEventAgentToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventNetwork {
   const AuditEventNetwork({
     required this.id,
@@ -139,6 +141,7 @@ class AuditEventNetwork {
   Map<String, dynamic> toJson() => _$AuditEventNetworkToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
     required this.id,
@@ -161,6 +164,7 @@ class AuditEventSource {
   Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventEntity {
   const AuditEventEntity({
     required this.id,
@@ -199,6 +203,7 @@ class AuditEventEntity {
   Map<String, dynamic> toJson() => _$AuditEventEntityToJson(this);
 }
 
+@JsonSerializable()
 class AuditEventDetail {
   const AuditEventDetail({
     required this.id,
@@ -225,27 +230,28 @@ class AuditEventDetail {
   Map<String, dynamic> toJson() => _$AuditEventDetailToJson(this);
 }
 
+@JsonSerializable()
 class Consent {
   const Consent({
     @Default(R4ResourceType.Consent) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.identifier,
     required this.status,
-    @JsonKey('__status') required this.statusElement,
+    @JsonKey(name: '__status') required this.statusElement,
     required this.scope,
     required this.category,
     required this.patient,
     required this.dateTime,
-    @JsonKey('__dateTime') required this.dateTimeElement,
+    @JsonKey(name: '__dateTime') required this.dateTimeElement,
     required this.performer,
     required this.organization,
     required this.sourceAttachment,
@@ -292,6 +298,7 @@ class Consent {
   Map<String, dynamic> toJson() => _$ConsentToJson(this);
 }
 
+@JsonSerializable()
 class ConsentPolicy {
   const ConsentPolicy({
     required this.id,
@@ -314,6 +321,7 @@ class ConsentPolicy {
   Map<String, dynamic> toJson() => _$ConsentPolicyToJson(this);
 }
 
+@JsonSerializable()
 class ConsentVerification {
   const ConsentVerification({
     required this.id,
@@ -338,6 +346,7 @@ class ConsentVerification {
   Map<String, dynamic> toJson() => _$ConsentVerificationToJson(this);
 }
 
+@JsonSerializable()
 class ConsentProvision {
   const ConsentProvision({
     required this.id,
@@ -376,6 +385,7 @@ class ConsentProvision {
   Map<String, dynamic> toJson() => _$ConsentProvisionToJson(this);
 }
 
+@JsonSerializable()
 class ConsentActor {
   const ConsentActor({
     required this.id,
@@ -394,6 +404,7 @@ class ConsentActor {
   Map<String, dynamic> toJson() => _$ConsentActorToJson(this);
 }
 
+@JsonSerializable()
 class ConsentData {
   const ConsentData({
     required this.id,
@@ -414,27 +425,28 @@ class ConsentData {
   Map<String, dynamic> toJson() => _$ConsentDataToJson(this);
 }
 
+@JsonSerializable()
 class Provenance {
   const Provenance({
     @Default(R4ResourceType.Provenance) required this.resourceType,
     required this.id,
     required this.meta,
     required this.implicitRules,
-    @JsonKey('__implicitRules') required this.implicitRulesElement,
+    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
     required this.language,
-    @JsonKey('__language') required this.languageElement,
+    @JsonKey(name: '__language') required this.languageElement,
     required this.text,
     required this.contained,
-    @JsonKey('_extension') required this.extension_,
+    @JsonKey(name: '_extension') required this.extension_,
     required this.modifierExtension,
     required this.target,
     required this.occurredPeriod,
     required this.occurredDateTime,
-    @JsonKey('__occurredDateTime') required this.occurredDateTimeElement,
+    @JsonKey(name: '__occurredDateTime') required this.occurredDateTimeElement,
     required this.recorded,
-    @JsonKey('__recorded') required this.recordedElement,
+    @JsonKey(name: '__recorded') required this.recordedElement,
     required this.policy,
-    @JsonKey('__policy') required this.policyElement,
+    @JsonKey(name: '__policy') required this.policyElement,
     required this.location,
     required this.reason,
     required this.activity,
@@ -478,6 +490,7 @@ class Provenance {
   Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
     required this.id,
@@ -500,6 +513,7 @@ class ProvenanceAgent {
   Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
 }
 
+@JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
     required this.id,
