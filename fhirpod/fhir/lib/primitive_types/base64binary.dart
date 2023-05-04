@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -28,14 +29,24 @@ class Base64Binary {
           ? Base64Binary._(inValue, inValue, true)
           : Base64Binary._(inValue.toString(), null, false);
 
-  factory Base64Binary.fromJson(dynamic json) => Base64Binary(json);
+  factory Base64Binary.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Base64Binary(json);
 
-  factory Base64Binary.fromYaml(dynamic yaml) => yaml is String
-      ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Base64Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Base64Binary>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Base64Binary.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Base64Binary.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Base64Binary.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Base64Binary>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueBase64Binary;

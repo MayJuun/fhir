@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -32,14 +33,24 @@ class Instant extends FhirDateTimeBase {
     return Instant._(dateTime.toIso8601String(), dateTime, true, null);
   }
 
-  factory Instant.fromJson(dynamic json) => Instant(json);
+  factory Instant.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Instant(json);
 
-  factory Instant.fromYaml(dynamic yaml) => yaml is String
-      ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Instant>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Instant.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Instant.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Instant.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Instant>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   static final RegExp _instantExp = RegExp(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))');

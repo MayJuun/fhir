@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -17,14 +18,23 @@ class Oid {
       ? Oid._(inValue, inValue, true)
       : Oid._(inValue.toString(), null, false);
 
-  factory Oid.fromJson(dynamic json) => Oid(json);
+  factory Oid.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Oid(json);
 
-  factory Oid.fromYaml(dynamic yaml) => yaml is String
-      ? Oid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Oid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Oid>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Oid.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Oid.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Oid.fromJson(jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Oid>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueOid;

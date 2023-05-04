@@ -5,32 +5,42 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:uuid/uuid.dart' as uuid;
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-/// returns the same resource with a new ID (even if there is already an ID present)
-Id newId() => Id(const uuid.Uuid().v4());
+FhirId newId() => FhirId(const uuid.Uuid().v4());
 
 String newIdString() => const uuid.Uuid().v4();
 
-class Id {
-  const Id._(this._valueString, this._valueId, this._isValid);
+class FhirId {
+  const FhirId._(this._valueString, this._valueId, this._isValid);
 
-  factory Id(dynamic inValue) =>
+  factory FhirId(dynamic inValue) =>
       inValue is String && RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
-          ? Id._(inValue, inValue, true)
-          : Id._(inValue.toString(), null, false);
+          ? FhirId._(inValue, inValue, true)
+          : FhirId._(inValue.toString(), null, false);
 
-  factory Id.fromJson(dynamic json) => Id(json);
+  factory FhirId.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      FhirId(json);
 
-  factory Id.fromYaml(dynamic yaml) => yaml is String
-      ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Id.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Id>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirId.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? FhirId.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? FhirId.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<FhirId>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueId;
@@ -49,7 +59,7 @@ class Id {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Id
+      : o is FhirId
           ? o.value == _valueId
           : o is String
               ? o == _valueString

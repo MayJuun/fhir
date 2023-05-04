@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -29,16 +30,26 @@ class UnsignedInt extends FhirNumber {
         'UnsignedInt cannot be constructed from $inValue.');
   }
 
-  factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
+  factory UnsignedInt.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      UnsignedInt(json);
 
-  factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
-      ? UnsignedInt.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
+  factory UnsignedInt.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
           ? UnsignedInt.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw YamlFormatException<UnsignedInt>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+              jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+              serializationManager)
+          : yaml is YamlMap
+              ? UnsignedInt.fromJson(
+                  jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+                  serializationManager)
+              : throw YamlFormatException<UnsignedInt>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   int? get value => valueNumber as int?;
 }

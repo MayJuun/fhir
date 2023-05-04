@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -23,14 +24,24 @@ class Integer extends FhirNumber {
         'Integer cannot be constructed from $inValue.');
   }
 
-  factory Integer.fromJson(dynamic json) => Integer(json);
+  factory Integer.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Integer(json);
 
-  factory Integer.fromYaml(dynamic yaml) => yaml is String
-      ? Integer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Integer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Integer>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Integer.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Integer.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Integer.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Integer>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   int? get value => valueNumber as int?;
 }

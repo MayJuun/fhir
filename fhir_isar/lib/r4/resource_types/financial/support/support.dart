@@ -158,7 +158,7 @@ class Coverage with Resource, _$Coverage {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+  String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
@@ -812,7 +812,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+  String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
@@ -1605,7 +1605,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+  String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
@@ -2070,7 +2070,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
 
     /// [authorizationUrl] A web location for obtaining requirements or
     ///  descriptive information regarding the preauthorization.
-    FhirUri? authorizationUrl,
+  String? authorizationUrl,
 
     /// [authorizationUrlElement] Extensions for authorizationUrl
     @JsonKey(name: '_authorizationUrl')
@@ -2445,7 +2445,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+  String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
@@ -2663,7 +2663,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+  String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')

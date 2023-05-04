@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -29,14 +30,24 @@ class Boolean {
     }
   }
 
-  factory Boolean.fromJson(dynamic json) => Boolean(json);
+  factory Boolean.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Boolean(json);
 
-  factory Boolean.fromYaml(dynamic yaml) => yaml is String
-      ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Boolean.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Boolean>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Boolean.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Boolean.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Boolean.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Boolean>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final bool? _valueBoolean;

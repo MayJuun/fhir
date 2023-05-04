@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -39,14 +40,24 @@ class Decimal extends FhirNumber {
         'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
   }
 
-  factory Decimal.fromJson(dynamic json) => Decimal(json);
+  factory Decimal.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Decimal(json);
 
-  factory Decimal.fromYaml(dynamic yaml) => yaml is String
-      ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Decimal>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Decimal.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Decimal.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Decimal.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Decimal>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final bool isInt;
   double? get value => valueNumber as double?;

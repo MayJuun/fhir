@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -17,14 +18,24 @@ class Markdown {
           ? Markdown._(inValue, inValue, true)
           : Markdown._(inValue.toString(), null, false);
 
-  factory Markdown.fromJson(dynamic json) => Markdown(json);
+  factory Markdown.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Markdown(json);
 
-  factory Markdown.fromYaml(dynamic yaml) => yaml is String
-      ? Markdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Markdown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Markdown>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Markdown.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Markdown.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Markdown.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Markdown>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueMarkdown;

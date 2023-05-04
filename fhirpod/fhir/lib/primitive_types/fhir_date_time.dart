@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -78,14 +79,24 @@ class FhirDateTime extends FhirDateTimeBase {
     }
   }
 
-  factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
+  factory FhirDateTime.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      FhirDateTime(json);
 
-  factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
-      ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirDateTime>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirDateTime.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? FhirDateTime.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? FhirDateTime.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<FhirDateTime>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final DateTimePrecision _precision;
 

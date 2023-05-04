@@ -163,7 +163,7 @@ Missing "part 'resource.g.dart';".
 - There are a number of FHIR fields that are reserved words in Dart. For these, I have added a '_' to the end of the field. (note that this does not change the json format, as when that happens the @JsonKey has been added to the field like so:
 
 ```dart
-@JsonKey(name: 'extension') List<FhirExtension> extension_,
+ List<FhirExtension> extension_,
 ```
 
 ### A couple special notes about DSTU2

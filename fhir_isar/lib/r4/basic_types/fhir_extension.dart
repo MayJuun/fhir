@@ -267,7 +267,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [url] Source of the definition for the extension code - a logical name or
     ///  a URL.
-    FhirUri? url,
+  String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
@@ -386,7 +386,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueUri] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    FhirUri? valueUri,
+  String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,

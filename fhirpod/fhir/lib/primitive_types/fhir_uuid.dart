@@ -4,29 +4,40 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
 import 'primitive_type_exceptions.dart';
 
-class Uuid {
-  const Uuid._(this._valueString, this._valueUri, this._isValid);
+class FhirUuid {
+  const FhirUuid._(this._valueString, this._valueUri, this._isValid);
 
-  factory Uuid(dynamic inValue) => inValue is String &&
+  factory FhirUuid(dynamic inValue) => inValue is String &&
           RegExp('^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-'
                   r'[8-9A-B][0-9A-F]{3}-[0-9A-F]{12}$')
               .hasMatch(inValue)
-      ? Uuid._(inValue, inValue, true)
-      : Uuid._(inValue.toString(), null, false);
+      ? FhirUuid._(inValue, inValue, true)
+      : FhirUuid._(inValue.toString(), null, false);
 
-  factory Uuid.fromJson(dynamic json) => Uuid(json);
+  factory FhirUuid.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      FhirUuid(json);
 
-  factory Uuid.fromYaml(dynamic yaml) => yaml is String
-      ? Uuid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Uuid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Uuid>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirUuid.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? FhirUuid.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? FhirUuid.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<FhirUuid>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueUri;
@@ -45,7 +56,7 @@ class Uuid {
   @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Uuid
+      : o is FhirUuid
           ? o.value == _valueUri
           : o is String
               ? o == _valueString

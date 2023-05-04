@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -23,14 +24,24 @@ class Code {
           ? Code._(inValue, inValue, true)
           : Code._(inValue.toString(), null, false);
 
-  factory Code.fromJson(dynamic json) => Code(json);
+  factory Code.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Code(json);
 
-  factory Code.fromYaml(dynamic yaml) => yaml is String
-      ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Code.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Code>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Code.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Code.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Code.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Code>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueCode;

@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -19,14 +20,24 @@ class Time {
       ? Time._(inValue, inValue, true)
       : Time._(inValue.toString(), null, false);
 
-  factory Time.fromJson(dynamic json) => Time(json);
+  factory Time.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Time(json);
 
-  factory Time.fromYaml(dynamic yaml) => yaml is String
-      ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Time.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Time>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Time.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Time.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Time.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Time>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final String? _valueTime;

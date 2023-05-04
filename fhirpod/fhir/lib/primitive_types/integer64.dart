@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -27,14 +28,24 @@ class Integer64 {
         '$inValue (which is an ${inValue.runtimeType}).');
   }
 
-  factory Integer64.fromJson(dynamic json) => Integer64(json);
+  factory Integer64.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Integer64(json);
 
-  factory Integer64.fromYaml(dynamic yaml) => yaml is String
-      ? Integer64.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Integer64.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Integer64>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Integer64.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Integer64.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Integer64.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Integer64>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   BigInt? get value => valueNumber;
   final String valueString;

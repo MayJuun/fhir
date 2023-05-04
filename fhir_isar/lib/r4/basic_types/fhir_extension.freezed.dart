@@ -35,7 +35,7 @@ mixin _$FhirExtension {
 
   /// [url] Source of the definition for the extension code - a logical name or
   ///  a URL.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -171,7 +171,7 @@ mixin _$FhirExtension {
 
   /// [valueUri] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -346,7 +346,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      FhirUri? url,
+  String? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -380,7 +380,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+  String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -1503,7 +1503,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      FhirUri? url,
+  String? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -1537,7 +1537,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+  String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -2879,7 +2879,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [url] Source of the definition for the extension code - a logical name or
   ///  a URL.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -3049,7 +3049,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueUri] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri

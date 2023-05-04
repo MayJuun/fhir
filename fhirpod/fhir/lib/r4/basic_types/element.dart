@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -46,18 +47,27 @@ class Element with _$Element {
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Element.fromYaml(dynamic yaml) => yaml is String
-      ? Element.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
+  factory Element.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
           ? Element.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Element cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+              jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+              serializationManager)
+          : yaml is YamlMap
+              ? Element.fromJson(
+                  jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+                  serializationManager)
+              : throw ArgumentError(
+                  'Element cannot be constructed from input provided,'
+                  ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Element.fromJson(Map<String, dynamic> json) =>
+  factory Element.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
       _$ElementFromJson(json);
 
   /// Acts like a constructor, returns a [Element], accepts a

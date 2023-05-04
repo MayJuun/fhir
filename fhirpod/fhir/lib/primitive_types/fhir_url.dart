@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -23,14 +24,24 @@ class FhirUrl {
         'FhirUrl cannot be constructed from $inValue.');
   }
 
-  factory FhirUrl.fromJson(dynamic json) => FhirUrl(json);
+  factory FhirUrl.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      FhirUrl(json);
 
-  factory FhirUrl.fromYaml(dynamic yaml) => yaml is String
-      ? FhirUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? FhirUrl.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirUrl>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirUrl.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? FhirUrl.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? FhirUrl.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<FhirUrl>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final Uri? _valueUri;

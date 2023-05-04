@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -27,14 +28,24 @@ class Canonical {
         'Canonical cannot be constructed from $inValue.');
   }
 
-  factory Canonical.fromJson(dynamic json) => Canonical(json);
+  factory Canonical.fromJson(
+    dynamic json,
+    SerializationManager serializationManager,
+  ) =>
+      Canonical(json);
 
-  factory Canonical.fromYaml(dynamic yaml) => yaml is String
-      ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? Canonical.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<Canonical>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory Canonical.fromYaml(
+    dynamic yaml,
+    SerializationManager serializationManager,
+  ) =>
+      yaml is String
+          ? Canonical.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))), serializationManager)
+          : yaml is YamlMap
+              ? Canonical.fromJson(
+                  jsonDecode(jsonEncode(yaml)), serializationManager)
+              : throw YamlFormatException<Canonical>(
+                  'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final Uri? _valueCanonical;
