@@ -109,14 +109,14 @@ class Basic with Resource, _$Basic {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -173,7 +173,7 @@ class Basic with Resource, _$Basic {
     Reference? subject,
 
     /// [created] Identifies when the resource was first created.
-    Date? created,
+    String? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
@@ -280,14 +280,14 @@ class Binary with Resource, _$Binary {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -295,7 +295,7 @@ class Binary with Resource, _$Binary {
 
     /// [contentType] MimeType of the binary content represented as a standard
     ///  MimeType (BCP 13).
-    Code? contentType,
+    String? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType')
@@ -315,7 +315,7 @@ class Binary with Resource, _$Binary {
     Reference? securityContext,
 
     /// [data] The actual content, base64 encoded.
-    Base64Binary? data,
+    String? data,
 
     /// [dataElement] Extensions for data
     @JsonKey(name: '_data')
@@ -423,14 +423,14 @@ class Bundle with Resource, _$Bundle {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -442,7 +442,7 @@ class Bundle with Resource, _$Bundle {
 
     /// [type] Indicates the purpose of this bundle - how it is intended to be
     ///  used.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -580,7 +580,7 @@ class BundleLink with _$BundleLink {
     @JsonKey(name: '_relation') Element? relationElement,
 
     /// [url] The reference details for the link.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
@@ -714,7 +714,7 @@ class BundleEntry with _$BundleEntry {
     /// * fullUrl can be empty on a POST (although it does not need to when
     ///  specifying a temporary id for reference in the bundle)
     /// * Results from operations might involve resources that are not identified.
-    FhirUri? fullUrl,
+    String? fullUrl,
 
     /// [fullUrlElement] Extensions for fullUrl
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
@@ -772,7 +772,7 @@ class BundleEntry with _$BundleEntry {
 
   factory BundleEntry.delete(
     String resourcePath, [
-    FhirUri? canonicalBaseUrl,
+    String? canonicalBaseUrl,
   ]) =>
       BundleEntry(
           fullUrl: canonicalBaseUrl == null
@@ -897,7 +897,7 @@ class BundleSearch with _$BundleSearch {
     /// [mode] Why this entry is in the result set - whether it's included as a
     /// match or because of an _include requirement, or to convey information or
     ///  warning information about the search process.
-    Code? mode,
+    String? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1038,14 +1038,14 @@ class BundleRequest with _$BundleRequest {
     /// [method] In a transaction or batch, this is the HTTP action to be
     /// executed for this entry. In a history bundle, this indicates the HTTP
     ///  action that occurred.
-    Code? method,
+    String? method,
 
     /// [methodElement] Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
 
     /// [url] The URL for this entry, relative to the root (the address to which
     ///  the request is posted).
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
@@ -1210,7 +1210,7 @@ class BundleResponse with _$BundleResponse {
 
     /// [location] The location header created by processing this operation,
     ///  populated if the operation returns a location.
-    FhirUri? location,
+    String? location,
 
     /// [locationElement] Extensions for location
     @JsonKey(name: '_location') Element? locationElement,
@@ -1361,14 +1361,14 @@ class Linkage with Resource, _$Linkage {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1414,7 +1414,7 @@ class Linkage with Resource, _$Linkage {
 
     /// [active] Indicates whether the asserted set of linkages are considered to
     ///  be "in effect".
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -1528,7 +1528,7 @@ class LinkageItem with _$LinkageItem {
 
     /// [type] Distinguishes which item is "source of truth" (if any) and which
     ///  items are no longer considered to be current representations.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1698,14 +1698,14 @@ class MessageHeader with Resource, _$MessageHeader {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1761,7 +1761,7 @@ class MessageHeader with Resource, _$MessageHeader {
     /// specification have the system value
     /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
     ///  to the EventDefinition.
-    FhirUri? eventUri,
+    String? eventUri,
 
     /// [eventUriElement] Extensions for eventUri
     @JsonKey(name: '_eventUri')
@@ -1807,7 +1807,7 @@ class MessageHeader with Resource, _$MessageHeader {
     List<Reference>? focus,
 
     /// [definition] Permanent link to the MessageDefinition for this message.
-    Canonical? definition,
+    String? definition,
   }) = _MessageHeader;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2199,7 +2199,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
     /// [code] Code that identifies the type of response to the message - whether
     ///  it was successful or not, and whether it should be resent or not.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2323,14 +2323,14 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2508,7 +2508,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
     /// [severity] Indicates whether the issue indicates a variation from
     ///  successful processing.
-    Code? severity,
+    String? severity,
 
     /// [severityElement] Extensions for severity
     @JsonKey(name: '_severity') Element? severityElement,
@@ -2517,7 +2517,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     /// OperationOutcome SHALL choose the most applicable code from the IssueType
     /// value set, and may additional provide its own code for the error in the
     ///  details element.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -2636,14 +2636,14 @@ class Parameters with Resource, _$Parameters {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2895,31 +2895,31 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [valueBase64Binary] If the parameter is a data type.
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] If the parameter is a data type.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] If the parameter is a data type.
-    Canonical? valueCanonical,
+    String? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] If the parameter is a data type.
-    Code? valueCode,
+    String? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] If the parameter is a data type.
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -2991,7 +2991,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
 
     /// [valueUri] If the parameter is a data type.
-    FhirUri? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -3253,14 +3253,14 @@ class Subscription with Resource, _$Subscription {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3306,7 +3306,7 @@ class Subscription with Resource, _$Subscription {
 
     /// [status] The status of the subscription, which marks the server state for
     ///  managing the subscription.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3466,7 +3466,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of channel to send notifications on.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3483,7 +3483,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
     /// present, then there is no payload in the notification, just a
     /// notification. The mime type "text/plain" may also be used for Email and
     ///  SMS subscriptions.
-    Code? payload,
+    String? payload,
 
     /// [payloadElement] Extensions for payload
     @JsonKey(name: '_payload') Element? payloadElement,
@@ -3591,14 +3591,14 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -3619,14 +3619,14 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     List<FhirExtension>? modifierExtension,
 
     /// [status] The status of the subscription, which marks the server state for managing the subscription.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
         Element? statusElement,
 
     /// [type] The type of event being conveyed with this notificaiton.;
-    Code? type,
+    String? type,
 
     /// [typeElement] (_type): Extensions for type;
     @JsonKey(name: '_type')
@@ -3646,7 +3646,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     required Reference subscription,
 
     /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
-    Canonical? topic,
+    String? topic,
 
     /// [error] A record of errors that occurred when the server processed a notification.;
     List<CodeableConcept>? error,
@@ -3878,13 +3878,13 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -3903,7 +3903,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this subscription topic when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this subscription topic is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the subscription topic is stored on different servers.;
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] (_url): Extensions for url;
     @JsonKey(name: '_url') Element? urlElement,
@@ -3925,13 +3925,13 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     List<Canonical>? derivedFrom,
 
     /// [status] The current state of the SubscriptionTopic.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.;
-    Boolean? experimental,
+    bool? experimental,
 
     /// [experimentalElement] (_experimental): Extensions for experimental;
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -3974,9 +3974,9 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
 
     /// [copyrightElement] (_copyright): Extensions for copyright;
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    Date? approvalDate,
+    String? approvalDate,
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    Date? lastReviewDate,
+    String? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     List<SubscriptionTopicResourceTrigger>? resourceTrigger,
@@ -4053,7 +4053,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     List<FhirExtension>? modifierExtension,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUri? resource,
+    String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
     List<Code>? supportedInteraction,
     @JsonKey(name: '_supportedInteraction')
@@ -4138,13 +4138,13 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
     List<FhirExtension>? modifierExtension,
     String? previous,
     @JsonKey(name: '_previous') Element? previousElement,
-    Code? resultForCreate,
+    String? resultForCreate,
     @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
     String? current,
     @JsonKey(name: '_current') Element? currentElement,
-    Code? resultForDelete,
+    String? resultForDelete,
     @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-    Boolean? requireBoth,
+    bool? requireBoth,
     @JsonKey(name: '_requireBoth') Element? requireBothElement,
   }) = _SubscriptionTopicQueryCriteria;
 
@@ -4213,7 +4213,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     required CodeableConcept event,
-    FhirUri? resource,
+    String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
   }) = _SubscriptionTopicEventTrigger;
 
@@ -4290,11 +4290,11 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
     List<FhirExtension>? modifierExtension,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUri? resource,
+    String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
     String? filterParameter,
     @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-    FhirUri? filterDefinition,
+    String? filterDefinition,
     @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
     List<Code>? modifier,
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
@@ -4362,7 +4362,7 @@ class SubscriptionTopicNotificationShape
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    FhirUri? resource,
+    String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
     List<String>? include,
     @JsonKey(name: '_include') List<Element>? includeElement,

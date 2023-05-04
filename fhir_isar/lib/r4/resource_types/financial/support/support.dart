@@ -158,14 +158,14 @@ class Coverage with Resource, _$Coverage {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-  String? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -213,7 +213,7 @@ class Coverage with Resource, _$Coverage {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -295,7 +295,7 @@ class Coverage with Resource, _$Coverage {
     /// [subrogation] When 'subrogation=true' this insurance instance has been
     /// included not for adjudication but to provide insurers with the details to
     ///  recover costs.
-    Boolean? subrogation,
+    bool? subrogation,
 
     /// [subrogationElement] Extensions for subrogation
     @JsonKey(name: '_subrogation')
@@ -812,14 +812,14 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-  String? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -868,7 +868,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -895,7 +895,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 
     /// [servicedDate] The date or dates when the enclosed suite of services were
     ///  performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -1057,7 +1057,7 @@ class CoverageEligibilityRequestSupportingInfo
 
     /// [appliesToAll] The supporting materials are applicable for all detail
     ///  items, product/servce categories and specific billing codes.
-    Boolean? appliesToAll,
+    bool? appliesToAll,
 
     /// [appliesToAllElement] Extensions for appliesToAll
     @JsonKey(name: '_appliesToAll') Element? appliesToAllElement,
@@ -1162,7 +1162,7 @@ class CoverageEligibilityRequestInsurance
 
     /// [focal] A flag to indicate that this Coverage is to be used for
     ///  evaluation of this request when set to true.
-    Boolean? focal,
+    bool? focal,
 
     /// [focalElement] Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -1605,14 +1605,14 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-  String? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1661,7 +1661,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1684,7 +1684,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 
     /// [servicedDate] The date or dates when the enclosed suite of services were
     ///  performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -1708,7 +1708,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     required Reference request,
 
     /// [outcome] The outcome of the request processing.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -1859,7 +1859,7 @@ class CoverageEligibilityResponseInsurance
     /// [inforce] Flag indicating if the coverage provided is inforce currently
     /// if no service date(s) specified or for the whole duration of the service
     ///  dates.
-    Boolean? inforce,
+    bool? inforce,
 
     /// [inforceElement] Extensions for inforce
     @JsonKey(name: '_inforce') Element? inforceElement,
@@ -2022,7 +2022,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     /// [excluded] True if the indicated class of service is excluded from the
     /// plan, missing or False indicates the product or service is included in the
     ///  coverage.
-    Boolean? excluded,
+    bool? excluded,
 
     /// [excludedElement] Extensions for excluded
     @JsonKey(name: '_excluded')
@@ -2058,7 +2058,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
 
     /// [authorizationRequired] A boolean flag indicating whether a
     ///  preauthorization is required prior to actual service delivery.
-    Boolean? authorizationRequired,
+    bool? authorizationRequired,
     @JsonKey(name: '_authorizationRequired')
 
         /// [authorizationRequiredElement] Extensions for authorizationRequired
@@ -2070,7 +2070,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
 
     /// [authorizationUrl] A web location for obtaining requirements or
     ///  descriptive information regarding the preauthorization.
-  String? authorizationUrl,
+    String? authorizationUrl,
 
     /// [authorizationUrlElement] Extensions for authorizationUrl
     @JsonKey(name: '_authorizationUrl')
@@ -2445,14 +2445,14 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-  String? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2500,7 +2500,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2663,14 +2663,14 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-  String? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2718,7 +2718,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2728,7 +2728,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? request,
 
     /// [outcome] Processing status: error, complete.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')

@@ -267,42 +267,42 @@ class FhirExtension with _$FhirExtension {
 
     /// [url] Source of the definition for the extension code - a logical name or
     ///  a URL.
-  String? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
 
     /// [valueBase64Binary] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Canonical? valueCanonical,
+    String? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Code? valueCode,
+    String? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -386,7 +386,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueUri] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-  String? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,

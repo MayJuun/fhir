@@ -775,7 +775,7 @@ mixin _$DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -849,7 +849,7 @@ abstract class $DataRequirementCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -1017,7 +1017,7 @@ abstract class _$$_DataRequirementCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
@@ -1436,7 +1436,7 @@ abstract class _DataRequirement extends DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -1571,7 +1571,7 @@ mixin _$DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  String? get valueSet => throw _privateConstructorUsedError;
 
   /// [code] The codes for the code filter. If values are given, the filter
   /// will return only those data items for which the code-valued attribute
@@ -1600,7 +1600,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      String? valueSet,
       List<Coding>? code});
 
   $ElementCopyWith<$Res>? get pathElement;
@@ -1713,7 +1713,7 @@ abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
-      Canonical? valueSet,
+      String? valueSet,
       List<Coding>? code});
 
   @override
@@ -2065,7 +2065,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  Canonical? get valueSet;
+  String? get valueSet;
   @override
 
   /// [code] The codes for the code filter. If values are given, the filter
@@ -3264,14 +3264,14 @@ mixin _$ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use => throw _privateConstructorUsedError;
+  String? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -3302,7 +3302,7 @@ mixin _$ParameterDefinition {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3310,7 +3310,7 @@ mixin _$ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3327,9 +3327,9 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -3337,9 +3337,9 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      String? profile});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get useElement;
@@ -3526,9 +3526,9 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -3536,9 +3536,9 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical? profile});
+      String? profile});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -3874,7 +3874,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  Code? get name;
+  String? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -3883,7 +3883,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [use] Whether the parameter is input or output for the module.
-  Code? get use;
+  String? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -3922,7 +3922,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
 
   /// [type] The type of the parameter.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -3932,7 +3932,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  Canonical? get profile;
+  String? get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ParameterDefinitionCopyWith<_$_ParameterDefinition> get copyWith =>
@@ -4002,7 +4002,7 @@ mixin _$RelatedArtifact {
 
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4037,7 +4037,7 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       @JsonKey(name: '_url')
           Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      String? resource});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get labelElement;
@@ -4237,7 +4237,7 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
       @JsonKey(name: '_url')
           Element? urlElement,
       Attachment? document,
-      Canonical? resource});
+      String? resource});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -4620,7 +4620,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  Canonical? get resource;
+  String? get resource;
   @override
   @JsonKey(ignore: true)
   _$$_RelatedArtifactCopyWith<_$_RelatedArtifact> get copyWith =>
@@ -4669,7 +4669,7 @@ mixin _$TriggerDefinition {
   Reference? get timingReference => throw _privateConstructorUsedError;
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate => throw _privateConstructorUsedError;
+  String? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -4717,7 +4717,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
           Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      String? timingDate,
       @JsonKey(name: '_timingDate')
           Element? timingDateElement,
       FhirDateTime? timingDateTime,
@@ -4929,7 +4929,7 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
           Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
-      Date? timingDate,
+      String? timingDate,
       @JsonKey(name: '_timingDate')
           Element? timingDateElement,
       FhirDateTime? timingDateTime,
@@ -5308,7 +5308,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  Date? get timingDate;
+  String? get timingDate;
   @override
 
   /// [timingDateElement] Extensions for timingDate
@@ -5832,7 +5832,7 @@ mixin _$Expression {
   Element? get expressionElement => throw _privateConstructorUsedError;
 
   /// [reference] A URI that defines where the expression is found.
-  FhirUri? get reference => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
 
   /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
@@ -5867,7 +5867,7 @@ abstract class $ExpressionCopyWith<$Res> {
       String? expression,
       @JsonKey(name: '_expression')
           Element? expressionElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference')
           Element? referenceElement});
 
@@ -6042,7 +6042,7 @@ abstract class _$$_ExpressionCopyWith<$Res>
       String? expression,
       @JsonKey(name: '_expression')
           Element? expressionElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference')
           Element? referenceElement});
 
@@ -6380,7 +6380,7 @@ abstract class _Expression extends Expression {
   @override
 
   /// [reference] A URI that defines where the expression is found.
-  FhirUri? get reference;
+  String? get reference;
   @override
 
   /// [referenceElement] Extensions for reference

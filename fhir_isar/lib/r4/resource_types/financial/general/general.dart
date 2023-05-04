@@ -130,14 +130,14 @@ class Account with Resource, _$Account {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -186,7 +186,7 @@ class Account with Resource, _$Account {
     List<Identifier>? identifier,
 
     /// [status] Indicates whether the account is presently used/usable or not.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -456,7 +456,7 @@ class AccountGuarantor with _$AccountGuarantor {
 
     /// [onHold] A guarantor may be placed on credit hold or otherwise have their
     ///  role temporarily suspended.
-    Boolean? onHold,
+    bool? onHold,
 
     /// [onHoldElement] Extensions for onHold
     @JsonKey(name: '_onHold') Element? onHoldElement,
@@ -671,14 +671,14 @@ class ChargeItem with Resource, _$ChargeItem {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -739,7 +739,7 @@ class ChargeItem with Resource, _$ChargeItem {
     List<Canonical>? definitionCanonical,
 
     /// [status] The current state of the ChargeItem.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1193,14 +1193,14 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1251,7 +1251,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// instance of this charge item definition is (or will be) published. This
     /// URL can be the target of a canonical reference. It SHALL remain the same
     ///  when the charge item definition is stored on different servers.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
@@ -1304,7 +1304,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     List<Canonical>? replaces,
 
     /// [status] The current state of the ChargeItemDefinition.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1314,7 +1314,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// definition is authored for testing purposes (or
     /// education/evaluation/marketing) and is not intended to be used for genuine
     ///  usage.
-    Boolean? experimental,
+    bool? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
@@ -1373,7 +1373,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    String? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
@@ -1382,7 +1382,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    String? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
@@ -1745,7 +1745,7 @@ class ChargeItemDefinitionPriceComponent
     List<FhirExtension>? modifierExtension,
 
     /// [type] This code identifies the type of the component.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -2018,14 +2018,14 @@ class Contract with Resource, _$Contract {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2075,7 +2075,7 @@ class Contract with Resource, _$Contract {
 
     /// [url] Canonical identifier for this contract, represented as a URI
     ///  (globally unique).
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
@@ -2090,7 +2090,7 @@ class Contract with Resource, _$Contract {
         Element? versionElement,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2109,7 +2109,7 @@ class Contract with Resource, _$Contract {
 
     /// [instantiatesUri] The URL pointing to an externally maintained definition
     ///  that is adhered to in whole or in part by this Contract.
-    FhirUri? instantiatesUri,
+    String? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
@@ -2415,7 +2415,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
     /// [publicationStatus] amended | appended | cancelled | disputed |
     /// entered-in-error | executable | executed | negotiable | offered | policy |
     ///  rejected | renewed | revoked | resolved | terminated.
-    Code? publicationStatus,
+    String? publicationStatus,
 
     /// [publicationStatusElement] Extensions for publicationStatus
     @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
@@ -3181,7 +3181,7 @@ class ContractAnswer with _$ContractAnswer {
     /// enables selection of values to be agreed to, e.g., the period of
     /// participation, the date of occupancy of a rental, warrently duration, or
     ///  whether biospecimen may be used for further research.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3208,7 +3208,7 @@ class ContractAnswer with _$ContractAnswer {
     /// selection of values to be agreed to, e.g., the period of participation,
     /// the date of occupancy of a rental, warrently duration, or whether
     ///  biospecimen may be used for further research.
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -3244,7 +3244,7 @@ class ContractAnswer with _$ContractAnswer {
     /// selection of values to be agreed to, e.g., the period of participation,
     /// the date of occupancy of a rental, warrently duration, or whether
     ///  biospecimen may be used for further research.
-    FhirUri? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -4017,7 +4017,7 @@ class ContractAction with _$ContractAction {
     List<FhirExtension>? modifierExtension,
 
     /// [doNotPerform] True if the term prohibits the  action.
-    Boolean? doNotPerform,
+    bool? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
@@ -4925,14 +4925,14 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4980,7 +4980,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5000,7 +5000,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// authorization and adjudication for provision in the future; or requesting
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
-    Code? use,
+    String? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -5079,7 +5079,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -5509,7 +5509,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 
     /// [responsible] The party who is billing and/or responsible for the claimed
     ///  products or services.
-    Boolean? responsible,
+    bool? responsible,
 
     /// [responsibleElement] Extensions for responsible
     @JsonKey(name: '_responsible') Element? responsibleElement,
@@ -5675,7 +5675,7 @@ class ExplanationOfBenefitSupportingInfo
     CodeableConcept? code,
 
     /// [timingDate] The date when or period to which this information refers.
-    Date? timingDate,
+    String? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -5686,7 +5686,7 @@ class ExplanationOfBenefitSupportingInfo
     /// [valueBoolean] Additional data or information such as resources,
     /// documents, images etc. including references to the data or the actual
     ///  inclusion of the data.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -6096,7 +6096,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 
     /// [focal] A flag to indicate that this Coverage is to be used for
     ///  adjudication of this claim when set to true.
-    Boolean? focal,
+    bool? focal,
 
     /// [focalElement] Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -6224,7 +6224,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 
     /// [date] Date of an accident event  related to the products and services
     ///  contained in the claim.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -6480,7 +6480,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -7284,7 +7284,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -7918,7 +7918,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 
     /// [date] Estimated date the payment will be issued or the actual issue date
     ///  of payment.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -8044,7 +8044,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -8186,7 +8186,7 @@ class ExplanationOfBenefitBenefitBalance
     /// [excluded] True if the indicated class of service is excluded from the
     /// plan, missing or False indicates the product or service is included in the
     ///  coverage.
-    Boolean? excluded,
+    bool? excluded,
 
     /// [excludedElement] Extensions for excluded
     @JsonKey(name: '_excluded') Element? excludedElement,
@@ -8514,14 +8514,14 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -8571,7 +8571,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     List<Identifier>? identifier,
 
     /// [status] The current state of the health insurance product.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

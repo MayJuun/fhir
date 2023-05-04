@@ -687,7 +687,7 @@ mixin _$Reference {
   /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
   /// allowed for logical models (and can only be used in references in logical
   ///  models, not resources).
-  FhirUri? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -728,7 +728,7 @@ abstract class $ReferenceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
-      FhirUri? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Identifier? identifier,
       String? display,
@@ -864,7 +864,7 @@ abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
-      FhirUri? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Identifier? identifier,
       String? display,
@@ -1156,7 +1156,7 @@ abstract class _Reference extends Reference {
   /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
   /// allowed for logical models (and can only be used in references in logical
   ///  models, not resources).
-  FhirUri? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -1231,7 +1231,7 @@ mixin _$Meta {
   /// to track or differentiate the source of information in the resource. The
   /// source may identify another FHIR server, document, message, database,
   ///  etc.
-  FhirUri? get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
 
   /// [sourceElement] Extensions for source
   @JsonKey(name: '_source')
@@ -1269,7 +1269,7 @@ abstract class $MetaCopyWith<$Res> {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source') Element? sourceElement,
       List<Canonical>? profile,
       List<Coding>? security,
@@ -1403,7 +1403,7 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source') Element? sourceElement,
       List<Canonical>? profile,
       List<Coding>? security,
@@ -1743,7 +1743,7 @@ abstract class _Meta extends Meta {
   /// to track or differentiate the source of information in the resource. The
   /// source may identify another FHIR server, document, message, database,
   ///  etc.
-  FhirUri? get source;
+  String? get source;
   @override
 
   /// [sourceElement] Extensions for source
@@ -1843,7 +1843,7 @@ mixin _$Dosage {
   /// [asNeededBoolean] Indicates whether the Medication is only taken when
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  bool? get asNeededBoolean => throw _privateConstructorUsedError;
 
   /// [asNeededBooleanElement] Extensions for asNeededBoolean
   @JsonKey(name: '_asNeededBoolean')
@@ -1900,7 +1900,7 @@ abstract class $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      bool? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? site,
@@ -2212,7 +2212,7 @@ abstract class _$$_DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
-      Boolean? asNeededBoolean,
+      bool? asNeededBoolean,
       @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept,
       CodeableConcept? site,
@@ -2779,7 +2779,7 @@ abstract class _Dosage extends Dosage {
   /// [asNeededBoolean] Indicates whether the Medication is only taken when
   /// needed within a specific dosing schedule (Boolean option), or it indicates
   ///  the precondition for taking the Medication (CodeableConcept).
-  Boolean? get asNeededBoolean;
+  bool? get asNeededBoolean;
   @override
 
   /// [asNeededBooleanElement] Extensions for asNeededBoolean
@@ -3458,7 +3458,7 @@ mixin _$ElementDefinition {
   /// profile. If false, the slice is not overriding any slice in an inherited
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
-  Boolean? get sliceIsConstraining => throw _privateConstructorUsedError;
+  bool? get sliceIsConstraining => throw _privateConstructorUsedError;
 
   /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
   @JsonKey(name: '_sliceIsConstraining')
@@ -3565,7 +3565,7 @@ mixin _$ElementDefinition {
   /// ContentReferences bring across all the rules that are in the
   /// ElementDefinition for the element, including definitions, cardinality
   ///  constraints, bindings, invariants etc.
-  FhirUri? get contentReference => throw _privateConstructorUsedError;
+  String? get contentReference => throw _privateConstructorUsedError;
 
   /// [contentReferenceElement] Extensions for contentReference
   @JsonKey(name: '_contentReference')
@@ -3578,8 +3578,7 @@ mixin _$ElementDefinition {
   /// [defaultValueBase64Binary] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Base64Binary? get defaultValueBase64Binary =>
-      throw _privateConstructorUsedError;
+  String? get defaultValueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
@@ -3587,7 +3586,7 @@ mixin _$ElementDefinition {
   /// [defaultValueBoolean] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+  bool? get defaultValueBoolean => throw _privateConstructorUsedError;
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @JsonKey(name: '_defaultValueBoolean')
@@ -3596,7 +3595,7 @@ mixin _$ElementDefinition {
   /// [defaultValueCanonical] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
+  String? get defaultValueCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement =>
       throw _privateConstructorUsedError;
@@ -3604,7 +3603,7 @@ mixin _$ElementDefinition {
   /// [defaultValueCode] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+  String? get defaultValueCode => throw _privateConstructorUsedError;
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
@@ -3613,7 +3612,7 @@ mixin _$ElementDefinition {
   /// [defaultValueDate] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Date? get defaultValueDate => throw _privateConstructorUsedError;
+  String? get defaultValueDate => throw _privateConstructorUsedError;
 
   /// [defaultValueDateElement] Extensions for defaultValueDate
   @JsonKey(name: '_defaultValueDate')
@@ -3719,7 +3718,7 @@ mixin _$ElementDefinition {
   /// [defaultValueUri] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
+  String? get defaultValueUri => throw _privateConstructorUsedError;
 
   /// [defaultValueUriElement] Extensions for defaultValueUri
   @JsonKey(name: '_defaultValueUri')
@@ -3929,7 +3928,7 @@ mixin _$ElementDefinition {
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
-  Base64Binary? get fixedBase64Binary => throw _privateConstructorUsedError;
+  String? get fixedBase64Binary => throw _privateConstructorUsedError;
 
   /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
   @JsonKey(name: '_fixedBase64Binary')
@@ -3939,7 +3938,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Boolean? get fixedBoolean => throw _privateConstructorUsedError;
+  bool? get fixedBoolean => throw _privateConstructorUsedError;
 
   /// [fixedBooleanElement] Extensions for fixedBoolean
   @JsonKey(name: '_fixedBoolean')
@@ -3949,7 +3948,7 @@ mixin _$ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Canonical? get fixedCanonical => throw _privateConstructorUsedError;
+  String? get fixedCanonical => throw _privateConstructorUsedError;
 
   /// [fixedCanonicalElement] Extensions for fixedCanonical
   @JsonKey(name: '_fixedCanonical')
@@ -3959,7 +3958,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Code? get fixedCode => throw _privateConstructorUsedError;
+  String? get fixedCode => throw _privateConstructorUsedError;
 
   /// [fixedCodeElement] Extensions for fixedCode
   @JsonKey(name: '_fixedCode')
@@ -3969,7 +3968,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Date? get fixedDate => throw _privateConstructorUsedError;
+  String? get fixedDate => throw _privateConstructorUsedError;
 
   /// [fixedDateElement] Extensions for fixedDate
   @JsonKey(name: '_fixedDate')
@@ -4089,7 +4088,7 @@ mixin _$ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  FhirUri? get fixedUri => throw _privateConstructorUsedError;
+  String? get fixedUri => throw _privateConstructorUsedError;
 
   /// [fixedUriElement] Extensions for fixedUri
   @JsonKey(name: '_fixedUri')
@@ -4326,7 +4325,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Base64Binary? get patternBase64Binary => throw _privateConstructorUsedError;
+  String? get patternBase64Binary => throw _privateConstructorUsedError;
 
   /// [patternBase64BinaryElement] Extensions for patternBase64Binary
   @JsonKey(name: '_patternBase64Binary')
@@ -4347,7 +4346,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Boolean? get patternBoolean => throw _privateConstructorUsedError;
+  bool? get patternBoolean => throw _privateConstructorUsedError;
 
   /// [patternBooleanElement] Extensions for patternBoolean
   @JsonKey(name: '_patternBoolean')
@@ -4368,7 +4367,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Canonical? get patternCanonical => throw _privateConstructorUsedError;
+  String? get patternCanonical => throw _privateConstructorUsedError;
 
   /// [patternCanonicalElement] Extensions for patternCanonical
   @JsonKey(name: '_patternCanonical')
@@ -4389,7 +4388,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Code? get patternCode => throw _privateConstructorUsedError;
+  String? get patternCode => throw _privateConstructorUsedError;
 
   /// [patternCodeElement] Extensions for patternCode
   @JsonKey(name: '_patternCode')
@@ -4410,7 +4409,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Date? get patternDate => throw _privateConstructorUsedError;
+  String? get patternDate => throw _privateConstructorUsedError;
 
   /// [patternDateElement] Extensions for patternDate
   @JsonKey(name: '_patternDate')
@@ -4662,7 +4661,7 @@ mixin _$ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  FhirUri? get patternUri => throw _privateConstructorUsedError;
+  String? get patternUri => throw _privateConstructorUsedError;
 
   /// [patternUriElement] Extensions for patternUri
   @JsonKey(name: '_patternUri')
@@ -5236,7 +5235,7 @@ mixin _$ElementDefinition {
   /// [minValueDate] The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Date? get minValueDate => throw _privateConstructorUsedError;
+  String? get minValueDate => throw _privateConstructorUsedError;
 
   /// [minValueDateElement] Extensions for minValueDate
   @JsonKey(name: '_minValueDate')
@@ -5313,7 +5312,7 @@ mixin _$ElementDefinition {
   /// [maxValueDate] The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Date? get maxValueDate => throw _privateConstructorUsedError;
+  String? get maxValueDate => throw _privateConstructorUsedError;
 
   /// [maxValueDateElement] Extensions for maxValueDate
   @JsonKey(name: '_maxValueDate')
@@ -5415,7 +5414,7 @@ mixin _$ElementDefinition {
   /// the element may be ignored and not supported. If false, whether to
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
-  Boolean? get mustSupport => throw _privateConstructorUsedError;
+  bool? get mustSupport => throw _privateConstructorUsedError;
 
   /// [mustSupportElement] Extensions for mustSupport
   @JsonKey(name: '_mustSupport')
@@ -5428,7 +5427,7 @@ mixin _$ElementDefinition {
   /// cannot be ignored by systems: they SHALL either recognize the element and
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
-  Boolean? get isModifier => throw _privateConstructorUsedError;
+  bool? get isModifier => throw _privateConstructorUsedError;
 
   /// [isModifierElement] Extensions for isModifier
   @JsonKey(name: '_isModifier')
@@ -5444,7 +5443,7 @@ mixin _$ElementDefinition {
 
   /// [isSummary] Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
-  Boolean? get isSummary => throw _privateConstructorUsedError;
+  bool? get isSummary => throw _privateConstructorUsedError;
 
   /// [isSummaryElement] Extensions for isSummary
   @JsonKey(name: '_isSummary')
@@ -5485,7 +5484,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
-      Boolean? sliceIsConstraining,
+      bool? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
           Element? sliceIsConstrainingElement,
       String? label,
@@ -5515,23 +5514,23 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_max')
           Element? maxElement,
       ElementDefinitionBase? base,
-      FhirUri? contentReference,
+      String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
-      Base64Binary? defaultValueBase64Binary,
+      String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
+      bool? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
+      String? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      String? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Date? defaultValueDate,
+      String? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -5567,7 +5566,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
+      String? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
@@ -5614,19 +5613,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
           Element? orderMeaningElement,
-      Base64Binary? fixedBase64Binary,
+      String? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-      Boolean? fixedBoolean,
+      bool? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-      Canonical? fixedCanonical,
+      String? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
           Element? fixedCanonicalElement,
-      Code? fixedCode,
+      String? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
-      Date? fixedDate,
+      String? fixedDate,
       @JsonKey(name: '_fixedDate')
           Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
@@ -5662,7 +5661,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
           Element? fixedUnsignedIntElement,
-      FhirUri? fixedUri,
+      String? fixedUri,
       @JsonKey(name: '_fixedUri')
           Element? fixedUriElement,
       FhirUrl? fixedUrl,
@@ -5703,19 +5702,19 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Base64Binary? patternBase64Binary,
+      String? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-      Boolean? patternBoolean,
+      bool? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-      Canonical? patternCanonical,
+      String? patternCanonical,
       @JsonKey(name: '_patternCanonical')
           Element? patternCanonicalElement,
-      Code? patternCode,
+      String? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
-      Date? patternDate,
+      String? patternDate,
       @JsonKey(name: '_patternDate')
           Element? patternDateElement,
       FhirDateTime? patternDateTime,
@@ -5751,7 +5750,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
           Element? patternUnsignedIntElement,
-      FhirUri? patternUri,
+      String? patternUri,
       @JsonKey(name: '_patternUri')
           Element? patternUriElement,
       FhirUrl? patternUrl,
@@ -5793,7 +5792,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
       List<ElementDefinitionExample>? example,
-      Date? minValueDate,
+      String? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
@@ -5818,7 +5817,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_minValueUnsignedInt')
           Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
-      Date? maxValueDate,
+      String? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
@@ -5850,16 +5849,16 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_condition')
           List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+      bool? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-      Boolean? isModifier,
+      bool? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
       String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
           Element? isModifierReasonElement,
-      Boolean? isSummary,
+      bool? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -9923,7 +9922,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
-      Boolean? sliceIsConstraining,
+      bool? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
           Element? sliceIsConstrainingElement,
       String? label,
@@ -9953,23 +9952,23 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_max')
           Element? maxElement,
       ElementDefinitionBase? base,
-      FhirUri? contentReference,
+      String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
-      Base64Binary? defaultValueBase64Binary,
+      String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
+      bool? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
+      String? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      String? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Date? defaultValueDate,
+      String? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -10005,7 +10004,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
+      String? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
@@ -10052,19 +10051,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       String? orderMeaning,
       @JsonKey(name: '_orderMeaning')
           Element? orderMeaningElement,
-      Base64Binary? fixedBase64Binary,
+      String? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           Element? fixedBase64BinaryElement,
-      Boolean? fixedBoolean,
+      bool? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           Element? fixedBooleanElement,
-      Canonical? fixedCanonical,
+      String? fixedCanonical,
       @JsonKey(name: '_fixedCanonical')
           Element? fixedCanonicalElement,
-      Code? fixedCode,
+      String? fixedCode,
       @JsonKey(name: '_fixedCode')
           Element? fixedCodeElement,
-      Date? fixedDate,
+      String? fixedDate,
       @JsonKey(name: '_fixedDate')
           Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
@@ -10100,7 +10099,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       UnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
           Element? fixedUnsignedIntElement,
-      FhirUri? fixedUri,
+      String? fixedUri,
       @JsonKey(name: '_fixedUri')
           Element? fixedUriElement,
       FhirUrl? fixedUrl,
@@ -10141,19 +10140,19 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       TriggerDefinition? fixedTriggerDefinition,
       UsageContext? fixedUsageContext,
       Dosage? fixedDosage,
-      Base64Binary? patternBase64Binary,
+      String? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           Element? patternBase64BinaryElement,
-      Boolean? patternBoolean,
+      bool? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           Element? patternBooleanElement,
-      Canonical? patternCanonical,
+      String? patternCanonical,
       @JsonKey(name: '_patternCanonical')
           Element? patternCanonicalElement,
-      Code? patternCode,
+      String? patternCode,
       @JsonKey(name: '_patternCode')
           Element? patternCodeElement,
-      Date? patternDate,
+      String? patternDate,
       @JsonKey(name: '_patternDate')
           Element? patternDateElement,
       FhirDateTime? patternDateTime,
@@ -10189,7 +10188,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       UnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
           Element? patternUnsignedIntElement,
-      FhirUri? patternUri,
+      String? patternUri,
       @JsonKey(name: '_patternUri')
           Element? patternUriElement,
       FhirUrl? patternUrl,
@@ -10231,7 +10230,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       UsageContext? patternUsageContext,
       Dosage? patternDosage,
       List<ElementDefinitionExample>? example,
-      Date? minValueDate,
+      String? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
@@ -10256,7 +10255,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_minValueUnsignedInt')
           Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
-      Date? maxValueDate,
+      String? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
@@ -10288,16 +10287,16 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_condition')
           List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
-      Boolean? mustSupport,
+      bool? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
-      Boolean? isModifier,
+      bool? isModifier,
       @JsonKey(name: '_isModifier')
           Element? isModifierElement,
       String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
           Element? isModifierReasonElement,
-      Boolean? isSummary,
+      bool? isSummary,
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
@@ -16206,7 +16205,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// profile. If false, the slice is not overriding any slice in an inherited
   /// profile. If missing, the slice might or might not be overriding a slice in
   ///  an inherited profile, depending on the sliceName.
-  Boolean? get sliceIsConstraining;
+  bool? get sliceIsConstraining;
   @override
 
   /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
@@ -16334,7 +16333,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// ContentReferences bring across all the rules that are in the
   /// ElementDefinition for the element, including definitions, cardinality
   ///  constraints, bindings, invariants etc.
-  FhirUri? get contentReference;
+  String? get contentReference;
   @override
 
   /// [contentReferenceElement] Extensions for contentReference
@@ -16350,7 +16349,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueBase64Binary] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Base64Binary? get defaultValueBase64Binary;
+  String? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
@@ -16359,7 +16358,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueBoolean] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Boolean? get defaultValueBoolean;
+  bool? get defaultValueBoolean;
   @override
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
@@ -16370,7 +16369,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueCanonical] The value that should be used if there is no
   /// value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Canonical? get defaultValueCanonical;
+  String? get defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement;
@@ -16379,7 +16378,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueCode] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Code? get defaultValueCode;
+  String? get defaultValueCode;
   @override
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
@@ -16390,7 +16389,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueDate] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  Date? get defaultValueDate;
+  String? get defaultValueDate;
   @override
 
   /// [defaultValueDateElement] Extensions for defaultValueDate
@@ -16514,7 +16513,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueUri] The value that should be used if there is no value
   /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
   ///  false').
-  FhirUri? get defaultValueUri;
+  String? get defaultValueUri;
   @override
 
   /// [defaultValueUriElement] Extensions for defaultValueUri
@@ -16755,7 +16754,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
-  Base64Binary? get fixedBase64Binary;
+  String? get fixedBase64Binary;
   @override
 
   /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
@@ -16767,7 +16766,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Boolean? get fixedBoolean;
+  bool? get fixedBoolean;
   @override
 
   /// [fixedBooleanElement] Extensions for fixedBoolean
@@ -16779,7 +16778,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// this element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Canonical? get fixedCanonical;
+  String? get fixedCanonical;
   @override
 
   /// [fixedCanonicalElement] Extensions for fixedCanonical
@@ -16791,7 +16790,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Code? get fixedCode;
+  String? get fixedCode;
   @override
 
   /// [fixedCodeElement] Extensions for fixedCode
@@ -16803,7 +16802,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  Date? get fixedDate;
+  String? get fixedDate;
   @override
 
   /// [fixedDateElement] Extensions for fixedDate
@@ -16947,7 +16946,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// element in the instance. For purposes of comparison, non-significant
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
-  FhirUri? get fixedUri;
+  String? get fixedUri;
   @override
 
   /// [fixedUriElement] Extensions for fixedUri
@@ -17216,7 +17215,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Base64Binary? get patternBase64Binary;
+  String? get patternBase64Binary;
   @override
 
   /// [patternBase64BinaryElement] Extensions for patternBase64Binary
@@ -17239,7 +17238,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Boolean? get patternBoolean;
+  bool? get patternBoolean;
   @override
 
   /// [patternBooleanElement] Extensions for patternBoolean
@@ -17262,7 +17261,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Canonical? get patternCanonical;
+  String? get patternCanonical;
   @override
 
   /// [patternCanonicalElement] Extensions for patternCanonical
@@ -17285,7 +17284,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Code? get patternCode;
+  String? get patternCode;
   @override
 
   /// [patternCodeElement] Extensions for patternCode
@@ -17308,7 +17307,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  Date? get patternDate;
+  String? get patternDate;
   @override
 
   /// [patternDateElement] Extensions for patternDate
@@ -17584,7 +17583,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 1. If primitive: it must match exactly the pattern value
   /// 2. If a complex object: it must match (recursively) the pattern value
   /// 3. If an array: it must match (recursively) the pattern value.
-  FhirUri? get patternUri;
+  String? get patternUri;
   @override
 
   /// [patternUriElement] Extensions for patternUri
@@ -18190,7 +18189,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [minValueDate] The minimum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Date? get minValueDate;
+  String? get minValueDate;
   @override
 
   /// [minValueDateElement] Extensions for minValueDate
@@ -18284,7 +18283,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [maxValueDate] The maximum allowed value for the element. The value is
   /// inclusive. This is allowed for the types date, dateTime, instant, time,
   ///  decimal, integer, and Quantity.
-  Date? get maxValueDate;
+  String? get maxValueDate;
   @override
 
   /// [maxValueDateElement] Extensions for maxValueDate
@@ -18407,7 +18406,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// the element may be ignored and not supported. If false, whether to
   /// populate or use the data element in any way is at the discretion of the
   ///  implementation.
-  Boolean? get mustSupport;
+  bool? get mustSupport;
   @override
 
   /// [mustSupportElement] Extensions for mustSupport
@@ -18422,7 +18421,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// cannot be ignored by systems: they SHALL either recognize the element and
   /// process it, and/or a pre-determination has been made that it is not
   ///  relevant to their particular system.
-  Boolean? get isModifier;
+  bool? get isModifier;
   @override
 
   /// [isModifierElement] Extensions for isModifier
@@ -18442,7 +18441,7 @@ abstract class _ElementDefinition extends ElementDefinition {
 
   /// [isSummary] Whether the element should be included if a client requests a
   ///  search with the parameter _summary=true.
-  Boolean? get isSummary;
+  bool? get isSummary;
   @override
 
   /// [isSummaryElement] Extensions for isSummary
@@ -18521,7 +18520,7 @@ mixin _$ElementDefinitionSlicing {
 
   /// [ordered] If the matching elements have to occur in the same order as
   ///  defined in the profile.
-  Boolean? get ordered => throw _privateConstructorUsedError;
+  bool? get ordered => throw _privateConstructorUsedError;
 
   /// [orderedElement] Extensions for ordered
   @JsonKey(name: '_ordered')
@@ -18555,7 +18554,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Boolean? ordered,
+      bool? ordered,
       @JsonKey(name: '_ordered')
           Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
@@ -18692,7 +18691,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Boolean? ordered,
+      bool? ordered,
       @JsonKey(name: '_ordered')
           Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
@@ -19060,7 +19059,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
 
   /// [ordered] If the matching elements have to occur in the same order as
   ///  defined in the profile.
-  Boolean? get ordered;
+  bool? get ordered;
   @override
 
   /// [orderedElement] Extensions for ordered
@@ -20135,7 +20134,7 @@ mixin _$ElementDefinitionType {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
-  FhirUri? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -20197,7 +20196,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
@@ -20333,7 +20332,7 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
@@ -20779,7 +20778,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
-  FhirUri? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -20880,7 +20879,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueBase64Binary] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -20888,7 +20887,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueBoolean] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -20896,7 +20895,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueCanonical] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  String? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
@@ -20904,7 +20903,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueCode] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -20912,7 +20911,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueDate] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -21008,7 +21007,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueUri] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -21180,15 +21179,15 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -21212,7 +21211,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -22364,15 +22363,15 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -22396,7 +22395,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -23820,7 +23819,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueBase64Binary] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -23830,7 +23829,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueBoolean] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -23840,7 +23839,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueCanonical] The actual value for the element, which must be one of
   ///  the types allowed for this element.
-  Canonical? get valueCanonical;
+  String? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -23850,7 +23849,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueCode] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -23860,7 +23859,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueDate] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -23980,7 +23979,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueUri] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -24257,7 +24256,7 @@ mixin _$ElementDefinitionConstraint {
 
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  Canonical? get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -24297,7 +24296,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Canonical? source});
+      String? source});
 
   $ElementCopyWith<$Res>? get keyElement;
   $ElementCopyWith<$Res>? get requirementsElement;
@@ -24512,7 +24511,7 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Canonical? source});
+      String? source});
 
   @override
   $ElementCopyWith<$Res>? get keyElement;
@@ -24994,7 +24993,7 @@ abstract class _ElementDefinitionConstraint
 
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  Canonical? get source;
+  String? get source;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionConstraintCopyWith<_$_ElementDefinitionConstraint>
@@ -25053,7 +25052,7 @@ mixin _$ElementDefinitionBinding {
 
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  String? get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -25079,7 +25078,7 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Canonical? valueSet});
+      String? valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -25190,7 +25189,7 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Canonical? valueSet});
+      String? valueSet});
 
   @override
   $ElementCopyWith<$Res>? get strengthElement;
@@ -25495,7 +25494,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
 
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  Canonical? get valueSet;
+  String? get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionBindingCopyWith<_$_ElementDefinitionBinding>
@@ -25547,7 +25546,7 @@ mixin _$ElementDefinitionMapping {
 
   /// [language] Identifies the computable language in which mapping.map is
   ///  expressed.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -25586,7 +25585,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Id? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? map,
       @JsonKey(name: '_map') Element? mapElement,
@@ -25737,7 +25736,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Id? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       String? map,
       @JsonKey(name: '_map') Element? mapElement,
@@ -26079,7 +26078,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
 
   /// [language] Identifies the computable language in which mapping.map is
   ///  expressed.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language

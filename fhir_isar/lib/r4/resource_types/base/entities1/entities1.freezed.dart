@@ -36,14 +36,14 @@ mixin _$Endpoint {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -93,7 +93,7 @@ mixin _$Endpoint {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] active | suspended | error | off | test.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -170,10 +170,10 @@ abstract class $EndpointCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -182,7 +182,7 @@ abstract class $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -497,10 +497,10 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -509,7 +509,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -1201,7 +1201,7 @@ abstract class _Endpoint extends Endpoint {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1210,7 +1210,7 @@ abstract class _Endpoint extends Endpoint {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1266,7 +1266,7 @@ abstract class _Endpoint extends Endpoint {
   @override
 
   /// [status] active | suspended | error | off | test.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1367,14 +1367,14 @@ mixin _$HealthcareService {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1425,7 +1425,7 @@ mixin _$HealthcareService {
   /// [active] This flag is used to mark the record to not be used. This is not
   /// used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -1518,7 +1518,7 @@ mixin _$HealthcareService {
   /// will require an appointment for a particular service at a site to be
   /// provided by the Organization. Indicates if an appointment is required for
   ///  access to this service.
-  Boolean? get appointmentRequired => throw _privateConstructorUsedError;
+  bool? get appointmentRequired => throw _privateConstructorUsedError;
 
   /// [appointmentRequiredElement] Extensions for appointmentRequired
   @JsonKey(name: '_appointmentRequired')
@@ -1563,10 +1563,10 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1575,7 +1575,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? providedBy,
@@ -1601,7 +1601,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? communication,
       List<CodeableConcept>? referralMethod,
-      Boolean? appointmentRequired,
+      bool? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
@@ -2008,10 +2008,10 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2020,7 +2020,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? providedBy,
@@ -2046,7 +2046,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       List<CodeableConcept>? characteristic,
       List<CodeableConcept>? communication,
       List<CodeableConcept>? referralMethod,
-      Boolean? appointmentRequired,
+      bool? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
           Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
@@ -3039,7 +3039,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3048,7 +3048,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3105,7 +3105,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// [active] This flag is used to mark the record to not be used. This is not
   /// used when a center is closed for maintenance, or for holidays, the
   ///  notAvailable period is to be used for this.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -3215,7 +3215,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// will require an appointment for a particular service at a site to be
   /// provided by the Organization. Indicates if an appointment is required for
   ///  access to this service.
-  Boolean? get appointmentRequired;
+  bool? get appointmentRequired;
   @override
 
   /// [appointmentRequiredElement] Extensions for appointmentRequired
@@ -3724,7 +3724,7 @@ mixin _$HealthcareServiceAvailableTime {
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  bool? get allDay => throw _privateConstructorUsedError;
 
   /// [allDayElement] Extensions for allDay
   @JsonKey(name: '_allDay')
@@ -3766,7 +3766,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -3904,7 +3904,7 @@ abstract class _$$_HealthcareServiceAvailableTimeCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -4281,7 +4281,7 @@ abstract class _HealthcareServiceAvailableTime
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay;
+  bool? get allDay;
   @override
 
   /// [allDayElement] Extensions for allDay
@@ -4769,14 +4769,14 @@ mixin _$Location {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4828,7 +4828,7 @@ mixin _$Location {
   /// resource, not the current value which may be covered by the
   /// operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4866,7 +4866,7 @@ mixin _$Location {
 
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -4932,10 +4932,10 @@ abstract class $LocationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4944,7 +4944,7 @@ abstract class $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4957,7 +4957,7 @@ abstract class $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -5373,10 +5373,10 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5385,7 +5385,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -5398,7 +5398,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
@@ -6201,7 +6201,7 @@ abstract class _Location extends Location {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6210,7 +6210,7 @@ abstract class _Location extends Location {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6268,7 +6268,7 @@ abstract class _Location extends Location {
   /// resource, not the current value which may be covered by the
   /// operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6315,7 +6315,7 @@ abstract class _Location extends Location {
 
   /// [mode] Indicates whether a resource instance represents a specific
   ///  location or a class of locations.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -6959,7 +6959,7 @@ mixin _$LocationHoursOfOperation {
   List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
 
   /// [allDay] The Location is open all day.
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  bool? get allDay => throw _privateConstructorUsedError;
 
   /// [allDayElement] Extensions for allDay
   @JsonKey(name: '_allDay')
@@ -6997,7 +6997,7 @@ abstract class $LocationHoursOfOperationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? openingTime,
       @JsonKey(name: '_openingTime') Element? openingTimeElement,
@@ -7135,7 +7135,7 @@ abstract class _$$_LocationHoursOfOperationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? openingTime,
       @JsonKey(name: '_openingTime') Element? openingTimeElement,
@@ -7497,7 +7497,7 @@ abstract class _LocationHoursOfOperation extends LocationHoursOfOperation {
   @override
 
   /// [allDay] The Location is open all day.
-  Boolean? get allDay;
+  bool? get allDay;
   @override
 
   /// [allDayElement] Extensions for allDay
@@ -7549,14 +7549,14 @@ mixin _$Organization {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7606,7 +7606,7 @@ mixin _$Organization {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether the organization's record is still in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -7663,10 +7663,10 @@ abstract class $OrganizationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7675,7 +7675,7 @@ abstract class $OrganizationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? type,
@@ -7936,10 +7936,10 @@ abstract class _$$_OrganizationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7948,7 +7948,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? type,
@@ -8577,7 +8577,7 @@ abstract class _Organization extends Organization {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -8586,7 +8586,7 @@ abstract class _Organization extends Organization {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8642,7 +8642,7 @@ abstract class _Organization extends Organization {
   @override
 
   /// [active] Whether the organization's record is still in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -9191,14 +9191,14 @@ mixin _$OrganizationAffiliation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9247,7 +9247,7 @@ mixin _$OrganizationAffiliation {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this organization affiliation record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -9311,10 +9311,10 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9323,7 +9323,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -9596,10 +9596,10 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9608,7 +9608,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -10248,7 +10248,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -10257,7 +10257,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10312,7 +10312,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
 
   /// [active] Whether this organization affiliation record is in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active

@@ -36,14 +36,14 @@ mixin _$AuditEvent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -98,7 +98,7 @@ mixin _$AuditEvent {
 
   /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
-  Code? get action => throw _privateConstructorUsedError;
+  String? get action => throw _privateConstructorUsedError;
 
   /// [actionElement] Extensions for action
   @JsonKey(name: '_action')
@@ -115,7 +115,7 @@ mixin _$AuditEvent {
   Element? get recordedElement => throw _privateConstructorUsedError;
 
   /// [outcome] Indicates whether the event succeeded or failed.
-  Code? get outcome => throw _privateConstructorUsedError;
+  String? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -160,10 +160,10 @@ abstract class $AuditEventCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -173,14 +173,14 @@ abstract class $AuditEventCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-      Code? action,
+      String? action,
       @JsonKey(name: '_action')
           Element? actionElement,
       Period? period,
       Instant? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? outcomeDesc,
@@ -490,10 +490,10 @@ abstract class _$$_AuditEventCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -503,14 +503,14 @@ abstract class _$$_AuditEventCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
-      Code? action,
+      String? action,
       @JsonKey(name: '_action')
           Element? actionElement,
       Period? period,
       Instant? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? outcomeDesc,
@@ -1133,7 +1133,7 @@ abstract class _AuditEvent extends AuditEvent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1142,7 +1142,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1204,7 +1204,7 @@ abstract class _AuditEvent extends AuditEvent {
 
   /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
-  Code? get action;
+  String? get action;
   @override
 
   /// [actionElement] Extensions for action
@@ -1226,7 +1226,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
 
   /// [outcome] Indicates whether the event succeeded or failed.
-  Code? get outcome;
+  String? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -1331,7 +1331,7 @@ mixin _$AuditEventAgent {
 
   /// [requestor] Indicator that the user is or is not the requestor, or
   ///  initiator, for the event being audited.
-  Boolean? get requestor => throw _privateConstructorUsedError;
+  bool? get requestor => throw _privateConstructorUsedError;
 
   /// [requestorElement] Extensions for requestor
   @JsonKey(name: '_requestor')
@@ -1385,7 +1385,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       @JsonKey(name: '_altId') Element? altIdElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Boolean? requestor,
+      bool? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
@@ -1628,7 +1628,7 @@ abstract class _$$_AuditEventAgentCopyWith<$Res>
       @JsonKey(name: '_altId') Element? altIdElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Boolean? requestor,
+      bool? requestor,
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
@@ -2153,7 +2153,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
 
   /// [requestor] Indicator that the user is or is not the requestor, or
   ///  initiator, for the event being audited.
-  Boolean? get requestor;
+  bool? get requestor;
   @override
 
   /// [requestorElement] Extensions for requestor
@@ -2241,7 +2241,7 @@ mixin _$AuditEventNetwork {
 
   /// [type] An identifier for the type of network access point that originated
   ///  the audit event.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -2265,7 +2265,7 @@ abstract class $AuditEventNetworkCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get addressElement;
@@ -2364,7 +2364,7 @@ abstract class _$$_AuditEventNetworkCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -2640,7 +2640,7 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
 
   /// [type] An identifier for the type of network access point that originated
   ///  the audit event.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -3176,7 +3176,7 @@ mixin _$AuditEventEntity {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [query] The query parameters for a query-type entities.
-  Base64Binary? get query => throw _privateConstructorUsedError;
+  String? get query => throw _privateConstructorUsedError;
 
   /// [queryElement] Extensions for query
   @JsonKey(name: '_query')
@@ -3211,7 +3211,7 @@ abstract class $AuditEventEntityCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Base64Binary? query,
+      String? query,
       @JsonKey(name: '_query') Element? queryElement,
       List<AuditEventDetail>? detail});
 
@@ -3423,7 +3423,7 @@ abstract class _$$_AuditEventEntityCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Base64Binary? query,
+      String? query,
       @JsonKey(name: '_query') Element? queryElement,
       List<AuditEventDetail>? detail});
 
@@ -3868,7 +3868,7 @@ abstract class _AuditEventEntity extends AuditEventEntity {
   @override
 
   /// [query] The query parameters for a query-type entities.
-  Base64Binary? get query;
+  String? get query;
   @override
 
   /// [queryElement] Extensions for query
@@ -3935,7 +3935,7 @@ mixin _$AuditEventDetail {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The  value of the extra detail.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -3961,7 +3961,7 @@ abstract class $AuditEventDetailCopyWith<$Res> {
       @JsonKey(name: '_type') Element? typeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -4085,7 +4085,7 @@ abstract class _$$_AuditEventDetailCopyWith<$Res>
       @JsonKey(name: '_type') Element? typeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   @override
@@ -4401,7 +4401,7 @@ abstract class _AuditEventDetail extends AuditEventDetail {
   @override
 
   /// [valueBase64Binary] The  value of the extra detail.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -4435,14 +4435,14 @@ mixin _$Consent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4491,7 +4491,7 @@ mixin _$Consent {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of this consent.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4573,10 +4573,10 @@ abstract class $ConsentCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4585,7 +4585,7 @@ abstract class $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept scope,
@@ -4923,10 +4923,10 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4935,7 +4935,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept scope,
@@ -5620,7 +5620,7 @@ abstract class _Consent extends Consent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -5629,7 +5629,7 @@ abstract class _Consent extends Consent {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5684,7 +5684,7 @@ abstract class _Consent extends Consent {
   @override
 
   /// [status] Indicates the current state of this consent.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -5806,7 +5806,7 @@ mixin _$ConsentPolicy {
 
   /// [authority] Entity or Organization having regulatory jurisdiction or
   ///  accountability for  enforcing policies pertaining to Consent Directives.
-  FhirUri? get authority => throw _privateConstructorUsedError;
+  String? get authority => throw _privateConstructorUsedError;
 
   /// [authorityElement] Extensions for authority
   @JsonKey(name: '_authority')
@@ -5815,7 +5815,7 @@ mixin _$ConsentPolicy {
   /// [uri] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
-  FhirUri? get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// [uriElement] Extensions for uri
   @JsonKey(name: '_uri')
@@ -5837,9 +5837,9 @@ abstract class $ConsentPolicyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? authority,
+      String? authority,
       @JsonKey(name: '_authority') Element? authorityElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement});
 
   $ElementCopyWith<$Res>? get authorityElement;
@@ -5936,9 +5936,9 @@ abstract class _$$_ConsentPolicyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? authority,
+      String? authority,
       @JsonKey(name: '_authority') Element? authorityElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement});
 
   @override
@@ -6204,7 +6204,7 @@ abstract class _ConsentPolicy extends ConsentPolicy {
 
   /// [authority] Entity or Organization having regulatory jurisdiction or
   ///  accountability for  enforcing policies pertaining to Consent Directives.
-  FhirUri? get authority;
+  String? get authority;
   @override
 
   /// [authorityElement] Extensions for authority
@@ -6215,7 +6215,7 @@ abstract class _ConsentPolicy extends ConsentPolicy {
   /// [uri] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
-  FhirUri? get uri;
+  String? get uri;
   @override
 
   /// [uriElement] Extensions for uri
@@ -6263,7 +6263,7 @@ mixin _$ConsentVerification {
       throw _privateConstructorUsedError;
 
   /// [verified] Has the instruction been verified.
-  Boolean? get verified => throw _privateConstructorUsedError;
+  bool? get verified => throw _privateConstructorUsedError;
 
   /// [verifiedElement] Extensions for verified
   @JsonKey(name: '_verified')
@@ -6296,7 +6296,7 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? verified,
+      bool? verified,
       @JsonKey(name: '_verified') Element? verifiedElement,
       Reference? verifiedWith,
       FhirDateTime? verificationDate,
@@ -6414,7 +6414,7 @@ abstract class _$$_ConsentVerificationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? verified,
+      bool? verified,
       @JsonKey(name: '_verified') Element? verifiedElement,
       Reference? verifiedWith,
       FhirDateTime? verificationDate,
@@ -6702,7 +6702,7 @@ abstract class _ConsentVerification extends ConsentVerification {
   @override
 
   /// [verified] Has the instruction been verified.
-  Boolean? get verified;
+  bool? get verified;
   @override
 
   /// [verifiedElement] Extensions for verified
@@ -6765,7 +6765,7 @@ mixin _$ConsentProvision {
 
   /// [type] Action  to take - permit or deny - when the rule conditions are
   ///  met.  Not permitted in root rule, required in all nested rules.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6826,7 +6826,7 @@ abstract class $ConsentProvisionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
@@ -6986,7 +6986,7 @@ abstract class _$$_ConsentProvisionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
@@ -7462,7 +7462,7 @@ abstract class _ConsentProvision extends ConsentProvision {
 
   /// [type] Action  to take - permit or deny - when the rule conditions are
   ///  met.  Not permitted in root rule, required in all nested rules.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -7948,7 +7948,7 @@ mixin _$ConsentData {
 
   /// [meaning] How the resource reference is interpreted when testing consent
   ///  restrictions.
-  Code? get meaning => throw _privateConstructorUsedError;
+  String? get meaning => throw _privateConstructorUsedError;
 
   /// [meaningElement] Extensions for meaning
   @JsonKey(name: '_meaning')
@@ -7974,7 +7974,7 @@ abstract class $ConsentDataCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? meaning,
+      String? meaning,
       @JsonKey(name: '_meaning') Element? meaningElement,
       Reference reference});
 
@@ -8063,7 +8063,7 @@ abstract class _$$_ConsentDataCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? meaning,
+      String? meaning,
       @JsonKey(name: '_meaning') Element? meaningElement,
       Reference reference});
 
@@ -8314,7 +8314,7 @@ abstract class _ConsentData extends ConsentData {
 
   /// [meaning] How the resource reference is interpreted when testing consent
   ///  restrictions.
-  Code? get meaning;
+  String? get meaning;
   @override
 
   /// [meaningElement] Extensions for meaning
@@ -8353,14 +8353,14 @@ mixin _$Provenance {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8476,10 +8476,10 @@ abstract class $ProvenanceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8781,10 +8781,10 @@ abstract class _$$_ProvenanceCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9442,7 +9442,7 @@ abstract class _Provenance extends Provenance {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -9451,7 +9451,7 @@ abstract class _Provenance extends Provenance {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10081,7 +10081,7 @@ mixin _$ProvenanceEntity {
       throw _privateConstructorUsedError;
 
   /// [role] How the entity was used during the activity.
-  Code? get role => throw _privateConstructorUsedError;
+  String? get role => throw _privateConstructorUsedError;
 
   /// [roleElement] Extensions for role
   @JsonKey(name: '_role')
@@ -10113,7 +10113,7 @@ abstract class $ProvenanceEntityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      String? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference what,
       List<ProvenanceAgent>? agent});
@@ -10208,7 +10208,7 @@ abstract class _$$_ProvenanceEntityCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      String? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference what,
       List<ProvenanceAgent>? agent});
@@ -10486,7 +10486,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   @override
 
   /// [role] How the entity was used during the activity.
-  Code? get role;
+  String? get role;
   @override
 
   /// [roleElement] Extensions for role

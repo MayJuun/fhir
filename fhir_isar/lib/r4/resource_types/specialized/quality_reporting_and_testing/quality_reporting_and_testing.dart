@@ -299,14 +299,14 @@ class Measure with Resource, _$Measure {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -357,7 +357,7 @@ class Measure with Resource, _$Measure {
     /// measure is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the measure is stored
     ///  on different servers.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
@@ -411,7 +411,7 @@ class Measure with Resource, _$Measure {
 
     /// [status] The status of this measure. Enables tracking the life-cycle of
     ///  the content.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -420,7 +420,7 @@ class Measure with Resource, _$Measure {
     /// [experimental] A Boolean value to indicate that this measure is authored
     /// for testing purposes (or education/evaluation/marketing) and is not
     ///  intended to be used for genuine usage.
-    Boolean? experimental,
+    bool? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
@@ -505,7 +505,7 @@ class Measure with Resource, _$Measure {
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    String? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
@@ -514,7 +514,7 @@ class Measure with Resource, _$Measure {
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    String? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
@@ -1433,14 +1433,14 @@ class MeasureReport with Resource, _$MeasureReport {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1491,7 +1491,7 @@ class MeasureReport with Resource, _$MeasureReport {
 
     /// [status] The MeasureReport status. No data will be available until the
     ///  MeasureReport status is complete.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1504,7 +1504,7 @@ class MeasureReport with Resource, _$MeasureReport {
     /// population count for each of the criteria in the measure; or a
     /// data-collection, which enables the MeasureReport to be used to exchange
     ///  the data-of-interest for a quality measure.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -2390,14 +2390,14 @@ class TestReport with Resource, _$TestReport {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2454,7 +2454,7 @@ class TestReport with Resource, _$TestReport {
         Element? nameElement,
 
     /// [status] The current state of this test report.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2466,7 +2466,7 @@ class TestReport with Resource, _$TestReport {
     required Reference testScript,
 
     /// [result] The overall result from the execution of the TestScript.
-    Code? result,
+    String? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result')
@@ -2613,13 +2613,13 @@ class TestReportParticipant with _$TestReportParticipant {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The type of participant.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [uri] The uri of the participant. An absolute URL is preferred.
-    FhirUri? uri,
+    String? uri,
 
     /// [uriElement] Extensions for uri
     @JsonKey(name: '_uri') Element? uriElement,
@@ -2936,7 +2936,7 @@ class TestReportOperation with _$TestReportOperation {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this operation.
-    Code? result,
+    String? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
@@ -2948,7 +2948,7 @@ class TestReportOperation with _$TestReportOperation {
     @JsonKey(name: '_message') Element? messageElement,
 
     /// [detail] A link to further details on the result.
-    FhirUri? detail,
+    String? detail,
 
     /// [detailElement] Extensions for detail
     @JsonKey(name: '_detail') Element? detailElement,
@@ -3058,7 +3058,7 @@ class TestReportAssert with _$TestReportAssert {
     List<FhirExtension>? modifierExtension,
 
     /// [result] The result of this assertion.
-    Code? result,
+    String? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result') Element? resultElement,
@@ -3716,14 +3716,14 @@ class TestScript with Resource, _$TestScript {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3774,7 +3774,7 @@ class TestScript with Resource, _$TestScript {
     /// test script is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the test script is
     ///  stored on different servers.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
@@ -3816,7 +3816,7 @@ class TestScript with Resource, _$TestScript {
 
     /// [status] The status of this test script. Enables tracking the life-cycle
     ///  of the content.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3825,7 +3825,7 @@ class TestScript with Resource, _$TestScript {
     /// [experimental] A Boolean value to indicate that this test script is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    Boolean? experimental,
+    bool? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
@@ -4348,7 +4348,7 @@ class TestScriptLink with _$TestScriptLink {
 
     /// [url] URL to a particular requirement or feature within the FHIR
     ///  specification.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
@@ -4494,7 +4494,7 @@ class TestScriptCapability with _$TestScriptCapability {
 
     /// [validated] Whether or not the test execution will validate the given
     ///  capabilities of the server in order for this test script to execute.
-    Boolean? validated,
+    bool? validated,
 
     /// [validatedElement] Extensions for validated
     @JsonKey(name: '_validated') Element? validatedElement,
@@ -4645,7 +4645,7 @@ class TestScriptFixture with _$TestScriptFixture {
     /// setup. If true, the fixture is automatically created on each server being
     /// tested during setup, therefore no create operation is required for this
     ///  fixture in the TestScript.setup section.
-    Boolean? autocreate,
+    bool? autocreate,
 
     /// [autocreateElement] Extensions for autocreate
     @JsonKey(name: '_autocreate') Element? autocreateElement,
@@ -4654,7 +4654,7 @@ class TestScriptFixture with _$TestScriptFixture {
     /// teardown. If true, the fixture is automatically deleted on each server
     /// being tested during teardown, therefore no delete operation is required
     ///  for this fixture in the TestScript.teardown section.
-    Boolean? autodelete,
+    bool? autodelete,
 
     /// [autodeleteElement] Extensions for autodelete
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
@@ -5233,7 +5233,7 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [resource] The type of the resource.  See
     ///  http://build.fhir.org/resourcelist.html.
-    Code? resource,
+    String? resource,
 
     /// [resourceElement] Extensions for resource
     @JsonKey(name: '_resource') Element? resourceElement,
@@ -5254,14 +5254,14 @@ class TestScriptOperation with _$TestScriptOperation {
 
     /// [accept] The mime-type to use for RESTful operation in the 'Accept'
     ///  header.
-    Code? accept,
+    String? accept,
 
     /// [acceptElement] Extensions for accept
     @JsonKey(name: '_accept') Element? acceptElement,
 
     /// [contentType] The mime-type to use for RESTful operation in the
     ///  'Content-Type' header.
-    Code? contentType,
+    String? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -5277,14 +5277,14 @@ class TestScriptOperation with _$TestScriptOperation {
     /// encoded format. The default is true to match the standard RESTful client
     /// behavior. Set to false when communicating with a server that does not
     ///  support encoded url paths.
-    Boolean? encodeRequestUrl,
+    bool? encodeRequestUrl,
 
     /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
 
     /// [method] The HTTP method the test engine MUST use for this operation
     ///  regardless of any other operation details.
-    Code? method,
+    String? method,
 
     /// [methodElement] Extensions for method
     @JsonKey(name: '_method') Element? methodElement,
@@ -5673,7 +5673,7 @@ class TestScriptAssert with _$TestScriptAssert {
         Element? descriptionElement,
 
     /// [direction] The direction to use for the assertion.
-    Code? direction,
+    String? direction,
 
     /// [directionElement] Extensions for direction
     @JsonKey(name: '_direction')
@@ -5710,7 +5710,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [contentType] The mime-type contents to compare against the request or
     ///  response message 'Content-Type' header.
-    Code? contentType,
+    String? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType')
@@ -5741,7 +5741,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [navigationLinks] Whether or not the test execution performs validation
     ///  on the bundle navigation links.
-    Boolean? navigationLinks,
+    bool? navigationLinks,
 
     /// [navigationLinksElement] Extensions for navigationLinks
     @JsonKey(name: '_navigationLinks')
@@ -5750,7 +5750,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [operator] The operator type defines the conditional behavior of the
     ///  assert. If not defined, the default is equals.
     @JsonKey(name: 'operator')
-        Code? operator_,
+        String? operator_,
 
     /// [operatorElement] Extensions for operator
     @JsonKey(name: '_operator')
@@ -5766,7 +5766,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [requestMethod] The request method or HTTP operation code to compare
     ///  against that used by the client system under test.
-    Code? requestMethod,
+    String? requestMethod,
 
     /// [requestMethodElement] Extensions for requestMethod
     @JsonKey(name: '_requestMethod')
@@ -5782,7 +5782,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [resource] The type of the resource.  See
     ///  http://build.fhir.org/resourcelist.html.
-    Code? resource,
+    String? resource,
 
     /// [resourceElement] Extensions for resource
     @JsonKey(name: '_resource')
@@ -5791,7 +5791,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [response] okay | created | noContent | notModified | bad | forbidden |
     /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
     ///  unprocessable.
-    Code? response,
+    String? response,
 
     /// [responseElement] Extensions for response
     @JsonKey(name: '_response')
@@ -5828,7 +5828,7 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [warningOnly] Whether or not the test execution will produce a warning
     ///  only on error for this assert.
-    Boolean? warningOnly,
+    bool? warningOnly,
 
     /// [warningOnlyElement] Extensions for warningOnly
     @JsonKey(name: '_warningOnly')

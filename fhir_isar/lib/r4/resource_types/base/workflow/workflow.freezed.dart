@@ -36,14 +36,14 @@ mixin _$Appointment {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -97,7 +97,7 @@ mixin _$Appointment {
   /// [status] The overall status of the Appointment. Each of the participants
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -250,10 +250,10 @@ abstract class $AppointmentCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -262,7 +262,7 @@ abstract class $AppointmentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -741,10 +741,10 @@ abstract class _$$_AppointmentCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -753,7 +753,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -1777,7 +1777,7 @@ abstract class _Appointment extends Appointment {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1786,7 +1786,7 @@ abstract class _Appointment extends Appointment {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1846,7 +1846,7 @@ abstract class _Appointment extends Appointment {
   /// [status] The overall status of the Appointment. Each of the participants
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2061,14 +2061,14 @@ mixin _$AppointmentParticipant {
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
   @JsonKey(name: 'required')
-  Code? get required_ => throw _privateConstructorUsedError;
+  String? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] Extensions for required
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
 
   /// [status] Participation status of the actor.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2097,7 +2097,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       Reference? actor,
       @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
@@ -2241,7 +2241,7 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
       Reference? actor,
       @JsonKey(name: 'required') Code? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
@@ -2577,7 +2577,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
   @JsonKey(name: 'required')
-  Code? get required_;
+  String? get required_;
   @override
 
   /// [requiredElement] Extensions for required
@@ -2586,7 +2586,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
 
   /// [status] Participation status of the actor.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2624,14 +2624,14 @@ mixin _$AppointmentResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2715,7 +2715,7 @@ mixin _$AppointmentResponse {
   /// the appointment, then these times should be interpreted as a requested
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
-  Code? get participantStatus => throw _privateConstructorUsedError;
+  String? get participantStatus => throw _privateConstructorUsedError;
 
   /// [participantStatusElement] Extensions for participantStatus
   @JsonKey(name: '_participantStatus')
@@ -2745,10 +2745,10 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2766,7 +2766,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      Code? participantStatus,
+      String? participantStatus,
       @JsonKey(name: '_participantStatus')
           Element? participantStatusElement,
       String? comment,
@@ -3048,10 +3048,10 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3069,7 +3069,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
           Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      Code? participantStatus,
+      String? participantStatus,
       @JsonKey(name: '_participantStatus')
           Element? participantStatusElement,
       String? comment,
@@ -3639,7 +3639,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3648,7 +3648,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3744,7 +3744,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// the appointment, then these times should be interpreted as a requested
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
-  Code? get participantStatus;
+  String? get participantStatus;
   @override
 
   /// [participantStatusElement] Extensions for participantStatus
@@ -3787,14 +3787,14 @@ mixin _$Schedule {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3844,7 +3844,7 @@ mixin _$Schedule {
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -3899,10 +3899,10 @@ abstract class $ScheduleCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3911,7 +3911,7 @@ abstract class $ScheduleCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? serviceCategory,
@@ -4152,10 +4152,10 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4164,7 +4164,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<CodeableConcept>? serviceCategory,
@@ -4726,7 +4726,7 @@ abstract class _Schedule extends Schedule {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -4735,7 +4735,7 @@ abstract class _Schedule extends Schedule {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4791,7 +4791,7 @@ abstract class _Schedule extends Schedule {
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -4864,14 +4864,14 @@ mixin _$Slot {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4944,7 +4944,7 @@ mixin _$Slot {
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4966,7 +4966,7 @@ mixin _$Slot {
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
-  Boolean? get overbooked => throw _privateConstructorUsedError;
+  bool? get overbooked => throw _privateConstructorUsedError;
 
   /// [overbookedElement] Extensions for overbooked
   @JsonKey(name: '_overbooked')
@@ -4995,10 +4995,10 @@ abstract class $SlotCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5012,7 +5012,7 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -5021,7 +5021,7 @@ abstract class $SlotCopyWith<$Res> {
       Instant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+      bool? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -5334,10 +5334,10 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5351,7 +5351,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -5360,7 +5360,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       Instant? end,
       @JsonKey(name: '_end')
           Element? endElement,
-      Boolean? overbooked,
+      bool? overbooked,
       @JsonKey(name: '_overbooked')
           Element? overbookedElement,
       String? comment,
@@ -6006,7 +6006,7 @@ abstract class _Slot extends Slot {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6015,7 +6015,7 @@ abstract class _Slot extends Slot {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6098,7 +6098,7 @@ abstract class _Slot extends Slot {
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6126,7 +6126,7 @@ abstract class _Slot extends Slot {
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
-  Boolean? get overbooked;
+  bool? get overbooked;
   @override
 
   /// [overbookedElement] Extensions for overbooked
@@ -6169,14 +6169,14 @@ mixin _$Task {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6227,12 +6227,12 @@ mixin _$Task {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this Task.
-  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
+  String? get instantiatesCanonical => throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
-  FhirUri? get instantiatesUri => throw _privateConstructorUsedError;
+  String? get instantiatesUri => throw _privateConstructorUsedError;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
@@ -6255,7 +6255,7 @@ mixin _$Task {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current status of the task.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -6272,7 +6272,7 @@ mixin _$Task {
   /// [intent] Indicates the "level" of actionability associated with the Task,
   /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
-  Code? get intent => throw _privateConstructorUsedError;
+  String? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -6280,7 +6280,7 @@ mixin _$Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -6391,10 +6391,10 @@ abstract class $TaskCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6403,22 +6403,22 @@ abstract class $TaskCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
+      String? instantiatesCanonical,
+      String? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? code,
@@ -7051,10 +7051,10 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7063,22 +7063,22 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
+      String? instantiatesCanonical,
+      String? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           Element? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? code,
@@ -8163,7 +8163,7 @@ abstract class _Task extends Task {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -8172,7 +8172,7 @@ abstract class _Task extends Task {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8229,13 +8229,13 @@ abstract class _Task extends Task {
   /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this Task.
-  Canonical? get instantiatesCanonical;
+  String? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
-  FhirUri? get instantiatesUri;
+  String? get instantiatesUri;
   @override
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
@@ -8263,7 +8263,7 @@ abstract class _Task extends Task {
   @override
 
   /// [status] The current status of the task.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8284,7 +8284,7 @@ abstract class _Task extends Task {
   /// [intent] Indicates the "level" of actionability associated with the Task,
   /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
-  Code? get intent;
+  String? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -8294,7 +8294,7 @@ abstract class _Task extends Task {
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -8920,35 +8920,35 @@ mixin _$TaskInput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  String? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -9032,7 +9032,7 @@ mixin _$TaskInput {
   Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
 
   /// [valueUri] The value of the input parameter as a basic type.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -9168,15 +9168,15 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -9200,7 +9200,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -10300,15 +10300,15 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -10332,7 +10332,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -11658,7 +11658,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueBase64Binary] The value of the input parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -11667,7 +11667,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueBoolean] The value of the input parameter as a basic type.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -11676,7 +11676,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueCanonical] The value of the input parameter as a basic type.
-  Canonical? get valueCanonical;
+  String? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -11685,7 +11685,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueCode] The value of the input parameter as a basic type.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -11694,7 +11694,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueDate] The value of the input parameter as a basic type.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -11802,7 +11802,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueUri] The value of the input parameter as a basic type.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -11997,35 +11997,35 @@ mixin _$TaskOutput {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  String? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -12109,7 +12109,7 @@ mixin _$TaskOutput {
   Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
 
   /// [valueUri] The value of the Output parameter as a basic type.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -12246,15 +12246,15 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -12278,7 +12278,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -13379,15 +13379,15 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -13411,7 +13411,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -14735,7 +14735,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueBase64Binary] The value of the Output parameter as a basic type.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -14744,7 +14744,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueBoolean] The value of the Output parameter as a basic type.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -14753,7 +14753,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueCanonical] The value of the Output parameter as a basic type.
-  Canonical? get valueCanonical;
+  String? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -14762,7 +14762,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueCode] The value of the Output parameter as a basic type.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -14771,7 +14771,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueDate] The value of the Output parameter as a basic type.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -14879,7 +14879,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueUri] The value of the Output parameter as a basic type.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -15057,14 +15057,14 @@ mixin _$VerificationResult {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -15127,7 +15127,7 @@ mixin _$VerificationResult {
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -15162,7 +15162,7 @@ mixin _$VerificationResult {
   Element? get lastPerformedElement => throw _privateConstructorUsedError;
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
-  Date? get nextScheduled => throw _privateConstructorUsedError;
+  String? get nextScheduled => throw _privateConstructorUsedError;
 
   /// [nextScheduledElement] Extensions for nextScheduled
   @JsonKey(name: '_nextScheduled')
@@ -15202,10 +15202,10 @@ abstract class $VerificationResultCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15218,7 +15218,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @JsonKey(name: '_targetLocation')
           List<Element?>? targetLocationElement,
       CodeableConcept? need,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? statusDate,
@@ -15230,7 +15230,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      String? nextScheduled,
       @JsonKey(name: '_nextScheduled')
           Element? nextScheduledElement,
       CodeableConcept? failureAction,
@@ -15592,10 +15592,10 @@ abstract class _$$_VerificationResultCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15608,7 +15608,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       @JsonKey(name: '_targetLocation')
           List<Element?>? targetLocationElement,
       CodeableConcept? need,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       FhirDateTime? statusDate,
@@ -15620,7 +15620,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      String? nextScheduled,
       @JsonKey(name: '_nextScheduled')
           Element? nextScheduledElement,
       CodeableConcept? failureAction,
@@ -16340,7 +16340,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -16349,7 +16349,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -16420,7 +16420,7 @@ abstract class _VerificationResult extends VerificationResult {
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -16463,7 +16463,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
-  Date? get nextScheduled;
+  String? get nextScheduled;
   @override
 
   /// [nextScheduledElement] Extensions for nextScheduled
@@ -17202,7 +17202,7 @@ mixin _$VerificationResultAttestation {
       throw _privateConstructorUsedError;
 
   /// [date] The date the information was attested to.
-  Date? get date => throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -17254,7 +17254,7 @@ abstract class $VerificationResultAttestationCopyWith<$Res> {
       Reference? who,
       Reference? onBehalfOf,
       CodeableConcept? communicationMethod,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? sourceIdentityCertificate,
@@ -17485,7 +17485,7 @@ abstract class _$$_VerificationResultAttestationCopyWith<$Res>
       Reference? who,
       Reference? onBehalfOf,
       CodeableConcept? communicationMethod,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? sourceIdentityCertificate,
@@ -17905,7 +17905,7 @@ abstract class _VerificationResultAttestation
   @override
 
   /// [date] The date the information was attested to.
-  Date? get date;
+  String? get date;
   @override
 
   /// [dateElement] Extensions for date

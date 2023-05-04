@@ -127,14 +127,14 @@ class PaymentNotice with Resource, _$PaymentNotice {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -182,7 +182,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -210,7 +210,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     required Reference payment,
 
     /// [paymentDate] The date when the above payment action occurred.
-    Date? paymentDate,
+    String? paymentDate,
 
     /// [paymentDateElement] Extensions for paymentDate
     @JsonKey(name: '_paymentDate')
@@ -388,14 +388,14 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -443,7 +443,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -471,7 +471,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Reference? requestor,
 
     /// [outcome] The outcome of a request for a reconciliation.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -487,7 +487,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 
     /// [paymentDate] The date of payment as indicated on the financial
     ///  instrument.
-    Date? paymentDate,
+    String? paymentDate,
 
     /// [paymentDateElement] Extensions for paymentDate
     @JsonKey(name: '_paymentDate')
@@ -654,7 +654,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 
     /// [date] The date from the response resource containing a commitment to
     ///  pay.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -771,7 +771,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     List<FhirExtension>? modifierExtension,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

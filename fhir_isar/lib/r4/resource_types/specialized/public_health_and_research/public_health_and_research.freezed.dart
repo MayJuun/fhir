@@ -36,14 +36,14 @@ mixin _$ResearchStudy {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -108,7 +108,7 @@ mixin _$ResearchStudy {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current state of the study.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -218,10 +218,10 @@ abstract class $ResearchStudyCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -235,7 +235,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -653,10 +653,10 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -670,7 +670,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
           Element? titleElement,
       List<Reference>? protocol,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -1620,7 +1620,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1629,7 +1629,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1704,7 +1704,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
 
   /// [status] The current state of the study.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2762,14 +2762,14 @@ mixin _$ResearchSubject {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2818,7 +2818,7 @@ mixin _$ResearchSubject {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the subject.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2872,10 +2872,10 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2884,7 +2884,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -3177,10 +3177,10 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3189,7 +3189,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -3730,7 +3730,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3739,7 +3739,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3794,7 +3794,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [status] The current state of the subject.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status

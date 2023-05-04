@@ -36,14 +36,14 @@ mixin _$CodeSystem {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -96,7 +96,7 @@ mixin _$CodeSystem {
   /// canonical reference. It SHALL remain the same when the code system is
   /// stored on different servers. This is used in
   ///  [Coding](datatypes.html#Coding).system.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -138,7 +138,7 @@ mixin _$CodeSystem {
 
   /// [status] The date (and optionally time) when the code system resource was
   ///  created or revised.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -147,7 +147,7 @@ mixin _$CodeSystem {
   /// [experimental] A Boolean value to indicate that this code system is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -213,7 +213,7 @@ mixin _$CodeSystem {
 
   /// [caseSensitive] If code comparison is case sensitive when codes within
   ///  this system are compared to each other.
-  Boolean? get caseSensitive => throw _privateConstructorUsedError;
+  bool? get caseSensitive => throw _privateConstructorUsedError;
 
   /// [caseSensitiveElement] Extensions for caseSensitive
   @JsonKey(name: '_caseSensitive')
@@ -221,11 +221,11 @@ mixin _$CodeSystem {
 
   /// [valueSet] Canonical reference to the value set that contains the entire
   ///  code system.
-  Canonical? get valueSet => throw _privateConstructorUsedError;
+  String? get valueSet => throw _privateConstructorUsedError;
 
   /// [hierarchyMeaning] The meaning of the hierarchy of concepts as
   ///  represented in this resource.
-  Code? get hierarchyMeaning => throw _privateConstructorUsedError;
+  String? get hierarchyMeaning => throw _privateConstructorUsedError;
 
   /// [hierarchyMeaningElement] Extensions for hierarchyMeaning
   @JsonKey(name: '_hierarchyMeaning')
@@ -233,7 +233,7 @@ mixin _$CodeSystem {
 
   /// [compositional] The code system defines a compositional
   ///  (post-coordination) grammar.
-  Boolean? get compositional => throw _privateConstructorUsedError;
+  bool? get compositional => throw _privateConstructorUsedError;
 
   /// [compositionalElement] Extensions for compositional
   @JsonKey(name: '_compositional')
@@ -242,7 +242,7 @@ mixin _$CodeSystem {
   /// [versionNeeded] This flag is used to signify that the code system does
   /// not commit to concept permanence across versions. If true, a version must
   ///  be specified when referencing this code system.
-  Boolean? get versionNeeded => throw _privateConstructorUsedError;
+  bool? get versionNeeded => throw _privateConstructorUsedError;
 
   /// [versionNeededElement] Extensions for versionNeeded
   @JsonKey(name: '_versionNeeded')
@@ -250,7 +250,7 @@ mixin _$CodeSystem {
 
   /// [content] The extent of the content of the code system (the concepts and
   ///  codes it defines) are represented in this resource instance.
-  Code? get content => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
 
   /// [contentElement] Extensions for content
   @JsonKey(name: '_content')
@@ -258,7 +258,7 @@ mixin _$CodeSystem {
 
   /// [supplements] The canonical URL of the code system that this code system
   ///  supplement is adding designations and properties to.
-  Canonical? get supplements => throw _privateConstructorUsedError;
+  String? get supplements => throw _privateConstructorUsedError;
 
   /// [count] The total number of concepts defined by the code system. Where
   /// the code system has a compositional grammar, the basis of this count is
@@ -299,10 +299,10 @@ abstract class $CodeSystemCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -310,7 +310,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -323,10 +323,10 @@ abstract class $CodeSystemCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -347,23 +347,23 @@ abstract class $CodeSystemCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? caseSensitive,
+      bool? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
-      Canonical? valueSet,
-      Code? hierarchyMeaning,
+      String? valueSet,
+      String? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      bool? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      bool? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      Code? content,
+      String? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Canonical? supplements,
+      String? supplements,
       UnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
@@ -948,10 +948,10 @@ abstract class _$$_CodeSystemCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -959,7 +959,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -972,10 +972,10 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -996,23 +996,23 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Boolean? caseSensitive,
+      bool? caseSensitive,
       @JsonKey(name: '_caseSensitive')
           Element? caseSensitiveElement,
-      Canonical? valueSet,
-      Code? hierarchyMeaning,
+      String? valueSet,
+      String? hierarchyMeaning,
       @JsonKey(name: '_hierarchyMeaning')
           Element? hierarchyMeaningElement,
-      Boolean? compositional,
+      bool? compositional,
       @JsonKey(name: '_compositional')
           Element? compositionalElement,
-      Boolean? versionNeeded,
+      bool? versionNeeded,
       @JsonKey(name: '_versionNeeded')
           Element? versionNeededElement,
-      Code? content,
+      String? content,
       @JsonKey(name: '_content')
           Element? contentElement,
-      Canonical? supplements,
+      String? supplements,
       UnsignedInt? count,
       @JsonKey(name: '_count')
           Element? countElement,
@@ -2164,7 +2164,7 @@ abstract class _CodeSystem extends CodeSystem {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -2173,7 +2173,7 @@ abstract class _CodeSystem extends CodeSystem {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2231,7 +2231,7 @@ abstract class _CodeSystem extends CodeSystem {
   /// canonical reference. It SHALL remain the same when the code system is
   /// stored on different servers. This is used in
   ///  [Coding](datatypes.html#Coding).system.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -2282,7 +2282,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [status] The date (and optionally time) when the code system resource was
   ///  created or revised.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2293,7 +2293,7 @@ abstract class _CodeSystem extends CodeSystem {
   /// [experimental] A Boolean value to indicate that this code system is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -2374,7 +2374,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [caseSensitive] If code comparison is case sensitive when codes within
   ///  this system are compared to each other.
-  Boolean? get caseSensitive;
+  bool? get caseSensitive;
   @override
 
   /// [caseSensitiveElement] Extensions for caseSensitive
@@ -2384,12 +2384,12 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [valueSet] Canonical reference to the value set that contains the entire
   ///  code system.
-  Canonical? get valueSet;
+  String? get valueSet;
   @override
 
   /// [hierarchyMeaning] The meaning of the hierarchy of concepts as
   ///  represented in this resource.
-  Code? get hierarchyMeaning;
+  String? get hierarchyMeaning;
   @override
 
   /// [hierarchyMeaningElement] Extensions for hierarchyMeaning
@@ -2399,7 +2399,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [compositional] The code system defines a compositional
   ///  (post-coordination) grammar.
-  Boolean? get compositional;
+  bool? get compositional;
   @override
 
   /// [compositionalElement] Extensions for compositional
@@ -2410,7 +2410,7 @@ abstract class _CodeSystem extends CodeSystem {
   /// [versionNeeded] This flag is used to signify that the code system does
   /// not commit to concept permanence across versions. If true, a version must
   ///  be specified when referencing this code system.
-  Boolean? get versionNeeded;
+  bool? get versionNeeded;
   @override
 
   /// [versionNeededElement] Extensions for versionNeeded
@@ -2420,7 +2420,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [content] The extent of the content of the code system (the concepts and
   ///  codes it defines) are represented in this resource instance.
-  Code? get content;
+  String? get content;
   @override
 
   /// [contentElement] Extensions for content
@@ -2430,7 +2430,7 @@ abstract class _CodeSystem extends CodeSystem {
 
   /// [supplements] The canonical URL of the code system that this code system
   ///  supplement is adding designations and properties to.
-  Canonical? get supplements;
+  String? get supplements;
   @override
 
   /// [count] The total number of concepts defined by the code system. Where
@@ -2501,7 +2501,7 @@ mixin _$CodeSystemFilter {
 
   /// [code] The code that identifies this filter when it is used as a filter
   ///  in [[[ValueSet]]].compose.include.filter.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -2545,7 +2545,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -2681,7 +2681,7 @@ abstract class _$$_CodeSystemFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -3032,7 +3032,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
 
   /// [code] The code that identifies this filter when it is used as a filter
   ///  in [[[ValueSet]]].compose.include.filter.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -3110,7 +3110,7 @@ mixin _$CodeSystemProperty {
   /// [code] A code that is used to identify the property. The code is used
   /// internally (in CodeSystem.concept.property.code) and also externally, such
   ///  as in property filters.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -3119,7 +3119,7 @@ mixin _$CodeSystemProperty {
   /// [uri] Reference to the formal meaning of the property. One possible
   /// source of meaning is the [Concept
   ///  Properties](codesystem-concept-properties.html) code system.
-  FhirUri? get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// [uriElement] Extensions for uri
   @JsonKey(name: '_uri')
@@ -3136,7 +3136,7 @@ mixin _$CodeSystemProperty {
   /// [type] The type of the property value. Properties of type "code" contain
   /// a code defined by the code system (e.g. a reference to another defined
   ///  concept).
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3158,13 +3158,13 @@ abstract class $CodeSystemPropertyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -3307,13 +3307,13 @@ abstract class _$$_CodeSystemPropertyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -3646,7 +3646,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   /// [code] A code that is used to identify the property. The code is used
   /// internally (in CodeSystem.concept.property.code) and also externally, such
   ///  as in property filters.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -3657,7 +3657,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   /// [uri] Reference to the formal meaning of the property. One possible
   /// source of meaning is the [Concept
   ///  Properties](codesystem-concept-properties.html) code system.
-  FhirUri? get uri;
+  String? get uri;
   @override
 
   /// [uriElement] Extensions for uri
@@ -3678,7 +3678,7 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
   /// [type] The type of the property value. Properties of type "code" contain
   /// a code defined by the code system (e.g. a reference to another defined
   ///  concept).
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -3727,7 +3727,7 @@ mixin _$CodeSystemConcept {
 
   /// [code] A code - a text symbol - that uniquely identifies the concept
   ///  within the code system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -3781,7 +3781,7 @@ abstract class $CodeSystemConceptCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -3923,7 +3923,7 @@ abstract class _$$_CodeSystemConceptCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -4307,7 +4307,7 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
 
   /// [code] A code - a text symbol - that uniquely identifies the concept
   ///  within the code system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4394,7 +4394,7 @@ mixin _$CodeSystemDesignation {
       throw _privateConstructorUsedError;
 
   /// [language] The language this designation is defined for.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4426,7 +4426,7 @@ abstract class $CodeSystemDesignationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       String? value,
@@ -4545,7 +4545,7 @@ abstract class _$$_CodeSystemDesignationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       String? value,
@@ -4827,7 +4827,7 @@ abstract class _CodeSystemDesignation extends CodeSystemDesignation {
   @override
 
   /// [language] The language this designation is defined for.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4888,14 +4888,14 @@ mixin _$CodeSystemProperty1 {
       throw _privateConstructorUsedError;
 
   /// [code] A code that is a reference to CodeSystem.property.code.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of this property.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -4919,7 +4919,7 @@ mixin _$CodeSystemProperty1 {
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -4955,16 +4955,16 @@ abstract class $CodeSystemProperty1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -5198,16 +5198,16 @@ abstract class _$$_CodeSystemProperty1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Coding? valueCoding,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -5646,7 +5646,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [code] A code that is a reference to CodeSystem.property.code.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -5655,7 +5655,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueCode] The value of this property.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -5686,7 +5686,7 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
   @override
 
   /// [valueBoolean] The value of this property.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -5738,14 +5738,14 @@ mixin _$ConceptMap {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5797,7 +5797,7 @@ mixin _$ConceptMap {
   /// concept map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the concept map is
   ///  stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -5839,7 +5839,7 @@ mixin _$ConceptMap {
 
   /// [status] The status of this concept map. Enables tracking the life-cycle
   ///  of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5848,7 +5848,7 @@ mixin _$ConceptMap {
   /// [experimental] A Boolean value to indicate that this concept map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -5914,7 +5914,7 @@ mixin _$ConceptMap {
 
   /// [sourceUri] Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
-  FhirUri? get sourceUri => throw _privateConstructorUsedError;
+  String? get sourceUri => throw _privateConstructorUsedError;
 
   /// [sourceUriElement] Extensions for sourceUri
   @JsonKey(name: '_sourceUri')
@@ -5922,7 +5922,7 @@ mixin _$ConceptMap {
 
   /// [sourceCanonical] Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
-  Canonical? get sourceCanonical => throw _privateConstructorUsedError;
+  String? get sourceCanonical => throw _privateConstructorUsedError;
 
   /// [sourceCanonicalElement] Extensions for sourceCanonical
   @JsonKey(name: '_sourceCanonical')
@@ -5932,7 +5932,7 @@ mixin _$ConceptMap {
   /// that the mapping is made between concepts, not between value sets, but the
   /// value set provides important context about how the concept mapping choices
   ///  are made.
-  FhirUri? get targetUri => throw _privateConstructorUsedError;
+  String? get targetUri => throw _privateConstructorUsedError;
 
   /// [targetUriElement] Extensions for targetUri
   @JsonKey(name: '_targetUri')
@@ -5942,7 +5942,7 @@ mixin _$ConceptMap {
   /// Note that the mapping is made between concepts, not between value sets,
   /// but the value set provides important context about how the concept mapping
   ///  choices are made.
-  Canonical? get targetCanonical => throw _privateConstructorUsedError;
+  String? get targetCanonical => throw _privateConstructorUsedError;
 
   /// [targetCanonicalElement] Extensions for targetCanonical
   @JsonKey(name: '_targetCanonical')
@@ -5969,10 +5969,10 @@ abstract class $ConceptMapCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5980,7 +5980,7 @@ abstract class $ConceptMapCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -5993,10 +5993,10 @@ abstract class $ConceptMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -6017,16 +6017,16 @@ abstract class $ConceptMapCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      FhirUri? sourceUri,
+      String? sourceUri,
       @JsonKey(name: '_sourceUri')
           Element? sourceUriElement,
-      Canonical? sourceCanonical,
+      String? sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element? sourceCanonicalElement,
-      FhirUri? targetUri,
+      String? targetUri,
       @JsonKey(name: '_targetUri')
           Element? targetUriElement,
-      Canonical? targetCanonical,
+      String? targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element? targetCanonicalElement,
       List<ConceptMapGroup>? group});
@@ -6555,10 +6555,10 @@ abstract class _$$_ConceptMapCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6566,7 +6566,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -6579,10 +6579,10 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -6603,16 +6603,16 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      FhirUri? sourceUri,
+      String? sourceUri,
       @JsonKey(name: '_sourceUri')
           Element? sourceUriElement,
-      Canonical? sourceCanonical,
+      String? sourceCanonical,
       @JsonKey(name: '_sourceCanonical')
           Element? sourceCanonicalElement,
-      FhirUri? targetUri,
+      String? targetUri,
       @JsonKey(name: '_targetUri')
           Element? targetUriElement,
-      Canonical? targetCanonical,
+      String? targetCanonical,
       @JsonKey(name: '_targetCanonical')
           Element? targetCanonicalElement,
       List<ConceptMapGroup>? group});
@@ -7603,7 +7603,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -7612,7 +7612,7 @@ abstract class _ConceptMap extends ConceptMap {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7669,7 +7669,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// concept map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the concept map is
   ///  stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -7720,7 +7720,7 @@ abstract class _ConceptMap extends ConceptMap {
 
   /// [status] The status of this concept map. Enables tracking the life-cycle
   ///  of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7731,7 +7731,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// [experimental] A Boolean value to indicate that this concept map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -7812,7 +7812,7 @@ abstract class _ConceptMap extends ConceptMap {
 
   /// [sourceUri] Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
-  FhirUri? get sourceUri;
+  String? get sourceUri;
   @override
 
   /// [sourceUriElement] Extensions for sourceUri
@@ -7822,7 +7822,7 @@ abstract class _ConceptMap extends ConceptMap {
 
   /// [sourceCanonical] Identifier for the source value set that contains the
   ///  concepts that are being mapped and provides context for the mappings.
-  Canonical? get sourceCanonical;
+  String? get sourceCanonical;
   @override
 
   /// [sourceCanonicalElement] Extensions for sourceCanonical
@@ -7834,7 +7834,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// that the mapping is made between concepts, not between value sets, but the
   /// value set provides important context about how the concept mapping choices
   ///  are made.
-  FhirUri? get targetUri;
+  String? get targetUri;
   @override
 
   /// [targetUriElement] Extensions for targetUri
@@ -7846,7 +7846,7 @@ abstract class _ConceptMap extends ConceptMap {
   /// Note that the mapping is made between concepts, not between value sets,
   /// but the value set provides important context about how the concept mapping
   ///  choices are made.
-  Canonical? get targetCanonical;
+  String? get targetCanonical;
   @override
 
   /// [targetCanonicalElement] Extensions for targetCanonical
@@ -7900,7 +7900,7 @@ mixin _$ConceptMapGroup {
 
   /// [source] An absolute URI that identifies the source system where the
   ///  concepts to be mapped are defined.
-  FhirUri? get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
 
   /// [sourceElement] Extensions for source
   @JsonKey(name: '_source')
@@ -7916,7 +7916,7 @@ mixin _$ConceptMapGroup {
 
   /// [target] An absolute URI that identifies the target system that the
   ///  concepts will be mapped to.
-  FhirUri? get target => throw _privateConstructorUsedError;
+  String? get target => throw _privateConstructorUsedError;
 
   /// [targetElement] Extensions for target
   @JsonKey(name: '_target')
@@ -7956,11 +7956,11 @@ abstract class $ConceptMapGroupCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source') Element? sourceElement,
       String? sourceVersion,
       @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
+      String? target,
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
@@ -8130,11 +8130,11 @@ abstract class _$$_ConceptMapGroupCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source') Element? sourceElement,
       String? sourceVersion,
       @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-      FhirUri? target,
+      String? target,
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
@@ -8508,7 +8508,7 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
 
   /// [source] An absolute URI that identifies the source system where the
   ///  concepts to be mapped are defined.
-  FhirUri? get source;
+  String? get source;
   @override
 
   /// [sourceElement] Extensions for source
@@ -8528,7 +8528,7 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
 
   /// [target] An absolute URI that identifies the target system that the
   ///  concepts will be mapped to.
-  FhirUri? get target;
+  String? get target;
   @override
 
   /// [targetElement] Extensions for target
@@ -8598,7 +8598,7 @@ mixin _$ConceptMapElement {
       throw _privateConstructorUsedError;
 
   /// [code] Identity (code or path) or the element/item being mapped.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -8631,7 +8631,7 @@ abstract class $ConceptMapElementCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -8736,7 +8736,7 @@ abstract class _$$_ConceptMapElementCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -9025,7 +9025,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
   @override
 
   /// [code] Identity (code or path) or the element/item being mapped.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -9088,7 +9088,7 @@ mixin _$ConceptMapTarget {
 
   /// [code] Identity (code or path) or the element/item that the map refers
   ///  to.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -9105,7 +9105,7 @@ mixin _$ConceptMapTarget {
   /// [equivalence] The equivalence between the source and target concepts
   /// (counting for the dependencies and products). The equivalence is read from
   ///  target to source (e.g. the target is 'wider' than the source).
-  Code? get equivalence => throw _privateConstructorUsedError;
+  String? get equivalence => throw _privateConstructorUsedError;
 
   /// [equivalenceElement] Extensions for equivalence
   @JsonKey(name: '_equivalence')
@@ -9148,11 +9148,11 @@ abstract class $ConceptMapTargetCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Code? equivalence,
+      String? equivalence,
       @JsonKey(name: '_equivalence') Element? equivalenceElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -9309,11 +9309,11 @@ abstract class _$$_ConceptMapTargetCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Code? equivalence,
+      String? equivalence,
       @JsonKey(name: '_equivalence') Element? equivalenceElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -9704,7 +9704,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
 
   /// [code] Identity (code or path) or the element/item that the map refers
   ///  to.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -9725,7 +9725,7 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
   /// [equivalence] The equivalence between the source and target concepts
   /// (counting for the dependencies and products). The equivalence is read from
   ///  target to source (e.g. the target is 'wider' than the source).
-  Code? get equivalence;
+  String? get equivalence;
   @override
 
   /// [equivalenceElement] Extensions for equivalence
@@ -9800,7 +9800,7 @@ mixin _$ConceptMapDependsOn {
   /// corresponds to a code system property. The idea is that the information
   /// model carries an element somewhere that is labeled to correspond with a
   ///  code system property.
-  FhirUri? get property => throw _privateConstructorUsedError;
+  String? get property => throw _privateConstructorUsedError;
 
   /// [propertyElement] Extensions for property
   @JsonKey(name: '_property')
@@ -9809,7 +9809,7 @@ mixin _$ConceptMapDependsOn {
   /// [system] An absolute URI that identifies the code system of the
   /// dependency code (if the source/dependency is a value set that crosses code
   ///  systems).
-  Canonical? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [value] Identity (code or path) or the element/item/ValueSet/text that
   ///  the map depends on / refers to.
@@ -9843,9 +9843,9 @@ abstract class $ConceptMapDependsOnCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? property,
+      String? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Canonical? system,
+      String? system,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
       String? display,
@@ -9973,9 +9973,9 @@ abstract class _$$_ConceptMapDependsOnCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? property,
+      String? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Canonical? system,
+      String? system,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
       String? display,
@@ -10295,7 +10295,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   /// corresponds to a code system property. The idea is that the information
   /// model carries an element somewhere that is labeled to correspond with a
   ///  code system property.
-  FhirUri? get property;
+  String? get property;
   @override
 
   /// [propertyElement] Extensions for property
@@ -10306,7 +10306,7 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
   /// [system] An absolute URI that identifies the code system of the
   /// dependency code (if the source/dependency is a value set that crosses code
   ///  systems).
-  Canonical? get system;
+  String? get system;
   @override
 
   /// [value] Identity (code or path) or the element/item/ValueSet/text that
@@ -10374,7 +10374,7 @@ mixin _$ConceptMapUnmapped {
   /// between versions, and only a few codes have changed), use a fixed code (a
   /// default code), or alternatively, a reference to a different concept map
   ///  can be provided (by canonical URL).
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -10382,7 +10382,7 @@ mixin _$ConceptMapUnmapped {
 
   /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped
   ///  codes are mapped to a single fixed code.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -10399,7 +10399,7 @@ mixin _$ConceptMapUnmapped {
   /// [url] The canonical reference to an additional ConceptMap resource
   /// instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
-  Canonical? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -10417,13 +10417,13 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? url});
+      String? url});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -10547,13 +10547,13 @@ abstract class _$$_ConceptMapUnmappedCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Canonical? url});
+      String? url});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -10871,7 +10871,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   /// between versions, and only a few codes have changed), use a fixed code (a
   /// default code), or alternatively, a reference to a different concept map
   ///  can be provided (by canonical URL).
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -10881,7 +10881,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
 
   /// [code] The fixed code to use when the mode = 'fixed'  - all unmapped
   ///  codes are mapped to a single fixed code.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -10902,7 +10902,7 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   /// [url] The canonical reference to an additional ConceptMap resource
   /// instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
-  Canonical? get url;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_ConceptMapUnmappedCopyWith<_$_ConceptMapUnmapped> get copyWith =>
@@ -10931,14 +10931,14 @@ mixin _$NamingSystem {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10994,7 +10994,7 @@ mixin _$NamingSystem {
 
   /// [status] The status of this naming system. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -11002,7 +11002,7 @@ mixin _$NamingSystem {
 
   /// [kind] Indicates the purpose for the naming system - what kinds of things
   ///  does it make unique?
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -11092,10 +11092,10 @@ abstract class $NamingSystemCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11106,10 +11106,10 @@ abstract class $NamingSystemCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       FhirDateTime? date,
@@ -11496,10 +11496,10 @@ abstract class _$$_NamingSystemCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11510,10 +11510,10 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       FhirDateTime? date,
@@ -12270,7 +12270,7 @@ abstract class _NamingSystem extends NamingSystem {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -12279,7 +12279,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12342,7 +12342,7 @@ abstract class _NamingSystem extends NamingSystem {
 
   /// [status] The status of this naming system. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12352,7 +12352,7 @@ abstract class _NamingSystem extends NamingSystem {
 
   /// [kind] Indicates the purpose for the naming system - what kinds of things
   ///  does it make unique?
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -12483,7 +12483,7 @@ mixin _$NamingSystemUniqueId {
 
   /// [type] Identifies the unique identifier scheme used for this particular
   ///  identifier.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -12499,7 +12499,7 @@ mixin _$NamingSystemUniqueId {
 
   /// [preferred] Indicates whether this identifier is the "preferred"
   ///  identifier of this type.
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  bool? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] Extensions for preferred
   @JsonKey(name: '_preferred')
@@ -12533,11 +12533,11 @@ abstract class $NamingSystemUniqueIdCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -12702,11 +12702,11 @@ abstract class _$$_NamingSystemUniqueIdCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement,
@@ -13053,7 +13053,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
 
   /// [type] Identifies the unique identifier scheme used for this particular
   ///  identifier.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -13073,7 +13073,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
 
   /// [preferred] Indicates whether this identifier is the "preferred"
   ///  identifier of this type.
-  Boolean? get preferred;
+  bool? get preferred;
   @override
 
   /// [preferredElement] Extensions for preferred
@@ -13123,14 +13123,14 @@ mixin _$TerminologyCapabilities {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13182,7 +13182,7 @@ mixin _$TerminologyCapabilities {
   /// instance of this terminology capabilities is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the terminology capabilities is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -13220,7 +13220,7 @@ mixin _$TerminologyCapabilities {
 
   /// [status] The status of this terminology capabilities. Enables tracking
   ///  the life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -13230,7 +13230,7 @@ mixin _$TerminologyCapabilities {
   /// capabilities is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -13301,7 +13301,7 @@ mixin _$TerminologyCapabilities {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -13320,7 +13320,7 @@ mixin _$TerminologyCapabilities {
       throw _privateConstructorUsedError;
 
   /// [lockedDate] Whether the server supports lockedDate.
-  Boolean? get lockedDate => throw _privateConstructorUsedError;
+  bool? get lockedDate => throw _privateConstructorUsedError;
 
   /// [lockedDateElement] Extensions for lockedDate
   @JsonKey(name: '_lockedDate')
@@ -13339,7 +13339,7 @@ mixin _$TerminologyCapabilities {
 
   /// [codeSearch] The degree to which the server supports the code search
   ///  parameter on ValueSet, if it is supported.
-  Code? get codeSearch => throw _privateConstructorUsedError;
+  String? get codeSearch => throw _privateConstructorUsedError;
 
   /// [codeSearchElement] Extensions for codeSearch
   @JsonKey(name: '_codeSearch')
@@ -13370,10 +13370,10 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13381,7 +13381,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -13393,10 +13393,10 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -13417,17 +13417,17 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       TerminologyCapabilitiesSoftware? software,
       TerminologyCapabilitiesImplementation? implementation,
-      Boolean? lockedDate,
+      bool? lockedDate,
       @JsonKey(name: '_lockedDate')
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      Code? codeSearch,
+      String? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -14032,10 +14032,10 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14043,7 +14043,7 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -14055,10 +14055,10 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -14079,17 +14079,17 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       TerminologyCapabilitiesSoftware? software,
       TerminologyCapabilitiesImplementation? implementation,
-      Boolean? lockedDate,
+      bool? lockedDate,
       @JsonKey(name: '_lockedDate')
           Element? lockedDateElement,
       List<TerminologyCapabilitiesCodeSystem>? codeSystem,
       TerminologyCapabilitiesExpansion? expansion,
-      Code? codeSearch,
+      String? codeSearch,
       @JsonKey(name: '_codeSearch')
           Element? codeSearchElement,
       TerminologyCapabilitiesValidateCode? validateCode,
@@ -15134,7 +15134,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -15143,7 +15143,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -15200,7 +15200,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   /// instance of this terminology capabilities is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the terminology capabilities is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -15246,7 +15246,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
 
   /// [status] The status of this terminology capabilities. Enables tracking
   ///  the life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -15258,7 +15258,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   /// capabilities is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -15344,7 +15344,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -15365,7 +15365,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
 
   /// [lockedDate] Whether the server supports lockedDate.
-  Boolean? get lockedDate;
+  bool? get lockedDate;
   @override
 
   /// [lockedDateElement] Extensions for lockedDate
@@ -15386,7 +15386,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
 
   /// [codeSearch] The degree to which the server supports the code search
   ///  parameter on ValueSet, if it is supported.
-  Code? get codeSearch;
+  String? get codeSearch;
   @override
 
   /// [codeSearchElement] Extensions for codeSearch
@@ -16376,7 +16376,7 @@ mixin _$TerminologyCapabilitiesCodeSystem {
       throw _privateConstructorUsedError;
 
   /// [uri] URI for the Code System.
-  Canonical? get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// [version] For the code system, a list of versions that are supported by
   ///  the server.
@@ -16385,7 +16385,7 @@ mixin _$TerminologyCapabilitiesCodeSystem {
 
   /// [subsumption] True if subsumption is supported for this version of the
   ///  code system.
-  Boolean? get subsumption => throw _privateConstructorUsedError;
+  bool? get subsumption => throw _privateConstructorUsedError;
 
   /// [subsumptionElement] Extensions for subsumption
   @JsonKey(name: '_subsumption')
@@ -16409,9 +16409,9 @@ abstract class $TerminologyCapabilitiesCodeSystemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? uri,
+      String? uri,
       List<TerminologyCapabilitiesVersion>? version,
-      Boolean? subsumption,
+      bool? subsumption,
       @JsonKey(name: '_subsumption') Element? subsumptionElement});
 
   $ElementCopyWith<$Res>? get subsumptionElement;
@@ -16497,9 +16497,9 @@ abstract class _$$_TerminologyCapabilitiesCodeSystemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical? uri,
+      String? uri,
       List<TerminologyCapabilitiesVersion>? version,
-      Boolean? subsumption,
+      bool? subsumption,
       @JsonKey(name: '_subsumption') Element? subsumptionElement});
 
   @override
@@ -16779,7 +16779,7 @@ abstract class _TerminologyCapabilitiesCodeSystem
   @override
 
   /// [uri] URI for the Code System.
-  Canonical? get uri;
+  String? get uri;
   @override
 
   /// [version] For the code system, a list of versions that are supported by
@@ -16789,7 +16789,7 @@ abstract class _TerminologyCapabilitiesCodeSystem
 
   /// [subsumption] True if subsumption is supported for this version of the
   ///  code system.
-  Boolean? get subsumption;
+  bool? get subsumption;
   @override
 
   /// [subsumptionElement] Extensions for subsumption
@@ -16847,7 +16847,7 @@ mixin _$TerminologyCapabilitiesVersion {
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [isDefault] If this is the default version for this code system.
-  Boolean? get isDefault => throw _privateConstructorUsedError;
+  bool? get isDefault => throw _privateConstructorUsedError;
 
   /// [isDefaultElement] Extensions for isDefault
   @JsonKey(name: '_isDefault')
@@ -16855,7 +16855,7 @@ mixin _$TerminologyCapabilitiesVersion {
 
   /// [compositional] If the compositional grammar defined by the code system
   ///  is supported.
-  Boolean? get compositional => throw _privateConstructorUsedError;
+  bool? get compositional => throw _privateConstructorUsedError;
 
   /// [compositionalElement] Extensions for compositional
   @JsonKey(name: '_compositional')
@@ -16899,9 +16899,9 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Boolean? isDefault,
+      bool? isDefault,
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
-      Boolean? compositional,
+      bool? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
       @JsonKey(name: '_language') List<Element?>? languageElement,
@@ -17055,9 +17055,9 @@ abstract class _$$_TerminologyCapabilitiesVersionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Boolean? isDefault,
+      bool? isDefault,
       @JsonKey(name: '_isDefault') Element? isDefaultElement,
-      Boolean? compositional,
+      bool? compositional,
       @JsonKey(name: '_compositional') Element? compositionalElement,
       List<Code>? language,
       @JsonKey(name: '_language') List<Element?>? languageElement,
@@ -17493,7 +17493,7 @@ abstract class _TerminologyCapabilitiesVersion
   @override
 
   /// [isDefault] If this is the default version for this code system.
-  Boolean? get isDefault;
+  bool? get isDefault;
   @override
 
   /// [isDefaultElement] Extensions for isDefault
@@ -17503,7 +17503,7 @@ abstract class _TerminologyCapabilitiesVersion
 
   /// [compositional] If the compositional grammar defined by the code system
   ///  is supported.
-  Boolean? get compositional;
+  bool? get compositional;
   @override
 
   /// [compositionalElement] Extensions for compositional
@@ -17574,7 +17574,7 @@ mixin _$TerminologyCapabilitiesFilter {
       throw _privateConstructorUsedError;
 
   /// [code] Code of the property supported.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -17605,7 +17605,7 @@ abstract class $TerminologyCapabilitiesFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
       @JsonKey(name: '_op') List<Element?>? opElement});
@@ -17693,7 +17693,7 @@ abstract class _$$_TerminologyCapabilitiesFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<Code>? op,
       @JsonKey(name: '_op') List<Element?>? opElement});
@@ -17980,7 +17980,7 @@ abstract class _TerminologyCapabilitiesFilter
   @override
 
   /// [code] Code of the property supported.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -18038,21 +18038,21 @@ mixin _$TerminologyCapabilitiesExpansion {
       throw _privateConstructorUsedError;
 
   /// [hierarchical] Whether the server can return nested value sets.
-  Boolean? get hierarchical => throw _privateConstructorUsedError;
+  bool? get hierarchical => throw _privateConstructorUsedError;
 
   /// [hierarchicalElement] Extensions for hierarchical
   @JsonKey(name: '_hierarchical')
   Element? get hierarchicalElement => throw _privateConstructorUsedError;
 
   /// [paging] Whether the server supports paging on expansion.
-  Boolean? get paging => throw _privateConstructorUsedError;
+  bool? get paging => throw _privateConstructorUsedError;
 
   /// [pagingElement] Extensions for paging
   @JsonKey(name: '_paging')
   Element? get pagingElement => throw _privateConstructorUsedError;
 
   /// [incomplete] Allow request for incomplete expansions?
-  Boolean? get incomplete => throw _privateConstructorUsedError;
+  bool? get incomplete => throw _privateConstructorUsedError;
 
   /// [incompleteElement] Extensions for incomplete
   @JsonKey(name: '_incomplete')
@@ -18087,11 +18087,11 @@ abstract class $TerminologyCapabilitiesExpansionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? hierarchical,
+      bool? hierarchical,
       @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
-      Boolean? paging,
+      bool? paging,
       @JsonKey(name: '_paging') Element? pagingElement,
-      Boolean? incomplete,
+      bool? incomplete,
       @JsonKey(name: '_incomplete') Element? incompleteElement,
       List<TerminologyCapabilitiesParameter>? parameter,
       Markdown? textFilter,
@@ -18244,11 +18244,11 @@ abstract class _$$_TerminologyCapabilitiesExpansionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? hierarchical,
+      bool? hierarchical,
       @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
-      Boolean? paging,
+      bool? paging,
       @JsonKey(name: '_paging') Element? pagingElement,
-      Boolean? incomplete,
+      bool? incomplete,
       @JsonKey(name: '_incomplete') Element? incompleteElement,
       List<TerminologyCapabilitiesParameter>? parameter,
       Markdown? textFilter,
@@ -18607,7 +18607,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [hierarchical] Whether the server can return nested value sets.
-  Boolean? get hierarchical;
+  bool? get hierarchical;
   @override
 
   /// [hierarchicalElement] Extensions for hierarchical
@@ -18616,7 +18616,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [paging] Whether the server supports paging on expansion.
-  Boolean? get paging;
+  bool? get paging;
   @override
 
   /// [pagingElement] Extensions for paging
@@ -18625,7 +18625,7 @@ abstract class _TerminologyCapabilitiesExpansion
   @override
 
   /// [incomplete] Allow request for incomplete expansions?
-  Boolean? get incomplete;
+  bool? get incomplete;
   @override
 
   /// [incompleteElement] Extensions for incomplete
@@ -18688,7 +18688,7 @@ mixin _$TerminologyCapabilitiesParameter {
       throw _privateConstructorUsedError;
 
   /// [name] Expansion Parameter name.
-  Code? get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
@@ -18719,7 +18719,7 @@ abstract class $TerminologyCapabilitiesParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -18820,7 +18820,7 @@ abstract class _$$_TerminologyCapabilitiesParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -19095,7 +19095,7 @@ abstract class _TerminologyCapabilitiesParameter
   @override
 
   /// [name] Expansion Parameter name.
-  Code? get name;
+  String? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -19154,7 +19154,7 @@ mixin _$TerminologyCapabilitiesValidateCode {
       throw _privateConstructorUsedError;
 
   /// [translations] Whether translations are validated.
-  Boolean? get translations => throw _privateConstructorUsedError;
+  bool? get translations => throw _privateConstructorUsedError;
 
   /// [translationsElement] Extensions for translations
   @JsonKey(name: '_translations')
@@ -19179,7 +19179,7 @@ abstract class $TerminologyCapabilitiesValidateCodeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translations,
+      bool? translations,
       @JsonKey(name: '_translations') Element? translationsElement});
 
   $ElementCopyWith<$Res>? get translationsElement;
@@ -19255,7 +19255,7 @@ abstract class _$$_TerminologyCapabilitiesValidateCodeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translations,
+      bool? translations,
       @JsonKey(name: '_translations') Element? translationsElement});
 
   @override
@@ -19496,7 +19496,7 @@ abstract class _TerminologyCapabilitiesValidateCode
   @override
 
   /// [translations] Whether translations are validated.
-  Boolean? get translations;
+  bool? get translations;
   @override
 
   /// [translationsElement] Extensions for translations
@@ -19546,7 +19546,7 @@ mixin _$TerminologyCapabilitiesTranslation {
       throw _privateConstructorUsedError;
 
   /// [needsMap] Whether the client must identify the map.
-  Boolean? get needsMap => throw _privateConstructorUsedError;
+  bool? get needsMap => throw _privateConstructorUsedError;
 
   /// [needsMapElement] Extensions for needsMap
   @JsonKey(name: '_needsMap')
@@ -19571,7 +19571,7 @@ abstract class $TerminologyCapabilitiesTranslationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? needsMap,
+      bool? needsMap,
       @JsonKey(name: '_needsMap') Element? needsMapElement});
 
   $ElementCopyWith<$Res>? get needsMapElement;
@@ -19647,7 +19647,7 @@ abstract class _$$_TerminologyCapabilitiesTranslationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? needsMap,
+      bool? needsMap,
       @JsonKey(name: '_needsMap') Element? needsMapElement});
 
   @override
@@ -19888,7 +19888,7 @@ abstract class _TerminologyCapabilitiesTranslation
   @override
 
   /// [needsMap] Whether the client must identify the map.
-  Boolean? get needsMap;
+  bool? get needsMap;
   @override
 
   /// [needsMapElement] Extensions for needsMap
@@ -19938,7 +19938,7 @@ mixin _$TerminologyCapabilitiesClosure {
       throw _privateConstructorUsedError;
 
   /// [translation] If cross-system closure is supported.
-  Boolean? get translation => throw _privateConstructorUsedError;
+  bool? get translation => throw _privateConstructorUsedError;
 
   /// [translationElement] Extensions for translation
   @JsonKey(name: '_translation')
@@ -19962,7 +19962,7 @@ abstract class $TerminologyCapabilitiesClosureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translation,
+      bool? translation,
       @JsonKey(name: '_translation') Element? translationElement});
 
   $ElementCopyWith<$Res>? get translationElement;
@@ -20038,7 +20038,7 @@ abstract class _$$_TerminologyCapabilitiesClosureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? translation,
+      bool? translation,
       @JsonKey(name: '_translation') Element? translationElement});
 
   @override
@@ -20277,7 +20277,7 @@ abstract class _TerminologyCapabilitiesClosure
   @override
 
   /// [translation] If cross-system closure is supported.
-  Boolean? get translation;
+  bool? get translation;
   @override
 
   /// [translationElement] Extensions for translation
@@ -20311,14 +20311,14 @@ mixin _$ValueSet {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -20370,7 +20370,7 @@ mixin _$ValueSet {
   /// set is (or will be) published. This URL can be the target of a canonical
   /// reference. It SHALL remain the same when the value set is stored on
   ///  different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -20414,7 +20414,7 @@ mixin _$ValueSet {
   /// the content. The status of the value set applies to the value set
   /// definition (ValueSet.compose) and the associated ValueSet metadata.
   ///  Expansions do not have a state.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -20423,7 +20423,7 @@ mixin _$ValueSet {
   /// [experimental] A Boolean value to indicate that this value set is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -20473,7 +20473,7 @@ mixin _$ValueSet {
   /// [immutable] If this is set to 'true', then no new versions of the content
   /// logical definition can be created.  Note: Other metadata might still
   ///  change.
-  Boolean? get immutable => throw _privateConstructorUsedError;
+  bool? get immutable => throw _privateConstructorUsedError;
 
   /// [immutableElement] Extensions for immutable
   @JsonKey(name: '_immutable')
@@ -20523,10 +20523,10 @@ abstract class $ValueSetCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -20534,7 +20534,7 @@ abstract class $ValueSetCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -20547,10 +20547,10 @@ abstract class $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -20565,7 +20565,7 @@ abstract class $ValueSetCopyWith<$Res> {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Boolean? immutable,
+      bool? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       Markdown? purpose,
@@ -21049,10 +21049,10 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -21060,7 +21060,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -21073,10 +21073,10 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -21091,7 +21091,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
-      Boolean? immutable,
+      bool? immutable,
       @JsonKey(name: '_immutable')
           Element? immutableElement,
       Markdown? purpose,
@@ -22006,7 +22006,7 @@ abstract class _ValueSet extends ValueSet {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -22015,7 +22015,7 @@ abstract class _ValueSet extends ValueSet {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -22072,7 +22072,7 @@ abstract class _ValueSet extends ValueSet {
   /// set is (or will be) published. This URL can be the target of a canonical
   /// reference. It SHALL remain the same when the value set is stored on
   ///  different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -22125,7 +22125,7 @@ abstract class _ValueSet extends ValueSet {
   /// the content. The status of the value set applies to the value set
   /// definition (ValueSet.compose) and the associated ValueSet metadata.
   ///  Expansions do not have a state.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -22136,7 +22136,7 @@ abstract class _ValueSet extends ValueSet {
   /// [experimental] A Boolean value to indicate that this value set is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -22197,7 +22197,7 @@ abstract class _ValueSet extends ValueSet {
   /// [immutable] If this is set to 'true', then no new versions of the content
   /// logical definition can be created.  Note: Other metadata might still
   ///  change.
-  Boolean? get immutable;
+  bool? get immutable;
   @override
 
   /// [immutableElement] Extensions for immutable
@@ -22282,7 +22282,7 @@ mixin _$ValueSetCompose {
   /// determine the version of all referenced Code Systems and Value Set
   /// Definitions included in the compose that are not already tied to a
   ///  specific version.
-  Date? get lockedDate => throw _privateConstructorUsedError;
+  String? get lockedDate => throw _privateConstructorUsedError;
 
   /// [lockedDateElement] Extensions for lockedDate
   @JsonKey(name: '_lockedDate')
@@ -22294,7 +22294,7 @@ mixin _$ValueSetCompose {
   /// will not be included in the expansion. If absent, the behavior is
   /// determined by the implementation, or by the applicable $expand parameters
   ///  (but generally, inactive codes would be expected to be included).
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  bool? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -22324,9 +22324,9 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? lockedDate,
+      String? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude});
@@ -22435,9 +22435,9 @@ abstract class _$$_ValueSetComposeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? lockedDate,
+      String? lockedDate,
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       List<ValueSetInclude> include,
       List<ValueSetInclude>? exclude});
@@ -22761,7 +22761,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   /// determine the version of all referenced Code Systems and Value Set
   /// Definitions included in the compose that are not already tied to a
   ///  specific version.
-  Date? get lockedDate;
+  String? get lockedDate;
   @override
 
   /// [lockedDateElement] Extensions for lockedDate
@@ -22775,7 +22775,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   /// will not be included in the expansion. If absent, the behavior is
   /// determined by the implementation, or by the applicable $expand parameters
   ///  (but generally, inactive codes would be expected to be included).
-  Boolean? get inactive;
+  bool? get inactive;
   @override
 
   /// [inactiveElement] Extensions for inactive
@@ -22834,7 +22834,7 @@ mixin _$ValueSetInclude {
 
   /// [system] An absolute URI which is the code system from which the selected
   ///  codes come from.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -22879,7 +22879,7 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
@@ -22996,7 +22996,7 @@ abstract class _$$_ValueSetIncludeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
@@ -23346,7 +23346,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
 
   /// [system] An absolute URI which is the code system from which the selected
   ///  codes come from.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -23422,7 +23422,7 @@ mixin _$ValueSetConcept {
       throw _privateConstructorUsedError;
 
   /// [code] Specifies a code for the concept to be included or excluded.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -23459,7 +23459,7 @@ abstract class $ValueSetConceptCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -23564,7 +23564,7 @@ abstract class _$$_ValueSetConceptCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -23858,7 +23858,7 @@ abstract class _ValueSetConcept extends ValueSetConcept {
   @override
 
   /// [code] Specifies a code for the concept to be included or excluded.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -23923,7 +23923,7 @@ mixin _$ValueSetDesignation {
       throw _privateConstructorUsedError;
 
   /// [language] The language this designation is defined for.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -23955,7 +23955,7 @@ abstract class $ValueSetDesignationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       String? value,
@@ -24073,7 +24073,7 @@ abstract class _$$_ValueSetDesignationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Coding? use,
       String? value,
@@ -24355,7 +24355,7 @@ abstract class _ValueSetDesignation extends ValueSetDesignation {
   @override
 
   /// [language] The language this designation is defined for.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -24417,14 +24417,14 @@ mixin _$ValueSetFilter {
 
   /// [property] A code that identifies a property or a filter defined in the
   ///  code system.
-  Code? get property => throw _privateConstructorUsedError;
+  String? get property => throw _privateConstructorUsedError;
 
   /// [propertyElement] Extensions for property
   @JsonKey(name: '_property')
   Element? get propertyElement => throw _privateConstructorUsedError;
 
   /// [op] The kind of operation to perform as a part of the filter criteria.
-  Code? get op => throw _privateConstructorUsedError;
+  String? get op => throw _privateConstructorUsedError;
 
   /// [opElement] Extensions for op
   @JsonKey(name: '_op')
@@ -24458,9 +24458,9 @@ abstract class $ValueSetFilterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? property,
+      String? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? op,
+      String? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -24582,9 +24582,9 @@ abstract class _$$_ValueSetFilterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? property,
+      String? property,
       @JsonKey(name: '_property') Element? propertyElement,
-      Code? op,
+      String? op,
       @JsonKey(name: '_op') Element? opElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -24886,7 +24886,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
 
   /// [property] A code that identifies a property or a filter defined in the
   ///  code system.
-  Code? get property;
+  String? get property;
   @override
 
   /// [propertyElement] Extensions for property
@@ -24895,7 +24895,7 @@ abstract class _ValueSetFilter extends ValueSetFilter {
   @override
 
   /// [op] The kind of operation to perform as a part of the filter criteria.
-  Code? get op;
+  String? get op;
   @override
 
   /// [opElement] Extensions for op
@@ -24962,7 +24962,7 @@ mixin _$ValueSetExpansion {
   /// etc. Systems may re-use the same identifier as long as those factors
   /// remain the same, and the expansion is the same, but are not required to do
   ///  so. This is a business identifier.
-  FhirUri? get identifier => throw _privateConstructorUsedError;
+  String? get identifier => throw _privateConstructorUsedError;
 
   /// [identifierElement] Extensions for identifier
   @JsonKey(name: '_identifier')
@@ -25019,7 +25019,7 @@ abstract class $ValueSetExpansionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? identifier,
+      String? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -25180,7 +25180,7 @@ abstract class _$$_ValueSetExpansionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? identifier,
+      String? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -25580,7 +25580,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   /// etc. Systems may re-use the same identifier as long as those factors
   /// remain the same, and the expansion is the same, but are not required to do
   ///  so. This is a business identifier.
-  FhirUri? get identifier;
+  String? get identifier;
   @override
 
   /// [identifierElement] Extensions for identifier
@@ -25687,7 +25687,7 @@ mixin _$ValueSetParameter {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the parameter.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -25708,14 +25708,14 @@ mixin _$ValueSetParameter {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueUri] The value of the parameter.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
   Element? get valueUriElement => throw _privateConstructorUsedError;
 
   /// [valueCode] The value of the parameter.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -25748,15 +25748,15 @@ abstract class $ValueSetParameterCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -25997,15 +25997,15 @@ abstract class _$$_ValueSetParameterCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement});
@@ -26488,7 +26488,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueBoolean] The value of the parameter.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -26515,7 +26515,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueUri] The value of the parameter.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -26524,7 +26524,7 @@ abstract class _ValueSetParameter extends ValueSetParameter {
   @override
 
   /// [valueCode] The value of the parameter.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -26582,7 +26582,7 @@ mixin _$ValueSetContains {
 
   /// [system] An absolute URI which is the code system in which the code for
   ///  this item in the expansion is defined.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -26592,7 +26592,7 @@ mixin _$ValueSetContains {
   /// navigational purposes, and the user cannot select the code directly as a
   ///  proper value.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_ => throw _privateConstructorUsedError;
+  bool? get abstract_ => throw _privateConstructorUsedError;
 
   /// [abstractElement] Extensions for abstract
   @JsonKey(name: '_abstract')
@@ -26603,7 +26603,7 @@ mixin _$ValueSetContains {
   /// by the code system for understanding legacy data. It might not be known or
   /// specified whether an concept is inactive (and it may depend on the context
   ///  of use).
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  bool? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -26623,7 +26623,7 @@ mixin _$ValueSetContains {
   /// [code] The code for this item in the expansion hierarchy. If this code is
   /// missing the entry in the hierarchy is a place holder (abstract) and does
   ///  not represent a valid code in the value set.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -26663,15 +26663,15 @@ abstract class $ValueSetContainsCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       @JsonKey(name: 'abstract') Boolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -26874,15 +26874,15 @@ abstract class _$$_ValueSetContainsCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       @JsonKey(name: 'abstract') Boolean? abstract_,
       @JsonKey(name: '_abstract') Element? abstractElement,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
@@ -27339,7 +27339,7 @@ abstract class _ValueSetContains extends ValueSetContains {
 
   /// [system] An absolute URI which is the code system in which the code for
   ///  this item in the expansion is defined.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -27351,7 +27351,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   /// navigational purposes, and the user cannot select the code directly as a
   ///  proper value.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  bool? get abstract_;
   @override
 
   /// [abstractElement] Extensions for abstract
@@ -27364,7 +27364,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   /// by the code system for understanding legacy data. It might not be known or
   /// specified whether an concept is inactive (and it may depend on the context
   ///  of use).
-  Boolean? get inactive;
+  bool? get inactive;
   @override
 
   /// [inactiveElement] Extensions for inactive
@@ -27388,7 +27388,7 @@ abstract class _ValueSetContains extends ValueSetContains {
   /// [code] The code for this item in the expansion hierarchy. If this code is
   /// missing the entry in the hierarchy is a place holder (abstract) and does
   ///  not represent a valid code in the value set.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code

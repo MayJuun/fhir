@@ -131,14 +131,14 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -190,7 +190,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     List<Identifier>? identifier,
 
     /// [productCategory] Broad category of this product.
-    Code? productCategory,
+    String? productCategory,
 
     /// [productCategoryElement] Extensions for productCategory
     @JsonKey(name: '_productCategory')
@@ -201,7 +201,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     CodeableConcept? productCode,
 
     /// [status] Whether the product is currently available.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -684,7 +684,7 @@ class BiologicallyDerivedProductStorage
     @JsonKey(name: '_temperature') Element? temperatureElement,
 
     /// [scale] Temperature scale used.
-    Code? scale,
+    String? scale,
 
     /// [scaleElement] Extensions for scale
     @JsonKey(name: '_scale') Element? scaleElement,
@@ -887,14 +887,14 @@ class Device with Resource, _$Device {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -952,7 +952,7 @@ class Device with Resource, _$Device {
     List<DeviceUdiCarrier>? udiCarrier,
 
     /// [status] Status of the Device availability.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1059,7 +1059,7 @@ class Device with Resource, _$Device {
     Reference? location,
 
     /// [url] A network address on which the device may be contacted directly.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
@@ -1228,7 +1228,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     /// http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
     /// 4) ICCBA for other devices:
     /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
-    FhirUri? issuer,
+    String? issuer,
 
     /// [issuerElement] Extensions for issuer
     @JsonKey(name: '_issuer') Element? issuerElement,
@@ -1238,7 +1238,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     /// single namespace with the appropriate repository uri as the system.  For
     /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
     ///  http://hl7.org/fhir/NamingSystem/fda-udi.
-    FhirUri? jurisdiction,
+    String? jurisdiction,
 
     /// [jurisdictionElement] Extensions for jurisdiction
     @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
@@ -1248,7 +1248,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     /// printed on the packaging of the device - e.g., a barcode or RFID.
     /// Because of limitations on character sets in XML and the need to round-trip
     ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-    Base64Binary? carrierAIDC,
+    String? carrierAIDC,
 
     /// [carrierAIDCElement] Extensions for carrierAIDC
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
@@ -1262,7 +1262,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
 
     /// [entryType] A coded entry to indicate how the data was entered.
-    Code? entryType,
+    String? entryType,
 
     /// [entryTypeElement] Extensions for entryType
     @JsonKey(name: '_entryType') Element? entryTypeElement,
@@ -1379,7 +1379,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
     /// [type] The type of deviceName.
     /// UDILabelName | UserFriendlyName | PatientReportedName |
     ///  ManufactureDeviceName | ModelName.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1882,14 +1882,14 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1961,7 +1961,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [operationalStatus] Indicates current operational state of the device.
     ///  For example: On, Off, Standby, etc.
-    Code? operationalStatus,
+    String? operationalStatus,
 
     /// [operationalStatusElement] Extensions for operationalStatus
     @JsonKey(name: '_operationalStatus')
@@ -1972,7 +1972,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
     /// example; the parameters are displayed in different characteristic colors,
     ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
-    Code? color,
+    String? color,
 
     /// [colorElement] Extensions for color
     @JsonKey(name: '_color')
@@ -1980,7 +1980,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
     /// [category] Indicates the category of the observation generation process.
     ///  A DeviceMetric can be for example a setting, measurement, or calculation.
-    Code? category,
+    String? category,
 
     /// [categoryElement] Extensions for category
     @JsonKey(name: '_category')
@@ -2103,13 +2103,13 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     List<FhirExtension>? modifierExtension,
 
     /// [type] Describes the type of the calibration method.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [state] Describes the state of the calibration.
-    Code? state,
+    String? state,
 
     /// [stateElement] Extensions for state
     @JsonKey(name: '_state') Element? stateElement,
@@ -2213,13 +2213,13 @@ class NutritionProduct with Resource, _$NutritionProduct {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -2236,7 +2236,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
     List<FhirExtension>? modifierExtension,
-    Code? status,
+    String? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
 
@@ -2507,8 +2507,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
     Quantity? valueQuantity,
 
     /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
-
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
 
@@ -2519,8 +2518,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
     Attachment? valueAttachment,
 
     /// [valueBoolean] The actual characteristic value corresponding to the type.;
-
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
 
@@ -2730,9 +2728,9 @@ class Substance with Resource, _$Substance {
         R4ResourceType resourceType,
     String? id,
     Meta? meta,
-    FhirUri? implicitRules,
+    String? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
+    String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
@@ -2741,7 +2739,7 @@ class Substance with Resource, _$Substance {
     List<Identifier>? identifier,
 
     /// [status] The current state of the product.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status') Element? statusElement,

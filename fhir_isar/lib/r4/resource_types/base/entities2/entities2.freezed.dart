@@ -37,14 +37,14 @@ mixin _$BiologicallyDerivedProduct {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -97,7 +97,7 @@ mixin _$BiologicallyDerivedProduct {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [productCategory] Broad category of this product.
-  Code? get productCategory => throw _privateConstructorUsedError;
+  String? get productCategory => throw _privateConstructorUsedError;
 
   /// [productCategoryElement] Extensions for productCategory
   @JsonKey(name: '_productCategory')
@@ -108,7 +108,7 @@ mixin _$BiologicallyDerivedProduct {
   CodeableConcept? get productCode => throw _privateConstructorUsedError;
 
   /// [status] Whether the product is currently available.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -166,10 +166,10 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -178,11 +178,11 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? productCategory,
+      String? productCategory,
       @JsonKey(name: '_productCategory')
           Element? productCategoryElement,
       CodeableConcept? productCode,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? request,
@@ -488,10 +488,10 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -500,11 +500,11 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? productCategory,
+      String? productCategory,
       @JsonKey(name: '_productCategory')
           Element? productCategoryElement,
       CodeableConcept? productCode,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? request,
@@ -1139,7 +1139,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1148,7 +1148,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1207,7 +1207,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
 
   /// [productCategory] Broad category of this product.
-  Code? get productCategory;
+  String? get productCategory;
   @override
 
   /// [productCategoryElement] Extensions for productCategory
@@ -1221,7 +1221,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
 
   /// [status] Whether the product is currently available.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2950,7 +2950,7 @@ mixin _$BiologicallyDerivedProductStorage {
   Element? get temperatureElement => throw _privateConstructorUsedError;
 
   /// [scale] Temperature scale used.
-  Code? get scale => throw _privateConstructorUsedError;
+  String? get scale => throw _privateConstructorUsedError;
 
   /// [scaleElement] Extensions for scale
   @JsonKey(name: '_scale')
@@ -2981,7 +2981,7 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       Decimal? temperature,
       @JsonKey(name: '_temperature') Element? temperatureElement,
-      Code? scale,
+      String? scale,
       @JsonKey(name: '_scale') Element? scaleElement,
       Period? duration});
 
@@ -3126,7 +3126,7 @@ abstract class _$$_BiologicallyDerivedProductStorageCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       Decimal? temperature,
       @JsonKey(name: '_temperature') Element? temperatureElement,
-      Code? scale,
+      String? scale,
       @JsonKey(name: '_scale') Element? scaleElement,
       Period? duration});
 
@@ -3462,7 +3462,7 @@ abstract class _BiologicallyDerivedProductStorage
   @override
 
   /// [scale] Temperature scale used.
-  Code? get scale;
+  String? get scale;
   @override
 
   /// [scaleElement] Extensions for scale
@@ -3501,14 +3501,14 @@ mixin _$Device {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -3567,7 +3567,7 @@ mixin _$Device {
   List<DeviceUdiCarrier>? get udiCarrier => throw _privateConstructorUsedError;
 
   /// [status] Status of the Device availability.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -3675,7 +3675,7 @@ mixin _$Device {
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [url] A network address on which the device may be contacted directly.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -3707,10 +3707,10 @@ abstract class $DeviceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3721,7 +3721,7 @@ abstract class $DeviceCopyWith<$Res> {
       List<Identifier>? identifier,
       Reference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -3758,7 +3758,7 @@ abstract class $DeviceCopyWith<$Res> {
       Reference? owner,
       List<ContactPoint>? contact,
       Reference? location,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Annotation>? note,
@@ -4292,10 +4292,10 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4306,7 +4306,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       List<Identifier>? identifier,
       Reference? definition,
       List<DeviceUdiCarrier>? udiCarrier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -4343,7 +4343,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Reference? owner,
       List<ContactPoint>? contact,
       Reference? location,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Annotation>? note,
@@ -5378,7 +5378,7 @@ abstract class _Device extends Device {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -5387,7 +5387,7 @@ abstract class _Device extends Device {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5454,7 +5454,7 @@ abstract class _Device extends Device {
   @override
 
   /// [status] Status of the Device availability.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -5589,7 +5589,7 @@ abstract class _Device extends Device {
   @override
 
   /// [url] A network address on which the device may be contacted directly.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -5669,7 +5669,7 @@ mixin _$DeviceUdiCarrier {
   /// http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
   /// 4) ICCBA for other devices:
   /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
-  FhirUri? get issuer => throw _privateConstructorUsedError;
+  String? get issuer => throw _privateConstructorUsedError;
 
   /// [issuerElement] Extensions for issuer
   @JsonKey(name: '_issuer')
@@ -5680,7 +5680,7 @@ mixin _$DeviceUdiCarrier {
   /// single namespace with the appropriate repository uri as the system.  For
   /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
   ///  http://hl7.org/fhir/NamingSystem/fda-udi.
-  FhirUri? get jurisdiction => throw _privateConstructorUsedError;
+  String? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [jurisdictionElement] Extensions for jurisdiction
   @JsonKey(name: '_jurisdiction')
@@ -5691,7 +5691,7 @@ mixin _$DeviceUdiCarrier {
   /// printed on the packaging of the device - e.g., a barcode or RFID.
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-  Base64Binary? get carrierAIDC => throw _privateConstructorUsedError;
+  String? get carrierAIDC => throw _privateConstructorUsedError;
 
   /// [carrierAIDCElement] Extensions for carrierAIDC
   @JsonKey(name: '_carrierAIDC')
@@ -5707,7 +5707,7 @@ mixin _$DeviceUdiCarrier {
   Element? get carrierHRFElement => throw _privateConstructorUsedError;
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  Code? get entryType => throw _privateConstructorUsedError;
+  String? get entryType => throw _privateConstructorUsedError;
 
   /// [entryTypeElement] Extensions for entryType
   @JsonKey(name: '_entryType')
@@ -5731,15 +5731,15 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      FhirUri? issuer,
+      String? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      FhirUri? jurisdiction,
+      String? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-      Base64Binary? carrierAIDC,
+      String? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      Code? entryType,
+      String? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
@@ -5930,15 +5930,15 @@ abstract class _$$_DeviceUdiCarrierCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      FhirUri? issuer,
+      String? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      FhirUri? jurisdiction,
+      String? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
-      Base64Binary? carrierAIDC,
+      String? carrierAIDC,
       @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
       String? carrierHRF,
       @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-      Code? entryType,
+      String? entryType,
       @JsonKey(name: '_entryType') Element? entryTypeElement});
 
   @override
@@ -6373,7 +6373,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   /// http://hl7.org/fhir/NamingSystem/iccbba-blood-di,
   /// 4) ICCBA for other devices:
   /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
-  FhirUri? get issuer;
+  String? get issuer;
   @override
 
   /// [issuerElement] Extensions for issuer
@@ -6386,7 +6386,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   /// single namespace with the appropriate repository uri as the system.  For
   /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
   ///  http://hl7.org/fhir/NamingSystem/fda-udi.
-  FhirUri? get jurisdiction;
+  String? get jurisdiction;
   @override
 
   /// [jurisdictionElement] Extensions for jurisdiction
@@ -6399,7 +6399,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   /// printed on the packaging of the device - e.g., a barcode or RFID.
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
-  Base64Binary? get carrierAIDC;
+  String? get carrierAIDC;
   @override
 
   /// [carrierAIDCElement] Extensions for carrierAIDC
@@ -6419,7 +6419,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @override
 
   /// [entryType] A coded entry to indicate how the data was entered.
-  Code? get entryType;
+  String? get entryType;
   @override
 
   /// [entryTypeElement] Extensions for entryType
@@ -6476,7 +6476,7 @@ mixin _$DeviceDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6500,7 +6500,7 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -6599,7 +6599,7 @@ abstract class _$$_DeviceDeviceNameCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -6874,7 +6874,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -8207,14 +8207,14 @@ mixin _$DeviceMetric {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8287,7 +8287,7 @@ mixin _$DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
-  Code? get operationalStatus => throw _privateConstructorUsedError;
+  String? get operationalStatus => throw _privateConstructorUsedError;
 
   /// [operationalStatusElement] Extensions for operationalStatus
   @JsonKey(name: '_operationalStatus')
@@ -8298,7 +8298,7 @@ mixin _$DeviceMetric {
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
   /// example; the parameters are displayed in different characteristic colors,
   ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
-  Code? get color => throw _privateConstructorUsedError;
+  String? get color => throw _privateConstructorUsedError;
 
   /// [colorElement] Extensions for color
   @JsonKey(name: '_color')
@@ -8306,7 +8306,7 @@ mixin _$DeviceMetric {
 
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
-  Code? get category => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -8345,10 +8345,10 @@ abstract class $DeviceMetricCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8361,13 +8361,13 @@ abstract class $DeviceMetricCopyWith<$Res> {
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
-      Code? operationalStatus,
+      String? operationalStatus,
       @JsonKey(name: '_operationalStatus')
           Element? operationalStatusElement,
-      Code? color,
+      String? color,
       @JsonKey(name: '_color')
           Element? colorElement,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
@@ -8679,10 +8679,10 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8695,13 +8695,13 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
-      Code? operationalStatus,
+      String? operationalStatus,
       @JsonKey(name: '_operationalStatus')
           Element? operationalStatusElement,
-      Code? color,
+      String? color,
       @JsonKey(name: '_color')
           Element? colorElement,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
@@ -9298,7 +9298,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -9307,7 +9307,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9390,7 +9390,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
-  Code? get operationalStatus;
+  String? get operationalStatus;
   @override
 
   /// [operationalStatusElement] Extensions for operationalStatus
@@ -9403,7 +9403,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
   /// example; the parameters are displayed in different characteristic colors,
   ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
-  Code? get color;
+  String? get color;
   @override
 
   /// [colorElement] Extensions for color
@@ -9413,7 +9413,7 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
-  Code? get category;
+  String? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -9479,14 +9479,14 @@ mixin _$DeviceMetricCalibration {
       throw _privateConstructorUsedError;
 
   /// [type] Describes the type of the calibration method.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [state] Describes the state of the calibration.
-  Code? get state => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
 
   /// [stateElement] Extensions for state
   @JsonKey(name: '_state')
@@ -9515,9 +9515,9 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? state,
+      String? state,
       @JsonKey(name: '_state') Element? stateElement,
       Instant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -9640,9 +9640,9 @@ abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? state,
+      String? state,
       @JsonKey(name: '_state') Element? stateElement,
       Instant? time,
       @JsonKey(name: '_time') Element? timeElement});
@@ -9939,7 +9939,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [type] Describes the type of the calibration method.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -9948,7 +9948,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @override
 
   /// [state] Describes the state of the calibration.
-  Code? get state;
+  String? get state;
   @override
 
   /// [stateElement] Extensions for state
@@ -9985,14 +9985,14 @@ mixin _$NutritionProduct {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -10012,7 +10012,7 @@ mixin _$NutritionProduct {
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -10060,15 +10060,15 @@ abstract class $NutritionProductCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept? code,
@@ -10301,15 +10301,15 @@ abstract class _$$_NutritionProductCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept? code,
@@ -10823,7 +10823,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -10832,7 +10832,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -10857,7 +10857,7 @@ abstract class _NutritionProduct extends NutritionProduct {
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   List<FhirExtension>? get modifierExtension;
   @override
-  Code? get status;
+  String? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -11571,7 +11571,7 @@ mixin _$NutritionProductCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
   @JsonKey(name: '_valueBase64Binary')
@@ -11581,7 +11581,7 @@ mixin _$NutritionProductCharacteristic {
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The actual characteristic value corresponding to the type.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -11610,10 +11610,10 @@ abstract class $NutritionProductCharacteristicCopyWith<$Res> {
       Markdown? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -11809,10 +11809,10 @@ abstract class _$$_NutritionProductCharacteristicCopyWith<$Res>
       Markdown? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
       Attachment? valueAttachment,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -12149,7 +12149,7 @@ abstract class _NutritionProductCharacteristic
   @override
 
   /// [valueBase64Binary] The actual characteristic value corresponding to the type.;
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] (_valueBase64Binary): Extensions for valueBase64Binary;
@@ -12162,7 +12162,7 @@ abstract class _NutritionProductCharacteristic
   @override
 
   /// [valueBoolean] The actual characteristic value corresponding to the type.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -12752,10 +12752,10 @@ mixin _$Substance {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12767,7 +12767,7 @@ mixin _$Substance {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the product.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -12799,10 +12799,10 @@ abstract class $SubstanceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12811,7 +12811,7 @@ abstract class $SubstanceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -13042,10 +13042,10 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13054,7 +13054,7 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -13476,12 +13476,12 @@ abstract class _Substance extends Substance {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -13499,7 +13499,7 @@ abstract class _Substance extends Substance {
   @override
 
   /// [status] The current state of the product.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;

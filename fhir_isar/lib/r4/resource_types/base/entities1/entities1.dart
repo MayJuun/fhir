@@ -138,14 +138,14 @@ class Endpoint with Resource, _$Endpoint {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -194,7 +194,7 @@ class Endpoint with Resource, _$Endpoint {
     List<Identifier>? identifier,
 
     /// [status] active | suspended | error | off | test.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -449,14 +449,14 @@ class HealthcareService with Resource, _$HealthcareService {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -506,7 +506,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// [active] This flag is used to mark the record to not be used. This is not
     /// used when a center is closed for maintenance, or for holidays, the
     ///  notAvailable period is to be used for this.
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -594,7 +594,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// will require an appointment for a particular service at a site to be
     /// provided by the Organization. Indicates if an appointment is required for
     ///  access to this service.
-    Boolean? appointmentRequired,
+    bool? appointmentRequired,
 
     /// [appointmentRequiredElement] Extensions for appointmentRequired
     @JsonKey(name: '_appointmentRequired')
@@ -846,7 +846,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
     /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
     ///  hour service.
-    Boolean? allDay,
+    bool? allDay,
 
     /// [allDayElement] Extensions for allDay
     @JsonKey(name: '_allDay') Element? allDayElement,
@@ -1157,14 +1157,14 @@ class Location with Resource, _$Location {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1215,7 +1215,7 @@ class Location with Resource, _$Location {
     /// resource, not the current value which may be covered by the
     /// operationStatus, or by a schedule/slots if they are configured for the
     ///  location.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1253,7 +1253,7 @@ class Location with Resource, _$Location {
 
     /// [mode] Indicates whether a resource instance represents a specific
     ///  location or a class of locations.
-    Code? mode,
+    String? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode')
@@ -1547,7 +1547,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
 
     /// [allDay] The Location is open all day.
-    Boolean? allDay,
+    bool? allDay,
 
     /// [allDayElement] Extensions for allDay
     @JsonKey(name: '_allDay') Element? allDayElement,
@@ -1708,14 +1708,14 @@ class Organization with Resource, _$Organization {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1764,7 +1764,7 @@ class Organization with Resource, _$Organization {
     List<Identifier>? identifier,
 
     /// [active] Whether the organization's record is still in active use.
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -2068,14 +2068,14 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2123,7 +2123,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     List<Identifier>? identifier,
 
     /// [active] Whether this organization affiliation record is in active use.
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')

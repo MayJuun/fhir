@@ -119,14 +119,14 @@ class BodyStructure with Resource, _$BodyStructure {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -174,7 +174,7 @@ class BodyStructure with Resource, _$BodyStructure {
     List<Identifier>? identifier,
 
     /// [active] Whether this body site is in active use.
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -398,14 +398,14 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -457,7 +457,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<Reference>? basedOn,
 
     /// [status] The status of the diagnostic report.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -855,14 +855,14 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -911,7 +911,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Identifier>? identifier,
 
     /// [status] The current state of the ImagingStudy.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1654,14 +1654,14 @@ class Media with Resource, _$Media {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1720,7 +1720,7 @@ class Media with Resource, _$Media {
     List<Reference>? partOf,
 
     /// [status] The current state of the {{title}}.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1992,14 +1992,14 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2048,7 +2048,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     List<Identifier>? identifier,
 
     /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
@@ -2282,7 +2282,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// orientation. The strand that contains the open reading frame of the gene
     /// is the "sense" strand, and the opposite complementary strand is the
     ///  "antisense" strand.
-    Code? orientation,
+    String? orientation,
 
     /// [orientationElement] Extensions for orientation
     @JsonKey(name: '_orientation') Element? orientationElement,
@@ -2306,7 +2306,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
     /// [strand] An absolute reference to a strand. The Watson strand is the
     /// strand whose 5'-end is on the short arm of the chromosome, and the Crick
     ///  strand as the one whose 5'-end is on the long arm.
-    Code? strand,
+    String? strand,
 
     /// [strandElement] Extensions for strand
     @JsonKey(name: '_strand') Element? strandElement,
@@ -2682,7 +2682,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
     List<FhirExtension>? modifierExtension,
 
     /// [type] INDEL / SNP / Undefined variant.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -3082,14 +3082,14 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
 
     /// [type] Click and see / RESTful API / Need login to see / RESTful API with
     ///  authentication / Other ways to see resource.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
 
     /// [url] URI of an external repository which contains further details about
     ///  the genetics data.
-    FhirUri? url,
+    String? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
@@ -3236,7 +3236,7 @@ class MolecularSequenceStructureVariant
 
     /// [exact] Used to indicate if the outer and inner start-end values have the
     ///  same meaning.
-    Boolean? exact,
+    bool? exact,
 
     /// [exactElement] Extensions for exact
     @JsonKey(name: '_exact') Element? exactElement,
@@ -3749,14 +3749,14 @@ class Observation with Resource, _$Observation {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3813,7 +3813,7 @@ class Observation with Resource, _$Observation {
     List<Reference>? partOf,
 
     /// [status] The status of the result value.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3918,7 +3918,7 @@ class Observation with Resource, _$Observation {
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean')
@@ -4335,7 +4335,7 @@ class ObservationComponent with _$ObservationComponent {
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -4545,14 +4545,14 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4613,7 +4613,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [questionnaire] The Questionnaire that defines and organizes the
     ///  questions for which answers are being provided.
-    Canonical? questionnaire,
+    String? questionnaire,
 
     /// [questionnaireElement] Extensions for [questionnaire].
     @JsonKey(name: '_questionnaire')
@@ -4621,7 +4621,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [status] The position of the questionnaire response within its overall
     ///  lifecycle.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4774,7 +4774,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 
     /// [definition] A reference to an [[[ElementDefinition]]] that provides the
     ///  details for the item.
-    FhirUri? definition,
+    String? definition,
 
     /// [definitionElement] Extensions for definition
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -4943,7 +4943,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueBoolean] The answer (or one of the answers) provided by the
     ///  respondent to the question.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -4964,7 +4964,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueDate] The answer (or one of the answers) provided by the respondent
     ///  to the question.
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -4992,7 +4992,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
     /// [valueUri] The answer (or one of the answers) provided by the respondent
     ///  to the question.
-    FhirUri? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -5170,14 +5170,14 @@ class Specimen with Resource, _$Specimen {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5230,7 +5230,7 @@ class Specimen with Resource, _$Specimen {
     Identifier? accessionIdentifier,
 
     /// [status] The availability of the specimen.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

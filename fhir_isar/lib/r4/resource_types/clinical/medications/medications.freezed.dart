@@ -36,14 +36,14 @@ mixin _$Immunization {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -92,7 +92,7 @@ mixin _$Immunization {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current status of the immunization event.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -139,7 +139,7 @@ mixin _$Immunization {
   /// [primarySource] An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
-  Boolean? get primarySource => throw _privateConstructorUsedError;
+  bool? get primarySource => throw _privateConstructorUsedError;
 
   /// [primarySourceElement] Extensions for primarySource
   @JsonKey(name: '_primarySource')
@@ -165,7 +165,7 @@ mixin _$Immunization {
   Element? get lotNumberElement => throw _privateConstructorUsedError;
 
   /// [expirationDate] Date vaccine batch expires.
-  Date? get expirationDate => throw _privateConstructorUsedError;
+  String? get expirationDate => throw _privateConstructorUsedError;
 
   /// [expirationDateElement] Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
@@ -197,7 +197,7 @@ mixin _$Immunization {
 
   /// [isSubpotent] Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
-  Boolean? get isSubpotent => throw _privateConstructorUsedError;
+  bool? get isSubpotent => throw _privateConstructorUsedError;
 
   /// [isSubpotentElement] Extensions for isSubpotent
   @JsonKey(name: '_isSubpotent')
@@ -251,10 +251,10 @@ abstract class $ImmunizationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -263,7 +263,7 @@ abstract class $ImmunizationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -279,7 +279,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      Boolean? primarySource,
+      bool? primarySource,
       @JsonKey(name: '_primarySource')
           Element? primarySourceElement,
       CodeableConcept? reportOrigin,
@@ -288,7 +288,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       String? lotNumber,
       @JsonKey(name: '_lotNumber')
           Element? lotNumberElement,
-      Date? expirationDate,
+      String? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       CodeableConcept? site,
@@ -298,7 +298,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       List<Annotation>? note,
       List<CodeableConcept>? reasonCode,
       List<Reference>? reasonReference,
-      Boolean? isSubpotent,
+      bool? isSubpotent,
       @JsonKey(name: '_isSubpotent')
           Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
@@ -873,10 +873,10 @@ abstract class _$$_ImmunizationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -885,7 +885,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -901,7 +901,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       FhirDateTime? recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      Boolean? primarySource,
+      bool? primarySource,
       @JsonKey(name: '_primarySource')
           Element? primarySourceElement,
       CodeableConcept? reportOrigin,
@@ -910,7 +910,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       String? lotNumber,
       @JsonKey(name: '_lotNumber')
           Element? lotNumberElement,
-      Date? expirationDate,
+      String? expirationDate,
       @JsonKey(name: '_expirationDate')
           Element? expirationDateElement,
       CodeableConcept? site,
@@ -920,7 +920,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       List<Annotation>? note,
       List<CodeableConcept>? reasonCode,
       List<Reference>? reasonReference,
-      Boolean? isSubpotent,
+      bool? isSubpotent,
       @JsonKey(name: '_isSubpotent')
           Element? isSubpotentElement,
       List<CodeableConcept>? subpotentReason,
@@ -1966,7 +1966,7 @@ abstract class _Immunization extends Immunization {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1975,7 +1975,7 @@ abstract class _Immunization extends Immunization {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2030,7 +2030,7 @@ abstract class _Immunization extends Immunization {
   @override
 
   /// [status] Indicates the current status of the immunization event.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2089,7 +2089,7 @@ abstract class _Immunization extends Immunization {
   /// [primarySource] An indication that the content of the record is based on
   /// information from the person who administered the vaccine. This reflects
   ///  the context under which the data was originally recorded.
-  Boolean? get primarySource;
+  bool? get primarySource;
   @override
 
   /// [primarySourceElement] Extensions for primarySource
@@ -2122,7 +2122,7 @@ abstract class _Immunization extends Immunization {
   @override
 
   /// [expirationDate] Date vaccine batch expires.
-  Date? get expirationDate;
+  String? get expirationDate;
   @override
 
   /// [expirationDateElement] Extensions for expirationDate
@@ -2162,7 +2162,7 @@ abstract class _Immunization extends Immunization {
 
   /// [isSubpotent] Indication if a dose is considered to be subpotent. By
   ///  default, a dose should be considered to be potent.
-  Boolean? get isSubpotent;
+  bool? get isSubpotent;
   @override
 
   /// [isSubpotentElement] Extensions for isSubpotent
@@ -2640,7 +2640,7 @@ mixin _$ImmunizationEducation {
 
   /// [reference] Reference pointer to the educational material given to the
   ///  patient if the information was on line.
-  FhirUri? get reference => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
 
   /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
@@ -2679,7 +2679,7 @@ abstract class $ImmunizationEducationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? documentType,
       @JsonKey(name: '_documentType') Element? documentTypeElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
       FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
@@ -2829,7 +2829,7 @@ abstract class _$$_ImmunizationEducationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? documentType,
       @JsonKey(name: '_documentType') Element? documentTypeElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
       FhirDateTime? publicationDate,
       @JsonKey(name: '_publicationDate') Element? publicationDateElement,
@@ -3177,7 +3177,7 @@ abstract class _ImmunizationEducation extends ImmunizationEducation {
 
   /// [reference] Reference pointer to the educational material given to the
   ///  patient if the information was on line.
-  FhirUri? get reference;
+  String? get reference;
   @override
 
   /// [referenceElement] Extensions for reference
@@ -3254,7 +3254,7 @@ mixin _$ImmunizationReaction {
   Reference? get detail => throw _privateConstructorUsedError;
 
   /// [reported] Self-reported indicator.
-  Boolean? get reported => throw _privateConstructorUsedError;
+  bool? get reported => throw _privateConstructorUsedError;
 
   /// [reportedElement] Extensions for reported
   @JsonKey(name: '_reported')
@@ -3279,7 +3279,7 @@ abstract class $ImmunizationReactionCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      bool? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   $ElementCopyWith<$Res>? get dateElement;
@@ -3398,7 +3398,7 @@ abstract class _$$_ImmunizationReactionCopyWith<$Res>
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? detail,
-      Boolean? reported,
+      bool? reported,
       @JsonKey(name: '_reported') Element? reportedElement});
 
   @override
@@ -3690,7 +3690,7 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
   @override
 
   /// [reported] Self-reported indicator.
-  Boolean? get reported;
+  bool? get reported;
   @override
 
   /// [reportedElement] Extensions for reported
@@ -4525,14 +4525,14 @@ mixin _$ImmunizationEvaluation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4583,7 +4583,7 @@ mixin _$ImmunizationEvaluation {
 
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4680,10 +4680,10 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4692,7 +4692,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference patient,
@@ -5137,10 +5137,10 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5149,7 +5149,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference patient,
@@ -5925,7 +5925,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -5934,7 +5934,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -5991,7 +5991,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
 
   /// [status] Indicates the current status of the evaluation of the
   ///  vaccination administration event.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6117,14 +6117,14 @@ mixin _$ImmunizationRecommendation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6209,10 +6209,10 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6436,10 +6436,10 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6910,7 +6910,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6919,7 +6919,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8609,14 +8609,14 @@ mixin _$Medication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8672,7 +8672,7 @@ mixin _$Medication {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [status] A code to indicate if the medication is in active use.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -8718,10 +8718,10 @@ abstract class $MedicationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8731,7 +8731,7 @@ abstract class $MedicationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? manufacturer,
@@ -9004,10 +9004,10 @@ abstract class _$$_MedicationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9017,7 +9017,7 @@ abstract class _$$_MedicationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? code,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? manufacturer,
@@ -9533,7 +9533,7 @@ abstract class _Medication extends Medication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -9542,7 +9542,7 @@ abstract class _Medication extends Medication {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -9605,7 +9605,7 @@ abstract class _Medication extends Medication {
   @override
 
   /// [status] A code to indicate if the medication is in active use.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -9690,7 +9690,7 @@ mixin _$MedicationIngredient {
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  Boolean? get isActive => throw _privateConstructorUsedError;
+  bool? get isActive => throw _privateConstructorUsedError;
 
   /// [isActiveElement] Extensions for isActive
   @JsonKey(name: '_isActive')
@@ -9719,7 +9719,7 @@ abstract class $MedicationIngredientCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      Boolean? isActive,
+      bool? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strength});
 
@@ -9851,7 +9851,7 @@ abstract class _$$_MedicationIngredientCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      Boolean? isActive,
+      bool? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strength});
 
@@ -10149,7 +10149,7 @@ abstract class _MedicationIngredient extends MedicationIngredient {
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  Boolean? get isActive;
+  bool? get isActive;
   @override
 
   /// [isActiveElement] Extensions for isActive
@@ -10643,14 +10643,14 @@ mixin _$MedicationAdministration {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10719,7 +10719,7 @@ mixin _$MedicationAdministration {
   /// completed.  For some long running administrations such as infusions, it is
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10825,10 +10825,10 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10841,7 +10841,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       @JsonKey(name: '_instantiates')
           List<Element?>? instantiatesElement,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -11255,10 +11255,10 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11271,7 +11271,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       @JsonKey(name: '_instantiates')
           List<Element?>? instantiatesElement,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -12164,7 +12164,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -12173,7 +12173,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12251,7 +12251,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   /// completed.  For some long running administrations such as infusions, it is
   /// possible for an administration to be started but not completed or it may
   ///  be paused while some other process is under way.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -13482,14 +13482,14 @@ mixin _$MedicationDispense {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -13546,7 +13546,7 @@ mixin _$MedicationDispense {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the set of dispense events.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -13684,10 +13684,10 @@ abstract class $MedicationDispenseCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13697,7 +13697,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReasonCodeableConcept,
@@ -14225,10 +14225,10 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14238,7 +14238,7 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReasonCodeableConcept,
@@ -15204,7 +15204,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -15213,7 +15213,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -15277,7 +15277,7 @@ abstract class _MedicationDispense extends MedicationDispense {
   @override
 
   /// [status] A code specifying the state of the set of dispense events.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -15859,7 +15859,7 @@ mixin _$MedicationDispenseSubstitution {
 
   /// [wasSubstituted] True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
-  Boolean? get wasSubstituted => throw _privateConstructorUsedError;
+  bool? get wasSubstituted => throw _privateConstructorUsedError;
 
   /// [wasSubstitutedElement] Extensions for wasSubstituted
   @JsonKey(name: '_wasSubstituted')
@@ -15895,7 +15895,7 @@ abstract class $MedicationDispenseSubstitutionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
+      bool? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
       CodeableConcept? type,
       List<CodeableConcept>? reason,
@@ -16002,7 +16002,7 @@ abstract class _$$_MedicationDispenseSubstitutionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? wasSubstituted,
+      bool? wasSubstituted,
       @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
       CodeableConcept? type,
       List<CodeableConcept>? reason,
@@ -16314,7 +16314,7 @@ abstract class _MedicationDispenseSubstitution
 
   /// [wasSubstituted] True if the dispenser dispensed a different drug or
   ///  product from what was prescribed.
-  Boolean? get wasSubstituted;
+  bool? get wasSubstituted;
   @override
 
   /// [wasSubstitutedElement] Extensions for wasSubstituted
@@ -16363,14 +16363,14 @@ mixin _$MedicationKnowledge {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -16425,7 +16425,7 @@ mixin _$MedicationKnowledge {
   /// [status] A code to indicate if the medication is in active use.  The
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -16544,10 +16544,10 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16556,7 +16556,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? manufacturer,
@@ -16946,10 +16946,10 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16958,7 +16958,7 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? manufacturer,
@@ -17910,7 +17910,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -17919,7 +17919,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -17980,7 +17980,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   /// [status] A code to indicate if the medication is in active use.  The
   /// status refers to the validity about the information of the medication and
   ///  not to its medicinal properties.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -18945,7 +18945,7 @@ mixin _$MedicationKnowledgeIngredient {
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  Boolean? get isActive => throw _privateConstructorUsedError;
+  bool? get isActive => throw _privateConstructorUsedError;
 
   /// [isActiveElement] Extensions for isActive
   @JsonKey(name: '_isActive')
@@ -18976,7 +18976,7 @@ abstract class $MedicationKnowledgeIngredientCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      Boolean? isActive,
+      bool? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strength});
 
@@ -19109,7 +19109,7 @@ abstract class _$$_MedicationKnowledgeIngredientCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      Boolean? isActive,
+      bool? isActive,
       @JsonKey(name: '_isActive') Element? isActiveElement,
       Ratio? strength});
 
@@ -19411,7 +19411,7 @@ abstract class _MedicationKnowledgeIngredient
 
   /// [isActive] Indication of whether this ingredient affects the therapeutic
   ///  action of the drug.
-  Boolean? get isActive;
+  bool? get isActive;
   @override
 
   /// [isActiveElement] Extensions for isActive
@@ -22568,7 +22568,7 @@ mixin _$MedicationKnowledgeDrugCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] Description of the characteristic.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -22598,7 +22598,7 @@ abstract class $MedicationKnowledgeDrugCharacteristicCopyWith<$Res> {
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   $CodeableConceptCopyWith<$Res>? get type;
@@ -22757,7 +22757,7 @@ abstract class _$$_MedicationKnowledgeDrugCharacteristicCopyWith<$Res>
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Quantity? valueQuantity,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement});
 
   @override
@@ -23103,7 +23103,7 @@ abstract class _MedicationKnowledgeDrugCharacteristic
   @override
 
   /// [valueBase64Binary] Description of the characteristic.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -23638,7 +23638,7 @@ mixin _$MedicationKnowledgeSubstitution {
 
   /// [allowed] Specifies if regulation allows for changes in the medication
   ///  when dispensing.
-  Boolean? get allowed => throw _privateConstructorUsedError;
+  bool? get allowed => throw _privateConstructorUsedError;
 
   /// [allowedElement] Extensions for allowed
   @JsonKey(name: '_allowed')
@@ -23663,7 +23663,7 @@ abstract class $MedicationKnowledgeSubstitutionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Boolean? allowed,
+      bool? allowed,
       @JsonKey(name: '_allowed') Element? allowedElement});
 
   $CodeableConceptCopyWith<$Res> get type;
@@ -23754,7 +23754,7 @@ abstract class _$$_MedicationKnowledgeSubstitutionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Boolean? allowed,
+      bool? allowed,
       @JsonKey(name: '_allowed') Element? allowedElement});
 
   @override
@@ -24014,7 +24014,7 @@ abstract class _MedicationKnowledgeSubstitution
 
   /// [allowed] Specifies if regulation allows for changes in the medication
   ///  when dispensing.
-  Boolean? get allowed;
+  bool? get allowed;
   @override
 
   /// [allowedElement] Extensions for allowed
@@ -25234,14 +25234,14 @@ mixin _$MedicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -25296,7 +25296,7 @@ mixin _$MedicationRequest {
 
   /// [status] A code specifying the current state of the order.  Generally,
   ///  this will be active or completed state.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -25307,7 +25307,7 @@ mixin _$MedicationRequest {
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
-  Code? get intent => throw _privateConstructorUsedError;
+  String? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -25320,7 +25320,7 @@ mixin _$MedicationRequest {
 
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -25328,7 +25328,7 @@ mixin _$MedicationRequest {
 
   /// [doNotPerform] If true indicates that the provider is asking for the
   ///  medication request not to occur.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  bool? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -25337,7 +25337,7 @@ mixin _$MedicationRequest {
   /// [reportedBoolean] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  Boolean? get reportedBoolean => throw _privateConstructorUsedError;
+  bool? get reportedBoolean => throw _privateConstructorUsedError;
 
   /// [reportedBooleanElement] Extensions for reportedBoolean
   @JsonKey(name: '_reportedBoolean')
@@ -25500,10 +25500,10 @@ abstract class $MedicationRequestCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -25512,21 +25512,21 @@ abstract class $MedicationRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      Boolean? reportedBoolean,
+      bool? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element? reportedBooleanElement,
       Reference? reportedReference,
@@ -26185,10 +26185,10 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -26197,21 +26197,21 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      Boolean? reportedBoolean,
+      bool? reportedBoolean,
       @JsonKey(name: '_reportedBoolean')
           Element? reportedBooleanElement,
       Reference? reportedReference,
@@ -27462,7 +27462,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -27471,7 +27471,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -27532,7 +27532,7 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   /// [status] A code specifying the current state of the order.  Generally,
   ///  this will be active or completed state.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -27546,7 +27546,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
 
   /// [intent] Whether the request is a proposal, plan, or an original order.
-  Code? get intent;
+  String? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -27562,7 +27562,7 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   /// [priority] Indicates how quickly the Medication Request should be
   ///  addressed with respect to other requests.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -27572,7 +27572,7 @@ abstract class _MedicationRequest extends MedicationRequest {
 
   /// [doNotPerform] If true indicates that the provider is asking for the
   ///  medication request not to occur.
-  Boolean? get doNotPerform;
+  bool? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
@@ -27583,7 +27583,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   /// [reportedBoolean] Indicates if this record was captured as a secondary
   /// 'reported' record rather than as an original primary source-of-truth
   ///  record.  It may also indicate the source of the report.
-  Boolean? get reportedBoolean;
+  bool? get reportedBoolean;
   @override
 
   /// [reportedBooleanElement] Extensions for reportedBoolean
@@ -28893,7 +28893,7 @@ mixin _$MedicationRequestSubstitution {
 
   /// [allowedBoolean] True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
-  Boolean? get allowedBoolean => throw _privateConstructorUsedError;
+  bool? get allowedBoolean => throw _privateConstructorUsedError;
 
   /// [allowedBooleanElement] Extensions for allowedBoolean
   @JsonKey(name: '_allowedBoolean')
@@ -28926,7 +28926,7 @@ abstract class $MedicationRequestSubstitutionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
+      bool? allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
       CodeableConcept? allowedCodeableConcept,
       CodeableConcept? reason});
@@ -29041,7 +29041,7 @@ abstract class _$$_MedicationRequestSubstitutionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? allowedBoolean,
+      bool? allowedBoolean,
       @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
       CodeableConcept? allowedCodeableConcept,
       CodeableConcept? reason});
@@ -29315,7 +29315,7 @@ abstract class _MedicationRequestSubstitution
 
   /// [allowedBoolean] True if the prescriber allows a different drug to be
   ///  dispensed from what was prescribed.
-  Boolean? get allowedBoolean;
+  bool? get allowedBoolean;
   @override
 
   /// [allowedBooleanElement] Extensions for allowedBoolean
@@ -29359,14 +29359,14 @@ mixin _$MedicationStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -29430,7 +29430,7 @@ mixin _$MedicationStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the medication used that this statement is about.  Generally,
   ///  this will be active or completed.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -29529,10 +29529,10 @@ abstract class $MedicationStatementCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -29543,7 +29543,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -29944,10 +29944,10 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -29958,7 +29958,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? statusReason,
@@ -30787,7 +30787,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -30796,7 +30796,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -30868,7 +30868,7 @@ abstract class _MedicationStatement extends MedicationStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the medication used that this statement is about.  Generally,
   ///  this will be active or completed.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status

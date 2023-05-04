@@ -134,14 +134,14 @@ class CatalogEntry with Resource, _$CatalogEntry {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -193,7 +193,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     CodeableConcept? type,
 
     /// [orderable] Whether the entry represents an orderable item.
-    Boolean? orderable,
+    bool? orderable,
 
     /// [orderableElement] Extensions for orderable
     @JsonKey(name: '_orderable')
@@ -211,7 +211,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
 
     /// [status] Used to support catalog exchange even for unsupported products,
     ///  e.g. getting list of medications even if not prescribable.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -346,7 +346,7 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
 
     /// [relationtype] The type of relation to the related item: child, parent,
     ///  packageContent, containerPackage, usedIn, uses, requires, etc.
-    Code? relationtype,
+    String? relationtype,
 
     /// [relationtypeElement] Extensions for relationtype
     @JsonKey(name: '_relationtype') Element? relationtypeElement,
@@ -531,14 +531,14 @@ class Composition with Resource, _$Composition {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -588,7 +588,7 @@ class Composition with Resource, _$Composition {
 
     /// [status] The workflow/clinical status of this composition. The status is
     ///  a marker for the clinical standing of the document.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -635,7 +635,7 @@ class Composition with Resource, _$Composition {
 
     /// [confidentiality] The code specifying the level of confidentiality of the
     ///  Composition.
-    Code? confidentiality,
+    String? confidentiality,
 
     /// [confidentialityElement] Extensions for confidentiality
     @JsonKey(name: '_confidentiality')
@@ -769,7 +769,7 @@ class CompositionAttester with _$CompositionAttester {
     List<FhirExtension>? modifierExtension,
 
     /// [mode] The type of attestation the authenticator offers.
-    Code? mode,
+    String? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -894,7 +894,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
 
     /// [code] The type of relationship that this composition has with anther
     ///  composition or document.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1220,7 +1220,7 @@ class CompositionSection with _$CompositionSection {
     /// represents a snapshot of a list of items from another source, or whether
     /// it is a prepared list where items may be marked as added, modified or
     ///  deleted.
-    Code? mode,
+    String? mode,
 
     /// [modeElement] Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1401,14 +1401,14 @@ class DocumentManifest with Resource, _$DocumentManifest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1461,7 +1461,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<Identifier>? identifier,
 
     /// [status] The status of this document manifest.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1498,7 +1498,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
     /// [source] Identifies the source system, application, or software that
     ///  produced the document manifest.
-    FhirUri? source,
+    String? source,
 
     /// [sourceElement] Extensions for source
     @JsonKey(name: '_source')
@@ -1801,14 +1801,14 @@ class DocumentReference with Resource, _$DocumentReference {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1863,14 +1863,14 @@ class DocumentReference with Resource, _$DocumentReference {
     List<Identifier>? identifier,
 
     /// [status] The status of this document reference.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
         Element? statusElement,
 
     /// [docStatus] The status of the underlying document.
-    Code? docStatus,
+    String? docStatus,
 
     /// [docStatusElement] Extensions for docStatus
     @JsonKey(name: '_docStatus')
@@ -2039,7 +2039,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 
     /// [code] The type of relationship that this document has with anther
     ///  document.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,

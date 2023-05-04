@@ -60,14 +60,14 @@ class AdministrableProductDefinition
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -90,7 +90,7 @@ class AdministrableProductDefinition
     List<Identifier>? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -189,13 +189,13 @@ class AdministrableProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -558,13 +558,13 @@ class Ingredient with Resource, _$Ingredient {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -586,7 +586,7 @@ class Ingredient with Resource, _$Ingredient {
     Identifier? identifier,
 
     /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status') Element? statusElement,
@@ -604,7 +604,7 @@ class Ingredient with Resource, _$Ingredient {
     CodeableConcept? group,
 
     /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-    Boolean? allergenicIndicator,
+    bool? allergenicIndicator,
 
     /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
@@ -675,7 +675,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
     List<FhirExtension>? modifierExtension,
 
     /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-    Code? role,
+    String? role,
 
     /// [roleElement] (_role): Extensions for role;
     @JsonKey(name: '_role') Element? roleElement,
@@ -1062,13 +1062,13 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -1089,7 +1089,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     List<Identifier>? identifier,
 
     /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-    Code? type,
+    String? type,
 
     /// [typeElement] (_type): Extensions for type;
     @JsonKey(name: '_type') Element? typeElement,
@@ -1756,14 +1756,14 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -1787,7 +1787,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     List<Identifier>? identifier,
 
     /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-    Code? status,
+    String? status,
 
     /// [statusElement] (_status): Extensions for status;
     @JsonKey(name: '_status')
@@ -1889,13 +1889,13 @@ class ManufacturedItemDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2045,14 +2045,14 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -2710,13 +2710,13 @@ class MedicinalProductDefinitionCharacteristic
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.text.;
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.text.;
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -2840,14 +2840,14 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language')
@@ -2913,7 +2913,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     List<CodeableConcept>? characteristic,
 
     /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-    Boolean? copackagedIndicator,
+    bool? copackagedIndicator,
 
     /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
     @JsonKey(name: '_copackagedIndicator')
@@ -3347,13 +3347,13 @@ class PackagedProductDefinitionProperty
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the characteristic.;
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the characteristic.;
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -3540,13 +3540,13 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -3820,13 +3820,13 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
-    Code? language,
+    String? language,
 
     /// [languageElement] (_language): Extensions for language;
     @JsonKey(name: '_language') Element? languageElement,
@@ -4108,13 +4108,13 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
     Quantity? valueQuantity,
 
     /// [valueDate] A value for the property.;
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] (_valueDate): Extensions for valueDate;
     @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueBoolean] A value for the property.;
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -4581,7 +4581,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
     CodeableConcept? status,
 
     /// [preferred] If this is the preferred name for this substance.;
-    Boolean? preferred,
+    bool? preferred,
 
     /// [preferredElement] (_preferred): Extensions for preferred;
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -4779,7 +4779,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
     required CodeableConcept type,
 
     /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-    Boolean? isDefining,
+    bool? isDefining,
 
     /// [isDefiningElement] (_isDefining): Extensions for isDefining;
     @JsonKey(name: '_isDefining') Element? isDefiningElement,

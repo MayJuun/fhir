@@ -36,14 +36,14 @@ mixin _$Group {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -93,7 +93,7 @@ mixin _$Group {
 
   /// [active] Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -101,7 +101,7 @@ mixin _$Group {
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -110,7 +110,7 @@ mixin _$Group {
   /// [actual] If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
-  Boolean? get actual => throw _privateConstructorUsedError;
+  bool? get actual => throw _privateConstructorUsedError;
 
   /// [actualElement] Extensions for actual
   @JsonKey(name: '_actual')
@@ -163,10 +163,10 @@ abstract class $GroupCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -175,13 +175,13 @@ abstract class $GroupCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? actual,
+      bool? actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -500,10 +500,10 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -512,13 +512,13 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? actual,
+      bool? actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -1141,7 +1141,7 @@ abstract class _Group extends Group {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1150,7 +1150,7 @@ abstract class _Group extends Group {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1206,7 +1206,7 @@ abstract class _Group extends Group {
 
   /// [active] Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -1216,7 +1216,7 @@ abstract class _Group extends Group {
 
   /// [type] Identifies the broad classification of the kind of resources the
   ///  group includes.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -1227,7 +1227,7 @@ abstract class _Group extends Group {
   /// [actual] If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
-  Boolean? get actual;
+  bool? get actual;
   @override
 
   /// [actualElement] Extensions for actual
@@ -1323,7 +1323,7 @@ mixin _$GroupCharacteristic {
 
   /// [valueBoolean] The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -1343,7 +1343,7 @@ mixin _$GroupCharacteristic {
 
   /// [exclude] If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
-  Boolean? get exclude => throw _privateConstructorUsedError;
+  bool? get exclude => throw _privateConstructorUsedError;
 
   /// [excludeElement] Extensions for exclude
   @JsonKey(name: '_exclude')
@@ -1371,12 +1371,12 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Boolean? exclude,
+      bool? exclude,
       @JsonKey(name: '_exclude') Element? excludeElement,
       Period? period});
 
@@ -1581,12 +1581,12 @@ abstract class _$$_GroupCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Boolean? exclude,
+      bool? exclude,
       @JsonKey(name: '_exclude') Element? excludeElement,
       Period? period});
 
@@ -1961,7 +1961,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
 
   /// [valueBoolean] The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -1986,7 +1986,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
 
   /// [exclude] If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
-  Boolean? get exclude;
+  bool? get exclude;
   @override
 
   /// [excludeElement] Extensions for exclude
@@ -2048,7 +2048,7 @@ mixin _$GroupMember {
 
   /// [inactive] A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
-  Boolean? get inactive => throw _privateConstructorUsedError;
+  bool? get inactive => throw _privateConstructorUsedError;
 
   /// [inactiveElement] Extensions for inactive
   @JsonKey(name: '_inactive')
@@ -2072,7 +2072,7 @@ abstract class $GroupMemberCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   $ReferenceCopyWith<$Res> get entity;
@@ -2180,7 +2180,7 @@ abstract class _$$_GroupMemberCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference entity,
       Period? period,
-      Boolean? inactive,
+      bool? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   @override
@@ -2457,7 +2457,7 @@ abstract class _GroupMember extends GroupMember {
 
   /// [inactive] A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
-  Boolean? get inactive;
+  bool? get inactive;
   @override
 
   /// [inactiveElement] Extensions for inactive
@@ -2491,14 +2491,14 @@ mixin _$Patient {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2553,7 +2553,7 @@ mixin _$Patient {
   /// It is often used to filter patient lists to exclude inactive patients
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -2568,21 +2568,21 @@ mixin _$Patient {
 
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date of birth for the individual.
-  Date? get birthDate => throw _privateConstructorUsedError;
+  String? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
   Element? get birthDateElement => throw _privateConstructorUsedError;
 
   /// [deceasedBoolean] Indicates if the individual is deceased or not.
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  bool? get deceasedBoolean => throw _privateConstructorUsedError;
 
   /// [deceasedBooleanElement] Extensions for deceasedBoolean
   @JsonKey(name: '_deceasedBoolean')
@@ -2604,7 +2604,7 @@ mixin _$Patient {
 
   /// [multipleBirthBoolean] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  Boolean? get multipleBirthBoolean => throw _privateConstructorUsedError;
+  bool? get multipleBirthBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleBirthBoolean')
   Element? get multipleBirthBooleanElement =>
       throw _privateConstructorUsedError;
@@ -2655,10 +2655,10 @@ abstract class $PatientCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2667,18 +2667,18 @@ abstract class $PatientCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
-      Boolean? deceasedBoolean,
+      bool? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
@@ -2686,7 +2686,7 @@ abstract class $PatientCopyWith<$Res> {
           Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
-      Boolean? multipleBirthBoolean,
+      bool? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element? multipleBirthBooleanElement,
       Integer? multipleBirthInteger,
@@ -3081,10 +3081,10 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3093,18 +3093,18 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
-      Boolean? deceasedBoolean,
+      bool? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
@@ -3112,7 +3112,7 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
-      Boolean? multipleBirthBoolean,
+      bool? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
           Element? multipleBirthBooleanElement,
       Integer? multipleBirthInteger,
@@ -3954,7 +3954,7 @@ abstract class _Patient extends Patient {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3963,7 +3963,7 @@ abstract class _Patient extends Patient {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4024,7 +4024,7 @@ abstract class _Patient extends Patient {
   /// It is often used to filter patient lists to exclude inactive patients
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -4043,7 +4043,7 @@ abstract class _Patient extends Patient {
 
   /// [gender] Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -4052,7 +4052,7 @@ abstract class _Patient extends Patient {
   @override
 
   /// [birthDate] The date of birth for the individual.
-  Date? get birthDate;
+  String? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
@@ -4061,7 +4061,7 @@ abstract class _Patient extends Patient {
   @override
 
   /// [deceasedBoolean] Indicates if the individual is deceased or not.
-  Boolean? get deceasedBoolean;
+  bool? get deceasedBoolean;
   @override
 
   /// [deceasedBooleanElement] Extensions for deceasedBoolean
@@ -4089,7 +4089,7 @@ abstract class _Patient extends Patient {
 
   /// [multipleBirthBoolean] Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
-  Boolean? get multipleBirthBoolean;
+  bool? get multipleBirthBoolean;
   @override
   @JsonKey(name: '_multipleBirthBoolean')
   Element? get multipleBirthBooleanElement;
@@ -4186,7 +4186,7 @@ mixin _$PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -4220,7 +4220,7 @@ abstract class $PatientContactCopyWith<$Res> {
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -4382,7 +4382,7 @@ abstract class _$$_PatientContactCopyWith<$Res>
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
@@ -4749,7 +4749,7 @@ abstract class _PatientContact extends PatientContact {
 
   /// [gender] Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -4814,7 +4814,7 @@ mixin _$PatientCommunication {
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  bool? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] Extensions for preferred
   @JsonKey(name: '_preferred')
@@ -4837,7 +4837,7 @@ abstract class $PatientCommunicationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
@@ -4927,7 +4927,7 @@ abstract class _$$_PatientCommunicationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   @override
@@ -5189,7 +5189,7 @@ abstract class _PatientCommunication extends PatientCommunication {
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  Boolean? get preferred;
+  bool? get preferred;
   @override
 
   /// [preferredElement] Extensions for preferred
@@ -5241,7 +5241,7 @@ mixin _$PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -5264,7 +5264,7 @@ abstract class $PatientLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ReferenceCopyWith<$Res> get other;
@@ -5353,7 +5353,7 @@ abstract class _$$_PatientLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -5605,7 +5605,7 @@ abstract class _PatientLink extends PatientLink {
 
   /// [type] The type of link between this patient resource and another patient
   ///  resource.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -5639,14 +5639,14 @@ mixin _$Person {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5702,14 +5702,14 @@ mixin _$Person {
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   /// [gender] Administrative Gender.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The birth date for the person.
-  Date? get birthDate => throw _privateConstructorUsedError;
+  String? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
@@ -5727,7 +5727,7 @@ mixin _$Person {
   Reference? get managingOrganization => throw _privateConstructorUsedError;
 
   /// [active] Whether this person's record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -5751,10 +5751,10 @@ abstract class $PersonCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5765,16 +5765,16 @@ abstract class $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
       Attachment? photo,
       Reference? managingOrganization,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<PersonLink>? link});
@@ -6048,10 +6048,10 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6062,16 +6062,16 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
       Attachment? photo,
       Reference? managingOrganization,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<PersonLink>? link});
@@ -6661,7 +6661,7 @@ abstract class _Person extends Person {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6670,7 +6670,7 @@ abstract class _Person extends Person {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6734,7 +6734,7 @@ abstract class _Person extends Person {
   @override
 
   /// [gender] Administrative Gender.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -6743,7 +6743,7 @@ abstract class _Person extends Person {
   @override
 
   /// [birthDate] The birth date for the person.
-  Date? get birthDate;
+  String? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
@@ -6766,7 +6766,7 @@ abstract class _Person extends Person {
   @override
 
   /// [active] Whether this person's record is in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -6822,7 +6822,7 @@ mixin _$PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the
   ///  target resource.
-  Code? get assurance => throw _privateConstructorUsedError;
+  String? get assurance => throw _privateConstructorUsedError;
 
   /// [assuranceElement] Extensions for assurance
   @JsonKey(name: '_assurance')
@@ -6845,7 +6845,7 @@ abstract class $PersonLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
+      String? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
@@ -6934,7 +6934,7 @@ abstract class _$$_PersonLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
+      String? assurance,
       @JsonKey(name: '_assurance') Element? assuranceElement});
 
   @override
@@ -7188,7 +7188,7 @@ abstract class _PersonLink extends PersonLink {
 
   /// [assurance] Level of assurance that this link is associated with the
   ///  target resource.
-  Code? get assurance;
+  String? get assurance;
   @override
 
   /// [assuranceElement] Extensions for assurance
@@ -7222,14 +7222,14 @@ mixin _$Practitioner {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7278,7 +7278,7 @@ mixin _$Practitioner {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this practitioner's record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -7299,14 +7299,14 @@ mixin _$Practitioner {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date of birth for the practitioner.
-  Date? get birthDate => throw _privateConstructorUsedError;
+  String? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
@@ -7345,10 +7345,10 @@ abstract class $PractitionerCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7357,16 +7357,16 @@ abstract class $PractitionerCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Attachment>? photo,
@@ -7618,10 +7618,10 @@ abstract class _$$_PractitionerCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7630,16 +7630,16 @@ abstract class _$$_PractitionerCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Attachment>? photo,
@@ -8265,7 +8265,7 @@ abstract class _Practitioner extends Practitioner {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -8274,7 +8274,7 @@ abstract class _Practitioner extends Practitioner {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8329,7 +8329,7 @@ abstract class _Practitioner extends Practitioner {
   @override
 
   /// [active] Whether this practitioner's record is in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -8355,7 +8355,7 @@ abstract class _Practitioner extends Practitioner {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -8364,7 +8364,7 @@ abstract class _Practitioner extends Practitioner {
   @override
 
   /// [birthDate] The date of birth for the practitioner.
-  Date? get birthDate;
+  String? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
@@ -8887,14 +8887,14 @@ mixin _$PractitionerRole {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8943,7 +8943,7 @@ mixin _$PractitionerRole {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this practitioner role record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -9018,10 +9018,10 @@ abstract class $PractitionerRoleCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9030,7 +9030,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -9336,10 +9336,10 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9348,7 +9348,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Period? period,
@@ -10046,7 +10046,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -10055,7 +10055,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10110,7 +10110,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   @override
 
   /// [active] Whether this practitioner role record is in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -10230,7 +10230,7 @@ mixin _$PractitionerRoleAvailableTime {
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay => throw _privateConstructorUsedError;
+  bool? get allDay => throw _privateConstructorUsedError;
 
   /// [allDayElement] Extensions for allDay
   @JsonKey(name: '_allDay')
@@ -10272,7 +10272,7 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -10410,7 +10410,7 @@ abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-      Boolean? allDay,
+      bool? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
       @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
@@ -10786,7 +10786,7 @@ abstract class _PractitionerRoleAvailableTime
 
   /// [allDay] Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
-  Boolean? get allDay;
+  bool? get allDay;
   @override
 
   /// [allDayElement] Extensions for allDay
@@ -11273,14 +11273,14 @@ mixin _$RelatedPerson {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -11329,7 +11329,7 @@ mixin _$RelatedPerson {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this related person record is in active use.
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -11351,14 +11351,14 @@ mixin _$RelatedPerson {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
 
   /// [birthDate] The date on which the related person was born.
-  Date? get birthDate => throw _privateConstructorUsedError;
+  String? get birthDate => throw _privateConstructorUsedError;
 
   /// [birthDateElement] Extensions for birthDate
   @JsonKey(name: '_birthDate')
@@ -11396,10 +11396,10 @@ abstract class $RelatedPersonCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11408,17 +11408,17 @@ abstract class $RelatedPersonCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference patient,
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
@@ -11703,10 +11703,10 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -11715,17 +11715,17 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference patient,
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
-      Date? birthDate,
+      String? birthDate,
       @JsonKey(name: '_birthDate')
           Element? birthDateElement,
       List<Address>? address,
@@ -12372,7 +12372,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -12381,7 +12381,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12436,7 +12436,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
 
   /// [active] Whether this related person record is in active use.
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -12464,7 +12464,7 @@ abstract class _RelatedPerson extends RelatedPerson {
 
   /// [gender] Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -12473,7 +12473,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
 
   /// [birthDate] The date on which the related person was born.
-  Date? get birthDate;
+  String? get birthDate;
   @override
 
   /// [birthDateElement] Extensions for birthDate
@@ -12547,7 +12547,7 @@ mixin _$RelatedPersonCommunication {
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  bool? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] Extensions for preferred
   @JsonKey(name: '_preferred')
@@ -12571,7 +12571,7 @@ abstract class $RelatedPersonCommunicationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   $CodeableConceptCopyWith<$Res> get language;
@@ -12662,7 +12662,7 @@ abstract class _$$_RelatedPersonCommunicationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept language,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement});
 
   @override
@@ -12926,7 +12926,7 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
 
   /// [preferred] Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
-  Boolean? get preferred;
+  bool? get preferred;
   @override
 
   /// [preferredElement] Extensions for preferred

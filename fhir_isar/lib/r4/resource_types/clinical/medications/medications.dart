@@ -188,14 +188,14 @@ class Immunization with Resource, _$Immunization {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -243,7 +243,7 @@ class Immunization with Resource, _$Immunization {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current status of the immunization event.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -290,7 +290,7 @@ class Immunization with Resource, _$Immunization {
     /// [primarySource] An indication that the content of the record is based on
     /// information from the person who administered the vaccine. This reflects
     ///  the context under which the data was originally recorded.
-    Boolean? primarySource,
+    bool? primarySource,
 
     /// [primarySourceElement] Extensions for primarySource
     @JsonKey(name: '_primarySource')
@@ -316,7 +316,7 @@ class Immunization with Resource, _$Immunization {
         Element? lotNumberElement,
 
     /// [expirationDate] Date vaccine batch expires.
-    Date? expirationDate,
+    String? expirationDate,
 
     /// [expirationDateElement] Extensions for expirationDate
     @JsonKey(name: '_expirationDate')
@@ -347,7 +347,7 @@ class Immunization with Resource, _$Immunization {
 
     /// [isSubpotent] Indication if a dose is considered to be subpotent. By
     ///  default, a dose should be considered to be potent.
-    Boolean? isSubpotent,
+    bool? isSubpotent,
 
     /// [isSubpotentElement] Extensions for isSubpotent
     @JsonKey(name: '_isSubpotent')
@@ -600,7 +600,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
 
     /// [reference] Reference pointer to the educational material given to the
     ///  patient if the information was on line.
-    FhirUri? reference,
+    String? reference,
 
     /// [referenceElement] Extensions for reference
     @JsonKey(name: '_reference') Element? referenceElement,
@@ -731,7 +731,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
     Reference? detail,
 
     /// [reported] Self-reported indicator.
-    Boolean? reported,
+    bool? reported,
 
     /// [reportedElement] Extensions for reported
     @JsonKey(name: '_reported') Element? reportedElement,
@@ -1073,14 +1073,14 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1130,7 +1130,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
 
     /// [status] Indicates the current status of the evaluation of the
     ///  vaccination administration event.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1336,14 +1336,14 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1859,14 +1859,14 @@ class Medication with Resource, _$Medication {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1921,7 +1921,7 @@ class Medication with Resource, _$Medication {
     CodeableConcept? code,
 
     /// [status] A code to indicate if the medication is in active use.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2065,7 +2065,7 @@ class MedicationIngredient with _$MedicationIngredient {
 
     /// [isActive] Indication of whether this ingredient affects the therapeutic
     ///  action of the drug.
-    Boolean? isActive,
+    bool? isActive,
 
     /// [isActiveElement] Extensions for isActive
     @JsonKey(name: '_isActive') Element? isActiveElement,
@@ -2387,14 +2387,14 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2462,7 +2462,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// completed.  For some long running administrations such as infusions, it is
     /// possible for an administration to be started but not completed or it may
     ///  be paused while some other process is under way.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3026,14 +3026,14 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3089,7 +3089,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the set of dispense events.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3421,7 +3421,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
 
     /// [wasSubstituted] True if the dispenser dispensed a different drug or
     ///  product from what was prescribed.
-    Boolean? wasSubstituted,
+    bool? wasSubstituted,
 
     /// [wasSubstitutedElement] Extensions for wasSubstituted
     @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
@@ -3628,14 +3628,14 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3689,7 +3689,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// [status] A code to indicate if the medication is in active use.  The
     /// status refers to the validity about the information of the medication and
     ///  not to its medicinal properties.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4095,7 +4095,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
 
     /// [isActive] Indication of whether this ingredient affects the therapeutic
     ///  action of the drug.
-    Boolean? isActive,
+    bool? isActive,
 
     /// [isActiveElement] Extensions for isActive
     @JsonKey(name: '_isActive') Element? isActiveElement,
@@ -4953,7 +4953,7 @@ class MedicationKnowledgeDrugCharacteristic
     Quantity? valueQuantity,
 
     /// [valueBase64Binary] Description of the characteristic.
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -5167,7 +5167,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
 
     /// [allowed] Specifies if regulation allows for changes in the medication
     ///  when dispensing.
-    Boolean? allowed,
+    bool? allowed,
 
     /// [allowedElement] Extensions for allowed
     @JsonKey(name: '_allowed') Element? allowedElement,
@@ -5744,14 +5744,14 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -5805,7 +5805,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 
     /// [status] A code specifying the current state of the order.  Generally,
     ///  this will be active or completed state.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5816,7 +5816,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     CodeableConcept? statusReason,
 
     /// [intent] Whether the request is a proposal, plan, or an original order.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -5829,7 +5829,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 
     /// [priority] Indicates how quickly the Medication Request should be
     ///  addressed with respect to other requests.
-    Code? priority,
+    String? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -5837,7 +5837,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 
     /// [doNotPerform] If true indicates that the provider is asking for the
     ///  medication request not to occur.
-    Boolean? doNotPerform,
+    bool? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
@@ -5846,7 +5846,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// [reportedBoolean] Indicates if this record was captured as a secondary
     /// 'reported' record rather than as an original primary source-of-truth
     ///  record.  It may also indicate the source of the report.
-    Boolean? reportedBoolean,
+    bool? reportedBoolean,
 
     /// [reportedBooleanElement] Extensions for reportedBoolean
     @JsonKey(name: '_reportedBoolean')
@@ -6355,7 +6355,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
 
     /// [allowedBoolean] True if the prescriber allows a different drug to be
     ///  dispensed from what was prescribed.
-    Boolean? allowedBoolean,
+    bool? allowedBoolean,
 
     /// [allowedBooleanElement] Extensions for allowedBoolean
     @JsonKey(name: '_allowedBoolean') Element? allowedBooleanElement,
@@ -6577,14 +6577,14 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -6647,7 +6647,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// [status] A code representing the patient or other source's judgment about
     /// the state of the medication used that this statement is about.  Generally,
     ///  this will be active or completed.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')

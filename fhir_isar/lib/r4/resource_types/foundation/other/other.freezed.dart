@@ -36,14 +36,14 @@ mixin _$Basic {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -101,7 +101,7 @@ mixin _$Basic {
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [created] Identifies when the resource was first created.
-  Date? get created => throw _privateConstructorUsedError;
+  String? get created => throw _privateConstructorUsedError;
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
@@ -126,10 +126,10 @@ abstract class $BasicCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -140,7 +140,7 @@ abstract class $BasicCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
-      Date? created,
+      String? created,
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? author});
@@ -362,10 +362,10 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -376,7 +376,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
-      Date? created,
+      String? created,
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? author});
@@ -822,7 +822,7 @@ abstract class _Basic extends Basic {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -831,7 +831,7 @@ abstract class _Basic extends Basic {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -897,7 +897,7 @@ abstract class _Basic extends Basic {
   @override
 
   /// [created] Identifies when the resource was first created.
-  Date? get created;
+  String? get created;
   @override
 
   /// [createdElement] Extensions for created
@@ -936,14 +936,14 @@ mixin _$Binary {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -951,7 +951,7 @@ mixin _$Binary {
 
   /// [contentType] MimeType of the binary content represented as a standard
   ///  MimeType (BCP 13).
-  Code? get contentType => throw _privateConstructorUsedError;
+  String? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -971,7 +971,7 @@ mixin _$Binary {
   Reference? get securityContext => throw _privateConstructorUsedError;
 
   /// [data] The actual content, base64 encoded.
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  String? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] Extensions for data
   @JsonKey(name: '_data')
@@ -992,17 +992,17 @@ abstract class $BinaryCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       Reference? securityContext,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data')
           Element? dataElement});
 
@@ -1176,17 +1176,17 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       Reference? securityContext,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data')
           Element? dataElement});
 
@@ -1482,7 +1482,7 @@ abstract class _Binary extends Binary {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1491,7 +1491,7 @@ abstract class _Binary extends Binary {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1501,7 +1501,7 @@ abstract class _Binary extends Binary {
 
   /// [contentType] MimeType of the binary content represented as a standard
   ///  MimeType (BCP 13).
-  Code? get contentType;
+  String? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -1524,7 +1524,7 @@ abstract class _Binary extends Binary {
   @override
 
   /// [data] The actual content, base64 encoded.
-  Base64Binary? get data;
+  String? get data;
   @override
 
   /// [dataElement] Extensions for data
@@ -1558,14 +1558,14 @@ mixin _$Bundle {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1577,7 +1577,7 @@ mixin _$Bundle {
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be
   ///  used.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -1626,14 +1626,14 @@ abstract class $BundleCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -1867,14 +1867,14 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -2270,7 +2270,7 @@ abstract class _Bundle extends Bundle {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -2279,7 +2279,7 @@ abstract class _Bundle extends Bundle {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2294,7 +2294,7 @@ abstract class _Bundle extends Bundle {
 
   /// [type] Indicates the purpose of this bundle - how it is intended to be
   ///  used.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -2385,7 +2385,7 @@ mixin _$BundleLink {
   Element? get relationElement => throw _privateConstructorUsedError;
 
   /// [url] The reference details for the link.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -2409,7 +2409,7 @@ abstract class $BundleLinkCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? relation,
       @JsonKey(name: '_relation') Element? relationElement,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   $ElementCopyWith<$Res>? get relationElement;
@@ -2508,7 +2508,7 @@ abstract class _$$_BundleLinkCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? relation,
       @JsonKey(name: '_relation') Element? relationElement,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   @override
@@ -2781,7 +2781,7 @@ abstract class _BundleLink extends BundleLink {
   @override
 
   /// [url] The reference details for the link.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -2839,7 +2839,7 @@ mixin _$BundleEntry {
   /// * fullUrl can be empty on a POST (although it does not need to when
   ///  specifying a temporary id for reference in the bundle)
   /// * Results from operations might involve resources that are not identified.
-  FhirUri? get fullUrl => throw _privateConstructorUsedError;
+  String? get fullUrl => throw _privateConstructorUsedError;
 
   /// [fullUrlElement] Extensions for fullUrl
   @JsonKey(name: '_fullUrl')
@@ -2880,7 +2880,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<BundleLink>? link,
-      FhirUri? fullUrl,
+      String? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
       BundleSearch? search,
@@ -3023,7 +3023,7 @@ abstract class _$$_BundleEntryCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<BundleLink>? link,
-      FhirUri? fullUrl,
+      String? fullUrl,
       @JsonKey(name: '_fullUrl') Element? fullUrlElement,
       Resource? resource,
       BundleSearch? search,
@@ -3365,7 +3365,7 @@ abstract class _BundleEntry extends BundleEntry {
   /// * fullUrl can be empty on a POST (although it does not need to when
   ///  specifying a temporary id for reference in the bundle)
   /// * Results from operations might involve resources that are not identified.
-  FhirUri? get fullUrl;
+  String? get fullUrl;
   @override
 
   /// [fullUrlElement] Extensions for fullUrl
@@ -3437,7 +3437,7 @@ mixin _$BundleSearch {
   /// [mode] Why this entry is in the result set - whether it's included as a
   /// match or because of an _include requirement, or to convey information or
   ///  warning information about the search process.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -3466,7 +3466,7 @@ abstract class $BundleSearchCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -3565,7 +3565,7 @@ abstract class _$$_BundleSearchCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Decimal? score,
       @JsonKey(name: '_score') Element? scoreElement});
@@ -3832,7 +3832,7 @@ abstract class _BundleSearch extends BundleSearch {
   /// [mode] Why this entry is in the result set - whether it's included as a
   /// match or because of an _include requirement, or to convey information or
   ///  warning information about the search process.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -3891,7 +3891,7 @@ mixin _$BundleRequest {
   /// [method] In a transaction or batch, this is the HTTP action to be
   /// executed for this entry. In a history bundle, this indicates the HTTP
   ///  action that occurred.
-  Code? get method => throw _privateConstructorUsedError;
+  String? get method => throw _privateConstructorUsedError;
 
   /// [methodElement] Extensions for method
   @JsonKey(name: '_method')
@@ -3899,7 +3899,7 @@ mixin _$BundleRequest {
 
   /// [url] The URL for this entry, relative to the root (the address to which
   ///  the request is posted).
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -3958,9 +3958,9 @@ abstract class $BundleRequestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? method,
+      String? method,
       @JsonKey(name: '_method') Element? methodElement,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? ifNoneMatch,
       @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
@@ -4157,9 +4157,9 @@ abstract class _$$_BundleRequestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? method,
+      String? method,
       @JsonKey(name: '_method') Element? methodElement,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? ifNoneMatch,
       @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
@@ -4572,7 +4572,7 @@ abstract class _BundleRequest extends BundleRequest {
   /// [method] In a transaction or batch, this is the HTTP action to be
   /// executed for this entry. In a history bundle, this indicates the HTTP
   ///  action that occurred.
-  Code? get method;
+  String? get method;
   @override
 
   /// [methodElement] Extensions for method
@@ -4582,7 +4582,7 @@ abstract class _BundleRequest extends BundleRequest {
 
   /// [url] The URL for this entry, relative to the root (the address to which
   ///  the request is posted).
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -4685,7 +4685,7 @@ mixin _$BundleResponse {
 
   /// [location] The location header created by processing this operation,
   ///  populated if the operation returns a location.
-  FhirUri? get location => throw _privateConstructorUsedError;
+  String? get location => throw _privateConstructorUsedError;
 
   /// [locationElement] Extensions for location
   @JsonKey(name: '_location')
@@ -4731,7 +4731,7 @@ abstract class $BundleResponseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? status,
       @JsonKey(name: '_status') Element? statusElement,
-      FhirUri? location,
+      String? location,
       @JsonKey(name: '_location') Element? locationElement,
       String? etag,
       @JsonKey(name: '_etag') Element? etagElement,
@@ -4886,7 +4886,7 @@ abstract class _$$_BundleResponseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? status,
       @JsonKey(name: '_status') Element? statusElement,
-      FhirUri? location,
+      String? location,
       @JsonKey(name: '_location') Element? locationElement,
       String? etag,
       @JsonKey(name: '_etag') Element? etagElement,
@@ -5247,7 +5247,7 @@ abstract class _BundleResponse extends BundleResponse {
 
   /// [location] The location header created by processing this operation,
   ///  populated if the operation returns a location.
-  FhirUri? get location;
+  String? get location;
   @override
 
   /// [locationElement] Extensions for location
@@ -5308,14 +5308,14 @@ mixin _$Linkage {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5362,7 +5362,7 @@ mixin _$Linkage {
 
   /// [active] Indicates whether the asserted set of linkages are considered to
   ///  be "in effect".
-  Boolean? get active => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
@@ -5393,10 +5393,10 @@ abstract class $LinkageCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5404,7 +5404,7 @@ abstract class $LinkageCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
@@ -5596,10 +5596,10 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5607,7 +5607,7 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? active,
+      bool? active,
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
@@ -6024,7 +6024,7 @@ abstract class _Linkage extends Linkage {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6033,7 +6033,7 @@ abstract class _Linkage extends Linkage {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6085,7 +6085,7 @@ abstract class _Linkage extends Linkage {
 
   /// [active] Indicates whether the asserted set of linkages are considered to
   ///  be "in effect".
-  Boolean? get active;
+  bool? get active;
   @override
 
   /// [activeElement] Extensions for active
@@ -6146,7 +6146,7 @@ mixin _$LinkageItem {
 
   /// [type] Distinguishes which item is "source of truth" (if any) and which
   ///  items are no longer considered to be current representations.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6171,7 +6171,7 @@ abstract class $LinkageItemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -6260,7 +6260,7 @@ abstract class _$$_LinkageItemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -6510,7 +6510,7 @@ abstract class _LinkageItem extends LinkageItem {
 
   /// [type] Distinguishes which item is "source of truth" (if any) and which
   ///  items are no longer considered to be current representations.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -6548,14 +6548,14 @@ mixin _$MessageHeader {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6612,7 +6612,7 @@ mixin _$MessageHeader {
   /// specification have the system value
   /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
   ///  to the EventDefinition.
-  FhirUri? get eventUri => throw _privateConstructorUsedError;
+  String? get eventUri => throw _privateConstructorUsedError;
 
   /// [eventUriElement] Extensions for eventUri
   @JsonKey(name: '_eventUri')
@@ -6659,7 +6659,7 @@ mixin _$MessageHeader {
   List<Reference>? get focus => throw _privateConstructorUsedError;
 
   /// [definition] Permanent link to the MessageDefinition for this message.
-  Canonical? get definition => throw _privateConstructorUsedError;
+  String? get definition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6678,10 +6678,10 @@ abstract class $MessageHeaderCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6690,7 +6690,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? eventCoding,
-      FhirUri? eventUri,
+      String? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
       List<MessageHeaderDestination>? destination,
@@ -6702,7 +6702,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       CodeableConcept? reason,
       MessageHeaderResponse? response,
       List<Reference>? focus,
-      Canonical? definition});
+      String? definition});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7023,10 +7023,10 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7035,7 +7035,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? eventCoding,
-      FhirUri? eventUri,
+      String? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
       List<MessageHeaderDestination>? destination,
@@ -7047,7 +7047,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
       CodeableConcept? reason,
       MessageHeaderResponse? response,
       List<Reference>? focus,
-      Canonical? definition});
+      String? definition});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7627,7 +7627,7 @@ abstract class _MessageHeader extends MessageHeader {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -7636,7 +7636,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7699,7 +7699,7 @@ abstract class _MessageHeader extends MessageHeader {
   /// specification have the system value
   /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
   ///  to the EventDefinition.
-  FhirUri? get eventUri;
+  String? get eventUri;
   @override
 
   /// [eventUriElement] Extensions for eventUri
@@ -7756,7 +7756,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
 
   /// [definition] Permanent link to the MessageDefinition for this message.
-  Canonical? get definition;
+  String? get definition;
   @override
   @JsonKey(ignore: true)
   _$$_MessageHeaderCopyWith<_$_MessageHeader> get copyWith =>
@@ -9006,7 +9006,7 @@ mixin _$MessageHeaderResponse {
 
   /// [code] Code that identifies the type of response to the message - whether
   ///  it was successful or not, and whether it should be resent or not.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -9033,7 +9033,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Id? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference? details});
 
@@ -9152,7 +9152,7 @@ abstract class _$$_MessageHeaderResponseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Id? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference? details});
 
@@ -9444,7 +9444,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
 
   /// [code] Code that identifies the type of response to the message - whether
   ///  it was successful or not, and whether it should be resent or not.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -9482,14 +9482,14 @@ mixin _$OperationOutcome {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9555,10 +9555,10 @@ abstract class $OperationOutcomeCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9714,10 +9714,10 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10088,7 +10088,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -10097,7 +10097,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10194,7 +10194,7 @@ mixin _$OperationOutcomeIssue {
 
   /// [severity] Indicates whether the issue indicates a variation from
   ///  successful processing.
-  Code? get severity => throw _privateConstructorUsedError;
+  String? get severity => throw _privateConstructorUsedError;
 
   /// [severityElement] Extensions for severity
   @JsonKey(name: '_severity')
@@ -10204,7 +10204,7 @@ mixin _$OperationOutcomeIssue {
   /// OperationOutcome SHALL choose the most applicable code from the IssueType
   /// value set, and may additional provide its own code for the error in the
   ///  details element.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -10260,9 +10260,9 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity') Element? severityElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
@@ -10428,9 +10428,9 @@ abstract class _$$_OperationOutcomeIssueCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity') Element? severityElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
@@ -10874,7 +10874,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
 
   /// [severity] Indicates whether the issue indicates a variation from
   ///  successful processing.
-  Code? get severity;
+  String? get severity;
   @override
 
   /// [severityElement] Extensions for severity
@@ -10886,7 +10886,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   /// OperationOutcome SHALL choose the most applicable code from the IssueType
   /// value set, and may additional provide its own code for the error in the
   ///  details element.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -10961,14 +10961,14 @@ mixin _$Parameters {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10995,10 +10995,10 @@ abstract class $ParametersCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       List<ParametersParameter>? parameter});
@@ -11116,10 +11116,10 @@ abstract class _$$_ParametersCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       List<ParametersParameter>? parameter});
@@ -11350,7 +11350,7 @@ abstract class _Parameters extends Parameters {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11359,7 +11359,7 @@ abstract class _Parameters extends Parameters {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11418,35 +11418,35 @@ mixin _$ParametersParameter {
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [valueBase64Binary] If the parameter is a data type.
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
   Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] If the parameter is a data type.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
 
   /// [valueCanonical] If the parameter is a data type.
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  String? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
   Element? get valueCanonicalElement => throw _privateConstructorUsedError;
 
   /// [valueCode] If the parameter is a data type.
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
   Element? get valueCodeElement => throw _privateConstructorUsedError;
 
   /// [valueDate] If the parameter is a data type.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -11530,7 +11530,7 @@ mixin _$ParametersParameter {
   Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
 
   /// [valueUri] If the parameter is a data type.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -11673,15 +11673,15 @@ abstract class $ParametersParameterCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -11705,7 +11705,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -12828,15 +12828,15 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -12860,7 +12860,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -14244,7 +14244,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueBase64Binary] If the parameter is a data type.
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -14253,7 +14253,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueBoolean] If the parameter is a data type.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -14262,7 +14262,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueCanonical] If the parameter is a data type.
-  Canonical? get valueCanonical;
+  String? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -14271,7 +14271,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueCode] If the parameter is a data type.
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -14280,7 +14280,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueDate] If the parameter is a data type.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -14388,7 +14388,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueUri] If the parameter is a data type.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -14573,14 +14573,14 @@ mixin _$Subscription {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -14627,7 +14627,7 @@ mixin _$Subscription {
 
   /// [status] The status of the subscription, which marks the server state for
   ///  managing the subscription.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -14688,10 +14688,10 @@ abstract class $SubscriptionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14699,7 +14699,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ContactPoint>? contact,
@@ -14992,10 +14992,10 @@ abstract class _$$_SubscriptionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15003,7 +15003,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ContactPoint>? contact,
@@ -15565,7 +15565,7 @@ abstract class _Subscription extends Subscription {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -15574,7 +15574,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -15626,7 +15626,7 @@ abstract class _Subscription extends Subscription {
 
   /// [status] The status of the subscription, which marks the server state for
   ///  managing the subscription.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -15722,7 +15722,7 @@ mixin _$SubscriptionChannel {
       throw _privateConstructorUsedError;
 
   /// [type] The type of channel to send notifications on.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -15741,7 +15741,7 @@ mixin _$SubscriptionChannel {
   /// present, then there is no payload in the notification, just a
   /// notification. The mime type "text/plain" may also be used for Email and
   ///  SMS subscriptions.
-  Code? get payload => throw _privateConstructorUsedError;
+  String? get payload => throw _privateConstructorUsedError;
 
   /// [payloadElement] Extensions for payload
   @JsonKey(name: '_payload')
@@ -15771,11 +15771,11 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
-      Code? payload,
+      String? payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element?>? headerElement});
@@ -15907,11 +15907,11 @@ abstract class _$$_SubscriptionChannelCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       FhirUrl? endpoint,
       @JsonKey(name: '_endpoint') Element? endpointElement,
-      Code? payload,
+      String? payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       List<String>? header,
       @JsonKey(name: '_header') List<Element?>? headerElement});
@@ -16262,7 +16262,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   @override
 
   /// [type] The type of channel to send notifications on.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -16285,7 +16285,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   /// present, then there is no payload in the notification, just a
   /// notification. The mime type "text/plain" may also be used for Email and
   ///  SMS subscriptions.
-  Code? get payload;
+  String? get payload;
   @override
 
   /// [payloadElement] Extensions for payload
@@ -16323,14 +16323,14 @@ mixin _$SubscriptionStatus {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -16352,14 +16352,14 @@ mixin _$SubscriptionStatus {
       throw _privateConstructorUsedError;
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [type] The type of event being conveyed with this notificaiton.;
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] (_type): Extensions for type;
   @JsonKey(name: '_type')
@@ -16380,7 +16380,7 @@ mixin _$SubscriptionStatus {
   Reference get subscription => throw _privateConstructorUsedError;
 
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
-  Canonical? get topic => throw _privateConstructorUsedError;
+  String? get topic => throw _privateConstructorUsedError;
 
   /// [error] A record of errors that occurred when the server processed a notification.;
   List<CodeableConcept>? get error => throw _privateConstructorUsedError;
@@ -16401,10 +16401,10 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16412,10 +16412,10 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -16423,7 +16423,7 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
           Element? eventsSinceSubscriptionStartElement,
       List<SubscriptionStatusNotificationEvent>? notificationEvent,
       Reference subscription,
-      Canonical? topic,
+      String? topic,
       List<CodeableConcept>? error});
 
   $MetaCopyWith<$Res>? get meta;
@@ -16667,10 +16667,10 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16678,10 +16678,10 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -16689,7 +16689,7 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
           Element? eventsSinceSubscriptionStartElement,
       List<SubscriptionStatusNotificationEvent>? notificationEvent,
       Reference subscription,
-      Canonical? topic,
+      String? topic,
       List<CodeableConcept>? error});
 
   @override
@@ -17154,7 +17154,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -17163,7 +17163,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -17190,7 +17190,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [status] The status of the subscription, which marks the server state for managing the subscription.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -17199,7 +17199,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [type] The type of event being conveyed with this notificaiton.;
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] (_type): Extensions for type;
@@ -17223,7 +17223,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
 
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
-  Canonical? get topic;
+  String? get topic;
   @override
 
   /// [error] A record of errors that occurred when the server processed a notification.;
@@ -17726,14 +17726,14 @@ mixin _$SubscriptionTopic {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -17755,7 +17755,7 @@ mixin _$SubscriptionTopic {
       throw _privateConstructorUsedError;
 
   /// [url] An absolute URI that is used to identify this subscription topic when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this subscription topic is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the subscription topic is stored on different servers.;
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] (_url): Extensions for url;
   @JsonKey(name: '_url')
@@ -17780,14 +17780,14 @@ mixin _$SubscriptionTopic {
   List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The current state of the SubscriptionTopic.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.;
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] (_experimental): Extensions for experimental;
   @JsonKey(name: '_experimental')
@@ -17836,10 +17836,10 @@ mixin _$SubscriptionTopic {
   /// [copyrightElement] (_copyright): Extensions for copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -17868,15 +17868,15 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -17884,9 +17884,9 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -17901,9 +17901,9 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<SubscriptionTopicResourceTrigger>? resourceTrigger,
@@ -18390,15 +18390,15 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
@@ -18406,9 +18406,9 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -18423,9 +18423,9 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<SubscriptionTopicResourceTrigger>? resourceTrigger,
@@ -19284,7 +19284,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -19293,7 +19293,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -19320,7 +19320,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [url] An absolute URI that is used to identify this subscription topic when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this subscription topic is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the subscription topic is stored on different servers.;
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] (_url): Extensions for url;
@@ -19353,7 +19353,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [status] The current state of the SubscriptionTopic.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -19362,7 +19362,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
 
   /// [experimental] A flag to indicate that this TopSubscriptionTopicic is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.;
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] (_experimental): Extensions for experimental;
@@ -19426,12 +19426,12 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
@@ -19466,7 +19466,7 @@ mixin _$SubscriptionTopicResourceTrigger {
   Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  FhirUri? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
   List<Code>? get supportedInteraction => throw _privateConstructorUsedError;
@@ -19501,7 +19501,7 @@ abstract class $SubscriptionTopicResourceTriggerCopyWith<$Res> {
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
       List<Code>? supportedInteraction,
@@ -19664,7 +19664,7 @@ abstract class _$$_SubscriptionTopicResourceTriggerCopyWith<$Res>
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
       List<Code>? supportedInteraction,
@@ -19970,7 +19970,7 @@ abstract class _SubscriptionTopicResourceTrigger
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  FhirUri? get resource;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
   Element? get resourceElement;
@@ -20008,16 +20008,16 @@ mixin _$SubscriptionTopicQueryCriteria {
   String? get previous => throw _privateConstructorUsedError;
   @JsonKey(name: '_previous')
   Element? get previousElement => throw _privateConstructorUsedError;
-  Code? get resultForCreate => throw _privateConstructorUsedError;
+  String? get resultForCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_resultForCreate')
   Element? get resultForCreateElement => throw _privateConstructorUsedError;
   String? get current => throw _privateConstructorUsedError;
   @JsonKey(name: '_current')
   Element? get currentElement => throw _privateConstructorUsedError;
-  Code? get resultForDelete => throw _privateConstructorUsedError;
+  String? get resultForDelete => throw _privateConstructorUsedError;
   @JsonKey(name: '_resultForDelete')
   Element? get resultForDeleteElement => throw _privateConstructorUsedError;
-  Boolean? get requireBoth => throw _privateConstructorUsedError;
+  bool? get requireBoth => throw _privateConstructorUsedError;
   @JsonKey(name: '_requireBoth')
   Element? get requireBothElement => throw _privateConstructorUsedError;
 
@@ -20041,13 +20041,13 @@ abstract class $SubscriptionTopicQueryCriteriaCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? previous,
       @JsonKey(name: '_previous') Element? previousElement,
-      Code? resultForCreate,
+      String? resultForCreate,
       @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
       String? current,
       @JsonKey(name: '_current') Element? currentElement,
-      Code? resultForDelete,
+      String? resultForDelete,
       @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-      Boolean? requireBoth,
+      bool? requireBoth,
       @JsonKey(name: '_requireBoth') Element? requireBothElement});
 
   $ElementCopyWith<$Res>? get previousElement;
@@ -20217,13 +20217,13 @@ abstract class _$$_SubscriptionTopicQueryCriteriaCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? previous,
       @JsonKey(name: '_previous') Element? previousElement,
-      Code? resultForCreate,
+      String? resultForCreate,
       @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
       String? current,
       @JsonKey(name: '_current') Element? currentElement,
-      Code? resultForDelete,
+      String? resultForDelete,
       @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-      Boolean? requireBoth,
+      bool? requireBoth,
       @JsonKey(name: '_requireBoth') Element? requireBothElement});
 
   @override
@@ -20508,7 +20508,7 @@ abstract class _SubscriptionTopicQueryCriteria
   @JsonKey(name: '_previous')
   Element? get previousElement;
   @override
-  Code? get resultForCreate;
+  String? get resultForCreate;
   @override
   @JsonKey(name: '_resultForCreate')
   Element? get resultForCreateElement;
@@ -20518,12 +20518,12 @@ abstract class _SubscriptionTopicQueryCriteria
   @JsonKey(name: '_current')
   Element? get currentElement;
   @override
-  Code? get resultForDelete;
+  String? get resultForDelete;
   @override
   @JsonKey(name: '_resultForDelete')
   Element? get resultForDeleteElement;
   @override
-  Boolean? get requireBoth;
+  bool? get requireBoth;
   @override
   @JsonKey(name: '_requireBoth')
   Element? get requireBothElement;
@@ -20549,7 +20549,7 @@ mixin _$SubscriptionTopicEventTrigger {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   CodeableConcept get event => throw _privateConstructorUsedError;
-  FhirUri? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
 
@@ -20574,7 +20574,7 @@ abstract class $SubscriptionTopicEventTriggerCopyWith<$Res> {
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept event,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -20690,7 +20690,7 @@ abstract class _$$_SubscriptionTopicEventTriggerCopyWith<$Res>
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept event,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement});
 
   @override
@@ -20903,7 +20903,7 @@ abstract class _SubscriptionTopicEventTrigger
   @override
   CodeableConcept get event;
   @override
-  FhirUri? get resource;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
   Element? get resourceElement;
@@ -20928,13 +20928,13 @@ mixin _$SubscriptionTopicCanFilterBy {
   Markdown? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  FhirUri? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
   String? get filterParameter => throw _privateConstructorUsedError;
   @JsonKey(name: '_filterParameter')
   Element? get filterParameterElement => throw _privateConstructorUsedError;
-  FhirUri? get filterDefinition => throw _privateConstructorUsedError;
+  String? get filterDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_filterDefinition')
   Element? get filterDefinitionElement => throw _privateConstructorUsedError;
   List<Code>? get modifier => throw _privateConstructorUsedError;
@@ -20961,11 +20961,11 @@ abstract class $SubscriptionTopicCanFilterByCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? filterParameter,
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-      FhirUri? filterDefinition,
+      String? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
       List<Code>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
@@ -21124,11 +21124,11 @@ abstract class _$$_SubscriptionTopicCanFilterByCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? filterParameter,
       @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-      FhirUri? filterDefinition,
+      String? filterDefinition,
       @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
       List<Code>? modifier,
       @JsonKey(name: '_modifier') List<Element>? modifierElement});
@@ -21429,7 +21429,7 @@ abstract class _SubscriptionTopicCanFilterBy
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  FhirUri? get resource;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
   Element? get resourceElement;
@@ -21439,7 +21439,7 @@ abstract class _SubscriptionTopicCanFilterBy
   @JsonKey(name: '_filterParameter')
   Element? get filterParameterElement;
   @override
-  FhirUri? get filterDefinition;
+  String? get filterDefinition;
   @override
   @JsonKey(name: '_filterDefinition')
   Element? get filterDefinitionElement;
@@ -21466,7 +21466,7 @@ mixin _$SubscriptionTopicNotificationShape {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirUri? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
   List<String>? get include => throw _privateConstructorUsedError;
@@ -21495,7 +21495,7 @@ abstract class $SubscriptionTopicNotificationShapeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       List<String>? include,
       @JsonKey(name: '_include') List<Element>? includeElement,
@@ -21595,7 +21595,7 @@ abstract class _$$_SubscriptionTopicNotificationShapeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       List<String>? include,
       @JsonKey(name: '_include') List<Element>? includeElement,
@@ -21857,7 +21857,7 @@ abstract class _SubscriptionTopicNotificationShape
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get resource;
+  String? get resource;
   @override
   @JsonKey(name: '_resource')
   Element? get resourceElement;

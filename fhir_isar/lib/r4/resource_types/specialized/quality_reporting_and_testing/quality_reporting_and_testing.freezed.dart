@@ -36,14 +36,14 @@ mixin _$Measure {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -95,7 +95,7 @@ mixin _$Measure {
   /// measure is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -149,7 +149,7 @@ mixin _$Measure {
 
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -158,7 +158,7 @@ mixin _$Measure {
   /// [experimental] A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -244,7 +244,7 @@ mixin _$Measure {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -253,7 +253,7 @@ mixin _$Measure {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -400,10 +400,10 @@ abstract class $MeasureCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -411,7 +411,7 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -427,10 +427,10 @@ abstract class $MeasureCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
@@ -456,10 +456,10 @@ abstract class $MeasureCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -1315,10 +1315,10 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1326,7 +1326,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -1342,10 +1342,10 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
@@ -1371,10 +1371,10 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -3002,7 +3002,7 @@ abstract class _Measure extends Measure {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3011,7 +3011,7 @@ abstract class _Measure extends Measure {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3068,7 +3068,7 @@ abstract class _Measure extends Measure {
   /// measure is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the measure is stored
   ///  on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -3133,7 +3133,7 @@ abstract class _Measure extends Measure {
 
   /// [status] The status of this measure. Enables tracking the life-cycle of
   ///  the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3144,7 +3144,7 @@ abstract class _Measure extends Measure {
   /// [experimental] A Boolean value to indicate that this measure is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -3248,7 +3248,7 @@ abstract class _Measure extends Measure {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
@@ -3259,7 +3259,7 @@ abstract class _Measure extends Measure {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
@@ -5948,14 +5948,14 @@ mixin _$MeasureReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -6007,7 +6007,7 @@ mixin _$MeasureReport {
 
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -6020,7 +6020,7 @@ mixin _$MeasureReport {
   /// population count for each of the criteria in the measure; or a
   /// data-collection, which enables the MeasureReport to be used to exchange
   ///  the data-of-interest for a quality measure.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6028,7 +6028,7 @@ mixin _$MeasureReport {
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  Canonical get measure => throw _privateConstructorUsedError;
+  String get measure => throw _privateConstructorUsedError;
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
@@ -6078,10 +6078,10 @@ abstract class $MeasureReportCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6090,13 +6090,13 @@ abstract class $MeasureReportCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical measure,
+      String measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -6405,10 +6405,10 @@ abstract class _$$_MeasureReportCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6417,13 +6417,13 @@ abstract class _$$_MeasureReportCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical measure,
+      String measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -7035,7 +7035,7 @@ abstract class _MeasureReport extends MeasureReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -7044,7 +7044,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -7102,7 +7102,7 @@ abstract class _MeasureReport extends MeasureReport {
 
   /// [status] The MeasureReport status. No data will be available until the
   ///  MeasureReport status is complete.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -7117,7 +7117,7 @@ abstract class _MeasureReport extends MeasureReport {
   /// population count for each of the criteria in the measure; or a
   /// data-collection, which enables the MeasureReport to be used to exchange
   ///  the data-of-interest for a quality measure.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -7127,7 +7127,7 @@ abstract class _MeasureReport extends MeasureReport {
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  Canonical get measure;
+  String get measure;
   @override
 
   /// [subject] Optional subject identifying the individual or individuals the
@@ -9872,14 +9872,14 @@ mixin _$TestReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9937,7 +9937,7 @@ mixin _$TestReport {
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The current state of this test report.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -9949,7 +9949,7 @@ mixin _$TestReport {
   Reference get testScript => throw _privateConstructorUsedError;
 
   /// [result] The overall result from the execution of the TestScript.
-  Code? get result => throw _privateConstructorUsedError;
+  String? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -10012,10 +10012,10 @@ abstract class $TestReportCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10027,11 +10027,11 @@ abstract class $TestReportCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -10405,10 +10405,10 @@ abstract class _$$_TestReportCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10420,11 +10420,11 @@ abstract class _$$_TestReportCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -11093,7 +11093,7 @@ abstract class _TestReport extends TestReport {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11102,7 +11102,7 @@ abstract class _TestReport extends TestReport {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11168,7 +11168,7 @@ abstract class _TestReport extends TestReport {
   @override
 
   /// [status] The current state of this test report.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11183,7 +11183,7 @@ abstract class _TestReport extends TestReport {
   @override
 
   /// [result] The overall result from the execution of the TestScript.
-  Code? get result;
+  String? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -11281,14 +11281,14 @@ mixin _$TestReportParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [uri] The uri of the participant. An absolute URL is preferred.
-  FhirUri? get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// [uriElement] Extensions for uri
   @JsonKey(name: '_uri')
@@ -11317,9 +11317,9 @@ abstract class $TestReportParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement});
@@ -11442,9 +11442,9 @@ abstract class _$$_TestReportParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement});
@@ -11739,7 +11739,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   @override
 
   /// [type] The type of participant.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -11748,7 +11748,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   @override
 
   /// [uri] The uri of the participant. An absolute URL is preferred.
-  FhirUri? get uri;
+  String? get uri;
   @override
 
   /// [uriElement] Extensions for uri
@@ -12534,7 +12534,7 @@ mixin _$TestReportOperation {
       throw _privateConstructorUsedError;
 
   /// [result] The result of this operation.
-  Code? get result => throw _privateConstructorUsedError;
+  String? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -12548,7 +12548,7 @@ mixin _$TestReportOperation {
   Element? get messageElement => throw _privateConstructorUsedError;
 
   /// [detail] A link to further details on the result.
-  FhirUri? get detail => throw _privateConstructorUsedError;
+  String? get detail => throw _privateConstructorUsedError;
 
   /// [detailElement] Extensions for detail
   @JsonKey(name: '_detail')
@@ -12570,11 +12570,11 @@ abstract class $TestReportOperationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
-      FhirUri? detail,
+      String? detail,
       @JsonKey(name: '_detail') Element? detailElement});
 
   $ElementCopyWith<$Res>? get resultElement;
@@ -12694,11 +12694,11 @@ abstract class _$$_TestReportOperationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
-      FhirUri? detail,
+      String? detail,
       @JsonKey(name: '_detail') Element? detailElement});
 
   @override
@@ -12991,7 +12991,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   @override
 
   /// [result] The result of this operation.
-  Code? get result;
+  String? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -13009,7 +13009,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   @override
 
   /// [detail] A link to further details on the result.
-  FhirUri? get detail;
+  String? get detail;
   @override
 
   /// [detailElement] Extensions for detail
@@ -13057,7 +13057,7 @@ mixin _$TestReportAssert {
       throw _privateConstructorUsedError;
 
   /// [result] The result of this assertion.
-  Code? get result => throw _privateConstructorUsedError;
+  String? get result => throw _privateConstructorUsedError;
 
   /// [resultElement] Extensions for result
   @JsonKey(name: '_result')
@@ -13093,7 +13093,7 @@ abstract class $TestReportAssertCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -13217,7 +13217,7 @@ abstract class _$$_TestReportAssertCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
+      String? result,
       @JsonKey(name: '_result') Element? resultElement,
       Markdown? message,
       @JsonKey(name: '_message') Element? messageElement,
@@ -13513,7 +13513,7 @@ abstract class _TestReportAssert extends TestReportAssert {
   @override
 
   /// [result] The result of this assertion.
-  Code? get result;
+  String? get result;
   @override
 
   /// [resultElement] Extensions for result
@@ -15128,14 +15128,14 @@ mixin _$TestScript {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -15187,7 +15187,7 @@ mixin _$TestScript {
   /// test script is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -15229,7 +15229,7 @@ mixin _$TestScript {
 
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -15238,7 +15238,7 @@ mixin _$TestScript {
   /// [experimental] A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -15353,10 +15353,10 @@ abstract class $TestScriptCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15364,7 +15364,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -15377,10 +15377,10 @@ abstract class $TestScriptCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -15922,10 +15922,10 @@ abstract class _$$_TestScriptCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15933,7 +15933,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       Identifier? identifier,
@@ -15946,10 +15946,10 @@ abstract class _$$_TestScriptCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -16997,7 +16997,7 @@ abstract class _TestScript extends TestScript {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -17006,7 +17006,7 @@ abstract class _TestScript extends TestScript {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -17063,7 +17063,7 @@ abstract class _TestScript extends TestScript {
   /// test script is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the test script is
   ///  stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -17114,7 +17114,7 @@ abstract class _TestScript extends TestScript {
 
   /// [status] The status of this test script. Enables tracking the life-cycle
   ///  of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -17125,7 +17125,7 @@ abstract class _TestScript extends TestScript {
   /// [experimental] A Boolean value to indicate that this test script is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -18502,7 +18502,7 @@ mixin _$TestScriptLink {
 
   /// [url] URL to a particular requirement or feature within the FHIR
   ///  specification.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -18531,7 +18531,7 @@ abstract class $TestScriptLinkCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement});
@@ -18630,7 +18630,7 @@ abstract class _$$_TestScriptLinkCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement});
@@ -18897,7 +18897,7 @@ abstract class _TestScriptLink extends TestScriptLink {
 
   /// [url] URL to a particular requirement or feature within the FHIR
   ///  specification.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -18956,7 +18956,7 @@ mixin _$TestScriptCapability {
   /// [required] Whether or not the test execution will require the given
   ///  capabilities of the server in order for this test script to execute.
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+  bool? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] Extensions for required
   @JsonKey(name: '_required')
@@ -18964,7 +18964,7 @@ mixin _$TestScriptCapability {
 
   /// [validated] Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
-  Boolean? get validated => throw _privateConstructorUsedError;
+  bool? get validated => throw _privateConstructorUsedError;
 
   /// [validatedElement] Extensions for validated
   @JsonKey(name: '_validated')
@@ -19004,7 +19004,7 @@ mixin _$TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities => throw _privateConstructorUsedError;
+  String get capabilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -19024,7 +19024,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
+      bool? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -19034,7 +19034,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      String capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
   $ElementCopyWith<$Res>? get validatedElement;
@@ -19204,7 +19204,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? validated,
+      bool? validated,
       @JsonKey(name: '_validated') Element? validatedElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -19214,7 +19214,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      String capabilities});
 
   @override
   $ElementCopyWith<$Res>? get requiredElement;
@@ -19660,7 +19660,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   /// [required] Whether or not the test execution will require the given
   ///  capabilities of the server in order for this test script to execute.
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  bool? get required_;
   @override
 
   /// [requiredElement] Extensions for required
@@ -19670,7 +19670,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
 
   /// [validated] Whether or not the test execution will validate the given
   ///  capabilities of the server in order for this test script to execute.
-  Boolean? get validated;
+  bool? get validated;
   @override
 
   /// [validatedElement] Extensions for validated
@@ -19720,7 +19720,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities;
+  String get capabilities;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
@@ -19766,7 +19766,7 @@ mixin _$TestScriptFixture {
   /// setup. If true, the fixture is automatically created on each server being
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
-  Boolean? get autocreate => throw _privateConstructorUsedError;
+  bool? get autocreate => throw _privateConstructorUsedError;
 
   /// [autocreateElement] Extensions for autocreate
   @JsonKey(name: '_autocreate')
@@ -19776,7 +19776,7 @@ mixin _$TestScriptFixture {
   /// teardown. If true, the fixture is automatically deleted on each server
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
-  Boolean? get autodelete => throw _privateConstructorUsedError;
+  bool? get autodelete => throw _privateConstructorUsedError;
 
   /// [autodeleteElement] Extensions for autodelete
   @JsonKey(name: '_autodelete')
@@ -19802,9 +19802,9 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
+      bool? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
+      bool? autodelete,
       @JsonKey(name: '_autodelete') Element? autodeleteElement,
       Reference? resource});
 
@@ -19920,9 +19920,9 @@ abstract class _$$_TestScriptFixtureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? autocreate,
+      bool? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
-      Boolean? autodelete,
+      bool? autodelete,
       @JsonKey(name: '_autodelete') Element? autodeleteElement,
       Reference? resource});
 
@@ -20213,7 +20213,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   /// setup. If true, the fixture is automatically created on each server being
   /// tested during setup, therefore no create operation is required for this
   ///  fixture in the TestScript.setup section.
-  Boolean? get autocreate;
+  bool? get autocreate;
   @override
 
   /// [autocreateElement] Extensions for autocreate
@@ -20225,7 +20225,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   /// teardown. If true, the fixture is automatically deleted on each server
   /// being tested during teardown, therefore no delete operation is required
   ///  for this fixture in the TestScript.teardown section.
-  Boolean? get autodelete;
+  bool? get autodelete;
   @override
 
   /// [autodeleteElement] Extensions for autodelete
@@ -21932,7 +21932,7 @@ mixin _$TestScriptOperation {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
@@ -21956,7 +21956,7 @@ mixin _$TestScriptOperation {
 
   /// [accept] The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
-  Code? get accept => throw _privateConstructorUsedError;
+  String? get accept => throw _privateConstructorUsedError;
 
   /// [acceptElement] Extensions for accept
   @JsonKey(name: '_accept')
@@ -21964,7 +21964,7 @@ mixin _$TestScriptOperation {
 
   /// [contentType] The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
-  Code? get contentType => throw _privateConstructorUsedError;
+  String? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -21982,7 +21982,7 @@ mixin _$TestScriptOperation {
   /// encoded format. The default is true to match the standard RESTful client
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
-  Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
+  bool? get encodeRequestUrl => throw _privateConstructorUsedError;
 
   /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
   @JsonKey(name: '_encodeRequestUrl')
@@ -21990,7 +21990,7 @@ mixin _$TestScriptOperation {
 
   /// [method] The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
-  Code? get method => throw _privateConstructorUsedError;
+  String? get method => throw _privateConstructorUsedError;
 
   /// [methodElement] Extensions for method
   @JsonKey(name: '_method')
@@ -22070,21 +22070,21 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
-      Code? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? accept,
+      String? accept,
       @JsonKey(name: '_accept') Element? acceptElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
+      bool? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
+      String? method,
       @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
       @JsonKey(name: '_origin') Element? originElement,
@@ -22519,21 +22519,21 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
-      Code? resource,
+      String? resource,
       @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Code? accept,
+      String? accept,
       @JsonKey(name: '_accept') Element? acceptElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      Boolean? encodeRequestUrl,
+      bool? encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
+      String? method,
       @JsonKey(name: '_method') Element? methodElement,
       Integer? origin,
       @JsonKey(name: '_origin') Element? originElement,
@@ -23285,7 +23285,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource;
+  String? get resource;
   @override
 
   /// [resourceElement] Extensions for resource
@@ -23315,7 +23315,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [accept] The mime-type to use for RESTful operation in the 'Accept'
   ///  header.
-  Code? get accept;
+  String? get accept;
   @override
 
   /// [acceptElement] Extensions for accept
@@ -23325,7 +23325,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [contentType] The mime-type to use for RESTful operation in the
   ///  'Content-Type' header.
-  Code? get contentType;
+  String? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -23347,7 +23347,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   /// encoded format. The default is true to match the standard RESTful client
   /// behavior. Set to false when communicating with a server that does not
   ///  support encoded url paths.
-  Boolean? get encodeRequestUrl;
+  bool? get encodeRequestUrl;
   @override
 
   /// [encodeRequestUrlElement] Extensions for encodeRequestUrl
@@ -23357,7 +23357,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [method] The HTTP method the test engine MUST use for this operation
   ///  regardless of any other operation details.
-  Code? get method;
+  String? get method;
   @override
 
   /// [methodElement] Extensions for method
@@ -23946,7 +23946,7 @@ mixin _$TestScriptAssert {
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [direction] The direction to use for the assertion.
-  Code? get direction => throw _privateConstructorUsedError;
+  String? get direction => throw _privateConstructorUsedError;
 
   /// [directionElement] Extensions for direction
   @JsonKey(name: '_direction')
@@ -23982,7 +23982,7 @@ mixin _$TestScriptAssert {
 
   /// [contentType] The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
-  Code? get contentType => throw _privateConstructorUsedError;
+  String? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -24013,7 +24013,7 @@ mixin _$TestScriptAssert {
 
   /// [navigationLinks] Whether or not the test execution performs validation
   ///  on the bundle navigation links.
-  Boolean? get navigationLinks => throw _privateConstructorUsedError;
+  bool? get navigationLinks => throw _privateConstructorUsedError;
 
   /// [navigationLinksElement] Extensions for navigationLinks
   @JsonKey(name: '_navigationLinks')
@@ -24022,7 +24022,7 @@ mixin _$TestScriptAssert {
   /// [operator] The operator type defines the conditional behavior of the
   ///  assert. If not defined, the default is equals.
   @JsonKey(name: 'operator')
-  Code? get operator_ => throw _privateConstructorUsedError;
+  String? get operator_ => throw _privateConstructorUsedError;
 
   /// [operatorElement] Extensions for operator
   @JsonKey(name: '_operator')
@@ -24038,7 +24038,7 @@ mixin _$TestScriptAssert {
 
   /// [requestMethod] The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
-  Code? get requestMethod => throw _privateConstructorUsedError;
+  String? get requestMethod => throw _privateConstructorUsedError;
 
   /// [requestMethodElement] Extensions for requestMethod
   @JsonKey(name: '_requestMethod')
@@ -24054,7 +24054,7 @@ mixin _$TestScriptAssert {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource => throw _privateConstructorUsedError;
+  String? get resource => throw _privateConstructorUsedError;
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
@@ -24063,7 +24063,7 @@ mixin _$TestScriptAssert {
   /// [response] okay | created | noContent | notModified | bad | forbidden |
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
-  Code? get response => throw _privateConstructorUsedError;
+  String? get response => throw _privateConstructorUsedError;
 
   /// [responseElement] Extensions for response
   @JsonKey(name: '_response')
@@ -24100,7 +24100,7 @@ mixin _$TestScriptAssert {
 
   /// [warningOnly] Whether or not the test execution will produce a warning
   ///  only on error for this assert.
-  Boolean? get warningOnly => throw _privateConstructorUsedError;
+  bool? get warningOnly => throw _privateConstructorUsedError;
 
   /// [warningOnlyElement] Extensions for warningOnly
   @JsonKey(name: '_warningOnly')
@@ -24129,7 +24129,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      String? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -24141,7 +24141,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
           Element? compareToSourcePathElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       String? expression,
@@ -24153,26 +24153,26 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? minimumId,
       @JsonKey(name: '_minimumId')
           Element? minimumIdElement,
-      Boolean? navigationLinks,
+      bool? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          Code? operator_,
+          String? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      String? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
       @JsonKey(name: '_requestURL')
           Element? requestURLElement,
-      Code? resource,
+      String? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      String? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -24187,7 +24187,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? value,
       @JsonKey(name: '_value')
           Element? valueElement,
-      Boolean? warningOnly,
+      bool? warningOnly,
       @JsonKey(name: '_warningOnly')
           Element? warningOnlyElement});
 
@@ -24755,7 +24755,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      String? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -24767,7 +24767,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
           Element? compareToSourcePathElement,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
       String? expression,
@@ -24779,26 +24779,26 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? minimumId,
       @JsonKey(name: '_minimumId')
           Element? minimumIdElement,
-      Boolean? navigationLinks,
+      bool? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
       @JsonKey(name: 'operator')
-          Code? operator_,
+          String? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      String? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
       @JsonKey(name: '_requestURL')
           Element? requestURLElement,
-      Code? resource,
+      String? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      String? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -24813,7 +24813,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? value,
       @JsonKey(name: '_value')
           Element? valueElement,
-      Boolean? warningOnly,
+      bool? warningOnly,
       @JsonKey(name: '_warningOnly')
           Element? warningOnlyElement});
 
@@ -25769,7 +25769,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
 
   /// [direction] The direction to use for the assertion.
-  Code? get direction;
+  String? get direction;
   @override
 
   /// [directionElement] Extensions for direction
@@ -25812,7 +25812,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [contentType] The mime-type contents to compare against the request or
   ///  response message 'Content-Type' header.
-  Code? get contentType;
+  String? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -25851,7 +25851,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [navigationLinks] Whether or not the test execution performs validation
   ///  on the bundle navigation links.
-  Boolean? get navigationLinks;
+  bool? get navigationLinks;
   @override
 
   /// [navigationLinksElement] Extensions for navigationLinks
@@ -25862,7 +25862,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   /// [operator] The operator type defines the conditional behavior of the
   ///  assert. If not defined, the default is equals.
   @JsonKey(name: 'operator')
-  Code? get operator_;
+  String? get operator_;
   @override
 
   /// [operatorElement] Extensions for operator
@@ -25882,7 +25882,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [requestMethod] The request method or HTTP operation code to compare
   ///  against that used by the client system under test.
-  Code? get requestMethod;
+  String? get requestMethod;
   @override
 
   /// [requestMethodElement] Extensions for requestMethod
@@ -25902,7 +25902,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [resource] The type of the resource.  See
   ///  http://build.fhir.org/resourcelist.html.
-  Code? get resource;
+  String? get resource;
   @override
 
   /// [resourceElement] Extensions for resource
@@ -25913,7 +25913,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   /// [response] okay | created | noContent | notModified | bad | forbidden |
   /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
   ///  unprocessable.
-  Code? get response;
+  String? get response;
   @override
 
   /// [responseElement] Extensions for response
@@ -25960,7 +25960,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [warningOnly] Whether or not the test execution will produce a warning
   ///  only on error for this assert.
-  Boolean? get warningOnly;
+  bool? get warningOnly;
   @override
 
   /// [warningOnlyElement] Extensions for warningOnly

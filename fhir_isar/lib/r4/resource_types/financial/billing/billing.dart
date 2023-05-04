@@ -178,14 +178,14 @@ class Claim with Resource, _$Claim {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -233,7 +233,7 @@ class Claim with Resource, _$Claim {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -253,7 +253,7 @@ class Claim with Resource, _$Claim {
     /// authorization and adjudication for provision in the future; or requesting
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
-    Code? use,
+    String? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -678,7 +678,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
 
     /// [responsible] The party who is billing and/or responsible for the claimed
     ///  products or services.
-    Boolean? responsible,
+    bool? responsible,
 
     /// [responsibleElement] Extensions for responsible
     @JsonKey(name: '_responsible') Element? responsibleElement,
@@ -844,7 +844,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     CodeableConcept? code,
 
     /// [timingDate] The date when or period to which this information refers.
-    Date? timingDate,
+    String? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -855,7 +855,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     /// [valueBoolean] Additional data or information such as resources,
     /// documents, images etc. including references to the data or the actual
     ///  inclusion of the data.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -1296,7 +1296,7 @@ class ClaimInsurance with _$ClaimInsurance {
 
     /// [focal] A flag to indicate that this Coverage is to be used for
     ///  adjudication of this claim when set to true.
-    Boolean? focal,
+    bool? focal,
 
     /// [focalElement] Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -1438,7 +1438,7 @@ class ClaimAccident with _$ClaimAccident {
 
     /// [date] Date of an accident event  related to the products and services
     ///  contained in the claim.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -1685,7 +1685,7 @@ class ClaimItem with _$ClaimItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -2314,14 +2314,14 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2369,7 +2369,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2390,7 +2390,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// authorization and adjudication for provision in the future; or requesting
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
-    Code? use,
+    String? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
@@ -2421,7 +2421,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -3201,7 +3201,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
     /// [servicedDate] The date or dates when the service or product was
     ///  supplied, performed or completed.
-    Date? servicedDate,
+    String? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
@@ -3826,7 +3826,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 
     /// [date] Estimated date the payment will be issued or the actual issue date
     ///  of payment.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
@@ -3950,7 +3950,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
     @JsonKey(name: '_number') Element? numberElement,
 
     /// [type] The business purpose of the note text.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -4088,7 +4088,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
 
     /// [focal] A flag to indicate that this Coverage is to be used for
     ///  adjudication of this claim when set to true.
-    Boolean? focal,
+    bool? focal,
 
     /// [focalElement] Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
@@ -4418,14 +4418,14 @@ class Invoice with Resource, _$Invoice {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4474,7 +4474,7 @@ class Invoice with Resource, _$Invoice {
     List<Identifier>? identifier,
 
     /// [status] The current state of the Invoice.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4898,7 +4898,7 @@ class InvoicePriceComponent with _$InvoicePriceComponent {
     List<FhirExtension>? modifierExtension,
 
     /// [type] This code identifies the type of the component.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,

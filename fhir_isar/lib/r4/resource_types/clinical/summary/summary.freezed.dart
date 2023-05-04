@@ -24,10 +24,10 @@ mixin _$AdverseEvent {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ mixin _$AdverseEvent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  Code? get actuality => throw _privateConstructorUsedError;
+  String? get actuality => throw _privateConstructorUsedError;
   @JsonKey(name: '_actuality')
   Element? get actualityElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -84,10 +84,10 @@ abstract class $AdverseEventCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -96,7 +96,7 @@ abstract class $AdverseEventCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? actuality,
+      String? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -550,10 +550,10 @@ abstract class _$$_AdverseEventCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -562,7 +562,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? actuality,
+      String? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -1228,12 +1228,12 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -1249,7 +1249,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   @override
   Identifier? get identifier;
   @override
-  Code? get actuality;
+  String? get actuality;
   @override
   @JsonKey(name: '_actuality')
   Element? get actualityElement;
@@ -1988,10 +1988,10 @@ mixin _$AllergyIntolerance {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -2003,13 +2003,13 @@ mixin _$AllergyIntolerance {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<Code>? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement => throw _privateConstructorUsedError;
-  Code? get criticality => throw _privateConstructorUsedError;
+  String? get criticality => throw _privateConstructorUsedError;
   @JsonKey(name: '_criticality')
   Element? get criticalityElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
@@ -2053,10 +2053,10 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2067,13 +2067,13 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
-      Code? criticality,
+      String? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -2579,10 +2579,10 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2593,13 +2593,13 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
-      Code? criticality,
+      String? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -3295,12 +3295,12 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -3320,7 +3320,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   CodeableConcept? get verificationStatus;
   @override
-  Code? get type;
+  String? get type;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement;
@@ -3330,7 +3330,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement;
   @override
-  Code? get criticality;
+  String? get criticality;
   @override
   @JsonKey(name: '_criticality')
   Element? get criticalityElement;
@@ -3400,7 +3400,7 @@ mixin _$AllergyIntoleranceReaction {
   FhirDateTime? get onset => throw _privateConstructorUsedError;
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  String? get severity => throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   CodeableConcept? get exposureRoute => throw _privateConstructorUsedError;
@@ -3429,7 +3429,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -3605,7 +3605,7 @@ abstract class _$$_AllergyIntoleranceReactionCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? onset,
       @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity') Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
@@ -3903,7 +3903,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @JsonKey(name: '_onset')
   Element? get onsetElement;
   @override
-  Code? get severity;
+  String? get severity;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement;
@@ -3927,10 +3927,10 @@ mixin _$ClinicalImpression {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -3940,7 +3940,7 @@ mixin _$ClinicalImpression {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
@@ -3993,10 +3993,10 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4005,7 +4005,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -4466,10 +4466,10 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4478,7 +4478,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -5214,12 +5214,12 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -5235,7 +5235,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   List<Identifier>? get identifier;
   @override
-  Code? get status;
+  String? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -5951,10 +5951,10 @@ mixin _$Condition {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -6015,10 +6015,10 @@ abstract class $ConditionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6595,10 +6595,10 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7355,12 +7355,12 @@ abstract class _Condition extends Condition {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -8041,10 +8041,10 @@ mixin _$DetectedIssue {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -8054,11 +8054,11 @@ mixin _$DetectedIssue {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  String? get severity => throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
@@ -8073,7 +8073,7 @@ mixin _$DetectedIssue {
   String? get detail => throw _privateConstructorUsedError;
   @JsonKey(name: '_detail')
   Element? get detailElement => throw _privateConstructorUsedError;
-  FhirUri? get reference => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @JsonKey(name: '_reference')
   Element? get referenceElement => throw _privateConstructorUsedError;
   List<DetectedIssueMitigation>? get mitigation =>
@@ -8096,10 +8096,10 @@ abstract class $DetectedIssueCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8108,11 +8108,11 @@ abstract class $DetectedIssueCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -8126,7 +8126,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       String? detail,
       @JsonKey(name: '_detail')
           Element? detailElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference')
           Element? referenceElement,
       List<DetectedIssueMitigation>? mitigation});
@@ -8479,10 +8479,10 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8491,11 +8491,11 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      String? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -8509,7 +8509,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       String? detail,
       @JsonKey(name: '_detail')
           Element? detailElement,
-      FhirUri? reference,
+      String? reference,
       @JsonKey(name: '_reference')
           Element? referenceElement,
       List<DetectedIssueMitigation>? mitigation});
@@ -9046,12 +9046,12 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -9067,14 +9067,14 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   List<Identifier>? get identifier;
   @override
-  Code? get status;
+  String? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
   CodeableConcept? get code;
   @override
-  Code? get severity;
+  String? get severity;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement;
@@ -9099,7 +9099,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @JsonKey(name: '_detail')
   Element? get detailElement;
   @override
-  FhirUri? get reference;
+  String? get reference;
   @override
   @JsonKey(name: '_reference')
   Element? get referenceElement;
@@ -9741,10 +9741,10 @@ mixin _$FamilyMemberHistory {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -9760,7 +9760,7 @@ mixin _$FamilyMemberHistory {
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
@@ -9774,7 +9774,7 @@ mixin _$FamilyMemberHistory {
   CodeableConcept get relationship => throw _privateConstructorUsedError;
   CodeableConcept? get sex => throw _privateConstructorUsedError;
   Period? get bornPeriod => throw _privateConstructorUsedError;
-  Date? get bornDate => throw _privateConstructorUsedError;
+  String? get bornDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_bornDate')
   Element? get bornDateElement => throw _privateConstructorUsedError;
   String? get bornString => throw _privateConstructorUsedError;
@@ -9785,15 +9785,15 @@ mixin _$FamilyMemberHistory {
   String? get ageString => throw _privateConstructorUsedError;
   @JsonKey(name: '_ageString')
   Element? get ageStringElement => throw _privateConstructorUsedError;
-  Boolean? get estimatedAge => throw _privateConstructorUsedError;
+  bool? get estimatedAge => throw _privateConstructorUsedError;
   @JsonKey(name: '_estimatedAge')
   Element? get estimatedAgeElement => throw _privateConstructorUsedError;
-  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  bool? get deceasedBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
   Age? get deceasedAge => throw _privateConstructorUsedError;
   Range? get deceasedRange => throw _privateConstructorUsedError;
-  Date? get deceasedDate => throw _privateConstructorUsedError;
+  String? get deceasedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_deceasedDate')
   Element? get deceasedDateElement => throw _privateConstructorUsedError;
   String? get deceasedString => throw _privateConstructorUsedError;
@@ -9822,10 +9822,10 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9838,7 +9838,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -9852,7 +9852,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       CodeableConcept relationship,
       CodeableConcept? sex,
       Period? bornPeriod,
-      Date? bornDate,
+      String? bornDate,
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
       String? bornString,
@@ -9863,15 +9863,15 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       String? ageString,
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      bool? estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      bool? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       Age? deceasedAge,
       Range? deceasedRange,
-      Date? deceasedDate,
+      String? deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
       String? deceasedString,
@@ -10447,10 +10447,10 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10463,7 +10463,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -10477,7 +10477,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       CodeableConcept relationship,
       CodeableConcept? sex,
       Period? bornPeriod,
-      Date? bornDate,
+      String? bornDate,
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
       String? bornString,
@@ -10488,15 +10488,15 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       String? ageString,
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      bool? estimatedAge,
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      bool? deceasedBoolean,
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
       Age? deceasedAge,
       Range? deceasedRange,
-      Date? deceasedDate,
+      String? deceasedDate,
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
       String? deceasedString,
@@ -11343,12 +11343,12 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -11371,7 +11371,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement;
   @override
-  Code? get status;
+  String? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -11396,7 +11396,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Period? get bornPeriod;
   @override
-  Date? get bornDate;
+  String? get bornDate;
   @override
   @JsonKey(name: '_bornDate')
   Element? get bornDateElement;
@@ -11415,12 +11415,12 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @JsonKey(name: '_ageString')
   Element? get ageStringElement;
   @override
-  Boolean? get estimatedAge;
+  bool? get estimatedAge;
   @override
   @JsonKey(name: '_estimatedAge')
   Element? get estimatedAgeElement;
   @override
-  Boolean? get deceasedBoolean;
+  bool? get deceasedBoolean;
   @override
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement;
@@ -11429,7 +11429,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   Range? get deceasedRange;
   @override
-  Date? get deceasedDate;
+  String? get deceasedDate;
   @override
   @JsonKey(name: '_deceasedDate')
   Element? get deceasedDateElement;
@@ -11466,7 +11466,7 @@ mixin _$FamilyMemberHistoryCondition {
       throw _privateConstructorUsedError;
   CodeableConcept get code => throw _privateConstructorUsedError;
   CodeableConcept? get outcome => throw _privateConstructorUsedError;
-  Boolean? get contributedToDeath => throw _privateConstructorUsedError;
+  bool? get contributedToDeath => throw _privateConstructorUsedError;
   @JsonKey(name: '_contributedToDeath')
   Element? get contributedToDeathElement => throw _privateConstructorUsedError;
   Age? get onsetAge => throw _privateConstructorUsedError;
@@ -11497,7 +11497,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      bool? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? onsetAge,
       Range? onsetRange,
@@ -11695,7 +11695,7 @@ abstract class _$$_FamilyMemberHistoryConditionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       CodeableConcept? outcome,
-      Boolean? contributedToDeath,
+      bool? contributedToDeath,
       @JsonKey(name: '_contributedToDeath') Element? contributedToDeathElement,
       Age? onsetAge,
       Range? onsetRange,
@@ -11987,7 +11987,7 @@ abstract class _FamilyMemberHistoryCondition
   @override
   CodeableConcept? get outcome;
   @override
-  Boolean? get contributedToDeath;
+  bool? get contributedToDeath;
   @override
   @JsonKey(name: '_contributedToDeath')
   Element? get contributedToDeathElement;
@@ -12020,10 +12020,10 @@ mixin _$Procedure {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -12041,7 +12041,7 @@ mixin _$Procedure {
       throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
@@ -12092,10 +12092,10 @@ abstract class $ProcedureCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12110,7 +12110,7 @@ abstract class $ProcedureCopyWith<$Res> {
           List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -12655,10 +12655,10 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12673,7 +12673,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
           List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
@@ -13588,12 +13588,12 @@ abstract class _Procedure extends Procedure {
   @override
   Meta? get meta;
   @override
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
-  Code? get language;
+  String? get language;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
@@ -13620,7 +13620,7 @@ abstract class _Procedure extends Procedure {
   @override
   List<Reference>? get partOf;
   @override
-  Code? get status;
+  String? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;

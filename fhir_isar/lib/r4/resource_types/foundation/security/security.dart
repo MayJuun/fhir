@@ -128,14 +128,14 @@ class AuditEvent with Resource, _$AuditEvent {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -189,7 +189,7 @@ class AuditEvent with Resource, _$AuditEvent {
 
     /// [action] Indicator for type of action performed during the event that
     ///  generated the audit.
-    Code? action,
+    String? action,
 
     /// [actionElement] Extensions for action
     @JsonKey(name: '_action')
@@ -206,7 +206,7 @@ class AuditEvent with Resource, _$AuditEvent {
         Element? recordedElement,
 
     /// [outcome] Indicates whether the event succeeded or failed.
-    Code? outcome,
+    String? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
@@ -395,7 +395,7 @@ class AuditEventAgent with _$AuditEventAgent {
 
     /// [requestor] Indicator that the user is or is not the requestor, or
     ///  initiator, for the event being audited.
-    Boolean? requestor,
+    bool? requestor,
 
     /// [requestorElement] Extensions for requestor
     @JsonKey(name: '_requestor') Element? requestorElement,
@@ -536,7 +536,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 
     /// [type] An identifier for the type of network access point that originated
     ///  the audit event.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -808,7 +808,7 @@ class AuditEventEntity with _$AuditEventEntity {
     @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [query] The query parameters for a query-type entities.
-    Base64Binary? query,
+    String? query,
 
     /// [queryElement] Extensions for query
     @JsonKey(name: '_query') Element? queryElement,
@@ -935,7 +935,7 @@ class AuditEventDetail with _$AuditEventDetail {
     @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBase64Binary] The  value of the extra detail.
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
@@ -1107,14 +1107,14 @@ class Consent with Resource, _$Consent {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1162,7 +1162,7 @@ class Consent with Resource, _$Consent {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this consent.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1332,7 +1332,7 @@ class ConsentPolicy with _$ConsentPolicy {
 
     /// [authority] Entity or Organization having regulatory jurisdiction or
     ///  accountability for  enforcing policies pertaining to Consent Directives.
-    FhirUri? authority,
+    String? authority,
 
     /// [authorityElement] Extensions for authority
     @JsonKey(name: '_authority') Element? authorityElement,
@@ -1340,7 +1340,7 @@ class ConsentPolicy with _$ConsentPolicy {
     /// [uri] The references to the policies that are included in this consent
     /// scope. Policies may be organizational, but are often defined
     ///  jurisdictionally, or in law.
-    FhirUri? uri,
+    String? uri,
 
     /// [uriElement] Extensions for uri
     @JsonKey(name: '_uri') Element? uriElement,
@@ -1451,7 +1451,7 @@ class ConsentVerification with _$ConsentVerification {
     List<FhirExtension>? modifierExtension,
 
     /// [verified] Has the instruction been verified.
-    Boolean? verified,
+    bool? verified,
 
     /// [verifiedElement] Extensions for verified
     @JsonKey(name: '_verified') Element? verifiedElement,
@@ -1595,7 +1595,7 @@ class ConsentProvision with _$ConsentProvision {
 
     /// [type] Action  to take - permit or deny - when the rule conditions are
     ///  met.  Not permitted in root rule, required in all nested rules.
-    Code? type,
+    String? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
@@ -1852,7 +1852,7 @@ class ConsentData with _$ConsentData {
 
     /// [meaning] How the resource reference is interpreted when testing consent
     ///  restrictions.
-    Code? meaning,
+    String? meaning,
 
     /// [meaningElement] Extensions for meaning
     @JsonKey(name: '_meaning') Element? meaningElement,
@@ -2019,14 +2019,14 @@ class Provenance with Resource, _$Provenance {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2360,7 +2360,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
     List<FhirExtension>? modifierExtension,
 
     /// [role] How the entity was used during the activity.
-    Code? role,
+    String? role,
 
     /// [roleElement] Extensions for role
     @JsonKey(name: '_role') Element? roleElement,

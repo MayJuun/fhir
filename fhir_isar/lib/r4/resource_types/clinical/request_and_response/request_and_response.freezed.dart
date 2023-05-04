@@ -36,14 +36,14 @@ mixin _$Communication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -121,7 +121,7 @@ mixin _$Communication {
   List<Reference>? get inResponseTo => throw _privateConstructorUsedError;
 
   /// [status] The status of the transmission.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -138,7 +138,7 @@ mixin _$Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -222,10 +222,10 @@ abstract class $CommunicationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -241,12 +241,12 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? medium,
@@ -665,10 +665,10 @@ abstract class _$$_CommunicationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -684,12 +684,12 @@ abstract class _$$_CommunicationCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? medium,
@@ -1660,7 +1660,7 @@ abstract class _Communication extends Communication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1669,7 +1669,7 @@ abstract class _Communication extends Communication {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1757,7 +1757,7 @@ abstract class _Communication extends Communication {
   @override
 
   /// [status] The status of the transmission.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1778,7 +1778,7 @@ abstract class _Communication extends Communication {
   /// [priority] Characterizes how quickly the planned or in progress
   /// communication must be addressed. Includes concepts such as stat, urgent,
   ///  routine.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -2361,14 +2361,14 @@ mixin _$CommunicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -2432,7 +2432,7 @@ mixin _$CommunicationRequest {
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the proposal or order.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -2448,7 +2448,7 @@ mixin _$CommunicationRequest {
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -2456,7 +2456,7 @@ mixin _$CommunicationRequest {
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  bool? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -2543,10 +2543,10 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2558,15 +2558,15 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? medium,
@@ -3026,10 +3026,10 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3041,15 +3041,15 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       List<CodeableConcept>? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept>? medium,
@@ -3979,7 +3979,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3988,7 +3988,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -4061,7 +4061,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @override
 
   /// [status] The status of the proposal or order.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -4081,7 +4081,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -4091,7 +4091,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
-  Boolean? get doNotPerform;
+  bool? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
@@ -4684,14 +4684,14 @@ mixin _$DeviceRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4767,7 +4767,7 @@ mixin _$DeviceRequest {
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the request.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -4775,7 +4775,7 @@ mixin _$DeviceRequest {
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
-  Code? get intent => throw _privateConstructorUsedError;
+  String? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -4783,7 +4783,7 @@ mixin _$DeviceRequest {
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -4890,10 +4890,10 @@ abstract class $DeviceRequestCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4909,13 +4909,13 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       Reference? codeReference,
@@ -5438,10 +5438,10 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5457,13 +5457,13 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       Reference? codeReference,
@@ -6508,7 +6508,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6517,7 +6517,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6603,7 +6603,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
 
   /// [status] The status of the request.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6613,7 +6613,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
-  Code? get intent;
+  String? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -6623,7 +6623,7 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -6787,7 +6787,7 @@ mixin _$DeviceRequestParameter {
   Range? get valueRange => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -6813,7 +6813,7 @@ abstract class $DeviceRequestParameterCopyWith<$Res> {
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -6965,7 +6965,7 @@ abstract class _$$_DeviceRequestParameterCopyWith<$Res>
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -7279,7 +7279,7 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
   @override
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -7313,14 +7313,14 @@ mixin _$DeviceUseStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7375,7 +7375,7 @@ mixin _$DeviceUseStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -7449,10 +7449,10 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7462,7 +7462,7 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -7822,10 +7822,10 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7835,7 +7835,7 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference subject,
@@ -8545,7 +8545,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -8554,7 +8554,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8616,7 +8616,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8715,14 +8715,14 @@ mixin _$GuidanceResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -8779,7 +8779,7 @@ mixin _$GuidanceResponse {
 
   /// [moduleUri] An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
-  FhirUri? get moduleUri => throw _privateConstructorUsedError;
+  String? get moduleUri => throw _privateConstructorUsedError;
 
   /// [moduleUriElement] Extensions for moduleUri
   @JsonKey(name: '_moduleUri')
@@ -8787,7 +8787,7 @@ mixin _$GuidanceResponse {
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
-  Canonical? get moduleCanonical => throw _privateConstructorUsedError;
+  String? get moduleCanonical => throw _privateConstructorUsedError;
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @JsonKey(name: '_moduleCanonical')
@@ -8807,7 +8807,7 @@ mixin _$GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -8887,10 +8887,10 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -8900,14 +8900,14 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? requestIdentifier,
       List<Identifier>? identifier,
-      FhirUri? moduleUri,
+      String? moduleUri,
       @JsonKey(name: '_moduleUri')
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      String? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -9314,10 +9314,10 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9327,14 +9327,14 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? requestIdentifier,
       List<Identifier>? identifier,
-      FhirUri? moduleUri,
+      String? moduleUri,
       @JsonKey(name: '_moduleUri')
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      String? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
           Element? moduleCanonicalElement,
       CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? subject,
@@ -10123,7 +10123,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -10132,7 +10132,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -10196,7 +10196,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   /// [moduleUri] An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
-  FhirUri? get moduleUri;
+  String? get moduleUri;
   @override
 
   /// [moduleUriElement] Extensions for moduleUri
@@ -10206,7 +10206,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
-  Canonical? get moduleCanonical;
+  String? get moduleCanonical;
   @override
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
@@ -10228,7 +10228,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -10330,14 +10330,14 @@ mixin _$SupplyDelivery {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10395,7 +10395,7 @@ mixin _$SupplyDelivery {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the dispense event.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10455,10 +10455,10 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10469,7 +10469,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -10818,10 +10818,10 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10832,7 +10832,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? patient,
@@ -11466,7 +11466,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11475,7 +11475,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11541,7 +11541,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
 
   /// [status] A code specifying the state of the dispense event.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12075,14 +12075,14 @@ mixin _$SupplyRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -12133,7 +12133,7 @@ mixin _$SupplyRequest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Status of the supply request.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -12145,7 +12145,7 @@ mixin _$SupplyRequest {
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -12225,10 +12225,10 @@ abstract class $SupplyRequestCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12237,11 +12237,11 @@ abstract class $SupplyRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? itemCodeableConcept,
@@ -12679,10 +12679,10 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12691,11 +12691,11 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       CodeableConcept? itemCodeableConcept,
@@ -13463,7 +13463,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -13472,7 +13472,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -13529,7 +13529,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
 
   /// [status] Status of the supply request.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -13544,7 +13544,7 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -13677,7 +13677,7 @@ mixin _$SupplyRequestParameter {
   Range? get valueRange => throw _privateConstructorUsedError;
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -13703,7 +13703,7 @@ abstract class $SupplyRequestParameterCopyWith<$Res> {
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -13855,7 +13855,7 @@ abstract class _$$_SupplyRequestParameterCopyWith<$Res>
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
@@ -14169,7 +14169,7 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
   @override
 
   /// [valueBoolean] The value of the device detail.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean

@@ -177,14 +177,14 @@ class CarePlan with Resource, _$CarePlan {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -261,7 +261,7 @@ class CarePlan with Resource, _$CarePlan {
 
     /// [status] Indicates whether the plan is currently being acted upon,
     ///  represents future intentions or is now a historical record.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -269,7 +269,7 @@ class CarePlan with Resource, _$CarePlan {
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the care plan and where the care plan fits into the workflow chain.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -662,7 +662,7 @@ class CarePlanDetail with _$CarePlanDetail {
     /// in-line definition when a resource is not referenced using
     /// CarePlan.activity.reference.  For example, a MedicationRequest, a
     ///  ServiceRequest, or a CommunicationRequest.
-    Code? kind,
+    String? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -700,7 +700,7 @@ class CarePlanDetail with _$CarePlanDetail {
 
     /// [status] Identifies what progress is being made for the specific
     ///  activity.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -713,7 +713,7 @@ class CarePlanDetail with _$CarePlanDetail {
     /// must NOT be engaged in when following the plan.  If false, or missing,
     /// indicates that the described activity is one that should be engaged in
     ///  when following the plan.
-    Boolean? doNotPerform,
+    bool? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
@@ -920,14 +920,14 @@ class CareTeam with Resource, _$CareTeam {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -977,7 +977,7 @@ class CareTeam with Resource, _$CareTeam {
     List<Identifier>? identifier,
 
     /// [status] Indicates the current state of the care team.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1316,14 +1316,14 @@ class Goal with Resource, _$Goal {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1373,7 +1373,7 @@ class Goal with Resource, _$Goal {
     List<Identifier>? identifier,
 
     /// [lifecycleStatus] The state of the goal throughout its lifecycle.
-    Code? lifecycleStatus,
+    String? lifecycleStatus,
 
     /// [lifecycleStatusElement] Extensions for lifecycleStatus
     @JsonKey(name: '_lifecycleStatus')
@@ -1401,7 +1401,7 @@ class Goal with Resource, _$Goal {
 
     /// [startDate] The date or event after which the goal should begin being
     ///  pursued.
-    Date? startDate,
+    String? startDate,
 
     /// [startDateElement] Extensions for startDate
     @JsonKey(name: '_startDate')
@@ -1416,7 +1416,7 @@ class Goal with Resource, _$Goal {
 
     /// [statusDate] Identifies when the current status.  I.e. When initially
     ///  created, when achieved, when cancelled, etc.
-    Date? statusDate,
+    String? statusDate,
 
     /// [statusDateElement] Extensions for statusDate
     @JsonKey(name: '_statusDate')
@@ -1649,7 +1649,7 @@ class GoalTarget with _$GoalTarget {
     /// it indicates that the goal is achieved at any focus value at or below the
     /// high value. Similarly, if the high value is missing, it indicates that the
     ///  goal is achieved at any focus value at or above the low value.
-    Boolean? detailBoolean,
+    bool? detailBoolean,
 
     /// [detailBooleanElement] Extensions for detailBoolean
     @JsonKey(name: '_detailBoolean') Element? detailBooleanElement,
@@ -1675,7 +1675,7 @@ class GoalTarget with _$GoalTarget {
 
     /// [dueDate] Indicates either the date or the duration after start by which
     ///  the goal should be met.
-    Date? dueDate,
+    String? dueDate,
 
     /// [dueDateElement] Extensions for dueDate
     @JsonKey(name: '_dueDate') Element? dueDateElement,
@@ -1872,14 +1872,14 @@ class NutritionOrder with Resource, _$NutritionOrder {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1951,7 +1951,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
         List<Element?>? instantiatesElement,
 
     /// [status] The workflow status of the nutrition order/request.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1959,7 +1959,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the NutrionOrder and where the request fits into the workflow chain.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -3001,14 +3001,14 @@ class RequestGroup with Resource, _$RequestGroup {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3089,7 +3089,7 @@ class RequestGroup with Resource, _$RequestGroup {
 
     /// [status] The current state of the request. For request groups, the status
     ///  reflects the status of all the requests in the group.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -3097,7 +3097,7 @@ class RequestGroup with Resource, _$RequestGroup {
 
     /// [intent] Indicates the level of authority/intentionality associated with
     ///  the request and where the request fits into the workflow chain.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -3105,7 +3105,7 @@ class RequestGroup with Resource, _$RequestGroup {
 
     /// [priority] Indicates how quickly the request should be addressed with
     ///  respect to other requests.
-    Code? priority,
+    String? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -3359,7 +3359,7 @@ class RequestGroupAction with _$RequestGroupAction {
 
     /// [priority] Indicates how quickly the action should be addressed with
     ///  respect to other actions.
-    Code? priority,
+    String? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -3418,35 +3418,35 @@ class RequestGroupAction with _$RequestGroupAction {
 
     /// [groupingBehavior] Defines the grouping behavior for the action and its
     ///  children.
-    Code? groupingBehavior,
+    String? groupingBehavior,
 
     /// [groupingBehaviorElement] Extensions for groupingBehavior
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
 
     /// [selectionBehavior] Defines the selection behavior for the action and its
     ///  children.
-    Code? selectionBehavior,
+    String? selectionBehavior,
 
     /// [selectionBehaviorElement] Extensions for selectionBehavior
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
 
     /// [requiredBehavior] Defines expectations around whether an action is
     ///  required.
-    Code? requiredBehavior,
+    String? requiredBehavior,
 
     /// [requiredBehaviorElement] Extensions for requiredBehavior
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
 
     /// [precheckBehavior] Defines whether the action should usually be
     ///  preselected.
-    Code? precheckBehavior,
+    String? precheckBehavior,
 
     /// [precheckBehaviorElement] Extensions for precheckBehavior
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
 
     /// [cardinalityBehavior] Defines whether the action can be selected multiple
     ///  times.
-    Code? cardinalityBehavior,
+    String? cardinalityBehavior,
 
     /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
@@ -3559,7 +3559,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
     List<FhirExtension>? modifierExtension,
 
     /// [kind] The kind of condition.
-    Code? kind,
+    String? kind,
 
     /// [kindElement] Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
@@ -3682,7 +3682,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     @JsonKey(name: '_actionId') Element? actionIdElement,
 
     /// [relationship] The relationship of this action to the related action.
-    Code? relationship,
+    String? relationship,
 
     /// [relationshipElement] Extensions for relationship
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -3860,14 +3860,14 @@ class RiskAssessment with Resource, _$RiskAssessment {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -3924,7 +3924,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 
     /// [status] The status of the RiskAssessment, using the same statuses as an
     ///  Observation.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4416,14 +4416,14 @@ class ServiceRequest with Resource, _$ServiceRequest {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4498,7 +4498,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     Identifier? requisition,
 
     /// [status] The status of the order.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -4506,7 +4506,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -4518,7 +4518,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 
     /// [priority] Indicates how quickly the ServiceRequest should be addressed
     ///  with respect to other requests.
-    Code? priority,
+    String? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -4526,7 +4526,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 
     /// [doNotPerform] Set this to true if the record is saying that the
     ///  service/procedure should NOT be performed.
-    Boolean? doNotPerform,
+    bool? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
     @JsonKey(name: '_doNotPerform')
@@ -4588,7 +4588,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     /// [asNeededBoolean] If a CodeableConcept is present, it indicates the
     /// pre-condition for performing the service.  For example "pain", "on
     ///  flare-up", etc.
-    Boolean? asNeededBoolean,
+    bool? asNeededBoolean,
 
     /// [asNeededBooleanElement] Extensions for asNeededBoolean
     @JsonKey(name: '_asNeededBoolean')
@@ -4814,14 +4814,14 @@ class VisionPrescription with Resource, _$VisionPrescription {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -4869,7 +4869,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
     List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -5053,7 +5053,7 @@ class VisionPrescriptionLensSpecification
     required CodeableConcept product,
 
     /// [eye] The eye for which the lens specification applies.
-    Code? eye,
+    String? eye,
 
     /// [eyeElement] Extensions for eye
     @JsonKey(name: '_eye') Element? eyeElement,
@@ -5222,7 +5222,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     @JsonKey(name: '_amount') Element? amountElement,
 
     /// [base] The relative base, or reference lens edge, for the prism.
-    Code? base,
+    String? base,
 
     /// [baseElement] Extensions for base
     @JsonKey(name: '_base') Element? baseElement,

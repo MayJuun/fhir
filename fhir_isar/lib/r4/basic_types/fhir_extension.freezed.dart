@@ -43,7 +43,7 @@ mixin _$FhirExtension {
 
   /// [valueBase64Binary] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  String? get valueBase64Binary => throw _privateConstructorUsedError;
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
   @JsonKey(name: '_valueBase64Binary')
@@ -51,7 +51,7 @@ mixin _$FhirExtension {
 
   /// [valueBoolean] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -59,7 +59,7 @@ mixin _$FhirExtension {
 
   /// [valueCanonical] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  String? get valueCanonical => throw _privateConstructorUsedError;
 
   /// [valueCanonicalElement] Extensions for valueCanonical
   @JsonKey(name: '_valueCanonical')
@@ -67,7 +67,7 @@ mixin _$FhirExtension {
 
   /// [valueCode] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Code? get valueCode => throw _privateConstructorUsedError;
+  String? get valueCode => throw _privateConstructorUsedError;
 
   /// [valueCodeElement] Extensions for valueCode
   @JsonKey(name: '_valueCode')
@@ -75,7 +75,7 @@ mixin _$FhirExtension {
 
   /// [valueDate] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -346,17 +346,17 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  String? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -380,7 +380,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-  String? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -1503,17 +1503,17 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  String? url,
+      String? url,
       @JsonKey(name: '_url') Element? urlElement,
-      Base64Binary? valueBase64Binary,
+      String? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-      Canonical? valueCanonical,
+      String? valueCanonical,
       @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-      Code? valueCode,
+      String? valueCode,
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -1537,7 +1537,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-  String? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
@@ -2889,7 +2889,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueBase64Binary] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Base64Binary? get valueBase64Binary;
+  String? get valueBase64Binary;
   @override
 
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
@@ -2899,7 +2899,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueBoolean] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -2909,7 +2909,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueCanonical] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
-  Canonical? get valueCanonical;
+  String? get valueCanonical;
   @override
 
   /// [valueCanonicalElement] Extensions for valueCanonical
@@ -2919,7 +2919,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueCode] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Code? get valueCode;
+  String? get valueCode;
   @override
 
   /// [valueCodeElement] Extensions for valueCode
@@ -2929,7 +2929,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueDate] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate

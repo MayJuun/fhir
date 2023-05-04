@@ -36,14 +36,14 @@ mixin _$CapabilityStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -95,7 +95,7 @@ mixin _$CapabilityStatement {
   /// this capability statement is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -133,7 +133,7 @@ mixin _$CapabilityStatement {
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -142,7 +142,7 @@ mixin _$CapabilityStatement {
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -212,7 +212,7 @@ mixin _$CapabilityStatement {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -248,7 +248,7 @@ mixin _$CapabilityStatement {
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  String? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
@@ -303,10 +303,10 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -314,7 +314,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -326,10 +326,10 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -350,14 +350,14 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      String? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -914,10 +914,10 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -925,7 +925,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -937,10 +937,10 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -961,14 +961,14 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      String? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -2164,7 +2164,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -2173,7 +2173,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2230,7 +2230,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// this capability statement is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -2276,7 +2276,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2287,7 +2287,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -2372,7 +2372,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -2412,7 +2412,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
-  Code? get fhirVersion;
+  String? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
@@ -3549,7 +3549,7 @@ mixin _$CapabilityStatementRest {
 
   /// [mode] Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -3611,7 +3611,7 @@ abstract class $CapabilityStatementRestCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -3761,7 +3761,7 @@ abstract class _$$_CapabilityStatementRestCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -4189,7 +4189,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
 
   /// [mode] Identifies whether this portion of the statement is describing the
   ///  ability to initiate or receive restful operations.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -4282,7 +4282,7 @@ mixin _$CapabilityStatementSecurity {
 
   /// [cors] Server adds CORS headers when responding to requests - this
   ///  enables Javascript applications to use the server.
-  Boolean? get cors => throw _privateConstructorUsedError;
+  bool? get cors => throw _privateConstructorUsedError;
 
   /// [corsElement] Extensions for cors
   @JsonKey(name: '_cors')
@@ -4317,7 +4317,7 @@ abstract class $CapabilityStatementSecurityCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? cors,
+      bool? cors,
       @JsonKey(name: '_cors') Element? corsElement,
       List<CodeableConcept>? service,
       Markdown? description,
@@ -4424,7 +4424,7 @@ abstract class _$$_CapabilityStatementSecurityCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? cors,
+      bool? cors,
       @JsonKey(name: '_cors') Element? corsElement,
       List<CodeableConcept>? service,
       Markdown? description,
@@ -4721,7 +4721,7 @@ abstract class _CapabilityStatementSecurity
 
   /// [cors] Server adds CORS headers when responding to requests - this
   ///  enables Javascript applications to use the server.
-  Boolean? get cors;
+  bool? get cors;
   @override
 
   /// [corsElement] Extensions for cors
@@ -4784,7 +4784,7 @@ mixin _$CapabilityStatementResource {
       throw _privateConstructorUsedError;
 
   /// [type] A type of resource exposed via the restful interface.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -4794,7 +4794,7 @@ mixin _$CapabilityStatementResource {
   /// overall support for the resource, including any constraints on
   /// cardinality, bindings, lengths or other limitations. See further
   ///  discussion in [Using Profiles](profiling.html#profile-uses).
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   /// [supportedProfile] A list of profiles that represent different use cases
   /// supported by the system. For a server, "supported by the system" means the
@@ -4824,7 +4824,7 @@ mixin _$CapabilityStatementResource {
   /// track and populate the versionId meta-property on resources. If the value
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
-  Code? get versioning => throw _privateConstructorUsedError;
+  String? get versioning => throw _privateConstructorUsedError;
 
   /// [versioningElement] Extensions for versioning
   @JsonKey(name: '_versioning')
@@ -4832,7 +4832,7 @@ mixin _$CapabilityStatementResource {
 
   /// [readHistory] A flag for whether the server is able to return past
   ///  versions as part of the vRead operation.
-  Boolean? get readHistory => throw _privateConstructorUsedError;
+  bool? get readHistory => throw _privateConstructorUsedError;
 
   /// [readHistoryElement] Extensions for readHistory
   @JsonKey(name: '_readHistory')
@@ -4843,7 +4843,7 @@ mixin _$CapabilityStatementResource {
   /// client PUTs to a location where there is no existing resource). Allowing
   /// this operation means that the server allows the client to create new
   ///  identities on the server.
-  Boolean? get updateCreate => throw _privateConstructorUsedError;
+  bool? get updateCreate => throw _privateConstructorUsedError;
 
   /// [updateCreateElement] Extensions for updateCreate
   @JsonKey(name: '_updateCreate')
@@ -4851,7 +4851,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalCreate] A flag that indicates that the server supports
   ///  conditional create.
-  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
+  bool? get conditionalCreate => throw _privateConstructorUsedError;
 
   /// [conditionalCreateElement] Extensions for conditionalCreate
   @JsonKey(name: '_conditionalCreate')
@@ -4859,7 +4859,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalRead] A code that indicates how the server supports
   ///  conditional read.
-  Code? get conditionalRead => throw _privateConstructorUsedError;
+  String? get conditionalRead => throw _privateConstructorUsedError;
 
   /// [conditionalReadElement] Extensions for conditionalRead
   @JsonKey(name: '_conditionalRead')
@@ -4867,7 +4867,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalUpdate] A flag that indicates that the server supports
   ///  conditional update.
-  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
+  bool? get conditionalUpdate => throw _privateConstructorUsedError;
 
   /// [conditionalUpdateElement] Extensions for conditionalUpdate
   @JsonKey(name: '_conditionalUpdate')
@@ -4875,7 +4875,7 @@ mixin _$CapabilityStatementResource {
 
   /// [conditionalDelete] A code that indicates how the server supports
   ///  conditional delete.
-  Code? get conditionalDelete => throw _privateConstructorUsedError;
+  String? get conditionalDelete => throw _privateConstructorUsedError;
 
   /// [conditionalDeleteElement] Extensions for conditionalDelete
   @JsonKey(name: '_conditionalDelete')
@@ -4939,34 +4939,34 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical? profile,
+      String? profile,
       List<Canonical>? supportedProfile,
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      String? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
-      Boolean? readHistory,
+      bool? readHistory,
       @JsonKey(name: '_readHistory')
           Element? readHistoryElement,
-      Boolean? updateCreate,
+      bool? updateCreate,
       @JsonKey(name: '_updateCreate')
           Element? updateCreateElement,
-      Boolean? conditionalCreate,
+      bool? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      String? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
-      Boolean? conditionalUpdate,
+      bool? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      String? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<Code>? referencePolicy,
@@ -5294,34 +5294,34 @@ abstract class _$$_CapabilityStatementResourceCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical? profile,
+      String? profile,
       List<Canonical>? supportedProfile,
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      String? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
-      Boolean? readHistory,
+      bool? readHistory,
       @JsonKey(name: '_readHistory')
           Element? readHistoryElement,
-      Boolean? updateCreate,
+      bool? updateCreate,
       @JsonKey(name: '_updateCreate')
           Element? updateCreateElement,
-      Boolean? conditionalCreate,
+      bool? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      String? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
-      Boolean? conditionalUpdate,
+      bool? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      String? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<Code>? referencePolicy,
@@ -6154,7 +6154,7 @@ abstract class _CapabilityStatementResource
   @override
 
   /// [type] A type of resource exposed via the restful interface.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -6166,7 +6166,7 @@ abstract class _CapabilityStatementResource
   /// overall support for the resource, including any constraints on
   /// cardinality, bindings, lengths or other limitations. See further
   ///  discussion in [Using Profiles](profiling.html#profile-uses).
-  Canonical? get profile;
+  String? get profile;
   @override
 
   /// [supportedProfile] A list of profiles that represent different use cases
@@ -6200,7 +6200,7 @@ abstract class _CapabilityStatementResource
   /// track and populate the versionId meta-property on resources. If the value
   /// is 'versioned-update', then the server supports all the versioning
   ///  features, including using e-tags for version integrity in the API.
-  Code? get versioning;
+  String? get versioning;
   @override
 
   /// [versioningElement] Extensions for versioning
@@ -6210,7 +6210,7 @@ abstract class _CapabilityStatementResource
 
   /// [readHistory] A flag for whether the server is able to return past
   ///  versions as part of the vRead operation.
-  Boolean? get readHistory;
+  bool? get readHistory;
   @override
 
   /// [readHistoryElement] Extensions for readHistory
@@ -6223,7 +6223,7 @@ abstract class _CapabilityStatementResource
   /// client PUTs to a location where there is no existing resource). Allowing
   /// this operation means that the server allows the client to create new
   ///  identities on the server.
-  Boolean? get updateCreate;
+  bool? get updateCreate;
   @override
 
   /// [updateCreateElement] Extensions for updateCreate
@@ -6233,7 +6233,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalCreate] A flag that indicates that the server supports
   ///  conditional create.
-  Boolean? get conditionalCreate;
+  bool? get conditionalCreate;
   @override
 
   /// [conditionalCreateElement] Extensions for conditionalCreate
@@ -6243,7 +6243,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalRead] A code that indicates how the server supports
   ///  conditional read.
-  Code? get conditionalRead;
+  String? get conditionalRead;
   @override
 
   /// [conditionalReadElement] Extensions for conditionalRead
@@ -6253,7 +6253,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalUpdate] A flag that indicates that the server supports
   ///  conditional update.
-  Boolean? get conditionalUpdate;
+  bool? get conditionalUpdate;
   @override
 
   /// [conditionalUpdateElement] Extensions for conditionalUpdate
@@ -6263,7 +6263,7 @@ abstract class _CapabilityStatementResource
 
   /// [conditionalDelete] A code that indicates how the server supports
   ///  conditional delete.
-  Code? get conditionalDelete;
+  String? get conditionalDelete;
   @override
 
   /// [conditionalDeleteElement] Extensions for conditionalDelete
@@ -6355,7 +6355,7 @@ mixin _$CapabilityStatementInteraction {
 
   /// [code] Coded identifier of the operation, supported by the system
   ///  resource.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -6389,7 +6389,7 @@ abstract class $CapabilityStatementInteractionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -6490,7 +6490,7 @@ abstract class _$$_CapabilityStatementInteractionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -6769,7 +6769,7 @@ abstract class _CapabilityStatementInteraction
 
   /// [code] Coded identifier of the operation, supported by the system
   ///  resource.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -6839,11 +6839,11 @@ mixin _$CapabilityStatementSearchParam {
   /// [definition] An absolute URI that is a formal reference to where this
   /// parameter was first defined, so that a client can be confident of the
   /// meaning of the search parameter (a reference to
-  Canonical? get definition => throw _privateConstructorUsedError;
+  String? get definition => throw _privateConstructorUsedError;
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -6877,8 +6877,8 @@ abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical? definition,
-      Code? type,
+      String? definition,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -7009,8 +7009,8 @@ abstract class _$$_CapabilityStatementSearchParamCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical? definition,
-      Code? type,
+      String? definition,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -7344,12 +7344,12 @@ abstract class _CapabilityStatementSearchParam
   /// [definition] An absolute URI that is a formal reference to where this
   /// parameter was first defined, so that a client can be confident of the
   /// meaning of the search parameter (a reference to
-  Canonical? get definition;
+  String? get definition;
   @override
 
   /// [type] The type of value a search parameter refers to, and how the
   ///  content is interpreted.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -7425,7 +7425,7 @@ mixin _$CapabilityStatementOperation {
   /// custom [[[OperationDefinition]]] with a 'base' of the original
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
-  Canonical get definition => throw _privateConstructorUsedError;
+  String get definition => throw _privateConstructorUsedError;
 
   /// [documentation] Documentation that describes anything special about the
   /// operation behavior, possibly detailing different behavior for system, type
@@ -7456,7 +7456,7 @@ abstract class $CapabilityStatementOperationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical definition,
+      String definition,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -7563,7 +7563,7 @@ abstract class _$$_CapabilityStatementOperationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical definition,
+      String definition,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -7879,7 +7879,7 @@ abstract class _CapabilityStatementOperation
   /// custom [[[OperationDefinition]]] with a 'base' of the original
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
-  Canonical get definition;
+  String get definition;
   @override
 
   /// [documentation] Documentation that describes anything special about the
@@ -7934,7 +7934,7 @@ mixin _$CapabilityStatementInteraction1 {
       throw _privateConstructorUsedError;
 
   /// [code] A coded identifier of the operation, supported by the system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -7967,7 +7967,7 @@ abstract class $CapabilityStatementInteraction1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -8068,7 +8068,7 @@ abstract class _$$_CapabilityStatementInteraction1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -8345,7 +8345,7 @@ abstract class _CapabilityStatementInteraction1
   @override
 
   /// [code] A coded identifier of the operation, supported by the system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -9398,7 +9398,7 @@ mixin _$CapabilityStatementSupportedMessage {
 
   /// [mode] The mode of this event declaration - whether application is sender
   ///  or receiver.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -9406,7 +9406,7 @@ mixin _$CapabilityStatementSupportedMessage {
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  Canonical get definition => throw _privateConstructorUsedError;
+  String get definition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -9427,9 +9427,9 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Canonical definition});
+      String definition});
 
   $ElementCopyWith<$Res>? get modeElement;
 }
@@ -9509,9 +9509,9 @@ abstract class _$$_CapabilityStatementSupportedMessageCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Canonical definition});
+      String definition});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -9767,7 +9767,7 @@ abstract class _CapabilityStatementSupportedMessage
 
   /// [mode] The mode of this event declaration - whether application is sender
   ///  or receiver.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -9777,7 +9777,7 @@ abstract class _CapabilityStatementSupportedMessage
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  Canonical get definition;
+  String get definition;
   @override
   @JsonKey(ignore: true)
   _$$_CapabilityStatementSupportedMessageCopyWith<
@@ -9823,7 +9823,7 @@ mixin _$CapabilityStatementDocument {
 
   /// [mode] Mode of this document declaration - whether an application is a
   ///  producer or consumer.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -9840,7 +9840,7 @@ mixin _$CapabilityStatementDocument {
 
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  Canonical get profile => throw _privateConstructorUsedError;
+  String get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -9860,11 +9860,11 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Canonical profile});
+      String profile});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get documentationElement;
@@ -9967,11 +9967,11 @@ abstract class _$$_CapabilityStatementDocumentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Canonical profile});
+      String profile});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -10254,7 +10254,7 @@ abstract class _CapabilityStatementDocument
 
   /// [mode] Mode of this document declaration - whether an application is a
   ///  producer or consumer.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -10275,7 +10275,7 @@ abstract class _CapabilityStatementDocument
 
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  Canonical get profile;
+  String get profile;
   @override
   @JsonKey(ignore: true)
   _$$_CapabilityStatementDocumentCopyWith<_$_CapabilityStatementDocument>
@@ -10305,14 +10305,14 @@ mixin _$CompartmentDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10364,7 +10364,7 @@ mixin _$CompartmentDefinition {
   /// instance of this compartment definition is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -10394,7 +10394,7 @@ mixin _$CompartmentDefinition {
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10404,7 +10404,7 @@ mixin _$CompartmentDefinition {
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -10456,14 +10456,14 @@ mixin _$CompartmentDefinition {
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [code] Which compartment this definition describes.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [search] Whether the search syntax is supported,.
-  Boolean? get search => throw _privateConstructorUsedError;
+  bool? get search => throw _privateConstructorUsedError;
 
   /// [searchElement] Extensions for search
   @JsonKey(name: '_search')
@@ -10491,10 +10491,10 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10502,7 +10502,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -10511,10 +10511,10 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -10531,10 +10531,10 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
-      Boolean? search,
+      bool? search,
       @JsonKey(name: '_search')
           Element? searchElement,
       List<CompartmentDefinitionResource>? resource});
@@ -10949,10 +10949,10 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10960,7 +10960,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -10969,10 +10969,10 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -10989,10 +10989,10 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
-      Boolean? search,
+      bool? search,
       @JsonKey(name: '_search')
           Element? searchElement,
       List<CompartmentDefinitionResource>? resource});
@@ -11799,7 +11799,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11808,7 +11808,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11865,7 +11865,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// instance of this compartment definition is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -11901,7 +11901,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11913,7 +11913,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -11977,7 +11977,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @override
 
   /// [code] Which compartment this definition describes.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -11986,7 +11986,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @override
 
   /// [search] Whether the search syntax is supported,.
-  Boolean? get search;
+  bool? get search;
   @override
 
   /// [searchElement] Extensions for search
@@ -12040,7 +12040,7 @@ mixin _$CompartmentDefinitionResource {
       throw _privateConstructorUsedError;
 
   /// [code] The name of a resource supported by the server.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -12081,7 +12081,7 @@ abstract class $CompartmentDefinitionResourceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
       @JsonKey(name: '_param') List<Element?>? paramElement,
@@ -12194,7 +12194,7 @@ abstract class _$$_CompartmentDefinitionResourceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
       @JsonKey(name: '_param') List<Element?>? paramElement,
@@ -12523,7 +12523,7 @@ abstract class _CompartmentDefinitionResource
   @override
 
   /// [code] The name of a resource supported by the server.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -12578,14 +12578,14 @@ mixin _$ExampleScenario {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -12637,7 +12637,7 @@ mixin _$ExampleScenario {
   /// example scenario is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -12672,7 +12672,7 @@ mixin _$ExampleScenario {
 
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -12681,7 +12681,7 @@ mixin _$ExampleScenario {
   /// [experimental] A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -12771,10 +12771,10 @@ abstract class $ExampleScenarioCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12782,7 +12782,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -12792,10 +12792,10 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -13206,10 +13206,10 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -13217,7 +13217,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -13227,10 +13227,10 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -14114,7 +14114,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -14123,7 +14123,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -14180,7 +14180,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// example scenario is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -14222,7 +14222,7 @@ abstract class _ExampleScenario extends ExampleScenario {
 
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -14233,7 +14233,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// [experimental] A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -14368,7 +14368,7 @@ mixin _$ExampleScenarioActor {
   Element? get actorIdElement => throw _privateConstructorUsedError;
 
   /// [type] The type of actor - person or system.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -14406,7 +14406,7 @@ abstract class $ExampleScenarioActorCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? actorId,
       @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -14556,7 +14556,7 @@ abstract class _$$_ExampleScenarioActorCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? actorId,
       @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -14893,7 +14893,7 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
   @override
 
   /// [type] The type of actor - person or system.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -14967,7 +14967,7 @@ mixin _$ExampleScenarioInstance {
   Element? get resourceIdElement => throw _privateConstructorUsedError;
 
   /// [resourceType] The type of the resource.
-  Code? get resourceType => throw _privateConstructorUsedError;
+  String? get resourceType => throw _privateConstructorUsedError;
 
   /// [resourceTypeElement] Extensions for resourceType
   @JsonKey(name: '_resourceType')
@@ -15014,7 +15014,7 @@ abstract class $ExampleScenarioInstanceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? resourceId,
       @JsonKey(name: '_resourceId') Element? resourceIdElement,
-      Code? resourceType,
+      String? resourceType,
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -15176,7 +15176,7 @@ abstract class _$$_ExampleScenarioInstanceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? resourceId,
       @JsonKey(name: '_resourceId') Element? resourceIdElement,
-      Code? resourceType,
+      String? resourceType,
       @JsonKey(name: '_resourceType') Element? resourceTypeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -15569,7 +15569,7 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
   @override
 
   /// [resourceType] The type of the resource.
-  Code? get resourceType;
+  String? get resourceType;
   @override
 
   /// [resourceTypeElement] Extensions for resourceType
@@ -17205,7 +17205,7 @@ mixin _$ExampleScenarioStep {
       throw _privateConstructorUsedError;
 
   /// [pause] If there is a pause in the flow.
-  Boolean? get pause => throw _privateConstructorUsedError;
+  bool? get pause => throw _privateConstructorUsedError;
 
   /// [pauseElement] Extensions for pause
   @JsonKey(name: '_pause')
@@ -17236,7 +17236,7 @@ abstract class $ExampleScenarioStepCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ExampleScenarioProcess>? process,
-      Boolean? pause,
+      bool? pause,
       @JsonKey(name: '_pause') Element? pauseElement,
       ExampleScenarioOperation? operation,
       List<ExampleScenarioAlternative>? alternative});
@@ -17341,7 +17341,7 @@ abstract class _$$_ExampleScenarioStepCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ExampleScenarioProcess>? process,
-      Boolean? pause,
+      bool? pause,
       @JsonKey(name: '_pause') Element? pauseElement,
       ExampleScenarioOperation? operation,
       List<ExampleScenarioAlternative>? alternative});
@@ -17645,7 +17645,7 @@ abstract class _ExampleScenarioStep extends ExampleScenarioStep {
   @override
 
   /// [pause] If there is a pause in the flow.
-  Boolean? get pause;
+  bool? get pause;
   @override
 
   /// [pauseElement] Extensions for pause
@@ -17746,7 +17746,7 @@ mixin _$ExampleScenarioOperation {
 
   /// [initiatorActive] Whether the initiator is deactivated right after the
   ///  transaction.
-  Boolean? get initiatorActive => throw _privateConstructorUsedError;
+  bool? get initiatorActive => throw _privateConstructorUsedError;
 
   /// [initiatorActiveElement] Extensions for initiatorActive
   @JsonKey(name: '_initiatorActive')
@@ -17754,7 +17754,7 @@ mixin _$ExampleScenarioOperation {
 
   /// [receiverActive] Whether the receiver is deactivated right after the
   ///  transaction.
-  Boolean? get receiverActive => throw _privateConstructorUsedError;
+  bool? get receiverActive => throw _privateConstructorUsedError;
 
   /// [receiverActiveElement] Extensions for receiverActive
   @JsonKey(name: '_receiverActive')
@@ -17796,9 +17796,9 @@ abstract class $ExampleScenarioOperationCopyWith<$Res> {
       @JsonKey(name: '_receiver') Element? receiverElement,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? initiatorActive,
+      bool? initiatorActive,
       @JsonKey(name: '_initiatorActive') Element? initiatorActiveElement,
-      Boolean? receiverActive,
+      bool? receiverActive,
       @JsonKey(name: '_receiverActive') Element? receiverActiveElement,
       ExampleScenarioContainedInstance? request,
       ExampleScenarioContainedInstance? response});
@@ -18087,9 +18087,9 @@ abstract class _$$_ExampleScenarioOperationCopyWith<$Res>
       @JsonKey(name: '_receiver') Element? receiverElement,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? initiatorActive,
+      bool? initiatorActive,
       @JsonKey(name: '_initiatorActive') Element? initiatorActiveElement,
-      Boolean? receiverActive,
+      bool? receiverActive,
       @JsonKey(name: '_receiverActive') Element? receiverActiveElement,
       ExampleScenarioContainedInstance? request,
       ExampleScenarioContainedInstance? response});
@@ -18629,7 +18629,7 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
 
   /// [initiatorActive] Whether the initiator is deactivated right after the
   ///  transaction.
-  Boolean? get initiatorActive;
+  bool? get initiatorActive;
   @override
 
   /// [initiatorActiveElement] Extensions for initiatorActive
@@ -18639,7 +18639,7 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
 
   /// [receiverActive] Whether the receiver is deactivated right after the
   ///  transaction.
-  Boolean? get receiverActive;
+  bool? get receiverActive;
   @override
 
   /// [receiverActiveElement] Extensions for receiverActive
@@ -19180,14 +19180,14 @@ mixin _$GraphDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -19239,7 +19239,7 @@ mixin _$GraphDefinition {
   /// graph definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -19269,7 +19269,7 @@ mixin _$GraphDefinition {
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -19278,7 +19278,7 @@ mixin _$GraphDefinition {
   /// [experimental] A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -19334,14 +19334,14 @@ mixin _$GraphDefinition {
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [start] The type of FHIR resource at which instances of this graph start.
-  Code? get start => throw _privateConstructorUsedError;
+  String? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [profile] The profile that describes the use of the base resource.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   /// [link] Links this graph makes rules about.
   List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
@@ -19363,10 +19363,10 @@ abstract class $GraphDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -19374,7 +19374,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -19383,10 +19383,10 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -19404,10 +19404,10 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? start,
+      String? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Canonical? profile,
+      String? profile,
       List<GraphDefinitionLink>? link});
 
   $MetaCopyWith<$Res>? get meta;
@@ -19806,10 +19806,10 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -19817,7 +19817,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -19826,10 +19826,10 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -19847,10 +19847,10 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? start,
+      String? start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Canonical? profile,
+      String? profile,
       List<GraphDefinitionLink>? link});
 
   @override
@@ -20657,7 +20657,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -20666,7 +20666,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -20723,7 +20723,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// graph definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -20759,7 +20759,7 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -20770,7 +20770,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// [experimental] A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -20839,7 +20839,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
 
   /// [start] The type of FHIR resource at which instances of this graph start.
-  Code? get start;
+  String? get start;
   @override
 
   /// [startElement] Extensions for start
@@ -20848,7 +20848,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
 
   /// [profile] The profile that describes the use of the base resource.
-  Canonical? get profile;
+  String? get profile;
   @override
 
   /// [link] Links this graph makes rules about.
@@ -21609,7 +21609,7 @@ mixin _$GraphDefinitionTarget {
       throw _privateConstructorUsedError;
 
   /// [type] Type of resource this link refers to.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -21623,7 +21623,7 @@ mixin _$GraphDefinitionTarget {
   Element? get paramsElement => throw _privateConstructorUsedError;
 
   /// [profile] Profile for the target resource.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   /// [compartment] Compartment Consistency Rules.
   List<GraphDefinitionCompartment>? get compartment =>
@@ -21648,11 +21648,11 @@ abstract class $GraphDefinitionTargetCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
-      Canonical? profile,
+      String? profile,
       List<GraphDefinitionCompartment>? compartment,
       List<GraphDefinitionLink>? link});
 
@@ -21766,11 +21766,11 @@ abstract class _$$_GraphDefinitionTargetCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
-      Canonical? profile,
+      String? profile,
       List<GraphDefinitionCompartment>? compartment,
       List<GraphDefinitionLink>? link});
 
@@ -22093,7 +22093,7 @@ abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
   @override
 
   /// [type] Type of resource this link refers to.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -22111,7 +22111,7 @@ abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
   @override
 
   /// [profile] Profile for the target resource.
-  Canonical? get profile;
+  String? get profile;
   @override
 
   /// [compartment] Compartment Consistency Rules.
@@ -22165,21 +22165,21 @@ mixin _$GraphDefinitionCompartment {
   /// [use] Defines how the compartment rule is used - whether it it is used to
   /// test whether resources are subject to the rule, or whether it is a rule
   ///  that must be followed.
-  Code? get use => throw _privateConstructorUsedError;
+  String? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
   /// [code] Identifies the compartment.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [rule] identical | matching | different | no-rule | custom.
-  Code? get rule => throw _privateConstructorUsedError;
+  String? get rule => throw _privateConstructorUsedError;
 
   /// [ruleElement] Extensions for rule
   @JsonKey(name: '_rule')
@@ -22216,11 +22216,11 @@ abstract class $GraphDefinitionCompartmentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
+      String? rule,
       @JsonKey(name: '_rule') Element? ruleElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -22392,11 +22392,11 @@ abstract class _$$_GraphDefinitionCompartmentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
+      String? rule,
       @JsonKey(name: '_rule') Element? ruleElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement,
@@ -22761,7 +22761,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   /// [use] Defines how the compartment rule is used - whether it it is used to
   /// test whether resources are subject to the rule, or whether it is a rule
   ///  that must be followed.
-  Code? get use;
+  String? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -22770,7 +22770,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @override
 
   /// [code] Identifies the compartment.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -22779,7 +22779,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @override
 
   /// [rule] identical | matching | different | no-rule | custom.
-  Code? get rule;
+  String? get rule;
   @override
 
   /// [ruleElement] Extensions for rule
@@ -22831,14 +22831,14 @@ mixin _$ImplementationGuide {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -22890,7 +22890,7 @@ mixin _$ImplementationGuide {
   /// this implementation guide is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -22928,7 +22928,7 @@ mixin _$ImplementationGuide {
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -22937,7 +22937,7 @@ mixin _$ImplementationGuide {
   /// [experimental] A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -23005,7 +23005,7 @@ mixin _$ImplementationGuide {
 
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
-  Code? get license => throw _privateConstructorUsedError;
+  String? get license => throw _privateConstructorUsedError;
 
   /// [licenseElement] Extensions for license
   @JsonKey(name: '_license')
@@ -23060,10 +23060,10 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -23071,7 +23071,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -23083,10 +23083,10 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -23107,7 +23107,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      String? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -23608,10 +23608,10 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -23619,7 +23619,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -23631,10 +23631,10 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -23655,7 +23655,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      String? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -24654,7 +24654,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -24663,7 +24663,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -24720,7 +24720,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// this implementation guide is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -24766,7 +24766,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -24777,7 +24777,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// [experimental] A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -24860,7 +24860,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
-  Code? get license;
+  String? get license;
   @override
 
   /// [licenseElement] Extensions for license
@@ -24944,7 +24944,7 @@ mixin _$ImplementationGuideDependsOn {
 
   /// [uri] A canonical reference to the Implementation guide for the
   ///  dependency.
-  Canonical get uri => throw _privateConstructorUsedError;
+  String get uri => throw _privateConstructorUsedError;
 
   /// [packageId] The NPM package name for the Implementation Guide that this
   ///  IG depends on.
@@ -24980,7 +24980,7 @@ abstract class $ImplementationGuideDependsOnCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical uri,
+      String uri,
       Id? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
@@ -25087,7 +25087,7 @@ abstract class _$$_ImplementationGuideDependsOnCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical uri,
+      String uri,
       Id? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
@@ -25374,7 +25374,7 @@ abstract class _ImplementationGuideDependsOn
 
   /// [uri] A canonical reference to the Implementation guide for the
   ///  dependency.
-  Canonical get uri;
+  String get uri;
   @override
 
   /// [packageId] The NPM package name for the Implementation Guide that this
@@ -25438,14 +25438,14 @@ mixin _$ImplementationGuideGlobal {
       throw _privateConstructorUsedError;
 
   /// [type] The type of resource that all instances must conform to.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [profile] A reference to the profile that all instances must conform to.
-  Canonical get profile => throw _privateConstructorUsedError;
+  String get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -25463,9 +25463,9 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical profile});
+      String profile});
 
   $ElementCopyWith<$Res>? get typeElement;
 }
@@ -25545,9 +25545,9 @@ abstract class _$$_ImplementationGuideGlobalCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical profile});
+      String profile});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -25793,7 +25793,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @override
 
   /// [type] The type of resource that all instances must conform to.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -25802,7 +25802,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @override
 
   /// [profile] A reference to the profile that all instances must conform to.
-  Canonical get profile;
+  String get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ImplementationGuideGlobalCopyWith<_$_ImplementationGuideGlobal>
@@ -26864,7 +26864,7 @@ mixin _$ImplementationGuideResource {
   /// [exampleBoolean] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
+  bool? get exampleBoolean => throw _privateConstructorUsedError;
 
   /// [exampleBooleanElement] Extensions for exampleBoolean
   @JsonKey(name: '_exampleBoolean')
@@ -26873,7 +26873,7 @@ mixin _$ImplementationGuideResource {
   /// [exampleCanonical] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
+  String? get exampleCanonical => throw _privateConstructorUsedError;
 
   /// [exampleCanonicalElement] Extensions for exampleCanonical
   @JsonKey(name: '_exampleCanonical')
@@ -26912,9 +26912,9 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? exampleBoolean,
+      bool? exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-      Canonical? exampleCanonical,
+      String? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
       Id? groupingId,
       @JsonKey(name: '_groupingId') Element? groupingIdElement});
@@ -27115,9 +27115,9 @@ abstract class _$$_ImplementationGuideResourceCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Boolean? exampleBoolean,
+      bool? exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-      Canonical? exampleCanonical,
+      String? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
       Id? groupingId,
       @JsonKey(name: '_groupingId') Element? groupingIdElement});
@@ -27602,7 +27602,7 @@ abstract class _ImplementationGuideResource
   /// [exampleBoolean] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Boolean? get exampleBoolean;
+  bool? get exampleBoolean;
   @override
 
   /// [exampleBooleanElement] Extensions for exampleBoolean
@@ -27613,7 +27613,7 @@ abstract class _ImplementationGuideResource
   /// [exampleCanonical] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Canonical? get exampleCanonical;
+  String? get exampleCanonical;
   @override
 
   /// [exampleCanonicalElement] Extensions for exampleCanonical
@@ -27690,7 +27690,7 @@ mixin _$ImplementationGuidePage {
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [generation] A code that indicates how the page is generated.
-  Code? get generation => throw _privateConstructorUsedError;
+  String? get generation => throw _privateConstructorUsedError;
 
   /// [generationElement] Extensions for generation
   @JsonKey(name: '_generation')
@@ -27720,7 +27720,7 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       Reference? nameReference,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
+      String? generation,
       @JsonKey(name: '_generation') Element? generationElement,
       List<ImplementationGuidePage>? page});
 
@@ -27870,7 +27870,7 @@ abstract class _$$_ImplementationGuidePageCopyWith<$Res>
       Reference? nameReference,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
+      String? generation,
       @JsonKey(name: '_generation') Element? generationElement,
       List<ImplementationGuidePage>? page});
 
@@ -28229,7 +28229,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @override
 
   /// [generation] A code that indicates how the page is generated.
-  Code? get generation;
+  String? get generation;
   @override
 
   /// [generationElement] Extensions for generation
@@ -28284,7 +28284,7 @@ mixin _$ImplementationGuideParameter {
   /// [code] apply | path-resource | path-pages | path-tx-cache |
   /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
   ///  generate-turtle | html-template.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -28315,7 +28315,7 @@ abstract class $ImplementationGuideParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -28416,7 +28416,7 @@ abstract class _$$_ImplementationGuideParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
@@ -28688,7 +28688,7 @@ abstract class _ImplementationGuideParameter
   /// [code] apply | path-resource | path-pages | path-tx-cache |
   /// expansion-parameter | rule-broken-links | generate-xml | generate-json |
   ///  generate-turtle | html-template.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -28746,7 +28746,7 @@ mixin _$ImplementationGuideTemplate {
       throw _privateConstructorUsedError;
 
   /// [code] Type of template specified.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -28784,7 +28784,7 @@ abstract class $ImplementationGuideTemplateCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? source,
       @JsonKey(name: '_source') Element? sourceElement,
@@ -28910,7 +28910,7 @@ abstract class _$$_ImplementationGuideTemplateCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? source,
       @JsonKey(name: '_source') Element? sourceElement,
@@ -29210,7 +29210,7 @@ abstract class _ImplementationGuideTemplate
   @override
 
   /// [code] Type of template specified.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -29921,7 +29921,7 @@ mixin _$ImplementationGuideResource1 {
   /// [exampleBoolean] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Boolean? get exampleBoolean => throw _privateConstructorUsedError;
+  bool? get exampleBoolean => throw _privateConstructorUsedError;
 
   /// [exampleBooleanElement] Extensions for exampleBoolean
   @JsonKey(name: '_exampleBoolean')
@@ -29930,7 +29930,7 @@ mixin _$ImplementationGuideResource1 {
   /// [exampleCanonical] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Canonical? get exampleCanonical => throw _privateConstructorUsedError;
+  String? get exampleCanonical => throw _privateConstructorUsedError;
 
   /// [exampleCanonicalElement] Extensions for exampleCanonical
   @JsonKey(name: '_exampleCanonical')
@@ -29963,9 +29963,9 @@ abstract class $ImplementationGuideResource1CopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference reference,
-      Boolean? exampleBoolean,
+      bool? exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-      Canonical? exampleCanonical,
+      String? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
       FhirUrl? relativePath,
       @JsonKey(name: '_relativePath') Element? relativePathElement});
@@ -30104,9 +30104,9 @@ abstract class _$$_ImplementationGuideResource1CopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference reference,
-      Boolean? exampleBoolean,
+      bool? exampleBoolean,
       @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-      Canonical? exampleCanonical,
+      String? exampleCanonical,
       @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
       FhirUrl? relativePath,
       @JsonKey(name: '_relativePath') Element? relativePathElement});
@@ -30439,7 +30439,7 @@ abstract class _ImplementationGuideResource1
   /// [exampleBoolean] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Boolean? get exampleBoolean;
+  bool? get exampleBoolean;
   @override
 
   /// [exampleBooleanElement] Extensions for exampleBoolean
@@ -30450,7 +30450,7 @@ abstract class _ImplementationGuideResource1
   /// [exampleCanonical] If true or a reference, indicates the resource is an
   /// example instance.  If a reference is present, indicates that the example
   ///  is an example of the specified profile.
-  Canonical? get exampleCanonical;
+  String? get exampleCanonical;
   @override
 
   /// [exampleCanonicalElement] Extensions for exampleCanonical
@@ -31026,14 +31026,14 @@ mixin _$MessageDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -31081,7 +31081,7 @@ mixin _$MessageDefinition {
   /// [url] The business identifier that is used to reference the
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -31127,7 +31127,7 @@ mixin _$MessageDefinition {
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -31136,7 +31136,7 @@ mixin _$MessageDefinition {
   /// [experimental] A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -31202,7 +31202,7 @@ mixin _$MessageDefinition {
 
   /// [base] The MessageDefinition that is the basis for the contents of this
   ///  resource.
-  Canonical? get base => throw _privateConstructorUsedError;
+  String? get base => throw _privateConstructorUsedError;
 
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
   ///  represents a step in.
@@ -31212,14 +31212,14 @@ mixin _$MessageDefinition {
   Coding? get eventCoding => throw _privateConstructorUsedError;
 
   /// [eventUri] Event code or link to the EventDefinition.
-  FhirUri? get eventUri => throw _privateConstructorUsedError;
+  String? get eventUri => throw _privateConstructorUsedError;
 
   /// [eventUriElement] Extensions for eventUri
   @JsonKey(name: '_eventUri')
   Element? get eventUriElement => throw _privateConstructorUsedError;
 
   /// [category] The impact of the content of the message.
-  Code? get category => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -31232,7 +31232,7 @@ mixin _$MessageDefinition {
 
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
-  Code? get responseRequired => throw _privateConstructorUsedError;
+  String? get responseRequired => throw _privateConstructorUsedError;
 
   /// [responseRequiredElement] Extensions for responseRequired
   @JsonKey(name: '_responseRequired')
@@ -31267,10 +31267,10 @@ abstract class $MessageDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -31278,7 +31278,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -31292,10 +31292,10 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? replaces,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -31316,17 +31316,17 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Canonical? base,
+      String? base,
       List<Canonical>? parent,
       Coding? eventCoding,
-      FhirUri? eventUri,
+      String? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      String? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -31863,10 +31863,10 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -31874,7 +31874,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -31888,10 +31888,10 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? replaces,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -31912,17 +31912,17 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Canonical? base,
+      String? base,
       List<Canonical>? parent,
       Coding? eventCoding,
-      FhirUri? eventUri,
+      String? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      String? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -33020,7 +33020,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -33029,7 +33029,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -33082,7 +33082,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// [url] The business identifier that is used to reference the
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -33138,7 +33138,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -33149,7 +33149,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// [experimental] A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -33230,7 +33230,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [base] The MessageDefinition that is the basis for the contents of this
   ///  resource.
-  Canonical? get base;
+  String? get base;
   @override
 
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
@@ -33243,7 +33243,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
 
   /// [eventUri] Event code or link to the EventDefinition.
-  FhirUri? get eventUri;
+  String? get eventUri;
   @override
 
   /// [eventUriElement] Extensions for eventUri
@@ -33252,7 +33252,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
 
   /// [category] The impact of the content of the message.
-  Code? get category;
+  String? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -33268,7 +33268,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
-  Code? get responseRequired;
+  String? get responseRequired;
   @override
 
   /// [responseRequiredElement] Extensions for responseRequired
@@ -33330,7 +33330,7 @@ mixin _$MessageDefinitionFocus {
       throw _privateConstructorUsedError;
 
   /// [code] The kind of resource that must be the focus for this message.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -33338,7 +33338,7 @@ mixin _$MessageDefinitionFocus {
 
   /// [profile] A profile that reflects constraints for the focal resource (and
   ///  potentially for related resources).
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   /// [min] Identifies the minimum number of resources of this type that must
   /// be pointed to by a message in order for it to be valid against this
@@ -33374,9 +33374,9 @@ abstract class $MessageDefinitionFocusCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Canonical? profile,
+      String? profile,
       UnsignedInt? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
@@ -33505,9 +33505,9 @@ abstract class _$$_MessageDefinitionFocusCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Canonical? profile,
+      String? profile,
       UnsignedInt? min,
       @JsonKey(name: '_min') Element? minElement,
       String? max,
@@ -33822,7 +33822,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
   @override
 
   /// [code] The kind of resource that must be the focus for this message.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -33832,7 +33832,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
 
   /// [profile] A profile that reflects constraints for the focal resource (and
   ///  potentially for related resources).
-  Canonical? get profile;
+  String? get profile;
   @override
 
   /// [min] Identifies the minimum number of resources of this type that must
@@ -33899,7 +33899,7 @@ mixin _$MessageDefinitionAllowedResponse {
 
   /// [message] A reference to the message definition that must be adhered to
   ///  by this supported response.
-  Canonical get message => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
 
   /// [situation] Provides a description of the circumstances in which this
   ///  response should be used (as opposed to one of the alternative responses).
@@ -33927,7 +33927,7 @@ abstract class $MessageDefinitionAllowedResponseCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical message,
+      String message,
       Markdown? situation,
       @JsonKey(name: '_situation') Element? situationElement});
 
@@ -34009,7 +34009,7 @@ abstract class _$$_MessageDefinitionAllowedResponseCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical message,
+      String message,
       Markdown? situation,
       @JsonKey(name: '_situation') Element? situationElement});
 
@@ -34266,7 +34266,7 @@ abstract class _MessageDefinitionAllowedResponse
 
   /// [message] A reference to the message definition that must be adhered to
   ///  by this supported response.
-  Canonical get message;
+  String get message;
   @override
 
   /// [situation] Provides a description of the circumstances in which this
@@ -34306,14 +34306,14 @@ mixin _$OperationDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -34365,7 +34365,7 @@ mixin _$OperationDefinition {
   /// this operation definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -34403,14 +34403,14 @@ mixin _$OperationDefinition {
 
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [kind] Whether this is an operation or a named query.
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -34419,7 +34419,7 @@ mixin _$OperationDefinition {
   /// [experimental] A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -34476,14 +34476,14 @@ mixin _$OperationDefinition {
 
   /// [affectsState] Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
-  Boolean? get affectsState => throw _privateConstructorUsedError;
+  bool? get affectsState => throw _privateConstructorUsedError;
 
   /// [affectsStateElement] Extensions for affectsState
   @JsonKey(name: '_affectsState')
   Element? get affectsStateElement => throw _privateConstructorUsedError;
 
   /// [code] The name used to invoke the operation.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -34499,7 +34499,7 @@ mixin _$OperationDefinition {
 
   /// [base] Indicates that this operation definition is a constraining profile
   ///  on the base.
-  Canonical? get base => throw _privateConstructorUsedError;
+  String? get base => throw _privateConstructorUsedError;
 
   /// [resource] The types on which this operation can be executed.
   List<Code>? get resource => throw _privateConstructorUsedError;
@@ -34511,7 +34511,7 @@ mixin _$OperationDefinition {
   /// [system] Indicates whether this operation or named query can be invoked
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
-  Boolean? get system => throw _privateConstructorUsedError;
+  bool? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -34520,7 +34520,7 @@ mixin _$OperationDefinition {
   /// [type] Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
-  Boolean? get type => throw _privateConstructorUsedError;
+  bool? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -34528,7 +34528,7 @@ mixin _$OperationDefinition {
 
   /// [instance] Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
-  Boolean? get instance => throw _privateConstructorUsedError;
+  bool? get instance => throw _privateConstructorUsedError;
 
   /// [instanceElement] Extensions for instance
   @JsonKey(name: '_instance')
@@ -34537,12 +34537,12 @@ mixin _$OperationDefinition {
   /// [inputProfile] Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource as a whole.
-  Canonical? get inputProfile => throw _privateConstructorUsedError;
+  String? get inputProfile => throw _privateConstructorUsedError;
 
   /// [outputProfile] Additional validation information for the out parameters
   /// - a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource.
-  Canonical? get outputProfile => throw _privateConstructorUsedError;
+  String? get outputProfile => throw _privateConstructorUsedError;
 
   /// [parameter] The parameters for the operation/query.
   List<OperationDefinitionParameter>? get parameter =>
@@ -34571,10 +34571,10 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -34582,7 +34582,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -34594,13 +34594,13 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -34618,30 +34618,30 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Boolean? affectsState,
+      bool? affectsState,
       @JsonKey(name: '_affectsState')
           Element? affectsStateElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       Markdown? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Canonical? base,
+      String? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
           List<Element?>? resourceElement,
-      Boolean? system,
+      bool? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Boolean? type,
+      bool? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? instance,
+      bool? instance,
       @JsonKey(name: '_instance')
           Element? instanceElement,
-      Canonical? inputProfile,
-      Canonical? outputProfile,
+      String? inputProfile,
+      String? outputProfile,
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload});
 
@@ -35227,10 +35227,10 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -35238,7 +35238,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -35250,13 +35250,13 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -35274,30 +35274,30 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Boolean? affectsState,
+      bool? affectsState,
       @JsonKey(name: '_affectsState')
           Element? affectsStateElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       Markdown? comment,
       @JsonKey(name: '_comment')
           Element? commentElement,
-      Canonical? base,
+      String? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
           List<Element?>? resourceElement,
-      Boolean? system,
+      bool? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Boolean? type,
+      bool? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? instance,
+      bool? instance,
       @JsonKey(name: '_instance')
           Element? instanceElement,
-      Canonical? inputProfile,
-      Canonical? outputProfile,
+      String? inputProfile,
+      String? outputProfile,
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload});
 
@@ -36452,7 +36452,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -36461,7 +36461,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -36518,7 +36518,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// this operation definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -36564,7 +36564,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -36573,7 +36573,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
 
   /// [kind] Whether this is an operation or a named query.
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -36584,7 +36584,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// [experimental] A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -36654,7 +36654,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [affectsState] Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
-  Boolean? get affectsState;
+  bool? get affectsState;
   @override
 
   /// [affectsStateElement] Extensions for affectsState
@@ -36663,7 +36663,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
 
   /// [code] The name used to invoke the operation.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -36683,7 +36683,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [base] Indicates that this operation definition is a constraining profile
   ///  on the base.
-  Canonical? get base;
+  String? get base;
   @override
 
   /// [resource] The types on which this operation can be executed.
@@ -36698,7 +36698,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// [system] Indicates whether this operation or named query can be invoked
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
-  Boolean? get system;
+  bool? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -36709,7 +36709,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// [type] Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
-  Boolean? get type;
+  bool? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -36719,7 +36719,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [instance] Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
-  Boolean? get instance;
+  bool? get instance;
   @override
 
   /// [instanceElement] Extensions for instance
@@ -36730,13 +36730,13 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// [inputProfile] Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource as a whole.
-  Canonical? get inputProfile;
+  String? get inputProfile;
   @override
 
   /// [outputProfile] Additional validation information for the out parameters
   /// - a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource.
-  Canonical? get outputProfile;
+  String? get outputProfile;
   @override
 
   /// [parameter] The parameters for the operation/query.
@@ -36790,14 +36790,14 @@ mixin _$OperationDefinitionParameter {
       throw _privateConstructorUsedError;
 
   /// [name] The name of used to identify the parameter.
-  Code? get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether this is an input or an output parameter.
-  Code? get use => throw _privateConstructorUsedError;
+  String? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -36827,7 +36827,7 @@ mixin _$OperationDefinitionParameter {
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type for this parameter.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -36846,7 +36846,7 @@ mixin _$OperationDefinitionParameter {
 
   /// [searchType] How the parameter is understood as a search parameter. This
   ///  is only used if the parameter type is 'string'.
-  Code? get searchType => throw _privateConstructorUsedError;
+  String? get searchType => throw _privateConstructorUsedError;
 
   /// [searchTypeElement] Extensions for searchType
   @JsonKey(name: '_searchType')
@@ -36884,9 +36884,9 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -36894,10 +36894,10 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? targetProfile,
-      Code? searchType,
+      String? searchType,
       @JsonKey(name: '_searchType') Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -37147,9 +37147,9 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? name,
+      String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use') Element? useElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -37157,10 +37157,10 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
       @JsonKey(name: '_max') Element? maxElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<Canonical>? targetProfile,
-      Code? searchType,
+      String? searchType,
       @JsonKey(name: '_searchType') Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -37700,7 +37700,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [name] The name of used to identify the parameter.
-  Code? get name;
+  String? get name;
   @override
 
   /// [nameElement] Extensions for name
@@ -37709,7 +37709,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [use] Whether this is an input or an output parameter.
-  Code? get use;
+  String? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -37747,7 +37747,7 @@ abstract class _OperationDefinitionParameter
   @override
 
   /// [type] The type for this parameter.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -37769,7 +37769,7 @@ abstract class _OperationDefinitionParameter
 
   /// [searchType] How the parameter is understood as a search parameter. This
   ///  is only used if the parameter type is 'string'.
-  Code? get searchType;
+  String? get searchType;
   @override
 
   /// [searchTypeElement] Extensions for searchType
@@ -37835,7 +37835,7 @@ mixin _$OperationDefinitionBinding {
   /// [strength] Indicates the degree of conformance expectations associated
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
-  Code? get strength => throw _privateConstructorUsedError;
+  String? get strength => throw _privateConstructorUsedError;
 
   /// [strengthElement] Extensions for strength
   @JsonKey(name: '_strength')
@@ -37843,7 +37843,7 @@ mixin _$OperationDefinitionBinding {
 
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  Canonical get valueSet => throw _privateConstructorUsedError;
+  String get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37862,9 +37862,9 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
+      String? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
-      Canonical valueSet});
+      String valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
 }
@@ -37944,9 +37944,9 @@ abstract class _$$_OperationDefinitionBindingCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
+      String? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
-      Canonical valueSet});
+      String valueSet});
 
   @override
   $ElementCopyWith<$Res>? get strengthElement;
@@ -38199,7 +38199,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   /// [strength] Indicates the degree of conformance expectations associated
   /// with this binding - that is, the degree to which the provided value set
   ///  must be adhered to in the instances.
-  Code? get strength;
+  String? get strength;
   @override
 
   /// [strengthElement] Extensions for strength
@@ -38209,7 +38209,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
 
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  Canonical get valueSet;
+  String get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionBindingCopyWith<_$_OperationDefinitionBinding>
@@ -39182,14 +39182,14 @@ mixin _$SearchParameter {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -39241,7 +39241,7 @@ mixin _$SearchParameter {
   /// search parameter is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -39274,11 +39274,11 @@ mixin _$SearchParameter {
   /// consistent with the definition from which it is defined. i.e. the
   /// parameter should have the same meaning, and (usually) the functionality
   ///  should be a proper subset of the underlying search parameter.
-  Canonical? get derivedFrom => throw _privateConstructorUsedError;
+  String? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -39287,7 +39287,7 @@ mixin _$SearchParameter {
   /// [experimental] A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -39343,7 +39343,7 @@ mixin _$SearchParameter {
 
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -39359,7 +39359,7 @@ mixin _$SearchParameter {
 
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -39383,7 +39383,7 @@ mixin _$SearchParameter {
 
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
-  Code? get xpathUsage => throw _privateConstructorUsedError;
+  String? get xpathUsage => throw _privateConstructorUsedError;
 
   /// [xpathUsageElement] Extensions for xpathUsage
   @JsonKey(name: '_xpathUsage')
@@ -39399,7 +39399,7 @@ mixin _$SearchParameter {
   /// [multipleOr] Whether multiple values are allowed for each time the
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
-  Boolean? get multipleOr => throw _privateConstructorUsedError;
+  bool? get multipleOr => throw _privateConstructorUsedError;
 
   /// [multipleOrElement] Extensions for multipleOr
   @JsonKey(name: '_multipleOr')
@@ -39408,7 +39408,7 @@ mixin _$SearchParameter {
   /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
-  Boolean? get multipleAnd => throw _privateConstructorUsedError;
+  bool? get multipleAnd => throw _privateConstructorUsedError;
 
   /// [multipleAndElement] Extensions for multipleAnd
   @JsonKey(name: '_multipleAnd')
@@ -39461,10 +39461,10 @@ abstract class $SearchParameterCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -39472,7 +39472,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -39481,11 +39481,11 @@ abstract class $SearchParameterCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Canonical? derivedFrom,
-      Code? status,
+      String? derivedFrom,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -39503,13 +39503,13 @@ abstract class $SearchParameterCopyWith<$Res> {
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element?>? baseElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -39518,16 +39518,16 @@ abstract class $SearchParameterCopyWith<$Res> {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      String? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
           List<Element?>? targetElement,
-      Boolean? multipleOr,
+      bool? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
-      Boolean? multipleAnd,
+      bool? multipleAnd,
       @JsonKey(name: '_multipleAnd')
           Element? multipleAndElement,
       List<Code>? comparator,
@@ -40125,10 +40125,10 @@ abstract class _$$_SearchParameterCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -40136,7 +40136,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       String? version,
@@ -40145,11 +40145,11 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Canonical? derivedFrom,
-      Code? status,
+      String? derivedFrom,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -40167,13 +40167,13 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element?>? baseElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -40182,16 +40182,16 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      String? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
           List<Element?>? targetElement,
-      Boolean? multipleOr,
+      bool? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
-      Boolean? multipleAnd,
+      bool? multipleAnd,
       @JsonKey(name: '_multipleAnd')
           Element? multipleAndElement,
       List<Code>? comparator,
@@ -41483,7 +41483,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -41492,7 +41492,7 @@ abstract class _SearchParameter extends SearchParameter {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -41549,7 +41549,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// search parameter is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -41588,12 +41588,12 @@ abstract class _SearchParameter extends SearchParameter {
   /// consistent with the definition from which it is defined. i.e. the
   /// parameter should have the same meaning, and (usually) the functionality
   ///  should be a proper subset of the underlying search parameter.
-  Canonical? get derivedFrom;
+  String? get derivedFrom;
   @override
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -41604,7 +41604,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [experimental] A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -41673,7 +41673,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -41693,7 +41693,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -41723,7 +41723,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
-  Code? get xpathUsage;
+  String? get xpathUsage;
   @override
 
   /// [xpathUsageElement] Extensions for xpathUsage
@@ -41743,7 +41743,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [multipleOr] Whether multiple values are allowed for each time the
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
-  Boolean? get multipleOr;
+  bool? get multipleOr;
   @override
 
   /// [multipleOrElement] Extensions for multipleOr
@@ -41754,7 +41754,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
-  Boolean? get multipleAnd;
+  bool? get multipleAnd;
   @override
 
   /// [multipleAndElement] Extensions for multipleAnd
@@ -41840,7 +41840,7 @@ mixin _$SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  Canonical get definition => throw _privateConstructorUsedError;
+  String get definition => throw _privateConstructorUsedError;
 
   /// [expression] A sub-expression that defines how to extract values for this
   ///  component from the output of the main SearchParameter.expression.
@@ -41866,7 +41866,7 @@ abstract class $SearchParameterComponentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical definition,
+      String definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -41948,7 +41948,7 @@ abstract class _$$_SearchParameterComponentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical definition,
+      String definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -42201,7 +42201,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  Canonical get definition;
+  String get definition;
   @override
 
   /// [expression] A sub-expression that defines how to extract values for this
@@ -42240,14 +42240,14 @@ mixin _$StructureDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -42299,7 +42299,7 @@ mixin _$StructureDefinition {
   /// this structure definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -42342,7 +42342,7 @@ mixin _$StructureDefinition {
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -42351,7 +42351,7 @@ mixin _$StructureDefinition {
   /// [experimental] A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -42425,7 +42425,7 @@ mixin _$StructureDefinition {
   /// StructureDefinition is based - this is the formal version of the
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  String? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
@@ -42436,7 +42436,7 @@ mixin _$StructureDefinition {
       throw _privateConstructorUsedError;
 
   /// [kind] Defines the kind of structure that this definition is describing.
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -42447,7 +42447,7 @@ mixin _$StructureDefinition {
   /// Resources and Data types, abstract types will never be exchanged  between
   ///  systems.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_ => throw _privateConstructorUsedError;
+  bool? get abstract_ => throw _privateConstructorUsedError;
 
   /// [abstractElement] Extensions for abstract
   @JsonKey(name: '_abstract')
@@ -42477,7 +42477,7 @@ mixin _$StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
-  FhirUri? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -42485,12 +42485,12 @@ mixin _$StructureDefinition {
 
   /// [baseDefinition] An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
-  Canonical? get baseDefinition => throw _privateConstructorUsedError;
+  String? get baseDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_baseDefinition')
   Element? get baseDefinitionElement => throw _privateConstructorUsedError;
 
   /// [derivation] How the type relates to the baseDefinition.
-  Code? get derivation => throw _privateConstructorUsedError;
+  String? get derivation => throw _privateConstructorUsedError;
 
   /// [derivationElement] Extensions for derivation
   @JsonKey(name: '_derivation')
@@ -42523,10 +42523,10 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -42534,7 +42534,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -42547,10 +42547,10 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -42572,28 +42572,28 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      String? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
-          Boolean? abstract_,
+          bool? abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
           List<Element?>? contextInvariantElement,
-      FhirUri? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical? baseDefinition,
+      String? baseDefinition,
       @JsonKey(name: '_baseDefinition')
           Element? baseDefinitionElement,
-      Code? derivation,
+      String? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -43214,10 +43214,10 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -43225,7 +43225,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -43238,10 +43238,10 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -43263,28 +43263,28 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      String? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
-          Boolean? abstract_,
+          bool? abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
           List<Element?>? contextInvariantElement,
-      FhirUri? type,
+      String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical? baseDefinition,
+      String? baseDefinition,
       @JsonKey(name: '_baseDefinition')
           Element? baseDefinitionElement,
-      Code? derivation,
+      String? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -44504,7 +44504,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -44513,7 +44513,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -44570,7 +44570,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// this structure definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -44622,7 +44622,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -44633,7 +44633,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// [experimental] A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -44723,7 +44723,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// StructureDefinition is based - this is the formal version of the
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
-  Code? get fhirVersion;
+  String? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
@@ -44736,7 +44736,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
 
   /// [kind] Defines the kind of structure that this definition is describing.
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -44749,7 +44749,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// Resources and Data types, abstract types will never be exchanged  between
   ///  systems.
   @JsonKey(name: 'abstract')
-  Boolean? get abstract_;
+  bool? get abstract_;
   @override
 
   /// [abstractElement] Extensions for abstract
@@ -44782,7 +44782,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
-  FhirUri? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -44792,14 +44792,14 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [baseDefinition] An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
-  Canonical? get baseDefinition;
+  String? get baseDefinition;
   @override
   @JsonKey(name: '_baseDefinition')
   Element? get baseDefinitionElement;
   @override
 
   /// [derivation] How the type relates to the baseDefinition.
-  Code? get derivation;
+  String? get derivation;
   @override
 
   /// [derivationElement] Extensions for derivation
@@ -44867,7 +44867,7 @@ mixin _$StructureDefinitionMapping {
 
   /// [uri] An absolute URI that identifies the specification that this mapping
   ///  is expressed to.
-  FhirUri? get uri => throw _privateConstructorUsedError;
+  String? get uri => throw _privateConstructorUsedError;
 
   /// [uriElement] Extensions for uri
   @JsonKey(name: '_uri')
@@ -44907,7 +44907,7 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Id? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -45058,7 +45058,7 @@ abstract class _$$_StructureDefinitionMappingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Id? identity,
       @JsonKey(name: '_identity') Element? identityElement,
-      FhirUri? uri,
+      String? uri,
       @JsonKey(name: '_uri') Element? uriElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -45402,7 +45402,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
 
   /// [uri] An absolute URI that identifies the specification that this mapping
   ///  is expressed to.
-  FhirUri? get uri;
+  String? get uri;
   @override
 
   /// [uriElement] Extensions for uri
@@ -45471,7 +45471,7 @@ mixin _$StructureDefinitionContext {
 
   /// [type] Defines how to interpret the expression that defines what the
   ///  context of the extension is.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -45502,7 +45502,7 @@ abstract class $StructureDefinitionContextCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
@@ -45603,7 +45603,7 @@ abstract class _$$_StructureDefinitionContextCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
@@ -45874,7 +45874,7 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
 
   /// [type] Defines how to interpret the expression that defines what the
   ///  context of the extension is.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -46612,14 +46612,14 @@ mixin _$StructureMap {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -46671,7 +46671,7 @@ mixin _$StructureMap {
   /// structure map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -46713,7 +46713,7 @@ mixin _$StructureMap {
 
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -46722,7 +46722,7 @@ mixin _$StructureMap {
   /// [experimental] A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -46817,10 +46817,10 @@ abstract class $StructureMapCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -46828,7 +46828,7 @@ abstract class $StructureMapCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -46841,10 +46841,10 @@ abstract class $StructureMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -47299,10 +47299,10 @@ abstract class _$$_StructureMapCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -47310,7 +47310,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -47323,10 +47323,10 @@ abstract class _$$_StructureMapCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       FhirDateTime? date,
@@ -48260,7 +48260,7 @@ abstract class _StructureMap extends StructureMap {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -48269,7 +48269,7 @@ abstract class _StructureMap extends StructureMap {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -48326,7 +48326,7 @@ abstract class _StructureMap extends StructureMap {
   /// structure map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -48377,7 +48377,7 @@ abstract class _StructureMap extends StructureMap {
 
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -48388,7 +48388,7 @@ abstract class _StructureMap extends StructureMap {
   /// [experimental] A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -48524,10 +48524,10 @@ mixin _$StructureMapStructure {
       throw _privateConstructorUsedError;
 
   /// [url] The canonical reference to the structure.
-  Canonical get url => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
 
   /// [mode] How the referenced structure is used in this mapping.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -48564,8 +48564,8 @@ abstract class $StructureMapStructureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical url,
-      Code? mode,
+      String url,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
       @JsonKey(name: '_alias') Element? aliasElement,
@@ -48695,8 +48695,8 @@ abstract class _$$_StructureMapStructureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical url,
-      Code? mode,
+      String url,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
       @JsonKey(name: '_alias') Element? aliasElement,
@@ -49011,11 +49011,11 @@ abstract class _StructureMapStructure extends StructureMapStructure {
   @override
 
   /// [url] The canonical reference to the structure.
-  Canonical get url;
+  String get url;
   @override
 
   /// [mode] How the referenced structure is used in this mapping.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -49098,7 +49098,7 @@ mixin _$StructureMapGroup {
 
   /// [typeMode] If this is the default rule set to apply for the source type
   ///  or this combination of types.
-  Code? get typeMode => throw _privateConstructorUsedError;
+  String? get typeMode => throw _privateConstructorUsedError;
 
   /// [typeModeElement] Extensions for typeMode
   @JsonKey(name: '_typeMode')
@@ -49139,7 +49139,7 @@ abstract class $StructureMapGroupCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(name: 'extends') Id? extends_,
       @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
+      String? typeMode,
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -49300,7 +49300,7 @@ abstract class _$$_StructureMapGroupCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(name: 'extends') Id? extends_,
       @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
+      String? typeMode,
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
@@ -49696,7 +49696,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
 
   /// [typeMode] If this is the default rule set to apply for the source type
   ///  or this combination of types.
-  Code? get typeMode;
+  String? get typeMode;
   @override
 
   /// [typeModeElement] Extensions for typeMode
@@ -49777,7 +49777,7 @@ mixin _$StructureMapInput {
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [mode] Mode for this instance of data.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -49810,7 +49810,7 @@ abstract class $StructureMapInputCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -49959,7 +49959,7 @@ abstract class _$$_StructureMapInputCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
@@ -50307,7 +50307,7 @@ abstract class _StructureMapInput extends StructureMapInput {
   @override
 
   /// [mode] Mode for this instance of data.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -50997,15 +50997,14 @@ mixin _$StructureMapSource {
 
   /// [defaultValueBase64Binary] A value to use if there is no existing value
   ///  in the source object.
-  Base64Binary? get defaultValueBase64Binary =>
-      throw _privateConstructorUsedError;
+  String? get defaultValueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement =>
       throw _privateConstructorUsedError;
 
   /// [defaultValueBoolean] A value to use if there is no existing value in the
   ///  source object.
-  Boolean? get defaultValueBoolean => throw _privateConstructorUsedError;
+  bool? get defaultValueBoolean => throw _privateConstructorUsedError;
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
   @JsonKey(name: '_defaultValueBoolean')
@@ -51013,14 +51012,14 @@ mixin _$StructureMapSource {
 
   /// [defaultValueCanonical] A value to use if there is no existing value in
   ///  the source object.
-  Canonical? get defaultValueCanonical => throw _privateConstructorUsedError;
+  String? get defaultValueCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement =>
       throw _privateConstructorUsedError;
 
   /// [defaultValueCode] A value to use if there is no existing value in the
   ///  source object.
-  Code? get defaultValueCode => throw _privateConstructorUsedError;
+  String? get defaultValueCode => throw _privateConstructorUsedError;
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
   @JsonKey(name: '_defaultValueCode')
@@ -51028,7 +51027,7 @@ mixin _$StructureMapSource {
 
   /// [defaultValueDate] A value to use if there is no existing value in the
   ///  source object.
-  Date? get defaultValueDate => throw _privateConstructorUsedError;
+  String? get defaultValueDate => throw _privateConstructorUsedError;
 
   /// [defaultValueDateElement] Extensions for defaultValueDate
   @JsonKey(name: '_defaultValueDate')
@@ -51122,7 +51121,7 @@ mixin _$StructureMapSource {
 
   /// [defaultValueUri] A value to use if there is no existing value in the
   ///  source object.
-  FhirUri? get defaultValueUri => throw _privateConstructorUsedError;
+  String? get defaultValueUri => throw _privateConstructorUsedError;
 
   /// [defaultValueUriElement] Extensions for defaultValueUri
   @JsonKey(name: '_defaultValueUri')
@@ -51286,7 +51285,7 @@ mixin _$StructureMapSource {
   Element? get elementElement => throw _privateConstructorUsedError;
 
   /// [listMode] How to handle the list mode for this element.
-  Code? get listMode => throw _privateConstructorUsedError;
+  String? get listMode => throw _privateConstructorUsedError;
 
   /// [listModeElement] Extensions for listMode
   @JsonKey(name: '_listMode')
@@ -51352,19 +51351,19 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Base64Binary? defaultValueBase64Binary,
+      String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
+      bool? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
+      String? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      String? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Date? defaultValueDate,
+      String? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -51400,7 +51399,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
+      String? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
@@ -51443,7 +51442,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      String? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -52765,19 +52764,19 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       String? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Base64Binary? defaultValueBase64Binary,
+      String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           Element? defaultValueBase64BinaryElement,
-      Boolean? defaultValueBoolean,
+      bool? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
-      Canonical? defaultValueCanonical,
+      String? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
           Element? defaultValueCanonicalElement,
-      Code? defaultValueCode,
+      String? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           Element? defaultValueCodeElement,
-      Date? defaultValueDate,
+      String? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
@@ -52813,7 +52812,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       UnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           Element? defaultValueUnsignedIntElement,
-      FhirUri? defaultValueUri,
+      String? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
@@ -52856,7 +52855,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      String? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -54549,7 +54548,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueBase64Binary] A value to use if there is no existing value
   ///  in the source object.
-  Base64Binary? get defaultValueBase64Binary;
+  String? get defaultValueBase64Binary;
   @override
   @JsonKey(name: '_defaultValueBase64Binary')
   Element? get defaultValueBase64BinaryElement;
@@ -54557,7 +54556,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueBoolean] A value to use if there is no existing value in the
   ///  source object.
-  Boolean? get defaultValueBoolean;
+  bool? get defaultValueBoolean;
   @override
 
   /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
@@ -54567,7 +54566,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueCanonical] A value to use if there is no existing value in
   ///  the source object.
-  Canonical? get defaultValueCanonical;
+  String? get defaultValueCanonical;
   @override
   @JsonKey(name: '_defaultValueCanonical')
   Element? get defaultValueCanonicalElement;
@@ -54575,7 +54574,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueCode] A value to use if there is no existing value in the
   ///  source object.
-  Code? get defaultValueCode;
+  String? get defaultValueCode;
   @override
 
   /// [defaultValueCodeElement] Extensions for defaultValueCode
@@ -54585,7 +54584,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueDate] A value to use if there is no existing value in the
   ///  source object.
-  Date? get defaultValueDate;
+  String? get defaultValueDate;
   @override
 
   /// [defaultValueDateElement] Extensions for defaultValueDate
@@ -54697,7 +54696,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueUri] A value to use if there is no existing value in the
   ///  source object.
-  FhirUri? get defaultValueUri;
+  String? get defaultValueUri;
   @override
 
   /// [defaultValueUriElement] Extensions for defaultValueUri
@@ -54890,7 +54889,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
 
   /// [listMode] How to handle the list mode for this element.
-  Code? get listMode;
+  String? get listMode;
   @override
 
   /// [listModeElement] Extensions for listMode
@@ -54984,7 +54983,7 @@ mixin _$StructureMapTarget {
   Element? get contextElement => throw _privateConstructorUsedError;
 
   /// [contextType] How to interpret the context.
-  Code? get contextType => throw _privateConstructorUsedError;
+  String? get contextType => throw _privateConstructorUsedError;
 
   /// [contextTypeElement] Extensions for contextType
   @JsonKey(name: '_contextType')
@@ -55019,7 +55018,7 @@ mixin _$StructureMapTarget {
   Element? get listRuleIdElement => throw _privateConstructorUsedError;
 
   /// [transform] How the data is copied / created.
-  Code? get transform => throw _privateConstructorUsedError;
+  String? get transform => throw _privateConstructorUsedError;
 
   /// [transformElement] Extensions for transform
   @JsonKey(name: '_transform')
@@ -55047,7 +55046,7 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Id? context,
       @JsonKey(name: '_context') Element? contextElement,
-      Code? contextType,
+      String? contextType,
       @JsonKey(name: '_contextType') Element? contextTypeElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
@@ -55057,7 +55056,7 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       @JsonKey(name: '_listMode') List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
+      String? transform,
       @JsonKey(name: '_transform') Element? transformElement,
       List<StructureMapParameter>? parameter});
 
@@ -55264,7 +55263,7 @@ abstract class _$$_StructureMapTargetCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Id? context,
       @JsonKey(name: '_context') Element? contextElement,
-      Code? contextType,
+      String? contextType,
       @JsonKey(name: '_contextType') Element? contextTypeElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
@@ -55274,7 +55273,7 @@ abstract class _$$_StructureMapTargetCopyWith<$Res>
       @JsonKey(name: '_listMode') List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
+      String? transform,
       @JsonKey(name: '_transform') Element? transformElement,
       List<StructureMapParameter>? parameter});
 
@@ -55742,7 +55741,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [contextType] How to interpret the context.
-  Code? get contextType;
+  String? get contextType;
   @override
 
   /// [contextTypeElement] Extensions for contextType
@@ -55787,7 +55786,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [transform] How the data is copied / created.
-  Code? get transform;
+  String? get transform;
   @override
 
   /// [transformElement] Extensions for transform
@@ -55854,7 +55853,7 @@ mixin _$StructureMapParameter {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] Parameter value - variable or literal.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -55894,7 +55893,7 @@ abstract class $StructureMapParameterCopyWith<$Res> {
       @JsonKey(name: '_valueId') Element? valueIdElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -56069,7 +56068,7 @@ abstract class _$$_StructureMapParameterCopyWith<$Res>
       @JsonKey(name: '_valueId') Element? valueIdElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -56448,7 +56447,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @override
 
   /// [valueBoolean] Parameter value - variable or literal.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean

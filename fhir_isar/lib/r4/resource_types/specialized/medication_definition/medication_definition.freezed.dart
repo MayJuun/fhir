@@ -30,14 +30,14 @@ mixin _$AdministrableProductDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -61,7 +61,7 @@ mixin _$AdministrableProductDefinition {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -96,16 +96,16 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<Reference>? formOf,
       CodeableConcept? administrableDoseForm,
@@ -367,16 +367,16 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<Reference>? formOf,
       CodeableConcept? administrableDoseForm,
@@ -867,7 +867,7 @@ abstract class _AdministrableProductDefinition
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -876,7 +876,7 @@ abstract class _AdministrableProductDefinition
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -906,7 +906,7 @@ abstract class _AdministrableProductDefinition
   @override
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -966,14 +966,14 @@ mixin _$AdministrableProductDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -1007,9 +1007,9 @@ abstract class $AdministrableProductDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment,
       CodeableConcept? status});
@@ -1200,9 +1200,9 @@ abstract class _$$_AdministrableProductDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment,
       CodeableConcept? status});
@@ -1516,7 +1516,7 @@ abstract class _AdministrableProductDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -1525,7 +1525,7 @@ abstract class _AdministrableProductDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -2867,14 +2867,14 @@ mixin _$Ingredient {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -2899,7 +2899,7 @@ mixin _$Ingredient {
   Identifier? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -2919,7 +2919,7 @@ mixin _$Ingredient {
   CodeableConcept? get group => throw _privateConstructorUsedError;
 
   /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
+  bool? get allergenicIndicator => throw _privateConstructorUsedError;
 
   /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
   @JsonKey(name: '_allergenicIndicator')
@@ -2948,10 +2948,10 @@ abstract class $IngredientCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2960,7 +2960,7 @@ abstract class $IngredientCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       @JsonKey(name: 'for')
@@ -2968,7 +2968,7 @@ abstract class $IngredientCopyWith<$Res> {
       CodeableConcept role,
       List<CodeableConcept>? function,
       CodeableConcept? group,
-      Boolean? allergenicIndicator,
+      bool? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
       List<IngredientManufacturer>? manufacturer,
@@ -3239,10 +3239,10 @@ abstract class _$$_IngredientCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -3251,7 +3251,7 @@ abstract class _$$_IngredientCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       @JsonKey(name: 'for')
@@ -3259,7 +3259,7 @@ abstract class _$$_IngredientCopyWith<$Res>
       CodeableConcept role,
       List<CodeableConcept>? function,
       CodeableConcept? group,
-      Boolean? allergenicIndicator,
+      bool? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
       List<IngredientManufacturer>? manufacturer,
@@ -3745,7 +3745,7 @@ abstract class _Ingredient extends Ingredient {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -3754,7 +3754,7 @@ abstract class _Ingredient extends Ingredient {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -3785,7 +3785,7 @@ abstract class _Ingredient extends Ingredient {
   @override
 
   /// [status] The status of this ingredient. Enables tracking the life-cycle of the content.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -3811,7 +3811,7 @@ abstract class _Ingredient extends Ingredient {
   @override
 
   /// [allergenicIndicator] If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
-  Boolean? get allergenicIndicator;
+  bool? get allergenicIndicator;
   @override
 
   /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
@@ -3850,7 +3850,7 @@ mixin _$IngredientManufacturer {
       throw _privateConstructorUsedError;
 
   /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-  Code? get role => throw _privateConstructorUsedError;
+  String? get role => throw _privateConstructorUsedError;
 
   /// [roleElement] (_role): Extensions for role;
   @JsonKey(name: '_role')
@@ -3875,7 +3875,7 @@ abstract class $IngredientManufacturerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      String? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference manufacturer});
 
@@ -3965,7 +3965,7 @@ abstract class _$$_IngredientManufacturerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? role,
+      String? role,
       @JsonKey(name: '_role') Element? roleElement,
       Reference manufacturer});
 
@@ -4162,7 +4162,7 @@ abstract class _IngredientManufacturer extends IngredientManufacturer {
   @override
 
   /// [role] The way in which this manufacturer is associated with the ingredient. For example whether it is a possible one (others allowed), or an exclusive authorized one for this ingredient. Note that this is not the manufacturing process role.;
-  Code? get role;
+  String? get role;
   @override
 
   /// [roleElement] (_role): Extensions for role;
@@ -5752,14 +5752,14 @@ mixin _$ClinicalUseDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -5783,7 +5783,7 @@ mixin _$ClinicalUseDefinition {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] (_type): Extensions for type;
   @JsonKey(name: '_type')
@@ -5837,16 +5837,16 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<CodeableConcept>? category,
       List<Reference>? subject,
@@ -6155,16 +6155,16 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<CodeableConcept>? category,
       List<Reference>? subject,
@@ -6671,7 +6671,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -6680,7 +6680,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -6710,7 +6710,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   @override
 
   /// [type] indication | contraindication | interaction | undesirable-effect | warning.;
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] (_type): Extensions for type;
@@ -9678,14 +9678,14 @@ mixin _$ManufacturedItemDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -9710,7 +9710,7 @@ mixin _$ManufacturedItemDefinition {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
   @JsonKey(name: '_status')
@@ -9750,16 +9750,16 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
@@ -9984,16 +9984,16 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
@@ -10437,7 +10437,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -10446,7 +10446,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -10477,7 +10477,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   @override
 
   /// [status] The status of this item. Enables tracking the life-cycle of the content.;
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
@@ -10539,14 +10539,14 @@ mixin _$ManufacturedItemDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -10577,9 +10577,9 @@ abstract class $ManufacturedItemDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -10751,9 +10751,9 @@ abstract class _$$_ManufacturedItemDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -11051,7 +11051,7 @@ abstract class _ManufacturedItemDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -11060,7 +11060,7 @@ abstract class _ManufacturedItemDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -11093,14 +11093,14 @@ mixin _$MedicinalProductDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -11251,9 +11251,9 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -11742,9 +11742,9 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -12699,7 +12699,7 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -12708,7 +12708,7 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -15162,14 +15162,14 @@ mixin _$MedicinalProductDefinitionCharacteristic {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.text.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.text.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -15200,9 +15200,9 @@ abstract class $MedicinalProductDefinitionCharacteristicCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -15375,9 +15375,9 @@ abstract class _$$_MedicinalProductDefinitionCharacteristicCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -15675,7 +15675,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
   @override
 
   /// [valueDate] A value for the characteristic.text.;
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -15684,7 +15684,7 @@ abstract class _MedicinalProductDefinitionCharacteristic
   @override
 
   /// [valueBoolean] A value for the characteristic.text.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -15717,14 +15717,14 @@ mixin _$PackagedProductDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -15795,7 +15795,7 @@ mixin _$PackagedProductDefinition {
       throw _privateConstructorUsedError;
 
   /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-  Boolean? get copackagedIndicator => throw _privateConstructorUsedError;
+  bool? get copackagedIndicator => throw _privateConstructorUsedError;
 
   /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
   @JsonKey(name: '_copackagedIndicator')
@@ -15824,10 +15824,10 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15852,7 +15852,7 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? characteristic,
-      Boolean? copackagedIndicator,
+      bool? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
           Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
@@ -16182,10 +16182,10 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -16210,7 +16210,7 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
       List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? characteristic,
-      Boolean? copackagedIndicator,
+      bool? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
           Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
@@ -16837,7 +16837,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -16846,7 +16846,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -16932,7 +16932,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   @override
 
   /// [copackagedIndicator] Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
-  Boolean? get copackagedIndicator;
+  bool? get copackagedIndicator;
   @override
 
   /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
@@ -18602,14 +18602,14 @@ mixin _$PackagedProductDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -18639,9 +18639,9 @@ abstract class $PackagedProductDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -18813,9 +18813,9 @@ abstract class _$$_PackagedProductDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -19113,7 +19113,7 @@ abstract class _PackagedProductDefinitionProperty
   @override
 
   /// [valueDate] A value for the characteristic.;
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -19122,7 +19122,7 @@ abstract class _PackagedProductDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the characteristic.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -19487,14 +19487,14 @@ mixin _$RegulatedAuthorization {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -19582,9 +19582,9 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -19958,9 +19958,9 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -20544,7 +20544,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -20553,7 +20553,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -21192,14 +21192,14 @@ mixin _$SubstanceDefinition {
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
   @JsonKey(name: '_language')
@@ -21308,9 +21308,9 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -21663,9 +21663,9 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
       {R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
@@ -22402,7 +22402,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
@@ -22411,7 +22411,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   @override
 
   /// [language] The base language in which the resource is written.;
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
@@ -23281,14 +23281,14 @@ mixin _$SubstanceDefinitionProperty {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueDate] A value for the property.;
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
   @JsonKey(name: '_valueDate')
   Element? get valueDateElement => throw _privateConstructorUsedError;
 
   /// [valueBoolean] A value for the property.;
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
   @JsonKey(name: '_valueBoolean')
@@ -23318,9 +23318,9 @@ abstract class $SubstanceDefinitionPropertyCopyWith<$Res> {
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -23492,9 +23492,9 @@ abstract class _$$_SubstanceDefinitionPropertyCopyWith<$Res>
       CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Attachment? valueAttachment});
 
@@ -23787,7 +23787,7 @@ abstract class _SubstanceDefinitionProperty
   @override
 
   /// [valueDate] A value for the property.;
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] (_valueDate): Extensions for valueDate;
@@ -23796,7 +23796,7 @@ abstract class _SubstanceDefinitionProperty
   @override
 
   /// [valueBoolean] A value for the property.;
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
@@ -25793,7 +25793,7 @@ mixin _$SubstanceDefinitionName {
   CodeableConcept? get status => throw _privateConstructorUsedError;
 
   /// [preferred] If this is the preferred name for this substance.;
-  Boolean? get preferred => throw _privateConstructorUsedError;
+  bool? get preferred => throw _privateConstructorUsedError;
 
   /// [preferredElement] (_preferred): Extensions for preferred;
   @JsonKey(name: '_preferred')
@@ -25843,7 +25843,7 @@ abstract class $SubstanceDefinitionNameCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       CodeableConcept? status,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       List<CodeableConcept>? language,
       List<CodeableConcept>? domain,
@@ -26023,7 +26023,7 @@ abstract class _$$_SubstanceDefinitionNameCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       CodeableConcept? status,
-      Boolean? preferred,
+      bool? preferred,
       @JsonKey(name: '_preferred') Element? preferredElement,
       List<CodeableConcept>? language,
       List<CodeableConcept>? domain,
@@ -26455,7 +26455,7 @@ abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
   @override
 
   /// [preferred] If this is the preferred name for this substance.;
-  Boolean? get preferred;
+  bool? get preferred;
   @override
 
   /// [preferredElement] (_preferred): Extensions for preferred;
@@ -26929,7 +26929,7 @@ mixin _$SubstanceDefinitionRelationship {
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-  Boolean? get isDefining => throw _privateConstructorUsedError;
+  bool? get isDefining => throw _privateConstructorUsedError;
 
   /// [isDefiningElement] (_isDefining): Extensions for isDefining;
   @JsonKey(name: '_isDefining')
@@ -26978,7 +26978,7 @@ abstract class $SubstanceDefinitionRelationshipCopyWith<$Res> {
       Reference? substanceDefinitionReference,
       CodeableConcept? substanceDefinitionCodeableConcept,
       CodeableConcept type,
-      Boolean? isDefining,
+      bool? isDefining,
       @JsonKey(name: '_isDefining') Element? isDefiningElement,
       Quantity? amountQuantity,
       Ratio? amountRatio,
@@ -27219,7 +27219,7 @@ abstract class _$$_SubstanceDefinitionRelationshipCopyWith<$Res>
       Reference? substanceDefinitionReference,
       CodeableConcept? substanceDefinitionCodeableConcept,
       CodeableConcept type,
-      Boolean? isDefining,
+      bool? isDefining,
       @JsonKey(name: '_isDefining') Element? isDefiningElement,
       Quantity? amountQuantity,
       Ratio? amountRatio,
@@ -27597,7 +27597,7 @@ abstract class _SubstanceDefinitionRelationship
   @override
 
   /// [isDefining] For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
-  Boolean? get isDefining;
+  bool? get isDefining;
   @override
 
   /// [isDefiningElement] (_isDefining): Extensions for isDefining;

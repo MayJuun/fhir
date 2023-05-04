@@ -36,14 +36,14 @@ mixin _$Claim {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -92,7 +92,7 @@ mixin _$Claim {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -112,7 +112,7 @@ mixin _$Claim {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  Code? get use => throw _privateConstructorUsedError;
+  String? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -222,10 +222,10 @@ abstract class $ClaimCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -234,12 +234,12 @@ abstract class $ClaimCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -787,10 +787,10 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -799,12 +799,12 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -1732,7 +1732,7 @@ abstract class _Claim extends Claim {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1741,7 +1741,7 @@ abstract class _Claim extends Claim {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1796,7 +1796,7 @@ abstract class _Claim extends Claim {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1820,7 +1820,7 @@ abstract class _Claim extends Claim {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  Code? get use;
+  String? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -2808,7 +2808,7 @@ mixin _$ClaimCareTeam {
 
   /// [responsible] The party who is billing and/or responsible for the claimed
   ///  products or services.
-  Boolean? get responsible => throw _privateConstructorUsedError;
+  bool? get responsible => throw _privateConstructorUsedError;
 
   /// [responsibleElement] Extensions for responsible
   @JsonKey(name: '_responsible')
@@ -2841,7 +2841,7 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      bool? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -2993,7 +2993,7 @@ abstract class _$$_ClaimCareTeamCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
-      Boolean? responsible,
+      bool? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
@@ -3322,7 +3322,7 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
 
   /// [responsible] The party who is billing and/or responsible for the claimed
   ///  products or services.
-  Boolean? get responsible;
+  bool? get responsible;
   @override
 
   /// [responsibleElement] Extensions for responsible
@@ -3396,7 +3396,7 @@ mixin _$ClaimSupportingInfo {
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate => throw _privateConstructorUsedError;
+  String? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
@@ -3408,7 +3408,7 @@ mixin _$ClaimSupportingInfo {
   /// [valueBoolean] Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -3462,10 +3462,10 @@ abstract class $ClaimSupportingInfoCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      String? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -3740,10 +3740,10 @@ abstract class _$$_ClaimSupportingInfoCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
-      Date? timingDate,
+      String? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
       Period? timingPeriod,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -4219,7 +4219,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   @override
 
   /// [timingDate] The date when or period to which this information refers.
-  Date? get timingDate;
+  String? get timingDate;
   @override
 
   /// [timingDateElement] Extensions for timingDate
@@ -4234,7 +4234,7 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   /// [valueBoolean] Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -5546,7 +5546,7 @@ mixin _$ClaimInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal => throw _privateConstructorUsedError;
+  bool? get focal => throw _privateConstructorUsedError;
 
   /// [focalElement] Extensions for focal
   @JsonKey(name: '_focal')
@@ -5603,7 +5603,7 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      bool? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Identifier? identifier,
@@ -5797,7 +5797,7 @@ abstract class _$$_ClaimInsuranceCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      bool? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Identifier? identifier,
@@ -6228,7 +6228,7 @@ abstract class _ClaimInsurance extends ClaimInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal;
+  bool? get focal;
   @override
 
   /// [focalElement] Extensions for focal
@@ -6315,7 +6315,7 @@ mixin _$ClaimAccident {
 
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
-  Date? get date => throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -6348,7 +6348,7 @@ abstract class $ClaimAccidentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -6479,7 +6479,7 @@ abstract class _$$_ClaimAccidentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -6764,7 +6764,7 @@ abstract class _ClaimAccident extends ClaimAccident {
 
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
-  Date? get date;
+  String? get date;
   @override
 
   /// [dateElement] Extensions for date
@@ -6884,7 +6884,7 @@ mixin _$ClaimItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  String? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -6980,7 +6980,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      String? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -7401,7 +7401,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      String? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -8326,7 +8326,7 @@ abstract class _ClaimItem extends ClaimItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate;
+  String? get servicedDate;
   @override
 
   /// [servicedDateElement] Extensions for servicedDate
@@ -10163,14 +10163,14 @@ mixin _$ClaimResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -10219,7 +10219,7 @@ mixin _$ClaimResponse {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -10240,7 +10240,7 @@ mixin _$ClaimResponse {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  Code? get use => throw _privateConstructorUsedError;
+  String? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
   @JsonKey(name: '_use')
@@ -10271,7 +10271,7 @@ mixin _$ClaimResponse {
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
-  Code? get outcome => throw _privateConstructorUsedError;
+  String? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -10365,10 +10365,10 @@ abstract class $ClaimResponseCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10377,12 +10377,12 @@ abstract class $ClaimResponseCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -10392,7 +10392,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Reference insurer,
       Reference? requestor,
       Reference? request,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -10944,10 +10944,10 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10956,12 +10956,12 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      String? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -10971,7 +10971,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       Reference insurer,
       Reference? requestor,
       Reference? request,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -11956,7 +11956,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11965,7 +11965,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -12020,7 +12020,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -12045,7 +12045,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   /// authorization and adjudication for provision in the future; or requesting
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
-  Code? get use;
+  String? get use;
   @override
 
   /// [useElement] Extensions for use
@@ -12084,7 +12084,7 @@ abstract class _ClaimResponse extends ClaimResponse {
 
   /// [outcome] The outcome of the claim, predetermination, or preauthorization
   ///  processing.
-  Code? get outcome;
+  String? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -14377,7 +14377,7 @@ mixin _$ClaimResponseAddItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate => throw _privateConstructorUsedError;
+  String? get servicedDate => throw _privateConstructorUsedError;
 
   /// [servicedDateElement] Extensions for servicedDate
   @JsonKey(name: '_servicedDate')
@@ -14471,7 +14471,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      String? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -14830,7 +14830,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
       CodeableConcept productOrService,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
-      Date? servicedDate,
+      String? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
       Period? servicedPeriod,
@@ -15679,7 +15679,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
 
   /// [servicedDate] The date or dates when the service or product was
   ///  supplied, performed or completed.
-  Date? get servicedDate;
+  String? get servicedDate;
   @override
 
   /// [servicedDateElement] Extensions for servicedDate
@@ -17710,7 +17710,7 @@ mixin _$ClaimResponsePayment {
 
   /// [date] Estimated date the payment will be issued or the actual issue date
   ///  of payment.
-  Date? get date => throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -17741,7 +17741,7 @@ abstract class $ClaimResponsePaymentCopyWith<$Res> {
       CodeableConcept type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money amount,
       Identifier? identifier});
@@ -17903,7 +17903,7 @@ abstract class _$$_ClaimResponsePaymentCopyWith<$Res>
       CodeableConcept type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       Money amount,
       Identifier? identifier});
@@ -18233,7 +18233,7 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
 
   /// [date] Estimated date the payment will be issued or the actual issue date
   ///  of payment.
-  Date? get date;
+  String? get date;
   @override
 
   /// [dateElement] Extensions for date
@@ -18297,7 +18297,7 @@ mixin _$ClaimResponseProcessNote {
   Element? get numberElement => throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -18331,7 +18331,7 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -18476,7 +18476,7 @@ abstract class _$$_ClaimResponseProcessNoteCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
@@ -18797,7 +18797,7 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -18868,7 +18868,7 @@ mixin _$ClaimResponseInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal => throw _privateConstructorUsedError;
+  bool? get focal => throw _privateConstructorUsedError;
 
   /// [focalElement] Extensions for focal
   @JsonKey(name: '_focal')
@@ -18912,7 +18912,7 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      bool? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -19075,7 +19075,7 @@ abstract class _$$_ClaimResponseInsuranceCopyWith<$Res>
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      Boolean? focal,
+      bool? focal,
       @JsonKey(name: '_focal')
           Element? focalElement,
       Reference coverage,
@@ -19432,7 +19432,7 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
 
   /// [focal] A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
-  Boolean? get focal;
+  bool? get focal;
   @override
 
   /// [focalElement] Extensions for focal
@@ -20077,14 +20077,14 @@ mixin _$Invoice {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -20134,7 +20134,7 @@ mixin _$Invoice {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the Invoice.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -20224,10 +20224,10 @@ abstract class $InvoiceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -20236,7 +20236,7 @@ abstract class $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -20643,10 +20643,10 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -20655,7 +20655,7 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -21396,7 +21396,7 @@ abstract class _Invoice extends Invoice {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -21405,7 +21405,7 @@ abstract class _Invoice extends Invoice {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -21461,7 +21461,7 @@ abstract class _Invoice extends Invoice {
   @override
 
   /// [status] The current state of the Invoice.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -22528,7 +22528,7 @@ mixin _$InvoicePriceComponent {
       throw _privateConstructorUsedError;
 
   /// [type] This code identifies the type of the component.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -22565,7 +22565,7 @@ abstract class $InvoicePriceComponentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
@@ -22703,7 +22703,7 @@ abstract class _$$_InvoicePriceComponentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
@@ -23001,7 +23001,7 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   @override
 
   /// [type] This code identifies the type of the component.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type

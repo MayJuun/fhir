@@ -36,14 +36,14 @@ mixin _$ActivityDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -95,7 +95,7 @@ mixin _$ActivityDefinition {
   /// this activity definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  activity definition is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -150,7 +150,7 @@ mixin _$ActivityDefinition {
 
   /// [status] The status of this activity definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -159,7 +159,7 @@ mixin _$ActivityDefinition {
   /// [experimental] A Boolean value to indicate that this activity definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -173,7 +173,7 @@ mixin _$ActivityDefinition {
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the activity being defined.
   Reference? get subjectReference => throw _privateConstructorUsedError;
-  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  String? get subjectCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_subjectCanonical')
   Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
 
@@ -246,7 +246,7 @@ mixin _$ActivityDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -255,7 +255,7 @@ mixin _$ActivityDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -300,7 +300,7 @@ mixin _$ActivityDefinition {
   /// representing. For example, a MedicationRequest, a ServiceRequest, or a
   /// CommunicationRequest. Typically, but not always, this is a Request
   ///  resource.
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -308,7 +308,7 @@ mixin _$ActivityDefinition {
 
   /// [profile] A profile to which the target of the activity definition is
   ///  expected to conform.
-  Canonical? get profile => throw _privateConstructorUsedError;
+  String? get profile => throw _privateConstructorUsedError;
 
   /// [code] Detailed description of the type of activity; e.g. What lab test,
   ///  what procedure, what kind of encounter.
@@ -316,7 +316,7 @@ mixin _$ActivityDefinition {
 
   /// [intent] Indicates the level of authority/intentionality associated with
   ///  the activity and where the request should fit into the workflow chain.
-  Code? get intent => throw _privateConstructorUsedError;
+  String? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
@@ -324,7 +324,7 @@ mixin _$ActivityDefinition {
 
   /// [priority] Indicates how quickly the activity  should be addressed with
   ///  respect to other requests.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -335,7 +335,7 @@ mixin _$ActivityDefinition {
   /// be interpreted to reinforce a negative coding. For example NPO as a code
   /// with a doNotPerform of true would still indicate to NOT perform the
   ///  action.
-  Boolean? get doNotPerform => throw _privateConstructorUsedError;
+  bool? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
@@ -417,7 +417,7 @@ mixin _$ActivityDefinition {
   /// [transform] A reference to a StructureMap resource that defines a
   /// transform that can be executed to produce the intent resource using the
   ///  ActivityDefinition instance as the input.
-  Canonical? get transform => throw _privateConstructorUsedError;
+  String? get transform => throw _privateConstructorUsedError;
 
   /// [dynamicValue] Dynamic values that will be evaluated to produce values
   /// for elements of the resulting resource. For example, if the dosage of a
@@ -444,10 +444,10 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -455,7 +455,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -471,15 +471,15 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           Element? subjectCanonicalElement,
       FhirDateTime? date,
@@ -503,10 +503,10 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -518,18 +518,18 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      Canonical? profile,
+      String? profile,
       CodeableConcept? code,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       Timing? timingTiming,
@@ -550,7 +550,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       List<Reference>? specimenRequirement,
       List<Reference>? observationRequirement,
       List<Reference>? observationResultRequirement,
-      Canonical? transform,
+      String? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   $MetaCopyWith<$Res>? get meta;
@@ -1513,10 +1513,10 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1524,7 +1524,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -1540,15 +1540,15 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           Element? subjectCanonicalElement,
       FhirDateTime? date,
@@ -1572,10 +1572,10 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -1587,18 +1587,18 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
-      Canonical? profile,
+      String? profile,
       CodeableConcept? code,
-      Code? intent,
+      String? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      Boolean? doNotPerform,
+      bool? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       Timing? timingTiming,
@@ -1619,7 +1619,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       List<Reference>? specimenRequirement,
       List<Reference>? observationRequirement,
       List<Reference>? observationResultRequirement,
-      Canonical? transform,
+      String? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   @override
@@ -3396,7 +3396,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3405,7 +3405,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3462,7 +3462,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// this activity definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  activity definition is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -3528,7 +3528,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [status] The status of this activity definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3539,7 +3539,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [experimental] A Boolean value to indicate that this activity definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -3556,7 +3556,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   ///  subject of the activity being defined.
   Reference? get subjectReference;
   @override
-  Canonical? get subjectCanonical;
+  String? get subjectCanonical;
   @override
   @JsonKey(name: '_subjectCanonical')
   Element? get subjectCanonicalElement;
@@ -3646,7 +3646,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
@@ -3657,7 +3657,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
@@ -3711,7 +3711,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// representing. For example, a MedicationRequest, a ServiceRequest, or a
   /// CommunicationRequest. Typically, but not always, this is a Request
   ///  resource.
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -3721,7 +3721,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [profile] A profile to which the target of the activity definition is
   ///  expected to conform.
-  Canonical? get profile;
+  String? get profile;
   @override
 
   /// [code] Detailed description of the type of activity; e.g. What lab test,
@@ -3731,7 +3731,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [intent] Indicates the level of authority/intentionality associated with
   ///  the activity and where the request should fit into the workflow chain.
-  Code? get intent;
+  String? get intent;
   @override
 
   /// [intentElement] Extensions for intent
@@ -3741,7 +3741,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [priority] Indicates how quickly the activity  should be addressed with
   ///  respect to other requests.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -3754,7 +3754,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// be interpreted to reinforce a negative coding. For example NPO as a code
   /// with a doNotPerform of true would still indicate to NOT perform the
   ///  action.
-  Boolean? get doNotPerform;
+  bool? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
@@ -3850,7 +3850,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   /// [transform] A reference to a StructureMap resource that defines a
   /// transform that can be executed to produce the intent resource using the
   ///  ActivityDefinition instance as the input.
-  Canonical? get transform;
+  String? get transform;
   @override
 
   /// [dynamicValue] Dynamic values that will be evaluated to produce values
@@ -3902,7 +3902,7 @@ mixin _$ActivityDefinitionParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant in the action.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3930,7 +3930,7 @@ abstract class $ActivityDefinitionParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -4025,7 +4025,7 @@ abstract class _$$_ActivityDefinitionParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -4278,7 +4278,7 @@ abstract class _ActivityDefinitionParticipant
   @override
 
   /// [type] The type of participant in the action.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -4767,14 +4767,14 @@ mixin _$DeviceDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -4901,14 +4901,14 @@ mixin _$DeviceDefinition {
   List<ContactPoint>? get contact => throw _privateConstructorUsedError;
 
   /// [url] A network address on which the device may be contacted directly.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [onlineInformation] Access to on-line information about the device.
-  FhirUri? get onlineInformation => throw _privateConstructorUsedError;
+  String? get onlineInformation => throw _privateConstructorUsedError;
 
   /// [onlineInformationElement] Extensions for onlineInformation
   @JsonKey(name: '_onlineInformation')
@@ -4948,10 +4948,10 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -4982,10 +4982,10 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<DeviceDefinitionProperty>? property,
       Reference? owner,
       List<ContactPoint>? contact,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      FhirUri? onlineInformation,
+      String? onlineInformation,
       @JsonKey(name: '_onlineInformation')
           Element? onlineInformationElement,
       List<Annotation>? note,
@@ -5405,10 +5405,10 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5439,10 +5439,10 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       List<DeviceDefinitionProperty>? property,
       Reference? owner,
       List<ContactPoint>? contact,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      FhirUri? onlineInformation,
+      String? onlineInformation,
       @JsonKey(name: '_onlineInformation')
           Element? onlineInformationElement,
       List<Annotation>? note,
@@ -6379,7 +6379,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6388,7 +6388,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6533,7 +6533,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @override
 
   /// [url] A network address on which the device may be contacted directly.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -6542,7 +6542,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   @override
 
   /// [onlineInformation] Access to on-line information about the device.
-  FhirUri? get onlineInformation;
+  String? get onlineInformation;
   @override
 
   /// [onlineInformationElement] Extensions for onlineInformation
@@ -6620,14 +6620,14 @@ mixin _$DeviceDefinitionUdiDeviceIdentifier {
   Element? get deviceIdentifierElement => throw _privateConstructorUsedError;
 
   /// [issuer] The organization that assigns the identifier algorithm.
-  FhirUri? get issuer => throw _privateConstructorUsedError;
+  String? get issuer => throw _privateConstructorUsedError;
 
   /// [issuerElement] Extensions for issuer
   @JsonKey(name: '_issuer')
   Element? get issuerElement => throw _privateConstructorUsedError;
 
   /// [jurisdiction] The jurisdiction to which the deviceIdentifier applies.
-  FhirUri? get jurisdiction => throw _privateConstructorUsedError;
+  String? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [jurisdictionElement] Extensions for jurisdiction
   @JsonKey(name: '_jurisdiction')
@@ -6654,9 +6654,9 @@ abstract class $DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      FhirUri? issuer,
+      String? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      FhirUri? jurisdiction,
+      String? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement});
 
   $ElementCopyWith<$Res>? get deviceIdentifierElement;
@@ -6780,9 +6780,9 @@ abstract class _$$_DeviceDefinitionUdiDeviceIdentifierCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
-      FhirUri? issuer,
+      String? issuer,
       @JsonKey(name: '_issuer') Element? issuerElement,
-      FhirUri? jurisdiction,
+      String? jurisdiction,
       @JsonKey(name: '_jurisdiction') Element? jurisdictionElement});
 
   @override
@@ -7102,7 +7102,7 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier
   @override
 
   /// [issuer] The organization that assigns the identifier algorithm.
-  FhirUri? get issuer;
+  String? get issuer;
   @override
 
   /// [issuerElement] Extensions for issuer
@@ -7111,7 +7111,7 @@ abstract class _DeviceDefinitionUdiDeviceIdentifier
   @override
 
   /// [jurisdiction] The jurisdiction to which the deviceIdentifier applies.
-  FhirUri? get jurisdiction;
+  String? get jurisdiction;
   @override
 
   /// [jurisdictionElement] Extensions for jurisdiction
@@ -7170,7 +7170,7 @@ mixin _$DeviceDefinitionDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -7195,7 +7195,7 @@ abstract class $DeviceDefinitionDeviceNameCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -7296,7 +7296,7 @@ abstract class _$$_DeviceDefinitionDeviceNameCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -7574,7 +7574,7 @@ abstract class _DeviceDefinitionDeviceName extends DeviceDefinitionDeviceName {
   /// [type] The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -8900,7 +8900,7 @@ mixin _$DeviceDefinitionMaterial {
   CodeableConcept get substance => throw _privateConstructorUsedError;
 
   /// [alternate] Indicates an alternative material of the device.
-  Boolean? get alternate => throw _privateConstructorUsedError;
+  bool? get alternate => throw _privateConstructorUsedError;
 
   /// [alternateElement] Extensions for alternate
   @JsonKey(name: '_alternate')
@@ -8908,7 +8908,7 @@ mixin _$DeviceDefinitionMaterial {
 
   /// [allergenicIndicator] Whether the substance is a known or suspected
   ///  allergen.
-  Boolean? get allergenicIndicator => throw _privateConstructorUsedError;
+  bool? get allergenicIndicator => throw _privateConstructorUsedError;
 
   /// [allergenicIndicatorElement] Extensions for allergenicIndicator
   @JsonKey(name: '_allergenicIndicator')
@@ -8932,10 +8932,10 @@ abstract class $DeviceDefinitionMaterialCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept substance,
-      Boolean? alternate,
+      bool? alternate,
       @JsonKey(name: '_alternate')
           Element? alternateElement,
-      Boolean? allergenicIndicator,
+      bool? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement});
 
@@ -9051,10 +9051,10 @@ abstract class _$$_DeviceDefinitionMaterialCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept substance,
-      Boolean? alternate,
+      bool? alternate,
       @JsonKey(name: '_alternate')
           Element? alternateElement,
-      Boolean? allergenicIndicator,
+      bool? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement});
 
@@ -9347,7 +9347,7 @@ abstract class _DeviceDefinitionMaterial extends DeviceDefinitionMaterial {
   @override
 
   /// [alternate] Indicates an alternative material of the device.
-  Boolean? get alternate;
+  bool? get alternate;
   @override
 
   /// [alternateElement] Extensions for alternate
@@ -9357,7 +9357,7 @@ abstract class _DeviceDefinitionMaterial extends DeviceDefinitionMaterial {
 
   /// [allergenicIndicator] Whether the substance is a known or suspected
   ///  allergen.
-  Boolean? get allergenicIndicator;
+  bool? get allergenicIndicator;
   @override
 
   /// [allergenicIndicatorElement] Extensions for allergenicIndicator
@@ -9391,14 +9391,14 @@ mixin _$EventDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -9450,7 +9450,7 @@ mixin _$EventDefinition {
   /// event definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the event definition
   ///  is stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -9501,7 +9501,7 @@ mixin _$EventDefinition {
 
   /// [status] The status of this event definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -9510,7 +9510,7 @@ mixin _$EventDefinition {
   /// [experimental] A Boolean value to indicate that this event definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -9594,7 +9594,7 @@ mixin _$EventDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -9603,7 +9603,7 @@ mixin _$EventDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -9661,10 +9661,10 @@ abstract class $EventDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -9672,7 +9672,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -9688,10 +9688,10 @@ abstract class $EventDefinitionCopyWith<$Res> {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
@@ -9717,10 +9717,10 @@ abstract class $EventDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -10328,10 +10328,10 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -10339,7 +10339,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -10355,10 +10355,10 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
@@ -10384,10 +10384,10 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -11597,7 +11597,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -11606,7 +11606,7 @@ abstract class _EventDefinition extends EventDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -11663,7 +11663,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// event definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the event definition
   ///  is stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -11725,7 +11725,7 @@ abstract class _EventDefinition extends EventDefinition {
 
   /// [status] The status of this event definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -11736,7 +11736,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [experimental] A Boolean value to indicate that this event definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -11838,7 +11838,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
@@ -11849,7 +11849,7 @@ abstract class _EventDefinition extends EventDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
@@ -11926,14 +11926,14 @@ mixin _$ObservationDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -11998,7 +11998,7 @@ mixin _$ObservationDefinition {
 
   /// [multipleResultsAllowed] Multiple results allowed for observations
   ///  conforming to this ObservationDefinition.
-  Boolean? get multipleResultsAllowed => throw _privateConstructorUsedError;
+  bool? get multipleResultsAllowed => throw _privateConstructorUsedError;
   @JsonKey(name: '_multipleResultsAllowed')
   Element? get multipleResultsAllowedElement =>
       throw _privateConstructorUsedError;
@@ -12058,10 +12058,10 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12075,7 +12075,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
-      Boolean? multipleResultsAllowed,
+      bool? multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element? multipleResultsAllowedElement,
       CodeableConcept? method,
@@ -12429,10 +12429,10 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -12446,7 +12446,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       List<Code>? permittedDataType,
       @JsonKey(name: '_permittedDataType')
           List<Element>? permittedDataTypeElement,
-      Boolean? multipleResultsAllowed,
+      bool? multipleResultsAllowed,
       @JsonKey(name: '_multipleResultsAllowed')
           Element? multipleResultsAllowedElement,
       CodeableConcept? method,
@@ -13117,7 +13117,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -13126,7 +13126,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -13200,7 +13200,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
 
   /// [multipleResultsAllowed] Multiple results allowed for observations
   ///  conforming to this ObservationDefinition.
-  Boolean? get multipleResultsAllowed;
+  bool? get multipleResultsAllowed;
   @override
   @JsonKey(name: '_multipleResultsAllowed')
   Element? get multipleResultsAllowedElement;
@@ -13864,7 +13864,7 @@ mixin _$ObservationDefinitionQualifiedInterval {
 
   /// [category] The category of interval of values for continuous or ordinal
   ///  observations conforming to this ObservationDefinition.
-  Code? get category => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
@@ -13883,7 +13883,7 @@ mixin _$ObservationDefinitionQualifiedInterval {
   List<CodeableConcept>? get appliesTo => throw _privateConstructorUsedError;
 
   /// [gender] Sex of the population the range applies to.
-  Code? get gender => throw _privateConstructorUsedError;
+  String? get gender => throw _privateConstructorUsedError;
 
   /// [genderElement] Extensions for gender
   @JsonKey(name: '_gender')
@@ -13923,12 +13923,12 @@ abstract class $ObservationDefinitionQualifiedIntervalCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
@@ -14131,12 +14131,12 @@ abstract class _$$_ObservationDefinitionQualifiedIntervalCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? category,
+      String? category,
       @JsonKey(name: '_category') Element? categoryElement,
       Range? range,
       CodeableConcept? context,
       List<CodeableConcept>? appliesTo,
-      Code? gender,
+      String? gender,
       @JsonKey(name: '_gender') Element? genderElement,
       Range? age,
       Range? gestationalAge,
@@ -14535,7 +14535,7 @@ abstract class _ObservationDefinitionQualifiedInterval
 
   /// [category] The category of interval of values for continuous or ordinal
   ///  observations conforming to this ObservationDefinition.
-  Code? get category;
+  String? get category;
   @override
 
   /// [categoryElement] Extensions for category
@@ -14559,7 +14559,7 @@ abstract class _ObservationDefinitionQualifiedInterval
   @override
 
   /// [gender] Sex of the population the range applies to.
-  Code? get gender;
+  String? get gender;
   @override
 
   /// [genderElement] Extensions for gender
@@ -14613,14 +14613,14 @@ mixin _$PlanDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -14672,7 +14672,7 @@ mixin _$PlanDefinition {
   /// plan definition is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the plan definition is
   ///  stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -14731,7 +14731,7 @@ mixin _$PlanDefinition {
 
   /// [status] The status of this plan definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -14740,7 +14740,7 @@ mixin _$PlanDefinition {
   /// [experimental] A Boolean value to indicate that this plan definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -14754,7 +14754,7 @@ mixin _$PlanDefinition {
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the plan definition.
   Reference? get subjectReference => throw _privateConstructorUsedError;
-  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  String? get subjectCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_subjectCanonical')
   Element? get subjectCanonicalElement => throw _privateConstructorUsedError;
 
@@ -14827,7 +14827,7 @@ mixin _$PlanDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -14836,7 +14836,7 @@ mixin _$PlanDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -14903,10 +14903,10 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -14914,7 +14914,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -14931,15 +14931,15 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       CodeableConcept? type,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           Element? subjectCanonicalElement,
       FhirDateTime? date,
@@ -14963,10 +14963,10 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -15628,10 +15628,10 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -15639,7 +15639,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -15656,15 +15656,15 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
       CodeableConcept? type,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           Element? subjectCanonicalElement,
       FhirDateTime? date,
@@ -15688,10 +15688,10 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -17008,7 +17008,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -17017,7 +17017,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -17074,7 +17074,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// plan definition is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the plan definition is
   ///  stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -17145,7 +17145,7 @@ abstract class _PlanDefinition extends PlanDefinition {
 
   /// [status] The status of this plan definition. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -17156,7 +17156,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [experimental] A Boolean value to indicate that this plan definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -17173,7 +17173,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   ///  subject of the plan definition.
   Reference? get subjectReference;
   @override
-  Canonical? get subjectCanonical;
+  String? get subjectCanonical;
   @override
   @JsonKey(name: '_subjectCanonical')
   Element? get subjectCanonicalElement;
@@ -17263,7 +17263,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
@@ -17274,7 +17274,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
@@ -18587,7 +18587,7 @@ mixin _$PlanDefinitionAction {
 
   /// [priority] Indicates how quickly the action should be addressed with
   ///  respect to other actions.
-  Code? get priority => throw _privateConstructorUsedError;
+  String? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
@@ -18623,7 +18623,7 @@ mixin _$PlanDefinitionAction {
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the action and its children, if any.
   Reference? get subjectReference => throw _privateConstructorUsedError;
-  Canonical? get subjectCanonical => throw _privateConstructorUsedError;
+  String? get subjectCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_subjectCanonical')
   List<Element?>? get subjectCanonicalElement =>
       throw _privateConstructorUsedError;
@@ -18685,7 +18685,7 @@ mixin _$PlanDefinitionAction {
 
   /// [groupingBehavior] Defines the grouping behavior for the action and its
   ///  children.
-  Code? get groupingBehavior => throw _privateConstructorUsedError;
+  String? get groupingBehavior => throw _privateConstructorUsedError;
 
   /// [groupingBehaviorElement] Extensions for groupingBehavior
   @JsonKey(name: '_groupingBehavior')
@@ -18693,14 +18693,14 @@ mixin _$PlanDefinitionAction {
 
   /// [selectionBehavior] Defines the selection behavior for the action and its
   ///  children.
-  Code? get selectionBehavior => throw _privateConstructorUsedError;
+  String? get selectionBehavior => throw _privateConstructorUsedError;
 
   /// [selectionBehaviorElement] Extensions for selectionBehavior
   @JsonKey(name: '_selectionBehavior')
   Element? get selectionBehaviorElement => throw _privateConstructorUsedError;
 
   /// [requiredBehavior] Defines the required behavior for the action.
-  Code? get requiredBehavior => throw _privateConstructorUsedError;
+  String? get requiredBehavior => throw _privateConstructorUsedError;
 
   /// [requiredBehaviorElement] Extensions for requiredBehavior
   @JsonKey(name: '_requiredBehavior')
@@ -18708,7 +18708,7 @@ mixin _$PlanDefinitionAction {
 
   /// [precheckBehavior] Defines whether the action should usually be
   ///  preselected.
-  Code? get precheckBehavior => throw _privateConstructorUsedError;
+  String? get precheckBehavior => throw _privateConstructorUsedError;
 
   /// [precheckBehaviorElement] Extensions for precheckBehavior
   @JsonKey(name: '_precheckBehavior')
@@ -18716,7 +18716,7 @@ mixin _$PlanDefinitionAction {
 
   /// [cardinalityBehavior] Defines whether the action can be selected multiple
   ///  times.
-  Code? get cardinalityBehavior => throw _privateConstructorUsedError;
+  String? get cardinalityBehavior => throw _privateConstructorUsedError;
 
   /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
   @JsonKey(name: '_cardinalityBehavior')
@@ -18725,7 +18725,7 @@ mixin _$PlanDefinitionAction {
   /// [definitionCanonical] A reference to an ActivityDefinition that describes
   /// the action to be taken in detail, or a PlanDefinition that describes a
   ///  series of actions to be taken.
-  Canonical? get definitionCanonical => throw _privateConstructorUsedError;
+  String? get definitionCanonical => throw _privateConstructorUsedError;
 
   /// [definitionCanonicalElement] Extensions for definitionCanonical
   @JsonKey(name: '_definitionCanonical')
@@ -18734,7 +18734,7 @@ mixin _$PlanDefinitionAction {
   /// [definitionUri] A reference to an ActivityDefinition that describes the
   /// action to be taken in detail, or a PlanDefinition that describes a series
   ///  of actions to be taken.
-  FhirUri? get definitionUri => throw _privateConstructorUsedError;
+  String? get definitionUri => throw _privateConstructorUsedError;
 
   /// [definitionUriElement] Extensions for definitionUri
   @JsonKey(name: '_definitionUri')
@@ -18743,7 +18743,7 @@ mixin _$PlanDefinitionAction {
   /// [transform] A reference to a StructureMap resource that defines a
   /// transform that can be executed to produce the intent resource using the
   ///  ActivityDefinition instance as the input.
-  Canonical? get transform => throw _privateConstructorUsedError;
+  String? get transform => throw _privateConstructorUsedError;
 
   /// [dynamicValue] Customizations that should be applied to the statically
   /// defined resource. For example, if the dosage of a medication must be
@@ -18789,7 +18789,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? code,
@@ -18800,7 +18800,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           List<Element?>? subjectCanonicalElement,
       List<TriggerDefinition>? trigger,
@@ -18818,28 +18818,28 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      Code? groupingBehavior,
+      String? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      Code? selectionBehavior,
+      String? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      Code? requiredBehavior,
+      String? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      Code? precheckBehavior,
+      String? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      Code? cardinalityBehavior,
+      String? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
-      Canonical? definitionCanonical,
+      String? definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
-      FhirUri? definitionUri,
+      String? definitionUri,
       @JsonKey(name: '_definitionUri')
           Element? definitionUriElement,
-      Canonical? transform,
+      String? transform,
       List<PlanDefinitionDynamicValue>? dynamicValue,
       List<PlanDefinitionAction>? action});
 
@@ -19429,7 +19429,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      Code? priority,
+      String? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept>? code,
@@ -19440,7 +19440,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      Canonical? subjectCanonical,
+      String? subjectCanonical,
       @JsonKey(name: '_subjectCanonical')
           List<Element?>? subjectCanonicalElement,
       List<TriggerDefinition>? trigger,
@@ -19458,28 +19458,28 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       Timing? timingTiming,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
-      Code? groupingBehavior,
+      String? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
           Element? groupingBehaviorElement,
-      Code? selectionBehavior,
+      String? selectionBehavior,
       @JsonKey(name: '_selectionBehavior')
           Element? selectionBehaviorElement,
-      Code? requiredBehavior,
+      String? requiredBehavior,
       @JsonKey(name: '_requiredBehavior')
           Element? requiredBehaviorElement,
-      Code? precheckBehavior,
+      String? precheckBehavior,
       @JsonKey(name: '_precheckBehavior')
           Element? precheckBehaviorElement,
-      Code? cardinalityBehavior,
+      String? cardinalityBehavior,
       @JsonKey(name: '_cardinalityBehavior')
           Element? cardinalityBehaviorElement,
-      Canonical? definitionCanonical,
+      String? definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
-      FhirUri? definitionUri,
+      String? definitionUri,
       @JsonKey(name: '_definitionUri')
           Element? definitionUriElement,
-      Canonical? transform,
+      String? transform,
       List<PlanDefinitionDynamicValue>? dynamicValue,
       List<PlanDefinitionAction>? action});
 
@@ -20691,7 +20691,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [priority] Indicates how quickly the action should be addressed with
   ///  respect to other actions.
-  Code? get priority;
+  String? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
@@ -20734,7 +20734,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   ///  subject of the action and its children, if any.
   Reference? get subjectReference;
   @override
-  Canonical? get subjectCanonical;
+  String? get subjectCanonical;
   @override
   @JsonKey(name: '_subjectCanonical')
   List<Element?>? get subjectCanonicalElement;
@@ -20808,7 +20808,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [groupingBehavior] Defines the grouping behavior for the action and its
   ///  children.
-  Code? get groupingBehavior;
+  String? get groupingBehavior;
   @override
 
   /// [groupingBehaviorElement] Extensions for groupingBehavior
@@ -20818,7 +20818,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [selectionBehavior] Defines the selection behavior for the action and its
   ///  children.
-  Code? get selectionBehavior;
+  String? get selectionBehavior;
   @override
 
   /// [selectionBehaviorElement] Extensions for selectionBehavior
@@ -20827,7 +20827,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
 
   /// [requiredBehavior] Defines the required behavior for the action.
-  Code? get requiredBehavior;
+  String? get requiredBehavior;
   @override
 
   /// [requiredBehaviorElement] Extensions for requiredBehavior
@@ -20837,7 +20837,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [precheckBehavior] Defines whether the action should usually be
   ///  preselected.
-  Code? get precheckBehavior;
+  String? get precheckBehavior;
   @override
 
   /// [precheckBehaviorElement] Extensions for precheckBehavior
@@ -20847,7 +20847,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [cardinalityBehavior] Defines whether the action can be selected multiple
   ///  times.
-  Code? get cardinalityBehavior;
+  String? get cardinalityBehavior;
   @override
 
   /// [cardinalityBehaviorElement] Extensions for cardinalityBehavior
@@ -20858,7 +20858,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   /// [definitionCanonical] A reference to an ActivityDefinition that describes
   /// the action to be taken in detail, or a PlanDefinition that describes a
   ///  series of actions to be taken.
-  Canonical? get definitionCanonical;
+  String? get definitionCanonical;
   @override
 
   /// [definitionCanonicalElement] Extensions for definitionCanonical
@@ -20869,7 +20869,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   /// [definitionUri] A reference to an ActivityDefinition that describes the
   /// action to be taken in detail, or a PlanDefinition that describes a series
   ///  of actions to be taken.
-  FhirUri? get definitionUri;
+  String? get definitionUri;
   @override
 
   /// [definitionUriElement] Extensions for definitionUri
@@ -20880,7 +20880,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   /// [transform] A reference to a StructureMap resource that defines a
   /// transform that can be executed to produce the intent resource using the
   ///  ActivityDefinition instance as the input.
-  Canonical? get transform;
+  String? get transform;
   @override
 
   /// [dynamicValue] Customizations that should be applied to the statically
@@ -20940,7 +20940,7 @@ mixin _$PlanDefinitionCondition {
       throw _privateConstructorUsedError;
 
   /// [kind] The kind of condition.
-  Code? get kind => throw _privateConstructorUsedError;
+  String? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
@@ -20966,7 +20966,7 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind') Element? kindElement,
       Expression? expression});
 
@@ -21060,7 +21060,7 @@ abstract class _$$_PlanDefinitionConditionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? kind,
+      String? kind,
       @JsonKey(name: '_kind') Element? kindElement,
       Expression? expression});
 
@@ -21312,7 +21312,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
   @override
 
   /// [kind] The kind of condition.
-  Code? get kind;
+  String? get kind;
   @override
 
   /// [kindElement] Extensions for kind
@@ -21373,7 +21373,7 @@ mixin _$PlanDefinitionRelatedAction {
   Element? get actionIdElement => throw _privateConstructorUsedError;
 
   /// [relationship] The relationship of this action to the related action.
-  Code? get relationship => throw _privateConstructorUsedError;
+  String? get relationship => throw _privateConstructorUsedError;
 
   /// [relationshipElement] Extensions for relationship
   @JsonKey(name: '_relationship')
@@ -21407,7 +21407,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Id? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
-      Code? relationship,
+      String? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
@@ -21546,7 +21546,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Id? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
-      Code? relationship,
+      String? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
       FhirDuration? offsetDuration,
       Range? offsetRange});
@@ -21858,7 +21858,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
 
   /// [relationship] The relationship of this action to the related action.
-  Code? get relationship;
+  String? get relationship;
   @override
 
   /// [relationshipElement] Extensions for relationship
@@ -21917,7 +21917,7 @@ mixin _$PlanDefinitionParticipant {
       throw _privateConstructorUsedError;
 
   /// [type] The type of participant in the action.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -21943,7 +21943,7 @@ abstract class $PlanDefinitionParticipantCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -22038,7 +22038,7 @@ abstract class _$$_PlanDefinitionParticipantCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       CodeableConcept? role});
 
@@ -22289,7 +22289,7 @@ abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
   @override
 
   /// [type] The type of participant in the action.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type
@@ -22777,14 +22777,14 @@ mixin _$Questionnaire {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -22836,7 +22836,7 @@ mixin _$Questionnaire {
   /// questionnaire is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the questionnaire is
   ///  stored on different servers.
-  FhirUri? get url => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
@@ -22882,7 +22882,7 @@ mixin _$Questionnaire {
 
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -22891,7 +22891,7 @@ mixin _$Questionnaire {
   /// [experimental] A Boolean value to indicate that this questionnaire is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  bool? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
@@ -22966,7 +22966,7 @@ mixin _$Questionnaire {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate => throw _privateConstructorUsedError;
+  String? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
@@ -22975,7 +22975,7 @@ mixin _$Questionnaire {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate => throw _privateConstructorUsedError;
+  String? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
@@ -23010,10 +23010,10 @@ abstract class $QuestionnaireCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -23021,7 +23021,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -23035,10 +23035,10 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       List<Code>? subjectType,
@@ -23062,10 +23062,10 @@ abstract class $QuestionnaireCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -23575,10 +23575,10 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -23586,7 +23586,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier>? identifier,
@@ -23600,10 +23600,10 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      bool? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
       List<Code>? subjectType,
@@ -23627,10 +23627,10 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      String? approvalDate,
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      String? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
@@ -24685,7 +24685,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -24694,7 +24694,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -24751,7 +24751,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// questionnaire is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the questionnaire is
   ///  stored on different servers.
-  FhirUri? get url;
+  String? get url;
   @override
 
   /// [urlElement] Extensions for url
@@ -24807,7 +24807,7 @@ abstract class _Questionnaire extends Questionnaire {
 
   /// [status] The status of this questionnaire. Enables tracking the
   ///  life-cycle of the content.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -24818,7 +24818,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [experimental] A Boolean value to indicate that this questionnaire is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
-  Boolean? get experimental;
+  bool? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
@@ -24910,7 +24910,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
-  Date? get approvalDate;
+  String? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
@@ -24921,7 +24921,7 @@ abstract class _Questionnaire extends Questionnaire {
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
-  Date? get lastReviewDate;
+  String? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
@@ -24992,7 +24992,7 @@ mixin _$QuestionnaireItem {
   Element? get linkIdElement => throw _privateConstructorUsedError;
 
   /// [definition] This element is a URI that refers to an
-  FhirUri? get definition => throw _privateConstructorUsedError;
+  String? get definition => throw _privateConstructorUsedError;
 
   /// [definitionElement] Extensions for definition
   @JsonKey(name: '_definition')
@@ -25036,7 +25036,7 @@ mixin _$QuestionnaireItem {
 
   /// [enableBehavior] Controls how multiple enableWhen values are interpreted
   ///  -  whether all or any must be true.
-  Code? get enableBehavior => throw _privateConstructorUsedError;
+  String? get enableBehavior => throw _privateConstructorUsedError;
 
   /// [enableBehaviorElement] Extensions for enableBehavior
   @JsonKey(name: '_enableBehavior')
@@ -25046,7 +25046,7 @@ mixin _$QuestionnaireItem {
   /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
   ///  answering the questionnaire.
   @JsonKey(name: 'required')
-  Boolean? get required_ => throw _privateConstructorUsedError;
+  bool? get required_ => throw _privateConstructorUsedError;
 
   /// [requiredElement] Extensions for required
   @JsonKey(name: '_required')
@@ -25055,7 +25055,7 @@ mixin _$QuestionnaireItem {
   /// [repeats] An indication, if true, that the item may occur multiple times
   /// in the response, collecting multiple answers for questions or multiple
   ///  sets of answers for groups.
-  Boolean? get repeats => throw _privateConstructorUsedError;
+  bool? get repeats => throw _privateConstructorUsedError;
 
   /// [repeatsElement] Extensions for repeats
   @JsonKey(name: '_repeats')
@@ -25063,7 +25063,7 @@ mixin _$QuestionnaireItem {
 
   /// [readOnly] An indication, when true, that the value cannot be changed by
   ///  a human respondent to the Questionnaire.
-  Boolean? get readOnly => throw _privateConstructorUsedError;
+  bool? get readOnly => throw _privateConstructorUsedError;
 
   /// [readOnlyElement] Extensions for readOnly
   @JsonKey(name: '_readOnly')
@@ -25079,7 +25079,7 @@ mixin _$QuestionnaireItem {
 
   /// [answerValueSet] A reference to a value set containing a list of codes
   ///  representing permitted answers for a "choice" or "open-choice" question.
-  Canonical? get answerValueSet => throw _privateConstructorUsedError;
+  String? get answerValueSet => throw _privateConstructorUsedError;
 
   /// [answerOption] One of the permitted answers for a "choice" or
   ///  "open-choice" question.
@@ -25112,7 +25112,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirUri? definition,
+      String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -25122,17 +25122,17 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Code type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      Code? enableBehavior,
+      String? enableBehavior,
       @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? repeats,
+      bool? repeats,
       @JsonKey(name: '_repeats') Element? repeatsElement,
-      Boolean? readOnly,
+      bool? readOnly,
       @JsonKey(name: '_readOnly') Element? readOnlyElement,
       Integer? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
-      Canonical? answerValueSet,
+      String? answerValueSet,
       List<QuestionnaireAnswerOption>? answerOption,
       List<QuestionnaireInitial>? initial,
       List<QuestionnaireItem>? item});
@@ -25447,7 +25447,7 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      FhirUri? definition,
+      String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
       List<Coding>? code,
       String? prefix,
@@ -25457,17 +25457,17 @@ abstract class _$$_QuestionnaireItemCopyWith<$Res>
       Code type,
       @JsonKey(name: '_type') Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
-      Code? enableBehavior,
+      String? enableBehavior,
       @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
-      Boolean? repeats,
+      bool? repeats,
       @JsonKey(name: '_repeats') Element? repeatsElement,
-      Boolean? readOnly,
+      bool? readOnly,
       @JsonKey(name: '_readOnly') Element? readOnlyElement,
       Integer? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
-      Canonical? answerValueSet,
+      String? answerValueSet,
       List<QuestionnaireAnswerOption>? answerOption,
       List<QuestionnaireInitial>? initial,
       List<QuestionnaireItem>? item});
@@ -26145,7 +26145,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @override
 
   /// [definition] This element is a URI that refers to an
-  FhirUri? get definition;
+  String? get definition;
   @override
 
   /// [definitionElement] Extensions for definition
@@ -26198,7 +26198,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
 
   /// [enableBehavior] Controls how multiple enableWhen values are interpreted
   ///  -  whether all or any must be true.
-  Code? get enableBehavior;
+  String? get enableBehavior;
   @override
 
   /// [enableBehaviorElement] Extensions for enableBehavior
@@ -26210,7 +26210,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
   ///  answering the questionnaire.
   @JsonKey(name: 'required')
-  Boolean? get required_;
+  bool? get required_;
   @override
 
   /// [requiredElement] Extensions for required
@@ -26221,7 +26221,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   /// [repeats] An indication, if true, that the item may occur multiple times
   /// in the response, collecting multiple answers for questions or multiple
   ///  sets of answers for groups.
-  Boolean? get repeats;
+  bool? get repeats;
   @override
 
   /// [repeatsElement] Extensions for repeats
@@ -26231,7 +26231,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
 
   /// [readOnly] An indication, when true, that the value cannot be changed by
   ///  a human respondent to the Questionnaire.
-  Boolean? get readOnly;
+  bool? get readOnly;
   @override
 
   /// [readOnlyElement] Extensions for readOnly
@@ -26251,7 +26251,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
 
   /// [answerValueSet] A reference to a value set containing a list of codes
   ///  representing permitted answers for a "choice" or "open-choice" question.
-  Canonical? get answerValueSet;
+  String? get answerValueSet;
   @override
 
   /// [answerOption] One of the permitted answers for a "choice" or
@@ -26319,7 +26319,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [operator] Specifies the criteria by which the question is enabled.
   @JsonKey(name: 'operator')
-  Code? get operator_ => throw _privateConstructorUsedError;
+  String? get operator_ => throw _privateConstructorUsedError;
 
   /// [operatorElement] Extensions for operator
   @JsonKey(name: '_operator')
@@ -26327,7 +26327,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [answerBoolean] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Boolean? get answerBoolean => throw _privateConstructorUsedError;
+  bool? get answerBoolean => throw _privateConstructorUsedError;
 
   /// [answerBooleanElement] Extensions for answerBoolean
   @JsonKey(name: '_answerBoolean')
@@ -26351,7 +26351,7 @@ mixin _$QuestionnaireEnableWhen {
 
   /// [answerDate] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Date? get answerDate => throw _privateConstructorUsedError;
+  String? get answerDate => throw _privateConstructorUsedError;
 
   /// [answerDateElement] Extensions for answerDate
   @JsonKey(name: '_answerDate')
@@ -26413,13 +26413,13 @@ abstract class $QuestionnaireEnableWhenCopyWith<$Res> {
       @JsonKey(name: '_question') Element? questionElement,
       @JsonKey(name: 'operator') Code? operator_,
       @JsonKey(name: '_operator') Element? operatorElement,
-      Boolean? answerBoolean,
+      bool? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
       Decimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
-      Date? answerDate,
+      String? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
@@ -26745,13 +26745,13 @@ abstract class _$$_QuestionnaireEnableWhenCopyWith<$Res>
       @JsonKey(name: '_question') Element? questionElement,
       @JsonKey(name: 'operator') Code? operator_,
       @JsonKey(name: '_operator') Element? operatorElement,
-      Boolean? answerBoolean,
+      bool? answerBoolean,
       @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
       Decimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') Element? answerDecimalElement,
       Integer? answerInteger,
       @JsonKey(name: '_answerInteger') Element? answerIntegerElement,
-      Date? answerDate,
+      String? answerDate,
       @JsonKey(name: '_answerDate') Element? answerDateElement,
       FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') Element? answerDateTimeElement,
@@ -27315,7 +27315,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [operator] Specifies the criteria by which the question is enabled.
   @JsonKey(name: 'operator')
-  Code? get operator_;
+  String? get operator_;
   @override
 
   /// [operatorElement] Extensions for operator
@@ -27325,7 +27325,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [answerBoolean] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Boolean? get answerBoolean;
+  bool? get answerBoolean;
   @override
 
   /// [answerBooleanElement] Extensions for answerBoolean
@@ -27355,7 +27355,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
 
   /// [answerDate] A value that the referenced question is tested using the
   ///  specified operator in order for the item to be enabled.
-  Date? get answerDate;
+  String? get answerDate;
   @override
 
   /// [answerDateElement] Extensions for answerDate
@@ -27458,7 +27458,7 @@ mixin _$QuestionnaireAnswerOption {
 
   /// [valueDate] A potential answer that's allowed as the answer to this
   ///  question.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -27490,7 +27490,7 @@ mixin _$QuestionnaireAnswerOption {
 
   /// [initialSelected] Indicates whether the answer value is selected when the
   ///  list of possible answers is initially shown.
-  Boolean? get initialSelected => throw _privateConstructorUsedError;
+  bool? get initialSelected => throw _privateConstructorUsedError;
 
   /// [initialSelectedElement] Extensions for initialSelected
   @JsonKey(name: '_initialSelected')
@@ -27514,7 +27514,7 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -27522,7 +27522,7 @@ abstract class $QuestionnaireAnswerOptionCopyWith<$Res> {
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Coding? valueCoding,
       Reference? valueReference,
-      Boolean? initialSelected,
+      bool? initialSelected,
       @JsonKey(name: '_initialSelected') Element? initialSelectedElement});
 
   $ElementCopyWith<$Res>? get valueIntegerElement;
@@ -27728,7 +27728,7 @@ abstract class _$$_QuestionnaireAnswerOptionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       Time? valueTime,
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
@@ -27736,7 +27736,7 @@ abstract class _$$_QuestionnaireAnswerOptionCopyWith<$Res>
       @JsonKey(name: '_valueString') Element? valueStringElement,
       Coding? valueCoding,
       Reference? valueReference,
-      Boolean? initialSelected,
+      bool? initialSelected,
       @JsonKey(name: '_initialSelected') Element? initialSelectedElement});
 
   @override
@@ -28152,7 +28152,7 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
 
   /// [valueDate] A potential answer that's allowed as the answer to this
   ///  question.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -28192,7 +28192,7 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
 
   /// [initialSelected] Indicates whether the answer value is selected when the
   ///  list of possible answers is initially shown.
-  Boolean? get initialSelected;
+  bool? get initialSelected;
   @override
 
   /// [initialSelectedElement] Extensions for initialSelected
@@ -28240,7 +28240,7 @@ mixin _$QuestionnaireInitial {
       throw _privateConstructorUsedError;
 
   /// [valueBoolean] The actual value to for an initial answer.
-  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  bool? get valueBoolean => throw _privateConstructorUsedError;
 
   /// [valueBooleanElement] Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
@@ -28261,7 +28261,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
 
   /// [valueDate] The actual value to for an initial answer.
-  Date? get valueDate => throw _privateConstructorUsedError;
+  String? get valueDate => throw _privateConstructorUsedError;
 
   /// [valueDateElement] Extensions for valueDate
   @JsonKey(name: '_valueDate')
@@ -28289,7 +28289,7 @@ mixin _$QuestionnaireInitial {
   Element? get valueStringElement => throw _privateConstructorUsedError;
 
   /// [valueUri] The actual value to for an initial answer.
-  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  String? get valueUri => throw _privateConstructorUsedError;
 
   /// [valueUriElement] Extensions for valueUri
   @JsonKey(name: '_valueUri')
@@ -28323,13 +28323,13 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -28337,7 +28337,7 @@ abstract class $QuestionnaireInitialCopyWith<$Res> {
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       Attachment? valueAttachment,
       Coding? valueCoding,
@@ -28649,13 +28649,13 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? valueBoolean,
+      bool? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-      Date? valueDate,
+      String? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -28663,7 +28663,7 @@ abstract class _$$_QuestionnaireInitialCopyWith<$Res>
       @JsonKey(name: '_valueTime') Element? valueTimeElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
-      FhirUri? valueUri,
+      String? valueUri,
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       Attachment? valueAttachment,
       Coding? valueCoding,
@@ -29182,7 +29182,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueBoolean] The actual value to for an initial answer.
-  Boolean? get valueBoolean;
+  bool? get valueBoolean;
   @override
 
   /// [valueBooleanElement] Extensions for valueBoolean
@@ -29209,7 +29209,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueDate] The actual value to for an initial answer.
-  Date? get valueDate;
+  String? get valueDate;
   @override
 
   /// [valueDateElement] Extensions for valueDate
@@ -29245,7 +29245,7 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
   @override
 
   /// [valueUri] The actual value to for an initial answer.
-  FhirUri? get valueUri;
+  String? get valueUri;
   @override
 
   /// [valueUriElement] Extensions for valueUri
@@ -29295,14 +29295,14 @@ mixin _$SpecimenDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -29389,10 +29389,10 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -29624,10 +29624,10 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -30124,7 +30124,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -30133,7 +30133,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -30254,7 +30254,7 @@ mixin _$SpecimenDefinitionTypeTested {
       throw _privateConstructorUsedError;
 
   /// [isDerived] Primary of secondary specimen.
-  Boolean? get isDerived => throw _privateConstructorUsedError;
+  bool? get isDerived => throw _privateConstructorUsedError;
 
   /// [isDerivedElement] Extensions for isDerived
   @JsonKey(name: '_isDerived')
@@ -30264,7 +30264,7 @@ mixin _$SpecimenDefinitionTypeTested {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [preference] The preference for this type of conditioned specimen.
-  Code? get preference => throw _privateConstructorUsedError;
+  String? get preference => throw _privateConstructorUsedError;
 
   /// [preferenceElement] Extensions for preference
   @JsonKey(name: '_preference')
@@ -30315,10 +30315,10 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? isDerived,
+      bool? isDerived,
       @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      Code? preference,
+      String? preference,
       @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
@@ -30511,10 +30511,10 @@ abstract class _$$_SpecimenDefinitionTypeTestedCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Boolean? isDerived,
+      bool? isDerived,
       @JsonKey(name: '_isDerived') Element? isDerivedElement,
       CodeableConcept? type,
-      Code? preference,
+      String? preference,
       @JsonKey(name: '_preference') Element? preferenceElement,
       SpecimenDefinitionContainer? container,
       String? requirement,
@@ -30921,7 +30921,7 @@ abstract class _SpecimenDefinitionTypeTested
   @override
 
   /// [isDerived] Primary of secondary specimen.
-  Boolean? get isDerived;
+  bool? get isDerived;
   @override
 
   /// [isDerivedElement] Extensions for isDerived
@@ -30934,7 +30934,7 @@ abstract class _SpecimenDefinitionTypeTested
   @override
 
   /// [preference] The preference for this type of conditioned specimen.
-  Code? get preference;
+  String? get preference;
   @override
 
   /// [preferenceElement] Extensions for preference

@@ -36,14 +36,14 @@ mixin _$CatalogEntry {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -96,7 +96,7 @@ mixin _$CatalogEntry {
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [orderable] Whether the entry represents an orderable item.
-  Boolean? get orderable => throw _privateConstructorUsedError;
+  bool? get orderable => throw _privateConstructorUsedError;
 
   /// [orderableElement] Extensions for orderable
   @JsonKey(name: '_orderable')
@@ -116,7 +116,7 @@ mixin _$CatalogEntry {
 
   /// [status] Used to support catalog exchange even for unsupported products,
   ///  e.g. getting list of medications even if not prescribable.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -173,10 +173,10 @@ abstract class $CatalogEntryCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -186,13 +186,13 @@ abstract class $CatalogEntryCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
-      Boolean? orderable,
+      bool? orderable,
       @JsonKey(name: '_orderable')
           Element? orderableElement,
       Reference referencedItem,
       List<Identifier>? additionalIdentifier,
       List<CodeableConcept>? classification,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? validityPeriod,
@@ -519,10 +519,10 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -532,13 +532,13 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
-      Boolean? orderable,
+      bool? orderable,
       @JsonKey(name: '_orderable')
           Element? orderableElement,
       Reference referencedItem,
       List<Identifier>? additionalIdentifier,
       List<CodeableConcept>? classification,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? validityPeriod,
@@ -1227,7 +1227,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1236,7 +1236,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1296,7 +1296,7 @@ abstract class _CatalogEntry extends CatalogEntry {
   @override
 
   /// [orderable] Whether the entry represents an orderable item.
-  Boolean? get orderable;
+  bool? get orderable;
   @override
 
   /// [orderableElement] Extensions for orderable
@@ -1319,7 +1319,7 @@ abstract class _CatalogEntry extends CatalogEntry {
 
   /// [status] Used to support catalog exchange even for unsupported products,
   ///  e.g. getting list of medications even if not prescribable.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1408,7 +1408,7 @@ mixin _$CatalogEntryRelatedEntry {
 
   /// [relationtype] The type of relation to the related item: child, parent,
   ///  packageContent, containerPackage, usedIn, uses, requires, etc.
-  Code? get relationtype => throw _privateConstructorUsedError;
+  String? get relationtype => throw _privateConstructorUsedError;
 
   /// [relationtypeElement] Extensions for relationtype
   @JsonKey(name: '_relationtype')
@@ -1433,7 +1433,7 @@ abstract class $CatalogEntryRelatedEntryCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationtype,
+      String? relationtype,
       @JsonKey(name: '_relationtype') Element? relationtypeElement,
       Reference item});
 
@@ -1524,7 +1524,7 @@ abstract class _$$_CatalogEntryRelatedEntryCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationtype,
+      String? relationtype,
       @JsonKey(name: '_relationtype') Element? relationtypeElement,
       Reference item});
 
@@ -1776,7 +1776,7 @@ abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
 
   /// [relationtype] The type of relation to the related item: child, parent,
   ///  packageContent, containerPackage, usedIn, uses, requires, etc.
-  Code? get relationtype;
+  String? get relationtype;
   @override
 
   /// [relationtypeElement] Extensions for relationtype
@@ -1814,14 +1814,14 @@ mixin _$Composition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1872,7 +1872,7 @@ mixin _$Composition {
 
   /// [status] The workflow/clinical status of this composition. The status is
   ///  a marker for the clinical standing of the document.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -1919,7 +1919,7 @@ mixin _$Composition {
 
   /// [confidentiality] The code specifying the level of confidentiality of the
   ///  Composition.
-  Code? get confidentiality => throw _privateConstructorUsedError;
+  String? get confidentiality => throw _privateConstructorUsedError;
 
   /// [confidentialityElement] Extensions for confidentiality
   @JsonKey(name: '_confidentiality')
@@ -1963,10 +1963,10 @@ abstract class $CompositionCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1975,7 +1975,7 @@ abstract class $CompositionCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -1989,7 +1989,7 @@ abstract class $CompositionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? confidentiality,
+      String? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -2347,10 +2347,10 @@ abstract class _$$_CompositionCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -2359,7 +2359,7 @@ abstract class _$$_CompositionCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -2373,7 +2373,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? confidentiality,
+      String? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -3089,7 +3089,7 @@ abstract class _Composition extends Composition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -3098,7 +3098,7 @@ abstract class _Composition extends Composition {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -3155,7 +3155,7 @@ abstract class _Composition extends Composition {
 
   /// [status] The workflow/clinical status of this composition. The status is
   ///  a marker for the clinical standing of the document.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -3213,7 +3213,7 @@ abstract class _Composition extends Composition {
 
   /// [confidentiality] The code specifying the level of confidentiality of the
   ///  Composition.
-  Code? get confidentiality;
+  String? get confidentiality;
   @override
 
   /// [confidentialityElement] Extensions for confidentiality
@@ -3286,7 +3286,7 @@ mixin _$CompositionAttester {
       throw _privateConstructorUsedError;
 
   /// [mode] The type of attestation the authenticator offers.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -3318,7 +3318,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
@@ -3436,7 +3436,7 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
@@ -3716,7 +3716,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   @override
 
   /// [mode] The type of attestation the authenticator offers.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -3778,7 +3778,7 @@ mixin _$CompositionRelatesTo {
 
   /// [code] The type of relationship that this composition has with anther
   ///  composition or document.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -3806,7 +3806,7 @@ abstract class $CompositionRelatesToCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -3919,7 +3919,7 @@ abstract class _$$_CompositionRelatesToCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
@@ -4187,7 +4187,7 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
 
   /// [code] The type of relationship that this composition has with anther
   ///  composition or document.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4729,7 +4729,7 @@ mixin _$CompositionSection {
   /// represents a snapshot of a list of items from another source, or whether
   /// it is a prepared list where items may be marked as added, modified or
   ///  deleted.
-  Code? get mode => throw _privateConstructorUsedError;
+  String? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
   @JsonKey(name: '_mode')
@@ -4772,7 +4772,7 @@ abstract class $CompositionSectionCopyWith<$Res> {
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -4984,7 +4984,7 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
       List<Reference>? author,
       Reference? focus,
       Narrative? text,
-      Code? mode,
+      String? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       CodeableConcept? orderedBy,
       List<Reference>? entry,
@@ -5464,7 +5464,7 @@ abstract class _CompositionSection extends CompositionSection {
   /// represents a snapshot of a list of items from another source, or whether
   /// it is a prepared list where items may be marked as added, modified or
   ///  deleted.
-  Code? get mode;
+  String? get mode;
   @override
 
   /// [modeElement] Extensions for mode
@@ -5517,14 +5517,14 @@ mixin _$DocumentManifest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -5578,7 +5578,7 @@ mixin _$DocumentManifest {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this document manifest.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -5615,7 +5615,7 @@ mixin _$DocumentManifest {
 
   /// [source] Identifies the source system, application, or software that
   ///  produced the document manifest.
-  FhirUri? get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
 
   /// [sourceElement] Extensions for source
   @JsonKey(name: '_source')
@@ -5655,10 +5655,10 @@ abstract class $DocumentManifestCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5668,7 +5668,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -5678,7 +5678,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
           Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source')
           Element? sourceElement,
       String? description,
@@ -5999,10 +5999,10 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6012,7 +6012,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -6022,7 +6022,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
           Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
-      FhirUri? source,
+      String? source,
       @JsonKey(name: '_source')
           Element? sourceElement,
       String? description,
@@ -6681,7 +6681,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -6690,7 +6690,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -6751,7 +6751,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
 
   /// [status] The status of this document manifest.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -6796,7 +6796,7 @@ abstract class _DocumentManifest extends DocumentManifest {
 
   /// [source] Identifies the source system, application, or software that
   ///  produced the document manifest.
-  FhirUri? get source;
+  String? get source;
   @override
 
   /// [sourceElement] Extensions for source
@@ -7248,14 +7248,14 @@ mixin _$DocumentReference {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -7311,14 +7311,14 @@ mixin _$DocumentReference {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of this document reference.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [docStatus] The status of the underlying document.
-  Code? get docStatus => throw _privateConstructorUsedError;
+  String? get docStatus => throw _privateConstructorUsedError;
 
   /// [docStatusElement] Extensions for docStatus
   @JsonKey(name: '_docStatus')
@@ -7405,10 +7405,10 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7418,10 +7418,10 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? docStatus,
+      String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
       CodeableConcept? type,
@@ -7812,10 +7812,10 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -7825,10 +7825,10 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? docStatus,
+      String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
       CodeableConcept? type,
@@ -8582,7 +8582,7 @@ abstract class _DocumentReference extends DocumentReference {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -8591,7 +8591,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -8654,7 +8654,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [status] The status of this document reference.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -8663,7 +8663,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
 
   /// [docStatus] The status of the underlying document.
-  Code? get docStatus;
+  String? get docStatus;
   @override
 
   /// [docStatusElement] Extensions for docStatus
@@ -8788,7 +8788,7 @@ mixin _$DocumentReferenceRelatesTo {
 
   /// [code] The type of relationship that this document has with anther
   ///  document.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -8814,7 +8814,7 @@ abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference target});
 
@@ -8905,7 +8905,7 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       Reference target});
 
@@ -9157,7 +9157,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
 
   /// [code] The type of relationship that this document has with anther
   ///  document.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code

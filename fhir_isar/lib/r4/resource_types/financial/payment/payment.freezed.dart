@@ -36,14 +36,14 @@ mixin _$PaymentNotice {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -92,7 +92,7 @@ mixin _$PaymentNotice {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -120,7 +120,7 @@ mixin _$PaymentNotice {
   Reference get payment => throw _privateConstructorUsedError;
 
   /// [paymentDate] The date when the above payment action occurred.
-  Date? get paymentDate => throw _privateConstructorUsedError;
+  String? get paymentDate => throw _privateConstructorUsedError;
 
   /// [paymentDateElement] Extensions for paymentDate
   @JsonKey(name: '_paymentDate')
@@ -157,10 +157,10 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -169,7 +169,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
@@ -179,7 +179,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           Element? createdElement,
       Reference? provider,
       Reference payment,
-      Date? paymentDate,
+      String? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
@@ -534,10 +534,10 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -546,7 +546,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
@@ -556,7 +556,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
           Element? createdElement,
       Reference? provider,
       Reference payment,
-      Date? paymentDate,
+      String? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
@@ -1152,7 +1152,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -1161,7 +1161,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1216,7 +1216,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -1252,7 +1252,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
 
   /// [paymentDate] The date when the above payment action occurred.
-  Date? get paymentDate;
+  String? get paymentDate;
   @override
 
   /// [paymentDateElement] Extensions for paymentDate
@@ -1305,14 +1305,14 @@ mixin _$PaymentReconciliation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  String? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -1361,7 +1361,7 @@ mixin _$PaymentReconciliation {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the resource instance.
-  Code? get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
@@ -1389,7 +1389,7 @@ mixin _$PaymentReconciliation {
   Reference? get requestor => throw _privateConstructorUsedError;
 
   /// [outcome] The outcome of a request for a reconciliation.
-  Code? get outcome => throw _privateConstructorUsedError;
+  String? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
@@ -1405,7 +1405,7 @@ mixin _$PaymentReconciliation {
 
   /// [paymentDate] The date of payment as indicated on the financial
   ///  instrument.
-  Date? get paymentDate => throw _privateConstructorUsedError;
+  String? get paymentDate => throw _privateConstructorUsedError;
 
   /// [paymentDateElement] Extensions for paymentDate
   @JsonKey(name: '_paymentDate')
@@ -1449,10 +1449,10 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1461,7 +1461,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -1471,13 +1471,13 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition')
           Element? dispositionElement,
-      Date? paymentDate,
+      String? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Money paymentAmount,
@@ -1880,10 +1880,10 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
           R4ResourceType resourceType,
       String? id,
       Meta? meta,
-      FhirUri? implicitRules,
+      String? implicitRules,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -1892,7 +1892,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
@@ -1902,13 +1902,13 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
-      Code? outcome,
+      String? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
       @JsonKey(name: '_disposition')
           Element? dispositionElement,
-      Date? paymentDate,
+      String? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Money paymentAmount,
@@ -2611,7 +2611,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
-  FhirUri? get implicitRules;
+  String? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
@@ -2620,7 +2620,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [language] The base language in which the resource is written.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -2675,7 +2675,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [status] The status of the resource instance.
-  Code? get status;
+  String? get status;
   @override
 
   /// [statusElement] Extensions for status
@@ -2711,7 +2711,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
 
   /// [outcome] The outcome of a request for a reconciliation.
-  Code? get outcome;
+  String? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
@@ -2731,7 +2731,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
 
   /// [paymentDate] The date of payment as indicated on the financial
   ///  instrument.
-  Date? get paymentDate;
+  String? get paymentDate;
   @override
 
   /// [paymentDateElement] Extensions for paymentDate
@@ -2827,7 +2827,7 @@ mixin _$PaymentReconciliationDetail {
 
   /// [date] The date from the response resource containing a commitment to
   ///  pay.
-  Date? get date => throw _privateConstructorUsedError;
+  String? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
@@ -2868,7 +2868,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       Reference? request,
       Reference? submitter,
       Reference? response,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? responsible,
       Reference? payee,
@@ -3111,7 +3111,7 @@ abstract class _$$_PaymentReconciliationDetailCopyWith<$Res>
       Reference? request,
       Reference? submitter,
       Reference? response,
-      Date? date,
+      String? date,
       @JsonKey(name: '_date') Element? dateElement,
       Reference? responsible,
       Reference? payee,
@@ -3525,7 +3525,7 @@ abstract class _PaymentReconciliationDetail
 
   /// [date] The date from the response resource containing a commitment to
   ///  pay.
-  Date? get date;
+  String? get date;
   @override
 
   /// [dateElement] Extensions for date
@@ -3588,7 +3588,7 @@ mixin _$PaymentReconciliationProcessNote {
       throw _privateConstructorUsedError;
 
   /// [type] The business purpose of the note text.
-  Code? get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
@@ -3619,7 +3619,7 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -3720,7 +3720,7 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      String? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
@@ -3991,7 +3991,7 @@ abstract class _PaymentReconciliationProcessNote
   @override
 
   /// [type] The business purpose of the note text.
-  Code? get type;
+  String? get type;
   @override
 
   /// [typeElement] Extensions for type

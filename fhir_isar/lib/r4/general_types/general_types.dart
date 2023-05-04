@@ -181,21 +181,21 @@ class Attachment with _$Attachment {
     /// [contentType] Identifies the type of the data in the attachment and
     /// allows a method to be chosen to interpret or render the data. Includes
     ///  mime type parameters such as charset where appropriate.
-    Code? contentType,
+    String? contentType,
 
     /// [contentTypeElement] Extensions for contentType
     @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [language] The human language of the content. The value can be any valid
     ///  value according to BCP 47.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
     /// [data] The actual data of the attachment - a sequence of bytes, base64
     ///  encoded.
-    Base64Binary? data,
+    String? data,
 
     /// [dataElement] Extensions for data
     @JsonKey(name: '_data') Element? dataElement,
@@ -215,7 +215,7 @@ class Attachment with _$Attachment {
 
     /// [hash] The calculated hash of the data using SHA-1. Represented using
     ///  base64.
-    Base64Binary? hash,
+    String? hash,
 
     /// [hashElement] Extensions for hash
     @JsonKey(name: '_hash') Element? hashElement,
@@ -328,7 +328,7 @@ class Identifier with _$Identifier {
 
     /// [system] Establishes the namespace for the value - that is, a URL that
     ///  describes a set values that are unique.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system') Element? systemElement,
@@ -522,7 +522,7 @@ class Coding with _$Coding {
 
     /// [system] The identification of the code system that defines the meaning
     ///  of the symbol in the code.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system') Element? systemElement,
@@ -541,7 +541,7 @@ class Coding with _$Coding {
     /// [code] A symbol in syntax defined by the system. The symbol may be a
     /// predefined code or an expression in a syntax defined by the coding system
     ///  (e.g. post-coordination).
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -555,7 +555,7 @@ class Coding with _$Coding {
 
     /// [userSelected] Indicates that this coding was chosen by a user directly -
     ///  e.g. off a pick list of available items (codes or displays).
-    Boolean? userSelected,
+    bool? userSelected,
 
     /// [userSelectedElement] Extensions for userSelected
     @JsonKey(name: '_userSelected') Element? userSelectedElement,
@@ -679,7 +679,7 @@ class Quantity with _$Quantity {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
@@ -687,7 +687,7 @@ class Quantity with _$Quantity {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -810,7 +810,7 @@ class FhirDuration with _$FhirDuration {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
@@ -818,7 +818,7 @@ class FhirDuration with _$FhirDuration {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -941,7 +941,7 @@ class Distance with _$Distance {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
@@ -949,7 +949,7 @@ class Distance with _$Distance {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -1075,7 +1075,7 @@ class Count with _$Count {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
@@ -1083,7 +1083,7 @@ class Count with _$Count {
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
@@ -1164,7 +1164,7 @@ class Money with _$Money {
     @JsonKey(name: '_value') Element? valueElement,
 
     /// [currency] ISO 4217 Currency Code.
-    Code? currency,
+    String? currency,
 
     /// [currencyElement] Extensions for currency
     @JsonKey(name: '_currency') Element? currencyElement,
@@ -1280,14 +1280,14 @@ class Age with _$Age {
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    String? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    String? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
@@ -1850,7 +1850,7 @@ class Signature with _$Signature {
 
     /// [targetFormat] A mime type that indicates the technical format of the
     ///  target resources signed by the signature.
-    Code? targetFormat,
+    String? targetFormat,
 
     /// [targetFormatElement] Extensions for targetFormat
     @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -1859,14 +1859,14 @@ class Signature with _$Signature {
     /// signature. Important mime types are application/signature+xml for X ML
     /// DigSig, application/jose for JWS, and image/* for a graphical image of a
     ///  signature, etc.
-    Code? sigFormat,
+    String? sigFormat,
 
     /// [sigFormatElement] Extensions for sigFormat
     @JsonKey(name: '_sigFormat') Element? sigFormatElement,
 
     /// [data] The base64 encoding of the Signature content. When signature is
     ///  not recorded electronically this element would be empty.
-    Base64Binary? data,
+    String? data,
 
     /// [dataElement] Extensions for data
     @JsonKey(name: '_data') Element? dataElement,

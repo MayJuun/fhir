@@ -513,7 +513,7 @@ mixin _$Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-  Code? get contentType => throw _privateConstructorUsedError;
+  String? get contentType => throw _privateConstructorUsedError;
 
   /// [contentTypeElement] Extensions for contentType
   @JsonKey(name: '_contentType')
@@ -521,7 +521,7 @@ mixin _$Attachment {
 
   /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
-  Code? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
@@ -529,7 +529,7 @@ mixin _$Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  String? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] Extensions for data
   @JsonKey(name: '_data')
@@ -552,7 +552,7 @@ mixin _$Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  Base64Binary? get hash => throw _privateConstructorUsedError;
+  String? get hash => throw _privateConstructorUsedError;
 
   /// [hashElement] Extensions for hash
   @JsonKey(name: '_hash')
@@ -587,17 +587,17 @@ abstract class $AttachmentCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       UnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+      String? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -830,17 +830,17 @@ abstract class _$$_AttachmentCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Code? contentType,
+      String? contentType,
       @JsonKey(name: '_contentType') Element? contentTypeElement,
-      Code? language,
+      String? language,
       @JsonKey(name: '_language') Element? languageElement,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data') Element? dataElement,
       FhirUrl? url,
       @JsonKey(name: '_url') Element? urlElement,
       UnsignedInt? size,
       @JsonKey(name: '_size') Element? sizeElement,
-      Base64Binary? hash,
+      String? hash,
       @JsonKey(name: '_hash') Element? hashElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -1232,7 +1232,7 @@ abstract class _Attachment extends Attachment {
   /// [contentType] Identifies the type of the data in the attachment and
   /// allows a method to be chosen to interpret or render the data. Includes
   ///  mime type parameters such as charset where appropriate.
-  Code? get contentType;
+  String? get contentType;
   @override
 
   /// [contentTypeElement] Extensions for contentType
@@ -1242,7 +1242,7 @@ abstract class _Attachment extends Attachment {
 
   /// [language] The human language of the content. The value can be any valid
   ///  value according to BCP 47.
-  Code? get language;
+  String? get language;
   @override
 
   /// [languageElement] Extensions for language
@@ -1252,7 +1252,7 @@ abstract class _Attachment extends Attachment {
 
   /// [data] The actual data of the attachment - a sequence of bytes, base64
   ///  encoded.
-  Base64Binary? get data;
+  String? get data;
   @override
 
   /// [dataElement] Extensions for data
@@ -1281,7 +1281,7 @@ abstract class _Attachment extends Attachment {
 
   /// [hash] The calculated hash of the data using SHA-1. Represented using
   ///  base64.
-  Base64Binary? get hash;
+  String? get hash;
   @override
 
   /// [hashElement] Extensions for hash
@@ -1344,7 +1344,7 @@ mixin _$Identifier {
 
   /// [system] Establishes the namespace for the value - that is, a URL that
   ///  describes a set values that are unique.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -1382,7 +1382,7 @@ abstract class $IdentifierCopyWith<$Res> {
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       @JsonKey(name: '_use') Element? useElement,
       CodeableConcept? type,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
@@ -1557,7 +1557,7 @@ abstract class _$$_IdentifierCopyWith<$Res>
       @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
       @JsonKey(name: '_use') Element? useElement,
       CodeableConcept? type,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement,
@@ -1858,7 +1858,7 @@ abstract class _Identifier extends Identifier {
 
   /// [system] Establishes the namespace for the value - that is, a URL that
   ///  describes a set values that are unique.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -2239,7 +2239,7 @@ mixin _$Coding {
 
   /// [system] The identification of the code system that defines the meaning
   ///  of the symbol in the code.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -2260,7 +2260,7 @@ mixin _$Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -2276,7 +2276,7 @@ mixin _$Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
-  Boolean? get userSelected => throw _privateConstructorUsedError;
+  bool? get userSelected => throw _privateConstructorUsedError;
 
   /// [userSelectedElement] Extensions for userSelected
   @JsonKey(name: '_userSelected')
@@ -2295,15 +2295,15 @@ abstract class $CodingCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      bool? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -2461,15 +2461,15 @@ abstract class _$$_CodingCopyWith<$Res> implements $CodingCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system') Element? systemElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? display,
       @JsonKey(name: '_display') Element? displayElement,
-      Boolean? userSelected,
+      bool? userSelected,
       @JsonKey(name: '_userSelected') Element? userSelectedElement});
 
   @override
@@ -2766,7 +2766,7 @@ abstract class _Coding extends Coding {
 
   /// [system] The identification of the code system that defines the meaning
   ///  of the symbol in the code.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -2791,7 +2791,7 @@ abstract class _Coding extends Coding {
   /// [code] A symbol in syntax defined by the system. The symbol may be a
   /// predefined code or an expression in a syntax defined by the coding system
   ///  (e.g. post-coordination).
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -2811,7 +2811,7 @@ abstract class _Coding extends Coding {
 
   /// [userSelected] Indicates that this coding was chosen by a user directly -
   ///  e.g. off a pick list of available items (codes or displays).
-  Boolean? get userSelected;
+  bool? get userSelected;
   @override
 
   /// [userSelectedElement] Extensions for userSelected
@@ -2865,7 +2865,7 @@ mixin _$Quantity {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -2873,7 +2873,7 @@ mixin _$Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -2904,10 +2904,10 @@ abstract class $QuantityCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3078,10 +3078,10 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3405,7 +3405,7 @@ abstract class _Quantity extends Quantity {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -3415,7 +3415,7 @@ abstract class _Quantity extends Quantity {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -3469,7 +3469,7 @@ mixin _$FhirDuration {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -3477,7 +3477,7 @@ mixin _$FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -3509,10 +3509,10 @@ abstract class $FhirDurationCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -3684,10 +3684,10 @@ abstract class _$$_FhirDurationCopyWith<$Res>
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4012,7 +4012,7 @@ abstract class _FhirDuration extends FhirDuration {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -4022,7 +4022,7 @@ abstract class _FhirDuration extends FhirDuration {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4076,7 +4076,7 @@ mixin _$Distance {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -4084,7 +4084,7 @@ mixin _$Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -4115,10 +4115,10 @@ abstract class $DistanceCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4289,10 +4289,10 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4616,7 +4616,7 @@ abstract class _Distance extends Distance {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -4626,7 +4626,7 @@ abstract class _Distance extends Distance {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -4680,7 +4680,7 @@ mixin _$Count {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -4688,7 +4688,7 @@ mixin _$Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -4718,10 +4718,10 @@ abstract class $CountCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -4891,10 +4891,10 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -5216,7 +5216,7 @@ abstract class _Count extends Count {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -5226,7 +5226,7 @@ abstract class _Count extends Count {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -5265,7 +5265,7 @@ mixin _$Money {
   Element? get valueElement => throw _privateConstructorUsedError;
 
   /// [currency] ISO 4217 Currency Code.
-  Code? get currency => throw _privateConstructorUsedError;
+  String? get currency => throw _privateConstructorUsedError;
 
   /// [currencyElement] Extensions for currency
   @JsonKey(name: '_currency')
@@ -5286,7 +5286,7 @@ abstract class $MoneyCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Code? currency,
+      String? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   $ElementCopyWith<$Res>? get valueElement;
@@ -5377,7 +5377,7 @@ abstract class _$$_MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Decimal? value,
       @JsonKey(name: '_value') Element? valueElement,
-      Code? currency,
+      String? currency,
       @JsonKey(name: '_currency') Element? currencyElement});
 
   @override
@@ -5580,7 +5580,7 @@ abstract class _Money extends Money {
   @override
 
   /// [currency] ISO 4217 Currency Code.
-  Code? get currency;
+  String? get currency;
   @override
 
   /// [currencyElement] Extensions for currency
@@ -5639,7 +5639,7 @@ mixin _$Age {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system => throw _privateConstructorUsedError;
+  String? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
@@ -5647,7 +5647,7 @@ mixin _$Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code => throw _privateConstructorUsedError;
+  String? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
@@ -5677,10 +5677,10 @@ abstract class $AgeCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -5849,10 +5849,10 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
       String? unit,
       @JsonKey(name: '_unit')
           Element? unitElement,
-      FhirUri? system,
+      String? system,
       @JsonKey(name: '_system')
           Element? systemElement,
-      Code? code,
+      String? code,
       @JsonKey(name: '_code')
           Element? codeElement});
 
@@ -6183,7 +6183,7 @@ abstract class _Age extends Age {
 
   /// [system] The identification of the system that provides the coded form of
   ///  the unit.
-  FhirUri? get system;
+  String? get system;
   @override
 
   /// [systemElement] Extensions for system
@@ -6193,7 +6193,7 @@ abstract class _Age extends Age {
 
   /// [code] A computer processable form of the unit in some unit
   ///  representation system.
-  Code? get code;
+  String? get code;
   @override
 
   /// [codeElement] Extensions for code
@@ -8234,7 +8234,7 @@ mixin _$Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-  Code? get targetFormat => throw _privateConstructorUsedError;
+  String? get targetFormat => throw _privateConstructorUsedError;
 
   /// [targetFormatElement] Extensions for targetFormat
   @JsonKey(name: '_targetFormat')
@@ -8244,7 +8244,7 @@ mixin _$Signature {
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
-  Code? get sigFormat => throw _privateConstructorUsedError;
+  String? get sigFormat => throw _privateConstructorUsedError;
 
   /// [sigFormatElement] Extensions for sigFormat
   @JsonKey(name: '_sigFormat')
@@ -8252,7 +8252,7 @@ mixin _$Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  Base64Binary? get data => throw _privateConstructorUsedError;
+  String? get data => throw _privateConstructorUsedError;
 
   /// [dataElement] Extensions for data
   @JsonKey(name: '_data')
@@ -8277,11 +8277,11 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
-      Code? targetFormat,
+      String? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-      Code? sigFormat,
+      String? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   $ElementCopyWith<$Res>? get whenElement;
@@ -8459,11 +8459,11 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
       @JsonKey(name: '_when') Element? whenElement,
       Reference who,
       Reference? onBehalfOf,
-      Code? targetFormat,
+      String? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-      Code? sigFormat,
+      String? sigFormat,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-      Base64Binary? data,
+      String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
@@ -8813,7 +8813,7 @@ abstract class _Signature extends Signature {
 
   /// [targetFormat] A mime type that indicates the technical format of the
   ///  target resources signed by the signature.
-  Code? get targetFormat;
+  String? get targetFormat;
   @override
 
   /// [targetFormatElement] Extensions for targetFormat
@@ -8825,7 +8825,7 @@ abstract class _Signature extends Signature {
   /// signature. Important mime types are application/signature+xml for X ML
   /// DigSig, application/jose for JWS, and image/* for a graphical image of a
   ///  signature, etc.
-  Code? get sigFormat;
+  String? get sigFormat;
   @override
 
   /// [sigFormatElement] Extensions for sigFormat
@@ -8835,7 +8835,7 @@ abstract class _Signature extends Signature {
 
   /// [data] The base64 encoding of the Signature content. When signature is
   ///  not recorded electronically this element would be empty.
-  Base64Binary? get data;
+  String? get data;
   @override
 
   /// [dataElement] Extensions for data

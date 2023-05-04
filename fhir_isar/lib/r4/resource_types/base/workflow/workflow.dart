@@ -195,14 +195,14 @@ class Appointment with Resource, _$Appointment {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -255,7 +255,7 @@ class Appointment with Resource, _$Appointment {
     /// [status] The overall status of the Appointment. Each of the participants
     /// has their own participation status which indicates their involvement in
     ///  the process, however this status indicates the shared status.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -513,7 +513,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_required') Element? requiredElement,
 
     /// [status] Participation status of the actor.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -669,14 +669,14 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -758,7 +758,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     /// the appointment, then these times should be interpreted as a requested
     /// time change. When the status is accepted, the times can either be the time
     ///  of the appointment (as a confirmation of the time) or can be empty.
-    Code? participantStatus,
+    String? participantStatus,
 
     /// [participantStatusElement] Extensions for participantStatus
     @JsonKey(name: '_participantStatus')
@@ -912,14 +912,14 @@ class Schedule with Resource, _$Schedule {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -968,7 +968,7 @@ class Schedule with Resource, _$Schedule {
 
     /// [active] Whether this schedule record is in active use or should not be
     ///  used (such as was entered in error).
-    Boolean? active,
+    bool? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
@@ -1158,14 +1158,14 @@ class Slot with Resource, _$Slot {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1236,7 +1236,7 @@ class Slot with Resource, _$Slot {
 
     /// [status] busy | free | busy-unavailable | busy-tentative |
     ///  entered-in-error.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1258,7 +1258,7 @@ class Slot with Resource, _$Slot {
 
     /// [overbooked] This slot has already been overbooked, appointments are
     ///  unlikely to be accepted for this time.
-    Boolean? overbooked,
+    bool? overbooked,
 
     /// [overbookedElement] Extensions for overbooked
     @JsonKey(name: '_overbooked')
@@ -1487,14 +1487,14 @@ class Task with Resource, _$Task {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -1544,12 +1544,12 @@ class Task with Resource, _$Task {
     /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
     ///  part by this Task.
-    Canonical? instantiatesCanonical,
+    String? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an *externally* maintained
     /// protocol, guideline, orderset or other definition that is adhered to in
     ///  whole or in part by this Task.
-    FhirUri? instantiatesUri,
+    String? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
@@ -1572,7 +1572,7 @@ class Task with Resource, _$Task {
     List<Reference>? partOf,
 
     /// [status] The current status of the task.
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -1589,7 +1589,7 @@ class Task with Resource, _$Task {
     /// [intent] Indicates the "level" of actionability associated with the Task,
     /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
     ///  etc.
-    Code? intent,
+    String? intent,
 
     /// [intentElement] Extensions for intent
     @JsonKey(name: '_intent')
@@ -1597,7 +1597,7 @@ class Task with Resource, _$Task {
 
     /// [priority] Indicates how quickly the Task should be addressed with
     ///  respect to other requests.
-    Code? priority,
+    String? priority,
 
     /// [priorityElement] Extensions for priority
     @JsonKey(name: '_priority')
@@ -2041,31 +2041,31 @@ class TaskInput with _$TaskInput {
     required CodeableConcept type,
 
     /// [valueBase64Binary] The value of the input parameter as a basic type.
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] The value of the input parameter as a basic type.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] The value of the input parameter as a basic type.
-    Canonical? valueCanonical,
+    String? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The value of the input parameter as a basic type.
-    Code? valueCode,
+    String? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] The value of the input parameter as a basic type.
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -2137,7 +2137,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
 
     /// [valueUri] The value of the input parameter as a basic type.
-    FhirUri? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -2486,31 +2486,31 @@ class TaskOutput with _$TaskOutput {
     required CodeableConcept type,
 
     /// [valueBase64Binary] The value of the Output parameter as a basic type.
-    Base64Binary? valueBase64Binary,
+    String? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] The value of the Output parameter as a basic type.
-    Boolean? valueBoolean,
+    bool? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] The value of the Output parameter as a basic type.
-    Canonical? valueCanonical,
+    String? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The value of the Output parameter as a basic type.
-    Code? valueCode,
+    String? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] The value of the Output parameter as a basic type.
-    Date? valueDate,
+    String? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -2582,7 +2582,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
 
     /// [valueUri] The value of the Output parameter as a basic type.
-    FhirUri? valueUri,
+    String? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
     @JsonKey(name: '_valueUri') Element? valueUriElement,
@@ -2854,14 +2854,14 @@ class VerificationResult with Resource, _$VerificationResult {
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    String? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    String? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -2922,7 +2922,7 @@ class VerificationResult with Resource, _$VerificationResult {
 
     /// [status] The validation status of the target (attested; validated; in
     ///  process; requires revalidation; validation failed; revalidation failed).
-    Code? status,
+    String? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -2956,7 +2956,7 @@ class VerificationResult with Resource, _$VerificationResult {
         Element? lastPerformedElement,
 
     /// [nextScheduled] The date when target is next validated, if appropriate.
-    Date? nextScheduled,
+    String? nextScheduled,
 
     /// [nextScheduledElement] Extensions for nextScheduled
     @JsonKey(name: '_nextScheduled')
@@ -3255,7 +3255,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     CodeableConcept? communicationMethod,
 
     /// [date] The date the information was attested to.
-    Date? date,
+    String? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
