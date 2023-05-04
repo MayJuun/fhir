@@ -98,7 +98,7 @@ class PatientContact {
     this.organization,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? relationship;
@@ -124,7 +124,7 @@ class PatientAnimal {
     this.breed,
     this.genderStatus,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept species;
@@ -145,7 +145,7 @@ class PatientCommunication {
     this.preferred,
     @JsonKey(name: '_preferred') this.preferredElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept language;
@@ -166,7 +166,7 @@ class PatientLink {
     this.type,
     @JsonKey(name: '_type') this.typeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference other;
@@ -240,7 +240,7 @@ class PractitionerPractitionerRole {
     this.location,
     this.healthcareService,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<FhirExtension>? modifierExtension;
@@ -266,7 +266,7 @@ class PractitionerQualification {
     this.period,
     this.issuer,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;

@@ -10,7 +10,7 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) => Coverage(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Coverage,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -234,7 +234,7 @@ EligibilityRequest _$EligibilityRequestFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.EligibilityRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -329,7 +329,7 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.EligibilityResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -450,7 +450,7 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.EnrollmentRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -552,7 +552,7 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.EnrollmentResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

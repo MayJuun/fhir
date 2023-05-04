@@ -10,7 +10,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Observation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -329,7 +329,7 @@ const _$ObservationStatusEnumMap = {
 ObservationReferenceRange _$ObservationReferenceRangeFromJson(
         Map<String, dynamic> json) =>
     ObservationReferenceRange(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -384,7 +384,7 @@ Map<String, dynamic> _$ObservationReferenceRangeToJson(
 
 ObservationRelated _$ObservationRelatedFromJson(Map<String, dynamic> json) =>
     ObservationRelated(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -431,7 +431,7 @@ const _$RelatedTypeEnumMap = {
 ObservationComponent _$ObservationComponentFromJson(
         Map<String, dynamic> json) =>
     ObservationComponent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -534,7 +534,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.DiagnosticReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -688,7 +688,7 @@ const _$DiagnosticReportStatusEnumMap = {
 DiagnosticReportImage _$DiagnosticReportImageFromJson(
         Map<String, dynamic> json) =>
     DiagnosticReportImage(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -728,7 +728,7 @@ DiagnosticOrder _$DiagnosticOrderFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.DiagnosticOrder,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -850,7 +850,7 @@ const _$DiagnosticOrderPriorityEnumMap = {
 DiagnosticOrderEvent _$DiagnosticOrderEventFromJson(
         Map<String, dynamic> json) =>
     DiagnosticOrderEvent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -909,7 +909,7 @@ const _$EventStatusEnumMap = {
 
 DiagnosticOrderItem _$DiagnosticOrderItemFromJson(Map<String, dynamic> json) =>
     DiagnosticOrderItem(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -972,7 +972,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Specimen,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1089,7 +1089,7 @@ const _$SpecimenStatusEnumMap = {
 
 SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) =>
     SpecimenCollection(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1154,7 +1154,7 @@ Map<String, dynamic> _$SpecimenCollectionToJson(SpecimenCollection instance) {
 
 SpecimenTreatment _$SpecimenTreatmentFromJson(Map<String, dynamic> json) =>
     SpecimenTreatment(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1192,7 +1192,7 @@ Map<String, dynamic> _$SpecimenTreatmentToJson(SpecimenTreatment instance) {
 
 SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) =>
     SpecimenContainer(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1257,7 +1257,7 @@ BodySite _$BodySiteFromJson(Map<String, dynamic> json) => BodySite(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.BodySite,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1330,7 +1330,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.ImagingStudy,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1473,7 +1473,7 @@ const _$ImagingStudyAvailabilityEnumMap = {
 
 ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) =>
     ImagingStudySeries(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1567,7 +1567,7 @@ const _$SeriesAvailabilityEnumMap = {
 ImagingStudySeriesInstance _$ImagingStudySeriesInstanceFromJson(
         Map<String, dynamic> json) =>
     ImagingStudySeriesInstance(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1627,7 +1627,7 @@ ImagingObjectSelection _$ImagingObjectSelectionFromJson(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.ImagingObjectSelection,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1700,7 +1700,7 @@ Map<String, dynamic> _$ImagingObjectSelectionToJson(
 ImagingObjectSelectionStudy _$ImagingObjectSelectionStudyFromJson(
         Map<String, dynamic> json) =>
     ImagingObjectSelectionStudy(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1743,7 +1743,7 @@ Map<String, dynamic> _$ImagingObjectSelectionStudyToJson(
 ImagingObjectSelectionStudySeries _$ImagingObjectSelectionStudySeriesFromJson(
         Map<String, dynamic> json) =>
     ImagingObjectSelectionStudySeries(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1782,7 +1782,7 @@ Map<String, dynamic> _$ImagingObjectSelectionStudySeriesToJson(
 ImagingObjectSelectionSeriesInstance
     _$ImagingObjectSelectionSeriesInstanceFromJson(Map<String, dynamic> json) =>
         ImagingObjectSelectionSeriesInstance(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension_'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1823,7 +1823,7 @@ Map<String, dynamic> _$ImagingObjectSelectionSeriesInstanceToJson(
 ImagingObjectSelectionInstanceFrames
     _$ImagingObjectSelectionInstanceFramesFromJson(Map<String, dynamic> json) =>
         ImagingObjectSelectionInstanceFrames(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension_'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),

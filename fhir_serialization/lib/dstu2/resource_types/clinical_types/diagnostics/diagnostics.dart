@@ -116,7 +116,7 @@ class ObservationReferenceRange {
     this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -141,7 +141,7 @@ class ObservationRelated {
     this.type,
     required this.target,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -176,7 +176,7 @@ class ObservationComponent {
     this.dataAbsentReason,
     this.referenceRange,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -276,7 +276,7 @@ class DiagnosticReportImage {
     @JsonKey(name: '_comment') this.commentElement,
     required this.link,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? comment;
@@ -343,7 +343,7 @@ class DiagnosticOrderEvent {
     required this.dateTime,
     this.actor,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final EventStatus status;
@@ -367,7 +367,7 @@ class DiagnosticOrderItem {
     this.status,
     this.event,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept code;
@@ -440,7 +440,7 @@ class SpecimenCollection {
     this.method,
     this.bodySite,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<FhirExtension>? modifierExtension;
@@ -467,7 +467,7 @@ class SpecimenTreatment {
     this.procedure,
     this.additive,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? description;
@@ -493,7 +493,7 @@ class SpecimenContainer {
     this.additiveCodeableConcept,
     this.additiveReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
@@ -624,7 +624,7 @@ class ImagingStudySeries {
     @JsonKey(name: '_started') this.startedElement,
     this.instance,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final UnsignedInt? number;
@@ -665,7 +665,7 @@ class ImagingStudySeriesInstance {
     @JsonKey(name: '_title') this.titleElement,
     this.content,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final UnsignedInt? number;
@@ -726,7 +726,7 @@ class ImagingObjectSelectionStudy {
     this.imagingStudy,
     required this.series,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Oid uid;
@@ -750,7 +750,7 @@ class ImagingObjectSelectionStudySeries {
     @JsonKey(required: true) required this.instance,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Oid? uid;
@@ -776,7 +776,7 @@ class ImagingObjectSelectionSeriesInstance {
     this.frames,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Oid sopClass;
@@ -801,7 +801,7 @@ class ImagingObjectSelectionInstanceFrames {
     required this.url,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final FhirExtension? modifierExte;
   final List<UnsignedInt> frameNumbers;

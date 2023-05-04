@@ -446,7 +446,7 @@ class TestScriptVariable {
   final Element? hintElement;
   final String? path;
   final Element? pathElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
@@ -503,7 +503,7 @@ class TestScriptRule1 {
     @JsonKey(name: '_ruleId') this.ruleIdElement,
     this.param,
   });
-  final Id? ruleId;
+  final FhirId? ruleId;
   final Element? ruleIdElement;
   final List<TestScriptParam1>? param;
   factory TestScriptRule1.fromJson(Map<String, dynamic> json) =>
@@ -606,13 +606,13 @@ class TestScriptOperation {
   final String? params;
   final Element? paramsElement;
   final List<TestScriptRequestHeader>? requestHeader;
-  final Id? requestId;
+  final FhirId? requestId;
   final Element? requestIdElement;
-  final Id? responseId;
+  final FhirId? responseId;
   final Element? responseIdElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final String? url;
   final Element? urlElement;
@@ -728,7 +728,7 @@ class TestScriptAssert {
   final Element? responseCodeElement;
   final TestScriptRule2? rule;
   final TestScriptRuleset1? ruleset;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
   final Date? validateProfileId;
   final Element? validateProfileIdElement;
@@ -748,7 +748,7 @@ class TestScriptRule2 {
     @JsonKey(name: '_ruleId') this.ruleIdElement,
     this.param,
   });
-  final Id? ruleId;
+  final FhirId? ruleId;
   final Element? ruleIdElement;
   final List<TestScriptParam2>? param;
   factory TestScriptRule2.fromJson(Map<String, dynamic> json) =>
@@ -780,7 +780,7 @@ class TestScriptRuleset1 {
     @JsonKey(name: '_rulesetId') this.rulesetIdElement,
     this.rule,
   });
-  final Id? rulesetId;
+  final FhirId? rulesetId;
   final Element? rulesetIdElement;
   final List<TestScriptRule3>? rule;
   factory TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
@@ -795,7 +795,7 @@ class TestScriptRule3 {
     @JsonKey(name: '_ruleId') this.ruleIdElement,
     this.param,
   });
-  final Id? ruleId;
+  final FhirId? ruleId;
   final Element? ruleIdElement;
   final List<TestScriptParam3>? param;
   factory TestScriptRule3.fromJson(Map<String, dynamic> json) =>

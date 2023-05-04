@@ -319,7 +319,7 @@ class Media extends Resource {
   final Reference? device;
   final Decimal? height;
   final Element? heightElement;
-  final Id? width;
+  final FhirId? width;
   final Element? widthElement;
   final Decimal? frames;
   final Element? framesElement;
@@ -432,7 +432,7 @@ class MessageHeaderResponse {
     @JsonKey(name: '_code') this.codeElement,
     this.details,
   });
-  final Id? identifier;
+  final FhirId? identifier;
   final Element? identifierElement;
   final MessageHeaderResponseCode? code;
   final Element? codeElement;
@@ -619,11 +619,11 @@ class ParametersParameter {
   final Element? valueTimeElement;
   final Code? valueCode;
   final Element? valueCodeElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Decimal? valueUnsignedInt;
   final Element? valueUnsignedIntElement;

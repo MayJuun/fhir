@@ -10,7 +10,7 @@ Basic _$BasicFromJson(Map<String, dynamic> json) => Basic(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Basic,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -236,7 +236,7 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) => Binary(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Binary,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -315,7 +315,7 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) => Bundle(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Bundle,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -673,7 +673,7 @@ Linkage _$LinkageFromJson(Map<String, dynamic> json) => Linkage(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Linkage,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -783,7 +783,7 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MessageHeader,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1010,8 +1010,9 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identifier:
-          json['identifier'] == null ? null : Id.fromJson(json['identifier']),
+      identifier: json['identifier'] == null
+          ? null
+          : FhirId.fromJson(json['identifier']),
       identifierElement: json['identifierElement'] == null
           ? null
           : Element.fromJson(json['identifierElement'] as Map<String, dynamic>),
@@ -1052,7 +1053,7 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.OperationOutcome,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1190,7 +1191,7 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) => Parameters(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Parameters,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1309,7 +1310,8 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['valueDecimalElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -1594,7 +1596,7 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) => Subscription(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Subscription,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1748,7 +1750,7 @@ SubscriptionStatus _$SubscriptionStatusFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SubscriptionStatus,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1905,7 +1907,7 @@ SubscriptionTopic _$SubscriptionTopicFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SubscriptionTopic,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

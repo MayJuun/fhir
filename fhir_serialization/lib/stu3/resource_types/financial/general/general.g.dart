@@ -10,7 +10,7 @@ Account _$AccountFromJson(Map<String, dynamic> json) => Account(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Account,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -310,7 +310,7 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) => ChargeItem(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ChargeItem,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -393,7 +393,7 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) => ChargeItem(
           .toList(),
       factorOverride: json['factorOverride'] == null
           ? null
-          : Id.fromJson(json['factorOverride']),
+          : FhirId.fromJson(json['factorOverride']),
       factorOverrideElement: json['factorOverrideElement'] == null
           ? null
           : Element.fromJson(
@@ -537,7 +537,7 @@ Contract _$ContractFromJson(Map<String, dynamic> json) => Contract(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Contract,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1047,7 +1047,7 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ExplanationOfBenefit,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2021,7 +2021,7 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
         Map<String, dynamic> json) =>
     ExplanationOfBenefitAddItem(
       sequenceLinkId: (json['sequenceLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       sequenceLinkIdElement: (json['sequenceLinkIdElement'] as List<dynamic>?)
           ?.map((e) =>

@@ -53,7 +53,7 @@ class Composition extends Resource {
   final List<Reference> author;
   final String? title;
   final Element? titleElement;
-  final Id? confidentiality;
+  final FhirId? confidentiality;
   final Element? confidentialityElement;
   final List<CompositionAttester>? attester;
   final Reference? custodian;

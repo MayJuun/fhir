@@ -45,21 +45,21 @@ Map<String, dynamic> reformatXmlJsonMap(
         oldValue.keys.contains('@extension') ||
         oldValue.keys.contains('id') ||
         oldValue.keys.contains('@id')) {
-      final id = oldValue['id'] ?? oldValue['@id'];
+      final fhirId = oldValue['id'] ?? oldValue['@id'];
       final fhirExtension = oldValue['extension'] ?? oldValue['@extension'];
       newMap['_${key.replaceAll('@', '')}'] =
           fhirField != null && fhirField.isList
-              ? id != null
+              ? fhirId != null
                   ? fhirExtension != null
                       ? [
                           reformatXmlJsonMap(
-                            {'id': id, 'extension': fhirExtension},
+                            {'id': fhirId, 'extension': fhirExtension},
                             fhirFieldMap['Element']!,
                           )
                         ]
                       : [
                           reformatXmlJsonMap(
-                            {'id': id},
+                            {'id': fhirId},
                             fhirFieldMap['Element']!,
                           )
                         ]
@@ -69,14 +69,14 @@ Map<String, dynamic> reformatXmlJsonMap(
                         fhirFieldMap['Element']!,
                       )
                     ]
-              : id != null
+              : fhirId != null
                   ? fhirExtension != null
                       ? reformatXmlJsonMap(
-                          {'id': id, 'extension': fhirExtension},
+                          {'id': fhirId, 'extension': fhirExtension},
                           fhirFieldMap['Element']!,
                         )
                       : reformatXmlJsonMap(
-                          {'id': id},
+                          {'id': fhirId},
                           fhirFieldMap['Element']!,
                         )
                   : reformatXmlJsonMap(

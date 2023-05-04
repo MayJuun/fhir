@@ -78,7 +78,7 @@ class CompositionAttester {
     @JsonKey(name: '_time') this.timeElement,
     this.party,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<AttesterMode> mode;
@@ -101,7 +101,7 @@ class CompositionEvent {
     this.period,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? code;
@@ -130,7 +130,7 @@ class CompositionSection {
     this.emptyReason,
     this.section,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -211,7 +211,7 @@ class DocumentManifestContent {
     this.pAttachment,
     this.pReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Attachment? pAttachment;
@@ -230,7 +230,7 @@ class DocumentManifestRelated {
     this.identifier,
     this.ref,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
@@ -311,7 +311,7 @@ class DocumentReferenceRelatesTo {
     @JsonKey(name: '_code') this.codeElement,
     required this.target,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -332,7 +332,7 @@ class DocumentReferenceContent {
     required this.attachment,
     this.format,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Attachment attachment;
@@ -356,7 +356,7 @@ class DocumentReferenceContext {
     this.sourcePatientInfo,
     this.related,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference? encounter;
@@ -380,7 +380,7 @@ class DocumentReferenceContextRelated {
     this.identifier,
     this.ref,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
@@ -458,7 +458,7 @@ class ListEntry {
     @JsonKey(name: '_date') this.dateElement,
     required this.item,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;

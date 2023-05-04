@@ -11,7 +11,7 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.MessageHeader,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -211,14 +211,14 @@ const _$Dstu2ResourceTypeEnumMap = {
 MessageHeaderResponse _$MessageHeaderResponseFromJson(
         Map<String, dynamic> json) =>
     MessageHeaderResponse(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identifier: Id.fromJson(json['identifier']),
+      identifier: FhirId.fromJson(json['identifier']),
       identifierElement: json['identifierElement'] == null
           ? null
           : Element.fromJson(json['identifierElement'] as Map<String, dynamic>),
@@ -263,7 +263,7 @@ const _$ResponseCodeEnumMap = {
 
 MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) =>
     MessageHeaderSource(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -320,7 +320,7 @@ Map<String, dynamic> _$MessageHeaderSourceToJson(MessageHeaderSource instance) {
 MessageHeaderDestination _$MessageHeaderDestinationFromJson(
         Map<String, dynamic> json) =>
     MessageHeaderDestination(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -368,7 +368,7 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.OperationOutcome,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -436,7 +436,7 @@ Map<String, dynamic> _$OperationOutcomeToJson(OperationOutcome instance) {
 OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
         Map<String, dynamic> json) =>
     OperationOutcomeIssue(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -555,7 +555,7 @@ Map<String, dynamic> _$ParametersToJson(Parameters instance) {
 
 ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) =>
     ParametersParameter(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -738,7 +738,7 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) => Subscription(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Subscription,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -846,7 +846,7 @@ const _$SubscriptionStatusEnumMap = {
 
 SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) =>
     SubscriptionChannel(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

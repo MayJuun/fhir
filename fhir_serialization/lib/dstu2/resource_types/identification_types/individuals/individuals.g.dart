@@ -10,7 +10,7 @@ Patient _$PatientFromJson(Map<String, dynamic> json) => Patient(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Patient,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -290,7 +290,7 @@ const _$PatientGenderEnumMap = {
 
 PatientContact _$PatientContactFromJson(Map<String, dynamic> json) =>
     PatientContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -356,7 +356,7 @@ const _$ContactGenderEnumMap = {
 
 PatientAnimal _$PatientAnimalFromJson(Map<String, dynamic> json) =>
     PatientAnimal(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -397,7 +397,7 @@ Map<String, dynamic> _$PatientAnimalToJson(PatientAnimal instance) {
 PatientCommunication _$PatientCommunicationFromJson(
         Map<String, dynamic> json) =>
     PatientCommunication(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -436,7 +436,7 @@ Map<String, dynamic> _$PatientCommunicationToJson(
 }
 
 PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) => PatientLink(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -481,7 +481,7 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) => Practitioner(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Practitioner,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -605,7 +605,7 @@ const _$PractitionerGenderEnumMap = {
 PractitionerPractitionerRole _$PractitionerPractitionerRoleFromJson(
         Map<String, dynamic> json) =>
     PractitionerPractitionerRole(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -666,7 +666,7 @@ Map<String, dynamic> _$PractitionerPractitionerRoleToJson(
 PractitionerQualification _$PractitionerQualificationFromJson(
         Map<String, dynamic> json) =>
     PractitionerQualification(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -713,7 +713,7 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.RelatedPerson,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

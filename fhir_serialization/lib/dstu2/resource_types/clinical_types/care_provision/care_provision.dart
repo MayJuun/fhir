@@ -73,7 +73,7 @@ class CarePlanRelatedPlan {
     this.code,
     required this.plan,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final RelatedPlanCode? code;
@@ -92,7 +92,7 @@ class CarePlanParticipant {
     this.role,
     this.member,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? role;
@@ -114,7 +114,7 @@ class CarePlanActivity {
     this.reference,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -156,7 +156,7 @@ class CarePlanActivityDetail {
     this.description,
     @JsonKey(name: '_description') this.descriptionElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -252,7 +252,7 @@ class GoalOutcome {
     this.resultCodeableConcept,
     this.resultReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? resultCodeableConcept;
@@ -434,7 +434,7 @@ class NutritionOrderOralDiet {
     this.instruction,
     @JsonKey(name: '_instruction') this.instructionElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -465,7 +465,7 @@ class NutritionOrderSupplement {
     this.instruction,
     @JsonKey(name: '_instruction') this.instructionElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -503,7 +503,7 @@ class NutritionOrderEnteralFormula {
     @JsonKey(name: '_administrationInstruction')
         this.administrationInstructionElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -536,7 +536,7 @@ class NutritionOrderOralDietNutrient {
     this.modifier,
     this.amount,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -557,7 +557,7 @@ class NutritionOrderOralDietTexture {
     this.modifier,
     this.foodType,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -580,7 +580,7 @@ class NutritionOrderEnteralFormulaAdministration {
     this.rateRatio,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Timing? schedule;
@@ -655,7 +655,7 @@ class VisionPrescriptionDispense {
     this.notes,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding product;

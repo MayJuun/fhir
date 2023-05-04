@@ -11,7 +11,7 @@ BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.BodyStructure,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -357,7 +357,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.DiagnosticReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -595,7 +595,7 @@ GenomicStudy _$GenomicStudyFromJson(Map<String, dynamic> json) => GenomicStudy(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.GenomicStudy,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1007,7 +1007,7 @@ ImagingSelection _$ImagingSelectionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.ImagingSelection,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1060,7 +1060,8 @@ ImagingSelection _$ImagingSelectionFromJson(Map<String, dynamic> json) =>
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      studyUid: json['studyUid'] == null ? null : Id.fromJson(json['studyUid']),
+      studyUid:
+          json['studyUid'] == null ? null : FhirId.fromJson(json['studyUid']),
       studyUidElement: json['studyUidElement'] == null
           ? null
           : Element.fromJson(json['studyUidElement'] as Map<String, dynamic>),
@@ -1071,7 +1072,7 @@ ImagingSelection _$ImagingSelectionFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       seriesUid:
-          json['seriesUid'] == null ? null : Id.fromJson(json['seriesUid']),
+          json['seriesUid'] == null ? null : FhirId.fromJson(json['seriesUid']),
       seriesUidElement: json['seriesUidElement'] == null
           ? null
           : Element.fromJson(json['seriesUidElement'] as Map<String, dynamic>),
@@ -1084,7 +1085,7 @@ ImagingSelection _$ImagingSelectionFromJson(Map<String, dynamic> json) =>
               json['seriesNumberElement'] as Map<String, dynamic>),
       frameOfReferenceUid: json['frameOfReferenceUid'] == null
           ? null
-          : Id.fromJson(json['frameOfReferenceUid']),
+          : FhirId.fromJson(json['frameOfReferenceUid']),
       frameOfReferenceUidElement: json['frameOfReferenceUidElement'] == null
           ? null
           : Element.fromJson(
@@ -1209,7 +1210,7 @@ ImagingSelectionInstance _$ImagingSelectionInstanceFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      uid: json['uid'] == null ? null : Id.fromJson(json['uid']),
+      uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['uidElement'] == null
           ? null
           : Element.fromJson(json['uidElement'] as Map<String, dynamic>),
@@ -1358,7 +1359,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.ImagingStudy,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1517,7 +1518,7 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      uid: json['uid'] == null ? null : Id.fromJson(json['uid']),
+      uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['uidElement'] == null
           ? null
           : Element.fromJson(json['uidElement'] as Map<String, dynamic>),
@@ -1651,7 +1652,7 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      uid: json['uid'] == null ? null : Id.fromJson(json['uid']),
+      uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['uidElement'] == null
           ? null
           : Element.fromJson(json['uidElement'] as Map<String, dynamic>),
@@ -1697,7 +1698,7 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.MolecularSequence,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2006,7 +2007,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Observation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2521,7 +2522,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.QuestionnaireResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2813,7 +2814,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Specimen,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

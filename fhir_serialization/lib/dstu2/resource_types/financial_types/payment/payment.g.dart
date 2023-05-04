@@ -11,7 +11,7 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.PaymentNotice,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -216,7 +216,7 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.PaymentReconciliation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -356,7 +356,7 @@ const _$PaymentReconciliationOutcomeEnumMap = {
 PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
         Map<String, dynamic> json) =>
     PaymentReconciliationDetail(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -414,7 +414,7 @@ Map<String, dynamic> _$PaymentReconciliationDetailToJson(
 PaymentReconciliationNote _$PaymentReconciliationNoteFromJson(
         Map<String, dynamic> json) =>
     PaymentReconciliationNote(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

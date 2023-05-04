@@ -42,7 +42,7 @@ class StructureDefinitionContact {
     this.telecom,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -68,11 +68,11 @@ class StructureDefinitionMapping {
     this.comments,
     @JsonKey(name: '_comments') this.commentElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
-  final Id identity;
+  final FhirId identity;
   final Element? identityElement;
   final FhirUri? uri;
   final Element? uriElement;
@@ -93,7 +93,7 @@ class StructureDefinitionSnapshot {
     this.modifierExtension,
     required this.element,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<ElementDefinition> element;
@@ -110,7 +110,7 @@ class StructureDefinitionDifferential {
     this.modifierExtension,
     required this.element,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<ElementDefinition> element;
@@ -178,7 +178,7 @@ class DataElementContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -204,11 +204,11 @@ class DataElementMapping {
     this.comments,
     @JsonKey(name: '_comment') this.commentElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
-  final Id identity;
+  final FhirId identity;
   final Element? identityElement;
   final FhirUri? uri;
   final Element? uriElement;

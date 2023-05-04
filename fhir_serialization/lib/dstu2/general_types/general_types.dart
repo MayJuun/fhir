@@ -18,7 +18,7 @@ class Period {
     this.end,
     @JsonKey(name: '_end') this.endElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final FhirDateTime? start;
@@ -46,7 +46,7 @@ class Coding {
     this.userSelected,
     @JsonKey(name: '_userSelected') this.userSelectedElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final FhirUri? system;
@@ -71,7 +71,7 @@ class Range {
     this.low,
     this.high,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final Quantity? low;
   final Quantity? high;
@@ -96,7 +96,7 @@ class Quantity {
     this.code,
     @JsonKey(name: '_code') this.codeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final Decimal? value;
@@ -137,7 +137,7 @@ class Attachment {
     this.creation,
     @JsonKey(name: '_creation') this.creationElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final Code? contentType;
@@ -169,7 +169,7 @@ class Ratio {
     this.numerator,
     this.denominator,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final Quantity? numerator;
   final Quantity? denominator;
@@ -191,7 +191,7 @@ class Annotation {
     required this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final Reference? authorReference;
@@ -225,7 +225,7 @@ class SampledData {
     required this.data,
     @JsonKey(name: '_data') this.dataElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final Quantity origin;
   final Decimal period;
@@ -255,7 +255,7 @@ class CodeableConcept {
     this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<Coding>? coding;
@@ -282,7 +282,7 @@ class Identifier {
     this.period,
     this.assigner,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final IdentifierUse? use;
@@ -316,7 +316,7 @@ class Signature {
     @JsonKey(name: '_data') this.dataElement,
     @JsonKey(name: '_contentType') this.contentTypeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<Coding> type;
   final Instant when;
@@ -345,7 +345,7 @@ class Timing {
     this.repeat,
     this.code,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<FhirDateTime>? event;
@@ -382,7 +382,7 @@ class Address {
     @JsonKey(name: '_country') this.countryElement,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final AddressUse? use;
@@ -429,7 +429,7 @@ class HumanName {
     @JsonKey(name: '_suffix') this.suffixElement,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final HumanNameUse? use;
@@ -466,7 +466,7 @@ class ContactPoint {
     @JsonKey(name: '_rank') this.rankElement,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final ContactPointSystem? system;
@@ -513,7 +513,7 @@ class TimingRepeat {
     this.when,
     @JsonKey(name: '_when') this.whenElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final Quantity? boundsQuantity;

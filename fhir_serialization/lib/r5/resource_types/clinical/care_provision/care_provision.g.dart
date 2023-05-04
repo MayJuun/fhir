@@ -10,7 +10,7 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) => CarePlan(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.CarePlan,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -541,7 +541,7 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) => CareTeam(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.CareTeam,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -700,7 +700,7 @@ Goal _$GoalFromJson(Map<String, dynamic> json) => Goal(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Goal,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -933,7 +933,7 @@ NutritionIntake _$NutritionIntakeFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.NutritionIntake,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1246,7 +1246,7 @@ NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.NutritionOrder,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1942,7 +1942,7 @@ RequestOrchestration _$RequestOrchestrationFromJson(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.RequestOrchestration,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2395,8 +2395,9 @@ RequestOrchestrationInput _$RequestOrchestrationInputFromJson(
           ? null
           : DataRequirement.fromJson(
               json['requirement'] as Map<String, dynamic>),
-      relatedData:
-          json['relatedData'] == null ? null : Id.fromJson(json['relatedData']),
+      relatedData: json['relatedData'] == null
+          ? null
+          : FhirId.fromJson(json['relatedData']),
       relatedDataElement: json['relatedDataElement'] == null
           ? null
           : Element.fromJson(
@@ -2484,7 +2485,8 @@ RequestOrchestrationRelatedAction _$RequestOrchestrationRelatedActionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
+      targetId:
+          json['targetId'] == null ? null : FhirId.fromJson(json['targetId']),
       targetIdElement: json['targetIdElement'] == null
           ? null
           : Element.fromJson(json['targetIdElement'] as Map<String, dynamic>),
@@ -2639,7 +2641,7 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.RiskAssessment,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2855,7 +2857,7 @@ ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.ServiceRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3114,7 +3116,7 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.VisionPrescription,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

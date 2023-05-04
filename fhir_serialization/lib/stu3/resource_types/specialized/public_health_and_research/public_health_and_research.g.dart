@@ -11,7 +11,7 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ResearchStudy,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -330,7 +330,7 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ResearchSubject,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

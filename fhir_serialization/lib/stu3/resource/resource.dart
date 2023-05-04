@@ -31,7 +31,7 @@ abstract class Resource {
     @JsonKey(name: 'extension') this.extension_,
     this.modifierExtension,
   });
-  final Id? id;
+  final FhirId? id;
   final Stu3ResourceType? resourceType;
   final Meta? meta;
   final FhirUri? implicitRules;
@@ -67,7 +67,7 @@ abstract class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    Id? id,
+    FhirId? id,
     Stu3ResourceType? resourceType,
     Meta? meta,
     FhirUri? implicitRules,

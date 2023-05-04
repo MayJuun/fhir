@@ -50,7 +50,7 @@ class Meta {
     this.security,
     this.tag,
   });
-  final Id? versionId;
+  final FhirId? versionId;
   final Element? versionIdElement;
   final Instant? lastUpdated;
   final Element? lastUpdatedElement;
@@ -415,9 +415,9 @@ class ElementDefinition {
   final Element? defaultValueCodeElement;
   final Oid? defaultValueOid;
   final Element? defaultValueOidElement;
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   final Element? defaultValueUuidElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final Decimal? defaultValueUnsignedInt;
   final Element? defaultValueUnsignedIntElement;
@@ -489,9 +489,9 @@ class ElementDefinition {
   final Element? fixedCodeElement;
   final Oid? fixedOid;
   final Element? fixedOidElement;
-  final Id? fixedUuid;
+  final FhirId? fixedUuid;
   final Element? fixedUuidElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
   final Element? fixedIdElement;
   final Decimal? fixedUnsignedInt;
   final Element? fixedUnsignedIntElement;
@@ -559,9 +559,9 @@ class ElementDefinition {
   final Element? patternCodeElement;
   final Oid? patternOid;
   final Element? patternOidElement;
-  final Id? patternUuid;
+  final FhirId? patternUuid;
   final Element? patternUuidElement;
-  final Id? patternId;
+  final FhirId? patternId;
   final Element? patternIdElement;
   final Decimal? patternUnsignedInt;
   final Element? patternUnsignedIntElement;
@@ -1010,9 +1010,9 @@ class ElementDefinitionSlicing {
   final Element? defaultValueCodeElement;
   final Oid? defaultValueOid;
   final Element? defaultValueOidElement;
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   final Element? defaultValueUuidElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final Decimal? defaultValueUnsignedInt;
   final Element? defaultValueUnsignedIntElement;
@@ -1084,9 +1084,9 @@ class ElementDefinitionSlicing {
   final Element? fixedCodeElement;
   final Oid? fixedOid;
   final Element? fixedOidElement;
-  final Id? fixedUuid;
+  final FhirId? fixedUuid;
   final Element? fixedUuidElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
   final Element? fixedIdElement;
   final Decimal? fixedUnsignedInt;
   final Element? fixedUnsignedIntElement;
@@ -1154,9 +1154,9 @@ class ElementDefinitionSlicing {
   final Element? patternCodeElement;
   final Oid? patternOid;
   final Element? patternOidElement;
-  final Id? patternUuid;
+  final FhirId? patternUuid;
   final Element? patternUuidElement;
-  final Id? patternId;
+  final FhirId? patternId;
   final Element? patternIdElement;
   final Decimal? patternUnsignedInt;
   final Element? patternUnsignedIntElement;
@@ -1423,9 +1423,9 @@ class ElementDefinitionExample {
   final Element? valueCodeElement;
   final Oid? valueOid;
   final Element? valueOidElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Decimal? valueUnsignedInt;
   final Element? valueUnsignedIntElement;
@@ -1548,7 +1548,7 @@ class ElementDefinitionMapping {
     this.comment,
     @JsonKey(name: '_comment') this.commentElement,
   });
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final String? language;
   final Element? languageElement;

@@ -8,7 +8,7 @@ part of 'fhir_extension.dart';
 
 FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) =>
     FhirExtension(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -91,7 +91,8 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) =>
       valueOidElement: json['valueOidElement'] == null
           ? null
           : Element.fromJson(json['valueOidElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),

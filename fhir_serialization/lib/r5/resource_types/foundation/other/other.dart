@@ -54,7 +54,7 @@ class Binary extends Resource {
     @JsonKey(name: '_data') this.dataElement,
   });
 
-  final Id? id;
+  final FhirId? id;
   final Meta? meta;
   final FhirUri? implicitRules;
   final Element? implicitRulesElement;
@@ -92,7 +92,7 @@ class Bundle extends Resource {
     this.issues,
   });
 
-  final Id? id;
+  final FhirId? id;
   final Meta? meta;
   final FhirUri? implicitRules;
   final Element? implicitRulesElement;
@@ -513,7 +513,7 @@ class Parameters extends Resource {
     this.parameter,
   });
 
-  final Id? id;
+  final FhirId? id;
   final Meta? meta;
   final FhirUri? implicitRules;
   final Element? implicitRulesElement;
@@ -629,7 +629,7 @@ class ParametersParameter {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -639,7 +639,7 @@ class ParametersParameter {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -653,7 +653,7 @@ class ParametersParameter {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;

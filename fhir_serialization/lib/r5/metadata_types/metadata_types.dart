@@ -530,7 +530,7 @@ class Expression {
   final List<FhirExtension>? extension_;
   final String? description;
   final Element? descriptionElement;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final Code? language;
   final Element? languageElement;

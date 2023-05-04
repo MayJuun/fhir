@@ -121,7 +121,7 @@ class DeviceComponentProductionSpecification {
     this.componentId,
     this.productionSpec,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? specType;
@@ -194,7 +194,7 @@ class DeviceMetricCalibration {
     this.time,
     @JsonKey(name: '_time') this.timeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CalibrationType? type;

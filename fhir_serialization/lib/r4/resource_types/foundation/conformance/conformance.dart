@@ -1218,7 +1218,7 @@ class ImplementationGuide extends Resource {
   final Markdown? copyright;
 
   final Element? copyrightElement;
-  final Id? packageId;
+  final FhirId? packageId;
 
   final Element? packageIdElement;
   final Code? license;
@@ -1252,7 +1252,7 @@ class ImplementationGuideDependsOn {
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Canonical uri;
-  final Id? packageId;
+  final FhirId? packageId;
   final Element? packageIdElement;
   final String? version;
   final Element? versionElement;
@@ -1364,7 +1364,7 @@ class ImplementationGuideResource {
   final Element? exampleBooleanElement;
   final Canonical? exampleCanonical;
   final Element? exampleCanonicalElement;
-  final Id? groupingId;
+  final FhirId? groupingId;
   final Element? groupingIdElement;
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
@@ -2242,7 +2242,7 @@ class StructureDefinitionMapping {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final FhirUri? uri;
   final Element? uriElement;
@@ -2453,9 +2453,9 @@ class StructureMapGroup {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
-  final Id? extends_;
+  final FhirId? extends_;
   final Element? extendsElement;
   final Code? typeMode;
   final Element? typeModeElement;
@@ -2486,7 +2486,7 @@ class StructureMapInput {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final String? type;
   final Element? typeElement;
@@ -2517,7 +2517,7 @@ class StructureMapRule {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final List<StructureMapSource> source;
   final List<StructureMapTarget>? target;
@@ -2633,7 +2633,7 @@ class StructureMapSource {
 
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? context;
+  final FhirId? context;
 
   final Element? contextElement;
   final Integer? min;
@@ -2666,7 +2666,7 @@ class StructureMapSource {
   final Decimal? defaultValueDecimal;
 
   final Element? defaultValueDecimalElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
 
   final Element? defaultValueIdElement;
   final Instant? defaultValueInstant;
@@ -2739,7 +2739,7 @@ class StructureMapSource {
   final Code? listMode;
 
   final Element? listModeElement;
-  final Id? variable;
+  final FhirId? variable;
 
   final Element? variableElement;
   final String? condition;
@@ -2781,17 +2781,17 @@ class StructureMapTarget {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? context;
+  final FhirId? context;
   final Element? contextElement;
   final Code? contextType;
   final Element? contextTypeElement;
   final String? element;
   final Element? elementElement;
-  final Id? variable;
+  final FhirId? variable;
   final Element? variableElement;
   final List<Code>? listMode;
   final List<Element?>? listModeElement;
-  final Id? listRuleId;
+  final FhirId? listRuleId;
   final Element? listRuleIdElement;
   final Code? transform;
   final Element? transformElement;
@@ -2821,7 +2821,7 @@ class StructureMapParameter {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final String? valueString;
   final Element? valueStringElement;
@@ -2850,7 +2850,7 @@ class StructureMapDependent {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final List<String>? variable;
   final List<Element?>? variableElement;

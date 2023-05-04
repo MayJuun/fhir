@@ -10,7 +10,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.AuditEvent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -613,7 +613,7 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Consent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1007,7 +1007,7 @@ Permission _$PermissionFromJson(Map<String, dynamic> json) => Permission(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Permission,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1310,7 +1310,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Provenance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

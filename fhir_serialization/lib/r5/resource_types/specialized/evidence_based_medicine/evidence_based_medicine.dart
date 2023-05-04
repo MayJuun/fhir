@@ -1531,7 +1531,7 @@ class EvidenceVariableCharacteristic {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? linkId;
+  final FhirId? linkId;
   final Element? linkIdElement;
   final String? description;
   final Element? descriptionElement;
@@ -1542,7 +1542,7 @@ class EvidenceVariableCharacteristic {
   final Canonical? definitionCanonical;
   final CodeableConcept? definitionCodeableConcept;
   final Expression? definitionExpression;
-  final Id? definitionId;
+  final FhirId? definitionId;
   final Element? definitionIdElement;
   final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue;
   final EvidenceVariableDefinitionByCombination? definitionByCombination;
@@ -1584,7 +1584,7 @@ class EvidenceVariableDefinitionByTypeAndValue {
   final Quantity? valueQuantity;
   final Range? valueRange;
   final Reference? valueReference;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final CodeableConcept? offset;
   factory EvidenceVariableDefinitionByTypeAndValue.fromJson(
@@ -1650,7 +1650,7 @@ class EvidenceVariableTimeFromEvent {
   final Reference? eventReference;
   final FhirDateTime? eventDateTime;
   final Element? eventDateTimeElement;
-  final Id? eventId;
+  final FhirId? eventId;
   final Element? eventIdElement;
   final Quantity? quantity;
   final Range? range;

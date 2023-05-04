@@ -10,7 +10,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -471,7 +471,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -633,7 +633,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

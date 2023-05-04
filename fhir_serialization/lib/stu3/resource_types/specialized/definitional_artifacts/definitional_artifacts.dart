@@ -372,7 +372,7 @@ class PlanDefinitionAction {
   final List<CodeableConcept>? code;
   final List<CodeableConcept>? reason;
   final List<RelatedArtifact>? documentation;
-  final List<Id>? goalId;
+  final List<FhirId>? goalId;
   final List<Element?>? goalIdElement;
   final List<TriggerDefinition>? triggerDefinition;
   final List<PlanDefinitionCondition>? condition;
@@ -441,7 +441,7 @@ class PlanDefinitionRelatedAction {
     this.offsetDuration,
     this.offsetRange,
   });
-  final Id? actionId;
+  final FhirId? actionId;
   final Element? actionIdElement;
   final PlanDefinitionRelatedActionRelationship? relationship;
   final Element? relationshipElement;

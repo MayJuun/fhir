@@ -1028,7 +1028,7 @@ Expression _$ExpressionFromJson(Map<String, dynamic> json) => Expression(
           ? null
           : Element.fromJson(
               json['descriptionElement'] as Map<String, dynamic>),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['nameElement'] == null
           ? null
           : Element.fromJson(json['nameElement'] as Map<String, dynamic>),

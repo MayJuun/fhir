@@ -10,7 +10,7 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) => ValueSet(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.ValueSet,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -284,7 +284,7 @@ const _$ValueSetStatusEnumMap = {
 
 ValueSetContact _$ValueSetContactFromJson(Map<String, dynamic> json) =>
     ValueSetContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -322,7 +322,7 @@ Map<String, dynamic> _$ValueSetContactToJson(ValueSetContact instance) {
 
 ValueSetCodeSystem _$ValueSetCodeSystemFromJson(Map<String, dynamic> json) =>
     ValueSetCodeSystem(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -381,7 +381,7 @@ Map<String, dynamic> _$ValueSetCodeSystemToJson(ValueSetCodeSystem instance) {
 ValueSetCodeSystemConcept _$ValueSetCodeSystemConceptFromJson(
         Map<String, dynamic> json) =>
     ValueSetCodeSystemConcept(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -444,7 +444,7 @@ Map<String, dynamic> _$ValueSetCodeSystemConceptToJson(
 ValueSetConceptDesignation _$ValueSetConceptDesignationFromJson(
         Map<String, dynamic> json) =>
     ValueSetConceptDesignation(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -490,7 +490,7 @@ Map<String, dynamic> _$ValueSetConceptDesignationToJson(
 
 ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) =>
     ValueSetCompose(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -537,7 +537,7 @@ Map<String, dynamic> _$ValueSetComposeToJson(ValueSetCompose instance) {
 ValueSetComposeInclude _$ValueSetComposeIncludeFromJson(
         Map<String, dynamic> json) =>
     ValueSetComposeInclude(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -593,7 +593,7 @@ Map<String, dynamic> _$ValueSetComposeIncludeToJson(
 ValueSetIncludeConcept _$ValueSetIncludeConceptFromJson(
         Map<String, dynamic> json) =>
     ValueSetIncludeConcept(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -645,7 +645,7 @@ Map<String, dynamic> _$ValueSetIncludeConceptToJson(
 ValueSetIncludeFilter _$ValueSetIncludeFilterFromJson(
         Map<String, dynamic> json) =>
     ValueSetIncludeFilter(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -706,7 +706,7 @@ const _$FilterOpEnumMap = {
 
 ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) =>
     ValueSetExpansion(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -774,7 +774,7 @@ Map<String, dynamic> _$ValueSetExpansionToJson(ValueSetExpansion instance) {
 ValueSetExpansionParameter _$ValueSetExpansionParameterFromJson(
         Map<String, dynamic> json) =>
     ValueSetExpansionParameter(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -862,7 +862,7 @@ Map<String, dynamic> _$ValueSetExpansionParameterToJson(
 ValueSetExpansionContains _$ValueSetExpansionContainsFromJson(
         Map<String, dynamic> json) =>
     ValueSetExpansionContains(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -934,7 +934,7 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) => ConceptMap(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.ConceptMap,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1101,7 +1101,7 @@ const _$ConceptMapStatusEnumMap = {
 
 ConceptMapContact _$ConceptMapContactFromJson(Map<String, dynamic> json) =>
     ConceptMapContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1135,7 +1135,7 @@ Map<String, dynamic> _$ConceptMapContactToJson(ConceptMapContact instance) {
 
 ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) =>
     ConceptMapElement(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1179,7 +1179,7 @@ Map<String, dynamic> _$ConceptMapElementToJson(ConceptMapElement instance) {
 ConceptMapElementTarget _$ConceptMapElementTargetFromJson(
         Map<String, dynamic> json) =>
     ConceptMapElementTarget(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1256,7 +1256,7 @@ const _$TargetEquivalenceEnumMap = {
 ConceptMapTargetDependsOn _$ConceptMapTargetDependsOnFromJson(
         Map<String, dynamic> json) =>
     ConceptMapTargetDependsOn(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1293,7 +1293,7 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) => NamingSystem(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.NamingSystem,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1437,7 +1437,7 @@ const _$NamingSystemKindEnumMap = {
 
 NamingSystemContact _$NamingSystemContactFromJson(Map<String, dynamic> json) =>
     NamingSystemContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1472,7 +1472,7 @@ Map<String, dynamic> _$NamingSystemContactToJson(NamingSystemContact instance) {
 NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(
         Map<String, dynamic> json) =>
     NamingSystemUniqueId(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

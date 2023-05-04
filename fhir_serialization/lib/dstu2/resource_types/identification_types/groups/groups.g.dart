@@ -10,7 +10,7 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) => Organization(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Organization,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -208,7 +208,7 @@ const _$Dstu2ResourceTypeEnumMap = {
 
 OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) =>
     OrganizationContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -259,7 +259,7 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.HealthcareService,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -427,7 +427,7 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
 HealthcareServiceServiceType _$HealthcareServiceServiceTypeFromJson(
         Map<String, dynamic> json) =>
     HealthcareServiceServiceType(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -464,7 +464,7 @@ Map<String, dynamic> _$HealthcareServiceServiceTypeToJson(
 HealthcareServiceAvailableTime _$HealthcareServiceAvailableTimeFromJson(
         Map<String, dynamic> json) =>
     HealthcareServiceAvailableTime(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -543,7 +543,7 @@ const _$AvailableTimeDaysOfWeekEnumMap = {
 HealthcareServiceNotAvailable _$HealthcareServiceNotAvailableFromJson(
         Map<String, dynamic> json) =>
     HealthcareServiceNotAvailable(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -585,7 +585,7 @@ Group _$GroupFromJson(Map<String, dynamic> json) => Group(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Group,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -698,7 +698,7 @@ const _$GroupTypeEnumMap = {
 
 GroupCharacteristic _$GroupCharacteristicFromJson(Map<String, dynamic> json) =>
     GroupCharacteristic(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -755,7 +755,7 @@ Map<String, dynamic> _$GroupCharacteristicToJson(GroupCharacteristic instance) {
 }
 
 GroupMember _$GroupMemberFromJson(Map<String, dynamic> json) => GroupMember(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

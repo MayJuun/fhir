@@ -11,7 +11,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Questionnaire,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -225,7 +225,7 @@ const _$QuestionnaireStatusEnumMap = {
 
 QuestionnaireGroup _$QuestionnaireGroupFromJson(Map<String, dynamic> json) =>
     QuestionnaireGroup(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -288,7 +288,7 @@ Map<String, dynamic> _$QuestionnaireGroupToJson(QuestionnaireGroup instance) {
 QuestionnaireGroupQuestion _$QuestionnaireGroupQuestionFromJson(
         Map<String, dynamic> json) =>
     QuestionnaireGroupQuestion(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -373,7 +373,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.QuestionnaireResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -488,7 +488,7 @@ const _$QuestionnaireResponseStatusEnumMap = {
 QuestionnaireResponseGroup _$QuestionnaireResponseGroupFromJson(
         Map<String, dynamic> json) =>
     QuestionnaireResponseGroup(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -550,7 +550,7 @@ Map<String, dynamic> _$QuestionnaireResponseGroupToJson(
 QuestionnaireResponseGroupQuestion _$QuestionnaireResponseGroupQuestionFromJson(
         Map<String, dynamic> json) =>
     QuestionnaireResponseGroupQuestion(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -597,7 +597,7 @@ Map<String, dynamic> _$QuestionnaireResponseGroupQuestionToJson(
 QuestionnaireResponseQuestionAnswer
     _$QuestionnaireResponseQuestionAnswerFromJson(Map<String, dynamic> json) =>
         QuestionnaireResponseQuestionAnswer(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension_'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -735,7 +735,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Provenance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),
@@ -847,7 +847,7 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
 
 ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) =>
     ProvenanceAgent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -895,7 +895,7 @@ Map<String, dynamic> _$ProvenanceAgentToJson(ProvenanceAgent instance) {
 
 ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) =>
     ProvenanceEntity(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -956,7 +956,7 @@ const _$EntityRoleEnumMap = {
 ProvenanceAgentRelatedAgent _$ProvenanceAgentRelatedAgentFromJson(
         Map<String, dynamic> json) =>
     ProvenanceAgentRelatedAgent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -991,7 +991,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.AuditEvent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1062,7 +1062,7 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
 
 AuditEventEvent _$AuditEventEventFromJson(Map<String, dynamic> json) =>
     AuditEventEvent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1110,7 +1110,7 @@ Map<String, dynamic> _$AuditEventEventToJson(AuditEventEvent instance) {
 AuditEventParticipant _$AuditEventParticipantFromJson(
         Map<String, dynamic> json) =>
     AuditEventParticipant(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1183,7 +1183,7 @@ Map<String, dynamic> _$AuditEventParticipantToJson(
 
 AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) =>
     AuditEventSource(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1224,7 +1224,7 @@ Map<String, dynamic> _$AuditEventSourceToJson(AuditEventSource instance) {
 
 AuditEventObject _$AuditEventObjectFromJson(Map<String, dynamic> json) =>
     AuditEventObject(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1294,7 +1294,7 @@ Map<String, dynamic> _$AuditEventObjectToJson(AuditEventObject instance) {
 AuditEventParticipantNetwork _$AuditEventParticipantNetworkFromJson(
         Map<String, dynamic> json) =>
     AuditEventParticipantNetwork(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1336,7 +1336,7 @@ Map<String, dynamic> _$AuditEventParticipantNetworkToJson(
 AuditEventObjectDetail _$AuditEventObjectDetailFromJson(
         Map<String, dynamic> json) =>
     AuditEventObjectDetail(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

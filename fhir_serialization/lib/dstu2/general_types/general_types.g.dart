@@ -7,7 +7,7 @@ part of 'general_types.dart';
 // **************************************************************************
 
 Period _$PeriodFromJson(Map<String, dynamic> json) => Period(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -46,7 +46,7 @@ Map<String, dynamic> _$PeriodToJson(Period instance) {
 }
 
 Coding _$CodingFromJson(Map<String, dynamic> json) => Coding(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -105,7 +105,7 @@ Map<String, dynamic> _$CodingToJson(Coding instance) {
 }
 
 Range _$RangeFromJson(Map<String, dynamic> json) => Range(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -135,7 +135,7 @@ Map<String, dynamic> _$RangeToJson(Range instance) {
 }
 
 Quantity _$QuantityFromJson(Map<String, dynamic> json) => Quantity(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -200,7 +200,7 @@ const _$QuantityComparatorEnumMap = {
 };
 
 Attachment _$AttachmentFromJson(Map<String, dynamic> json) => Attachment(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -280,7 +280,7 @@ Map<String, dynamic> _$AttachmentToJson(Attachment instance) {
 }
 
 Ratio _$RatioFromJson(Map<String, dynamic> json) => Ratio(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -310,7 +310,7 @@ Map<String, dynamic> _$RatioToJson(Ratio instance) {
 }
 
 Annotation _$AnnotationFromJson(Map<String, dynamic> json) => Annotation(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -359,7 +359,7 @@ Map<String, dynamic> _$AnnotationToJson(Annotation instance) {
 }
 
 SampledData _$SampledDataFromJson(Map<String, dynamic> json) => SampledData(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -424,7 +424,7 @@ Map<String, dynamic> _$SampledDataToJson(SampledData instance) {
 
 CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) =>
     CodeableConcept(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -460,7 +460,7 @@ Map<String, dynamic> _$CodeableConceptToJson(CodeableConcept instance) {
 }
 
 Identifier _$IdentifierFromJson(Map<String, dynamic> json) => Identifier(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -524,7 +524,7 @@ const _$IdentifierUseEnumMap = {
 };
 
 Signature _$SignatureFromJson(Map<String, dynamic> json) => Signature(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -584,7 +584,7 @@ Map<String, dynamic> _$SignatureToJson(Signature instance) {
 }
 
 Timing _$TimingFromJson(Map<String, dynamic> json) => Timing(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -626,7 +626,7 @@ Map<String, dynamic> _$TimingToJson(Timing instance) {
 }
 
 Address _$AddressFromJson(Map<String, dynamic> json) => Address(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -725,7 +725,7 @@ const _$AddressTypeEnumMap = {
 };
 
 HumanName _$HumanNameFromJson(Map<String, dynamic> json) => HumanName(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -810,7 +810,7 @@ const _$HumanNameUseEnumMap = {
 };
 
 ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) => ContactPoint(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -882,7 +882,7 @@ const _$ContactPointUseEnumMap = {
 };
 
 TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) => TimingRepeat(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -11,7 +11,7 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ActivityDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -483,7 +483,7 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.PlanDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -812,7 +812,7 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
       goalId: (json['goalId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       goalIdElement: (json['goalIdElement'] as List<dynamic>?)
           ?.map((e) =>
@@ -1079,7 +1079,8 @@ const _$PlanDefinitionConditionKindEnumMap = {
 PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
         Map<String, dynamic> json) =>
     PlanDefinitionRelatedAction(
-      actionId: json['actionId'] == null ? null : Id.fromJson(json['actionId']),
+      actionId:
+          json['actionId'] == null ? null : FhirId.fromJson(json['actionId']),
       actionIdElement: json['actionIdElement'] == null
           ? null
           : Element.fromJson(json['actionIdElement'] as Map<String, dynamic>),
@@ -1218,7 +1219,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Questionnaire,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1792,7 +1793,7 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ServiceDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

@@ -124,7 +124,7 @@ Meta _$MetaFromJson(Map<String, dynamic> json) => Meta(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       versionId:
-          json['versionId'] == null ? null : Id.fromJson(json['versionId']),
+          json['versionId'] == null ? null : FhirId.fromJson(json['versionId']),
       versionIdElement: json['versionIdElement'] == null
           ? null
           : Element.fromJson(json['versionIdElement'] as Map<String, dynamic>),
@@ -471,7 +471,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['defaultValueDecimalElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -506,7 +506,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['defaultValueMarkdownElement'] as Map<String, dynamic>),
       defaultValueOid: json['defaultValueOid'] == null
           ? null
-          : Id.fromJson(json['defaultValueOid']),
+          : FhirId.fromJson(json['defaultValueOid']),
       defaultValueOidElement: json['defaultValueOidElement'] == null
           ? null
           : Element.fromJson(
@@ -555,7 +555,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['defaultValueUrlElement'] as Map<String, dynamic>),
       defaultValueUuid: json['defaultValueUuid'] == null
           ? null
-          : Id.fromJson(json['defaultValueUuid']),
+          : FhirId.fromJson(json['defaultValueUuid']),
       defaultValueUuidElement: json['defaultValueUuidElement'] == null
           ? null
           : Element.fromJson(
@@ -749,7 +749,8 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['fixedDecimalElement'] as Map<String, dynamic>),
-      fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
+      fixedId:
+          json['fixedId'] == null ? null : FhirId.fromJson(json['fixedId']),
       fixedIdElement: json['fixedIdElement'] == null
           ? null
           : Element.fromJson(json['fixedIdElement'] as Map<String, dynamic>),
@@ -781,7 +782,8 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['fixedMarkdownElement'] as Map<String, dynamic>),
-      fixedOid: json['fixedOid'] == null ? null : Id.fromJson(json['fixedOid']),
+      fixedOid:
+          json['fixedOid'] == null ? null : FhirId.fromJson(json['fixedOid']),
       fixedOidElement: json['fixedOidElement'] == null
           ? null
           : Element.fromJson(json['fixedOidElement'] as Map<String, dynamic>),
@@ -820,7 +822,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['fixedUrlElement'] as Map<String, dynamic>),
       fixedUuid:
-          json['fixedUuid'] == null ? null : Id.fromJson(json['fixedUuid']),
+          json['fixedUuid'] == null ? null : FhirId.fromJson(json['fixedUuid']),
       fixedUuidElement: json['fixedUuidElement'] == null
           ? null
           : Element.fromJson(json['fixedUuidElement'] as Map<String, dynamic>),
@@ -994,7 +996,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(
               json['patternDecimalElement'] as Map<String, dynamic>),
       patternId:
-          json['patternId'] == null ? null : Id.fromJson(json['patternId']),
+          json['patternId'] == null ? null : FhirId.fromJson(json['patternId']),
       patternIdElement: json['patternIdElement'] == null
           ? null
           : Element.fromJson(json['patternIdElement'] as Map<String, dynamic>),
@@ -1026,8 +1028,9 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['patternMarkdownElement'] as Map<String, dynamic>),
-      patternOid:
-          json['patternOid'] == null ? null : Id.fromJson(json['patternOid']),
+      patternOid: json['patternOid'] == null
+          ? null
+          : FhirId.fromJson(json['patternOid']),
       patternOidElement: json['patternOidElement'] == null
           ? null
           : Element.fromJson(json['patternOidElement'] as Map<String, dynamic>),
@@ -1069,8 +1072,9 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       patternUrlElement: json['patternUrlElement'] == null
           ? null
           : Element.fromJson(json['patternUrlElement'] as Map<String, dynamic>),
-      patternUuid:
-          json['patternUuid'] == null ? null : Id.fromJson(json['patternUuid']),
+      patternUuid: json['patternUuid'] == null
+          ? null
+          : FhirId.fromJson(json['patternUuid']),
       patternUuidElement: json['patternUuidElement'] == null
           ? null
           : Element.fromJson(
@@ -1341,7 +1345,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['maxLengthElement'] as Map<String, dynamic>),
       condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       conditionElement: (json['conditionElement'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2134,7 +2138,8 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
           ? null
           : Element.fromJson(
               json['valueDecimalElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -2166,7 +2171,8 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
           ? null
           : Element.fromJson(
               json['valueMarkdownElement'] as Map<String, dynamic>),
-      valueOid: json['valueOid'] == null ? null : Id.fromJson(json['valueOid']),
+      valueOid:
+          json['valueOid'] == null ? null : FhirId.fromJson(json['valueOid']),
       valueOidElement: json['valueOidElement'] == null
           ? null
           : Element.fromJson(json['valueOidElement'] as Map<String, dynamic>),
@@ -2205,7 +2211,7 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
           ? null
           : Element.fromJson(json['valueUrlElement'] as Map<String, dynamic>),
       valueUuid:
-          json['valueUuid'] == null ? null : Id.fromJson(json['valueUuid']),
+          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
       valueUuidElement: json['valueUuidElement'] == null
           ? null
           : Element.fromJson(json['valueUuidElement'] as Map<String, dynamic>),
@@ -2444,7 +2450,7 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      key: json['key'] == null ? null : Id.fromJson(json['key']),
+      key: json['key'] == null ? null : FhirId.fromJson(json['key']),
       keyElement: json['keyElement'] == null
           ? null
           : Element.fromJson(json['keyElement'] as Map<String, dynamic>),
@@ -2723,7 +2729,8 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),

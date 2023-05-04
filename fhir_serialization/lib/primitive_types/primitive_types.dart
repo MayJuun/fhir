@@ -10,7 +10,7 @@ export 'fhir_date_time_base.dart';
 export 'fhir_number.dart';
 export 'fhir_uri.dart';
 export 'fhir_url.dart';
-export 'id.dart';
+export 'fhir_id.dart';
 export 'instant.dart';
 export 'integer.dart';
 export 'integer64.dart';

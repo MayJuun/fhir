@@ -2133,7 +2133,7 @@ class PlanDefinitionAction {
   final CodeableConcept? code;
   final List<CodeableConcept>? reason;
   final List<RelatedArtifact>? documentation;
-  final List<Id>? goalId;
+  final List<FhirId>? goalId;
   final List<Element>? goalIdElement;
   final CodeableConcept? subjectCodeableConcept;
   final Reference? subjectReference;
@@ -2212,7 +2212,7 @@ class PlanDefinitionInput {
   final String? title;
   final Element? titleElement;
   final DataRequirement? requirement;
-  final Id? relatedData;
+  final FhirId? relatedData;
   final Element? relatedDataElement;
   factory PlanDefinitionInput.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionInputFromJson(json);
@@ -2260,7 +2260,7 @@ class PlanDefinitionRelatedAction {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final Code? relationship;
   final Element? relationshipElement;
@@ -2786,7 +2786,7 @@ class RequirementsStatement {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? key;
+  final FhirId? key;
   final Element? keyElement;
   final String? label;
   final Element? labelElement;

@@ -130,7 +130,7 @@ class BundleLink {
     required this.url,
     @JsonKey(name: '_url') this.urlElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -158,7 +158,7 @@ class BundleEntry {
     this.request,
     this.response,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -186,7 +186,7 @@ class BundleEntrySearch {
     this.score,
     @JsonKey(name: '_score') this.scoreElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -219,7 +219,7 @@ class BundleEntryRequest {
     this.ifNoneExist,
     @JsonKey(name: '_ifNoneExist') this.ifNoneExistElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -257,7 +257,7 @@ class BundleEntryResponse {
     this.lastModified,
     @JsonKey(name: '_lastModified') this.lastModifiedElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;

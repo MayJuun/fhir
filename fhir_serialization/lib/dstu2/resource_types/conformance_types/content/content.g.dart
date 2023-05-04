@@ -59,7 +59,7 @@ const _$StructureDefinitionContextTypeEnumMap = {
 StructureDefinitionContact _$StructureDefinitionContactFromJson(
         Map<String, dynamic> json) =>
     StructureDefinitionContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -95,7 +95,7 @@ Map<String, dynamic> _$StructureDefinitionContactToJson(
 StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
         Map<String, dynamic> json) =>
     StructureDefinitionMapping(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -105,7 +105,7 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
       fhirComments: (json['fhirComments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      identity: Id.fromJson(json['identity']),
+      identity: FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),
@@ -153,7 +153,7 @@ Map<String, dynamic> _$StructureDefinitionMappingToJson(
 StructureDefinitionSnapshot _$StructureDefinitionSnapshotFromJson(
         Map<String, dynamic> json) =>
     StructureDefinitionSnapshot(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -187,7 +187,7 @@ Map<String, dynamic> _$StructureDefinitionSnapshotToJson(
 StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
         Map<String, dynamic> json) =>
     StructureDefinitionDifferential(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -222,7 +222,7 @@ DataElement _$DataElementFromJson(Map<String, dynamic> json) => DataElement(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.DataElement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -431,7 +431,7 @@ const _$DataElementStringencyEnumMap = {
 
 DataElementContact _$DataElementContactFromJson(Map<String, dynamic> json) =>
     DataElementContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -465,7 +465,7 @@ Map<String, dynamic> _$DataElementContactToJson(DataElementContact instance) {
 
 DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) =>
     DataElementMapping(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -475,7 +475,7 @@ DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhirComments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      identity: Id.fromJson(json['identity']),
+      identity: FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),

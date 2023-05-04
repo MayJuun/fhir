@@ -70,7 +70,7 @@ Map<String, dynamic> _$ReferenceToJson(Reference instance) {
 
 Meta _$MetaFromJson(Map<String, dynamic> json) => Meta(
       versionId:
-          json['versionId'] == null ? null : Id.fromJson(json['versionId']),
+          json['versionId'] == null ? null : FhirId.fromJson(json['versionId']),
       versionIdElement: json['versionIdElement'] == null
           ? null
           : Element.fromJson(json['versionIdElement'] as Map<String, dynamic>),
@@ -272,14 +272,14 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['defaultValueOidElement'] as Map<String, dynamic>),
       defaultValueUuid: json['defaultValueUuid'] == null
           ? null
-          : Id.fromJson(json['defaultValueUuid']),
+          : FhirId.fromJson(json['defaultValueUuid']),
       defaultValueUuidElement: json['defaultValueUuidElement'] == null
           ? null
           : Element.fromJson(
               json['defaultValueUuidElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -521,11 +521,12 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['fixedOidElement'] as Map<String, dynamic>),
       fixedUuid:
-          json['fixedUuid'] == null ? null : Id.fromJson(json['fixedUuid']),
+          json['fixedUuid'] == null ? null : FhirId.fromJson(json['fixedUuid']),
       fixedUuidElement: json['fixedUuidElement'] == null
           ? null
           : Element.fromJson(json['fixedUuidElement'] as Map<String, dynamic>),
-      fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
+      fixedId:
+          json['fixedId'] == null ? null : FhirId.fromJson(json['fixedId']),
       fixedIdElement: json['fixedIdElement'] == null
           ? null
           : Element.fromJson(json['fixedIdElement'] as Map<String, dynamic>),
@@ -747,14 +748,15 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       patternOidElement: json['patternOidElement'] == null
           ? null
           : Element.fromJson(json['patternOidElement'] as Map<String, dynamic>),
-      patternUuid:
-          json['patternUuid'] == null ? null : Id.fromJson(json['patternUuid']),
+      patternUuid: json['patternUuid'] == null
+          ? null
+          : FhirId.fromJson(json['patternUuid']),
       patternUuidElement: json['patternUuidElement'] == null
           ? null
           : Element.fromJson(
               json['patternUuidElement'] as Map<String, dynamic>),
       patternId:
-          json['patternId'] == null ? null : Id.fromJson(json['patternId']),
+          json['patternId'] == null ? null : FhirId.fromJson(json['patternId']),
       patternIdElement: json['patternIdElement'] == null
           ? null
           : Element.fromJson(json['patternIdElement'] as Map<String, dynamic>),
@@ -1626,14 +1628,14 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
               json['defaultValueOidElement'] as Map<String, dynamic>),
       defaultValueUuid: json['defaultValueUuid'] == null
           ? null
-          : Id.fromJson(json['defaultValueUuid']),
+          : FhirId.fromJson(json['defaultValueUuid']),
       defaultValueUuidElement: json['defaultValueUuidElement'] == null
           ? null
           : Element.fromJson(
               json['defaultValueUuidElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -1875,11 +1877,12 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
           ? null
           : Element.fromJson(json['fixedOidElement'] as Map<String, dynamic>),
       fixedUuid:
-          json['fixedUuid'] == null ? null : Id.fromJson(json['fixedUuid']),
+          json['fixedUuid'] == null ? null : FhirId.fromJson(json['fixedUuid']),
       fixedUuidElement: json['fixedUuidElement'] == null
           ? null
           : Element.fromJson(json['fixedUuidElement'] as Map<String, dynamic>),
-      fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
+      fixedId:
+          json['fixedId'] == null ? null : FhirId.fromJson(json['fixedId']),
       fixedIdElement: json['fixedIdElement'] == null
           ? null
           : Element.fromJson(json['fixedIdElement'] as Map<String, dynamic>),
@@ -2101,14 +2104,15 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
       patternOidElement: json['patternOidElement'] == null
           ? null
           : Element.fromJson(json['patternOidElement'] as Map<String, dynamic>),
-      patternUuid:
-          json['patternUuid'] == null ? null : Id.fromJson(json['patternUuid']),
+      patternUuid: json['patternUuid'] == null
+          ? null
+          : FhirId.fromJson(json['patternUuid']),
       patternUuidElement: json['patternUuidElement'] == null
           ? null
           : Element.fromJson(
               json['patternUuidElement'] as Map<String, dynamic>),
       patternId:
-          json['patternId'] == null ? null : Id.fromJson(json['patternId']),
+          json['patternId'] == null ? null : FhirId.fromJson(json['patternId']),
       patternIdElement: json['patternIdElement'] == null
           ? null
           : Element.fromJson(json['patternIdElement'] as Map<String, dynamic>),
@@ -3046,11 +3050,12 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
           ? null
           : Element.fromJson(json['valueOidElement'] as Map<String, dynamic>),
       valueUuid:
-          json['valueUuid'] == null ? null : Id.fromJson(json['valueUuid']),
+          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
       valueUuidElement: json['valueUuidElement'] == null
           ? null
           : Element.fromJson(json['valueUuidElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -3422,7 +3427,8 @@ const _$ElementDefinitionBindingStrengthEnumMap = {
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
         Map<String, dynamic> json) =>
     ElementDefinitionMapping(
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),

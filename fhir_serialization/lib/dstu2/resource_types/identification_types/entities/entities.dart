@@ -72,7 +72,7 @@ class LocationPosition {
     this.altitude,
     @JsonKey(name: '_altitude') this.altitudeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Decimal longitude;
@@ -131,7 +131,7 @@ class SubstanceInstance {
     @JsonKey(name: '_expiry') this.expiryElement,
     this.quantity,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
@@ -152,7 +152,7 @@ class SubstanceIngredient {
     this.quantity,
     required this.substance,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Ratio? quantity;
@@ -217,7 +217,7 @@ class PersonLink {
     this.assurance,
     @JsonKey(name: '_assurance') this.assuranceElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference target;
@@ -297,7 +297,7 @@ class ContractActor {
     required this.entity,
     this.role,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference entity;
@@ -327,7 +327,7 @@ class ContractValuedItem {
     this.net,
     this.securityLabelNumberElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? entityCodeableConcept;
@@ -358,7 +358,7 @@ class ContractSigner {
     required this.party,
     required this.signature,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding type;
@@ -390,7 +390,7 @@ class ContractTerm {
     this.valuedItem,
     this.group,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
@@ -421,7 +421,7 @@ class ContractTermActor {
     required this.entity,
     this.role,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference entity;
@@ -440,7 +440,7 @@ class ContractFriendly {
     this.contentAttachment,
     this.contactReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Attachment? contentAttachment;
@@ -459,7 +459,7 @@ class ContractLegal {
     this.contentAttachment,
     this.content,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Attachment? contentAttachment;
@@ -478,7 +478,7 @@ class ContractRule {
     this.contentAttachment,
     this.contentReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Attachment? contentAttachment;

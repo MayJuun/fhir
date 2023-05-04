@@ -125,7 +125,7 @@ Meta _$MetaFromJson(Map<String, dynamic> json) => Meta(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       versionId:
-          json['versionId'] == null ? null : Id.fromJson(json['versionId']),
+          json['versionId'] == null ? null : FhirId.fromJson(json['versionId']),
       versionIdElement: json['versionIdElement'] == null
           ? null
           : Element.fromJson(json['versionIdElement'] as Map<String, dynamic>),
@@ -484,7 +484,7 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
               json['defaultValueDecimalElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -746,7 +746,8 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
           ? null
           : Element.fromJson(
               json['fixedDecimalElement'] as Map<String, dynamic>),
-      fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
+      fixedId:
+          json['fixedId'] == null ? null : FhirId.fromJson(json['fixedId']),
       fixedIdElement: json['fixedIdElement'] == null
           ? null
           : Element.fromJson(json['fixedIdElement'] as Map<String, dynamic>),
@@ -978,7 +979,7 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
           : Element.fromJson(
               json['patternDecimalElement'] as Map<String, dynamic>),
       patternId:
-          json['patternId'] == null ? null : Id.fromJson(json['patternId']),
+          json['patternId'] == null ? null : FhirId.fromJson(json['patternId']),
       patternIdElement: json['patternIdElement'] == null
           ? null
           : Element.fromJson(json['patternIdElement'] as Map<String, dynamic>),
@@ -1298,7 +1299,7 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
           ? null
           : Element.fromJson(json['maxLengthElement'] as Map<String, dynamic>),
       condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       conditionElement: (json['conditionElement'] as List<dynamic>?)
           ?.map((e) =>
@@ -1992,7 +1993,8 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
           ? null
           : Element.fromJson(
               json['valueDecimalElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -2287,7 +2289,7 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      key: json['key'] == null ? null : Id.fromJson(json['key']),
+      key: json['key'] == null ? null : FhirId.fromJson(json['key']),
       keyElement: json['keyElement'] == null
           ? null
           : Element.fromJson(json['keyElement'] as Map<String, dynamic>),
@@ -2422,7 +2424,8 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),

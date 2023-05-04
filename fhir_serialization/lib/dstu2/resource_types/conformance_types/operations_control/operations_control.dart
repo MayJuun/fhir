@@ -62,7 +62,7 @@ class Conformance extends Resource {
   final ConformanceKind kind;
   final ConformanceSoftware? software;
   final ConformanceImplementation? implementation;
-  final Id fhirVersion;
+  final FhirId fhirVersion;
   final Element? fhirVersionElement;
 
   final ConformanceAcceptUnknown acceptUnknown;
@@ -132,7 +132,7 @@ class CapabilityStatement extends Resource {
   final ConformanceKind kind;
   final ConformanceSoftware? software;
   final ConformanceImplementation? implementation;
-  final Id fhirVersion;
+  final FhirId fhirVersion;
   final Element? fhirVersionElement;
 
   final ConformanceAcceptUnknown acceptUnknown;
@@ -156,7 +156,7 @@ class ConformanceContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -176,7 +176,7 @@ class ConformanceSoftware {
     this.version,
     this.releaseDate,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String name;
@@ -196,7 +196,7 @@ class ConformanceImplementation {
     required this.description,
     this.url,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String description;
@@ -224,7 +224,7 @@ class ConformanceRest {
     this.operation,
     this.compartment,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -256,7 +256,7 @@ class ConformanceMessaging {
     this.documentation,
     required this.event,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -280,7 +280,7 @@ class ConformanceDocument {
     this.documentation,
     required this.profile,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -304,7 +304,7 @@ class ConformanceRestSecurity {
     this.description,
     this.certificate,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Boolean? cors;
@@ -341,7 +341,7 @@ class ConformanceRestResource {
     this.searchRevInclude,
     this.searchParam,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -378,7 +378,7 @@ class ConformanceResourceInteraction {
     required this.code,
     this.documentation,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -399,7 +399,7 @@ class ConformanceRestOperation {
     required this.name,
     required this.definition,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -420,7 +420,7 @@ class ConformanceMessagingEndpoint {
     required this.address,
     @JsonKey(name: '_address') this.addressElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding protocol;
@@ -446,7 +446,7 @@ class ConformanceMessagingEvent {
     required this.response,
     this.documentation,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding code;
@@ -472,7 +472,7 @@ class ConformanceSecurityCertificate {
     this.blob,
     @JsonKey(name: '_blob') this.blobElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Code? type;
@@ -492,7 +492,7 @@ class ConformanceRestInteraction {
     required this.code,
     this.documentation,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -518,7 +518,7 @@ class ConformanceResourceSearchParam {
     this.modifier,
     this.chain,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -602,7 +602,7 @@ class OperationDefinitionContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -629,7 +629,7 @@ class OperationDefinitionParameter {
     this.binding,
     @JsonKey(name: 'part') this.part_,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -657,7 +657,7 @@ class OperationDefinitionParameterBinding {
     this.valueSetUri,
     this.valueSetReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -733,7 +733,7 @@ class SearchParameterContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;

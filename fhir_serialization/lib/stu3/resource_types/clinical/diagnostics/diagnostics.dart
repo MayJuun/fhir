@@ -182,7 +182,7 @@ class ImagingManifestStudy {
     this.endpoint,
     required this.series,
   });
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final Reference? imagingStudy;
   final List<Reference>? endpoint;
@@ -200,7 +200,7 @@ class ImagingManifestSeries {
     this.endpoint,
     required this.instance,
   });
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final List<Reference>? endpoint;
   final List<ImagingManifestInstance> instance;
@@ -219,7 +219,7 @@ class ImagingManifestInstance {
   });
   final String? sopClass;
   final Element? sopClassElement;
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingManifestInstanceFromJson(json);
@@ -266,7 +266,7 @@ class ImagingStudy extends Resource {
     @JsonKey(name: '_description') this.descriptionElement,
     this.series,
   });
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final Identifier? accession;
   final List<Identifier>? identifier;
@@ -318,7 +318,7 @@ class ImagingStudySeries {
     this.performer,
     this.instance,
   });
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final Decimal? number;
   final Element? numberElement;
@@ -353,7 +353,7 @@ class ImagingStudyInstance {
     this.title,
     @JsonKey(name: '_title') this.titleElement,
   });
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final Decimal? number;
   final Element? numberElement;

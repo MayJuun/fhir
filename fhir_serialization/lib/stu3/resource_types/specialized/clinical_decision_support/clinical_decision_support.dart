@@ -40,7 +40,7 @@ class GuidanceResponse extends Resource {
     this.result,
     this.dataRequirement,
   });
-  final Id? requestId;
+  final FhirId? requestId;
   final Element? requestIdElement;
   final Identifier? identifier;
   final Reference module;

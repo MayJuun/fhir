@@ -113,7 +113,7 @@ class FhirExtension {
   final Element? valueOidElement;
   final Uuid? valueUuid;
   final Element? valueUuidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final UnsignedInt? valueUnsignedInt;
   final Element? valueUnsignedIntElement;

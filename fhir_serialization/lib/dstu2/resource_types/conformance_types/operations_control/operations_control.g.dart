@@ -10,7 +10,7 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) => Conformance(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Conformance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -58,7 +58,7 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) => Conformance(
           ? null
           : ConformanceImplementation.fromJson(
               json['implementation'] as Map<String, dynamic>),
-      fhirVersion: Id.fromJson(json['fhirVersion']),
+      fhirVersion: FhirId.fromJson(json['fhirVersion']),
       fhirVersionElement: json['fhirVersionElement'] == null
           ? null
           : Element.fromJson(
@@ -274,7 +274,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.CapabilityStatement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -322,7 +322,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
           ? null
           : ConformanceImplementation.fromJson(
               json['implementation'] as Map<String, dynamic>),
-      fhirVersion: Id.fromJson(json['fhirVersion']),
+      fhirVersion: FhirId.fromJson(json['fhirVersion']),
       fhirVersionElement: json['fhirVersionElement'] == null
           ? null
           : Element.fromJson(
@@ -404,7 +404,7 @@ Map<String, dynamic> _$CapabilityStatementToJson(CapabilityStatement instance) {
 
 ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) =>
     ConformanceContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -438,7 +438,7 @@ Map<String, dynamic> _$ConformanceContactToJson(ConformanceContact instance) {
 
 ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) =>
     ConformanceSoftware(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -475,7 +475,7 @@ Map<String, dynamic> _$ConformanceSoftwareToJson(ConformanceSoftware instance) {
 ConformanceImplementation _$ConformanceImplementationFromJson(
         Map<String, dynamic> json) =>
     ConformanceImplementation(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -508,7 +508,7 @@ Map<String, dynamic> _$ConformanceImplementationToJson(
 
 ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) =>
     ConformanceRest(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -600,7 +600,7 @@ const _$RestTransactionModeEnumMap = {
 ConformanceMessaging _$ConformanceMessagingFromJson(
         Map<String, dynamic> json) =>
     ConformanceMessaging(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -649,7 +649,7 @@ Map<String, dynamic> _$ConformanceMessagingToJson(
 
 ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) =>
     ConformanceDocument(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -694,7 +694,7 @@ const _$DocumentModeEnumMap = {
 ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
         Map<String, dynamic> json) =>
     ConformanceRestSecurity(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -742,7 +742,7 @@ Map<String, dynamic> _$ConformanceRestSecurityToJson(
 ConformanceRestResource _$ConformanceRestResourceFromJson(
         Map<String, dynamic> json) =>
     ConformanceRestResource(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -859,7 +859,7 @@ const _$ResourceConditionalDeleteEnumMap = {
 ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
         Map<String, dynamic> json) =>
     ConformanceResourceInteraction(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -906,7 +906,7 @@ const _$ResourceInteractionCodeEnumMap = {
 ConformanceRestOperation _$ConformanceRestOperationFromJson(
         Map<String, dynamic> json) =>
     ConformanceRestOperation(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -945,7 +945,7 @@ Map<String, dynamic> _$ConformanceRestOperationToJson(
 ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
         Map<String, dynamic> json) =>
     ConformanceMessagingEndpoint(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -983,7 +983,7 @@ Map<String, dynamic> _$ConformanceMessagingEndpointToJson(
 ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
         Map<String, dynamic> json) =>
     ConformanceMessagingEvent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1044,7 +1044,7 @@ const _$EventModeEnumMap = {
 ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
         Map<String, dynamic> json) =>
     ConformanceSecurityCertificate(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1082,7 +1082,7 @@ Map<String, dynamic> _$ConformanceSecurityCertificateToJson(
 ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
         Map<String, dynamic> json) =>
     ConformanceRestInteraction(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1123,7 +1123,7 @@ const _$RestInteractionCodeEnumMap = {
 ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
         Map<String, dynamic> json) =>
     ConformanceResourceSearchParam(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1207,7 +1207,7 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.OperationDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1324,7 +1324,7 @@ const _$OperationDefinitionKindEnumMap = {
 OperationDefinitionContact _$OperationDefinitionContactFromJson(
         Map<String, dynamic> json) =>
     OperationDefinitionContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1360,7 +1360,7 @@ Map<String, dynamic> _$OperationDefinitionContactToJson(
 OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
         Map<String, dynamic> json) =>
     OperationDefinitionParameter(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1426,7 +1426,7 @@ const _$ParameterUseEnumMap = {
 OperationDefinitionParameterBinding
     _$OperationDefinitionParameterBindingFromJson(Map<String, dynamic> json) =>
         OperationDefinitionParameterBinding(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension_'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1479,7 +1479,7 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.SearchParameter,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1603,7 +1603,7 @@ const _$SearchParameterXpathUsageEnumMap = {
 SearchParameterContact _$SearchParameterContactFromJson(
         Map<String, dynamic> json) =>
     SearchParameterContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

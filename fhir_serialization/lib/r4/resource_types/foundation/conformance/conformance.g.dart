@@ -11,7 +11,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.CapabilityStatement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1151,7 +1151,7 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.CompartmentDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1352,7 +1352,7 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ExampleScenario,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1991,7 +1991,7 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.GraphDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2320,7 +2320,7 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ImplementationGuide,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2406,7 +2406,7 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['copyrightElement'] as Map<String, dynamic>),
       packageId:
-          json['packageId'] == null ? null : Id.fromJson(json['packageId']),
+          json['packageId'] == null ? null : FhirId.fromJson(json['packageId']),
       packageIdElement: json['packageIdElement'] == null
           ? null
           : Element.fromJson(json['packageIdElement'] as Map<String, dynamic>),
@@ -2515,7 +2515,7 @@ ImplementationGuideDependsOn _$ImplementationGuideDependsOnFromJson(
           .toList(),
       uri: Canonical.fromJson(json['uri']),
       packageId:
-          json['packageId'] == null ? null : Id.fromJson(json['packageId']),
+          json['packageId'] == null ? null : FhirId.fromJson(json['packageId']),
       packageIdElement: json['packageIdElement'] == null
           ? null
           : Element.fromJson(json['packageIdElement'] as Map<String, dynamic>),
@@ -2726,8 +2726,9 @@ ImplementationGuideResource _$ImplementationGuideResourceFromJson(
           ? null
           : Element.fromJson(
               json['exampleCanonicalElement'] as Map<String, dynamic>),
-      groupingId:
-          json['groupingId'] == null ? null : Id.fromJson(json['groupingId']),
+      groupingId: json['groupingId'] == null
+          ? null
+          : FhirId.fromJson(json['groupingId']),
       groupingIdElement: json['groupingIdElement'] == null
           ? null
           : Element.fromJson(json['groupingIdElement'] as Map<String, dynamic>),
@@ -3100,7 +3101,7 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MessageDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3399,7 +3400,7 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.OperationDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3841,7 +3842,7 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SearchParameter,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4123,7 +4124,7 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.StructureDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4364,7 +4365,8 @@ StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),
@@ -4522,7 +4524,7 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) => StructureMap(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.StructureMap,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4746,11 +4748,12 @@ StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['nameElement'] == null
           ? null
           : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
-      extends_: json['extends_'] == null ? null : Id.fromJson(json['extends_']),
+      extends_:
+          json['extends_'] == null ? null : FhirId.fromJson(json['extends_']),
       extendsElement: json['extendsElement'] == null
           ? null
           : Element.fromJson(json['extendsElement'] as Map<String, dynamic>),
@@ -4808,7 +4811,7 @@ StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['nameElement'] == null
           ? null
           : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
@@ -4861,7 +4864,7 @@ StructureMapRule _$StructureMapRuleFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['nameElement'] == null
           ? null
           : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
@@ -4920,7 +4923,8 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      context: json['context'] == null ? null : Id.fromJson(json['context']),
+      context:
+          json['context'] == null ? null : FhirId.fromJson(json['context']),
       contextElement: json['contextElement'] == null
           ? null
           : Element.fromJson(json['contextElement'] as Map<String, dynamic>),
@@ -4988,7 +4992,7 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) =>
               json['defaultValueDecimalElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -5196,7 +5200,8 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) =>
       listModeElement: json['listModeElement'] == null
           ? null
           : Element.fromJson(json['listModeElement'] as Map<String, dynamic>),
-      variable: json['variable'] == null ? null : Id.fromJson(json['variable']),
+      variable:
+          json['variable'] == null ? null : FhirId.fromJson(json['variable']),
       variableElement: json['variableElement'] == null
           ? null
           : Element.fromJson(json['variableElement'] as Map<String, dynamic>),
@@ -5369,7 +5374,8 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      context: json['context'] == null ? null : Id.fromJson(json['context']),
+      context:
+          json['context'] == null ? null : FhirId.fromJson(json['context']),
       contextElement: json['contextElement'] == null
           ? null
           : Element.fromJson(json['contextElement'] as Map<String, dynamic>),
@@ -5384,7 +5390,8 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) =>
       elementElement: json['elementElement'] == null
           ? null
           : Element.fromJson(json['elementElement'] as Map<String, dynamic>),
-      variable: json['variable'] == null ? null : Id.fromJson(json['variable']),
+      variable:
+          json['variable'] == null ? null : FhirId.fromJson(json['variable']),
       variableElement: json['variableElement'] == null
           ? null
           : Element.fromJson(json['variableElement'] as Map<String, dynamic>),
@@ -5395,8 +5402,9 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      listRuleId:
-          json['listRuleId'] == null ? null : Id.fromJson(json['listRuleId']),
+      listRuleId: json['listRuleId'] == null
+          ? null
+          : FhirId.fromJson(json['listRuleId']),
       listRuleIdElement: json['listRuleIdElement'] == null
           ? null
           : Element.fromJson(json['listRuleIdElement'] as Map<String, dynamic>),
@@ -5455,7 +5463,8 @@ StructureMapParameter _$StructureMapParameterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -5525,7 +5534,7 @@ StructureMapDependent _$StructureMapDependentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['nameElement'] == null
           ? null
           : Element.fromJson(json['nameElement'] as Map<String, dynamic>),

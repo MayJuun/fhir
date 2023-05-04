@@ -305,13 +305,13 @@ class ClaimItem {
   });
   final Decimal? sequence;
   final Element? sequenceElement;
-  final List<Id>? careTeamLinkId;
+  final List<FhirId>? careTeamLinkId;
   final List<Element?>? careTeamLinkIdElement;
-  final List<Id>? diagnosisLinkId;
+  final List<FhirId>? diagnosisLinkId;
   final List<Element?>? diagnosisLinkIdElement;
-  final List<Id>? procedureLinkId;
+  final List<FhirId>? procedureLinkId;
   final List<Element?>? procedureLinkIdElement;
-  final List<Id>? informationLinkId;
+  final List<FhirId>? informationLinkId;
 
   final List<Element>? informationLinkIdElement;
   final CodeableConcept? revenue;
@@ -494,7 +494,7 @@ class ClaimResponseItem {
     this.adjudication,
     this.detail,
   });
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   final Element? sequenceLinkIdElement;
   final List<Decimal>? noteNumber;
   final List<Element?>? noteNumberElement;
@@ -534,7 +534,7 @@ class ClaimResponseDetail {
     this.adjudication,
     this.subDetail,
   });
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   final Element? sequenceLinkIdElement;
   final List<Decimal>? noteNumber;
   final List<Element?>? noteNumberElement;
@@ -554,7 +554,7 @@ class ClaimResponseSubDetail {
     @JsonKey(name: '_noteNumber') this.noteNumberElement,
     this.adjudication,
   });
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   final Element? sequenceLinkIdElement;
   final List<Decimal>? noteNumber;
   final List<Element?>? noteNumberElement;
@@ -579,7 +579,7 @@ class ClaimResponseAddItem {
     this.adjudication,
     this.detail,
   });
-  final List<Id>? sequenceLinkId;
+  final List<FhirId>? sequenceLinkId;
   final List<Element?>? sequenceLinkIdElement;
   final CodeableConcept? revenue;
   final CodeableConcept? category;
@@ -632,12 +632,12 @@ class ClaimResponseError {
         this.subdetailSequenceLinkIdElement,
     required this.code,
   });
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   final Element? sequenceLinkIdElement;
-  final Id? detailSequenceLinkId;
+  final FhirId? detailSequenceLinkId;
 
   final Element? detailSequenceLinkIdElement;
-  final Id? subdetailSequenceLinkId;
+  final FhirId? subdetailSequenceLinkId;
 
   final Element? subdetailSequenceLinkIdElement;
   final CodeableConcept code;

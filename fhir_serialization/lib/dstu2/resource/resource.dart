@@ -33,7 +33,7 @@ abstract class Resource {
     this.modifierExtension,
   });
   final Dstu2ResourceType? resourceType;
-  final Id? id;
+  final FhirId? id;
   final Element? idElement;
   final Meta? meta;
   final FhirUri? implicitRules;
@@ -69,7 +69,7 @@ abstract class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    Id? id,
+    FhirId? id,
     Dstu2ResourceType? resourceType,
     Meta? meta,
     FhirUri? implicitRules,

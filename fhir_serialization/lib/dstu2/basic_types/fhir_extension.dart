@@ -1,3 +1,4 @@
+import 'package:isar/isar.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 // Project imports:
@@ -62,7 +63,7 @@ class FhirExtension {
     this.valueReference,
     this.valueMeta,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final FhirUri url;
   final Element? urlElement;
@@ -91,7 +92,7 @@ class FhirExtension {
   final Element? valueCodeElement;
   final Oid? valueOid;
   final Element? valueOidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final UnsignedInt? valueUnsignedInt;
   final Element? valueUnsignedIntElement;

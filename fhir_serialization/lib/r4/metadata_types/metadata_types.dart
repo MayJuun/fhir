@@ -342,7 +342,7 @@ class Expression {
   final String? description;
 
   final Element? descriptionElement;
-  final Id? name;
+  final FhirId? name;
 
   final Element? nameElement;
 

@@ -1031,7 +1031,7 @@ class TestScriptVariable {
   final Element? hintElement;
   final String? path;
   final Element? pathElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
@@ -1138,13 +1138,13 @@ class TestScriptOperation {
   final String? params;
   final Element? paramsElement;
   final List<TestScriptRequestHeader>? requestHeader;
-  final Id? requestId;
+  final FhirId? requestId;
   final Element? requestIdElement;
-  final Id? responseId;
+  final FhirId? responseId;
   final Element? responseIdElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final String? url;
   final Element? urlElement;
@@ -1287,10 +1287,10 @@ class TestScriptAssert {
   final String? responseCode;
 
   final Element? responseCodeElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   final Element? sourceIdElement;
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
 
   final Element? validateProfileIdElement;
   final String? value;

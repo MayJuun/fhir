@@ -91,7 +91,7 @@ class AllergyIntoleranceReaction {
     this.exposureRoute,
     this.note,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -205,7 +205,7 @@ class ConditionStage {
     this.summary,
     this.assessment,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<FhirExtension>? modifierExtension;
@@ -226,7 +226,7 @@ class ConditionEvidence {
     this.code,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -318,7 +318,7 @@ class ProcedurePerformer {
     this.actor,
     this.role,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -338,7 +338,7 @@ class ProcedureFocalDevice {
     this.action,
     required this.manipulated,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? action;
@@ -424,7 +424,7 @@ class ClinicalImpressionInvestigations {
     required this.code,
     this.item,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept code;
@@ -446,7 +446,7 @@ class ClinicalImpressionFinding {
     this.cause,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept item;
@@ -465,7 +465,7 @@ class ClinicalImpressionRuledOut {
     required this.item,
     this.reason,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept item;
@@ -569,7 +569,7 @@ class FamilyMemberHistoryCondition {
     @JsonKey(name: '_onsetString') this.onsetStringElement,
     this.note,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept code;
@@ -645,7 +645,7 @@ class RiskAssessmentPrediction {
     this.rationale,
     @JsonKey(name: '_rationale') this.rationaleElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept outcome;
@@ -721,7 +721,7 @@ class DetectedIssueMitigation {
     this.date,
     this.author,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept action;

@@ -93,7 +93,8 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) =>
       valueUuidElement: json['valueUuidElement'] == null
           ? null
           : Element.fromJson(json['valueUuidElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),

@@ -79,7 +79,7 @@ class AppointmentParticipant {
     required this.status,
     @JsonKey(name: '_status') this.statusElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? type;

@@ -793,7 +793,7 @@ class RequestGroupRelatedAction {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? actionId;
+  final FhirId? actionId;
   final Element? actionIdElement;
   final Code? relationship;
   final Element? relationshipElement;

@@ -11,7 +11,7 @@ ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.ArtifactAssessment,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -418,7 +418,7 @@ Citation _$CitationFromJson(Map<String, dynamic> json) => Citation(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Citation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1680,7 +1680,7 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) => Evidence(
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.Evidence,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2397,7 +2397,7 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.EvidenceReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2950,7 +2950,7 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
               R5ResourceType.EvidenceVariable,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3221,7 +3221,7 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      linkId: json['linkId'] == null ? null : Id.fromJson(json['linkId']),
+      linkId: json['linkId'] == null ? null : FhirId.fromJson(json['linkId']),
       linkIdElement: json['linkIdElement'] == null
           ? null
           : Element.fromJson(json['linkIdElement'] as Map<String, dynamic>),
@@ -3255,7 +3255,7 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
               json['definitionExpression'] as Map<String, dynamic>),
       definitionId: json['definitionId'] == null
           ? null
-          : Id.fromJson(json['definitionId']),
+          : FhirId.fromJson(json['definitionId']),
       definitionIdElement: json['definitionIdElement'] == null
           ? null
           : Element.fromJson(
@@ -3353,7 +3353,7 @@ EvidenceVariableDefinitionByTypeAndValue
               : Reference.fromJson(
                   json['valueReference'] as Map<String, dynamic>),
           valueId:
-              json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+              json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
           valueIdElement: json['valueIdElement'] == null
               ? null
               : Element.fromJson(
@@ -3478,7 +3478,8 @@ EvidenceVariableTimeFromEvent _$EvidenceVariableTimeFromEventFromJson(
           ? null
           : Element.fromJson(
               json['eventDateTimeElement'] as Map<String, dynamic>),
-      eventId: json['eventId'] == null ? null : Id.fromJson(json['eventId']),
+      eventId:
+          json['eventId'] == null ? null : FhirId.fromJson(json['eventId']),
       eventIdElement: json['eventIdElement'] == null
           ? null
           : Element.fromJson(json['eventIdElement'] as Map<String, dynamic>),

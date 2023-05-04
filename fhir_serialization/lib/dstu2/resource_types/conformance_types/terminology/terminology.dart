@@ -100,7 +100,7 @@ class ValueSetContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -126,7 +126,7 @@ class ValueSetCodeSystem {
     @JsonKey(name: '_caseSensitive') this.caseSensitiveElement,
     required this.concept,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -158,7 +158,7 @@ class ValueSetCodeSystemConcept {
     this.designation,
     this.concept,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -187,7 +187,7 @@ class ValueSetConceptDesignation {
     required this.value,
     @JsonKey(name: '_value') this.valueElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Code? language;
@@ -211,7 +211,7 @@ class ValueSetCompose {
     this.include,
     this.exclude,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -237,7 +237,7 @@ class ValueSetComposeInclude {
     this.concept,
     this.filter,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -265,7 +265,7 @@ class ValueSetIncludeConcept {
     @JsonKey(name: '_display') this.displayElement,
     this.designation,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -293,7 +293,7 @@ class ValueSetIncludeFilter {
     required this.value,
     @JsonKey(name: '_value') this.valueElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -326,7 +326,7 @@ class ValueSetExpansion {
     this.parameter,
     this.contains,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -367,7 +367,7 @@ class ValueSetExpansionParameter {
     this.valueCode,
     @JsonKey(name: '_valueCode') this.valueCodeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -409,7 +409,7 @@ class ValueSetExpansionContains {
     @JsonKey(name: '_display') this.displayElement,
     this.contains,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -517,7 +517,7 @@ class ConceptMapContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -538,7 +538,7 @@ class ConceptMapElement {
     @JsonKey(name: '_code') this.codeElement,
     this.target,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirUri? codeSystem;
@@ -566,7 +566,7 @@ class ConceptMapElementTarget {
     this.dependsOn,
     this.product,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirUri? codeSystem;
@@ -594,7 +594,7 @@ class ConceptMapTargetDependsOn {
     required this.codeSystem,
     required this.code,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirUri element;
@@ -678,7 +678,7 @@ class NamingSystemContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -702,7 +702,7 @@ class NamingSystemUniqueId {
     @JsonKey(name: '_preferred') this.preferredElement,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final UniqueIdType? type;

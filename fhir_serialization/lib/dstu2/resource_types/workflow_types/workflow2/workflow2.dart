@@ -66,7 +66,7 @@ class ProcessRequestItem {
     this.modifierExtension,
     required this.sequenceLinkId,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Integer sequenceLinkId;
@@ -129,7 +129,7 @@ class ProcessResponseNotes {
     this.type,
     this.text,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding? type;
@@ -193,7 +193,7 @@ class SupplyRequestWhen {
     this.code,
     this.schedule,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? code;

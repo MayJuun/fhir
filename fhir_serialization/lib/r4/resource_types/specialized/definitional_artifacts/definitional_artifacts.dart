@@ -964,7 +964,7 @@ class PlanDefinitionAction {
   final List<CodeableConcept>? code;
   final List<CodeableConcept>? reason;
   final List<RelatedArtifact>? documentation;
-  final List<Id>? goalId;
+  final List<FhirId>? goalId;
   final List<Element?>? goalIdElement;
   final CodeableConcept? subjectCodeableConcept;
   final Reference? subjectReference;
@@ -1043,7 +1043,7 @@ class PlanDefinitionRelatedAction {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? actionId;
+  final FhirId? actionId;
   final Element? actionIdElement;
   final Code? relationship;
   final Element? relationshipElement;

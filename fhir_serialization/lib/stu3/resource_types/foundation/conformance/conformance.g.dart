@@ -11,7 +11,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.CapabilityStatement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -141,7 +141,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       implementationGuide: (json['implementationGuide'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       implementationGuideElement:
           (json['implementationGuideElement'] as List<dynamic>?)
@@ -1190,7 +1190,7 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.CompartmentDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1399,7 +1399,7 @@ DataElement _$DataElementFromJson(Map<String, dynamic> json) => DataElement(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.DataElement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1567,7 +1567,8 @@ const _$DataElementStringencyEnumMap = {
 
 DataElementMapping _$DataElementMappingFromJson(Map<String, dynamic> json) =>
     DataElementMapping(
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),
@@ -1610,7 +1611,7 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.GraphDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1911,7 +1912,7 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ImplementationGuide,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2325,7 +2326,7 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.MessageDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2591,7 +2592,7 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.OperationDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2990,7 +2991,7 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.SearchParameter,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3307,7 +3308,7 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.StructureDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3576,7 +3577,8 @@ const _$StructureDefinitionDerivationEnumMap = {
 StructureDefinitionMapping _$StructureDefinitionMappingFromJson(
         Map<String, dynamic> json) =>
     StructureDefinitionMapping(
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['identityElement'] == null
           ? null
           : Element.fromJson(json['identityElement'] as Map<String, dynamic>),
@@ -3647,7 +3649,7 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) => StructureMap(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.StructureMap,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4113,21 +4115,21 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) =>
               json['defaultValueCodeElement'] as Map<String, dynamic>),
       defaultValueOid: json['defaultValueOid'] == null
           ? null
-          : Id.fromJson(json['defaultValueOid']),
+          : FhirId.fromJson(json['defaultValueOid']),
       defaultValueOidElement: json['defaultValueOidElement'] == null
           ? null
           : Element.fromJson(
               json['defaultValueOidElement'] as Map<String, dynamic>),
       defaultValueUuid: json['defaultValueUuid'] == null
           ? null
-          : Id.fromJson(json['defaultValueUuid']),
+          : FhirId.fromJson(json['defaultValueUuid']),
       defaultValueUuidElement: json['defaultValueUuidElement'] == null
           ? null
           : Element.fromJson(
               json['defaultValueUuidElement'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['defaultValueIdElement'] == null
           ? null
           : Element.fromJson(
@@ -4491,8 +4493,9 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      listRuleId:
-          json['listRuleId'] == null ? null : Id.fromJson(json['listRuleId']),
+      listRuleId: json['listRuleId'] == null
+          ? null
+          : FhirId.fromJson(json['listRuleId']),
       listRuleIdElement: json['listRuleIdElement'] == null
           ? null
           : Element.fromJson(json['listRuleIdElement'] as Map<String, dynamic>),
@@ -4580,7 +4583,8 @@ const _$StructureMapTargetTransformEnumMap = {
 StructureMapParameter _$StructureMapParameterFromJson(
         Map<String, dynamic> json) =>
     StructureMapParameter(
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),

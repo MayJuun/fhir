@@ -61,7 +61,7 @@ class OrganizationContact {
     this.telecom,
     this.address,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -157,7 +157,7 @@ class HealthcareServiceServiceType {
     required this.type,
     this.specialty,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept type;
@@ -182,7 +182,7 @@ class HealthcareServiceAvailableTime {
     this.availableEndTime,
     @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<AvailableTimeDaysOfWeek>? daysOfWeek;
@@ -208,7 +208,7 @@ class HealthcareServiceNotAvailable {
     @JsonKey(name: '_description') this.descriptionElement,
     this.during,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String description;
@@ -277,7 +277,7 @@ class GroupCharacteristic {
     required this.exclude,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept code;
@@ -304,7 +304,7 @@ class GroupMember {
     this.inactive,
     @JsonKey(name: '_inactive') this.inactiveElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference entity;

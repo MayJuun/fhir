@@ -10,7 +10,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) => Location(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Location,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -240,7 +240,7 @@ const _$LocationModeEnumMap = {
 
 LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) =>
     LocationPosition(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -289,7 +289,7 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) => Substance(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Substance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -375,7 +375,7 @@ Map<String, dynamic> _$SubstanceToJson(Substance instance) {
 
 SubstanceInstance _$SubstanceInstanceFromJson(Map<String, dynamic> json) =>
     SubstanceInstance(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -418,7 +418,7 @@ Map<String, dynamic> _$SubstanceInstanceToJson(SubstanceInstance instance) {
 
 SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) =>
     SubstanceIngredient(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -454,7 +454,7 @@ Person _$PersonFromJson(Map<String, dynamic> json) => Person(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Person,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -568,7 +568,7 @@ const _$PersonGenderEnumMap = {
 };
 
 PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) => PersonLink(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -614,7 +614,7 @@ Contract _$ContractFromJson(Map<String, dynamic> json) => Contract(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
           Dstu2ResourceType.Contract,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -757,7 +757,7 @@ Map<String, dynamic> _$ContractToJson(Contract instance) {
 
 ContractActor _$ContractActorFromJson(Map<String, dynamic> json) =>
     ContractActor(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -791,7 +791,7 @@ Map<String, dynamic> _$ContractActorToJson(ContractActor instance) {
 
 ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) =>
     ContractValuedItem(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -872,7 +872,7 @@ Map<String, dynamic> _$ContractValuedItemToJson(ContractValuedItem instance) {
 
 ContractSigner _$ContractSignerFromJson(Map<String, dynamic> json) =>
     ContractSigner(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -905,7 +905,7 @@ Map<String, dynamic> _$ContractSignerToJson(ContractSigner instance) {
 }
 
 ContractTerm _$ContractTermFromJson(Map<String, dynamic> json) => ContractTerm(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -988,7 +988,7 @@ Map<String, dynamic> _$ContractTermToJson(ContractTerm instance) {
 
 ContractTermActor _$ContractTermActorFromJson(Map<String, dynamic> json) =>
     ContractTermActor(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1022,7 +1022,7 @@ Map<String, dynamic> _$ContractTermActorToJson(ContractTermActor instance) {
 
 ContractFriendly _$ContractFriendlyFromJson(Map<String, dynamic> json) =>
     ContractFriendly(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1060,7 +1060,7 @@ Map<String, dynamic> _$ContractFriendlyToJson(ContractFriendly instance) {
 
 ContractLegal _$ContractLegalFromJson(Map<String, dynamic> json) =>
     ContractLegal(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1096,7 +1096,7 @@ Map<String, dynamic> _$ContractLegalToJson(ContractLegal instance) {
 }
 
 ContractRule _$ContractRuleFromJson(Map<String, dynamic> json) => ContractRule(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

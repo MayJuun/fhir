@@ -147,7 +147,7 @@ class ClaimPayee {
     this.organization,
     this.person,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding? type;
@@ -169,7 +169,7 @@ class ClaimDiagnosis {
     @JsonKey(name: '_sequence') this.sequenceElement,
     required this.diagnosis,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;
@@ -195,7 +195,7 @@ class ClaimCoverage {
     this.claimResponse,
     this.originalRuleset,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;
@@ -238,7 +238,7 @@ class ClaimItem {
     this.detail,
     this.prosthesis,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;
@@ -285,7 +285,7 @@ class ClaimItemDetail {
     this.udi,
     this.subDetail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;
@@ -323,7 +323,7 @@ class ClaimDetailSubDetail {
     this.net,
     this.udi,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;
@@ -352,7 +352,7 @@ class ClaimItemProsthesis {
     this.priorDate,
     this.priorMaterial,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Boolean? initial;
@@ -373,7 +373,7 @@ class ClaimMissingTeeth {
     this.reason,
     this.extractionDate,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding tooth;
@@ -478,7 +478,7 @@ class ClaimResponseItem {
     this.adjudication,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -503,7 +503,7 @@ class ClaimResponseItemAdjudication {
     this.value,
     @JsonKey(name: '_value') this.valueElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding code;
@@ -525,7 +525,7 @@ class ClaimResponseItemDetail {
     this.adjudication,
     this.subDetail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequenceLinkId;
@@ -545,7 +545,7 @@ class ClaimResponseDetailSubDetail {
     required this.sequenceLinkId,
     this.adjudication,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequenceLinkId;
@@ -568,7 +568,7 @@ class ClaimResponseAddItem {
     this.adjudication,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<PositiveInt>? sequenceLinkId;
@@ -592,7 +592,7 @@ class ClaimResponseAddItemDetail {
     this.fee,
     this.adjudication,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding service;
@@ -614,7 +614,7 @@ class ClaimResponseError {
     this.subdetailSequenceLinkId,
     required this.code,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt? sequenceLinkId;
@@ -639,7 +639,7 @@ class ClaimResponseNote {
     this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt? number;
@@ -668,7 +668,7 @@ class ClaimResponseCoverage {
     this.claimResponse,
     this.originalRuleset,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt sequence;

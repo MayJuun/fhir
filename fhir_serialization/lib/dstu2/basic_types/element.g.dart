@@ -7,7 +7,7 @@ part of 'element.dart';
 // **************************************************************************
 
 Element _$ElementFromJson(Map<String, dynamic> json) => Element(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension_'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

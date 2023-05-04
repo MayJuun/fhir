@@ -11,7 +11,7 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.GuidanceResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -40,7 +40,7 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       requestId:
-          json['requestId'] == null ? null : Id.fromJson(json['requestId']),
+          json['requestId'] == null ? null : FhirId.fromJson(json['requestId']),
       requestIdElement: json['requestIdElement'] == null
           ? null
           : Element.fromJson(json['requestIdElement'] as Map<String, dynamic>),

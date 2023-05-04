@@ -70,7 +70,7 @@ class ImplementationGuide extends Resource {
   final List<CodeableConcept>? useContext;
   final String? copyright;
   final Element? copyrightElement;
-  final Id? fhirVersion;
+  final FhirId? fhirVersion;
   final List<Element?>? fhirVersionElement;
   final List<ImplementationGuideDependency>? dependency;
   final List<ImplementationGuidePackage> package;
@@ -91,7 +91,7 @@ class ImplementationGuideContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -111,7 +111,7 @@ class ImplementationGuideDependency {
     required this.uri,
     @JsonKey(name: '_uri') this.uriElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -133,7 +133,7 @@ class ImplementationGuidePackage {
     this.description,
     required this.resource,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String name;
@@ -155,7 +155,7 @@ class ImplementationGuideGlobal {
     @JsonKey(name: '_type') this.typeElement,
     required this.profile,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Code type;
@@ -180,7 +180,7 @@ class ImplementationGuidePage {
     this.format,
     this.page,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirUri source;
@@ -210,7 +210,7 @@ class ImplementationGuidePackageResource {
     this.sourceReference,
     this.exampleFor,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -318,7 +318,7 @@ class TestScriptContact {
     this.name,
     this.telecom,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -337,7 +337,7 @@ class TestScriptMetadata {
     this.link,
     required this.capability,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<TestScriptMetadataLink>? link;
@@ -359,7 +359,7 @@ class TestScriptMetadataLink {
     this.description,
     @JsonKey(name: '_description') this.descriptionElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirUri url;
@@ -389,7 +389,7 @@ class TestScriptMetadataCapability {
     @JsonKey(name: '_link') this.linkElement,
     required this.conformance,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Boolean? required_;
@@ -420,7 +420,7 @@ class TestScriptFixture {
     @JsonKey(name: '_autodelete') this.autodeleteElement,
     this.resource,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Boolean? autocreate;
@@ -448,7 +448,7 @@ class TestScriptVariable {
     this.sourceId,
     @JsonKey(name: '_sourceId') this.sourceIdElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String name;
@@ -457,7 +457,7 @@ class TestScriptVariable {
   final Element? headerFieldElement;
   final String? path;
   final Element? pathElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
@@ -473,7 +473,7 @@ class TestScriptSetup {
     this.metadata,
     required this.action,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final TestScriptMetadata? metadata;
@@ -493,7 +493,7 @@ class TestScriptSetupAction {
     this.operation,
     @JsonKey(name: 'assert') this.assert_,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -548,7 +548,7 @@ class TestScriptActionAssert {
     @JsonKey(name: '_warningOnly') this.warningOnlyElement,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? label;
@@ -578,9 +578,9 @@ class TestScriptActionAssert {
   final Element? responseElement;
   final String? responseCode;
   final Element? responseCodeElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
   final Element? validateProfileIdElement;
   final String? value;
   final Element? valueElement;
@@ -626,7 +626,7 @@ class TestScriptActionOperation {
     this.url,
     @JsonKey(name: '_url') this.urlElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -649,11 +649,11 @@ class TestScriptActionOperation {
   final String? params;
   final Element? paramsElement;
   final List<TestScriptOperationRequestHeader>? requestHeader;
-  final Id? responseId;
+  final FhirId? responseId;
   final Element? responseIdElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final String? url;
   final Element? urlElement;
@@ -673,7 +673,7 @@ class TestScriptOperationRequestHeader {
     required this.value,
     @JsonKey(name: '_value') this.valueElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final FhirExtension? modifierExtension;
   final String field;
@@ -700,7 +700,7 @@ class TestScriptTest {
     this.metadata,
     required this.action,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -722,7 +722,7 @@ class TestScriptTeardown {
     this.modifierExtension,
     required this.action,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<TestScriptTeardownAction> action;
@@ -740,7 +740,7 @@ class TestScriptTeardownAction {
     @JsonKey(name: 'fhir_comments') this.fhirComments,
     this.operation,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;

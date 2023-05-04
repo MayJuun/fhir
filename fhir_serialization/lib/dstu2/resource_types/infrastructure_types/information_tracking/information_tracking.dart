@@ -73,7 +73,7 @@ class QuestionnaireGroup {
     this.group,
     this.question,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -108,7 +108,7 @@ class QuestionnaireGroupQuestion {
     this.option,
     this.group,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -187,7 +187,7 @@ class QuestionnaireResponseGroup {
     this.group,
     this.question,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -216,7 +216,7 @@ class QuestionnaireResponseGroupQuestion {
     this.text,
     this.answer,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -263,7 +263,7 @@ class QuestionnaireResponseQuestionAnswer {
     this.group,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -357,7 +357,7 @@ class ProvenanceAgent {
     this.userId,
     this.relatedAgent,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -385,7 +385,7 @@ class ProvenanceEntity {
     this.display,
     this.agent,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -410,7 +410,7 @@ class ProvenanceAgentRelatedAgent {
     required this.type,
     required this.target,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept type;
@@ -462,7 +462,7 @@ class AuditEventEvent {
     this.outcomeDesc,
     this.purposeOfEvent,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding type;
@@ -496,7 +496,7 @@ class AuditEventParticipant {
     this.network,
     this.purposeOfUse,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? role;
@@ -527,7 +527,7 @@ class AuditEventSource {
     required this.identifier,
     this.type,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? site;
@@ -557,7 +557,7 @@ class AuditEventObject {
     @JsonKey(name: '_query') this.queryElement,
     this.detail,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
@@ -587,7 +587,7 @@ class AuditEventParticipantNetwork {
     this.type,
     @JsonKey(name: '_type') this.typeElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? address;
@@ -609,7 +609,7 @@ class AuditEventObjectDetail {
     @JsonKey(name: '_type') this.typeElement,
     required this.value,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String type;

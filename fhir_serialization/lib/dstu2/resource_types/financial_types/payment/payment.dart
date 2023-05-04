@@ -121,7 +121,7 @@ class PaymentReconciliationDetail {
     @JsonKey(name: '_date') this.dateElement,
     this.amount,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding type;
@@ -148,7 +148,7 @@ class PaymentReconciliationNote {
     this.text,
     @JsonKey(name: '_text') this.textElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Coding? type;

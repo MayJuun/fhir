@@ -21,10 +21,10 @@ class Meta {
     this.security,
     this.tag,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
-  final Id? versionId;
+  final FhirId? versionId;
   final Element? versionIdElement;
   final Instant? lastUpdated;
   final Element? lastUpdatedElement;
@@ -46,7 +46,7 @@ class Reference {
     this.display,
     @JsonKey(name: '_display') this.displayElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final String? reference;
@@ -400,7 +400,7 @@ class ElementDefinition {
     this.mapping,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final String path;
   final List<Code>? representation;
@@ -451,7 +451,7 @@ class ElementDefinition {
   final Element? defaultValueCodeElement;
   final Oid? defaultValueOid;
   final Element? defaultValueOidElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final UnsignedInt? defaultValueUnsignedInt;
   final Element? defaultValueUnsignedIntElement;
@@ -500,7 +500,7 @@ class ElementDefinition {
   final Element? fixedCodeElement;
   final Oid? fixedOid;
   final Element? fixedOidElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
   final Element? fixedIdElement;
   final UnsignedInt? fixedUnsignedInt;
   final Element? fixedUnsignedIntElement;
@@ -549,7 +549,7 @@ class ElementDefinition {
   final Element? patternCodeElement;
   final Oid? patternOid;
   final Element? patternOidElement;
-  final Id? patternId;
+  final FhirId? patternId;
   final Element? patternIdElement;
   final UnsignedInt? patternUnsignedInt;
   final Element? patternUnsignedIntElement;
@@ -598,7 +598,7 @@ class ElementDefinition {
   final Element? exampleCodeElement;
   final Oid? exampleOid;
   final Element? exampleOidElement;
-  final Id? exampleId;
+  final FhirId? exampleId;
   final Element? exampleIdElement;
   final UnsignedInt? exampleUnsignedInt;
   final Element? exampleUnsignedIntElement;
@@ -647,7 +647,7 @@ class ElementDefinition {
   final Element? minValueCodeElement;
   final Oid? minValueOid;
   final Element? minValueOidElement;
-  final Id? minValueId;
+  final FhirId? minValueId;
   final Element? minValueIdElement;
   final UnsignedInt? minValueUnsignedInt;
   final Element? minValueUnsignedIntElement;
@@ -696,7 +696,7 @@ class ElementDefinition {
   final Element? maxValueCodeElement;
   final Oid? maxValueOid;
   final Element? maxValueOidElement;
-  final Id? maxValueId;
+  final FhirId? maxValueId;
   final Element? maxValueIdElement;
   final UnsignedInt? maxValueUnsignedInt;
   final Element? maxValueUnsignedIntElement;
@@ -723,7 +723,7 @@ class ElementDefinition {
   final Meta? maxValueMeta;
   final Integer? maxLength;
   final Element? maxLengthElement;
-  final List<Id>? condition;
+  final List<FhirId>? condition;
   final Element? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
   final Boolean? mustSupport;
@@ -1077,7 +1077,7 @@ class Narrative {
     @JsonKey(name: '_status') this.statusElement,
     required this.div,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final String path;
   final List<Code>? representation;
@@ -1130,7 +1130,7 @@ class Narrative {
   final Element? defaultValueCodeElement;
   final Oid? defaultValueOid;
   final Element? defaultValueOidElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final UnsignedInt? defaultValueUnsignedInt;
 
@@ -1182,7 +1182,7 @@ class Narrative {
   final Element? fixedCodeElement;
   final Oid? fixedOid;
   final Element? fixedOidElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
   final Element? fixedIdElement;
   final UnsignedInt? fixedUnsignedInt;
   final Element? fixedUnsignedIntElement;
@@ -1231,7 +1231,7 @@ class Narrative {
   final Element? patternCodeElement;
   final Oid? patternOid;
   final Element? patternOidElement;
-  final Id? patternId;
+  final FhirId? patternId;
   final Element? patternIdElement;
   final UnsignedInt? patternUnsignedInt;
   final Element? patternUnsignedIntElement;
@@ -1280,7 +1280,7 @@ class Narrative {
   final Element? exampleCodeElement;
   final Oid? exampleOid;
   final Element? exampleOidElement;
-  final Id? exampleId;
+  final FhirId? exampleId;
   final Element? exampleIdElement;
   final UnsignedInt? exampleUnsignedInt;
   final Element? exampleUnsignedIntElement;
@@ -1330,7 +1330,7 @@ class Narrative {
   final Element? minValueCodeElement;
   final Oid? minValueOid;
   final Element? minValueOidElement;
-  final Id? minValueId;
+  final FhirId? minValueId;
   final Element? minValueIdElement;
   final UnsignedInt? minValueUnsignedInt;
   final Element? minValueUnsignedIntElement;
@@ -1380,7 +1380,7 @@ class Narrative {
   final Element? maxValueCodeElement;
   final Oid? maxValueOid;
   final Element? maxValueOidElement;
-  final Id? maxValueId;
+  final FhirId? maxValueId;
   final Element? maxValueIdElement;
   final UnsignedInt? maxValueUnsignedInt;
   final Element? maxValueUnsignedIntElement;
@@ -1407,7 +1407,7 @@ class Narrative {
   final Meta? maxValueMeta;
   final Integer? maxLength;
   final Element? maxLengthElement;
-  final List<Id>? condition;
+  final List<FhirId>? condition;
   final Element? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
   final List<String>? fhirComments;
@@ -1432,7 +1432,7 @@ class ElementDefinitionSlicing {
     required this.rules,
     @JsonKey(name: '_rules') this.rulesElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? discriminator;
   final String? description;
@@ -1459,7 +1459,7 @@ class ElementDefinitionBase {
     required this.max,
     @JsonKey(name: '_max') this.maxElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final String path;
   final Element? pathElement;
@@ -1484,7 +1484,7 @@ class ElementDefinitionType {
     @JsonKey(name: '_aggregation') this.aggregationElement,
     @JsonKey(name: 'fhir_comments') this.fhirElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final Code? code;
   final TypeCodeExtension? codeExtension;
@@ -1524,9 +1524,9 @@ class ElementDefinitionConstraint {
     required this.xpath,
     @JsonKey(name: '_xpath') this.xpathElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
-  final Id key;
+  final FhirId key;
   final Element? keyElement;
   final String? requirements;
   final Element? requirementsElement;
@@ -1554,7 +1554,7 @@ class ElementDefinitionBinding {
     this.valueSetUri,
     this.valueSetReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
 
   final ElementDefinitionBindingStrength strength;
@@ -1581,10 +1581,10 @@ class ElementDefinitionMapping {
     required this.map,
     @JsonKey(name: '_map') this.mapElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
-  final Id identity;
+  final FhirId identity;
   final Element? identityElement;
   final Code? language;
   final Element? languageElement;

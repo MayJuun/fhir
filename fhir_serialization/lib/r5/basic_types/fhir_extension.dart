@@ -104,7 +104,7 @@ class FhirExtension {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;

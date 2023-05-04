@@ -578,7 +578,7 @@ class ConceptMapDependsOn {
   final Element? valueDecimalElement;
   final FhirUri? valueUri;
   final Element? valueUriElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Canonical? valueSet;
   factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>

@@ -9,7 +9,7 @@ part of 'resource.dart';
 Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource(
       resourceType:
           $enumDecodeNullable(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
           : Element.fromJson(json['idElement'] as Map<String, dynamic>),

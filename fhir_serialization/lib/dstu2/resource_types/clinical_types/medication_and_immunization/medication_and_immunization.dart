@@ -48,7 +48,7 @@ class MedicationProduct {
     this.ingredient,
     this.batch,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -69,7 +69,7 @@ class MedicationProductIngredient {
     required this.item,
     this.amount,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference item;
@@ -90,7 +90,7 @@ class MedicationProductBatch {
     this.expirationDate,
     @JsonKey(name: '_expirationDate') this.expirationDateElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? lotNumber;
@@ -112,7 +112,7 @@ class MedicationPackage {
     this.container,
     this.content,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -132,7 +132,7 @@ class MedicationPackageContent {
     required this.item,
     this.amount,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference item;
@@ -212,7 +212,7 @@ class MedicationOrderDispenseRequest {
     this.expectedSupplyDuration,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept? medicationCodeableConcept;
@@ -248,7 +248,7 @@ class MedicationOrderDosageInstruction {
     this.rateRange,
     this.maxDosePerPeriod,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? text;
@@ -281,7 +281,7 @@ class MedicationOrderSubstitution {
     required this.type,
     this.reason,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept type;
@@ -363,7 +363,7 @@ class MedicationAdministrationDosage {
     this.rateRatio,
     this.rateRange,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? text;
@@ -452,7 +452,7 @@ class MedicationDispenseSubstitution {
     this.responsibleParty,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final CodeableConcept type;
@@ -485,7 +485,7 @@ class MedicationDispenseDosageInstruction {
     this.rateRange,
     this.maxDosePerPeriod,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? text;
@@ -588,7 +588,7 @@ class MedicationStatementDosage {
     this.rateRange,
     this.maxDosePerPeriod,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? text;
@@ -687,7 +687,7 @@ class ImmunizationExplanation {
     this.reason,
     this.reasonNotGiven,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? reason;
@@ -709,7 +709,7 @@ class ImmunizationReaction {
     this.reported,
     @JsonKey(name: '_reported') this.reportedElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirDateTime? date;
@@ -738,7 +738,7 @@ class ImmunizationVaccinationProtocol {
     required this.doseStatus,
     this.doseStatusReason,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final PositiveInt doseSequence;
@@ -799,7 +799,7 @@ class ImmunizationRecommendationRecommendation {
     this.supportingPatientInformation,
   });
 
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final FhirDateTime date;
@@ -830,7 +830,7 @@ class ImmunizationRecommendationRecommendationDateCriterion {
     @JsonKey(name: '_value') this.valueElement,
   });
 
-  final Id? id;
+  final FhirId? id;
   final FhirExtension? extensio;
   final FhirExtension? modifier;
   final CodeableConcept code;
@@ -856,7 +856,7 @@ class ImmunizationRecommendationRecommendationProtocol {
     this.series,
     @JsonKey(name: '_series') this.seriesElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final FhirExtension? modifierExten;
   final Integer? doseSequence;

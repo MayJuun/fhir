@@ -432,7 +432,7 @@ class MessageHeaderResponse {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? identifier;
+  final FhirId? identifier;
   final Element? identifierElement;
   final Code? code;
   final Element? codeElement;
@@ -624,7 +624,7 @@ class ParametersParameter {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;

@@ -653,7 +653,7 @@ class TaskInput {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -663,7 +663,7 @@ class TaskInput {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -677,7 +677,7 @@ class TaskInput {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;
@@ -818,7 +818,7 @@ class TaskOutput {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -828,7 +828,7 @@ class TaskOutput {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -842,7 +842,7 @@ class TaskOutput {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;
@@ -1109,7 +1109,7 @@ class TransportInput {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -1119,7 +1119,7 @@ class TransportInput {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -1133,7 +1133,7 @@ class TransportInput {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;
@@ -1274,7 +1274,7 @@ class TransportOutput {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -1284,7 +1284,7 @@ class TransportOutput {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -1298,7 +1298,7 @@ class TransportOutput {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;

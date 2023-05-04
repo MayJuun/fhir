@@ -87,7 +87,7 @@ class Meta {
   });
   final String? id;
   final List<FhirExtension>? extension_;
-  final Id? versionId;
+  final FhirId? versionId;
   final Element? versionIdElement;
   final Instant? lastUpdated;
   final Element? lastUpdatedElement;
@@ -551,7 +551,7 @@ class ElementDefinition {
   final Element? defaultValueDateTimeElement;
   final Decimal? defaultValueDecimal;
   final Element? defaultValueDecimalElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final Instant? defaultValueInstant;
   final Element? defaultValueInstantElement;
@@ -563,7 +563,7 @@ class ElementDefinition {
   final Markdown? defaultValueMarkdown;
 
   final Element? defaultValueMarkdownElement;
-  final Id? defaultValueOid;
+  final FhirId? defaultValueOid;
   final Element? defaultValueOidElement;
   final PositiveInt? defaultValuePositiveInt;
 
@@ -578,7 +578,7 @@ class ElementDefinition {
   final Element? defaultValueUriElement;
   final FhirUrl? defaultValueUrl;
   final Element? defaultValueUrlElement;
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   final Element? defaultValueUuidElement;
   final Address? defaultValueAddress;
   final Age? defaultValueAge;
@@ -632,7 +632,7 @@ class ElementDefinition {
   final Element? fixedDateTimeElement;
   final Decimal? fixedDecimal;
   final Element? fixedDecimalElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
   final Element? fixedIdElement;
   final Instant? fixedInstant;
   final Element? fixedInstantElement;
@@ -642,7 +642,7 @@ class ElementDefinition {
   final Element? fixedInteger64Element;
   final Markdown? fixedMarkdown;
   final Element? fixedMarkdownElement;
-  final Id? fixedOid;
+  final FhirId? fixedOid;
   final Element? fixedOidElement;
   final PositiveInt? fixedPositiveInt;
   final Element? fixedPositiveIntElement;
@@ -656,7 +656,7 @@ class ElementDefinition {
   final Element? fixedUriElement;
   final FhirUrl? fixedUrl;
   final Element? fixedUrlElement;
-  final Id? fixedUuid;
+  final FhirId? fixedUuid;
   final Element? fixedUuidElement;
   final Address? fixedAddress;
   final Age? fixedAge;
@@ -706,7 +706,7 @@ class ElementDefinition {
   final Element? patternDateTimeElement;
   final Decimal? patternDecimal;
   final Element? patternDecimalElement;
-  final Id? patternId;
+  final FhirId? patternId;
   final Element? patternIdElement;
   final Instant? patternInstant;
   final Element? patternInstantElement;
@@ -716,7 +716,7 @@ class ElementDefinition {
   final Element? patternInteger64Element;
   final Markdown? patternMarkdown;
   final Element? patternMarkdownElement;
-  final Id? patternOid;
+  final FhirId? patternOid;
   final Element? patternOidElement;
   final PositiveInt? patternPositiveInt;
   final Element? patternPositiveIntElement;
@@ -730,7 +730,7 @@ class ElementDefinition {
   final Element? patternUriElement;
   final FhirUrl? patternUrl;
   final Element? patternUrlElement;
-  final Id? patternUuid;
+  final FhirId? patternUuid;
   final Element? patternUuidElement;
   final Address? patternAddress;
   final Age? patternAge;
@@ -807,7 +807,7 @@ class ElementDefinition {
   final Quantity? maxValueQuantity;
   final Integer? maxLength;
   final Element? maxLengthElement;
-  final List<Id>? condition;
+  final List<FhirId>? condition;
   final List<Element>? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
   final Boolean? mustHaveValue;
@@ -1041,7 +1041,7 @@ class ElementDefinitionExample {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -1051,7 +1051,7 @@ class ElementDefinitionExample {
   final Element? valueInteger64Element;
   final Markdown? valueMarkdown;
   final Element? valueMarkdownElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
   final PositiveInt? valuePositiveInt;
   final Element? valuePositiveIntElement;
@@ -1065,7 +1065,7 @@ class ElementDefinitionExample {
   final Element? valueUriElement;
   final FhirUrl? valueUrl;
   final Element? valueUrlElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
   final Address? valueAddress;
   final Age? valueAge;
@@ -1129,7 +1129,7 @@ class ElementDefinitionConstraint {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? key;
+  final FhirId? key;
   final Element? keyElement;
   final Markdown? requirements;
   final Element? requirementsElement;
@@ -1264,7 +1264,7 @@ class ElementDefinitionMapping {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final Code? language;
   final Element? languageElement;

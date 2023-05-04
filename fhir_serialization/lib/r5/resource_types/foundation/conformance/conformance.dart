@@ -728,7 +728,7 @@ class GraphDefinition extends Resource {
   final Element? copyrightElement;
   final String? copyrightLabel;
   final Element? copyrightLabelElement;
-  final Id? start;
+  final FhirId? start;
   final Element? startElement;
   final List<GraphDefinitionNode>? node;
   final List<GraphDefinitionLink>? link;
@@ -754,7 +754,7 @@ class GraphDefinitionNode {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? nodeId;
+  final FhirId? nodeId;
   final Element? nodeIdElement;
   final String? description;
   final Element? descriptionElement;
@@ -799,13 +799,13 @@ class GraphDefinitionLink {
   final Element? minElement;
   final String? max;
   final Element? maxElement;
-  final Id? sourceId;
+  final FhirId? sourceId;
   final Element? sourceIdElement;
   final String? path;
   final Element? pathElement;
   final String? sliceName;
   final Element? sliceNameElement;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final String? params;
   final Element? paramsElement;
@@ -940,7 +940,7 @@ class ImplementationGuide extends Resource {
   final Element? copyrightElement;
   final String? copyrightLabel;
   final Element? copyrightLabelElement;
-  final Id? packageId;
+  final FhirId? packageId;
   final Element? packageIdElement;
   final Code? license;
   final Element? licenseElement;
@@ -973,7 +973,7 @@ class ImplementationGuideDependsOn {
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Canonical uri;
-  final Id? packageId;
+  final FhirId? packageId;
   final Element? packageIdElement;
   final String? version;
   final Element? versionElement;
@@ -1085,7 +1085,7 @@ class ImplementationGuideResource {
   final Boolean? isExample;
   final Element? isExampleElement;
   final List<Canonical>? profile;
-  final Id? groupingId;
+  final FhirId? groupingId;
   final Element? groupingIdElement;
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
@@ -1883,7 +1883,7 @@ class StructureDefinitionMapping {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final FhirUri? uri;
   final Element? uriElement;
@@ -2094,9 +2094,9 @@ class StructureMapGroup {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
-  final Id? extends_;
+  final FhirId? extends_;
   final Element? extendsElement;
   final Code? typeMode;
   final Element? typeModeElement;
@@ -2127,7 +2127,7 @@ class StructureMapInput {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final String? type;
   final Element? typeElement;
@@ -2158,7 +2158,7 @@ class StructureMapRule {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final List<StructureMapSource> source;
   final List<StructureMapTarget>? target;
@@ -2203,7 +2203,7 @@ class StructureMapSource {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? context;
+  final FhirId? context;
   final Element? contextElement;
   final Integer? min;
   final Element? minElement;
@@ -2217,7 +2217,7 @@ class StructureMapSource {
   final Element? elementElement;
   final Code? listMode;
   final Element? listModeElement;
-  final Id? variable;
+  final FhirId? variable;
   final Element? variableElement;
   final String? condition;
   final Element? conditionElement;
@@ -2253,15 +2253,15 @@ class StructureMapTarget {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? context;
+  final FhirId? context;
   final Element? contextElement;
   final String? element;
   final Element? elementElement;
-  final Id? variable;
+  final FhirId? variable;
   final Element? variableElement;
   final List<Code>? listMode;
   final List<Element>? listModeElement;
-  final Id? listRuleId;
+  final FhirId? listRuleId;
   final Element? listRuleIdElement;
   final Code? transform;
   final Element? transformElement;
@@ -2297,7 +2297,7 @@ class StructureMapParameter {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final String? valueString;
   final Element? valueStringElement;
@@ -2331,7 +2331,7 @@ class StructureMapDependent {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? name;
+  final FhirId? name;
   final Element? nameElement;
   final List<StructureMapParameter> parameter;
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>

@@ -243,7 +243,7 @@ class ImagingStudySeries {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final UnsignedInt? number;
   final Element? numberElement;
@@ -301,7 +301,7 @@ class ImagingStudyInstance {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? uid;
+  final FhirId? uid;
   final Element? uidElement;
   final Coding sopClass;
   final UnsignedInt? number;

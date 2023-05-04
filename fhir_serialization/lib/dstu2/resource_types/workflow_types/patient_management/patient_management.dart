@@ -80,7 +80,7 @@ class EncounterStatusHistory {
     @JsonKey(name: '_status') this.statusElement,
     required this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -102,7 +102,7 @@ class EncounterParticipant {
     this.period,
     this.individual,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? type;
@@ -132,7 +132,7 @@ class EncounterHospitalization {
     this.dischargeDisposition,
     this.dischargeDiagnosis,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   final List<FhirExtension>? modifierExtension;
@@ -163,7 +163,7 @@ class EncounterLocation {
     @JsonKey(name: '_status') this.statusElement,
     this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference location;
@@ -231,7 +231,7 @@ class EpisodeOfCareStatusHistory {
     @JsonKey(name: '_status') this.statusElement,
     required this.period,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -253,7 +253,7 @@ class EpisodeOfCareCareTeam {
     this.period,
     this.member,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<CodeableConcept>? role;
@@ -328,7 +328,7 @@ class CommunicationPayload {
     this.contentAttachment,
     this.contentReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? contentString;

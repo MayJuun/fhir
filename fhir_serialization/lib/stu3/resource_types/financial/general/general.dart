@@ -153,7 +153,7 @@ class ChargeItem extends Resource {
   final Reference? requestingOrganization;
   final Quantity? quantity;
   final List<CodeableConcept>? bodysite;
-  final Id? factorOverride;
+  final FhirId? factorOverride;
   final Element? factorOverrideElement;
   final Money? priceOverride;
   final String? overrideReason;
@@ -914,7 +914,7 @@ class ExplanationOfBenefitAddItem {
     this.adjudication,
     this.detail,
   });
-  final List<Id>? sequenceLinkId;
+  final List<FhirId>? sequenceLinkId;
   final List<Element?>? sequenceLinkIdElement;
   final CodeableConcept? revenue;
   final CodeableConcept? category;

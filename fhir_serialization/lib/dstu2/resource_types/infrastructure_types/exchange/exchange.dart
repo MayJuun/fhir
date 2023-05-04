@@ -61,10 +61,10 @@ class MessageHeaderResponse {
     @JsonKey(name: '_code') this.codeElement,
     this.details,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id identifier;
+  final FhirId identifier;
   final Element? identifierElement;
   final ResponseCode code;
   final Element? codeElement;
@@ -90,7 +90,7 @@ class MessageHeaderSource {
     required this.endpoint,
     @JsonKey(name: '_endpoint') this.endpointElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -119,7 +119,7 @@ class MessageHeaderDestination {
     required this.endpoint,
     @JsonKey(name: '_endpoint') this.endpointElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? name;
@@ -168,7 +168,7 @@ class OperationOutcomeIssue {
     this.diagnostics,
     this.location,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
 
@@ -248,7 +248,7 @@ class ParametersParameter {
     this.resource,
     @JsonKey(name: 'part') this.part_,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String name;
@@ -355,7 +355,7 @@ class SubscriptionChannel {
     this.header,
     @JsonKey(name: '_header') this.headerElement,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final ChannelType type;

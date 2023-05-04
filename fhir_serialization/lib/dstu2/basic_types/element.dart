@@ -12,7 +12,7 @@ class Element {
     @JsonKey(name: 'extension') this.extension_,
     @JsonKey(name: 'fhir_comments') this.fhirComments,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
   factory Element.fromJson(Map<String, dynamic> json) =>

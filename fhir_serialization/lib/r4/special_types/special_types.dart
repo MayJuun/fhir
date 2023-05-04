@@ -87,7 +87,7 @@ class Meta {
   });
   final String? id;
   final List<FhirExtension>? extension_;
-  final Id? versionId;
+  final FhirId? versionId;
   final Element? versionIdElement;
   final Instant? lastUpdated;
   final Element? lastUpdatedElement;
@@ -562,7 +562,7 @@ class ElementDefinitionSlicing {
   final Decimal? defaultValueDecimal;
 
   final Element? defaultValueDecimalElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
 
   final Element? defaultValueIdElement;
   final Instant? defaultValueInstant;
@@ -657,7 +657,7 @@ class ElementDefinitionSlicing {
   final Decimal? fixedDecimal;
 
   final Element? fixedDecimalElement;
-  final Id? fixedId;
+  final FhirId? fixedId;
 
   final Element? fixedIdElement;
   final Instant? fixedInstant;
@@ -746,7 +746,7 @@ class ElementDefinitionSlicing {
   final Decimal? patternDecimal;
 
   final Element? patternDecimalElement;
-  final Id? patternId;
+  final FhirId? patternId;
 
   final Element? patternIdElement;
   final Instant? patternInstant;
@@ -868,7 +868,7 @@ class ElementDefinitionSlicing {
   final Integer? maxLength;
 
   final Element? maxLengthElement;
-  final List<Id>? condition;
+  final List<FhirId>? condition;
 
   final List<Element?>? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
@@ -1080,7 +1080,7 @@ class ElementDefinitionExample {
   final Element? valueDateTimeElement;
   final Decimal? valueDecimal;
   final Element? valueDecimalElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Instant? valueInstant;
   final Element? valueInstantElement;
@@ -1166,7 +1166,7 @@ class ElementDefinitionConstraint {
 
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? key;
+  final FhirId? key;
 
   final Element? keyElement;
   final String? requirements;
@@ -1238,7 +1238,7 @@ class ElementDefinitionMapping {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final Code? language;
   final Element? languageElement;

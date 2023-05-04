@@ -34,7 +34,7 @@ abstract class Resource {
     @JsonKey(name: 'extension') this.extension_,
     this.modifierExtension,
   });
-  final Id? id;
+  final FhirId? id;
   final R4ResourceType? resourceType;
   final Meta? meta;
   final FhirUri? implicitRules;

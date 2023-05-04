@@ -10,7 +10,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.TestReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -519,7 +519,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.TestScript,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -962,7 +962,8 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) =>
       pathElement: json['pathElement'] == null
           ? null
           : Element.fromJson(json['pathElement'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
@@ -1063,7 +1064,7 @@ Map<String, dynamic> _$TestScriptRulesetToJson(TestScriptRuleset instance) =>
 
 TestScriptRule1 _$TestScriptRule1FromJson(Map<String, dynamic> json) =>
     TestScriptRule1(
-      ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
+      ruleId: json['ruleId'] == null ? null : FhirId.fromJson(json['ruleId']),
       ruleIdElement: json['ruleIdElement'] == null
           ? null
           : Element.fromJson(json['ruleIdElement'] as Map<String, dynamic>),
@@ -1208,20 +1209,23 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) =>
               TestScriptRequestHeader.fromJson(e as Map<String, dynamic>))
           .toList(),
       requestId:
-          json['requestId'] == null ? null : Id.fromJson(json['requestId']),
+          json['requestId'] == null ? null : FhirId.fromJson(json['requestId']),
       requestIdElement: json['requestIdElement'] == null
           ? null
           : Element.fromJson(json['requestIdElement'] as Map<String, dynamic>),
-      responseId:
-          json['responseId'] == null ? null : Id.fromJson(json['responseId']),
+      responseId: json['responseId'] == null
+          ? null
+          : FhirId.fromJson(json['responseId']),
       responseIdElement: json['responseIdElement'] == null
           ? null
           : Element.fromJson(json['responseIdElement'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
-      targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
+      targetId:
+          json['targetId'] == null ? null : FhirId.fromJson(json['targetId']),
       targetIdElement: json['targetIdElement'] == null
           ? null
           : Element.fromJson(json['targetIdElement'] as Map<String, dynamic>),
@@ -1420,7 +1424,8 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) =>
           ? null
           : TestScriptRuleset1.fromJson(
               json['ruleset'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
@@ -1569,7 +1574,7 @@ const _$TestScriptAssertResponseEnumMap = {
 
 TestScriptRule2 _$TestScriptRule2FromJson(Map<String, dynamic> json) =>
     TestScriptRule2(
-      ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
+      ruleId: json['ruleId'] == null ? null : FhirId.fromJson(json['ruleId']),
       ruleIdElement: json['ruleIdElement'] == null
           ? null
           : Element.fromJson(json['ruleIdElement'] as Map<String, dynamic>),
@@ -1624,7 +1629,7 @@ Map<String, dynamic> _$TestScriptParam2ToJson(TestScriptParam2 instance) {
 TestScriptRuleset1 _$TestScriptRuleset1FromJson(Map<String, dynamic> json) =>
     TestScriptRuleset1(
       rulesetId:
-          json['rulesetId'] == null ? null : Id.fromJson(json['rulesetId']),
+          json['rulesetId'] == null ? null : FhirId.fromJson(json['rulesetId']),
       rulesetIdElement: json['rulesetIdElement'] == null
           ? null
           : Element.fromJson(json['rulesetIdElement'] as Map<String, dynamic>),
@@ -1650,7 +1655,7 @@ Map<String, dynamic> _$TestScriptRuleset1ToJson(TestScriptRuleset1 instance) {
 
 TestScriptRule3 _$TestScriptRule3FromJson(Map<String, dynamic> json) =>
     TestScriptRule3(
-      ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
+      ruleId: json['ruleId'] == null ? null : FhirId.fromJson(json['ruleId']),
       ruleIdElement: json['ruleIdElement'] == null
           ? null
           : Element.fromJson(json['ruleIdElement'] as Map<String, dynamic>),

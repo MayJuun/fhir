@@ -218,7 +218,7 @@ class ProcessRequestItem {
     this.sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
   });
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   final Element? sequenceLinkIdElement;
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
@@ -460,7 +460,7 @@ class RequestGroupRelatedAction {
     this.offsetDuration,
     this.offsetRange,
   });
-  final Id? actionId;
+  final FhirId? actionId;
   final Element? actionIdElement;
   final String? relationship;
   final Element? relationshipElement;
@@ -779,11 +779,11 @@ class TaskInput {
   final Element? valueTimeElement;
   final Code? valueCode;
   final Element? valueCodeElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Decimal? valueUnsignedInt;
   final Element? valueUnsignedIntElement;
@@ -930,11 +930,11 @@ class TaskOutput {
   final Element? valueTimeElement;
   final Code? valueCode;
   final Element? valueCodeElement;
-  final Id? valueOid;
+  final FhirId? valueOid;
   final Element? valueOidElement;
-  final Id? valueUuid;
+  final FhirId? valueUuid;
   final Element? valueUuidElement;
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final Decimal? valueUnsignedInt;
   final Element? valueUnsignedIntElement;

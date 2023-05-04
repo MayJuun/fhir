@@ -10,7 +10,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) => Appointment(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Appointment,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -373,7 +373,7 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.AppointmentResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -478,7 +478,7 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ProcessRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -630,7 +630,7 @@ ProcessRequestItem _$ProcessRequestItemFromJson(Map<String, dynamic> json) =>
     ProcessRequestItem(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['sequenceLinkId']),
+          : FhirId.fromJson(json['sequenceLinkId']),
       sequenceLinkIdElement: json['sequenceLinkIdElement'] == null
           ? null
           : Element.fromJson(
@@ -657,7 +657,7 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.ProcessResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -810,7 +810,7 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) => RequestGroup(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.RequestGroup,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1138,7 +1138,8 @@ Map<String, dynamic> _$RequestGroupConditionToJson(
 RequestGroupRelatedAction _$RequestGroupRelatedActionFromJson(
         Map<String, dynamic> json) =>
     RequestGroupRelatedAction(
-      actionId: json['actionId'] == null ? null : Id.fromJson(json['actionId']),
+      actionId:
+          json['actionId'] == null ? null : FhirId.fromJson(json['actionId']),
       actionIdElement: json['actionIdElement'] == null
           ? null
           : Element.fromJson(json['actionIdElement'] as Map<String, dynamic>),
@@ -1179,7 +1180,7 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) => Schedule(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Schedule,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1280,7 +1281,7 @@ Slot _$SlotFromJson(Map<String, dynamic> json) => Slot(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Slot,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1409,7 +1410,7 @@ Task _$TaskFromJson(Map<String, dynamic> json) => Task(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Task,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1740,16 +1741,18 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) => TaskInput(
       valueCodeElement: json['valueCodeElement'] == null
           ? null
           : Element.fromJson(json['valueCodeElement'] as Map<String, dynamic>),
-      valueOid: json['valueOid'] == null ? null : Id.fromJson(json['valueOid']),
+      valueOid:
+          json['valueOid'] == null ? null : FhirId.fromJson(json['valueOid']),
       valueOidElement: json['valueOidElement'] == null
           ? null
           : Element.fromJson(json['valueOidElement'] as Map<String, dynamic>),
       valueUuid:
-          json['valueUuid'] == null ? null : Id.fromJson(json['valueUuid']),
+          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
       valueUuidElement: json['valueUuidElement'] == null
           ? null
           : Element.fromJson(json['valueUuidElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),
@@ -2054,16 +2057,18 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) => TaskOutput(
       valueCodeElement: json['valueCodeElement'] == null
           ? null
           : Element.fromJson(json['valueCodeElement'] as Map<String, dynamic>),
-      valueOid: json['valueOid'] == null ? null : Id.fromJson(json['valueOid']),
+      valueOid:
+          json['valueOid'] == null ? null : FhirId.fromJson(json['valueOid']),
       valueOidElement: json['valueOidElement'] == null
           ? null
           : Element.fromJson(json['valueOidElement'] as Map<String, dynamic>),
       valueUuid:
-          json['valueUuid'] == null ? null : Id.fromJson(json['valueUuid']),
+          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
       valueUuidElement: json['valueUuidElement'] == null
           ? null
           : Element.fromJson(json['valueUuidElement'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['valueIdElement'] == null
           ? null
           : Element.fromJson(json['valueIdElement'] as Map<String, dynamic>),

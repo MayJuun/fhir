@@ -106,7 +106,7 @@ class CapabilityStatement extends Resource {
   final List<Element?>? formatElement;
   final List<String>? patchFormat;
   final List<Element?>? patchFormatElement;
-  final List<Id>? implementationGuide;
+  final List<FhirId>? implementationGuide;
 
   final List<Element>? implementationGuideElement;
   final List<Reference>? profile;
@@ -655,7 +655,7 @@ class DataElementMapping {
     this.comment,
     @JsonKey(name: '_comment') this.commentElement,
   });
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final String? uri;
   final Element? uriElement;
@@ -1580,7 +1580,7 @@ class StructureDefinitionMapping {
     this.comment,
     @JsonKey(name: '_comment') this.commentElement,
   });
-  final Id? identity;
+  final FhirId? identity;
   final Element? identityElement;
   final String? uri;
   final Element? uriElement;
@@ -1927,11 +1927,11 @@ class StructureMapSource {
   final Element? defaultValueTimeElement;
   final Code? defaultValueCode;
   final Element? defaultValueCodeElement;
-  final Id? defaultValueOid;
+  final FhirId? defaultValueOid;
   final Element? defaultValueOidElement;
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
   final Element? defaultValueUuidElement;
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
   final Element? defaultValueIdElement;
   final Decimal? defaultValueUnsignedInt;
 
@@ -2022,7 +2022,7 @@ class StructureMapTarget {
   final Element? variableElement;
   final List<StructureMapTargetListMode>? listMode;
   final List<Element?>? listModeElement;
-  final Id? listRuleId;
+  final FhirId? listRuleId;
   final Element? listRuleIdElement;
   final StructureMapTargetTransform? transform;
   final Element? transformElement;
@@ -2046,7 +2046,7 @@ class StructureMapParameter {
     this.valueDecimal,
     @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
   });
-  final Id? valueId;
+  final FhirId? valueId;
   final Element? valueIdElement;
   final String? valueString;
   final Element? valueStringElement;

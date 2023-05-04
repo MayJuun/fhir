@@ -7,7 +7,7 @@ part of 'resource.dart';
 // **************************************************************************
 
 Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       resourceType:
           $enumDecodeNullable(_$Stu3ResourceTypeEnumMap, json['resourceType']),
       meta: json['meta'] == null

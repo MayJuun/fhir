@@ -53,7 +53,7 @@ class OrderWhen {
     this.code,
     this.schedule,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final List<String>? fhirComments;
@@ -166,7 +166,7 @@ class CommunicationRequestPayload {
     this.contentAttachment,
     this.contentReference,
   });
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final String? contentString;

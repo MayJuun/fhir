@@ -1050,7 +1050,7 @@ class RequestOrchestrationInput {
   final String? title;
   final Element? titleElement;
   final DataRequirement? requirement;
-  final Id? relatedData;
+  final FhirId? relatedData;
   final Element? relatedDataElement;
   factory RequestOrchestrationInput.fromJson(Map<String, dynamic> json) =>
       _$RequestOrchestrationInputFromJson(json);
@@ -1099,7 +1099,7 @@ class RequestOrchestrationRelatedAction {
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
-  final Id? targetId;
+  final FhirId? targetId;
   final Element? targetIdElement;
   final Code? relationship;
   final Element? relationshipElement;

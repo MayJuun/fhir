@@ -10,7 +10,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -66,7 +66,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
           : Element.fromJson(json['titleElement'] as Map<String, dynamic>),
       confidentiality: json['confidentiality'] == null
           ? null
-          : Id.fromJson(json['confidentiality']),
+          : FhirId.fromJson(json['confidentiality']),
       confidentialityElement: json['confidentialityElement'] == null
           ? null
           : Element.fromJson(
@@ -428,7 +428,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -612,7 +612,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
           Stu3ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

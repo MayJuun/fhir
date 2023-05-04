@@ -10,7 +10,7 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Measure,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -701,7 +701,7 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MeasureReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1068,7 +1068,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.TestReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1547,7 +1547,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.TestScript,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2059,7 +2059,8 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) =>
       pathElement: json['pathElement'] == null
           ? null
           : Element.fromJson(json['pathElement'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
@@ -2235,20 +2236,23 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) =>
               TestScriptRequestHeader.fromJson(e as Map<String, dynamic>))
           .toList(),
       requestId:
-          json['requestId'] == null ? null : Id.fromJson(json['requestId']),
+          json['requestId'] == null ? null : FhirId.fromJson(json['requestId']),
       requestIdElement: json['requestIdElement'] == null
           ? null
           : Element.fromJson(json['requestIdElement'] as Map<String, dynamic>),
-      responseId:
-          json['responseId'] == null ? null : Id.fromJson(json['responseId']),
+      responseId: json['responseId'] == null
+          ? null
+          : FhirId.fromJson(json['responseId']),
       responseIdElement: json['responseIdElement'] == null
           ? null
           : Element.fromJson(json['responseIdElement'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
-      targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
+      targetId:
+          json['targetId'] == null ? null : FhirId.fromJson(json['targetId']),
       targetIdElement: json['targetIdElement'] == null
           ? null
           : Element.fromJson(json['targetIdElement'] as Map<String, dynamic>),
@@ -2452,13 +2456,14 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['responseCodeElement'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['sourceIdElement'] == null
           ? null
           : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
       validateProfileId: json['validateProfileId'] == null
           ? null
-          : Id.fromJson(json['validateProfileId']),
+          : FhirId.fromJson(json['validateProfileId']),
       validateProfileIdElement: json['validateProfileIdElement'] == null
           ? null
           : Element.fromJson(
