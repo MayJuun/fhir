@@ -11,7 +11,7 @@ class AdverseEvent extends Resource {
     super.resourceType = R5ResourceType.AdverseEvent,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -19,42 +19,40 @@ class AdverseEvent extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.actuality,
-    @JsonKey(name: '_actuality') required this.actualityElement,
-    required this.category,
-    required this.code,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.actuality,
+    @JsonKey(name: '_actuality') this.actualityElement,
+    this.category,
+    this.code,
     required this.subject,
-    required this.encounter,
-    required this.occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-        required this.occurrenceDateTimeElement,
-    required this.occurrencePeriod,
-    required this.occurrenceTiming,
-    required this.detected,
-    @JsonKey(name: '_detected') required this.detectedElement,
-    required this.recordedDate,
-    @JsonKey(name: '_recordedDate') required this.recordedDateElement,
-    required this.resultingEffect,
-    required this.location,
-    required this.seriousness,
-    required this.outcome,
-    required this.recorder,
-    required this.participant,
-    required this.study,
-    required this.expectedInResearchStudy,
+    this.encounter,
+    this.occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+    this.occurrencePeriod,
+    this.occurrenceTiming,
+    this.detected,
+    @JsonKey(name: '_detected') this.detectedElement,
+    this.recordedDate,
+    @JsonKey(name: '_recordedDate') this.recordedDateElement,
+    this.resultingEffect,
+    this.location,
+    this.seriousness,
+    this.outcome,
+    this.recorder,
+    this.participant,
+    this.study,
+    this.expectedInResearchStudy,
     @JsonKey(name: '__expectedInResearchStudy')
-        required this.expectedInResearchStudyElement,
-    required this.suspectEntity,
-    required this.contributingFactor,
-    required this.preventiveAction,
-    required this.mitigatingAction,
-    required this.supportingInfo,
-    required this.note,
+        this.expectedInResearchStudyElement,
+    this.suspectEntity,
+    this.contributingFactor,
+    this.preventiveAction,
+    this.mitigatingAction,
+    this.supportingInfo,
+    this.note,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -97,10 +95,10 @@ class AdverseEvent extends Resource {
 @JsonSerializable()
 class AdverseEventParticipant {
   const AdverseEventParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'function') required this.function_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'function') this.function_,
     required this.actor,
   });
   final String? id;
@@ -116,12 +114,12 @@ class AdverseEventParticipant {
 @JsonSerializable()
 class AdverseEventSuspectEntity {
   const AdverseEventSuspectEntity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.instanceCodeableConcept,
-    required this.instanceReference,
-    required this.causality,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.instanceCodeableConcept,
+    this.instanceReference,
+    this.causality,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -137,12 +135,12 @@ class AdverseEventSuspectEntity {
 @JsonSerializable()
 class AdverseEventCausality {
   const AdverseEventCausality({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.assessmentMethod,
-    required this.entityRelatedness,
-    required this.author,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.assessmentMethod,
+    this.entityRelatedness,
+    this.author,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -158,11 +156,11 @@ class AdverseEventCausality {
 @JsonSerializable()
 class AdverseEventContributingFactor {
   const AdverseEventContributingFactor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.itemReference,
-    required this.itemCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.itemReference,
+    this.itemCodeableConcept,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -177,11 +175,11 @@ class AdverseEventContributingFactor {
 @JsonSerializable()
 class AdverseEventPreventiveAction {
   const AdverseEventPreventiveAction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.itemReference,
-    required this.itemCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.itemReference,
+    this.itemCodeableConcept,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -196,11 +194,11 @@ class AdverseEventPreventiveAction {
 @JsonSerializable()
 class AdverseEventMitigatingAction {
   const AdverseEventMitigatingAction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.itemReference,
-    required this.itemCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.itemReference,
+    this.itemCodeableConcept,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -215,11 +213,11 @@ class AdverseEventMitigatingAction {
 @JsonSerializable()
 class AdverseEventSupportingInfo {
   const AdverseEventSupportingInfo({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.itemReference,
-    required this.itemCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.itemReference,
+    this.itemCodeableConcept,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -237,7 +235,7 @@ class AllergyIntolerance extends Resource {
     super.resourceType = R5ResourceType.AllergyIntolerance,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -245,33 +243,32 @@ class AllergyIntolerance extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.clinicalStatus,
-    required this.verificationStatus,
-    required this.type,
-    required this.category,
-    @JsonKey(name: '_category') required this.categoryElement,
-    required this.criticality,
-    @JsonKey(name: '_criticality') required this.criticalityElement,
-    required this.code,
+    this.identifier,
+    this.clinicalStatus,
+    this.verificationStatus,
+    this.type,
+    this.category,
+    @JsonKey(name: '_category') this.categoryElement,
+    this.criticality,
+    @JsonKey(name: '_criticality') this.criticalityElement,
+    this.code,
     required this.patient,
-    required this.encounter,
-    required this.onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') required this.onsetDateTimeElement,
-    required this.onsetAge,
-    required this.onsetPeriod,
-    required this.onsetRange,
-    required this.onsetString,
-    @JsonKey(name: '_onsetString') required this.onsetStringElement,
-    required this.recordedDate,
-    @JsonKey(name: '_recordedDate') required this.recordedDateElement,
-    required this.participant,
-    required this.lastOccurrence,
-    @JsonKey(name: '_lastOccurrence') required this.lastOccurrenceElement,
-    required this.note,
-    required this.reaction,
+    this.encounter,
+    this.onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') this.onsetDateTimeElement,
+    this.onsetAge,
+    this.onsetPeriod,
+    this.onsetRange,
+    this.onsetString,
+    @JsonKey(name: '_onsetString') this.onsetStringElement,
+    this.recordedDate,
+    @JsonKey(name: '_recordedDate') this.recordedDateElement,
+    this.participant,
+    this.lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') this.lastOccurrenceElement,
+    this.note,
+    this.reaction,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final CodeableConcept? clinicalStatus;
@@ -306,10 +303,10 @@ class AllergyIntolerance extends Resource {
 @JsonSerializable()
 class AllergyIntoleranceParticipant {
   const AllergyIntoleranceParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'function') required this.function_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'function') this.function_,
     required this.actor,
   });
   final String? id;
@@ -325,19 +322,19 @@ class AllergyIntoleranceParticipant {
 @JsonSerializable()
 class AllergyIntoleranceReaction {
   const AllergyIntoleranceReaction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.substance,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.substance,
     required this.manifestation,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.onset,
-    @JsonKey(name: '_onset') required this.onsetElement,
-    required this.severity,
-    @JsonKey(name: '_severity') required this.severityElement,
-    required this.exposureRoute,
-    required this.note,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.onset,
+    @JsonKey(name: '_onset') this.onsetElement,
+    this.severity,
+    @JsonKey(name: '_severity') this.severityElement,
+    this.exposureRoute,
+    this.note,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -363,7 +360,7 @@ class ClinicalImpression extends Resource {
     super.resourceType = R5ResourceType.ClinicalImpression,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -371,34 +368,33 @@ class ClinicalImpression extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.statusReason,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.statusReason,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.subject,
-    required this.encounter,
-    required this.effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') required this.effectiveDateTimeElement,
-    required this.effectivePeriod,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.performer,
-    required this.previous,
-    required this.problem,
-    required this.changePattern,
-    required this.protocol,
-    @JsonKey(name: '_protocol') required this.protocolElement,
-    required this.summary,
-    @JsonKey(name: '_summary') required this.summaryElement,
-    required this.finding,
-    required this.prognosisCodeableConcept,
-    required this.prognosisReference,
-    required this.supportingInfo,
-    required this.note,
+    this.encounter,
+    this.effectiveDateTime,
+    @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
+    this.effectivePeriod,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.performer,
+    this.previous,
+    this.problem,
+    this.changePattern,
+    this.protocol,
+    @JsonKey(name: '_protocol') this.protocolElement,
+    this.summary,
+    @JsonKey(name: '_summary') this.summaryElement,
+    this.finding,
+    this.prognosisCodeableConcept,
+    this.prognosisReference,
+    this.supportingInfo,
+    this.note,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -434,12 +430,12 @@ class ClinicalImpression extends Resource {
 @JsonSerializable()
 class ClinicalImpressionFinding {
   const ClinicalImpressionFinding({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.item,
-    required this.basis,
-    @JsonKey(name: '_basis') required this.basisElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.item,
+    this.basis,
+    @JsonKey(name: '_basis') this.basisElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -458,7 +454,7 @@ class Condition extends Resource {
     super.resourceType = R5ResourceType.Condition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -466,37 +462,36 @@ class Condition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
+    this.identifier,
     required this.clinicalStatus,
-    required this.verificationStatus,
-    required this.category,
-    required this.severity,
-    required this.code,
-    required this.bodySite,
+    this.verificationStatus,
+    this.category,
+    this.severity,
+    this.code,
+    this.bodySite,
     required this.subject,
-    required this.encounter,
-    required this.onsetDateTime,
-    @JsonKey(name: '_onsetDateTime') required this.onsetDateTimeElement,
-    required this.onsetAge,
-    required this.onsetPeriod,
-    required this.onsetRange,
-    required this.onsetString,
-    @JsonKey(name: '_onsetString') required this.onsetStringElement,
-    required this.abatementDateTime,
-    @JsonKey(name: '_abatementDateTime') required this.abatementDateTimeElement,
-    required this.abatementAge,
-    required this.abatementPeriod,
-    required this.abatementRange,
-    required this.abatementString,
-    @JsonKey(name: '_abatementString') required this.abatementStringElement,
-    required this.recordedDate,
-    @JsonKey(name: '_recordedDate') required this.recordedDateElement,
-    required this.participant,
-    required this.stage,
-    required this.evidence,
-    required this.note,
+    this.encounter,
+    this.onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') this.onsetDateTimeElement,
+    this.onsetAge,
+    this.onsetPeriod,
+    this.onsetRange,
+    this.onsetString,
+    @JsonKey(name: '_onsetString') this.onsetStringElement,
+    this.abatementDateTime,
+    @JsonKey(name: '_abatementDateTime') this.abatementDateTimeElement,
+    this.abatementAge,
+    this.abatementPeriod,
+    this.abatementRange,
+    this.abatementString,
+    @JsonKey(name: '_abatementString') this.abatementStringElement,
+    this.recordedDate,
+    @JsonKey(name: '_recordedDate') this.recordedDateElement,
+    this.participant,
+    this.stage,
+    this.evidence,
+    this.note,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final CodeableConcept clinicalStatus;
@@ -535,10 +530,10 @@ class Condition extends Resource {
 @JsonSerializable()
 class ConditionParticipant {
   const ConditionParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'function') required this.function_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'function') this.function_,
     required this.actor,
   });
   final String? id;
@@ -554,12 +549,12 @@ class ConditionParticipant {
 @JsonSerializable()
 class ConditionStage {
   const ConditionStage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.summary,
-    required this.assessment,
-    required this.type,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.summary,
+    this.assessment,
+    this.type,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -578,7 +573,7 @@ class DetectedIssue extends Resource {
     super.resourceType = R5ResourceType.DetectedIssue,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -586,28 +581,26 @@ class DetectedIssue extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
-    required this.code,
-    required this.severity,
-    @JsonKey(name: '_severity') required this.severityElement,
-    required this.subject,
-    required this.identifiedDateTime,
-    @JsonKey(name: '_identifiedDateTime')
-        required this.identifiedDateTimeElement,
-    required this.identifiedPeriod,
-    required this.author,
-    required this.implicated,
-    required this.evidence,
-    required this.detail,
-    @JsonKey(name: '_detail') required this.detailElement,
-    required this.reference,
-    @JsonKey(name: '_reference') required this.referenceElement,
-    required this.mitigation,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
+    this.code,
+    this.severity,
+    @JsonKey(name: '_severity') this.severityElement,
+    this.subject,
+    this.identifiedDateTime,
+    @JsonKey(name: '_identifiedDateTime') this.identifiedDateTimeElement,
+    this.identifiedPeriod,
+    this.author,
+    this.implicated,
+    this.evidence,
+    this.detail,
+    @JsonKey(name: '_detail') this.detailElement,
+    this.reference,
+    @JsonKey(name: '_reference') this.referenceElement,
+    this.mitigation,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -636,11 +629,11 @@ class DetectedIssue extends Resource {
 @JsonSerializable()
 class DetectedIssueEvidence {
   const DetectedIssueEvidence({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.detail,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.detail,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -655,13 +648,13 @@ class DetectedIssueEvidence {
 @JsonSerializable()
 class DetectedIssueMitigation {
   const DetectedIssueMitigation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.action,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.author,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.author,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -681,7 +674,7 @@ class FamilyMemberHistory extends Resource {
     super.resourceType = R5ResourceType.FamilyMemberHistory,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -689,46 +682,45 @@ class FamilyMemberHistory extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.instantiatesCanonical,
-    required this.instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') required this.instantiatesUriElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.dataAbsentReason,
+    this.identifier,
+    this.instantiatesCanonical,
+    this.instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.dataAbsentReason,
     required this.patient,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.participant,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.participant,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.relationship,
-    required this.sex,
-    required this.bornPeriod,
-    required this.bornDate,
-    @JsonKey(name: '_bornDate') required this.bornDateElement,
-    required this.bornString,
-    @JsonKey(name: '_bornString') required this.bornStringElement,
-    required this.ageAge,
-    required this.ageRange,
-    required this.ageString,
-    @JsonKey(name: '_ageString') required this.ageStringElement,
-    required this.estimatedAge,
-    @JsonKey(name: '_estimatedAge') required this.estimatedAgeElement,
-    required this.deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') required this.deceasedBooleanElement,
-    required this.deceasedAge,
-    required this.deceasedRange,
-    required this.deceasedDate,
-    @JsonKey(name: '_deceasedDate') required this.deceasedDateElement,
-    required this.deceasedString,
-    @JsonKey(name: '_deceasedString') required this.deceasedStringElement,
-    required this.reason,
-    required this.note,
-    required this.condition,
-    required this.procedure,
+    this.sex,
+    this.bornPeriod,
+    this.bornDate,
+    @JsonKey(name: '_bornDate') this.bornDateElement,
+    this.bornString,
+    @JsonKey(name: '_bornString') this.bornStringElement,
+    this.ageAge,
+    this.ageRange,
+    this.ageString,
+    @JsonKey(name: '_ageString') this.ageStringElement,
+    this.estimatedAge,
+    @JsonKey(name: '_estimatedAge') this.estimatedAgeElement,
+    this.deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+    this.deceasedAge,
+    this.deceasedRange,
+    this.deceasedDate,
+    @JsonKey(name: '_deceasedDate') this.deceasedDateElement,
+    this.deceasedString,
+    @JsonKey(name: '_deceasedString') this.deceasedStringElement,
+    this.reason,
+    this.note,
+    this.condition,
+    this.procedure,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final List<Canonical>? instantiatesCanonical;
@@ -776,10 +768,10 @@ class FamilyMemberHistory extends Resource {
 @JsonSerializable()
 class FamilyMemberHistoryParticipant {
   const FamilyMemberHistoryParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'function') required this.function_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'function') this.function_,
     required this.actor,
   });
   final String? id;
@@ -795,20 +787,19 @@ class FamilyMemberHistoryParticipant {
 @JsonSerializable()
 class FamilyMemberHistoryCondition {
   const FamilyMemberHistoryCondition({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.outcome,
-    required this.contributedToDeath,
-    @JsonKey(name: '_contributedToDeath')
-        required this.contributedToDeathElement,
-    required this.onsetAge,
-    required this.onsetRange,
-    required this.onsetPeriod,
-    required this.onsetString,
-    @JsonKey(name: '_onsetString') required this.onsetStringElement,
-    required this.note,
+    this.outcome,
+    this.contributedToDeath,
+    @JsonKey(name: '_contributedToDeath') this.contributedToDeathElement,
+    this.onsetAge,
+    this.onsetRange,
+    this.onsetPeriod,
+    this.onsetString,
+    @JsonKey(name: '_onsetString') this.onsetStringElement,
+    this.note,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -831,22 +822,21 @@ class FamilyMemberHistoryCondition {
 @JsonSerializable()
 class FamilyMemberHistoryProcedure {
   const FamilyMemberHistoryProcedure({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.outcome,
-    required this.contributedToDeath,
-    @JsonKey(name: '_contributedToDeath')
-        required this.contributedToDeathElement,
-    required this.performedAge,
-    required this.performedRange,
-    required this.performedPeriod,
-    required this.performedString,
-    @JsonKey(name: '_performedString') required this.performedStringElement,
-    required this.performedDateTime,
-    @JsonKey(name: '_performedDateTime') required this.performedDateTimeElement,
-    required this.note,
+    this.outcome,
+    this.contributedToDeath,
+    @JsonKey(name: '_contributedToDeath') this.contributedToDeathElement,
+    this.performedAge,
+    this.performedRange,
+    this.performedPeriod,
+    this.performedString,
+    @JsonKey(name: '_performedString') this.performedStringElement,
+    this.performedDateTime,
+    @JsonKey(name: '_performedDateTime') this.performedDateTimeElement,
+    this.note,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -874,7 +864,7 @@ class Procedure extends Resource {
     super.resourceType = R5ResourceType.Procedure,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -882,49 +872,47 @@ class Procedure extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.instantiatesCanonical,
-    required this.instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') required this.instantiatesUriElement,
-    required this.basedOn,
-    required this.partOf,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.statusReason,
-    required this.category,
-    required this.code,
+    this.identifier,
+    this.instantiatesCanonical,
+    this.instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
+    this.basedOn,
+    this.partOf,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.statusReason,
+    this.category,
+    this.code,
     required this.subject,
-    required this.focus,
-    required this.encounter,
-    required this.occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-        required this.occurrenceDateTimeElement,
-    required this.occurrencePeriod,
-    required this.occurrenceString,
-    @JsonKey(name: '_occurrenceString') required this.occurrenceStringElement,
-    required this.occurrenceAge,
-    required this.occurrenceRange,
-    required this.occurrenceTiming,
-    required this.recorded,
-    @JsonKey(name: '_recorded') required this.recordedElement,
-    required this.recorder,
-    required this.reportedBoolean,
-    @JsonKey(name: '_reportedBoolean') required this.reportedBooleanElement,
-    required this.reportedReference,
-    required this.performer,
-    required this.location,
-    required this.reason,
-    required this.bodySite,
-    required this.outcome,
-    required this.report,
-    required this.complication,
-    required this.followUp,
-    required this.note,
-    required this.focalDevice,
-    required this.used,
-    required this.supportingInfo,
+    this.focus,
+    this.encounter,
+    this.occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+    this.occurrencePeriod,
+    this.occurrenceString,
+    @JsonKey(name: '_occurrenceString') this.occurrenceStringElement,
+    this.occurrenceAge,
+    this.occurrenceRange,
+    this.occurrenceTiming,
+    this.recorded,
+    @JsonKey(name: '_recorded') this.recordedElement,
+    this.recorder,
+    this.reportedBoolean,
+    @JsonKey(name: '_reportedBoolean') this.reportedBooleanElement,
+    this.reportedReference,
+    this.performer,
+    this.location,
+    this.reason,
+    this.bodySite,
+    this.outcome,
+    this.report,
+    this.complication,
+    this.followUp,
+    this.note,
+    this.focalDevice,
+    this.used,
+    this.supportingInfo,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final List<Canonical>? instantiatesCanonical;
@@ -974,13 +962,13 @@ class Procedure extends Resource {
 @JsonSerializable()
 class ProcedurePerformer {
   const ProcedurePerformer({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'function') required this.function_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'function') this.function_,
     required this.actor,
-    required this.onBehalfOf,
-    required this.period,
+    this.onBehalfOf,
+    this.period,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -997,10 +985,10 @@ class ProcedurePerformer {
 @JsonSerializable()
 class ProcedureFocalDevice {
   const ProcedureFocalDevice({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.action,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.action,
     required this.manipulated,
   });
   final String? id;

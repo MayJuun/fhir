@@ -10,7 +10,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.AuditEvent,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -76,9 +76,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
     );
 
 Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -86,7 +84,8 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -558,7 +557,7 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Consent,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -636,9 +635,7 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
     );
 
 Map<String, dynamic> _$ConsentToJson(Consent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -646,7 +643,8 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -919,7 +917,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Provenance,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -993,9 +991,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
     );
 
 Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1003,7 +999,8 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

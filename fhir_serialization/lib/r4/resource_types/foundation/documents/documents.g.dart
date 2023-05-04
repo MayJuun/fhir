@@ -10,7 +10,7 @@ CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) => CatalogEntry(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.CatalogEntry,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -93,9 +93,7 @@ CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) => CatalogEntry(
     );
 
 Map<String, dynamic> _$CatalogEntryToJson(CatalogEntry instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -103,7 +101,8 @@ Map<String, dynamic> _$CatalogEntryToJson(CatalogEntry instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -332,7 +331,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Composition,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -413,9 +412,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
     );
 
 Map<String, dynamic> _$CompositionToJson(Composition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -423,7 +420,8 @@ Map<String, dynamic> _$CompositionToJson(Composition instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -667,7 +665,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.DocumentManifest,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -743,9 +741,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -753,7 +749,8 @@ Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -830,7 +827,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.DocumentReference,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -919,9 +916,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -929,7 +924,8 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

@@ -9,72 +9,59 @@ part 'conformance.g.dart';
 class CapabilityStatement extends Resource {
   const CapabilityStatement({
     super.resourceType = R4ResourceType.CapabilityStatement,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.kind,
-    @JsonKey(name: '__kind') required this.kindElement,
-    required this.instantiates,
-    required this.imports,
-    required this.software,
-    required this.implementation,
-    required this.fhirVersion,
-    @JsonKey(name: '__fhirVersion') required this.fhirVersionElement,
-    required this.format,
-    @JsonKey(name: '__format') required this.formatElement,
-    required this.patchFormat,
-    @JsonKey(name: '__patchFormat') required this.patchFormatElement,
-    required this.implementationGuide,
-    required this.rest,
-    required this.messaging,
-    required this.document,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.kind,
+    @JsonKey(name: '__kind') this.kindElement,
+    this.instantiates,
+    this.imports,
+    this.software,
+    this.implementation,
+    this.fhirVersion,
+    @JsonKey(name: '__fhirVersion') this.fhirVersionElement,
+    this.format,
+    @JsonKey(name: '__format') this.formatElement,
+    this.patchFormat,
+    @JsonKey(name: '__patchFormat') this.patchFormatElement,
+    this.implementationGuide,
+    this.rest,
+    this.messaging,
+    this.document,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -137,17 +124,81 @@ class CapabilityStatement extends Resource {
 }
 
 @JsonSerializable()
+class CapabilityStatementDocument {
+  const CapabilityStatementDocument({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    required this.profile,
+  });
+
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final Code? mode;
+  final Element? modeElement;
+  final Markdown? documentation;
+  final Element? documentationElement;
+  final Canonical profile;
+
+  factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementDocumentFromJson(json);
+  Map<String, dynamic> toJson() => _$CapabilityStatementDocumentToJson(this);
+}
+
+@JsonSerializable()
+class CapabilityStatementRest {
+  const CapabilityStatementRest({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.security,
+    this.resource,
+    this.interaction,
+    this.searchParam,
+    this.operation,
+    this.compartment,
+  });
+
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final Code? mode;
+  final Element? modeElement;
+  final Markdown? documentation;
+  final Element? documentationElement;
+  final CapabilityStatementSecurity? security;
+  final List<CapabilityStatementResource>? resource;
+  final List<CapabilityStatementInteraction1>? interaction;
+  final List<CapabilityStatementSearchParam>? searchParam;
+  final List<CapabilityStatementOperation>? operation;
+  final List<Canonical>? compartment;
+
+  factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementRestFromJson(json);
+  Map<String, dynamic> toJson() => _$CapabilityStatementRestToJson(this);
+}
+
+@JsonSerializable()
 class CapabilityStatementSoftware {
   const CapabilityStatementSoftware({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.releaseDate,
-    @JsonKey(name: '_releaseDate') required this.releaseDateElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.releaseDate,
+    @JsonKey(name: '_releaseDate') this.releaseDateElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -166,14 +217,14 @@ class CapabilityStatementSoftware {
 @JsonSerializable()
 class CapabilityStatementImplementation {
   const CapabilityStatementImplementation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.custodian,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.custodian,
   });
 
   final String? id;
@@ -194,14 +245,14 @@ class CapabilityStatementImplementation {
 @JsonSerializable()
 class CapabilityStatementSecurity {
   const CapabilityStatementSecurity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.cors,
-    @JsonKey(name: '_cors') required this.corsElement,
-    required this.service,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.cors,
+    @JsonKey(name: '_cors') this.corsElement,
+    this.service,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -219,38 +270,38 @@ class CapabilityStatementSecurity {
 @JsonSerializable()
 class CapabilityStatementResource {
   const CapabilityStatementResource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
-    required this.supportedProfile,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
-    required this.interaction,
-    required this.versioning,
-    @JsonKey(name: '_versioning') required this.versioningElement,
-    required this.readHistory,
-    @JsonKey(name: '_readHistory') required this.readHistoryElement,
-    required this.updateCreate,
-    @JsonKey(name: '_updateCreate') required this.updateCreateElement,
-    required this.conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') required this.conditionalCreateElement,
-    required this.conditionalRead,
-    @JsonKey(name: '_conditionalRead') required this.conditionalReadElement,
-    required this.conditionalUpdate,
-    @JsonKey(name: '_conditionalUpdate') required this.conditionalUpdateElement,
-    required this.conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') required this.conditionalDeleteElement,
-    required this.referencePolicy,
-    @JsonKey(name: '_referencePolicy') required this.referencePolicyElement,
-    required this.searchInclude,
-    @JsonKey(name: '_searchInclude') required this.searchIncludeElement,
-    required this.searchRevInclude,
-    @JsonKey(name: '_searchRevInclude') required this.searchRevIncludeElement,
-    required this.searchParam,
-    required this.operation,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
+    this.supportedProfile,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.interaction,
+    this.versioning,
+    @JsonKey(name: '_versioning') this.versioningElement,
+    this.readHistory,
+    @JsonKey(name: '_readHistory') this.readHistoryElement,
+    this.updateCreate,
+    @JsonKey(name: '_updateCreate') this.updateCreateElement,
+    this.conditionalCreate,
+    @JsonKey(name: '_conditionalCreate') this.conditionalCreateElement,
+    this.conditionalRead,
+    @JsonKey(name: '_conditionalRead') this.conditionalReadElement,
+    this.conditionalUpdate,
+    @JsonKey(name: '_conditionalUpdate') this.conditionalUpdateElement,
+    this.conditionalDelete,
+    @JsonKey(name: '_conditionalDelete') this.conditionalDeleteElement,
+    this.referencePolicy,
+    @JsonKey(name: '_referencePolicy') this.referencePolicyElement,
+    this.searchInclude,
+    @JsonKey(name: '_searchInclude') this.searchIncludeElement,
+    this.searchRevInclude,
+    @JsonKey(name: '_searchRevInclude') this.searchRevIncludeElement,
+    this.searchParam,
+    this.operation,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -292,13 +343,13 @@ class CapabilityStatementResource {
 @JsonSerializable()
 class CapabilityStatementInteraction {
   const CapabilityStatementInteraction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -315,16 +366,16 @@ class CapabilityStatementInteraction {
 @JsonSerializable()
 class CapabilityStatementSearchParam {
   const CapabilityStatementSearchParam({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.definition,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.definition,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -344,14 +395,14 @@ class CapabilityStatementSearchParam {
 @JsonSerializable()
 class CapabilityStatementOperation {
   const CapabilityStatementOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.definition,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -369,13 +420,13 @@ class CapabilityStatementOperation {
 @JsonSerializable()
 class CapabilityStatementInteraction1 {
   const CapabilityStatementInteraction1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -393,15 +444,15 @@ class CapabilityStatementInteraction1 {
 @JsonSerializable()
 class CapabilityStatementMessaging {
   const CapabilityStatementMessaging({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.endpoint,
-    required this.reliableCache,
-    @JsonKey(name: '_reliableCache') required this.reliableCacheElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
-    required this.supportedMessage,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.endpoint,
+    this.reliableCache,
+    @JsonKey(name: '_reliableCache') this.reliableCacheElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.supportedMessage,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -420,12 +471,12 @@ class CapabilityStatementMessaging {
 @JsonSerializable()
 class CapabilityStatementEndpoint {
   const CapabilityStatementEndpoint({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.protocol,
-    required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
+    this.address,
+    @JsonKey(name: '_address') this.addressElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -441,11 +492,11 @@ class CapabilityStatementEndpoint {
 @JsonSerializable()
 class CapabilityStatementSupportedMessage {
   const CapabilityStatementSupportedMessage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
     required this.definition,
   });
 
@@ -466,56 +517,43 @@ class CapabilityStatementSupportedMessage {
 class CompartmentDefinition extends Resource {
   const CompartmentDefinition({
     super.resourceType = R4ResourceType.CompartmentDefinition,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.code,
-    @JsonKey(name: '__code') required this.codeElement,
-    required this.search,
-    @JsonKey(name: '__search') required this.searchElement,
-    required this.resource,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.code,
+    @JsonKey(name: '__code') this.codeElement,
+    this.search,
+    @JsonKey(name: '__search') this.searchElement,
+    this.resource,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -560,15 +598,15 @@ class CompartmentDefinition extends Resource {
 @JsonSerializable()
 class CompartmentDefinitionResource {
   const CompartmentDefinitionResource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.param,
-    @JsonKey(name: '_param') required this.paramElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.param,
+    @JsonKey(name: '_param') this.paramElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -588,57 +626,44 @@ class CompartmentDefinitionResource {
 class ExampleScenario extends Resource {
   const ExampleScenario({
     super.resourceType = R4ResourceType.ExampleScenario,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.actor,
-    required this.instance,
-    required this.process,
-    required this.workflow,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.useContext,
+    this.jurisdiction,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.actor,
+    this.instance,
+    this.process,
+    this.workflow,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -680,19 +705,54 @@ class ExampleScenario extends Resource {
 }
 
 @JsonSerializable()
+class ExampleScenarioProcess {
+  const ExampleScenarioProcess({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.preConditions,
+    @JsonKey(name: '_preConditions') this.preConditionsElement,
+    this.postConditions,
+    @JsonKey(name: '_postConditions') this.postConditionsElement,
+    this.step,
+  });
+
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? title;
+  final Element? titleElement;
+  final Markdown? description;
+  final Element? descriptionElement;
+  final Markdown? preConditions;
+  final Element? preConditionsElement;
+  final Markdown? postConditions;
+  final Element? postConditionsElement;
+  final List<ExampleScenarioStep>? step;
+
+  factory ExampleScenarioProcess.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioProcessFromJson(json);
+  Map<String, dynamic> toJson() => _$ExampleScenarioProcessToJson(this);
+}
+
+@JsonSerializable()
 class ExampleScenarioActor {
   const ExampleScenarioActor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.actorId,
-    @JsonKey(name: '_actorId') required this.actorIdElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.actorId,
+    @JsonKey(name: '_actorId') this.actorIdElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -713,19 +773,19 @@ class ExampleScenarioActor {
 @JsonSerializable()
 class ExampleScenarioInstance {
   const ExampleScenarioInstance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.resourceId,
-    @JsonKey(name: '_resourceId') required this.resourceIdElement,
-    required this.resourceType,
-    @JsonKey(name: '_resourceType') required this.resourceTypeElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.version,
-    required this.containedInstance,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.resourceId,
+    @JsonKey(name: '_resourceId') this.resourceIdElement,
+    this.resourceType,
+    @JsonKey(name: '_resourceType') this.resourceTypeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.version,
+    this.containedInstance,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -748,13 +808,13 @@ class ExampleScenarioInstance {
 @JsonSerializable()
 class ExampleScenarioVersion {
   const ExampleScenarioVersion({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.versionId,
-    @JsonKey(name: '_versionId') required this.versionIdElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.versionId,
+    @JsonKey(name: '_versionId') this.versionIdElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -771,13 +831,13 @@ class ExampleScenarioVersion {
 @JsonSerializable()
 class ExampleScenarioContainedInstance {
   const ExampleScenarioContainedInstance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.resourceId,
-    @JsonKey(name: '_resourceId') required this.resourceIdElement,
-    required this.versionId,
-    @JsonKey(name: '_versionId') required this.versionIdElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.resourceId,
+    @JsonKey(name: '_resourceId') this.resourceIdElement,
+    this.versionId,
+    @JsonKey(name: '_versionId') this.versionIdElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -796,14 +856,14 @@ class ExampleScenarioContainedInstance {
 @JsonSerializable()
 class ExampleScenarioStep {
   const ExampleScenarioStep({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.process,
-    required this.pause,
-    @JsonKey(name: '_pause') required this.pauseElement,
-    required this.operation,
-    required this.alternative,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.process,
+    this.pause,
+    @JsonKey(name: '_pause') this.pauseElement,
+    this.operation,
+    this.alternative,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -821,27 +881,27 @@ class ExampleScenarioStep {
 @JsonSerializable()
 class ExampleScenarioOperation {
   const ExampleScenarioOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.number,
-    @JsonKey(name: '_number') required this.numberElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.initiator,
-    @JsonKey(name: '_initiator') required this.initiatorElement,
-    required this.receiver,
-    @JsonKey(name: '_receiver') required this.receiverElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.initiatorActive,
-    @JsonKey(name: '_initiatorActive') required this.initiatorActiveElement,
-    required this.receiverActive,
-    @JsonKey(name: '_receiverActive') required this.receiverActiveElement,
-    required this.request,
-    required this.response,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.number,
+    @JsonKey(name: '_number') this.numberElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.initiator,
+    @JsonKey(name: '_initiator') this.initiatorElement,
+    this.receiver,
+    @JsonKey(name: '_receiver') this.receiverElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.initiatorActive,
+    @JsonKey(name: '_initiatorActive') this.initiatorActiveElement,
+    this.receiverActive,
+    @JsonKey(name: '_receiverActive') this.receiverActiveElement,
+    this.request,
+    this.response,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -872,14 +932,14 @@ class ExampleScenarioOperation {
 @JsonSerializable()
 class ExampleScenarioAlternative {
   const ExampleScenarioAlternative({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.step,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.step,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -898,56 +958,43 @@ class ExampleScenarioAlternative {
 class GraphDefinition extends Resource {
   const GraphDefinition({
     super.resourceType = R4ResourceType.GraphDefinition,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.start,
-    @JsonKey(name: '__start') required this.startElement,
-    required this.profile,
-    required this.link,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.start,
+    @JsonKey(name: '__start') this.startElement,
+    this.profile,
+    this.link,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -991,20 +1038,20 @@ class GraphDefinition extends Resource {
 @JsonSerializable()
 class GraphDefinitionLink {
   const GraphDefinitionLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.sliceName,
-    @JsonKey(name: '_sliceName') required this.sliceNameElement,
-    required this.min,
-    @JsonKey(name: '_min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '_max') required this.maxElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.target,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.sliceName,
+    @JsonKey(name: '_sliceName') this.sliceNameElement,
+    this.min,
+    @JsonKey(name: '_min') this.minElement,
+    this.max,
+    @JsonKey(name: '_max') this.maxElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.target,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1028,16 +1075,16 @@ class GraphDefinitionLink {
 @JsonSerializable()
 class GraphDefinitionTarget {
   const GraphDefinitionTarget({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.params,
-    @JsonKey(name: '_params') required this.paramsElement,
-    required this.profile,
-    required this.compartment,
-    required this.link,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.params,
+    @JsonKey(name: '_params') this.paramsElement,
+    this.profile,
+    this.compartment,
+    this.link,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1057,19 +1104,19 @@ class GraphDefinitionTarget {
 @JsonSerializable()
 class GraphDefinitionCompartment {
   const GraphDefinitionCompartment({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.rule,
-    @JsonKey(name: '_rule') required this.ruleElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.rule,
+    @JsonKey(name: '_rule') this.ruleElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1093,64 +1140,51 @@ class GraphDefinitionCompartment {
 class ImplementationGuide extends Resource {
   const ImplementationGuide({
     super.resourceType = R4ResourceType.ImplementationGuide,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.packageId,
-    @JsonKey(name: '__packageId') required this.packageIdElement,
-    required this.license,
-    @JsonKey(name: '__license') required this.licenseElement,
-    required this.fhirVersion,
-    @JsonKey(name: '__fhirVersion') required this.fhirVersionElement,
-    required this.dependsOn,
-    required this.global,
-    required this.definition,
-    required this.manifest,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.packageId,
+    @JsonKey(name: '__packageId') this.packageIdElement,
+    this.license,
+    @JsonKey(name: '__license') this.licenseElement,
+    this.fhirVersion,
+    @JsonKey(name: '__fhirVersion') this.fhirVersionElement,
+    this.dependsOn,
+    this.global,
+    this.definition,
+    this.manifest,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -1205,14 +1239,14 @@ class ImplementationGuide extends Resource {
 @JsonSerializable()
 class ImplementationGuideDependsOn {
   const ImplementationGuideDependsOn({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.uri,
-    required this.packageId,
-    @JsonKey(name: '_packageId') required this.packageIdElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
+    this.packageId,
+    @JsonKey(name: '_packageId') this.packageIdElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1230,11 +1264,11 @@ class ImplementationGuideDependsOn {
 @JsonSerializable()
 class ImplementationGuideGlobal {
   const ImplementationGuideGlobal({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
     required this.profile,
   });
   final String? id;
@@ -1251,14 +1285,14 @@ class ImplementationGuideGlobal {
 @JsonSerializable()
 class ImplementationGuideDefinition {
   const ImplementationGuideDefinition({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.grouping,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.grouping,
     required this.resource,
-    required this.page,
-    required this.parameter,
-    required this.template,
+    this.page,
+    this.parameter,
+    this.template,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1276,13 +1310,13 @@ class ImplementationGuideDefinition {
 @JsonSerializable()
 class ImplementationGuideGrouping {
   const ImplementationGuideGrouping({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1299,22 +1333,22 @@ class ImplementationGuideGrouping {
 @JsonSerializable()
 class ImplementationGuideResource {
   const ImplementationGuideResource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.reference,
-    required this.fhirVersion,
-    @JsonKey(name: '_fhirVersion') required this.fhirVersionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') required this.exampleBooleanElement,
-    required this.exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') required this.exampleCanonicalElement,
-    required this.groupingId,
-    @JsonKey(name: '_groupingId') required this.groupingIdElement,
+    this.fhirVersion,
+    @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.exampleBoolean,
+    @JsonKey(name: '_exampleBoolean') this.exampleBooleanElement,
+    this.exampleCanonical,
+    @JsonKey(name: '_exampleCanonical') this.exampleCanonicalElement,
+    this.groupingId,
+    @JsonKey(name: '_groupingId') this.groupingIdElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1340,17 +1374,17 @@ class ImplementationGuideResource {
 @JsonSerializable()
 class ImplementationGuidePage {
   const ImplementationGuidePage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.nameUrl,
-    @JsonKey(name: '_nameUrl') required this.nameUrlElement,
-    required this.nameReference,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.generation,
-    @JsonKey(name: '_generation') required this.generationElement,
-    required this.page,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.nameUrl,
+    @JsonKey(name: '_nameUrl') this.nameUrlElement,
+    this.nameReference,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.generation,
+    @JsonKey(name: '_generation') this.generationElement,
+    this.page,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1371,13 +1405,13 @@ class ImplementationGuidePage {
 @JsonSerializable()
 class ImplementationGuideParameter {
   const ImplementationGuideParameter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1394,15 +1428,15 @@ class ImplementationGuideParameter {
 @JsonSerializable()
 class ImplementationGuideTemplate {
   const ImplementationGuideTemplate({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.source,
-    @JsonKey(name: '_source') required this.sourceElement,
-    required this.scope,
-    @JsonKey(name: '_scope') required this.scopeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.source,
+    @JsonKey(name: '_source') this.sourceElement,
+    this.scope,
+    @JsonKey(name: '_scope') this.scopeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1421,17 +1455,17 @@ class ImplementationGuideTemplate {
 @JsonSerializable()
 class ImplementationGuideManifest {
   const ImplementationGuideManifest({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.rendering,
-    @JsonKey(name: '_rendering') required this.renderingElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.rendering,
+    @JsonKey(name: '_rendering') this.renderingElement,
     required this.resource,
-    required this.page,
-    required this.image,
-    @JsonKey(name: '_image') required this.imageElement,
-    required this.other,
-    @JsonKey(name: '_other') required this.otherElement,
+    this.page,
+    this.image,
+    @JsonKey(name: '_image') this.imageElement,
+    this.other,
+    @JsonKey(name: '_other') this.otherElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1452,16 +1486,16 @@ class ImplementationGuideManifest {
 @JsonSerializable()
 class ImplementationGuideResource1 {
   const ImplementationGuideResource1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.reference,
-    required this.exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') required this.exampleBooleanElement,
-    required this.exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') required this.exampleCanonicalElement,
-    required this.relativePath,
-    @JsonKey(name: '_relativePath') required this.relativePathElement,
+    this.exampleBoolean,
+    @JsonKey(name: '_exampleBoolean') this.exampleBooleanElement,
+    this.exampleCanonical,
+    @JsonKey(name: '_exampleCanonical') this.exampleCanonicalElement,
+    this.relativePath,
+    @JsonKey(name: '_relativePath') this.relativePathElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1481,15 +1515,15 @@ class ImplementationGuideResource1 {
 @JsonSerializable()
 class ImplementationGuidePage1 {
   const ImplementationGuidePage1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.anchor,
-    @JsonKey(name: '_anchor') required this.anchorElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.anchor,
+    @JsonKey(name: '_anchor') this.anchorElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1509,70 +1543,57 @@ class ImplementationGuidePage1 {
 class MessageDefinition extends Resource {
   const MessageDefinition({
     super.resourceType = R4ResourceType.MessageDefinition,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.replaces,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.base,
-    required this.parent,
-    required this.eventCoding,
-    required this.eventUri,
-    @JsonKey(name: '__eventUri') required this.eventUriElement,
-    required this.category,
-    @JsonKey(name: '__category') required this.categoryElement,
-    required this.focus,
-    required this.responseRequired,
-    @JsonKey(name: '__responseRequired') required this.responseRequiredElement,
-    required this.allowedResponse,
-    required this.graph,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.replaces,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.base,
+    this.parent,
+    this.eventCoding,
+    this.eventUri,
+    @JsonKey(name: '__eventUri') this.eventUriElement,
+    this.category,
+    @JsonKey(name: '__category') this.categoryElement,
+    this.focus,
+    this.responseRequired,
+    @JsonKey(name: '__responseRequired') this.responseRequiredElement,
+    this.allowedResponse,
+    this.graph,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -1634,16 +1655,16 @@ class MessageDefinition extends Resource {
 @JsonSerializable()
 class MessageDefinitionFocus {
   const MessageDefinitionFocus({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.profile,
-    required this.min,
-    @JsonKey(name: '_min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '_max') required this.maxElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.profile,
+    this.min,
+    @JsonKey(name: '_min') this.minElement,
+    this.max,
+    @JsonKey(name: '_max') this.maxElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1663,12 +1684,12 @@ class MessageDefinitionFocus {
 @JsonSerializable()
 class MessageDefinitionAllowedResponse {
   const MessageDefinitionAllowedResponse({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.message,
-    required this.situation,
-    @JsonKey(name: '_situation') required this.situationElement,
+    this.situation,
+    @JsonKey(name: '_situation') this.situationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1684,29 +1705,139 @@ class MessageDefinitionAllowedResponse {
 }
 
 @JsonSerializable()
+class OperationDefinition extends Resource {
+  const OperationDefinition({
+    super.resourceType = R4ResourceType.OperationDefinition,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.kind,
+    @JsonKey(name: '_kind') this.kindElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.affectsState,
+    @JsonKey(name: '_affectsState') this.affectsStateElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.base,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.instance,
+    @JsonKey(name: '_instance') this.instanceElement,
+    this.inputProfile,
+    this.outputProfile,
+    this.parameter,
+    this.overload,
+  });
+
+  final FhirUri? url;
+  final Element? urlElement;
+  final String? version;
+  final Element? versionElement;
+  final String? name;
+  final Element? nameElement;
+  final String? title;
+  final Element? titleElement;
+  final Code? status;
+  final Element? statusElement;
+  final Code? kind;
+  final Element? kindElement;
+  final Boolean? experimental;
+  final Element? experimentalElement;
+  final FhirDateTime? date;
+  final Element? dateElement;
+  final String? publisher;
+  final Element? publisherElement;
+  final List<ContactDetail>? contact;
+  final Markdown? description;
+  final Element? descriptionElement;
+  final List<UsageContext>? useContext;
+  final List<CodeableConcept>? jurisdiction;
+  final Markdown? purpose;
+  final Element? purposeElement;
+  final Boolean? affectsState;
+  final Element? affectsStateElement;
+  final Code? code;
+  final Element? codeElement;
+  final Markdown? comment;
+  final Element? commentElement;
+  final Canonical? base;
+  final List<Code>? resource;
+  final List<Element?>? resourceElement;
+  final Boolean? system;
+  final Element? systemElement;
+  final Boolean? type;
+  final Element? typeElement;
+  final Boolean? instance;
+  final Element? instanceElement;
+  final Canonical? inputProfile;
+  final Canonical? outputProfile;
+  final List<OperationDefinitionParameter>? parameter;
+  final List<OperationDefinitionOverload>? overload;
+
+  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionFromJson(json);
+  Map<String, dynamic> toJson() => _$OperationDefinitionToJson(this);
+}
+
+@JsonSerializable()
 class OperationDefinitionParameter {
   const OperationDefinitionParameter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.min,
-    @JsonKey(name: '_min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '_max') required this.maxElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.targetProfile,
-    required this.searchType,
-    @JsonKey(name: '_searchType') required this.searchTypeElement,
-    required this.binding,
-    required this.referencedFrom,
-    @JsonKey(name: 'part') required this.part_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.min,
+    @JsonKey(name: '_min') this.minElement,
+    this.max,
+    @JsonKey(name: '_max') this.maxElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.targetProfile,
+    this.searchType,
+    @JsonKey(name: '_searchType') this.searchTypeElement,
+    this.binding,
+    this.referencedFrom,
+    @JsonKey(name: 'part') this.part_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1737,11 +1868,11 @@ class OperationDefinitionParameter {
 @JsonSerializable()
 class OperationDefinitionBinding {
   const OperationDefinitionBinding({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.strength,
-    @JsonKey(name: '_strength') required this.strengthElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.strength,
+    @JsonKey(name: '_strength') this.strengthElement,
     required this.valueSet,
   });
   final String? id;
@@ -1758,13 +1889,13 @@ class OperationDefinitionBinding {
 @JsonSerializable()
 class OperationDefinitionReferencedFrom {
   const OperationDefinitionReferencedFrom({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.source,
-    @JsonKey(name: '_source') required this.sourceElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.source,
+    @JsonKey(name: '_source') this.sourceElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
   });
 
   final String? id;
@@ -1782,81 +1913,93 @@ class OperationDefinitionReferencedFrom {
 }
 
 @JsonSerializable()
+class OperationDefinitionOverload {
+  const OperationDefinitionOverload({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.parameterName,
+    @JsonKey(name: '_parameterName') this.parameterNameElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+  });
+
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final List<String>? parameterName;
+  final List<Element?>? parameterNameElement;
+  final String? comment;
+  final Element? commentElement;
+
+  factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionOverloadFromJson(json);
+  Map<String, dynamic> toJson() => _$OperationDefinitionOverloadToJson(this);
+}
+
+@JsonSerializable()
 class SearchParameter extends Resource {
   const SearchParameter({
     super.resourceType = R4ResourceType.SearchParameter,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.derivedFrom,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.code,
-    @JsonKey(name: '__code') required this.codeElement,
-    required this.base,
-    @JsonKey(name: '__base') required this.baseElement,
-    required this.type,
-    @JsonKey(name: '__type') required this.typeElement,
-    required this.expression,
-    @JsonKey(name: '__expression') required this.expressionElement,
-    required this.xpath,
-    @JsonKey(name: '__xpath') required this.xpathElement,
-    required this.xpathUsage,
-    @JsonKey(name: '__xpathUsage') required this.xpathUsageElement,
-    required this.target,
-    @JsonKey(name: '__target') required this.targetElement,
-    required this.multipleOr,
-    @JsonKey(name: '__multipleOr') required this.multipleOrElement,
-    required this.multipleAnd,
-    @JsonKey(name: '__multipleAnd') required this.multipleAndElement,
-    required this.comparator,
-    @JsonKey(name: '__comparator') required this.comparatorElement,
-    required this.modifier,
-    @JsonKey(name: '__modifier') required this.modifierElement,
-    required this.chain,
-    @JsonKey(name: '__chain') required this.chainElement,
-    required this.component,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.derivedFrom,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.code,
+    @JsonKey(name: '__code') this.codeElement,
+    this.base,
+    @JsonKey(name: '__base') this.baseElement,
+    this.type,
+    @JsonKey(name: '__type') this.typeElement,
+    this.expression,
+    @JsonKey(name: '__expression') this.expressionElement,
+    this.xpath,
+    @JsonKey(name: '__xpath') this.xpathElement,
+    this.xpathUsage,
+    @JsonKey(name: '__xpathUsage') this.xpathUsageElement,
+    this.target,
+    @JsonKey(name: '__target') this.targetElement,
+    this.multipleOr,
+    @JsonKey(name: '__multipleOr') this.multipleOrElement,
+    this.multipleAnd,
+    @JsonKey(name: '__multipleAnd') this.multipleAndElement,
+    this.comparator,
+    @JsonKey(name: '__comparator') this.comparatorElement,
+    this.modifier,
+    @JsonKey(name: '__modifier') this.modifierElement,
+    this.chain,
+    @JsonKey(name: '__chain') this.chainElement,
+    this.component,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -1933,12 +2076,12 @@ class SearchParameter extends Resource {
 @JsonSerializable()
 class SearchParameterComponent {
   const SearchParameterComponent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.definition,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1955,76 +2098,63 @@ class SearchParameterComponent {
 class StructureDefinition extends Resource {
   const StructureDefinition({
     super.resourceType = R4ResourceType.StructureDefinition,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.keyword,
-    required this.fhirVersion,
-    @JsonKey(name: '__fhirVersion') required this.fhirVersionElement,
-    required this.mapping,
-    required this.kind,
-    @JsonKey(name: '__kind') required this.kindElement,
-    @JsonKey(name: '_abstract') required this.abstract_,
-    @JsonKey(name: '__abstract') required this.abstractElement,
-    required this.context,
-    required this.contextInvariant,
-    @JsonKey(name: '__contextInvariant') required this.contextInvariantElement,
-    required this.type,
-    @JsonKey(name: '__type') required this.typeElement,
-    required this.baseDefinition,
-    @JsonKey(name: '__baseDefinition') required this.baseDefinitionElement,
-    required this.derivation,
-    @JsonKey(name: '__derivation') required this.derivationElement,
-    required this.snapshot,
-    required this.differential,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.keyword,
+    this.fhirVersion,
+    @JsonKey(name: '__fhirVersion') this.fhirVersionElement,
+    this.mapping,
+    this.kind,
+    @JsonKey(name: '__kind') this.kindElement,
+    @JsonKey(name: '_abstract') this.abstract_,
+    @JsonKey(name: '__abstract') this.abstractElement,
+    this.context,
+    this.contextInvariant,
+    @JsonKey(name: '__contextInvariant') this.contextInvariantElement,
+    this.type,
+    @JsonKey(name: '__type') this.typeElement,
+    this.baseDefinition,
+    @JsonKey(name: '__baseDefinition') this.baseDefinitionElement,
+    this.derivation,
+    @JsonKey(name: '__derivation') this.derivationElement,
+    this.snapshot,
+    this.differential,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -2097,17 +2227,17 @@ class StructureDefinition extends Resource {
 @JsonSerializable()
 class StructureDefinitionMapping {
   const StructureDefinitionMapping({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identity,
-    @JsonKey(name: '_identity') required this.identityElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identity,
+    @JsonKey(name: '_identity') this.identityElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2128,13 +2258,13 @@ class StructureDefinitionMapping {
 @JsonSerializable()
 class StructureDefinitionContext {
   const StructureDefinitionContext({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2151,9 +2281,9 @@ class StructureDefinitionContext {
 @JsonSerializable()
 class StructureDefinitionSnapshot {
   const StructureDefinitionSnapshot({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.element,
   });
   final String? id;
@@ -2168,9 +2298,9 @@ class StructureDefinitionSnapshot {
 @JsonSerializable()
 class StructureDefinitionDifferential {
   const StructureDefinitionDifferential({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.element,
   });
   final String? id;
@@ -2187,60 +2317,47 @@ class StructureDefinitionDifferential {
 class StructureMap extends Resource {
   const StructureMap({
     super.resourceType = R4ResourceType.StructureMap,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '__version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '__experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '__publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '__purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '__copyright') required this.copyrightElement,
-    required this.structure,
-    @JsonKey(name: '_import') required this.import_,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '__version') this.versionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '__experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '__publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '__purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '__copyright') this.copyrightElement,
+    this.structure,
+    @JsonKey(name: '_import') this.import_,
     required this.group,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri? url;
 
   final Element? urlElement;
@@ -2290,16 +2407,16 @@ class StructureMap extends Resource {
 @JsonSerializable()
 class StructureMapStructure {
   const StructureMapStructure({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.url,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.alias,
-    @JsonKey(name: '_alias') required this.aliasElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.alias,
+    @JsonKey(name: '_alias') this.aliasElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2319,17 +2436,17 @@ class StructureMapStructure {
 @JsonSerializable()
 class StructureMapGroup {
   const StructureMapGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    @JsonKey(name: 'extends') required this.extends_,
-    @JsonKey(name: '_extends') required this.extendsElement,
-    required this.typeMode,
-    @JsonKey(name: '_typeMode') required this.typeModeElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    @JsonKey(name: 'extends') this.extends_,
+    @JsonKey(name: '_extends') this.extendsElement,
+    this.typeMode,
+    @JsonKey(name: '_typeMode') this.typeModeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
     required this.input,
     required this.rule,
   });
@@ -2354,17 +2471,17 @@ class StructureMapGroup {
 @JsonSerializable()
 class StructureMapInput {
   const StructureMapInput({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2385,17 +2502,17 @@ class StructureMapInput {
 @JsonSerializable()
 class StructureMapRule {
   const StructureMapRule({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.source,
-    required this.target,
-    required this.rule,
-    required this.dependent,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
+    this.target,
+    this.rule,
+    this.dependent,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2416,109 +2533,101 @@ class StructureMapRule {
 @JsonSerializable()
 class StructureMapSource {
   const StructureMapSource({
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.context,
-    @JsonKey(name: '__context') required this.contextElement,
-    required this.min,
-    @JsonKey(name: '__min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '__max') required this.maxElement,
-    required this.type,
-    @JsonKey(name: '__type') required this.typeElement,
-    required this.defaultValueBase64Binary,
+    this.id,
+    @JsonKey(name: '_extension') this.extension_,
+    this.modifierExtension,
+    this.context,
+    @JsonKey(name: '__context') this.contextElement,
+    this.min,
+    @JsonKey(name: '__min') this.minElement,
+    this.max,
+    @JsonKey(name: '__max') this.maxElement,
+    this.type,
+    @JsonKey(name: '__type') this.typeElement,
+    this.defaultValueBase64Binary,
     @JsonKey(name: '__defaultValueBase64Binary')
-        required this.defaultValueBase64BinaryElement,
-    required this.defaultValueBoolean,
-    @JsonKey(name: '__defaultValueBoolean')
-        required this.defaultValueBooleanElement,
-    required this.defaultValueCanonical,
-    @JsonKey(name: '__defaultValueCanonical')
-        required this.defaultValueCanonicalElement,
-    required this.defaultValueCode,
-    @JsonKey(name: '__defaultValueCode') required this.defaultValueCodeElement,
-    required this.defaultValueDate,
-    @JsonKey(name: '__defaultValueDate') required this.defaultValueDateElement,
-    required this.defaultValueDateTime,
-    @JsonKey(name: '__defaultValueDateTime')
-        required this.defaultValueDateTimeElement,
-    required this.defaultValueDecimal,
-    @JsonKey(name: '__defaultValueDecimal')
-        required this.defaultValueDecimalElement,
-    required this.defaultValueId,
-    @JsonKey(name: '__defaultValueId') required this.defaultValueIdElement,
-    required this.defaultValueInstant,
-    @JsonKey(name: '__defaultValueInstant')
-        required this.defaultValueInstantElement,
-    required this.defaultValueInteger,
-    @JsonKey(name: '__defaultValueInteger')
-        required this.defaultValueIntegerElement,
-    required this.defaultValueMarkdown,
-    @JsonKey(name: '__defaultValueMarkdown')
-        required this.defaultValueMarkdownElement,
-    required this.defaultValueOid,
-    @JsonKey(name: '__defaultValueOid') required this.defaultValueOidElement,
-    required this.defaultValuePositiveInt,
+        this.defaultValueBase64BinaryElement,
+    this.defaultValueBoolean,
+    @JsonKey(name: '__defaultValueBoolean') this.defaultValueBooleanElement,
+    this.defaultValueCanonical,
+    @JsonKey(name: '__defaultValueCanonical') this.defaultValueCanonicalElement,
+    this.defaultValueCode,
+    @JsonKey(name: '__defaultValueCode') this.defaultValueCodeElement,
+    this.defaultValueDate,
+    @JsonKey(name: '__defaultValueDate') this.defaultValueDateElement,
+    this.defaultValueDateTime,
+    @JsonKey(name: '__defaultValueDateTime') this.defaultValueDateTimeElement,
+    this.defaultValueDecimal,
+    @JsonKey(name: '__defaultValueDecimal') this.defaultValueDecimalElement,
+    this.defaultValueId,
+    @JsonKey(name: '__defaultValueId') this.defaultValueIdElement,
+    this.defaultValueInstant,
+    @JsonKey(name: '__defaultValueInstant') this.defaultValueInstantElement,
+    this.defaultValueInteger,
+    @JsonKey(name: '__defaultValueInteger') this.defaultValueIntegerElement,
+    this.defaultValueMarkdown,
+    @JsonKey(name: '__defaultValueMarkdown') this.defaultValueMarkdownElement,
+    this.defaultValueOid,
+    @JsonKey(name: '__defaultValueOid') this.defaultValueOidElement,
+    this.defaultValuePositiveInt,
     @JsonKey(name: '__defaultValuePositiveInt')
-        required this.defaultValuePositiveIntElement,
-    required this.defaultValueString,
-    @JsonKey(name: '__defaultValueString')
-        required this.defaultValueStringElement,
-    required this.defaultValueTime,
-    @JsonKey(name: '__defaultValueTime') required this.defaultValueTimeElement,
-    required this.defaultValueUnsignedInt,
+        this.defaultValuePositiveIntElement,
+    this.defaultValueString,
+    @JsonKey(name: '__defaultValueString') this.defaultValueStringElement,
+    this.defaultValueTime,
+    @JsonKey(name: '__defaultValueTime') this.defaultValueTimeElement,
+    this.defaultValueUnsignedInt,
     @JsonKey(name: '__defaultValueUnsignedInt')
-        required this.defaultValueUnsignedIntElement,
-    required this.defaultValueUri,
-    @JsonKey(name: '__defaultValueUri') required this.defaultValueUriElement,
-    required this.defaultValueUrl,
-    @JsonKey(name: '__defaultValueUrl') required this.defaultValueUrlElement,
-    required this.defaultValueUuid,
-    @JsonKey(name: '__defaultValueUuid') required this.defaultValueUuidElement,
-    required this.defaultValueAddress,
-    required this.defaultValueAge,
-    required this.defaultValueAnnotation,
-    required this.defaultValueAttachment,
-    required this.defaultValueCodeableConcept,
-    required this.defaultValueCoding,
-    required this.defaultValueContactPoint,
-    required this.defaultValueCount,
-    required this.defaultValueDistance,
-    required this.defaultValueDuration,
-    required this.defaultValueHumanName,
-    required this.defaultValueIdentifier,
-    required this.defaultValueMoney,
-    required this.defaultValuePeriod,
-    required this.defaultValueQuantity,
-    required this.defaultValueRange,
-    required this.defaultValueRatio,
-    required this.defaultValueReference,
-    required this.defaultValueSampledData,
-    required this.defaultValueSignature,
-    required this.defaultValueTiming,
-    required this.defaultValueContactDetail,
-    required this.defaultValueContributor,
-    required this.defaultValueDataRequirement,
-    required this.defaultValueExpression,
-    required this.defaultValueParameterDefinition,
-    required this.defaultValueRelatedArtifact,
-    required this.defaultValueTriggerDefinition,
-    required this.defaultValueUsageContext,
-    required this.defaultValueDosage,
-    required this.defaultValueMeta,
-    required this.element,
-    @JsonKey(name: '__element') required this.elementElement,
-    required this.listMode,
-    @JsonKey(name: '__listMode') required this.listModeElement,
-    required this.variable,
-    @JsonKey(name: '__variable') required this.variableElement,
-    required this.condition,
-    @JsonKey(name: '__condition') required this.conditionElement,
-    required this.check,
-    @JsonKey(name: '__check') required this.checkElement,
-    required this.logMessage,
-    @JsonKey(name: '__logMessage') required this.logMessageElement,
+        this.defaultValueUnsignedIntElement,
+    this.defaultValueUri,
+    @JsonKey(name: '__defaultValueUri') this.defaultValueUriElement,
+    this.defaultValueUrl,
+    @JsonKey(name: '__defaultValueUrl') this.defaultValueUrlElement,
+    this.defaultValueUuid,
+    @JsonKey(name: '__defaultValueUuid') this.defaultValueUuidElement,
+    this.defaultValueAddress,
+    this.defaultValueAge,
+    this.defaultValueAnnotation,
+    this.defaultValueAttachment,
+    this.defaultValueCodeableConcept,
+    this.defaultValueCoding,
+    this.defaultValueContactPoint,
+    this.defaultValueCount,
+    this.defaultValueDistance,
+    this.defaultValueDuration,
+    this.defaultValueHumanName,
+    this.defaultValueIdentifier,
+    this.defaultValueMoney,
+    this.defaultValuePeriod,
+    this.defaultValueQuantity,
+    this.defaultValueRange,
+    this.defaultValueRatio,
+    this.defaultValueReference,
+    this.defaultValueSampledData,
+    this.defaultValueSignature,
+    this.defaultValueTiming,
+    this.defaultValueContactDetail,
+    this.defaultValueContributor,
+    this.defaultValueDataRequirement,
+    this.defaultValueExpression,
+    this.defaultValueParameterDefinition,
+    this.defaultValueRelatedArtifact,
+    this.defaultValueTriggerDefinition,
+    this.defaultValueUsageContext,
+    this.defaultValueDosage,
+    this.defaultValueMeta,
+    this.element,
+    @JsonKey(name: '__element') this.elementElement,
+    this.listMode,
+    @JsonKey(name: '__listMode') this.listModeElement,
+    this.variable,
+    @JsonKey(name: '__variable') this.variableElement,
+    this.condition,
+    @JsonKey(name: '__condition') this.conditionElement,
+    this.check,
+    @JsonKey(name: '__check') this.checkElement,
+    this.logMessage,
+    @JsonKey(name: '__logMessage') this.logMessageElement,
   });
   final String? id;
 
@@ -2650,24 +2759,24 @@ class StructureMapSource {
 @JsonSerializable()
 class StructureMapTarget {
   const StructureMapTarget({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.context,
-    @JsonKey(name: '_context') required this.contextElement,
-    required this.contextType,
-    @JsonKey(name: '_contextType') required this.contextTypeElement,
-    required this.element,
-    @JsonKey(name: '_element') required this.elementElement,
-    required this.variable,
-    @JsonKey(name: '_variable') required this.variableElement,
-    required this.listMode,
-    @JsonKey(name: '_listMode') required this.listModeElement,
-    required this.listRuleId,
-    @JsonKey(name: '_listRuleId') required this.listRuleIdElement,
-    required this.transform,
-    @JsonKey(name: '_transform') required this.transformElement,
-    required this.parameter,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.context,
+    @JsonKey(name: '_context') this.contextElement,
+    this.contextType,
+    @JsonKey(name: '_contextType') this.contextTypeElement,
+    this.element,
+    @JsonKey(name: '_element') this.elementElement,
+    this.variable,
+    @JsonKey(name: '_variable') this.variableElement,
+    this.listMode,
+    @JsonKey(name: '_listMode') this.listModeElement,
+    this.listRuleId,
+    @JsonKey(name: '_listRuleId') this.listRuleIdElement,
+    this.transform,
+    @JsonKey(name: '_transform') this.transformElement,
+    this.parameter,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2695,19 +2804,19 @@ class StructureMapTarget {
 @JsonSerializable()
 class StructureMapParameter {
   const StructureMapParameter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.valueId,
-    @JsonKey(name: '_valueId') required this.valueIdElement,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueDecimal,
-    @JsonKey(name: '_valueDecimal') required this.valueDecimalElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.valueId,
+    @JsonKey(name: '_valueId') this.valueIdElement,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueDecimal,
+    @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2730,13 +2839,13 @@ class StructureMapParameter {
 @JsonSerializable()
 class StructureMapDependent {
   const StructureMapDependent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.variable,
-    @JsonKey(name: '_variable') required this.variableElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.variable,
+    @JsonKey(name: '_variable') this.variableElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;

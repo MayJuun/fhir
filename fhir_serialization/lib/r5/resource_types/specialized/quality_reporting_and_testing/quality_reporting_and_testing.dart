@@ -11,7 +11,7 @@ class Measure extends Resource {
     super.resourceType = R5ResourceType.Measure,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -19,81 +19,80 @@ class Measure extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.versionAlgorithmString,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.versionAlgorithmString,
     @JsonKey(name: '__versionAlgorithmString')
-        required this.versionAlgorithmStringElement,
-    required this.versionAlgorithmCoding,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.copyrightLabel,
-    @JsonKey(name: '_copyrightLabel') required this.copyrightLabelElement,
-    required this.approvalDate,
-    @JsonKey(name: '_approvalDate') required this.approvalDateElement,
-    required this.lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') required this.lastReviewDateElement,
-    required this.effectivePeriod,
-    required this.topic,
-    required this.author,
-    required this.editor,
-    required this.reviewer,
-    required this.endorser,
-    required this.relatedArtifact,
-    required this.subtitle,
-    @JsonKey(name: '_subtitle') required this.subtitleElement,
-    required this.subjectCodeableConcept,
-    required this.subjectReference,
-    required this.basis,
-    @JsonKey(name: '_basis') required this.basisElement,
-    required this.usage,
-    @JsonKey(name: '_usage') required this.usageElement,
-    @JsonKey(name: 'library') required this.library_,
-    required this.disclaimer,
-    @JsonKey(name: '_disclaimer') required this.disclaimerElement,
-    required this.scoring,
-    required this.scoringUnit,
-    required this.compositeScoring,
-    required this.type,
-    required this.riskAdjustment,
-    @JsonKey(name: '_riskAdjustment') required this.riskAdjustmentElement,
-    required this.rateAggregation,
-    @JsonKey(name: '_rateAggregation') required this.rateAggregationElement,
-    required this.rationale,
-    @JsonKey(name: '_rationale') required this.rationaleElement,
-    required this.clinicalRecommendationStatement,
+        this.versionAlgorithmStringElement,
+    this.versionAlgorithmCoding,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.copyrightLabel,
+    @JsonKey(name: '_copyrightLabel') this.copyrightLabelElement,
+    this.approvalDate,
+    @JsonKey(name: '_approvalDate') this.approvalDateElement,
+    this.lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+    this.effectivePeriod,
+    this.topic,
+    this.author,
+    this.editor,
+    this.reviewer,
+    this.endorser,
+    this.relatedArtifact,
+    this.subtitle,
+    @JsonKey(name: '_subtitle') this.subtitleElement,
+    this.subjectCodeableConcept,
+    this.subjectReference,
+    this.basis,
+    @JsonKey(name: '_basis') this.basisElement,
+    this.usage,
+    @JsonKey(name: '_usage') this.usageElement,
+    @JsonKey(name: 'library') this.library_,
+    this.disclaimer,
+    @JsonKey(name: '_disclaimer') this.disclaimerElement,
+    this.scoring,
+    this.scoringUnit,
+    this.compositeScoring,
+    this.type,
+    this.riskAdjustment,
+    @JsonKey(name: '_riskAdjustment') this.riskAdjustmentElement,
+    this.rateAggregation,
+    @JsonKey(name: '_rateAggregation') this.rateAggregationElement,
+    this.rationale,
+    @JsonKey(name: '_rationale') this.rationaleElement,
+    this.clinicalRecommendationStatement,
     @JsonKey(name: '__clinicalRecommendationStatement')
-        required this.clinicalRecommendationStatementElement,
-    required this.improvementNotation,
-    required this.term,
-    required this.guidance,
-    @JsonKey(name: '_guidance') required this.guidanceElement,
-    required this.group,
-    required this.supplementalData,
+        this.clinicalRecommendationStatementElement,
+    this.improvementNotation,
+    this.term,
+    this.guidance,
+    @JsonKey(name: '_guidance') this.guidanceElement,
+    this.group,
+    this.supplementalData,
   });
-  final R5ResourceType resourceType;
 
   final FhirUri? url;
   final Element? urlElement;
@@ -176,12 +175,12 @@ class Measure extends Resource {
 @JsonSerializable()
 class MeasureTerm {
   const MeasureTerm({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.definition,
-    @JsonKey(name: '_definition') required this.definitionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.definition,
+    @JsonKey(name: '_definition') this.definitionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -197,20 +196,20 @@ class MeasureTerm {
 @JsonSerializable()
 class MeasureGroup {
   const MeasureGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.type,
-    required this.basis,
-    @JsonKey(name: '_basis') required this.basisElement,
-    required this.scoring,
-    required this.scoringUnit,
-    required this.improvementNotation,
-    required this.population,
-    required this.stratifier,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.type,
+    this.basis,
+    @JsonKey(name: '_basis') this.basisElement,
+    this.scoring,
+    this.scoringUnit,
+    this.improvementNotation,
+    this.population,
+    this.stratifier,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -234,16 +233,16 @@ class MeasureGroup {
 @JsonSerializable()
 class MeasurePopulation {
   const MeasurePopulation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.criteria,
-    required this.inputPopulationId,
-    @JsonKey(name: '_inputPopulationId') required this.inputPopulationIdElement,
-    required this.aggregateMethod,
+    this.inputPopulationId,
+    @JsonKey(name: '_inputPopulationId') this.inputPopulationIdElement,
+    this.aggregateMethod,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -263,14 +262,14 @@ class MeasurePopulation {
 @JsonSerializable()
 class MeasureStratifier {
   const MeasureStratifier({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.criteria,
-    required this.component,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.criteria,
+    this.component,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -288,12 +287,12 @@ class MeasureStratifier {
 @JsonSerializable()
 class MeasureComponent {
   const MeasureComponent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.criteria,
   });
   final String? id;
@@ -311,13 +310,13 @@ class MeasureComponent {
 @JsonSerializable()
 class MeasureSupplementalData {
   const MeasureSupplementalData({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.usage,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.usage,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.criteria,
   });
   final String? id;
@@ -339,7 +338,7 @@ class MeasureReport extends Resource {
     super.resourceType = R5ResourceType.MeasureReport,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -347,28 +346,27 @@ class MeasureReport extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.dataUpdateType,
-    @JsonKey(name: '_dataUpdateType') required this.dataUpdateTypeElement,
-    required this.measure,
-    required this.subject,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.reporter,
-    required this.reportingVendor,
-    required this.location,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.dataUpdateType,
+    @JsonKey(name: '_dataUpdateType') this.dataUpdateTypeElement,
+    this.measure,
+    this.subject,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.reporter,
+    this.reportingVendor,
+    this.location,
     required this.period,
-    required this.inputParameters,
-    required this.scoring,
-    required this.improvementNotation,
-    required this.group,
-    required this.evaluatedResource,
+    this.inputParameters,
+    this.scoring,
+    this.improvementNotation,
+    this.group,
+    this.evaluatedResource,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -398,20 +396,19 @@ class MeasureReport extends Resource {
 @JsonSerializable()
 class MeasureReportGroup {
   const MeasureReportGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.population,
-    required this.measureScoreQuantity,
-    required this.measureScoreDateTime,
-    @JsonKey(name: '__measureScoreDateTime')
-        required this.measureScoreDateTimeElement,
-    required this.measureScoreCodeableConcept,
-    required this.measureScorePeriod,
-    required this.measureScoreRange,
-    required this.measureScoreDuration,
-    required this.stratifier,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.population,
+    this.measureScoreQuantity,
+    this.measureScoreDateTime,
+    @JsonKey(name: '__measureScoreDateTime') this.measureScoreDateTimeElement,
+    this.measureScoreCodeableConcept,
+    this.measureScorePeriod,
+    this.measureScoreRange,
+    this.measureScoreDuration,
+    this.stratifier,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -435,13 +432,13 @@ class MeasureReportGroup {
 @JsonSerializable()
 class MeasureReportPopulation {
   const MeasureReportPopulation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.subjectResults,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.subjectResults,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -458,11 +455,11 @@ class MeasureReportPopulation {
 @JsonSerializable()
 class MeasureReportStratifier {
   const MeasureReportStratifier({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.stratum,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.stratum,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -477,25 +474,24 @@ class MeasureReportStratifier {
 @JsonSerializable()
 class MeasureReportStratum {
   const MeasureReportStratum({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.valueCodeableConcept,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valueReference,
-    required this.component,
-    required this.population,
-    required this.measureScoreQuantity,
-    required this.measureScoreDateTime,
-    @JsonKey(name: '__measureScoreDateTime')
-        required this.measureScoreDateTimeElement,
-    required this.measureScoreCodeableConcept,
-    required this.measureScorePeriod,
-    required this.measureScoreRange,
-    required this.measureScoreDuration,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.valueCodeableConcept,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueQuantity,
+    this.valueRange,
+    this.valueReference,
+    this.component,
+    this.population,
+    this.measureScoreQuantity,
+    this.measureScoreDateTime,
+    @JsonKey(name: '__measureScoreDateTime') this.measureScoreDateTimeElement,
+    this.measureScoreCodeableConcept,
+    this.measureScorePeriod,
+    this.measureScoreRange,
+    this.measureScoreDuration,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -524,16 +520,16 @@ class MeasureReportStratum {
 @JsonSerializable()
 class MeasureReportComponent {
   const MeasureReportComponent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valueReference,
+    this.valueCodeableConcept,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueQuantity,
+    this.valueRange,
+    this.valueReference,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -553,13 +549,13 @@ class MeasureReportComponent {
 @JsonSerializable()
 class MeasureReportPopulation1 {
   const MeasureReportPopulation1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.subjectResults,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.subjectResults,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -579,7 +575,7 @@ class TestReport extends Resource {
     super.resourceType = R5ResourceType.TestReport,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -587,26 +583,25 @@ class TestReport extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
     required this.testScript,
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.score,
-    @JsonKey(name: '_score') required this.scoreElement,
-    required this.tester,
-    @JsonKey(name: '_tester') required this.testerElement,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.participant,
-    required this.setup,
-    required this.test,
-    required this.teardown,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.score,
+    @JsonKey(name: '_score') this.scoreElement,
+    this.tester,
+    @JsonKey(name: '_tester') this.testerElement,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.participant,
+    this.setup,
+    this.test,
+    this.teardown,
   });
-  final R5ResourceType resourceType;
 
   final Identifier? identifier;
   final String? name;
@@ -634,15 +629,15 @@ class TestReport extends Resource {
 @JsonSerializable()
 class TestReportParticipant {
   const TestReportParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -661,9 +656,9 @@ class TestReportParticipant {
 @JsonSerializable()
 class TestReportSetup {
   const TestReportSetup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.action,
   });
   final String? id;
@@ -678,11 +673,11 @@ class TestReportSetup {
 @JsonSerializable()
 class TestReportAction {
   const TestReportAction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -697,15 +692,15 @@ class TestReportAction {
 @JsonSerializable()
 class TestReportOperation {
   const TestReportOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.message,
-    @JsonKey(name: '_message') required this.messageElement,
-    required this.detail,
-    @JsonKey(name: '_detail') required this.detailElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.message,
+    @JsonKey(name: '_message') this.messageElement,
+    this.detail,
+    @JsonKey(name: '_detail') this.detailElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -724,15 +719,15 @@ class TestReportOperation {
 @JsonSerializable()
 class TestReportAssert {
   const TestReportAssert({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.message,
-    @JsonKey(name: '_message') required this.messageElement,
-    required this.detail,
-    @JsonKey(name: '_detail') required this.detailElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.message,
+    @JsonKey(name: '_message') this.messageElement,
+    this.detail,
+    @JsonKey(name: '_detail') this.detailElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -751,13 +746,13 @@ class TestReportAssert {
 @JsonSerializable()
 class TestReportTest {
   const TestReportTest({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.action,
   });
   final String? id;
@@ -776,11 +771,11 @@ class TestReportTest {
 @JsonSerializable()
 class TestReportAction1 {
   const TestReportAction1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -795,9 +790,9 @@ class TestReportAction1 {
 @JsonSerializable()
 class TestReportTeardown {
   const TestReportTeardown({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.action,
   });
   final String? id;
@@ -812,9 +807,9 @@ class TestReportTeardown {
 @JsonSerializable()
 class TestReportAction2 {
   const TestReportAction2({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.operation,
   });
   final String? id;
@@ -832,7 +827,7 @@ class TestScript extends Resource {
     super.resourceType = R5ResourceType.TestScript,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -840,50 +835,49 @@ class TestScript extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.versionAlgorithmString,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.versionAlgorithmString,
     @JsonKey(name: '__versionAlgorithmString')
-        required this.versionAlgorithmStringElement,
-    required this.versionAlgorithmCoding,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.copyrightLabel,
-    @JsonKey(name: '_copyrightLabel') required this.copyrightLabelElement,
-    required this.origin,
-    required this.destination,
-    required this.metadata,
-    required this.scope,
-    required this.fixture,
-    required this.profile,
-    required this.variable,
-    required this.setup,
-    required this.test,
-    required this.teardown,
+        this.versionAlgorithmStringElement,
+    this.versionAlgorithmCoding,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.copyrightLabel,
+    @JsonKey(name: '_copyrightLabel') this.copyrightLabelElement,
+    this.origin,
+    this.destination,
+    this.metadata,
+    this.scope,
+    this.fixture,
+    this.profile,
+    this.variable,
+    this.setup,
+    this.test,
+    this.teardown,
   });
-  final R5ResourceType resourceType;
 
   final FhirUri? url;
   final Element? urlElement;
@@ -935,15 +929,15 @@ class TestScript extends Resource {
 @JsonSerializable()
 class TestScriptOrigin {
   const TestScriptOrigin({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.index,
-    @JsonKey(name: '_index') required this.indexElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.index,
+    @JsonKey(name: '_index') this.indexElement,
     required this.profile,
-    required this.profileElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.profileElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -962,14 +956,14 @@ class TestScriptOrigin {
 @JsonSerializable()
 class TestScriptDestination {
   const TestScriptDestination({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.index,
-    @JsonKey(name: '_index') required this.indexElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.index,
+    @JsonKey(name: '_index') this.indexElement,
     required this.profile,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -987,10 +981,10 @@ class TestScriptDestination {
 @JsonSerializable()
 class TestScriptMetadata {
   const TestScriptMetadata({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.link,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.link,
     required this.capability,
   });
   final String? id;
@@ -1006,13 +1000,13 @@ class TestScriptMetadata {
 @JsonSerializable()
 class TestScriptLink {
   const TestScriptLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1029,21 +1023,21 @@ class TestScriptLink {
 @JsonSerializable()
 class TestScriptCapability {
   const TestScriptCapability({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'required') required this.required_,
-    @JsonKey(name: '_required') required this.requiredElement,
-    required this.validated,
-    @JsonKey(name: '_validated') required this.validatedElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.origin,
-    @JsonKey(name: '_origin') required this.originElement,
-    required this.destination,
-    @JsonKey(name: '_destination') required this.destinationElement,
-    required this.link,
-    @JsonKey(name: '_link') required this.linkElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'required') this.required_,
+    @JsonKey(name: '_required') this.requiredElement,
+    this.validated,
+    @JsonKey(name: '_validated') this.validatedElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.origin,
+    @JsonKey(name: '_origin') this.originElement,
+    this.destination,
+    @JsonKey(name: '_destination') this.destinationElement,
+    this.link,
+    @JsonKey(name: '_link') this.linkElement,
     required this.capabilities,
   });
   final String? id;
@@ -1070,12 +1064,12 @@ class TestScriptCapability {
 @JsonSerializable()
 class TestScriptScope {
   const TestScriptScope({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.artifact,
-    required this.conformance,
-    required this.phase,
+    this.conformance,
+    this.phase,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1091,14 +1085,14 @@ class TestScriptScope {
 @JsonSerializable()
 class TestScriptFixture {
   const TestScriptFixture({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.autocreate,
-    @JsonKey(name: '_autocreate') required this.autocreateElement,
-    required this.autodelete,
-    @JsonKey(name: '_autodelete') required this.autodeleteElement,
-    required this.resource,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.autocreate,
+    @JsonKey(name: '_autocreate') this.autocreateElement,
+    this.autodelete,
+    @JsonKey(name: '_autodelete') this.autodeleteElement,
+    this.resource,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1116,25 +1110,25 @@ class TestScriptFixture {
 @JsonSerializable()
 class TestScriptVariable {
   const TestScriptVariable({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.defaultValue,
-    @JsonKey(name: '_defaultValue') required this.defaultValueElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.headerField,
-    @JsonKey(name: '_headerField') required this.headerFieldElement,
-    required this.hint,
-    @JsonKey(name: '_hint') required this.hintElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.defaultValue,
+    @JsonKey(name: '_defaultValue') this.defaultValueElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
+    this.headerField,
+    @JsonKey(name: '_headerField') this.headerFieldElement,
+    this.hint,
+    @JsonKey(name: '_hint') this.hintElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1163,9 +1157,9 @@ class TestScriptVariable {
 @JsonSerializable()
 class TestScriptSetup {
   const TestScriptSetup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.action,
   });
   final String? id;
@@ -1180,11 +1174,11 @@ class TestScriptSetup {
 @JsonSerializable()
 class TestScriptAction {
   const TestScriptAction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1199,41 +1193,41 @@ class TestScriptAction {
 @JsonSerializable()
 class TestScriptOperation {
   const TestScriptOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.resource,
-    @JsonKey(name: '_resource') required this.resourceElement,
-    required this.label,
-    @JsonKey(name: '_label') required this.labelElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.accept,
-    @JsonKey(name: '_accept') required this.acceptElement,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.destination,
-    @JsonKey(name: '_destination') required this.destinationElement,
-    required this.encodeRequestUrl,
-    @JsonKey(name: '_encodeRequestUrl') required this.encodeRequestUrlElement,
-    required this.method,
-    @JsonKey(name: '_method') required this.methodElement,
-    required this.origin,
-    @JsonKey(name: '_origin') required this.originElement,
-    required this.params,
-    @JsonKey(name: '_params') required this.paramsElement,
-    required this.requestHeader,
-    required this.requestId,
-    @JsonKey(name: '_requestId') required this.requestIdElement,
-    required this.responseId,
-    @JsonKey(name: '_responseId') required this.responseIdElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
-    required this.targetId,
-    @JsonKey(name: '_targetId') required this.targetIdElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.label,
+    @JsonKey(name: '_label') this.labelElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.accept,
+    @JsonKey(name: '_accept') this.acceptElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.destination,
+    @JsonKey(name: '_destination') this.destinationElement,
+    this.encodeRequestUrl,
+    @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
+    this.method,
+    @JsonKey(name: '_method') this.methodElement,
+    this.origin,
+    @JsonKey(name: '_origin') this.originElement,
+    this.params,
+    @JsonKey(name: '_params') this.paramsElement,
+    this.requestHeader,
+    this.requestId,
+    @JsonKey(name: '_requestId') this.requestIdElement,
+    this.responseId,
+    @JsonKey(name: '_responseId') this.responseIdElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
+    this.targetId,
+    @JsonKey(name: '_targetId') this.targetIdElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1278,13 +1272,13 @@ class TestScriptOperation {
 @JsonSerializable()
 class TestScriptRequestHeader {
   const TestScriptRequestHeader({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.field,
-    @JsonKey(name: '_field') required this.fieldElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.field,
+    @JsonKey(name: '_field') this.fieldElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1301,57 +1295,56 @@ class TestScriptRequestHeader {
 @JsonSerializable()
 class TestScriptAssert {
   const TestScriptAssert({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.label,
-    @JsonKey(name: '_label') required this.labelElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.direction,
-    @JsonKey(name: '_direction') required this.directionElement,
-    required this.compareToSourceId,
-    @JsonKey(name: '_compareToSourceId') required this.compareToSourceIdElement,
-    required this.compareToSourceExpression,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.label,
+    @JsonKey(name: '_label') this.labelElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.direction,
+    @JsonKey(name: '_direction') this.directionElement,
+    this.compareToSourceId,
+    @JsonKey(name: '_compareToSourceId') this.compareToSourceIdElement,
+    this.compareToSourceExpression,
     @JsonKey(name: '__compareToSourceExpression')
-        required this.compareToSourceExpressionElement,
-    required this.compareToSourcePath,
-    @JsonKey(name: '_compareToSourcePath')
-        required this.compareToSourcePathElement,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.headerField,
-    @JsonKey(name: '_headerField') required this.headerFieldElement,
-    required this.minimumId,
-    @JsonKey(name: '_minimumId') required this.minimumIdElement,
-    required this.navigationLinks,
-    @JsonKey(name: '_navigationLinks') required this.navigationLinksElement,
-    @JsonKey(name: 'operator') required this.operator_,
-    @JsonKey(name: '_operator') required this.operatorElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.requestMethod,
-    @JsonKey(name: '_requestMethod') required this.requestMethodElement,
-    required this.requestURL,
-    @JsonKey(name: '_requestURL') required this.requestURLElement,
-    required this.resource,
-    @JsonKey(name: '_resource') required this.resourceElement,
-    required this.response,
-    @JsonKey(name: '_response') required this.responseElement,
-    required this.responseCode,
-    @JsonKey(name: '_responseCode') required this.responseCodeElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
-    required this.stopTestOnFail,
-    @JsonKey(name: '_stopTestOnFail') required this.stopTestOnFailElement,
-    required this.validateProfileId,
-    @JsonKey(name: '_validateProfileId') required this.validateProfileIdElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.warningOnly,
-    @JsonKey(name: '_warningOnly') required this.warningOnlyElement,
+        this.compareToSourceExpressionElement,
+    this.compareToSourcePath,
+    @JsonKey(name: '_compareToSourcePath') this.compareToSourcePathElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
+    this.headerField,
+    @JsonKey(name: '_headerField') this.headerFieldElement,
+    this.minimumId,
+    @JsonKey(name: '_minimumId') this.minimumIdElement,
+    this.navigationLinks,
+    @JsonKey(name: '_navigationLinks') this.navigationLinksElement,
+    @JsonKey(name: 'operator') this.operator_,
+    @JsonKey(name: '_operator') this.operatorElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.requestMethod,
+    @JsonKey(name: '_requestMethod') this.requestMethodElement,
+    this.requestURL,
+    @JsonKey(name: '_requestURL') this.requestURLElement,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.response,
+    @JsonKey(name: '_response') this.responseElement,
+    this.responseCode,
+    @JsonKey(name: '_responseCode') this.responseCodeElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
+    this.stopTestOnFail,
+    @JsonKey(name: '_stopTestOnFail') this.stopTestOnFailElement,
+    this.validateProfileId,
+    @JsonKey(name: '_validateProfileId') this.validateProfileIdElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.warningOnly,
+    @JsonKey(name: '_warningOnly') this.warningOnlyElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1411,13 +1404,13 @@ class TestScriptAssert {
 @JsonSerializable()
 class TestScriptTest {
   const TestScriptTest({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.action,
   });
   final String? id;
@@ -1436,11 +1429,11 @@ class TestScriptTest {
 @JsonSerializable()
 class TestScriptAction1 {
   const TestScriptAction1({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1455,9 +1448,9 @@ class TestScriptAction1 {
 @JsonSerializable()
 class TestScriptTeardown {
   const TestScriptTeardown({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.action,
   });
   final String? id;
@@ -1472,9 +1465,9 @@ class TestScriptTeardown {
 @JsonSerializable()
 class TestScriptAction2 {
   const TestScriptAction2({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.operation,
   });
   final String? id;

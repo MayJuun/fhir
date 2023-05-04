@@ -13,7 +13,7 @@ class Location extends Resource {
     super.resourceType = Dstu2ResourceType.Location,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,22 +21,22 @@ class Location extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.type,
-    required this.telecom,
-    required this.address,
-    required this.physicalType,
-    required this.position,
-    required this.managingOrganization,
-    required this.partOf,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.type,
+    this.telecom,
+    this.address,
+    this.physicalType,
+    this.position,
+    this.managingOrganization,
+    this.partOf,
   });
   final List<Identifier>? identifier;
   final LocationStatus? status;
@@ -62,15 +62,15 @@ class Location extends Resource {
 @JsonSerializable()
 class LocationPosition {
   const LocationPosition({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.longitude,
-    @JsonKey(name: '_longitude') required this.longitudeElement,
+    @JsonKey(name: '_longitude') this.longitudeElement,
     required this.latitude,
-    @JsonKey(name: '_latitude') required this.latitudeElement,
-    required this.altitude,
-    @JsonKey(name: '_altitude') required this.altitudeElement,
+    @JsonKey(name: '_latitude') this.latitudeElement,
+    this.altitude,
+    @JsonKey(name: '_altitude') this.altitudeElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -92,7 +92,7 @@ class Substance extends Resource {
     super.resourceType = Dstu2ResourceType.Substance,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -100,13 +100,13 @@ class Substance extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.category,
+    this.identifier,
+    this.category,
     required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.instance,
-    required this.ingredient,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.instance,
+    this.ingredient,
   });
   final List<Identifier>? identifier;
   final List<CodeableConcept>? category;
@@ -123,13 +123,13 @@ class Substance extends Resource {
 @JsonSerializable()
 class SubstanceInstance {
   const SubstanceInstance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.expiry,
-    @JsonKey(name: '_expiry') required this.expiryElement,
-    required this.quantity,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.expiry,
+    @JsonKey(name: '_expiry') this.expiryElement,
+    this.quantity,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -146,10 +146,10 @@ class SubstanceInstance {
 @JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.quantity,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.quantity,
     required this.substance,
   });
   final Id? id;
@@ -168,7 +168,7 @@ class Person extends Resource {
     super.resourceType = Dstu2ResourceType.Person,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -176,19 +176,19 @@ class Person extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.managingOrganization,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.link,
+    this.identifier,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.managingOrganization,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.link,
   });
   final List<Identifier>? identifier;
   final List<HumanName>? name;
@@ -210,12 +210,12 @@ class Person extends Resource {
 @JsonSerializable()
 class PersonLink {
   const PersonLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.target,
-    required this.assurance,
-    @JsonKey(name: '_assurance') required this.assuranceElement,
+    this.assurance,
+    @JsonKey(name: '_assurance') this.assuranceElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -234,7 +234,7 @@ class Contract extends Resource {
     super.resourceType = Dstu2ResourceType.Contract,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -242,26 +242,26 @@ class Contract extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.applies,
-    required this.subject,
-    required this.authority,
-    required this.domain,
-    required this.type,
-    required this.subType,
-    required this.action,
-    required this.actionReason,
-    required this.actor,
-    required this.valuedItem,
-    required this.signer,
-    required this.term,
-    required this.bindingAttachment,
-    required this.bindingReference,
-    required this.friendly,
-    required this.legal,
-    required this.rule,
+    this.identifier,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.applies,
+    this.subject,
+    this.authority,
+    this.domain,
+    this.type,
+    this.subType,
+    this.action,
+    this.actionReason,
+    this.actor,
+    this.valuedItem,
+    this.signer,
+    this.term,
+    this.bindingAttachment,
+    this.bindingReference,
+    this.friendly,
+    this.legal,
+    this.rule,
   });
   final Identifier? identifier;
   final FhirDateTime? issued;
@@ -291,11 +291,11 @@ class Contract extends Resource {
 @JsonSerializable()
 class ContractActor {
   const ContractActor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.entity,
-    required this.role,
+    this.role,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -310,22 +310,22 @@ class ContractActor {
 @JsonSerializable()
 class ContractValuedItem {
   const ContractValuedItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.entityCodeableConcept,
-    required this.entityReference,
-    required this.identifier,
-    required this.effectiveTime,
-    @JsonKey(name: '_effectiveTime') required this.effectiveTimeElement,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    @JsonKey(name: '_points') required this.pointsElement,
-    required this.net,
-    required this.securityLabelNumberElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.entityCodeableConcept,
+    this.entityReference,
+    this.identifier,
+    this.effectiveTime,
+    @JsonKey(name: '_effectiveTime') this.effectiveTimeElement,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    @JsonKey(name: '_points') this.pointsElement,
+    this.net,
+    this.securityLabelNumberElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -351,9 +351,9 @@ class ContractValuedItem {
 @JsonSerializable()
 class ContractSigner {
   const ContractSigner({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
     required this.party,
     required this.signature,
@@ -372,23 +372,23 @@ class ContractSigner {
 @JsonSerializable()
 class ContractTerm {
   const ContractTerm({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.applies,
-    required this.type,
-    required this.subType,
-    required this.subject,
-    required this.action,
-    required this.actionReason,
-    required this.actor,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.valuedItem,
-    required this.group,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.applies,
+    this.type,
+    this.subType,
+    this.subject,
+    this.action,
+    this.actionReason,
+    this.actor,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.valuedItem,
+    this.group,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -415,11 +415,11 @@ class ContractTerm {
 @JsonSerializable()
 class ContractTermActor {
   const ContractTermActor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.entity,
-    required this.role,
+    this.role,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -434,11 +434,11 @@ class ContractTermActor {
 @JsonSerializable()
 class ContractFriendly {
   const ContractFriendly({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.contentAttachment,
-    required this.contactReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.contentAttachment,
+    this.contactReference,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -453,11 +453,11 @@ class ContractFriendly {
 @JsonSerializable()
 class ContractLegal {
   const ContractLegal({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.contentAttachment,
-    required this.content,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.contentAttachment,
+    this.content,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -472,11 +472,11 @@ class ContractLegal {
 @JsonSerializable()
 class ContractRule {
   const ContractRule({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.contentAttachment,
-    required this.contentReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.contentAttachment,
+    this.contentReference,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

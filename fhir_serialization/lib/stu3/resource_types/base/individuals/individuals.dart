@@ -13,7 +13,7 @@ class Group extends Resource {
     super.resourceType = Stu3ResourceType.Group,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,20 +21,20 @@ class Group extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.actual,
-    @JsonKey(name: '_actual') required this.actualElement,
-    required this.code,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.quantity,
-    @JsonKey(name: '_quantity') required this.quantityElement,
-    required this.characteristic,
-    required this.member,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.actual,
+    @JsonKey(name: '_actual') this.actualElement,
+    this.code,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.quantity,
+    @JsonKey(name: '_quantity') this.quantityElement,
+    this.characteristic,
+    this.member,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -58,14 +58,14 @@ class Group extends Resource {
 class GroupCharacteristic {
   const GroupCharacteristic({
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.exclude,
-    @JsonKey(name: '_exclude') required this.excludeElement,
-    required this.period,
+    this.valueCodeableConcept,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueQuantity,
+    this.valueRange,
+    this.exclude,
+    @JsonKey(name: '_exclude') this.excludeElement,
+    this.period,
   });
   final CodeableConcept code;
   final CodeableConcept? valueCodeableConcept;
@@ -85,9 +85,9 @@ class GroupCharacteristic {
 class GroupMember {
   const GroupMember({
     required this.entity,
-    required this.period,
-    required this.inactive,
-    @JsonKey(name: '_inactive') required this.inactiveElement,
+    this.period,
+    this.inactive,
+    @JsonKey(name: '_inactive') this.inactiveElement,
   });
   final Reference entity;
   final Period? period;
@@ -104,7 +104,7 @@ class Patient extends Resource {
     super.resourceType = Stu3ResourceType.Patient,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -112,34 +112,32 @@ class Patient extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') required this.deceasedBooleanElement,
-    required this.deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') required this.deceasedDateTimeElement,
-    required this.address,
-    required this.maritalStatus,
-    required this.multipleBirthBoolean,
-    @JsonKey(name: '__multipleBirthBoolean')
-        required this.multipleBirthBooleanElement,
-    required this.multipleBirthInteger,
-    @JsonKey(name: '__multipleBirthInteger')
-        required this.multipleBirthIntegerElement,
-    required this.photo,
-    required this.contact,
-    required this.animal,
-    required this.communication,
-    required this.generalPractitioner,
-    required this.managingOrganization,
-    required this.link,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+    this.deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+    this.address,
+    this.maritalStatus,
+    this.multipleBirthBoolean,
+    @JsonKey(name: '__multipleBirthBoolean') this.multipleBirthBooleanElement,
+    this.multipleBirthInteger,
+    @JsonKey(name: '__multipleBirthInteger') this.multipleBirthIntegerElement,
+    this.photo,
+    this.contact,
+    this.animal,
+    this.communication,
+    this.generalPractitioner,
+    this.managingOrganization,
+    this.link,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -177,14 +175,14 @@ class Patient extends Resource {
 @JsonSerializable()
 class PatientContact {
   const PatientContact({
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.organization,
-    required this.period,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.organization,
+    this.period,
   });
   final List<CodeableConcept>? relationship;
   final HumanName? name;
@@ -203,8 +201,8 @@ class PatientContact {
 class PatientAnimal {
   const PatientAnimal({
     required this.species,
-    required this.breed,
-    required this.genderStatus,
+    this.breed,
+    this.genderStatus,
   });
   final CodeableConcept species;
   final CodeableConcept? breed;
@@ -218,8 +216,8 @@ class PatientAnimal {
 class PatientCommunication {
   const PatientCommunication({
     required this.language,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
   });
   final CodeableConcept language;
   final Boolean? preferred;
@@ -233,8 +231,8 @@ class PatientCommunication {
 class PatientLink {
   const PatientLink({
     required this.other,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final Reference other;
   final PatientLinkType? type;
@@ -250,7 +248,7 @@ class Person extends Resource {
     super.resourceType = Stu3ResourceType.Person,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -258,19 +256,19 @@ class Person extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.managingOrganization,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.link,
+    this.identifier,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.managingOrganization,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.link,
   });
   final List<Identifier>? identifier;
   final List<HumanName>? name;
@@ -293,8 +291,8 @@ class Person extends Resource {
 class PersonLink {
   const PersonLink({
     required this.target,
-    required this.assurance,
-    @JsonKey(name: '_assurance') required this.assuranceElement,
+    this.assurance,
+    @JsonKey(name: '_assurance') this.assuranceElement,
   });
   final Reference target;
   final PersonLinkAssurance? assurance;
@@ -310,7 +308,7 @@ class Practitioner extends Resource {
     super.resourceType = Stu3ResourceType.Practitioner,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -318,19 +316,19 @@ class Practitioner extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.photo,
-    required this.qualification,
-    required this.communication,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.photo,
+    this.qualification,
+    this.communication,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -353,10 +351,10 @@ class Practitioner extends Resource {
 @JsonSerializable()
 class PractitionerQualification {
   const PractitionerQualification({
-    required this.identifier,
+    this.identifier,
     required this.code,
-    required this.period,
-    required this.issuer,
+    this.period,
+    this.issuer,
   });
   final List<Identifier>? identifier;
   final CodeableConcept code;
@@ -373,7 +371,7 @@ class PractitionerRole extends Resource {
     super.resourceType = Stu3ResourceType.PractitionerRole,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -381,23 +379,23 @@ class PractitionerRole extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.period,
-    required this.practitioner,
-    required this.organization,
-    required this.code,
-    required this.specialty,
-    required this.location,
-    required this.healthcareService,
-    required this.telecom,
-    required this.availableTime,
-    required this.notAvailable,
-    required this.availabilityExceptions,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.period,
+    this.practitioner,
+    this.organization,
+    this.code,
+    this.specialty,
+    this.location,
+    this.healthcareService,
+    this.telecom,
+    this.availableTime,
+    this.notAvailable,
+    this.availabilityExceptions,
     @JsonKey(name: '__availabilityExceptions')
-        required this.availabilityExceptionsElement,
-    required this.endpoint,
+        this.availabilityExceptionsElement,
+    this.endpoint,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -424,15 +422,14 @@ class PractitionerRole extends Resource {
 @JsonSerializable()
 class PractitionerRoleAvailableTime {
   const PractitionerRoleAvailableTime({
-    required this.daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') required this.daysOfWeekElement,
-    required this.allDay,
-    @JsonKey(name: '_allDay') required this.allDayElement,
-    required this.availableStartTime,
-    @JsonKey(name: '_availableStartTime')
-        required this.availableStartTimeElement,
-    required this.availableEndTime,
-    @JsonKey(name: '_availableEndTime') required this.availableEndTimeElement,
+    this.daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+    this.allDay,
+    @JsonKey(name: '_allDay') this.allDayElement,
+    this.availableStartTime,
+    @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+    this.availableEndTime,
+    @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
   final List<String>? daysOfWeek;
   final List<Element?>? daysOfWeekElement;
@@ -450,9 +447,9 @@ class PractitionerRoleAvailableTime {
 @JsonSerializable()
 class PractitionerRoleNotAvailable {
   const PractitionerRoleNotAvailable({
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.during,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.during,
   });
   final String? description;
   final Element? descriptionElement;
@@ -468,7 +465,7 @@ class RelatedPerson extends Resource {
     super.resourceType = Stu3ResourceType.RelatedPerson,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -476,20 +473,20 @@ class RelatedPerson extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
     required this.patient,
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.period,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.period,
   });
   final List<Identifier>? identifier;
   final Boolean? active;

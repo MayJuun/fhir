@@ -13,7 +13,7 @@ class PaymentNotice extends Resource {
     super.resourceType = Stu3ResourceType.PaymentNotice,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,19 +21,19 @@ class PaymentNotice extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.request,
-    required this.response,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.target,
-    required this.provider,
-    required this.organization,
-    required this.paymentStatus,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.request,
+    this.response,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.target,
+    this.provider,
+    this.organization,
+    this.paymentStatus,
   });
   final List<Identifier>? identifier;
   final String? status;
@@ -59,7 +59,7 @@ class PaymentReconciliation extends Resource {
     super.resourceType = Stu3ResourceType.PaymentReconciliation,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -67,23 +67,23 @@ class PaymentReconciliation extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.period,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.organization,
-    required this.request,
-    required this.outcome,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
-    required this.requestProvider,
-    required this.requestOrganization,
-    required this.detail,
-    required this.form,
-    required this.total,
-    required this.processNote,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.period,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.organization,
+    this.request,
+    this.outcome,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
+    this.requestProvider,
+    this.requestOrganization,
+    this.detail,
+    this.form,
+    this.total,
+    this.processNote,
   });
   final List<Identifier>? identifier;
   final String? status;
@@ -111,13 +111,13 @@ class PaymentReconciliation extends Resource {
 class PaymentReconciliationDetail {
   const PaymentReconciliationDetail({
     required this.type,
-    required this.request,
-    required this.response,
-    required this.submitter,
-    required this.payee,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.amount,
+    this.request,
+    this.response,
+    this.submitter,
+    this.payee,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.amount,
   });
   final CodeableConcept type;
   final Reference? request;
@@ -147,5 +147,6 @@ class PaymentReconciliationProcessNote {
   factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
-  Map<String, dynamic> toJson() => _$PaymentReconciliationDetailToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$PaymentReconciliationProcessNoteToJson(this);
 }

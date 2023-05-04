@@ -8,14 +8,14 @@ part 'draft_types.g.dart';
 @JsonSerializable()
 class Population {
   const Population({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.ageRange,
-    required this.ageCodeableConcept,
-    required this.gender,
-    required this.race,
-    required this.physiologicalCondition,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.ageRange,
+    this.ageCodeableConcept,
+    this.gender,
+    this.race,
+    this.physiologicalCondition,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -33,13 +33,13 @@ class Population {
 @JsonSerializable()
 class ProductShelfLife {
   const ProductShelfLife({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.type,
-    required this.period,
-    required this.specialPrecautionsForStorage,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.type,
+    this.period,
+    this.specialPrecautionsForStorage,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -56,23 +56,23 @@ class ProductShelfLife {
 @JsonSerializable()
 class ProdCharacteristic {
   const ProdCharacteristic({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.height,
-    required this.width,
-    required this.depth,
-    required this.weight,
-    required this.nominalVolume,
-    required this.externalDiameter,
-    required this.shape,
-    @JsonKey(name: '_shape') required this.shapeElement,
-    required this.color,
-    @JsonKey(name: '_color') required this.colorElement,
-    required this.imprint,
-    @JsonKey(name: '_imprint') required this.imprintElement,
-    required this.image,
-    required this.scoring,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.height,
+    this.width,
+    this.depth,
+    this.weight,
+    this.nominalVolume,
+    this.externalDiameter,
+    this.shape,
+    @JsonKey(name: '_shape') this.shapeElement,
+    this.color,
+    @JsonKey(name: '_color') this.colorElement,
+    this.imprint,
+    @JsonKey(name: '_imprint') this.imprintElement,
+    this.image,
+    this.scoring,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -99,15 +99,15 @@ class ProdCharacteristic {
 @JsonSerializable()
 class MarketingStatus {
   const MarketingStatus({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.country,
-    required this.jurisdiction,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.country,
+    this.jurisdiction,
     required this.status,
-    required this.dateRange,
-    required this.restoreDate,
-    @JsonKey(name: '_restoreDate') required this.restoreDateElement,
+    this.dateRange,
+    this.restoreDate,
+    @JsonKey(name: '_restoreDate') this.restoreDateElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -122,4 +122,3 @@ class MarketingStatus {
       _$MarketingStatusFromJson(json);
   Map<String, dynamic> toJson() => _$MarketingStatusToJson(this);
 }
-

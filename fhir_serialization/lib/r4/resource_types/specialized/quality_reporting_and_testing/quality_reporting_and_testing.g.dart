@@ -10,7 +10,7 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Measure,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -224,9 +224,7 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
     );
 
 Map<String, dynamic> _$MeasureToJson(Measure instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -234,7 +232,8 @@ Map<String, dynamic> _$MeasureToJson(Measure instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -702,7 +701,7 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MeasureReport,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -766,9 +765,7 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -776,7 +773,8 @@ Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1070,7 +1068,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.TestReport,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1145,9 +1143,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
     );
 
 Map<String, dynamic> _$TestReportToJson(TestReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1155,7 +1151,8 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1550,7 +1547,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.TestScript,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1676,9 +1673,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
     );
 
 Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1686,7 +1681,8 @@ Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

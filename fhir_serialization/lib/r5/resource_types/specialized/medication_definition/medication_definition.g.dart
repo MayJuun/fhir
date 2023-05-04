@@ -9,7 +9,9 @@ part of 'medication_definition.dart';
 AdministrableProductDefinition _$AdministrableProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     AdministrableProductDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.AdministrableProductDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -87,6 +89,7 @@ Map<String, dynamic> _$AdministrableProductDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -99,7 +102,6 @@ Map<String, dynamic> _$AdministrableProductDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -587,6 +589,7 @@ Map<String, dynamic> _$ClinicalUseDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -599,7 +602,6 @@ Map<String, dynamic> _$ClinicalUseDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
@@ -1053,6 +1055,7 @@ Map<String, dynamic> _$IngredientToJson(Ingredient instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1065,7 +1068,6 @@ Map<String, dynamic> _$IngredientToJson(Ingredient instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusElement', instance.statusElement?.toJson());
@@ -1328,7 +1330,9 @@ Map<String, dynamic> _$IngredientReferenceStrengthToJson(
 ManufacturedItemDefinition _$ManufacturedItemDefinitionFromJson(
         Map<String, dynamic> json) =>
     ManufacturedItemDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ManufacturedItemDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1404,6 +1408,7 @@ Map<String, dynamic> _$ManufacturedItemDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1416,7 +1421,6 @@ Map<String, dynamic> _$ManufacturedItemDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -1610,7 +1614,9 @@ Map<String, dynamic> _$ManufacturedItemDefinitionConstituentToJson(
 MedicinalProductDefinition _$MedicinalProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     MedicinalProductDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.MedicinalProductDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1762,6 +1768,7 @@ Map<String, dynamic> _$MedicinalProductDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1774,7 +1781,6 @@ Map<String, dynamic> _$MedicinalProductDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
@@ -2166,7 +2172,9 @@ Map<String, dynamic> _$MedicinalProductDefinitionCharacteristicToJson(
 PackagedProductDefinition _$PackagedProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     PackagedProductDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PackagedProductDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2268,6 +2276,7 @@ Map<String, dynamic> _$PackagedProductDefinitionToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2280,7 +2289,6 @@ Map<String, dynamic> _$PackagedProductDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
@@ -2644,6 +2652,7 @@ Map<String, dynamic> _$RegulatedAuthorizationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2656,7 +2665,6 @@ Map<String, dynamic> _$RegulatedAuthorizationToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('subject', instance.subject?.map((e) => e.toJson()).toList());
@@ -2873,6 +2881,7 @@ Map<String, dynamic> _$SubstanceDefinitionToJson(SubstanceDefinition instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2885,7 +2894,6 @@ Map<String, dynamic> _$SubstanceDefinitionToJson(SubstanceDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
@@ -3670,6 +3678,7 @@ Map<String, dynamic> _$SubstanceNucleicAcidToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -3682,7 +3691,6 @@ Map<String, dynamic> _$SubstanceNucleicAcidToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('sequenceType', instance.sequenceType?.toJson());
   writeNotNull('numberOfSubunits', instance.numberOfSubunits?.toJson());
   writeNotNull(
@@ -3939,6 +3947,7 @@ Map<String, dynamic> _$SubstancePolymerToJson(SubstancePolymer instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -3951,7 +3960,6 @@ Map<String, dynamic> _$SubstancePolymerToJson(SubstancePolymer instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('class_', instance.class_?.toJson());
   writeNotNull('geometry', instance.geometry?.toJson());
@@ -4340,6 +4348,7 @@ Map<String, dynamic> _$SubstanceProteinToJson(SubstanceProtein instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -4352,7 +4361,6 @@ Map<String, dynamic> _$SubstanceProteinToJson(SubstanceProtein instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('sequenceType', instance.sequenceType?.toJson());
   writeNotNull('numberOfSubunits', instance.numberOfSubunits?.toJson());
   writeNotNull(
@@ -4449,7 +4457,9 @@ Map<String, dynamic> _$SubstanceProteinSubunitToJson(
 SubstanceReferenceInformation _$SubstanceReferenceInformationFromJson(
         Map<String, dynamic> json) =>
     SubstanceReferenceInformation(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.SubstanceReferenceInformation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4507,6 +4517,7 @@ Map<String, dynamic> _$SubstanceReferenceInformationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -4519,7 +4530,6 @@ Map<String, dynamic> _$SubstanceReferenceInformationToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('comment', instance.comment);
   writeNotNull('commentElement', instance.commentElement?.toJson());
   writeNotNull('gene', instance.gene?.map((e) => e.toJson()).toList());
@@ -4796,6 +4806,7 @@ Map<String, dynamic> _$SubstanceSourceMaterialToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -4808,7 +4819,6 @@ Map<String, dynamic> _$SubstanceSourceMaterialToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('sourceMaterialClass', instance.sourceMaterialClass?.toJson());
   writeNotNull('sourceMaterialType', instance.sourceMaterialType?.toJson());
   writeNotNull('sourceMaterialState', instance.sourceMaterialState?.toJson());

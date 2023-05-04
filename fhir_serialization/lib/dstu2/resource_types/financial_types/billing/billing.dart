@@ -13,7 +13,7 @@ class Account extends Resource {
     super.resourceType = Dstu2ResourceType.Account,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,20 +21,20 @@ class Account extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.activePeriod,
-    required this.currency,
-    required this.balance,
-    required this.coveragePeriod,
-    required this.subject,
-    required this.owner,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.activePeriod,
+    this.currency,
+    this.balance,
+    this.coveragePeriod,
+    this.subject,
+    this.owner,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final List<Identifier>? identifier;
   final String? name;
@@ -61,7 +61,7 @@ class Claim extends Resource {
     super.resourceType = Dstu2ResourceType.Claim,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -70,36 +70,36 @@ class Claim extends Resource {
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
     required this.type,
-    required this.identifier,
-    required this.ruleset,
-    required this.originalRuleset,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.target,
-    required this.provider,
-    required this.organization,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.priority,
-    required this.fundsReserve,
-    required this.enterer,
-    required this.facility,
-    required this.prescription,
-    required this.originalPrescription,
-    required this.payee,
-    required this.referral,
-    required this.diagnosis,
-    required this.condition,
+    this.identifier,
+    this.ruleset,
+    this.originalRuleset,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.target,
+    this.provider,
+    this.organization,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.priority,
+    this.fundsReserve,
+    this.enterer,
+    this.facility,
+    this.prescription,
+    this.originalPrescription,
+    this.payee,
+    this.referral,
+    this.diagnosis,
+    this.condition,
     required this.patient,
-    required this.coverage,
-    required this.exception,
-    required this.school,
-    required this.accident,
-    required this.accidentType,
-    required this.interventionException,
-    required this.item,
-    required this.additionalMaterials,
-    required this.missingTeeth,
+    this.coverage,
+    this.exception,
+    this.school,
+    this.accident,
+    this.accidentType,
+    this.interventionException,
+    this.item,
+    this.additionalMaterials,
+    this.missingTeeth,
   });
   final ClaimType type;
   final List<Identifier>? identifier;
@@ -139,13 +139,13 @@ class Claim extends Resource {
 @JsonSerializable()
 class ClaimPayee {
   const ClaimPayee({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.provider,
-    required this.organization,
-    required this.person,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.provider,
+    this.organization,
+    this.person,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -162,11 +162,11 @@ class ClaimPayee {
 @JsonSerializable()
 class ClaimDiagnosis {
   const ClaimDiagnosis({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.diagnosis,
   });
   final Id? id;
@@ -183,17 +183,17 @@ class ClaimDiagnosis {
 @JsonSerializable()
 class ClaimCoverage {
   const ClaimCoverage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
     required this.focal,
     required this.coverage,
-    required this.businessArrangement,
+    this.businessArrangement,
     required this.relationship,
-    required this.preAuthRef,
-    required this.claimResponse,
-    required this.originalRuleset,
+    this.preAuthRef,
+    this.claimResponse,
+    this.originalRuleset,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -214,29 +214,29 @@ class ClaimCoverage {
 @JsonSerializable()
 class ClaimItem {
   const ClaimItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.type,
-    required this.provider,
-    required this.diagnosisLinkId,
+    this.provider,
+    this.diagnosisLinkId,
     required this.service,
-    @JsonKey(name: '_servicedDate') required this.servicedDateElement,
-    required this.serviceDate,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    required this.net,
-    required this.udi,
-    required this.bodySite,
-    required this.subSite,
-    required this.modifier,
-    required this.detail,
-    required this.prosthesis,
+    @JsonKey(name: '_servicedDate') this.servicedDateElement,
+    this.serviceDate,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    this.net,
+    this.udi,
+    this.bodySite,
+    this.subSite,
+    this.modifier,
+    this.detail,
+    this.prosthesis,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -269,21 +269,21 @@ class ClaimItem {
 @JsonSerializable()
 class ClaimItemDetail {
   const ClaimItemDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.type,
     required this.service,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    required this.net,
-    required this.udi,
-    required this.subDetail,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    this.net,
+    this.udi,
+    this.subDetail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -308,20 +308,20 @@ class ClaimItemDetail {
 @JsonSerializable()
 class ClaimDetailSubDetail {
   const ClaimDetailSubDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.type,
     required this.service,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    required this.net,
-    required this.udi,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    this.net,
+    this.udi,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -345,12 +345,12 @@ class ClaimDetailSubDetail {
 @JsonSerializable()
 class ClaimItemProsthesis {
   const ClaimItemProsthesis({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.initial,
-    required this.priorDate,
-    required this.priorMaterial,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.initial,
+    this.priorDate,
+    this.priorMaterial,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -366,12 +366,12 @@ class ClaimItemProsthesis {
 @JsonSerializable()
 class ClaimMissingTeeth {
   const ClaimMissingTeeth({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.tooth,
-    required this.reason,
-    required this.extractionDate,
+    this.reason,
+    this.extractionDate,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -390,7 +390,7 @@ class ClaimResponse extends Resource {
     super.resourceType = Dstu2ResourceType.ClaimResponse,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -398,36 +398,36 @@ class ClaimResponse extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.request,
-    required this.ruleset,
-    required this.originalRuleset,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.organization,
-    required this.requestProvider,
-    required this.requestOrganization,
-    required this.outcome,
-    @JsonKey(name: '_outcome') required this.outcomeElement,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
-    required this.payeeType,
-    required this.item,
-    required this.addItem,
-    required this.error,
-    required this.totalCost,
-    required this.unallocDeductable,
-    required this.totalBenefit,
-    required this.paymentAdjustment,
-    required this.paymentAdjustmentReason,
-    required this.paymentDate,
-    @JsonKey(name: '_paymentDate') required this.paymentDateElement,
-    required this.paymentAmount,
-    required this.paymentRef,
-    required this.reserved,
-    required this.form,
-    required this.note,
-    required this.coverage,
+    this.identifier,
+    this.request,
+    this.ruleset,
+    this.originalRuleset,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.organization,
+    this.requestProvider,
+    this.requestOrganization,
+    this.outcome,
+    @JsonKey(name: '_outcome') this.outcomeElement,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
+    this.payeeType,
+    this.item,
+    this.addItem,
+    this.error,
+    this.totalCost,
+    this.unallocDeductable,
+    this.totalBenefit,
+    this.paymentAdjustment,
+    this.paymentAdjustmentReason,
+    this.paymentDate,
+    @JsonKey(name: '_paymentDate') this.paymentDateElement,
+    this.paymentAmount,
+    this.paymentRef,
+    this.reserved,
+    this.form,
+    this.note,
+    this.coverage,
   });
   final List<Identifier>? identifier;
   final Reference? request;
@@ -468,15 +468,15 @@ class ClaimResponse extends Resource {
 @JsonSerializable()
 class ClaimResponseItem {
   const ClaimResponseItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.sequenceLinkId,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.detail,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.detail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -495,13 +495,13 @@ class ClaimResponseItem {
 @JsonSerializable()
 class ClaimResponseItemAdjudication {
   const ClaimResponseItemAdjudication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.amount,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.amount,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -518,12 +518,12 @@ class ClaimResponseItemAdjudication {
 @JsonSerializable()
 class ClaimResponseItemDetail {
   const ClaimResponseItemDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequenceLinkId,
-    required this.adjudication,
-    required this.subDetail,
+    this.adjudication,
+    this.subDetail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -539,11 +539,11 @@ class ClaimResponseItemDetail {
 @JsonSerializable()
 class ClaimResponseDetailSubDetail {
   const ClaimResponseDetailSubDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequenceLinkId,
-    required this.adjudication,
+    this.adjudication,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -558,15 +558,15 @@ class ClaimResponseDetailSubDetail {
 @JsonSerializable()
 class ClaimResponseAddItem {
   const ClaimResponseAddItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.sequenceLinkId,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.sequenceLinkId,
     required this.service,
-    required this.fee,
-    required this.noteNumberLinkId,
-    required this.adjudication,
-    required this.detail,
+    this.fee,
+    this.noteNumberLinkId,
+    this.adjudication,
+    this.detail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -585,12 +585,12 @@ class ClaimResponseAddItem {
 @JsonSerializable()
 class ClaimResponseAddItemDetail {
   const ClaimResponseAddItemDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.service,
-    required this.fee,
-    required this.adjudication,
+    this.fee,
+    this.adjudication,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -606,12 +606,12 @@ class ClaimResponseAddItemDetail {
 @JsonSerializable()
 class ClaimResponseError {
   const ClaimResponseError({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.sequenceLinkId,
-    required this.detailSequenceLinkId,
-    required this.subdetailSequenceLinkId,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.sequenceLinkId,
+    this.detailSequenceLinkId,
+    this.subdetailSequenceLinkId,
     required this.code,
   });
   final Id? id;
@@ -629,15 +629,15 @@ class ClaimResponseError {
 @JsonSerializable()
 class ClaimResponseNote {
   const ClaimResponseNote({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.number,
-    @JsonKey(name: '_number') required this.numberElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.number,
+    @JsonKey(name: '_number') this.numberElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -656,17 +656,17 @@ class ClaimResponseNote {
 @JsonSerializable()
 class ClaimResponseCoverage {
   const ClaimResponseCoverage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.sequence,
     required this.focal,
     required this.coverage,
-    required this.businessArrangement,
+    this.businessArrangement,
     required this.relationship,
-    required this.preAuthRef,
-    required this.claimResponse,
-    required this.originalRuleset,
+    this.preAuthRef,
+    this.claimResponse,
+    this.originalRuleset,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

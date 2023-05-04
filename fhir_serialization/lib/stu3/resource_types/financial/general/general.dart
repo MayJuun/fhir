@@ -13,7 +13,7 @@ class Account extends Resource {
     super.resourceType = Stu3ResourceType.Account,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,21 +21,21 @@ class Account extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.subject,
-    required this.period,
-    required this.active,
-    required this.balance,
-    required this.coverage,
-    required this.owner,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.guarantor,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.subject,
+    this.period,
+    this.active,
+    this.balance,
+    this.coverage,
+    this.owner,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.guarantor,
   });
   final List<Identifier>? identifier;
   final AccountStatus? status;
@@ -61,8 +61,8 @@ class Account extends Resource {
 class AccountCoverage {
   const AccountCoverage({
     required this.coverage,
-    required this.priority,
-    @JsonKey(name: '_priority') required this.priorityElement,
+    this.priority,
+    @JsonKey(name: '_priority') this.priorityElement,
   });
   final Reference coverage;
   final Decimal? priority;
@@ -76,9 +76,9 @@ class AccountCoverage {
 class AccountGuarantor {
   const AccountGuarantor({
     required this.party,
-    required this.onHold,
-    @JsonKey(name: '_onHold') required this.onHoldElement,
-    required this.period,
+    this.onHold,
+    @JsonKey(name: '_onHold') this.onHoldElement,
+    this.period,
   });
   final Reference party;
   final Boolean? onHold;
@@ -95,7 +95,7 @@ class ChargeItem extends Resource {
     super.resourceType = Stu3ResourceType.ChargeItem,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -103,38 +103,37 @@ class ChargeItem extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.definition,
-    @JsonKey(name: '_definition') required this.definitionElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.partOf,
+    this.identifier,
+    this.definition,
+    @JsonKey(name: '_definition') this.definitionElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.partOf,
     required this.code,
     required this.subject,
-    required this.context,
-    required this.occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-        required this.occurrenceDateTimeElement,
-    required this.occurrencePeriod,
-    required this.occurrenceTiming,
-    required this.participant,
-    required this.performingOrganization,
-    required this.requestingOrganization,
-    required this.quantity,
-    required this.bodysite,
-    required this.factorOverride,
-    @JsonKey(name: '_factorOverride') required this.factorOverrideElement,
-    required this.priceOverride,
-    required this.overrideReason,
-    @JsonKey(name: '_overrideReason') required this.overrideReasonElement,
-    required this.enterer,
-    required this.enteredDate,
-    @JsonKey(name: '_enteredDate') required this.enteredDateElement,
-    required this.reason,
-    required this.service,
-    required this.account,
-    required this.note,
-    required this.supportingInformation,
+    this.context,
+    this.occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+    this.occurrencePeriod,
+    this.occurrenceTiming,
+    this.participant,
+    this.performingOrganization,
+    this.requestingOrganization,
+    this.quantity,
+    this.bodysite,
+    this.factorOverride,
+    @JsonKey(name: '_factorOverride') this.factorOverrideElement,
+    this.priceOverride,
+    this.overrideReason,
+    @JsonKey(name: '_overrideReason') this.overrideReasonElement,
+    this.enterer,
+    this.enteredDate,
+    @JsonKey(name: '_enteredDate') this.enteredDateElement,
+    this.reason,
+    this.service,
+    this.account,
+    this.note,
+    this.supportingInformation,
   });
   final Identifier? identifier;
   final List<String>? definition;
@@ -175,7 +174,7 @@ class ChargeItem extends Resource {
 @JsonSerializable()
 class ChargeItemParticipant {
   const ChargeItemParticipant({
-    required this.role,
+    this.role,
     required this.actor,
   });
   final CodeableConcept? role;
@@ -191,7 +190,7 @@ class Contract extends Resource {
     super.resourceType = Stu3ResourceType.Contract,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -199,32 +198,32 @@ class Contract extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.applies,
-    required this.subject,
-    required this.topic,
-    required this.authority,
-    required this.domain,
-    required this.type,
-    required this.subType,
-    required this.action,
-    required this.actionReason,
-    required this.decisionType,
-    required this.contentDerivative,
-    required this.securityLabel,
-    required this.agent,
-    required this.signer,
-    required this.valuedItem,
-    required this.term,
-    required this.bindingAttachment,
-    required this.bindingReference,
-    required this.friendly,
-    required this.legal,
-    required this.rule,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.applies,
+    this.subject,
+    this.topic,
+    this.authority,
+    this.domain,
+    this.type,
+    this.subType,
+    this.action,
+    this.actionReason,
+    this.decisionType,
+    this.contentDerivative,
+    this.securityLabel,
+    this.agent,
+    this.signer,
+    this.valuedItem,
+    this.term,
+    this.bindingAttachment,
+    this.bindingReference,
+    this.friendly,
+    this.legal,
+    this.rule,
   });
   final Identifier? identifier;
   final String? status;
@@ -261,7 +260,7 @@ class Contract extends Resource {
 class ContractAgent {
   const ContractAgent({
     required this.actor,
-    required this.role,
+    this.role,
   });
   final Reference actor;
   final List<CodeableConcept>? role;
@@ -288,18 +287,18 @@ class ContractSigner {
 @JsonSerializable()
 class ContractValuedItem {
   const ContractValuedItem({
-    required this.entityCodeableConcept,
-    required this.entityReference,
-    required this.identifier,
-    required this.effectiveTime,
-    @JsonKey(name: '_effectiveTime') required this.effectiveTimeElement,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    @JsonKey(name: '_points') required this.pointsElement,
-    required this.net,
+    this.entityCodeableConcept,
+    this.entityReference,
+    this.identifier,
+    this.effectiveTime,
+    @JsonKey(name: '_effectiveTime') this.effectiveTimeElement,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    @JsonKey(name: '_points') this.pointsElement,
+    this.net,
   });
   final CodeableConcept? entityCodeableConcept;
   final Reference? entityReference;
@@ -321,21 +320,21 @@ class ContractValuedItem {
 @JsonSerializable()
 class ContractTerm {
   const ContractTerm({
-    required this.identifier,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.applies,
-    required this.type,
-    required this.subType,
-    required this.topic,
-    required this.action,
-    required this.actionReason,
-    required this.securityLabel,
-    required this.agent,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.valuedItem,
-    required this.group,
+    this.identifier,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.applies,
+    this.type,
+    this.subType,
+    this.topic,
+    this.action,
+    this.actionReason,
+    this.securityLabel,
+    this.agent,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.valuedItem,
+    this.group,
   });
   final Identifier? identifier;
   final String? issued;
@@ -361,7 +360,7 @@ class ContractTerm {
 class ContractAgent1 {
   const ContractAgent1({
     required this.actor,
-    required this.role,
+    this.role,
   });
   final Reference actor;
   final List<CodeableConcept>? role;
@@ -373,18 +372,18 @@ class ContractAgent1 {
 @JsonSerializable()
 class ContractValuedItem1 {
   const ContractValuedItem1({
-    required this.entityCodeableConcept,
-    required this.entityReference,
-    required this.identifier,
-    required this.effectiveTime,
-    @JsonKey(name: '_effectiveTime') required this.effectiveTimeElement,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.points,
-    @JsonKey(name: '_points') required this.pointsElement,
-    required this.net,
+    this.entityCodeableConcept,
+    this.entityReference,
+    this.identifier,
+    this.effectiveTime,
+    @JsonKey(name: '_effectiveTime') this.effectiveTimeElement,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.points,
+    @JsonKey(name: '_points') this.pointsElement,
+    this.net,
   });
   final CodeableConcept? entityCodeableConcept;
   final Reference? entityReference;
@@ -406,8 +405,8 @@ class ContractValuedItem1 {
 @JsonSerializable()
 class ContractFriendly {
   const ContractFriendly({
-    required this.contentAttachment,
-    required this.contentReference,
+    this.contentAttachment,
+    this.contentReference,
   });
   final Attachment? contentAttachment;
   final Reference? contentReference;
@@ -419,8 +418,8 @@ class ContractFriendly {
 @JsonSerializable()
 class ContractLegal {
   const ContractLegal({
-    required this.contentAttachment,
-    required this.contentReference,
+    this.contentAttachment,
+    this.contentReference,
   });
   final Attachment? contentAttachment;
   final Reference? contentReference;
@@ -432,8 +431,8 @@ class ContractLegal {
 @JsonSerializable()
 class ContractRule {
   const ContractRule({
-    required this.contentAttachment,
-    required this.contentReference,
+    this.contentAttachment,
+    this.contentReference,
   });
   final Attachment? contentAttachment;
   final Reference? contentReference;
@@ -448,7 +447,7 @@ class ExplanationOfBenefit extends Resource {
     super.resourceType = Stu3ResourceType.ExplanationOfBenefit,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -456,49 +455,49 @@ class ExplanationOfBenefit extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    required this.subType,
-    required this.patient,
-    required this.billablePeriod,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.enterer,
-    required this.insurer,
-    required this.provider,
-    required this.organization,
-    required this.referral,
-    required this.facility,
-    required this.claim,
-    required this.claimResponse,
-    required this.outcome,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
-    required this.related,
-    required this.prescription,
-    required this.originalPrescription,
-    required this.payee,
-    required this.information,
-    required this.careTeam,
-    required this.diagnosis,
-    required this.procedure,
-    required this.precedence,
-    @JsonKey(name: '_precedence') required this.precedenceElement,
-    required this.insurance,
-    required this.accident,
-    required this.employmentImpacted,
-    required this.hospitalization,
-    required this.item,
-    required this.addItem,
-    required this.totalCost,
-    required this.unallocDeductable,
-    required this.totalBenefit,
-    required this.payment,
-    required this.form,
-    required this.processNote,
-    required this.benefitBalance,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    this.subType,
+    this.patient,
+    this.billablePeriod,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.enterer,
+    this.insurer,
+    this.provider,
+    this.organization,
+    this.referral,
+    this.facility,
+    this.claim,
+    this.claimResponse,
+    this.outcome,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
+    this.related,
+    this.prescription,
+    this.originalPrescription,
+    this.payee,
+    this.information,
+    this.careTeam,
+    this.diagnosis,
+    this.procedure,
+    this.precedence,
+    @JsonKey(name: '_precedence') this.precedenceElement,
+    this.insurance,
+    this.accident,
+    this.employmentImpacted,
+    this.hospitalization,
+    this.item,
+    this.addItem,
+    this.totalCost,
+    this.unallocDeductable,
+    this.totalBenefit,
+    this.payment,
+    this.form,
+    this.processNote,
+    this.benefitBalance,
   });
   final List<Identifier>? identifier;
   final ExplanationOfBenefitStatus? status;
@@ -551,9 +550,9 @@ class ExplanationOfBenefit extends Resource {
 @JsonSerializable()
 class ExplanationOfBenefitRelated {
   const ExplanationOfBenefitRelated({
-    required this.claim,
-    required this.relationship,
-    required this.reference,
+    this.claim,
+    this.relationship,
+    this.reference,
   });
   final Reference? claim;
   final CodeableConcept? relationship;
@@ -566,8 +565,8 @@ class ExplanationOfBenefitRelated {
 @JsonSerializable()
 class ExplanationOfBenefitPayee {
   const ExplanationOfBenefitPayee({
-    required this.type,
-    required this.party,
+    this.type,
+    this.party,
   });
   final CodeableConcept? type;
   final Reference? party;
@@ -579,19 +578,19 @@ class ExplanationOfBenefitPayee {
 @JsonSerializable()
 class ExplanationOfBenefitInformation {
   const ExplanationOfBenefitInformation({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.category,
-    required this.code,
-    required this.timingDate,
-    @JsonKey(name: '_timingDate') required this.timingDateElement,
-    required this.timingPeriod,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueQuantity,
-    required this.valueAttachment,
-    required this.valueReference,
-    required this.reason,
+    this.code,
+    this.timingDate,
+    @JsonKey(name: '_timingDate') this.timingDateElement,
+    this.timingPeriod,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueQuantity,
+    this.valueAttachment,
+    this.valueReference,
+    this.reason,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -615,13 +614,13 @@ class ExplanationOfBenefitInformation {
 @JsonSerializable()
 class ExplanationOfBenefitCareTeam {
   const ExplanationOfBenefitCareTeam({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.provider,
-    required this.responsible,
-    @JsonKey(name: '_responsible') required this.responsibleElement,
-    required this.role,
-    required this.qualification,
+    this.responsible,
+    @JsonKey(name: '_responsible') this.responsibleElement,
+    this.role,
+    this.qualification,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -638,12 +637,12 @@ class ExplanationOfBenefitCareTeam {
 @JsonSerializable()
 class ExplanationOfBenefitDiagnosis {
   const ExplanationOfBenefitDiagnosis({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.diagnosisCodeableConcept,
-    required this.diagnosisReference,
-    required this.type,
-    required this.packageCode,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.diagnosisCodeableConcept,
+    this.diagnosisReference,
+    this.type,
+    this.packageCode,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -659,12 +658,12 @@ class ExplanationOfBenefitDiagnosis {
 @JsonSerializable()
 class ExplanationOfBenefitProcedure {
   const ExplanationOfBenefitProcedure({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.procedureCodeableConcept,
-    required this.procedureReference,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.procedureCodeableConcept,
+    this.procedureReference,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -680,9 +679,9 @@ class ExplanationOfBenefitProcedure {
 @JsonSerializable()
 class ExplanationOfBenefitInsurance {
   const ExplanationOfBenefitInsurance({
-    required this.coverage,
-    required this.preAuthRef,
-    @JsonKey(name: '_preAuthRef') required this.preAuthRefElement,
+    this.coverage,
+    this.preAuthRef,
+    @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
   });
   final Reference? coverage;
   final List<String>? preAuthRef;
@@ -695,11 +694,11 @@ class ExplanationOfBenefitInsurance {
 @JsonSerializable()
 class ExplanationOfBenefitAccident {
   const ExplanationOfBenefitAccident({
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.type,
-    required this.locationAddress,
-    required this.locationReference,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.type,
+    this.locationAddress,
+    this.locationReference,
   });
   final Date? date;
   final Element? dateElement;
@@ -714,41 +713,40 @@ class ExplanationOfBenefitAccident {
 @JsonSerializable()
 class ExplanationOfBenefitItem {
   const ExplanationOfBenefitItem({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.careTeamLinkId,
-    @JsonKey(name: '_careTeamLinkId') required this.careTeamLinkIdElement,
-    required this.diagnosisLinkId,
-    @JsonKey(name: '_diagnosisLinkId') required this.diagnosisLinkIdElement,
-    required this.procedureLinkId,
-    @JsonKey(name: '_procedureLinkId') required this.procedureLinkIdElement,
-    required this.informationLinkId,
-    @JsonKey(name: '__informationLinkId')
-        required this.informationLinkIdElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.programCode,
-    required this.servicedDate,
-    @JsonKey(name: '_servicedDate') required this.servicedDateElement,
-    required this.servicedPeriod,
-    required this.locationCodeableConcept,
-    required this.locationAddress,
-    required this.locationReference,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.net,
-    required this.udi,
-    required this.bodySite,
-    required this.subSite,
-    required this.encounter,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.detail,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.careTeamLinkId,
+    @JsonKey(name: '_careTeamLinkId') this.careTeamLinkIdElement,
+    this.diagnosisLinkId,
+    @JsonKey(name: '_diagnosisLinkId') this.diagnosisLinkIdElement,
+    this.procedureLinkId,
+    @JsonKey(name: '_procedureLinkId') this.procedureLinkIdElement,
+    this.informationLinkId,
+    @JsonKey(name: '__informationLinkId') this.informationLinkIdElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.servicedDate,
+    @JsonKey(name: '_servicedDate') this.servicedDateElement,
+    this.servicedPeriod,
+    this.locationCodeableConcept,
+    this.locationAddress,
+    this.locationReference,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
+    this.bodySite,
+    this.subSite,
+    this.encounter,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.detail,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -791,13 +789,60 @@ class ExplanationOfBenefitItem {
 }
 
 @JsonSerializable()
+class ExplanationOfBenefitDetail {
+  const ExplanationOfBenefitDetail({
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    required this.type,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.subDetail,
+  });
+
+  final Decimal? sequence;
+  final Element? sequenceElement;
+  final CodeableConcept type;
+  final CodeableConcept? revenue;
+  final CodeableConcept? category;
+  final CodeableConcept? service;
+  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept>? programCode;
+  final Quantity? quantity;
+  final Money? unitPrice;
+  final Decimal? factor;
+  final Element? factorElement;
+  final Money? net;
+  final List<Reference>? udi;
+  final List<Decimal>? noteNumber;
+  final List<Element?>? noteNumberElement;
+  final List<ExplanationOfBenefitAdjudication>? adjudication;
+  final List<ExplanationOfBenefitSubDetail>? subDetail;
+
+  factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitDetailToJson(this);
+}
+
+@JsonSerializable()
 class ExplanationOfBenefitAdjudication {
   const ExplanationOfBenefitAdjudication({
     required this.category,
-    required this.reason,
-    required this.amount,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.reason,
+    this.amount,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final CodeableConcept category;
   final CodeableConcept? reason;
@@ -814,23 +859,23 @@ class ExplanationOfBenefitAdjudication {
 @JsonSerializable()
 class ExplanationOfBenefitSubDetail {
   const ExplanationOfBenefitSubDetail({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.type,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.programCode,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.net,
-    required this.udi,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -857,17 +902,17 @@ class ExplanationOfBenefitSubDetail {
 @JsonSerializable()
 class ExplanationOfBenefitAddItem {
   const ExplanationOfBenefitAddItem({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.fee,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.detail,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.fee,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.detail,
   });
   final List<Id>? sequenceLinkId;
   final List<Element?>? sequenceLinkIdElement;
@@ -888,14 +933,14 @@ class ExplanationOfBenefitAddItem {
 @JsonSerializable()
 class ExplanationOfBenefitDetail1 {
   const ExplanationOfBenefitDetail1({
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.fee,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.fee,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
   });
   final CodeableConcept? revenue;
   final CodeableConcept? category;
@@ -913,13 +958,13 @@ class ExplanationOfBenefitDetail1 {
 @JsonSerializable()
 class ExplanationOfBenefitPayment {
   const ExplanationOfBenefitPayment({
-    required this.type,
-    required this.adjustment,
-    required this.adjustmentReason,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.amount,
-    required this.identifier,
+    this.type,
+    this.adjustment,
+    this.adjustmentReason,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.amount,
+    this.identifier,
   });
   final CodeableConcept? type;
   final Money? adjustment;
@@ -936,12 +981,12 @@ class ExplanationOfBenefitPayment {
 @JsonSerializable()
 class ExplanationOfBenefitProcessNote {
   const ExplanationOfBenefitProcessNote({
-    required this.number,
-    @JsonKey(name: '_number') required this.numberElement,
-    required this.type,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.language,
+    this.number,
+    @JsonKey(name: '_number') this.numberElement,
+    this.type,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.language,
   });
   final Decimal? number;
   final Element? numberElement;
@@ -959,17 +1004,17 @@ class ExplanationOfBenefitProcessNote {
 class ExplanationOfBenefitBenefitBalance {
   const ExplanationOfBenefitBenefitBalance({
     required this.category,
-    required this.subCategory,
-    required this.excluded,
-    @JsonKey(name: '_excluded') required this.excludedElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.network,
-    required this.unit,
-    required this.term,
-    required this.financial,
+    this.subCategory,
+    this.excluded,
+    @JsonKey(name: '_excluded') this.excludedElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.network,
+    this.unit,
+    this.term,
+    this.financial,
   });
 
   final CodeableConcept category;
@@ -989,4 +1034,33 @@ class ExplanationOfBenefitBenefitBalance {
       _$ExplanationOfBenefitBenefitBalanceFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ExplanationOfBenefitBenefitBalanceToJson(this);
+}
+
+@JsonSerializable()
+class ExplanationOfBenefitFinancial {
+  const ExplanationOfBenefitFinancial({
+    required this.type,
+    this.allowedUnsignedInt,
+    @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
+    this.allowedString,
+    @JsonKey(name: '_allowedString') this.allowedStringElement,
+    this.allowedMoney,
+    this.usedUnsignedInt,
+    @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement,
+    this.usedMoney,
+  });
+
+  final CodeableConcept type;
+  final Decimal? allowedUnsignedInt;
+  final Element? allowedUnsignedIntElement;
+  final String? allowedString;
+  final Element? allowedStringElement;
+  final Money? allowedMoney;
+  final Decimal? usedUnsignedInt;
+  final Element? usedUnsignedIntElement;
+  final Money? usedMoney;
+
+  factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
+      _$ExplanationOfBenefitFinancialFromJson(json);
+  Map<String, dynamic> toJson() => _$ExplanationOfBenefitFinancialToJson(this);
 }

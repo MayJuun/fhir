@@ -11,7 +11,7 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ResearchStudy,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -124,9 +124,7 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ResearchStudyToJson(ResearchStudy instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -134,7 +132,8 @@ Map<String, dynamic> _$ResearchStudyToJson(ResearchStudy instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -418,7 +417,7 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ResearchSubject,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -474,9 +473,7 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ResearchSubjectToJson(ResearchSubject instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -484,7 +481,8 @@ Map<String, dynamic> _$ResearchSubjectToJson(ResearchSubject instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

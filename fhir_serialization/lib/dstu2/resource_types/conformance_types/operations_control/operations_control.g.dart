@@ -1474,6 +1474,132 @@ const _$OperationDefinitionBindingStrengthEnumMap = {
   OperationDefinitionBindingStrength.unknown: 'unknown',
 };
 
+SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) =>
+    SearchParameter(
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.SearchParameter,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: FhirUri.fromJson(json['url']),
+      name: json['name'] as String,
+      status:
+          $enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status']),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      publisher: json['publisher'] as String?,
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map(
+              (e) => SearchParameterContact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      requirements: json['requirements'] as String?,
+      requirementsElement: json['requirementsElement'] == null
+          ? null
+          : Element.fromJson(
+              json['requirementsElement'] as Map<String, dynamic>),
+      code: Code.fromJson(json['code']),
+      base: json['base'] == null ? null : Code.fromJson(json['base']),
+      type: $enumDecode(_$SearchParameterTypeEnumMap, json['type']),
+      description: json['description'] as String?,
+      xpath: json['xpath'] as String?,
+      xpathUsage: $enumDecodeNullable(
+          _$SearchParameterXpathUsageEnumMap, json['xpathUsage']),
+      target: (json['target'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
+    );
+
+Map<String, dynamic> _$SearchParameterToJson(SearchParameter instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['url'] = instance.url.toJson();
+  val['name'] = instance.name;
+  writeNotNull('status', _$SearchParameterStatusEnumMap[instance.status]);
+  writeNotNull('experimental', instance.experimental?.toJson());
+  writeNotNull('publisher', instance.publisher);
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('requirements', instance.requirements);
+  writeNotNull('requirementsElement', instance.requirementsElement?.toJson());
+  val['code'] = instance.code.toJson();
+  writeNotNull('base', instance.base?.toJson());
+  val['type'] = _$SearchParameterTypeEnumMap[instance.type]!;
+  writeNotNull('description', instance.description);
+  writeNotNull('xpath', instance.xpath);
+  writeNotNull(
+      'xpathUsage', _$SearchParameterXpathUsageEnumMap[instance.xpathUsage]);
+  writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+const _$SearchParameterStatusEnumMap = {
+  SearchParameterStatus.draft: 'draft',
+  SearchParameterStatus.active: 'active',
+  SearchParameterStatus.retired: 'retired',
+  SearchParameterStatus.unknown: 'unknown',
+};
+
+const _$SearchParameterTypeEnumMap = {
+  SearchParameterType.number: 'number',
+  SearchParameterType.date: 'date',
+  SearchParameterType.string: 'string',
+  SearchParameterType.token: 'token',
+  SearchParameterType.reference: 'reference',
+  SearchParameterType.composite: 'composite',
+  SearchParameterType.quantity: 'quantity',
+  SearchParameterType.uri: 'uri',
+  SearchParameterType.unknown: 'unknown',
+};
+
+const _$SearchParameterXpathUsageEnumMap = {
+  SearchParameterXpathUsage.normal: 'normal',
+  SearchParameterXpathUsage.phonetic: 'phonetic',
+  SearchParameterXpathUsage.nearby: 'nearby',
+  SearchParameterXpathUsage.distance: 'distance',
+  SearchParameterXpathUsage.other: 'other',
+  SearchParameterXpathUsage.unknown: 'unknown',
+};
+
 SearchParameterContact _$SearchParameterContactFromJson(
         Map<String, dynamic> json) =>
     SearchParameterContact(

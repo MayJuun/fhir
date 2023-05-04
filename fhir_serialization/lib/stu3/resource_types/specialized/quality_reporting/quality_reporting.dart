@@ -13,7 +13,7 @@ class Measure extends Resource {
     super.resourceType = Stu3ResourceType.Measure,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,68 +21,67 @@ class Measure extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.usage,
-    @JsonKey(name: '_usage') required this.usageElement,
-    required this.approvalDate,
-    @JsonKey(name: '_approvalDate') required this.approvalDateElement,
-    required this.lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') required this.lastReviewDateElement,
-    required this.effectivePeriod,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.topic,
-    required this.contributor,
-    required this.contact,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.relatedArtifact,
-    @JsonKey(name: 'library') required this.library_,
-    required this.disclaimer,
-    @JsonKey(name: '_disclaimer') required this.disclaimerElement,
-    required this.scoring,
-    required this.compositeScoring,
-    required this.type,
-    required this.riskAdjustment,
-    @JsonKey(name: '_riskAdjustment') required this.riskAdjustmentElement,
-    required this.rateAggregation,
-    @JsonKey(name: '_rateAggregation') required this.rateAggregationElement,
-    required this.rationale,
-    @JsonKey(name: '_rationale') required this.rationaleElement,
-    required this.clinicalRecommendationStatement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.usage,
+    @JsonKey(name: '_usage') this.usageElement,
+    this.approvalDate,
+    @JsonKey(name: '_approvalDate') this.approvalDateElement,
+    this.lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+    this.effectivePeriod,
+    this.useContext,
+    this.jurisdiction,
+    this.topic,
+    this.contributor,
+    this.contact,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.relatedArtifact,
+    @JsonKey(name: 'library') this.library_,
+    this.disclaimer,
+    @JsonKey(name: '_disclaimer') this.disclaimerElement,
+    this.scoring,
+    this.compositeScoring,
+    this.type,
+    this.riskAdjustment,
+    @JsonKey(name: '_riskAdjustment') this.riskAdjustmentElement,
+    this.rateAggregation,
+    @JsonKey(name: '_rateAggregation') this.rateAggregationElement,
+    this.rationale,
+    @JsonKey(name: '_rationale') this.rationaleElement,
+    this.clinicalRecommendationStatement,
     @JsonKey(name: '__clinicalRecommendationStatement')
-        required this.clinicalRecommendationStatementElement,
-    required this.improvementNotation,
-    @JsonKey(name: '_improvementNotation')
-        required this.improvementNotationElement,
-    required this.definition,
-    @JsonKey(name: '_definition') required this.definitionElement,
-    required this.guidance,
-    @JsonKey(name: '_guidance') required this.guidanceElement,
-    @JsonKey(name: 'set') required this.set_,
-    @JsonKey(name: '_set') required this.setElement,
-    required this.group,
-    required this.supplementalData,
+        this.clinicalRecommendationStatementElement,
+    this.improvementNotation,
+    @JsonKey(name: '_improvementNotation') this.improvementNotationElement,
+    this.definition,
+    @JsonKey(name: '_definition') this.definitionElement,
+    this.guidance,
+    @JsonKey(name: '_guidance') this.guidanceElement,
+    @JsonKey(name: 'set') this.set_,
+    @JsonKey(name: '_set') this.setElement,
+    this.group,
+    this.supplementalData,
   });
   final String? url;
   final Element? urlElement;
@@ -154,12 +153,12 @@ class Measure extends Resource {
 class MeasureGroup {
   const MeasureGroup({
     required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.population,
-    required this.stratifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.population,
+    this.stratifier,
   });
   final Identifier identifier;
   final String? name;
@@ -176,14 +175,14 @@ class MeasureGroup {
 @JsonSerializable()
 class MeasurePopulation {
   const MeasurePopulation({
-    required this.identifier,
-    required this.code,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.criteria,
-    @JsonKey(name: '_criteria') required this.criteriaElement,
+    this.identifier,
+    this.code,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.criteria,
+    @JsonKey(name: '_criteria') this.criteriaElement,
   });
   final Identifier? identifier;
   final CodeableConcept? code;
@@ -201,11 +200,11 @@ class MeasurePopulation {
 @JsonSerializable()
 class MeasureStratifier {
   const MeasureStratifier({
-    required this.identifier,
-    required this.criteria,
-    @JsonKey(name: '_criteria') required this.criteriaElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
+    this.identifier,
+    this.criteria,
+    @JsonKey(name: '_criteria') this.criteriaElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
   });
   final Identifier? identifier;
   final String? criteria;
@@ -220,12 +219,12 @@ class MeasureStratifier {
 @JsonSerializable()
 class MeasureSupplementalData {
   const MeasureSupplementalData({
-    required this.identifier,
-    required this.usage,
-    required this.criteria,
-    @JsonKey(name: '_criteria') required this.criteriaElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
+    this.identifier,
+    this.usage,
+    this.criteria,
+    @JsonKey(name: '_criteria') this.criteriaElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
   });
   final Identifier? identifier;
   final List<CodeableConcept>? usage;
@@ -244,7 +243,7 @@ class MeasureReport extends Resource {
     super.resourceType = Stu3ResourceType.MeasureReport,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -252,19 +251,19 @@ class MeasureReport extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
     required this.measure,
-    required this.patient,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.reportingOrganization,
+    this.patient,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.reportingOrganization,
     required this.period,
-    required this.group,
-    required this.evaluatedResources,
+    this.group,
+    this.evaluatedResources,
   });
   final Identifier? identifier;
   final MeasureReportStatus? status;
@@ -288,10 +287,10 @@ class MeasureReport extends Resource {
 class MeasureReportGroup {
   const MeasureReportGroup({
     required this.identifier,
-    required this.population,
-    required this.measureScore,
-    @JsonKey(name: '_measureScore') required this.measureScoreElement,
-    required this.stratifier,
+    this.population,
+    this.measureScore,
+    @JsonKey(name: '_measureScore') this.measureScoreElement,
+    this.stratifier,
   });
   final Identifier identifier;
   final List<MeasureReportPopulation>? population;
@@ -306,11 +305,11 @@ class MeasureReportGroup {
 @JsonSerializable()
 class MeasureReportPopulation {
   const MeasureReportPopulation({
-    required this.identifier,
-    required this.code,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.patients,
+    this.identifier,
+    this.code,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.patients,
   });
   final Identifier? identifier;
   final CodeableConcept? code;
@@ -325,8 +324,8 @@ class MeasureReportPopulation {
 @JsonSerializable()
 class MeasureReportStratifier {
   const MeasureReportStratifier({
-    required this.identifier,
-    required this.stratum,
+    this.identifier,
+    this.stratum,
   });
   final Identifier? identifier;
   final List<MeasureReportStratum>? stratum;
@@ -338,11 +337,11 @@ class MeasureReportStratifier {
 @JsonSerializable()
 class MeasureReportStratum {
   const MeasureReportStratum({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.population,
-    required this.measureScore,
-    @JsonKey(name: '_measureScore') required this.measureScoreElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.population,
+    this.measureScore,
+    @JsonKey(name: '_measureScore') this.measureScoreElement,
   });
   final String? value;
   final Element? valueElement;
@@ -357,11 +356,11 @@ class MeasureReportStratum {
 @JsonSerializable()
 class MeasureReportPopulation1 {
   const MeasureReportPopulation1({
-    required this.identifier,
-    required this.code,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.patients,
+    this.identifier,
+    this.code,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.patients,
   });
   final Identifier? identifier;
   final CodeableConcept? code;

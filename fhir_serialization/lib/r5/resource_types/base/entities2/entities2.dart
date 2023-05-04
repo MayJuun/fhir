@@ -8,11 +8,10 @@ part 'entities2.g.dart';
 @JsonSerializable()
 class BiologicallyDerivedProduct extends Resource {
   const BiologicallyDerivedProduct({
-    @Default(R5ResourceType.BiologicallyDerivedProduct)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.BiologicallyDerivedProduct,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -20,23 +19,22 @@ class BiologicallyDerivedProduct extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.productCategory,
-    required this.productCode,
-    required this.parent,
-    required this.request,
-    required this.identifier,
-    required this.biologicalSourceEvent,
-    required this.processingFacility,
-    required this.division,
-    @JsonKey(name: '_division') required this.divisionElement,
-    required this.productStatus,
-    required this.expirationDate,
-    @JsonKey(name: '_expirationDate') required this.expirationDateElement,
-    required this.collection,
-    required this.storageTempRequirements,
-    required this.property,
+    this.productCategory,
+    this.productCode,
+    this.parent,
+    this.request,
+    this.identifier,
+    this.biologicalSourceEvent,
+    this.processingFacility,
+    this.division,
+    @JsonKey(name: '_division') this.divisionElement,
+    this.productStatus,
+    this.expirationDate,
+    @JsonKey(name: '_expirationDate') this.expirationDateElement,
+    this.collection,
+    this.storageTempRequirements,
+    this.property,
   });
-  final R5ResourceType resourceType;
 
   final Coding? productCategory;
   final CodeableConcept? productCode;
@@ -61,14 +59,14 @@ class BiologicallyDerivedProduct extends Resource {
 @JsonSerializable()
 class BiologicallyDerivedProductCollection {
   const BiologicallyDerivedProductCollection({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.collector,
-    required this.source,
-    required this.collectedDateTime,
-    @JsonKey(name: '_collectedDateTime') required this.collectedDateTimeElement,
-    required this.collectedPeriod,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.collector,
+    this.source,
+    this.collectedDateTime,
+    @JsonKey(name: '_collectedDateTime') this.collectedDateTimeElement,
+    this.collectedPeriod,
   });
 
   final String? id;
@@ -89,22 +87,22 @@ class BiologicallyDerivedProductCollection {
 @JsonSerializable()
 class BiologicallyDerivedProductProperty {
   const BiologicallyDerivedProductProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueCodeableConcept,
-    required this.valuePeriod,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valueRatio,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueAttachment,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueCodeableConcept,
+    this.valuePeriod,
+    this.valueQuantity,
+    this.valueRange,
+    this.valueRatio,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueAttachment,
   });
 
   final String? id;
@@ -136,7 +134,7 @@ class Device extends Resource {
     super.resourceType = R5ResourceType.Device,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -144,49 +142,48 @@ class Device extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.displayName,
-    @JsonKey(name: '_displayName') required this.displayNameElement,
-    required this.definition,
-    required this.udiCarrier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.availabilityStatus,
-    required this.biologicalSourceEvent,
-    required this.manufacturer,
-    @JsonKey(name: '_manufacturer') required this.manufacturerElement,
-    required this.manufactureDate,
-    @JsonKey(name: '_manufactureDate') required this.manufactureDateElement,
-    required this.expirationDate,
-    @JsonKey(name: '_expirationDate') required this.expirationDateElement,
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.serialNumber,
-    @JsonKey(name: '_serialNumber') required this.serialNumberElement,
-    required this.deviceName,
-    required this.modelNumber,
-    @JsonKey(name: '_modelNumber') required this.modelNumberElement,
-    required this.partNumber,
-    @JsonKey(name: '_partNumber') required this.partNumberElement,
-    required this.category,
-    required this.type,
-    required this.version,
-    required this.specialization,
-    required this.property,
-    required this.operation,
-    required this.association,
-    required this.owner,
-    required this.contact,
-    required this.location,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.endpoint,
-    required this.gateway,
-    required this.note,
-    required this.safety,
-    required this.parent,
+    this.identifier,
+    this.displayName,
+    @JsonKey(name: '_displayName') this.displayNameElement,
+    this.definition,
+    this.udiCarrier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.availabilityStatus,
+    this.biologicalSourceEvent,
+    this.manufacturer,
+    @JsonKey(name: '_manufacturer') this.manufacturerElement,
+    this.manufactureDate,
+    @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
+    this.expirationDate,
+    @JsonKey(name: '_expirationDate') this.expirationDateElement,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.serialNumber,
+    @JsonKey(name: '_serialNumber') this.serialNumberElement,
+    this.deviceName,
+    this.modelNumber,
+    @JsonKey(name: '_modelNumber') this.modelNumberElement,
+    this.partNumber,
+    @JsonKey(name: '_partNumber') this.partNumberElement,
+    this.category,
+    this.type,
+    this.version,
+    this.specialization,
+    this.property,
+    this.operation,
+    this.association,
+    this.owner,
+    this.contact,
+    this.location,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.endpoint,
+    this.gateway,
+    this.note,
+    this.safety,
+    this.parent,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final String? displayName;
@@ -236,21 +233,21 @@ class Device extends Resource {
 @JsonSerializable()
 class DeviceUdiCarrier {
   const DeviceUdiCarrier({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.deviceIdentifier,
-    @JsonKey(name: '_deviceIdentifier') required this.deviceIdentifierElement,
-    required this.issuer,
-    @JsonKey(name: '_issuer') required this.issuerElement,
-    required this.jurisdiction,
-    @JsonKey(name: '_jurisdiction') required this.jurisdictionElement,
-    required this.carrierAIDC,
-    @JsonKey(name: '_carrierAIDC') required this.carrierAIDCElement,
-    required this.carrierHRF,
-    @JsonKey(name: '_carrierHRF') required this.carrierHRFElement,
-    required this.entryType,
-    @JsonKey(name: '_entryType') required this.entryTypeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.deviceIdentifier,
+    @JsonKey(name: '_deviceIdentifier') this.deviceIdentifierElement,
+    this.issuer,
+    @JsonKey(name: '_issuer') this.issuerElement,
+    this.jurisdiction,
+    @JsonKey(name: '_jurisdiction') this.jurisdictionElement,
+    this.carrierAIDC,
+    @JsonKey(name: '_carrierAIDC') this.carrierAIDCElement,
+    this.carrierHRF,
+    @JsonKey(name: '_carrierHRF') this.carrierHRFElement,
+    this.entryType,
+    @JsonKey(name: '_entryType') this.entryTypeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -275,13 +272,13 @@ class DeviceUdiCarrier {
 @JsonSerializable()
 class DeviceDeviceName {
   const DeviceDeviceName({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -298,15 +295,15 @@ class DeviceDeviceName {
 @JsonSerializable()
 class DeviceVersion {
   const DeviceVersion({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.component,
-    required this.installDate,
-    @JsonKey(name: '_installDate') required this.installDateElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.component,
+    this.installDate,
+    @JsonKey(name: '_installDate') this.installDateElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -325,13 +322,13 @@ class DeviceVersion {
 @JsonSerializable()
 class DeviceSpecialization {
   const DeviceSpecialization({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.systemType,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.category,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.category,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -348,20 +345,20 @@ class DeviceSpecialization {
 @JsonSerializable()
 class DeviceProperty {
   const DeviceProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueQuantity,
-    required this.valueCodeableConcept,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueRange,
-    required this.valueAttachment,
+    this.valueQuantity,
+    this.valueCodeableConcept,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueRange,
+    this.valueAttachment,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -385,15 +382,15 @@ class DeviceProperty {
 @JsonSerializable()
 class DeviceOperation {
   const DeviceOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.status,
-    required this.statusReason,
-    @JsonKey(name: 'operator') required this.operator_,
-    required this.mode,
-    required this.cycle,
-    required this.duration,
+    this.statusReason,
+    @JsonKey(name: 'operator') this.operator_,
+    this.mode,
+    this.cycle,
+    this.duration,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -412,13 +409,13 @@ class DeviceOperation {
 @JsonSerializable()
 class DeviceAssociation {
   const DeviceAssociation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.status,
-    required this.statusReason,
-    required this.humanSubject,
-    required this.bodyStructure,
+    this.statusReason,
+    this.humanSubject,
+    this.bodyStructure,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -438,7 +435,7 @@ class DeviceMetric extends Resource {
     super.resourceType = R5ResourceType.DeviceMetric,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -446,21 +443,20 @@ class DeviceMetric extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
+    this.identifier,
     required this.type,
-    required this.unit,
-    required this.source,
-    required this.parent,
-    required this.operationalStatus,
-    @JsonKey(name: '_operationalStatus') required this.operationalStatusElement,
-    required this.color,
-    @JsonKey(name: '_color') required this.colorElement,
-    required this.category,
-    @JsonKey(name: '_category') required this.categoryElement,
-    required this.measurementPeriod,
-    required this.calibration,
+    this.unit,
+    this.source,
+    this.parent,
+    this.operationalStatus,
+    @JsonKey(name: '_operationalStatus') this.operationalStatusElement,
+    this.color,
+    @JsonKey(name: '_color') this.colorElement,
+    this.category,
+    @JsonKey(name: '_category') this.categoryElement,
+    this.measurementPeriod,
+    this.calibration,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final CodeableConcept type;
@@ -483,15 +479,15 @@ class DeviceMetric extends Resource {
 @JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.state,
-    @JsonKey(name: '_state') required this.stateElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.state,
+    @JsonKey(name: '_state') this.stateElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -513,7 +509,7 @@ class NutritionProduct extends Resource {
     super.resourceType = R5ResourceType.NutritionProduct,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -521,19 +517,18 @@ class NutritionProduct extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.code,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
-    required this.manufacturer,
-    required this.nutrient,
-    required this.ingredient,
-    required this.knownAllergen,
-    required this.characteristic,
-    required this.instance,
-    required this.note,
+    this.code,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
+    this.manufacturer,
+    this.nutrient,
+    this.ingredient,
+    this.knownAllergen,
+    this.characteristic,
+    this.instance,
+    this.note,
   });
-  final R5ResourceType resourceType;
 
   final CodeableConcept? code;
   final Code? status;
@@ -554,11 +549,11 @@ class NutritionProduct extends Resource {
 @JsonSerializable()
 class NutritionProductNutrient {
   const NutritionProductNutrient({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.item,
-    required this.amount,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.item,
+    this.amount,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -573,11 +568,11 @@ class NutritionProductNutrient {
 @JsonSerializable()
 class NutritionProductIngredient {
   const NutritionProductIngredient({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.item,
-    required this.amount,
+    this.amount,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -592,19 +587,19 @@ class NutritionProductIngredient {
 @JsonSerializable()
 class NutritionProductCharacteristic {
   const NutritionProductCharacteristic({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueQuantity,
-    required this.valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') required this.valueBase64BinaryElement,
-    required this.valueAttachment,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
+    this.valueCodeableConcept,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueQuantity,
+    this.valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+    this.valueAttachment,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -627,20 +622,20 @@ class NutritionProductCharacteristic {
 @JsonSerializable()
 class NutritionProductInstance {
   const NutritionProductInstance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.quantity,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.expiry,
-    @JsonKey(name: '_expiry') required this.expiryElement,
-    required this.useBy,
-    @JsonKey(name: '_useBy') required this.useByElement,
-    required this.biologicalSourceEvent,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.quantity,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.expiry,
+    @JsonKey(name: '_expiry') this.expiryElement,
+    this.useBy,
+    @JsonKey(name: '_useBy') this.useByElement,
+    this.biologicalSourceEvent,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -667,7 +662,7 @@ class Substance extends Resource {
     super.resourceType = R5ResourceType.Substance,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -675,21 +670,20 @@ class Substance extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.instance,
-    @JsonKey(name: '_instance') required this.instanceElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
+    this.identifier,
+    this.instance,
+    @JsonKey(name: '_instance') this.instanceElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
     required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.expiry,
-    @JsonKey(name: '_expiry') required this.expiryElement,
-    required this.quantity,
-    required this.ingredient,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.expiry,
+    @JsonKey(name: '_expiry') this.expiryElement,
+    this.quantity,
+    this.ingredient,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Boolean? instance;
@@ -712,12 +706,12 @@ class Substance extends Resource {
 @JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.quantity,
-    required this.substanceCodeableConcept,
-    required this.substanceReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.quantity,
+    this.substanceCodeableConcept,
+    this.substanceReference,
   });
   final String? id;
   final List<FhirExtension>? extension_;

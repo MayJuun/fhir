@@ -11,7 +11,7 @@ class Group extends Resource {
     super.resourceType = R4ResourceType.Group,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -19,21 +19,21 @@ class Group extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.actual,
-    @JsonKey(name: '_actual') required this.actualElement,
-    required this.code,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.quantity,
-    @JsonKey(name: '_quantity') required this.quantityElement,
-    required this.managingEntity,
-    required this.characteristic,
-    required this.member,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.actual,
+    @JsonKey(name: '_actual') this.actualElement,
+    this.code,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.quantity,
+    @JsonKey(name: '_quantity') this.quantityElement,
+    this.managingEntity,
+    this.characteristic,
+    this.member,
   });
 
   final List<Identifier>? identifier;
@@ -58,19 +58,19 @@ class Group extends Resource {
 @JsonSerializable()
 class GroupCharacteristic {
   const GroupCharacteristic({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valueReference,
-    required this.exclude,
-    @JsonKey(name: '_exclude') required this.excludeElement,
-    required this.period,
+    this.valueCodeableConcept,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueQuantity,
+    this.valueRange,
+    this.valueReference,
+    this.exclude,
+    @JsonKey(name: '_exclude') this.excludeElement,
+    this.period,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -93,13 +93,13 @@ class GroupCharacteristic {
 @JsonSerializable()
 class GroupMember {
   const GroupMember({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.entity,
-    required this.period,
-    required this.inactive,
-    @JsonKey(name: '_inactive') required this.inactiveElement,
+    this.period,
+    this.inactive,
+    @JsonKey(name: '_inactive') this.inactiveElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -119,7 +119,7 @@ class Patient extends Resource {
     super.resourceType = R4ResourceType.Patient,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -127,33 +127,31 @@ class Patient extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') required this.deceasedBooleanElement,
-    required this.deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') required this.deceasedDateTimeElement,
-    required this.address,
-    required this.maritalStatus,
-    required this.multipleBirthBoolean,
-    @JsonKey(name: '__multipleBirthBoolean')
-        required this.multipleBirthBooleanElement,
-    required this.multipleBirthInteger,
-    @JsonKey(name: '__multipleBirthInteger')
-        required this.multipleBirthIntegerElement,
-    required this.photo,
-    required this.contact,
-    required this.communication,
-    required this.generalPractitioner,
-    required this.managingOrganization,
-    required this.link,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+    this.deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+    this.address,
+    this.maritalStatus,
+    this.multipleBirthBoolean,
+    @JsonKey(name: '__multipleBirthBoolean') this.multipleBirthBooleanElement,
+    this.multipleBirthInteger,
+    @JsonKey(name: '__multipleBirthInteger') this.multipleBirthIntegerElement,
+    this.photo,
+    this.contact,
+    this.communication,
+    this.generalPractitioner,
+    this.managingOrganization,
+    this.link,
   });
 
   final List<Identifier>? identifier;
@@ -191,17 +189,17 @@ class Patient extends Resource {
 @JsonSerializable()
 class PatientContact {
   const PatientContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.organization,
-    required this.period,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.organization,
+    this.period,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -222,12 +220,12 @@ class PatientContact {
 @JsonSerializable()
 class PatientCommunication {
   const PatientCommunication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.language,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -243,12 +241,12 @@ class PatientCommunication {
 @JsonSerializable()
 class PatientLink {
   const PatientLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.other,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -267,7 +265,7 @@ class Person extends Resource {
     super.resourceType = R4ResourceType.Person,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -275,19 +273,19 @@ class Person extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.managingOrganization,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.link,
+    this.identifier,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.managingOrganization,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.link,
   });
 
   final List<Identifier>? identifier;
@@ -310,12 +308,12 @@ class Person extends Resource {
 @JsonSerializable()
 class PersonLink {
   const PersonLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.target,
-    required this.assurance,
-    @JsonKey(name: '_assurance') required this.assuranceElement,
+    this.assurance,
+    @JsonKey(name: '_assurance') this.assuranceElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -334,7 +332,7 @@ class Practitioner extends Resource {
     super.resourceType = R4ResourceType.Practitioner,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -342,19 +340,19 @@ class Practitioner extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.photo,
-    required this.qualification,
-    required this.communication,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.photo,
+    this.qualification,
+    this.communication,
   });
 
   final List<Identifier>? identifier;
@@ -378,13 +376,13 @@ class Practitioner extends Resource {
 @JsonSerializable()
 class PractitionerQualification {
   const PractitionerQualification({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
     required this.code,
-    required this.period,
-    required this.issuer,
+    this.period,
+    this.issuer,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -404,7 +402,7 @@ class PractitionerRole extends Resource {
     super.resourceType = R4ResourceType.PractitionerRole,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -412,23 +410,23 @@ class PractitionerRole extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.period,
-    required this.practitioner,
-    required this.organization,
-    required this.code,
-    required this.specialty,
-    required this.location,
-    required this.healthcareService,
-    required this.telecom,
-    required this.availableTime,
-    required this.notAvailable,
-    required this.availabilityExceptions,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.period,
+    this.practitioner,
+    this.organization,
+    this.code,
+    this.specialty,
+    this.location,
+    this.healthcareService,
+    this.telecom,
+    this.availableTime,
+    this.notAvailable,
+    this.availabilityExceptions,
     @JsonKey(name: '__availabilityExceptions')
-        required this.availabilityExceptionsElement,
-    required this.endpoint,
+        this.availabilityExceptionsElement,
+    this.endpoint,
   });
 
   final List<Identifier>? identifier;
@@ -456,18 +454,17 @@ class PractitionerRole extends Resource {
 @JsonSerializable()
 class PractitionerRoleAvailableTime {
   const PractitionerRoleAvailableTime({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') required this.daysOfWeekElement,
-    required this.allDay,
-    @JsonKey(name: '_allDay') required this.allDayElement,
-    required this.availableStartTime,
-    @JsonKey(name: '_availableStartTime')
-        required this.availableStartTimeElement,
-    required this.availableEndTime,
-    @JsonKey(name: '_availableEndTime') required this.availableEndTimeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+    this.allDay,
+    @JsonKey(name: '_allDay') this.allDayElement,
+    this.availableStartTime,
+    @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+    this.availableEndTime,
+    @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -488,12 +485,12 @@ class PractitionerRoleAvailableTime {
 @JsonSerializable()
 class PractitionerRoleNotAvailable {
   const PractitionerRoleNotAvailable({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.during,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.during,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -512,7 +509,7 @@ class RelatedPerson extends Resource {
     super.resourceType = R4ResourceType.RelatedPerson,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -520,21 +517,21 @@ class RelatedPerson extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
     required this.patient,
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.period,
-    required this.communication,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.period,
+    this.communication,
   });
 
   final List<Identifier>? identifier;
@@ -560,12 +557,12 @@ class RelatedPerson extends Resource {
 @JsonSerializable()
 class RelatedPersonCommunication {
   const RelatedPersonCommunication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.language,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;

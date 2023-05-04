@@ -13,7 +13,7 @@ class Composition extends Resource {
     super.resourceType = Stu3ResourceType.Composition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,25 +21,25 @@ class Composition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
     required this.type,
-    @JsonKey(name: 'class') required this.class_,
+    @JsonKey(name: 'class') this.class_,
     required this.subject,
-    required this.encounter,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
+    this.encounter,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
     required this.author,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.confidentiality,
-    @JsonKey(name: '_confidentiality') required this.confidentialityElement,
-    required this.attester,
-    required this.custodian,
-    required this.relatesTo,
-    required this.event,
-    required this.section,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.confidentiality,
+    @JsonKey(name: '_confidentiality') this.confidentialityElement,
+    this.attester,
+    this.custodian,
+    this.relatesTo,
+    this.event,
+    this.section,
   });
   final Identifier? identifier;
   final CompositionStatus? status;
@@ -68,11 +68,11 @@ class Composition extends Resource {
 @JsonSerializable()
 class CompositionAttester {
   const CompositionAttester({
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
-    required this.party,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
+    this.party,
   });
   final List<CompositionAttesterMode>? mode;
   final List<Element?>? modeElement;
@@ -87,10 +87,10 @@ class CompositionAttester {
 @JsonSerializable()
 class CompositionRelatesTo {
   const CompositionRelatesTo({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.targetIdentifier,
-    required this.targetReference,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.targetIdentifier,
+    this.targetReference,
   });
   final Code? code;
   final Element? codeElement;
@@ -104,9 +104,9 @@ class CompositionRelatesTo {
 @JsonSerializable()
 class CompositionEvent {
   const CompositionEvent({
-    required this.code,
-    required this.period,
-    required this.detail,
+    this.code,
+    this.period,
+    this.detail,
   });
   final List<CodeableConcept>? code;
   final Period? period;
@@ -119,16 +119,16 @@ class CompositionEvent {
 @JsonSerializable()
 class CompositionSection {
   const CompositionSection({
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.code,
-    required this.text,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.orderedBy,
-    required this.entry,
-    required this.emptyReason,
-    required this.section,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.code,
+    this.text,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.orderedBy,
+    this.entry,
+    this.emptyReason,
+    this.section,
   });
   final String? title;
   final Element? titleElement;
@@ -151,7 +151,7 @@ class DocumentManifest extends Resource {
     super.resourceType = Stu3ResourceType.DocumentManifest,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -159,22 +159,22 @@ class DocumentManifest extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.masterIdentifier,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    required this.subject,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.author,
-    required this.recipient,
-    required this.source,
-    @JsonKey(name: '_source') required this.sourceElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.masterIdentifier,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    this.subject,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.author,
+    this.recipient,
+    this.source,
+    @JsonKey(name: '_source') this.sourceElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.content,
-    required this.related,
+    this.related,
   });
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
@@ -200,8 +200,8 @@ class DocumentManifest extends Resource {
 @JsonSerializable()
 class DocumentManifestContent {
   const DocumentManifestContent({
-    required this.pAttachment,
-    required this.pReference,
+    this.pAttachment,
+    this.pReference,
   });
   final Attachment? pAttachment;
   final Reference? pReference;
@@ -213,8 +213,8 @@ class DocumentManifestContent {
 @JsonSerializable()
 class DocumentManifestRelated {
   const DocumentManifestRelated({
-    required this.identifier,
-    required this.ref,
+    this.identifier,
+    this.ref,
   });
   final Identifier? identifier;
   final Reference? ref;
@@ -229,7 +229,7 @@ class DocumentReference extends Resource {
     super.resourceType = Stu3ResourceType.DocumentReference,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -237,28 +237,28 @@ class DocumentReference extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.masterIdentifier,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.docStatus,
-    @JsonKey(name: '_docStatus') required this.docStatusElement,
+    this.masterIdentifier,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.docStatus,
+    @JsonKey(name: '_docStatus') this.docStatusElement,
     required this.type,
-    @JsonKey(name: 'class') required this.class_,
-    required this.subject,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.indexed,
-    @JsonKey(name: '_indexed') required this.indexedElement,
-    required this.author,
-    required this.authenticator,
-    required this.custodian,
-    required this.relatesTo,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    @JsonKey(name: 'class') this.class_,
+    this.subject,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.indexed,
+    @JsonKey(name: '_indexed') this.indexedElement,
+    this.author,
+    this.authenticator,
+    this.custodian,
+    this.relatesTo,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.securityLabel,
     required this.content,
-    required this.context,
+    this.context,
   });
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
@@ -290,8 +290,8 @@ class DocumentReference extends Resource {
 @JsonSerializable()
 class DocumentReferenceRelatesTo {
   const DocumentReferenceRelatesTo({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
     required this.target,
   });
   final DocumentReferenceRelatesToCode? code;
@@ -306,7 +306,7 @@ class DocumentReferenceRelatesTo {
 class DocumentReferenceContent {
   const DocumentReferenceContent({
     required this.attachment,
-    required this.format,
+    this.format,
   });
   final Attachment attachment;
   final Coding? format;
@@ -318,13 +318,13 @@ class DocumentReferenceContent {
 @JsonSerializable()
 class DocumentReferenceContext {
   const DocumentReferenceContext({
-    required this.encounter,
-    required this.event,
-    required this.period,
-    required this.facilityType,
-    required this.practiceSetting,
-    required this.sourcePatientInfo,
-    required this.related,
+    this.encounter,
+    this.event,
+    this.period,
+    this.facilityType,
+    this.practiceSetting,
+    this.sourcePatientInfo,
+    this.related,
   });
   final Reference? encounter;
   final List<CodeableConcept>? event;
@@ -341,8 +341,8 @@ class DocumentReferenceContext {
 @JsonSerializable()
 class DocumentReferenceRelated {
   const DocumentReferenceRelated({
-    required this.identifier,
-    required this.ref,
+    this.identifier,
+    this.ref,
   });
   final Identifier? identifier;
   final Reference? ref;

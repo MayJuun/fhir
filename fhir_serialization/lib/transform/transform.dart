@@ -8,32 +8,49 @@ Future<void> main() async {
   var className = '';
   final args = <String>[];
   for (final line in fileStrings) {
-    if (line.contains('freezed') || line.contains('///')) {
+    if (line.contains('freezed') ||
+        line.contains('///') ||
+        line.contains('factory') ||
+        line.contains('._()')) {
     } else if (line.contains('class')) {
       inClass = true;
       className = line.replaceAll('class', '').trim().split(' ').first;
       newText += '@JsonSerializable()\n';
       newText += 'class $className {\n';
-      newText += 'const $className {(\n';
+      newText += 'const $className ({\n';
     } else if (inClass) {
-      if (line.contains('})')) {
+      if (line.contains('@Default')) {
+      } else if (line.contains('})')) {
         args.forEach((element) {
           if (element.contains('@Json')) {
             final partOne = element.split(')').first;
             var partTwo = element.split(')').last;
             partTwo = partTwo.split(' ').last;
-            newText += '$partOne) this.$partTwo\n';
+
+            newText += '$partOne)';
+            if (partTwo.trim() != '') {
+              newText += ' this.$partTwo\n';
+            }
           } else {
-            newText += '${element.split(" ").last}\n';
+            if (element.split(' ').last.trim() != '' &&
+                !element.split(' ').last.trim().contains('{')) {
+              newText += 'this.${element.split(" ").last}\n';
+            }
           }
         });
         newText += '});\n\n';
         args.forEach((element) {
           if (element.contains('@Json')) {
             final partTwo = element.split(')').last;
-            newText += 'final ${partTwo.replaceAll(",", ";")}\n';
+            if (partTwo.replaceAll(',', '').trim() != '') {
+              newText +=
+                  'final ${partTwo.replaceAll(",", ";").replaceAll("required", "")}\n';
+            }
           } else {
-            newText += 'final ${element.replaceAll(",", ";")}\n';
+            if (element.replaceAll(',', '').trim() != '') {
+              newText +=
+                  'final ${element.replaceAll(",", ";").replaceAll("required", "")}\n';
+            }
           }
         });
 
@@ -50,4 +67,6 @@ Future<void> main() async {
       }
     }
   }
+
+  await File('newFile.dart').writeAsString(newText);
 }

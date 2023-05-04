@@ -698,7 +698,10 @@ EligibilityResponseBenefitBalance _$EligibilityResponseBenefitBalanceFromJson(
       term: json['term'] == null
           ? null
           : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
-      financial: json['financial'] as List<dynamic>?,
+      financial: (json['financial'] as List<dynamic>?)
+          ?.map((e) =>
+              EligibilityResponseFinancial.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$EligibilityResponseBenefitBalanceToJson(
@@ -723,7 +726,64 @@ Map<String, dynamic> _$EligibilityResponseBenefitBalanceToJson(
   writeNotNull('network', instance.network?.toJson());
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('term', instance.term?.toJson());
-  writeNotNull('financial', instance.financial);
+  writeNotNull(
+      'financial', instance.financial?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+EligibilityResponseFinancial _$EligibilityResponseFinancialFromJson(
+        Map<String, dynamic> json) =>
+    EligibilityResponseFinancial(
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      allowedUnsignedInt: json['allowedUnsignedInt'] == null
+          ? null
+          : Decimal.fromJson(json['allowedUnsignedInt']),
+      allowedUnsignedIntElement: json['allowedUnsignedIntElement'] == null
+          ? null
+          : Element.fromJson(
+              json['allowedUnsignedIntElement'] as Map<String, dynamic>),
+      allowedString: json['allowedString'] as String?,
+      allowedStringElement: json['allowedStringElement'] == null
+          ? null
+          : Element.fromJson(
+              json['allowedStringElement'] as Map<String, dynamic>),
+      allowedMoney: json['allowedMoney'] == null
+          ? null
+          : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
+      usedUnsignedInt: json['usedUnsignedInt'] == null
+          ? null
+          : Decimal.fromJson(json['usedUnsignedInt']),
+      usedUnsignedIntElement: json['usedUnsignedIntElement'] == null
+          ? null
+          : Element.fromJson(
+              json['usedUnsignedIntElement'] as Map<String, dynamic>),
+      usedMoney: json['usedMoney'] == null
+          ? null
+          : Money.fromJson(json['usedMoney'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$EligibilityResponseFinancialToJson(
+    EligibilityResponseFinancial instance) {
+  final val = <String, dynamic>{
+    'type': instance.type.toJson(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
+  writeNotNull('allowedUnsignedIntElement',
+      instance.allowedUnsignedIntElement?.toJson());
+  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedStringElement', instance.allowedStringElement?.toJson());
+  writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
+  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
+  writeNotNull(
+      'usedUnsignedIntElement', instance.usedUnsignedIntElement?.toJson());
+  writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;
 }
 

@@ -9,48 +9,35 @@ part 'documents.g.dart';
 class CatalogEntry extends Resource {
   const CatalogEntry({
     super.resourceType = R4ResourceType.CatalogEntry,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.type,
-    required this.orderable,
-    @JsonKey(name: '__orderable') required this.orderableElement,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.type,
+    this.orderable,
+    @JsonKey(name: '__orderable') this.orderableElement,
     required this.referencedItem,
-    required this.additionalIdentifier,
-    required this.classification,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.validityPeriod,
-    required this.validTo,
-    @JsonKey(name: '__validTo') required this.validToElement,
-    required this.lastUpdated,
-    @JsonKey(name: '__lastUpdated') required this.lastUpdatedElement,
-    required this.additionalCharacteristic,
-    required this.additionalClassification,
-    required this.relatedEntry,
+    this.additionalIdentifier,
+    this.classification,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.validityPeriod,
+    this.validTo,
+    @JsonKey(name: '__validTo') this.validToElement,
+    this.lastUpdated,
+    @JsonKey(name: '__lastUpdated') this.lastUpdatedElement,
+    this.additionalCharacteristic,
+    this.additionalClassification,
+    this.relatedEntry,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final CodeableConcept? type;
   final Boolean? orderable;
@@ -80,11 +67,11 @@ class CatalogEntry extends Resource {
 @JsonSerializable()
 class CatalogEntryRelatedEntry {
   const CatalogEntryRelatedEntry({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.relationtype,
-    @JsonKey(name: '_relationtype') required this.relationtypeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.relationtype,
+    @JsonKey(name: '_relationtype') this.relationtypeElement,
     required this.item,
   });
   final String? id;
@@ -102,50 +89,37 @@ class CatalogEntryRelatedEntry {
 class Composition extends Resource {
   const Composition({
     super.resourceType = R4ResourceType.Composition,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
     required this.type,
-    required this.category,
-    required this.subject,
-    required this.encounter,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
+    this.category,
+    this.subject,
+    this.encounter,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
     required this.author,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.confidentiality,
-    @JsonKey(name: '__confidentiality') required this.confidentialityElement,
-    required this.attester,
-    required this.custodian,
-    required this.relatesTo,
-    required this.event,
-    required this.section,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.confidentiality,
+    @JsonKey(name: '__confidentiality') this.confidentialityElement,
+    this.attester,
+    this.custodian,
+    this.relatesTo,
+    this.event,
+    this.section,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final Code? status;
 
@@ -177,14 +151,14 @@ class Composition extends Resource {
 @JsonSerializable()
 class CompositionAttester {
   const CompositionAttester({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
-    required this.party,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
+    this.party,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -202,13 +176,13 @@ class CompositionAttester {
 @JsonSerializable()
 class CompositionRelatesTo {
   const CompositionRelatesTo({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.targetIdentifier,
-    required this.targetReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.targetIdentifier,
+    this.targetReference,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -225,12 +199,12 @@ class CompositionRelatesTo {
 @JsonSerializable()
 class CompositionEvent {
   const CompositionEvent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.period,
-    required this.detail,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.period,
+    this.detail,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -246,21 +220,21 @@ class CompositionEvent {
 @JsonSerializable()
 class CompositionSection {
   const CompositionSection({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.code,
-    required this.author,
-    required this.focus,
-    required this.text,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.orderedBy,
-    required this.entry,
-    required this.emptyReason,
-    required this.section,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.code,
+    this.author,
+    this.focus,
+    this.text,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.orderedBy,
+    this.entry,
+    this.emptyReason,
+    this.section,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -286,47 +260,34 @@ class CompositionSection {
 class DocumentManifest extends Resource {
   const DocumentManifest({
     super.resourceType = R4ResourceType.DocumentManifest,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.masterIdentifier,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.type,
-    required this.subject,
-    required this.created,
-    @JsonKey(name: '__created') required this.createdElement,
-    required this.author,
-    required this.recipient,
-    required this.source,
-    @JsonKey(name: '__source') required this.sourceElement,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.masterIdentifier,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.type,
+    this.subject,
+    this.created,
+    @JsonKey(name: '__created') this.createdElement,
+    this.author,
+    this.recipient,
+    this.source,
+    @JsonKey(name: '__source') this.sourceElement,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
     required this.content,
-    required this.related,
+    this.related,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final Code? status;
@@ -355,11 +316,11 @@ class DocumentManifest extends Resource {
 @JsonSerializable()
 class DocumentManifestRelated {
   const DocumentManifestRelated({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.ref,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.ref,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -375,51 +336,38 @@ class DocumentManifestRelated {
 class DocumentReference extends Resource {
   const DocumentReference({
     super.resourceType = R4ResourceType.DocumentReference,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.masterIdentifier,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.docStatus,
-    @JsonKey(name: '__docStatus') required this.docStatusElement,
-    required this.type,
-    required this.category,
-    required this.subject,
-    required this.date,
-    @JsonKey(name: '__date') required this.dateElement,
-    required this.author,
-    required this.authenticator,
-    required this.custodian,
-    required this.relatesTo,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.securityLabel,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.masterIdentifier,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.docStatus,
+    @JsonKey(name: '__docStatus') this.docStatusElement,
+    this.type,
+    this.category,
+    this.subject,
+    this.date,
+    @JsonKey(name: '__date') this.dateElement,
+    this.author,
+    this.authenticator,
+    this.custodian,
+    this.relatesTo,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.securityLabel,
     required this.content,
-    required this.context,
+    this.context,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final Code? status;
@@ -452,11 +400,11 @@ class DocumentReference extends Resource {
 @JsonSerializable()
 class DocumentReferenceRelatesTo {
   const DocumentReferenceRelatesTo({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
     required this.target,
   });
   final String? id;
@@ -473,11 +421,11 @@ class DocumentReferenceRelatesTo {
 @JsonSerializable()
 class DocumentReferenceContent {
   const DocumentReferenceContent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.attachment,
-    required this.format,
+    this.format,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -492,16 +440,16 @@ class DocumentReferenceContent {
 @JsonSerializable()
 class DocumentReferenceContext {
   const DocumentReferenceContext({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.encounter,
-    required this.event,
-    required this.period,
-    required this.facilityType,
-    required this.practiceSetting,
-    required this.sourcePatientInfo,
-    required this.related,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.encounter,
+    this.event,
+    this.period,
+    this.facilityType,
+    this.practiceSetting,
+    this.sourcePatientInfo,
+    this.related,
   });
   final String? id;
   final List<FhirExtension>? extension_;

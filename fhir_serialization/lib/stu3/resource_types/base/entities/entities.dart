@@ -13,7 +13,7 @@ class Device extends Resource {
     super.resourceType = Stu3ResourceType.Device,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,31 +21,31 @@ class Device extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.udi,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.manufacturer,
-    @JsonKey(name: '_manufacturer') required this.manufacturerElement,
-    required this.manufactureDate,
-    @JsonKey(name: '_manufactureDate') required this.manufactureDateElement,
-    required this.expirationDate,
-    @JsonKey(name: '_expirationDate') required this.expirationDateElement,
-    required this.model,
-    @JsonKey(name: '_model') required this.modelElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.patient,
-    required this.owner,
-    required this.contact,
-    required this.location,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.note,
-    required this.safety,
+    this.identifier,
+    this.udi,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.manufacturer,
+    @JsonKey(name: '_manufacturer') this.manufacturerElement,
+    this.manufactureDate,
+    @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
+    this.expirationDate,
+    @JsonKey(name: '_expirationDate') this.expirationDateElement,
+    this.model,
+    @JsonKey(name: '_model') this.modelElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.patient,
+    this.owner,
+    this.contact,
+    this.location,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.note,
+    this.safety,
   });
   final List<Identifier>? identifier;
   final DeviceUdi? udi;
@@ -79,20 +79,20 @@ class Device extends Resource {
 @JsonSerializable()
 class DeviceUdi {
   const DeviceUdi({
-    required this.deviceIdentifier,
-    @JsonKey(name: '_deviceIdentifier') required this.deviceIdentifierElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.jurisdiction,
-    @JsonKey(name: '_jurisdiction') required this.jurisdictionElement,
-    required this.carrierHRF,
-    @JsonKey(name: '_carrierHRF') required this.carrierHRFElement,
-    required this.carrierAIDC,
-    @JsonKey(name: '_carrierAIDC') required this.carrierAIDCElement,
-    required this.issuer,
-    @JsonKey(name: '_issuer') required this.issuerElement,
-    required this.entryType,
-    @JsonKey(name: '_entryType') required this.entryTypeElement,
+    this.deviceIdentifier,
+    @JsonKey(name: '_deviceIdentifier') this.deviceIdentifierElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.jurisdiction,
+    @JsonKey(name: '_jurisdiction') this.jurisdictionElement,
+    this.carrierHRF,
+    @JsonKey(name: '_carrierHRF') this.carrierHRFElement,
+    this.carrierAIDC,
+    @JsonKey(name: '_carrierAIDC') this.carrierAIDCElement,
+    this.issuer,
+    @JsonKey(name: '_issuer') this.issuerElement,
+    this.entryType,
+    @JsonKey(name: '_entryType') this.entryTypeElement,
   });
   final String? deviceIdentifier;
   final Element? deviceIdentifierElement;
@@ -119,7 +119,7 @@ class DeviceComponent extends Resource {
     super.resourceType = Stu3ResourceType.DeviceComponent,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -129,17 +129,16 @@ class DeviceComponent extends Resource {
     super.modifierExtension,
     required this.identifier,
     required this.type,
-    required this.lastSystemChange,
-    @JsonKey(name: '_lastSystemChange') required this.lastSystemChangeElement,
-    required this.source,
-    required this.parent,
-    required this.operationalStatus,
-    required this.parameterGroup,
-    required this.measurementPrinciple,
-    @JsonKey(name: '__measurementPrinciple')
-        required this.measurementPrincipleElement,
-    required this.productionSpecification,
-    required this.languageCode,
+    this.lastSystemChange,
+    @JsonKey(name: '_lastSystemChange') this.lastSystemChangeElement,
+    this.source,
+    this.parent,
+    this.operationalStatus,
+    this.parameterGroup,
+    this.measurementPrinciple,
+    @JsonKey(name: '__measurementPrinciple') this.measurementPrincipleElement,
+    this.productionSpecification,
+    this.languageCode,
   });
   final Identifier identifier;
   final CodeableConcept type;
@@ -162,10 +161,10 @@ class DeviceComponent extends Resource {
 @JsonSerializable()
 class DeviceComponentProductionSpecification {
   const DeviceComponentProductionSpecification({
-    required this.specType,
-    required this.componentId,
-    required this.productionSpec,
-    @JsonKey(name: '_productionSpec') required this.productionSpecElement,
+    this.specType,
+    this.componentId,
+    this.productionSpec,
+    @JsonKey(name: '_productionSpec') this.productionSpecElement,
   });
 
   final CodeableConcept? specType;
@@ -180,14 +179,62 @@ class DeviceComponentProductionSpecification {
 }
 
 @JsonSerializable()
+class DeviceMetric extends Resource {
+  const DeviceMetric({
+    super.resourceType = Stu3ResourceType.DeviceMetric,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.identifier,
+    required this.type,
+    this.unit,
+    this.source,
+    this.parent,
+    this.operationalStatus,
+    @JsonKey(name: '_operationalStatus') this.operationalStatusElement,
+    this.color,
+    @JsonKey(name: '_color') this.colorElement,
+    this.category,
+    @JsonKey(name: '_category') this.categoryElement,
+    this.measurementPeriod,
+    this.calibration,
+  });
+
+  final Identifier identifier;
+  final CodeableConcept type;
+  final CodeableConcept? unit;
+  final Reference? source;
+  final Reference? parent;
+  final DeviceMetricOperationalStatus? operationalStatus;
+  final Element? operationalStatusElement;
+  final DeviceMetricColor? color;
+  final Element? colorElement;
+  final DeviceMetricCategory? category;
+  final Element? categoryElement;
+  final Timing? measurementPeriod;
+  final List<DeviceMetricCalibration>? calibration;
+
+  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
+}
+
+@JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.state,
-    @JsonKey(name: '_state') required this.stateElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.state,
+    @JsonKey(name: '_state') this.stateElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
   });
   final DeviceMetricCalibrationType? type;
   final Element? typeElement;
@@ -206,7 +253,7 @@ class Endpoint extends Resource {
     super.resourceType = Stu3ResourceType.Endpoint,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -214,22 +261,22 @@ class Endpoint extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
     required this.connectionType,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.managingOrganization,
-    required this.contact,
-    required this.period,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.managingOrganization,
+    this.contact,
+    this.period,
     required this.payloadType,
-    required this.payloadMimeType,
-    @JsonKey(name: '_payloadMimeType') required this.payloadMimeTypeElement,
-    required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
-    required this.header,
-    @JsonKey(name: '_header') required this.headerElement,
+    this.payloadMimeType,
+    @JsonKey(name: '_payloadMimeType') this.payloadMimeTypeElement,
+    this.address,
+    @JsonKey(name: '_address') this.addressElement,
+    this.header,
+    @JsonKey(name: '_header') this.headerElement,
   });
   final List<Identifier>? identifier;
   final EndpointStatus? status;
@@ -258,7 +305,7 @@ class HealthcareService extends Resource {
     super.resourceType = Stu3ResourceType.HealthcareService,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -266,40 +313,39 @@ class HealthcareService extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.providedBy,
-    required this.category,
-    required this.type,
-    required this.specialty,
-    required this.location,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
-    required this.extraDetails,
-    @JsonKey(name: '_extraDetails') required this.extraDetailsElement,
-    required this.photo,
-    required this.telecom,
-    required this.coverageArea,
-    required this.serviceProvisionCode,
-    required this.eligibility,
-    required this.eligibilityNote,
-    @JsonKey(name: '_eligibilityNote') required this.eligibilityNoteElement,
-    required this.programName,
-    @JsonKey(name: '_programName') required this.programNameElement,
-    required this.characteristic,
-    required this.referralMethod,
-    required this.appointmentRequired,
-    @JsonKey(name: '_appointmentRequired')
-        required this.appointmentRequiredElement,
-    required this.availableTime,
-    required this.notAvailable,
-    required this.availabilityExceptions,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.providedBy,
+    this.category,
+    this.type,
+    this.specialty,
+    this.location,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.extraDetails,
+    @JsonKey(name: '_extraDetails') this.extraDetailsElement,
+    this.photo,
+    this.telecom,
+    this.coverageArea,
+    this.serviceProvisionCode,
+    this.eligibility,
+    this.eligibilityNote,
+    @JsonKey(name: '_eligibilityNote') this.eligibilityNoteElement,
+    this.programName,
+    @JsonKey(name: '_programName') this.programNameElement,
+    this.characteristic,
+    this.referralMethod,
+    this.appointmentRequired,
+    @JsonKey(name: '_appointmentRequired') this.appointmentRequiredElement,
+    this.availableTime,
+    this.notAvailable,
+    this.availabilityExceptions,
     @JsonKey(name: '__availabilityExceptions')
-        required this.availabilityExceptionsElement,
-    required this.endpoint,
+        this.availabilityExceptionsElement,
+    this.endpoint,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -342,15 +388,14 @@ class HealthcareService extends Resource {
 @JsonSerializable()
 class HealthcareServiceAvailableTime {
   const HealthcareServiceAvailableTime({
-    required this.daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') required this.daysOfWeekElement,
-    required this.allDay,
-    @JsonKey(name: '_allDay') required this.allDayElement,
-    required this.availableStartTime,
-    @JsonKey(name: '_availableStartTime')
-        required this.availableStartTimeElement,
-    required this.availableEndTime,
-    @JsonKey(name: '_availableEndTime') required this.availableEndTimeElement,
+    this.daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+    this.allDay,
+    @JsonKey(name: '_allDay') this.allDayElement,
+    this.availableStartTime,
+    @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+    this.availableEndTime,
+    @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
   final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek;
   final List<Element?>? daysOfWeekElement;
@@ -368,9 +413,9 @@ class HealthcareServiceAvailableTime {
 @JsonSerializable()
 class HealthcareServiceNotAvailable {
   const HealthcareServiceNotAvailable({
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.during,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.during,
   });
   final String? description;
   final Element? descriptionElement;
@@ -386,7 +431,7 @@ class Location extends Resource {
     super.resourceType = Stu3ResourceType.Location,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -394,26 +439,26 @@ class Location extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.operationalStatus,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.alias,
-    @JsonKey(name: '_alias') required this.aliasElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.type,
-    required this.telecom,
-    required this.address,
-    required this.physicalType,
-    required this.position,
-    required this.managingOrganization,
-    required this.partOf,
-    required this.endpoint,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.operationalStatus,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.alias,
+    @JsonKey(name: '_alias') this.aliasElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.type,
+    this.telecom,
+    this.address,
+    this.physicalType,
+    this.position,
+    this.managingOrganization,
+    this.partOf,
+    this.endpoint,
   });
   final List<Identifier>? identifier;
   final LocationStatus? status;
@@ -443,12 +488,12 @@ class Location extends Resource {
 @JsonSerializable()
 class LocationPosition {
   const LocationPosition({
-    required this.longitude,
-    @JsonKey(name: '_longitude') required this.longitudeElement,
-    required this.latitude,
-    @JsonKey(name: '_latitude') required this.latitudeElement,
-    required this.altitude,
-    @JsonKey(name: '_altitude') required this.altitudeElement,
+    this.longitude,
+    @JsonKey(name: '_longitude') this.longitudeElement,
+    this.latitude,
+    @JsonKey(name: '_latitude') this.latitudeElement,
+    this.altitude,
+    @JsonKey(name: '_altitude') this.altitudeElement,
   });
   final Decimal? longitude;
   final Element? longitudeElement;
@@ -467,7 +512,7 @@ class Organization extends Resource {
     super.resourceType = Stu3ResourceType.Organization,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -475,19 +520,19 @@ class Organization extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.type,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.alias,
-    @JsonKey(name: '_alias') required this.aliasElement,
-    required this.telecom,
-    required this.address,
-    required this.partOf,
-    required this.contact,
-    required this.endpoint,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.type,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.alias,
+    @JsonKey(name: '_alias') this.aliasElement,
+    this.telecom,
+    this.address,
+    this.partOf,
+    this.contact,
+    this.endpoint,
   });
   final List<Identifier>? identifier;
   final Boolean? active;
@@ -510,10 +555,10 @@ class Organization extends Resource {
 @JsonSerializable()
 class OrganizationContact {
   const OrganizationContact({
-    required this.purpose,
-    required this.name,
-    required this.telecom,
-    required this.address,
+    this.purpose,
+    this.name,
+    this.telecom,
+    this.address,
   });
   final CodeableConcept? purpose;
   final HumanName? name;
@@ -530,7 +575,7 @@ class Substance extends Resource {
     super.resourceType = Stu3ResourceType.Substance,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -538,15 +583,15 @@ class Substance extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
     required this.code,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.instance,
-    required this.ingredient,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.instance,
+    this.ingredient,
   });
   final List<Identifier>? identifier;
   final SubstanceStatus? status;
@@ -565,10 +610,10 @@ class Substance extends Resource {
 @JsonSerializable()
 class SubstanceInstance {
   const SubstanceInstance({
-    required this.identifier,
-    required this.expiry,
-    @JsonKey(name: '_expiry') required this.expiryElement,
-    required this.quantity,
+    this.identifier,
+    this.expiry,
+    @JsonKey(name: '_expiry') this.expiryElement,
+    this.quantity,
   });
   final Identifier? identifier;
   final String? expiry;
@@ -582,9 +627,9 @@ class SubstanceInstance {
 @JsonSerializable()
 class SubstanceIngredient {
   const SubstanceIngredient({
-    required this.quantity,
-    required this.substanceCodeableConcept,
-    required this.substanceReference,
+    this.quantity,
+    this.substanceCodeableConcept,
+    this.substanceReference,
   });
   final Ratio? quantity;
   final CodeableConcept? substanceCodeableConcept;

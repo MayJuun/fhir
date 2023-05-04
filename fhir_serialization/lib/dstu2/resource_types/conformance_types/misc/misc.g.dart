@@ -556,6 +556,177 @@ const _$ResourcePurposeEnumMap = {
   ResourcePurpose.unknown: 'unknown',
 };
 
+TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.TestScript,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: FhirUri.fromJson(json['url']),
+      urlElement: json['urlElement'] == null
+          ? null
+          : Element.fromJson(json['urlElement'] as Map<String, dynamic>),
+      version: json['version'] as String?,
+      name: json['name'] as String,
+      nameElement: json['nameElement'] == null
+          ? null
+          : Element.fromJson(json['nameElement'] as Map<String, dynamic>),
+      status: $enumDecodeNullable(_$TestScriptStatusEnumMap, json['status']),
+      statusElement: json['statusElement'] == null
+          ? null
+          : Element.fromJson(json['statusElement'] as Map<String, dynamic>),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      experimentalElement: json['experimentalElement'] == null
+          ? null
+          : Element.fromJson(
+              json['experimentalElement'] as Map<String, dynamic>),
+      publisher: json['publisher'] as String?,
+      publisherElement: json['publisherElement'] == null
+          ? null
+          : Element.fromJson(json['publisherElement'] as Map<String, dynamic>),
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => TestScriptContact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      dateElement: json['dateElement'] == null
+          ? null
+          : Element.fromJson(json['dateElement'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      descriptionElement: json['descriptionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['descriptionElement'] as Map<String, dynamic>),
+      useContext: (json['useContext'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      requirements: json['requirements'] as String?,
+      copyright: json['copyright'] as String?,
+      copyrightElement: json['copyrightElement'] == null
+          ? null
+          : Element.fromJson(json['copyrightElement'] as Map<String, dynamic>),
+      metadata: json['metadata'] == null
+          ? null
+          : TestScriptMetadata.fromJson(
+              json['metadata'] as Map<String, dynamic>),
+      multiserver: json['multiserver'] == null
+          ? null
+          : Boolean.fromJson(json['multiserver']),
+      fixture: (json['fixture'] as List<dynamic>?)
+          ?.map((e) => TestScriptFixture.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      variable: (json['variable'] as List<dynamic>?)
+          ?.map((e) => TestScriptVariable.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      setup: json['setup'] == null
+          ? null
+          : TestScriptSetup.fromJson(json['setup'] as Map<String, dynamic>),
+      test: (json['test'] as List<dynamic>?)
+          ?.map((e) => TestScriptTest.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      teardown: json['teardown'] == null
+          ? null
+          : TestScriptTeardown.fromJson(
+              json['teardown'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['url'] = instance.url.toJson();
+  writeNotNull('urlElement', instance.urlElement?.toJson());
+  writeNotNull('version', instance.version);
+  val['name'] = instance.name;
+  writeNotNull('nameElement', instance.nameElement?.toJson());
+  writeNotNull('status', _$TestScriptStatusEnumMap[instance.status]);
+  writeNotNull('statusElement', instance.statusElement?.toJson());
+  writeNotNull('identifier', instance.identifier?.toJson());
+  writeNotNull('experimental', instance.experimental?.toJson());
+  writeNotNull('experimentalElement', instance.experimentalElement?.toJson());
+  writeNotNull('publisher', instance.publisher);
+  writeNotNull('publisherElement', instance.publisherElement?.toJson());
+  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('dateElement', instance.dateElement?.toJson());
+  writeNotNull('description', instance.description);
+  writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
+  writeNotNull(
+      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
+  writeNotNull('requirements', instance.requirements);
+  writeNotNull('copyright', instance.copyright);
+  writeNotNull('copyrightElement', instance.copyrightElement?.toJson());
+  writeNotNull('metadata', instance.metadata?.toJson());
+  writeNotNull('multiserver', instance.multiserver?.toJson());
+  writeNotNull('fixture', instance.fixture?.map((e) => e.toJson()).toList());
+  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull('variable', instance.variable?.map((e) => e.toJson()).toList());
+  writeNotNull('setup', instance.setup?.toJson());
+  writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());
+  writeNotNull('teardown', instance.teardown?.toJson());
+  return val;
+}
+
+const _$TestScriptStatusEnumMap = {
+  TestScriptStatus.draft: 'draft',
+  TestScriptStatus.active: 'active',
+  TestScriptStatus.retired: 'retired',
+  TestScriptStatus.unknown: 'unknown',
+};
+
 TestScriptContact _$TestScriptContactFromJson(Map<String, dynamic> json) =>
     TestScriptContact(
       id: json['id'] == null ? null : Id.fromJson(json['id']),

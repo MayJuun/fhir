@@ -11,8 +11,8 @@ class Element {
     this.id,
     @JsonKey(name: 'extension') this.extension_,
   });
-  String? id;
-  List<FhirExtension>? extension_;
+  final String? id;
+  final List<FhirExtension>? extension_;
   factory Element.fromJson(Map<String, dynamic> json) =>
       _$ElementFromJson(json);
   Map<String, dynamic> toJson() => _$ElementToJson(this);

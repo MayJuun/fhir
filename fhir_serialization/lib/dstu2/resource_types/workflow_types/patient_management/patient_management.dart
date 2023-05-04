@@ -13,7 +13,7 @@ class Encounter extends Resource {
     super.resourceType = Dstu2ResourceType.Encounter,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,27 +21,27 @@ class Encounter extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
+    this.identifier,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.statusHistory,
-    @JsonKey(name: 'class') required this.class_,
-    @JsonKey(name: '_class') required this.classElement,
-    required this.type,
-    required this.priority,
-    required this.patient,
-    required this.episodeOfCare,
-    required this.incomingReferral,
-    required this.participant,
-    required this.appointment,
-    required this.period,
-    required this.length,
-    required this.reason,
-    required this.indication,
-    required this.hospitalization,
-    required this.location,
-    required this.serviceProvider,
-    required this.partOf,
+    @JsonKey(name: '_status') this.statusElement,
+    this.statusHistory,
+    @JsonKey(name: 'class') this.class_,
+    @JsonKey(name: '_class') this.classElement,
+    this.type,
+    this.priority,
+    this.patient,
+    this.episodeOfCare,
+    this.incomingReferral,
+    this.participant,
+    this.appointment,
+    this.period,
+    this.length,
+    this.reason,
+    this.indication,
+    this.hospitalization,
+    this.location,
+    this.serviceProvider,
+    this.partOf,
   });
   final List<Identifier>? identifier;
 
@@ -73,11 +73,11 @@ class Encounter extends Resource {
 @JsonSerializable()
 class EncounterStatusHistory {
   const EncounterStatusHistory({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    @JsonKey(name: '_status') this.statusElement,
     required this.period,
   });
   final Id? id;
@@ -95,12 +95,12 @@ class EncounterStatusHistory {
 @JsonSerializable()
 class EncounterParticipant {
   const EncounterParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.period,
-    required this.individual,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.period,
+    this.individual,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -116,21 +116,21 @@ class EncounterParticipant {
 @JsonSerializable()
 class EncounterHospitalization {
   const EncounterHospitalization({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.modifierExtension,
-    required this.preAdmissionIdentifier,
-    required this.origin,
-    required this.admitSource,
-    required this.admittingDiagnosis,
-    required this.reAdmission,
-    required this.dietPreference,
-    required this.specialCourtesy,
-    required this.specialArrangement,
-    required this.destination,
-    required this.dischargeDisposition,
-    required this.dischargeDiagnosis,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.modifierExtension,
+    this.preAdmissionIdentifier,
+    this.origin,
+    this.admitSource,
+    this.admittingDiagnosis,
+    this.reAdmission,
+    this.dietPreference,
+    this.specialCourtesy,
+    this.specialArrangement,
+    this.destination,
+    this.dischargeDisposition,
+    this.dischargeDiagnosis,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -155,13 +155,13 @@ class EncounterHospitalization {
 @JsonSerializable()
 class EncounterLocation {
   const EncounterLocation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.location,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.period,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.period,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -182,7 +182,7 @@ class EpisodeOfCare extends Resource {
     super.resourceType = Dstu2ResourceType.EpisodeOfCare,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -190,18 +190,18 @@ class EpisodeOfCare extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
+    this.identifier,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.statusHistory,
-    required this.type,
-    required this.condition,
+    @JsonKey(name: '_status') this.statusElement,
+    this.statusHistory,
+    this.type,
+    this.condition,
     required this.patient,
-    required this.managingOrganization,
-    required this.period,
-    required this.referralRequest,
-    required this.careManager,
-    required this.careTeam,
+    this.managingOrganization,
+    this.period,
+    this.referralRequest,
+    this.careManager,
+    this.careTeam,
   });
   final List<Identifier>? identifier;
 
@@ -224,11 +224,11 @@ class EpisodeOfCare extends Resource {
 @JsonSerializable()
 class EpisodeOfCareStatusHistory {
   const EpisodeOfCareStatusHistory({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     @JsonKey(required: true) required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    @JsonKey(name: '_status') this.statusElement,
     required this.period,
   });
   final Id? id;
@@ -246,12 +246,12 @@ class EpisodeOfCareStatusHistory {
 @JsonSerializable()
 class EpisodeOfCareCareTeam {
   const EpisodeOfCareCareTeam({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    required this.period,
-    required this.member,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    this.period,
+    this.member,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -270,7 +270,7 @@ class Communication extends Resource {
     super.resourceType = Dstu2ResourceType.Communication,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -278,22 +278,22 @@ class Communication extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.category,
-    required this.sender,
-    required this.recipient,
-    required this.payload,
-    required this.medium,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.encounter,
-    required this.sent,
-    @JsonKey(name: '_sent') required this.sentElement,
-    required this.received,
-    @JsonKey(name: '_received') required this.receivedElement,
-    required this.reason,
-    required this.subject,
-    required this.requestDetail,
+    this.identifier,
+    this.category,
+    this.sender,
+    this.recipient,
+    this.payload,
+    this.medium,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.encounter,
+    this.sent,
+    @JsonKey(name: '_sent') this.sentElement,
+    this.received,
+    @JsonKey(name: '_received') this.receivedElement,
+    this.reason,
+    this.subject,
+    this.requestDetail,
   });
   final List<Identifier>? identifier;
   final CodeableConcept? category;
@@ -320,13 +320,13 @@ class Communication extends Resource {
 @JsonSerializable()
 class CommunicationPayload {
   const CommunicationPayload({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.contentString,
-    @JsonKey(name: '_contentString') required this.contentStringElement,
-    required this.contentAttachment,
-    required this.contentReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.contentString,
+    @JsonKey(name: '_contentString') this.contentStringElement,
+    this.contentAttachment,
+    this.contentReference,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -346,7 +346,7 @@ class Flag extends Resource {
     super.resourceType = Dstu2ResourceType.Flag,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -354,14 +354,14 @@ class Flag extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.category,
+    this.identifier,
+    this.category,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.period,
+    @JsonKey(name: '_status') this.statusElement,
+    this.period,
     required this.subject,
-    required this.encounter,
-    required this.author,
+    this.encounter,
+    this.author,
     required this.code,
   });
   final List<Identifier>? identifier;

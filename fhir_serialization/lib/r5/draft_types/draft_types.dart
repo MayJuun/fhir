@@ -17,14 +17,14 @@ class Population {
     this.race,
     this.physiologicalCondition,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  Range? ageRange;
-  CodeableConcept? ageCodeableConcept;
-  CodeableConcept? gender;
-  CodeableConcept? race;
-  CodeableConcept? physiologicalCondition;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final Range? ageRange;
+  final CodeableConcept? ageCodeableConcept;
+  final CodeableConcept? gender;
+  final CodeableConcept? race;
+  final CodeableConcept? physiologicalCondition;
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
   Map<String, dynamic> toJson() => _$PopulationToJson(this);
@@ -42,14 +42,14 @@ class ProductShelfLife {
     @JsonKey(name: '_periodString') this.periodStringElement,
     this.specialPrecautionsForStorage,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CodeableConcept? type;
-  FhirDuration? periodDuration;
-  String? periodString;
-  Element? periodStringElement;
-  List<CodeableConcept>? specialPrecautionsForStorage;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final CodeableConcept? type;
+  final FhirDuration? periodDuration;
+  final String? periodString;
+  final Element? periodStringElement;
+  final List<CodeableConcept>? specialPrecautionsForStorage;
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
   Map<String, dynamic> toJson() => _$ProductShelfLifeToJson(this);
@@ -68,17 +68,16 @@ class MarketingStatus {
     this.restoreDate,
     @JsonKey(name: '_restoreDate') this.restoreDateElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CodeableConcept? country;
-  CodeableConcept? jurisdiction;
-  CodeableConcept status;
-  Period? dateRange;
-  FhirDateTime? restoreDate;
-  Element? restoreDateElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final CodeableConcept? country;
+  final CodeableConcept? jurisdiction;
+  final CodeableConcept status;
+  final Period? dateRange;
+  final FhirDateTime? restoreDate;
+  final Element? restoreDateElement;
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
   Map<String, dynamic> toJson() => _$MarketingStatusToJson(this);
 }
-

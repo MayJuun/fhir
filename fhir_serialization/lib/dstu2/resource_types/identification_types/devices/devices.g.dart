@@ -406,6 +406,138 @@ Map<String, dynamic> _$DeviceComponentProductionSpecificationToJson(
   return val;
 }
 
+DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) => DeviceMetric(
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DeviceMetric,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      idElement: json['idElement'] == null
+          ? null
+          : Element.fromJson(json['idElement'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      identifier:
+          Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      unit: json['unit'] == null
+          ? null
+          : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
+      source: json['source'] == null
+          ? null
+          : Reference.fromJson(json['source'] as Map<String, dynamic>),
+      parent: json['parent'] == null
+          ? null
+          : Reference.fromJson(json['parent'] as Map<String, dynamic>),
+      operationalStatus: $enumDecodeNullable(
+          _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus']),
+      operationalStatusElement: json['operationalStatusElement'] == null
+          ? null
+          : Element.fromJson(
+              json['operationalStatusElement'] as Map<String, dynamic>),
+      color: $enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color']),
+      colorElement: json['colorElement'] == null
+          ? null
+          : Element.fromJson(json['colorElement'] as Map<String, dynamic>),
+      category: $enumDecode(_$DeviceMetricCategoryEnumMap, json['category']),
+      categoryElement: json['categoryElement'] == null
+          ? null
+          : Element.fromJson(json['categoryElement'] as Map<String, dynamic>),
+      measurementPeriod: json['measurementPeriod'] == null
+          ? null
+          : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
+      calibration: (json['calibration'] as List<dynamic>?)
+          ?.map((e) =>
+              DeviceMetricCalibration.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$DeviceMetricToJson(DeviceMetric instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('idElement', instance.idElement?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  val['identifier'] = instance.identifier.toJson();
+  writeNotNull('unit', instance.unit?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('parent', instance.parent?.toJson());
+  writeNotNull('operationalStatus',
+      _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
+  writeNotNull(
+      'operationalStatusElement', instance.operationalStatusElement?.toJson());
+  writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
+  writeNotNull('colorElement', instance.colorElement?.toJson());
+  val['category'] = _$DeviceMetricCategoryEnumMap[instance.category]!;
+  writeNotNull('categoryElement', instance.categoryElement?.toJson());
+  writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
+  writeNotNull(
+      'calibration', instance.calibration?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+const _$DeviceMetricOperationalStatusEnumMap = {
+  DeviceMetricOperationalStatus.on_: 'on',
+  DeviceMetricOperationalStatus.off: 'off',
+  DeviceMetricOperationalStatus.standby: 'standby',
+  DeviceMetricOperationalStatus.unknown: 'unknown',
+};
+
+const _$DeviceMetricColorEnumMap = {
+  DeviceMetricColor.black: 'black',
+  DeviceMetricColor.red: 'red',
+  DeviceMetricColor.green: 'green',
+  DeviceMetricColor.yellow: 'yellow',
+  DeviceMetricColor.blue: 'blue',
+  DeviceMetricColor.magenta: 'magenta',
+  DeviceMetricColor.cyan: 'cyan',
+  DeviceMetricColor.white: 'white',
+  DeviceMetricColor.unknown: 'unknown',
+};
+
+const _$DeviceMetricCategoryEnumMap = {
+  DeviceMetricCategory.measurement: 'measurement',
+  DeviceMetricCategory.setting: 'setting',
+  DeviceMetricCategory.calculation: 'calculation',
+  DeviceMetricCategory.unspecified: 'unspecified',
+  DeviceMetricCategory.unknown: 'unknown',
+};
+
 DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
         Map<String, dynamic> json) =>
     DeviceMetricCalibration(

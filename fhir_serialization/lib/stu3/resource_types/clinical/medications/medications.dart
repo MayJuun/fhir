@@ -13,7 +13,7 @@ class Immunization extends Resource {
     super.resourceType = Stu3ResourceType.Immunization,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,33 +21,33 @@ class Immunization extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.notGiven,
-    @JsonKey(name: '_notGiven') required this.notGivenElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.notGiven,
+    @JsonKey(name: '_notGiven') this.notGivenElement,
     required this.vaccineCode,
     required this.patient,
-    required this.encounter,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.primarySource,
-    @JsonKey(name: '_primarySource') required this.primarySourceElement,
-    required this.reportOrigin,
-    required this.location,
-    required this.manufacturer,
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.expirationDate,
-    @JsonKey(name: '_expirationDate') required this.expirationDateElement,
-    required this.site,
-    required this.route,
-    required this.doseQuantity,
-    required this.practitioner,
-    required this.note,
-    required this.explanation,
-    required this.reaction,
-    required this.vaccinationProtocol,
+    this.encounter,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.primarySource,
+    @JsonKey(name: '_primarySource') this.primarySourceElement,
+    this.reportOrigin,
+    this.location,
+    this.manufacturer,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.expirationDate,
+    @JsonKey(name: '_expirationDate') this.expirationDateElement,
+    this.site,
+    this.route,
+    this.doseQuantity,
+    this.practitioner,
+    this.note,
+    this.explanation,
+    this.reaction,
+    this.vaccinationProtocol,
   });
   final List<Identifier>? identifier;
   final String? status;
@@ -84,7 +84,7 @@ class Immunization extends Resource {
 @JsonSerializable()
 class ImmunizationPractitioner {
   const ImmunizationPractitioner({
-    required this.role,
+    this.role,
     required this.actor,
   });
   final CodeableConcept? role;
@@ -97,8 +97,8 @@ class ImmunizationPractitioner {
 @JsonSerializable()
 class ImmunizationExplanation {
   const ImmunizationExplanation({
-    required this.reason,
-    required this.reasonNotGiven,
+    this.reason,
+    this.reasonNotGiven,
   });
   final List<CodeableConcept>? reason;
   final List<CodeableConcept>? reasonNotGiven;
@@ -110,11 +110,11 @@ class ImmunizationExplanation {
 @JsonSerializable()
 class ImmunizationReaction {
   const ImmunizationReaction({
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.detail,
-    required this.reported,
-    @JsonKey(name: '_reported') required this.reportedElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.detail,
+    this.reported,
+    @JsonKey(name: '_reported') this.reportedElement,
   });
   final Date? date;
   final Element? dateElement;
@@ -129,18 +129,18 @@ class ImmunizationReaction {
 @JsonSerializable()
 class ImmunizationVaccinationProtocol {
   const ImmunizationVaccinationProtocol({
-    required this.doseSequence,
-    @JsonKey(name: '_doseSequence') required this.doseSequenceElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.authority,
-    required this.series,
-    @JsonKey(name: '_series') required this.seriesElement,
-    required this.seriesDoses,
-    @JsonKey(name: '_seriesDoses') required this.seriesDosesElement,
+    this.doseSequence,
+    @JsonKey(name: '_doseSequence') this.doseSequenceElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.authority,
+    this.series,
+    @JsonKey(name: '_series') this.seriesElement,
+    this.seriesDoses,
+    @JsonKey(name: '_seriesDoses') this.seriesDosesElement,
     required this.targetDisease,
     required this.doseStatus,
-    required this.doseStatusReason,
+    this.doseStatusReason,
   });
   final Decimal? doseSequence;
   final Element? doseSequenceElement;
@@ -163,11 +163,10 @@ class ImmunizationVaccinationProtocol {
 @JsonSerializable()
 class ImmunizationRecommendation extends Resource {
   const ImmunizationRecommendation({
-    @Default(Stu3ResourceType.ImmunizationRecommendation)
-        required this.resourceType,
+    super.resourceType = Stu3ResourceType.ImmunizationRecommendation,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -175,7 +174,7 @@ class ImmunizationRecommendation extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
+    this.identifier,
     required this.patient,
     required this.recommendation,
   });
@@ -190,17 +189,17 @@ class ImmunizationRecommendation extends Resource {
 @JsonSerializable()
 class ImmunizationRecommendationRecommendation {
   const ImmunizationRecommendationRecommendation({
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.vaccineCode,
-    required this.targetDisease,
-    required this.doseNumber,
-    @JsonKey(name: '_doseNumber') required this.doseNumberElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.vaccineCode,
+    this.targetDisease,
+    this.doseNumber,
+    @JsonKey(name: '_doseNumber') this.doseNumberElement,
     required this.forecastStatus,
-    required this.dateCriterion,
-    required this.protocol,
-    required this.supportingImmunization,
-    required this.supportingPatientInformation,
+    this.dateCriterion,
+    this.protocol,
+    this.supportingImmunization,
+    this.supportingPatientInformation,
   });
 
   final Date? date;
@@ -222,13 +221,105 @@ class ImmunizationRecommendationRecommendation {
 }
 
 @JsonSerializable()
+class ImmunizationRecommendationDateCriterion {
+  const ImmunizationRecommendationDateCriterion({
+    required this.code,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+  });
+
+  final CodeableConcept code;
+  final String? value;
+  final Element? valueElement;
+
+  factory ImmunizationRecommendationDateCriterion.fromJson(
+          Map<String, dynamic> json) =>
+      _$ImmunizationRecommendationDateCriterionFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationRecommendationDateCriterionToJson(this);
+}
+
+@JsonSerializable()
+class ImmunizationRecommendationProtocol {
+  const ImmunizationRecommendationProtocol({
+    this.doseSequence,
+    @JsonKey(name: '_doseSequence') this.doseSequenceElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.authority,
+    this.series,
+    @JsonKey(name: '_series') this.seriesElement,
+  });
+
+  final Decimal? doseSequence;
+  final Element? doseSequenceElement;
+  final String? description;
+  final Element? descriptionElement;
+  final Reference? authority;
+  final String? series;
+  final Element? seriesElement;
+
+  factory ImmunizationRecommendationProtocol.fromJson(
+          Map<String, dynamic> json) =>
+      _$ImmunizationRecommendationProtocolFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationRecommendationProtocolToJson(this);
+}
+
+@JsonSerializable()
+class Medication extends Resource {
+  const Medication({
+    super.resourceType = Stu3ResourceType.Medication,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.code,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.isBrand,
+    @JsonKey(name: '_isBrand') this.isBrandElement,
+    this.isOverTheCounter,
+    @JsonKey(name: '_isOverTheCounter') this.isOverTheCounterElement,
+    this.manufacturer,
+    this.form,
+    this.ingredient,
+    this.package,
+    this.image,
+  });
+
+  final CodeableConcept? code;
+  final MedicationStatus? status;
+  final Element? statusElement;
+  final Boolean? isBrand;
+  final Element? isBrandElement;
+  final Boolean? isOverTheCounter;
+  final Element? isOverTheCounterElement;
+  final Reference? manufacturer;
+  final CodeableConcept? form;
+  final List<MedicationIngredient>? ingredient;
+  final MedicationPackage? package;
+  final List<Attachment>? image;
+
+  factory Medication.fromJson(Map<String, dynamic> json) =>
+      _$MedicationFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationToJson(this);
+}
+
+@JsonSerializable()
 class MedicationIngredient {
   const MedicationIngredient({
-    required this.itemCodeableConcept,
-    required this.itemReference,
-    required this.isActive,
-    @JsonKey(name: '_isActive') required this.isActiveElement,
-    required this.amount,
+    this.itemCodeableConcept,
+    this.itemReference,
+    this.isActive,
+    @JsonKey(name: '_isActive') this.isActiveElement,
+    this.amount,
   });
   final CodeableConcept? itemCodeableConcept;
   final Reference? itemReference;
@@ -243,9 +334,9 @@ class MedicationIngredient {
 @JsonSerializable()
 class MedicationPackage {
   const MedicationPackage({
-    required this.container,
-    required this.content,
-    required this.batch,
+    this.container,
+    this.content,
+    this.batch,
   });
   final CodeableConcept? container;
   final List<MedicationContent>? content;
@@ -258,9 +349,9 @@ class MedicationPackage {
 @JsonSerializable()
 class MedicationContent {
   const MedicationContent({
-    required this.itemCodeableConcept,
-    required this.itemReference,
-    required this.amount,
+    this.itemCodeableConcept,
+    this.itemReference,
+    this.amount,
   });
   final CodeableConcept? itemCodeableConcept;
   final Reference? itemReference;
@@ -273,10 +364,10 @@ class MedicationContent {
 @JsonSerializable()
 class MedicationBatch {
   const MedicationBatch({
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.expirationDate,
-    @JsonKey(name: '_expirationDate') required this.expirationDateElement,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.expirationDate,
+    @JsonKey(name: '_expirationDate') this.expirationDateElement,
   });
   final String? lotNumber;
   final Element? lotNumberElement;
@@ -290,11 +381,10 @@ class MedicationBatch {
 @JsonSerializable()
 class MedicationAdministration extends Resource {
   const MedicationAdministration({
-    @Default(Stu3ResourceType.MedicationAdministration)
-        required this.resourceType,
+    super.resourceType = Stu3ResourceType.MedicationAdministration,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -302,31 +392,31 @@ class MedicationAdministration extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.definition,
-    required this.partOf,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
-    required this.medicationCodeableConcept,
-    required this.medicationReference,
+    this.identifier,
+    this.definition,
+    this.partOf,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
+    this.medicationCodeableConcept,
+    this.medicationReference,
     required this.subject,
-    required this.context,
-    required this.supportingInformation,
-    required this.effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') required this.effectiveDateTimeElement,
-    required this.effectivePeriod,
-    required this.performer,
-    required this.notGiven,
-    @JsonKey(name: '_notGiven') required this.notGivenElement,
-    required this.reasonNotGiven,
-    required this.reasonCode,
-    required this.reasonReference,
-    required this.prescription,
-    required this.device,
-    required this.note,
-    required this.dosage,
-    required this.eventHistory,
+    this.context,
+    this.supportingInformation,
+    this.effectiveDateTime,
+    @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
+    this.effectivePeriod,
+    this.performer,
+    this.notGiven,
+    @JsonKey(name: '_notGiven') this.notGivenElement,
+    this.reasonNotGiven,
+    this.reasonCode,
+    this.reasonReference,
+    this.prescription,
+    this.device,
+    this.note,
+    this.dosage,
+    this.eventHistory,
   });
   final List<Identifier>? identifier;
   final List<Reference>? definition;
@@ -362,7 +452,7 @@ class MedicationAdministration extends Resource {
 class MedicationAdministrationPerformer {
   const MedicationAdministrationPerformer({
     required this.actor,
-    required this.onBehalfOf,
+    this.onBehalfOf,
   });
 
   final Reference actor;
@@ -375,12 +465,39 @@ class MedicationAdministrationPerformer {
 }
 
 @JsonSerializable()
+class MedicationAdministrationDosage {
+  const MedicationAdministrationDosage({
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.site,
+    this.route,
+    this.method,
+    this.dose,
+    this.rateRatio,
+    this.rateSimpleQuantity,
+  });
+
+  final String? text;
+  final Element? textElement;
+  final CodeableConcept? site;
+  final CodeableConcept? route;
+  final CodeableConcept? method;
+  final Quantity? dose;
+  final Ratio? rateRatio;
+  final Quantity? rateSimpleQuantity;
+
+  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationAdministrationDosageFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
+}
+
+@JsonSerializable()
 class MedicationDispense extends Resource {
   const MedicationDispense({
     super.resourceType = Stu3ResourceType.MedicationDispense,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -388,36 +505,36 @@ class MedicationDispense extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.partOf,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
-    required this.medicationCodeableConcept,
-    required this.medicationReference,
-    required this.subject,
-    required this.context,
-    required this.supportingInformation,
-    required this.performer,
-    required this.authorizingPrescription,
-    required this.type,
-    required this.quantity,
-    required this.daysSupply,
-    required this.whenPrepared,
-    @JsonKey(name: '_whenPrepared') required this.whenPreparedElement,
-    required this.whenHandedOver,
-    @JsonKey(name: '_whenHandedOver') required this.whenHandedOverElement,
-    required this.destination,
-    required this.receiver,
-    required this.note,
-    required this.dosageInstruction,
-    required this.substitution,
-    required this.detectedIssue,
-    required this.notDone,
-    @JsonKey(name: '_notDone') required this.notDoneElement,
-    required this.notDoneReasonCodeableConcept,
-    required this.notDoneReasonReference,
-    required this.eventHistory,
+    this.identifier,
+    this.partOf,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
+    this.medicationCodeableConcept,
+    this.medicationReference,
+    this.subject,
+    this.context,
+    this.supportingInformation,
+    this.performer,
+    this.authorizingPrescription,
+    this.type,
+    this.quantity,
+    this.daysSupply,
+    this.whenPrepared,
+    @JsonKey(name: '_whenPrepared') this.whenPreparedElement,
+    this.whenHandedOver,
+    @JsonKey(name: '_whenHandedOver') this.whenHandedOverElement,
+    this.destination,
+    this.receiver,
+    this.note,
+    this.dosageInstruction,
+    this.substitution,
+    this.detectedIssue,
+    this.notDone,
+    @JsonKey(name: '_notDone') this.notDoneElement,
+    this.notDoneReasonCodeableConcept,
+    this.notDoneReasonReference,
+    this.eventHistory,
   });
   final List<Identifier>? identifier;
   final List<Reference>? partOf;
@@ -458,7 +575,7 @@ class MedicationDispense extends Resource {
 class MedicationDispensePerformer {
   const MedicationDispensePerformer({
     required this.actor,
-    required this.onBehalfOf,
+    this.onBehalfOf,
   });
   final Reference actor;
   final Reference? onBehalfOf;
@@ -470,11 +587,11 @@ class MedicationDispensePerformer {
 @JsonSerializable()
 class MedicationDispenseSubstitution {
   const MedicationDispenseSubstitution({
-    required this.wasSubstituted,
-    @JsonKey(name: '_wasSubstituted') required this.wasSubstitutedElement,
-    required this.type,
-    required this.reason,
-    required this.responsibleParty,
+    this.wasSubstituted,
+    @JsonKey(name: '_wasSubstituted') this.wasSubstitutedElement,
+    this.type,
+    this.reason,
+    this.responsibleParty,
   });
   final Boolean? wasSubstituted;
   final Element? wasSubstitutedElement;
@@ -492,7 +609,7 @@ class MedicationRequest extends Resource {
     super.resourceType = Stu3ResourceType.MedicationRequest,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -500,35 +617,35 @@ class MedicationRequest extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.definition,
-    required this.basedOn,
-    required this.groupIdentifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.intent,
-    @JsonKey(name: '_intent') required this.intentElement,
-    required this.category,
-    required this.priority,
-    @JsonKey(name: '_priority') required this.priorityElement,
-    required this.medicationCodeableConcept,
-    required this.medicationReference,
+    this.identifier,
+    this.definition,
+    this.basedOn,
+    this.groupIdentifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.intent,
+    @JsonKey(name: '_intent') this.intentElement,
+    this.category,
+    this.priority,
+    @JsonKey(name: '_priority') this.priorityElement,
+    this.medicationCodeableConcept,
+    this.medicationReference,
     required this.subject,
-    required this.context,
-    required this.supportingInformation,
-    required this.authoredOn,
-    @JsonKey(name: '_authoredOn') required this.authoredOnElement,
-    required this.requester,
-    required this.recorder,
-    required this.reasonCode,
-    required this.reasonReference,
-    required this.note,
-    required this.dosageInstruction,
-    required this.dispenseRequest,
-    required this.substitution,
-    required this.priorPrescription,
-    required this.detectedIssue,
-    required this.eventHistory,
+    this.context,
+    this.supportingInformation,
+    this.authoredOn,
+    @JsonKey(name: '_authoredOn') this.authoredOnElement,
+    this.requester,
+    this.recorder,
+    this.reasonCode,
+    this.reasonReference,
+    this.note,
+    this.dosageInstruction,
+    this.dispenseRequest,
+    this.substitution,
+    this.priorPrescription,
+    this.detectedIssue,
+    this.eventHistory,
   });
   final List<Identifier>? identifier;
   final List<Reference>? definition;
@@ -565,10 +682,27 @@ class MedicationRequest extends Resource {
 }
 
 @JsonSerializable()
+class MedicationRequestSubstitution {
+  const MedicationRequestSubstitution({
+    this.allowed,
+    @JsonKey(name: '_allowed') this.allowedElement,
+    this.reason,
+  });
+
+  final Boolean? allowed;
+  final Element? allowedElement;
+  final CodeableConcept? reason;
+
+  factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
+      _$MedicationRequestSubstitutionFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationRequestSubstitutionToJson(this);
+}
+
+@JsonSerializable()
 class MedicationRequestRequester {
   const MedicationRequestRequester({
     required this.agent,
-    required this.onBehalfOf,
+    this.onBehalfOf,
   });
   final Reference agent;
   final Reference? onBehalfOf;
@@ -580,13 +714,13 @@ class MedicationRequestRequester {
 @JsonSerializable()
 class MedicationRequestDispenseRequest {
   const MedicationRequestDispenseRequest({
-    required this.validityPeriod,
-    required this.numberOfRepeatsAllowed,
+    this.validityPeriod,
+    this.numberOfRepeatsAllowed,
     @JsonKey(name: '__numberOfRepeatsAllowed')
-        required this.numberOfRepeatsAllowedElement,
-    required this.quantity,
-    required this.expectedSupplyDuration,
-    required this.performer,
+        this.numberOfRepeatsAllowedElement,
+    this.quantity,
+    this.expectedSupplyDuration,
+    this.performer,
   });
   final Period? validityPeriod;
   final Decimal? numberOfRepeatsAllowed;
@@ -608,7 +742,7 @@ class MedicationStatement extends Resource {
     super.resourceType = Stu3ResourceType.MedicationStatement,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -616,30 +750,30 @@ class MedicationStatement extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.basedOn,
-    required this.partOf,
-    required this.context,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
-    required this.medicationCodeableConcept,
-    required this.medicationReference,
-    required this.effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') required this.effectiveDateTimeElement,
-    required this.effectivePeriod,
-    required this.dateAsserted,
-    @JsonKey(name: '_dateAsserted') required this.dateAssertedElement,
-    required this.informationSource,
+    this.identifier,
+    this.basedOn,
+    this.partOf,
+    this.context,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
+    this.medicationCodeableConcept,
+    this.medicationReference,
+    this.effectiveDateTime,
+    @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
+    this.effectivePeriod,
+    this.dateAsserted,
+    @JsonKey(name: '_dateAsserted') this.dateAssertedElement,
+    this.informationSource,
     required this.subject,
-    required this.derivedFrom,
-    required this.taken,
-    @JsonKey(name: '_taken') required this.takenElement,
-    required this.reasonNotTaken,
-    required this.reasonCode,
-    required this.reasonReference,
-    required this.note,
-    required this.dosage,
+    this.derivedFrom,
+    this.taken,
+    @JsonKey(name: '_taken') this.takenElement,
+    this.reasonNotTaken,
+    this.reasonCode,
+    this.reasonReference,
+    this.note,
+    this.dosage,
   });
   final List<Identifier>? identifier;
   final List<Reference>? basedOn;

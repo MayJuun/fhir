@@ -3322,7 +3322,9 @@ Map<String, dynamic> _$ResearchDefinitionToJson(ResearchDefinition instance) {
 ResearchElementDefinition _$ResearchElementDefinitionFromJson(
         Map<String, dynamic> json) =>
     ResearchElementDefinition(
-      resourceType: json['resourceType'],
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ResearchElementDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

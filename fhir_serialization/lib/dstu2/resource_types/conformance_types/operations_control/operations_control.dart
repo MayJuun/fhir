@@ -11,38 +11,38 @@ part 'operations_control.g.dart';
 class Conformance extends Resource {
   const Conformance({
     super.resourceType = Dstu2ResourceType.Conformance,
-    required super.id,
-    required super.meta,
-    required super.implicitRules,
-    required super.language,
-    required super.text,
-    required super.contained,
-    @JsonKey(name: 'extension') required super.extension_,
-    required super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.version,
-    required this.name,
-    required this.status,
-    required this.experimental,
-    required this.publisher,
-    required this.contact,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.version,
+    this.name,
+    this.status,
+    this.experimental,
+    this.publisher,
+    this.contact,
     required this.date,
-    required this.description,
-    required this.requirements,
-    required this.copyright,
+    this.description,
+    this.requirements,
+    this.copyright,
     required this.kind,
-    required this.software,
-    required this.implementation,
+    this.software,
+    this.implementation,
     required this.fhirVersion,
-    @JsonKey(name: '_fhirVersion') required this.fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
     required this.acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') required this.acceptUnknownElement,
+    @JsonKey(name: '_acceptUnknown') this.acceptUnknownElement,
     required this.format,
-    required this.profile,
-    required this.rest,
-    required this.messaging,
-    required this.document,
+    this.profile,
+    this.rest,
+    this.messaging,
+    this.document,
   });
 
   final FhirUri? url;
@@ -81,38 +81,38 @@ class Conformance extends Resource {
 class CapabilityStatement extends Resource {
   const CapabilityStatement({
     super.resourceType = Dstu2ResourceType.CapabilityStatement,
-    required super.id,
-    required super.meta,
-    required super.implicitRules,
-    required super.language,
-    required super.text,
-    required super.contained,
-    @JsonKey(name: 'extension') required super.extension_,
-    required super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.version,
-    required this.name,
-    required this.status,
-    required this.experimental,
-    required this.publisher,
-    required this.contact,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.version,
+    this.name,
+    this.status,
+    this.experimental,
+    this.publisher,
+    this.contact,
     required this.date,
-    required this.description,
-    required this.requirements,
-    required this.copyright,
+    this.description,
+    this.requirements,
+    this.copyright,
     required this.kind,
-    required this.software,
-    required this.implementation,
+    this.software,
+    this.implementation,
     required this.fhirVersion,
-    @JsonKey(name: '_fhirVersion') required this.fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
     required this.acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') required this.acceptUnknownElement,
+    @JsonKey(name: '_acceptUnknown') this.acceptUnknownElement,
     required this.format,
-    required this.profile,
-    required this.rest,
-    required this.messaging,
-    required this.document,
+    this.profile,
+    this.rest,
+    this.messaging,
+    this.document,
   });
 
   final FhirUri? url;
@@ -150,11 +150,11 @@ class CapabilityStatement extends Resource {
 @JsonSerializable()
 class ConformanceContact {
   const ConformanceContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    this.telecom,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -169,12 +169,12 @@ class ConformanceContact {
 @JsonSerializable()
 class ConformanceSoftware {
   const ConformanceSoftware({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.name,
-    required this.version,
-    required this.releaseDate,
+    this.version,
+    this.releaseDate,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -190,11 +190,11 @@ class ConformanceSoftware {
 @JsonSerializable()
 class ConformanceImplementation {
   const ConformanceImplementation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.description,
-    required this.url,
+    this.url,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -209,20 +209,20 @@ class ConformanceImplementation {
 @JsonSerializable()
 class ConformanceRest {
   const ConformanceRest({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.documentation,
-    required this.security,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.documentation,
+    this.security,
     required this.resource,
-    required this.interaction,
-    required this.transactionMode,
-    required this.searchParam,
-    required this.operation,
-    required this.compartment,
+    this.interaction,
+    this.transactionMode,
+    this.searchParam,
+    this.operation,
+    this.compartment,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -247,13 +247,13 @@ class ConformanceRest {
 @JsonSerializable()
 class ConformanceMessaging {
   const ConformanceMessaging({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.endpoint,
-    required this.reliableCache,
-    required this.documentation,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.endpoint,
+    this.reliableCache,
+    this.documentation,
     required this.event,
   });
   final Id? id;
@@ -272,12 +272,12 @@ class ConformanceMessaging {
 @JsonSerializable()
 class ConformanceDocument {
   const ConformanceDocument({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.mode,
-    required this.documentation,
+    this.documentation,
     required this.profile,
   });
   final Id? id;
@@ -295,14 +295,14 @@ class ConformanceDocument {
 @JsonSerializable()
 class ConformanceRestSecurity {
   const ConformanceRestSecurity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.cors,
-    @JsonKey(name: '_cors') required this.corsElement,
-    required this.service,
-    required this.description,
-    required this.certificate,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.cors,
+    @JsonKey(name: '_cors') this.corsElement,
+    this.service,
+    this.description,
+    this.certificate,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -320,26 +320,26 @@ class ConformanceRestSecurity {
 @JsonSerializable()
 class ConformanceRestResource {
   const ConformanceRestResource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
     required this.interaction,
-    required this.versioning,
-    required this.readHistory,
-    required this.updateCreate,
-    @JsonKey(name: '_updateCreate') required this.updateCreateElement,
-    required this.conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') required this.conditionalCreateElement,
-    required this.conditionalUpdate,
-    required this.conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') required this.conditionalDeleteElement,
-    required this.searchInclude,
-    required this.searchRevInclude,
-    required this.searchParam,
+    this.versioning,
+    this.readHistory,
+    this.updateCreate,
+    @JsonKey(name: '_updateCreate') this.updateCreateElement,
+    this.conditionalCreate,
+    @JsonKey(name: '_conditionalCreate') this.conditionalCreateElement,
+    this.conditionalUpdate,
+    this.conditionalDelete,
+    @JsonKey(name: '_conditionalDelete') this.conditionalDeleteElement,
+    this.searchInclude,
+    this.searchRevInclude,
+    this.searchParam,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -372,11 +372,11 @@ class ConformanceRestResource {
 @JsonSerializable()
 class ConformanceResourceInteraction {
   const ConformanceResourceInteraction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.documentation,
+    this.documentation,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -392,10 +392,10 @@ class ConformanceResourceInteraction {
 @JsonSerializable()
 class ConformanceRestOperation {
   const ConformanceRestOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.name,
     required this.definition,
   });
@@ -413,12 +413,12 @@ class ConformanceRestOperation {
 @JsonSerializable()
 class ConformanceMessagingEndpoint {
   const ConformanceMessagingEndpoint({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.protocol,
     required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
+    @JsonKey(name: '_address') this.addressElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -434,17 +434,17 @@ class ConformanceMessagingEndpoint {
 @JsonSerializable()
 class ConformanceMessagingEvent {
   const ConformanceMessagingEvent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.category,
+    this.category,
     required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
+    @JsonKey(name: '_mode') this.modeElement,
     required this.focus,
     required this.request,
     required this.response,
-    required this.documentation,
+    this.documentation,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -465,12 +465,12 @@ class ConformanceMessagingEvent {
 @JsonSerializable()
 class ConformanceSecurityCertificate {
   const ConformanceSecurityCertificate({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.blob,
-    @JsonKey(name: '_blob') required this.blobElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.blob,
+    @JsonKey(name: '_blob') this.blobElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -486,11 +486,11 @@ class ConformanceSecurityCertificate {
 @JsonSerializable()
 class ConformanceRestInteraction {
   const ConformanceRestInteraction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.documentation,
+    this.documentation,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -506,17 +506,17 @@ class ConformanceRestInteraction {
 @JsonSerializable()
 class ConformanceResourceSearchParam {
   const ConformanceResourceSearchParam({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.name,
-    required this.definition,
+    this.definition,
     required this.type,
-    required this.documentation,
-    required this.target,
-    required this.modifier,
-    required this.chain,
+    this.documentation,
+    this.target,
+    this.modifier,
+    this.chain,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -539,33 +539,33 @@ class ConformanceResourceSearchParam {
 class OperationDefinition extends Resource {
   const OperationDefinition({
     super.resourceType = Dstu2ResourceType.OperationDefinition,
-    required super.id,
-    required super.meta,
-    required super.implicitRules,
-    required super.language,
-    required super.text,
-    required super.contained,
-    @JsonKey(name: 'extension') required super.extension_,
-    required super.modifierExtension,
-    required this.url,
-    required this.version,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    this.version,
     required this.name,
     required this.status,
     required this.kind,
-    required this.experimental,
-    required this.publisher,
-    required this.contact,
-    required this.date,
-    required this.description,
-    required this.requirements,
-    required this.idempotent,
+    this.experimental,
+    this.publisher,
+    this.contact,
+    this.date,
+    this.description,
+    this.requirements,
+    this.idempotent,
     required this.code,
-    required this.notes,
-    required this.base,
+    this.notes,
+    this.base,
     required this.system,
-    required this.type,
+    this.type,
     required this.instance,
-    required this.parameter,
+    this.parameter,
   });
 
   final FhirUri? url;
@@ -596,11 +596,11 @@ class OperationDefinition extends Resource {
 @JsonSerializable()
 class OperationDefinitionContact {
   const OperationDefinitionContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    this.telecom,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -615,19 +615,19 @@ class OperationDefinitionContact {
 @JsonSerializable()
 class OperationDefinitionParameter {
   const OperationDefinitionParameter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.name,
     required this.use,
     required this.min,
     required this.max,
-    required this.documentation,
-    required this.type,
-    required this.profile,
-    required this.binding,
-    @JsonKey(name: 'part') required this.part_,
+    this.documentation,
+    this.type,
+    this.profile,
+    this.binding,
+    @JsonKey(name: 'part') this.part_,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -650,12 +650,12 @@ class OperationDefinitionParameter {
 @JsonSerializable()
 class OperationDefinitionParameterBinding {
   const OperationDefinitionParameterBinding({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.strength,
-    required this.valueSetUri,
-    required this.valueSetReference,
+    this.valueSetUri,
+    this.valueSetReference,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -672,13 +672,66 @@ class OperationDefinitionParameterBinding {
 }
 
 @JsonSerializable()
+class SearchParameter extends Resource {
+  const SearchParameter({
+    super.resourceType = Dstu2ResourceType.SearchParameter,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.url,
+    required this.name,
+    @JsonKey(unknownEnumValue: SearchParameterStatus.unknown) this.status,
+    this.experimental,
+    this.publisher,
+    this.contact,
+    this.date,
+    this.requirements,
+    @JsonKey(name: '_requirements') this.requirementsElement,
+    required this.code,
+    this.base,
+    required this.type,
+    this.description,
+    this.xpath,
+    @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+        this.xpathUsage,
+    this.target,
+  });
+
+  final FhirUri url;
+  final String name;
+  final SearchParameterStatus? status;
+  final Boolean? experimental;
+  final String? publisher;
+  final List<SearchParameterContact>? contact;
+  final FhirDateTime? date;
+  final String? requirements;
+  final Element? requirementsElement;
+  final Code code;
+  final Code? base;
+  final SearchParameterType type;
+  final String? description;
+  final String? xpath;
+  final SearchParameterXpathUsage? xpathUsage;
+  final List<Code>? target;
+
+  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
+      _$SearchParameterFromJson(json);
+  Map<String, dynamic> toJson() => _$SearchParameterToJson(this);
+}
+
+@JsonSerializable()
 class SearchParameterContact {
   const SearchParameterContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    this.telecom,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

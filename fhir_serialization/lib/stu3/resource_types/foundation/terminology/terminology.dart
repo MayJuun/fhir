@@ -13,7 +13,7 @@ class CodeSystem extends Resource {
     super.resourceType = Stu3ResourceType.CodeSystem,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,49 +21,49 @@ class CodeSystem extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.caseSensitive,
-    @JsonKey(name: '_caseSensitive') required this.caseSensitiveElement,
-    required this.valueSet,
-    @JsonKey(name: '_valueSet') required this.valueSetElement,
-    required this.hierarchyMeaning,
-    @JsonKey(name: '_hierarchyMeaning') required this.hierarchyMeaningElement,
-    required this.compositional,
-    @JsonKey(name: '_compositional') required this.compositionalElement,
-    required this.versionNeeded,
-    @JsonKey(name: '_versionNeeded') required this.versionNeededElement,
-    required this.content,
-    @JsonKey(name: '_content') required this.contentElement,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.filter,
-    required this.property,
-    required this.concept,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.caseSensitive,
+    @JsonKey(name: '_caseSensitive') this.caseSensitiveElement,
+    this.valueSet,
+    @JsonKey(name: '_valueSet') this.valueSetElement,
+    this.hierarchyMeaning,
+    @JsonKey(name: '_hierarchyMeaning') this.hierarchyMeaningElement,
+    this.compositional,
+    @JsonKey(name: '_compositional') this.compositionalElement,
+    this.versionNeeded,
+    @JsonKey(name: '_versionNeeded') this.versionNeededElement,
+    this.content,
+    @JsonKey(name: '_content') this.contentElement,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.filter,
+    this.property,
+    this.concept,
   });
   final String? url;
   final Element? urlElement;
@@ -116,14 +116,14 @@ class CodeSystem extends Resource {
 @JsonSerializable()
 class CodeSystemFilter {
   const CodeSystemFilter({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    @JsonKey(name: 'operator') required this.operator_,
-    @JsonKey(name: '_operator') required this.operatorElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    @JsonKey(name: 'operator') this.operator_,
+    @JsonKey(name: '_operator') this.operatorElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final Code? code;
   final Element? codeElement;
@@ -141,14 +141,14 @@ class CodeSystemFilter {
 @JsonSerializable()
 class CodeSystemProperty {
   const CodeSystemProperty({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final Code? code;
   final Element? codeElement;
@@ -166,16 +166,16 @@ class CodeSystemProperty {
 @JsonSerializable()
 class CodeSystemConcept {
   const CodeSystemConcept({
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.definition,
-    @JsonKey(name: '_definition') required this.definitionElement,
-    required this.designation,
-    required this.property,
-    required this.concept,
+    @JsonKey(name: 'extension') this.extension_,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.definition,
+    @JsonKey(name: '_definition') this.definitionElement,
+    this.designation,
+    this.property,
+    this.concept,
   });
   final List<FhirExtension>? extension_;
   final Code? code;
@@ -195,11 +195,11 @@ class CodeSystemConcept {
 @JsonSerializable()
 class CodeSystemDesignation {
   const CodeSystemDesignation({
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.use,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.use,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? language;
   final Element? languageElement;
@@ -214,19 +214,19 @@ class CodeSystemDesignation {
 @JsonSerializable()
 class CodeSystemProperty1 {
   const CodeSystemProperty1({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.valueCode,
-    @JsonKey(name: '_valueCode') required this.valueCodeElement,
-    required this.valueCoding,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueDateTime,
-    @JsonKey(name: '_valueDateTime') required this.valueDateTimeElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.valueCode,
+    @JsonKey(name: '_valueCode') this.valueCodeElement,
+    this.valueCoding,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueDateTime,
+    @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
   });
   final Code? code;
   final Element? codeElement;
@@ -252,7 +252,7 @@ class ConceptMap extends Resource {
     super.resourceType = Stu3ResourceType.ConceptMap,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -260,39 +260,39 @@ class ConceptMap extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.sourceUri,
-    @JsonKey(name: '_sourceUri') required this.sourceUriElement,
-    required this.sourceReference,
-    required this.targetUri,
-    @JsonKey(name: '_targetUri') required this.targetUriElement,
-    required this.targetReference,
-    required this.group,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.sourceUri,
+    @JsonKey(name: '_sourceUri') this.sourceUriElement,
+    this.sourceReference,
+    this.targetUri,
+    @JsonKey(name: '_targetUri') this.targetUriElement,
+    this.targetReference,
+    this.group,
   });
   final String? url;
   final Element? urlElement;
@@ -335,16 +335,16 @@ class ConceptMap extends Resource {
 @JsonSerializable()
 class ConceptMapGroup {
   const ConceptMapGroup({
-    required this.source,
-    @JsonKey(name: '_source') required this.sourceElement,
-    required this.sourceVersion,
-    @JsonKey(name: '_sourceVersion') required this.sourceVersionElement,
-    required this.target,
-    @JsonKey(name: '_target') required this.targetElement,
-    required this.targetVersion,
-    @JsonKey(name: '_targetVersion') required this.targetVersionElement,
+    this.source,
+    @JsonKey(name: '_source') this.sourceElement,
+    this.sourceVersion,
+    @JsonKey(name: '_sourceVersion') this.sourceVersionElement,
+    this.target,
+    @JsonKey(name: '_target') this.targetElement,
+    this.targetVersion,
+    @JsonKey(name: '_targetVersion') this.targetVersionElement,
     required this.element,
-    required this.unmapped,
+    this.unmapped,
   });
   final String? source;
   final Element? sourceElement;
@@ -364,11 +364,11 @@ class ConceptMapGroup {
 @JsonSerializable()
 class ConceptMapElement {
   const ConceptMapElement({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.target,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.target,
   });
   final Code? code;
   final Element? codeElement;
@@ -383,16 +383,16 @@ class ConceptMapElement {
 @JsonSerializable()
 class ConceptMapTarget {
   const ConceptMapTarget({
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.equivalence,
-    @JsonKey(name: '_equivalence') required this.equivalenceElement,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
-    required this.dependsOn,
-    required this.product,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.equivalence,
+    @JsonKey(name: '_equivalence') this.equivalenceElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.dependsOn,
+    this.product,
   });
   final Code? code;
   final Element? codeElement;
@@ -412,14 +412,14 @@ class ConceptMapTarget {
 @JsonSerializable()
 class ConceptMapDependsOn {
   const ConceptMapDependsOn({
-    required this.property,
-    @JsonKey(name: '_property') required this.propertyElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
+    this.property,
+    @JsonKey(name: '_property') this.propertyElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
   });
   final String? property;
   final Element? propertyElement;
@@ -437,14 +437,14 @@ class ConceptMapDependsOn {
 @JsonSerializable()
 class ConceptMapUnmapped {
   const ConceptMapUnmapped({
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final ConceptMapUnmappedMode? mode;
   final Element? modeElement;
@@ -465,7 +465,7 @@ class ExpansionProfile extends Resource {
     super.resourceType = Stu3ResourceType.ExpansionProfile,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -473,47 +473,46 @@ class ExpansionProfile extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.fixedVersion,
-    required this.excludedSystem,
-    required this.includeDesignations,
-    @JsonKey(name: '_includeDesignations')
-        required this.includeDesignationsElement,
-    required this.designation,
-    required this.includeDefinition,
-    @JsonKey(name: '_includeDefinition') required this.includeDefinitionElement,
-    required this.activeOnly,
-    @JsonKey(name: '_activeOnly') required this.activeOnlyElement,
-    required this.excludeNested,
-    @JsonKey(name: '_excludeNested') required this.excludeNestedElement,
-    required this.excludeNotForUI,
-    @JsonKey(name: '_excludeNotForUI') required this.excludeNotForUIElement,
-    required this.excludePostCoordinated,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.fixedVersion,
+    this.excludedSystem,
+    this.includeDesignations,
+    @JsonKey(name: '_includeDesignations') this.includeDesignationsElement,
+    this.designation,
+    this.includeDefinition,
+    @JsonKey(name: '_includeDefinition') this.includeDefinitionElement,
+    this.activeOnly,
+    @JsonKey(name: '_activeOnly') this.activeOnlyElement,
+    this.excludeNested,
+    @JsonKey(name: '_excludeNested') this.excludeNestedElement,
+    this.excludeNotForUI,
+    @JsonKey(name: '_excludeNotForUI') this.excludeNotForUIElement,
+    this.excludePostCoordinated,
     @JsonKey(name: '__excludePostCoordinated')
-        required this.excludePostCoordinatedElement,
-    required this.displayLanguage,
-    @JsonKey(name: '_displayLanguage') required this.displayLanguageElement,
-    required this.limitedExpansion,
-    @JsonKey(name: '_limitedExpansion') required this.limitedExpansionElement,
+        this.excludePostCoordinatedElement,
+    this.displayLanguage,
+    @JsonKey(name: '_displayLanguage') this.displayLanguageElement,
+    this.limitedExpansion,
+    @JsonKey(name: '_limitedExpansion') this.limitedExpansionElement,
   });
   final String? url;
   final Element? urlElement;
@@ -563,12 +562,12 @@ class ExpansionProfile extends Resource {
 @JsonSerializable()
 class ExpansionProfileFixedVersion {
   const ExpansionProfileFixedVersion({
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
   });
   final String? system;
   final Element? systemElement;
@@ -584,10 +583,10 @@ class ExpansionProfileFixedVersion {
 @JsonSerializable()
 class ExpansionProfileExcludedSystem {
   const ExpansionProfileExcludedSystem({
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
   });
   final String? system;
   final Element? systemElement;
@@ -601,8 +600,8 @@ class ExpansionProfileExcludedSystem {
 @JsonSerializable()
 class ExpansionProfileDesignation {
   const ExpansionProfileDesignation({
-    required this.include,
-    required this.exclude,
+    this.include,
+    this.exclude,
   });
   final ExpansionProfileInclude? include;
   final ExpansionProfileExclude? exclude;
@@ -614,7 +613,7 @@ class ExpansionProfileDesignation {
 @JsonSerializable()
 class ExpansionProfileInclude {
   const ExpansionProfileInclude({
-    required this.designation,
+    this.designation,
   });
   final List<ExpansionProfileDesignation1>? designation;
   factory ExpansionProfileInclude.fromJson(Map<String, dynamic> json) =>
@@ -625,9 +624,9 @@ class ExpansionProfileInclude {
 @JsonSerializable()
 class ExpansionProfileDesignation1 {
   const ExpansionProfileDesignation1({
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.use,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.use,
   });
   final String? language;
   final Element? languageElement;
@@ -640,7 +639,7 @@ class ExpansionProfileDesignation1 {
 @JsonSerializable()
 class ExpansionProfileExclude {
   const ExpansionProfileExclude({
-    required this.designation,
+    this.designation,
   });
   final List<ExpansionProfileDesignation2>? designation;
   factory ExpansionProfileExclude.fromJson(Map<String, dynamic> json) =>
@@ -651,9 +650,9 @@ class ExpansionProfileExclude {
 @JsonSerializable()
 class ExpansionProfileDesignation2 {
   const ExpansionProfileDesignation2({
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.use,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.use,
   });
   final String? language;
   final Element? languageElement;
@@ -669,7 +668,7 @@ class NamingSystem extends Resource {
     super.resourceType = Stu3ResourceType.NamingSystem,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -677,28 +676,28 @@ class NamingSystem extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.kind,
-    @JsonKey(name: '_kind') required this.kindElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.responsible,
-    @JsonKey(name: '_responsible') required this.responsibleElement,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.usage,
-    @JsonKey(name: '_usage') required this.usageElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.kind,
+    @JsonKey(name: '_kind') this.kindElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.responsible,
+    @JsonKey(name: '_responsible') this.responsibleElement,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.usage,
+    @JsonKey(name: '_usage') this.usageElement,
     required this.uniqueId,
-    required this.replacedBy,
+    this.replacedBy,
   });
   final String? name;
   final Element? nameElement;
@@ -730,15 +729,15 @@ class NamingSystem extends Resource {
 @JsonSerializable()
 class NamingSystemUniqueId {
   const NamingSystemUniqueId({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
-    required this.period,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.period,
   });
   final NamingSystemUniqueIdType? type;
   final Element? typeElement;
@@ -760,7 +759,7 @@ class ValueSet extends Resource {
     super.resourceType = Stu3ResourceType.ValueSet,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -768,38 +767,38 @@ class ValueSet extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.immutable,
-    @JsonKey(name: '_immutable') required this.immutableElement,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.extensible,
-    @JsonKey(name: '_extensible') required this.extensibleElement,
-    required this.compose,
-    required this.expansion,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.immutable,
+    @JsonKey(name: '_immutable') this.immutableElement,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.extensible,
+    @JsonKey(name: '_extensible') this.extensibleElement,
+    this.compose,
+    this.expansion,
   });
   final String? url;
   final Element? urlElement;
@@ -841,12 +840,12 @@ class ValueSet extends Resource {
 @JsonSerializable()
 class ValueSetCompose {
   const ValueSetCompose({
-    required this.lockedDate,
-    @JsonKey(name: '_lockedDate') required this.lockedDateElement,
-    required this.inactive,
-    @JsonKey(name: '_inactive') required this.inactiveElement,
+    this.lockedDate,
+    @JsonKey(name: '_lockedDate') this.lockedDateElement,
+    this.inactive,
+    @JsonKey(name: '_inactive') this.inactiveElement,
     required this.include,
-    required this.exclude,
+    this.exclude,
   });
   final Date? lockedDate;
   final Element? lockedDateElement;
@@ -862,15 +861,15 @@ class ValueSetCompose {
 @JsonSerializable()
 class ValueSetInclude {
   const ValueSetInclude({
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.concept,
-    required this.filter,
-    required this.valueSet,
-    @JsonKey(name: '_valueSet') required this.valueSetElement,
+    @JsonKey(name: 'extension') this.extension_,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.concept,
+    this.filter,
+    this.valueSet,
+    @JsonKey(name: '_valueSet') this.valueSetElement,
   });
   final List<FhirExtension>? extension_;
   final String? system;
@@ -889,12 +888,12 @@ class ValueSetInclude {
 @JsonSerializable()
 class ValueSetConcept {
   const ValueSetConcept({
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.designation,
+    @JsonKey(name: 'extension') this.extension_,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.designation,
   });
   final List<FhirExtension>? extension_;
   final Code? code;
@@ -910,11 +909,11 @@ class ValueSetConcept {
 @JsonSerializable()
 class ValueSetDesignation {
   const ValueSetDesignation({
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.use,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.use,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? language;
   final Element? languageElement;
@@ -929,12 +928,12 @@ class ValueSetDesignation {
 @JsonSerializable()
 class ValueSetFilter {
   const ValueSetFilter({
-    required this.property,
-    @JsonKey(name: '_property') required this.propertyElement,
-    required this.op,
-    @JsonKey(name: '_op') required this.opElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.property,
+    @JsonKey(name: '_property') this.propertyElement,
+    this.op,
+    @JsonKey(name: '_op') this.opElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? property;
   final Element? propertyElement;
@@ -950,16 +949,16 @@ class ValueSetFilter {
 @JsonSerializable()
 class ValueSetExpansion {
   const ValueSetExpansion({
-    required this.identifier,
-    @JsonKey(name: '_identifier') required this.identifierElement,
-    required this.timestamp,
-    @JsonKey(name: '_timestamp') required this.timestampElement,
-    required this.total,
-    @JsonKey(name: '_total') required this.totalElement,
-    required this.offset,
-    @JsonKey(name: '_offset') required this.offsetElement,
-    required this.parameter,
-    required this.contains,
+    this.identifier,
+    @JsonKey(name: '_identifier') this.identifierElement,
+    this.timestamp,
+    @JsonKey(name: '_timestamp') this.timestampElement,
+    this.total,
+    @JsonKey(name: '_total') this.totalElement,
+    this.offset,
+    @JsonKey(name: '_offset') this.offsetElement,
+    this.parameter,
+    this.contains,
   });
   final String? identifier;
   final Element? identifierElement;
@@ -979,20 +978,20 @@ class ValueSetExpansion {
 @JsonSerializable()
 class ValueSetParameter {
   const ValueSetParameter({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueDecimal,
-    @JsonKey(name: '_valueDecimal') required this.valueDecimalElement,
-    required this.valueUri,
-    @JsonKey(name: '_valueUri') required this.valueUriElement,
-    required this.valueCode,
-    @JsonKey(name: '_valueCode') required this.valueCodeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueDecimal,
+    @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+    this.valueUri,
+    @JsonKey(name: '_valueUri') this.valueUriElement,
+    this.valueCode,
+    @JsonKey(name: '_valueCode') this.valueCodeElement,
   });
   final String? name;
   final Element? nameElement;
@@ -1016,20 +1015,20 @@ class ValueSetParameter {
 @JsonSerializable()
 class ValueSetContains {
   const ValueSetContains({
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    @JsonKey(name: 'abstract') required this.abstract_,
-    @JsonKey(name: '_abstract') required this.abstractElement,
-    required this.inactive,
-    @JsonKey(name: '_inactive') required this.inactiveElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.designation,
-    required this.contains,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    @JsonKey(name: 'abstract') this.abstract_,
+    @JsonKey(name: '_abstract') this.abstractElement,
+    this.inactive,
+    @JsonKey(name: '_inactive') this.inactiveElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.designation,
+    this.contains,
   });
   final String? system;
   final Element? systemElement;

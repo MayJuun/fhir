@@ -9,46 +9,33 @@ part 'security.g.dart';
 class AuditEvent extends Resource {
   const AuditEvent({
     super.resourceType = R4ResourceType.AuditEvent,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.type,
-    required this.subtype,
-    required this.action,
-    @JsonKey(name: '__action') required this.actionElement,
-    required this.period,
-    required this.recorded,
-    @JsonKey(name: '__recorded') required this.recordedElement,
-    required this.outcome,
-    @JsonKey(name: '__outcome') required this.outcomeElement,
-    required this.outcomeDesc,
-    @JsonKey(name: '__outcomeDesc') required this.outcomeDescElement,
-    required this.purposeOfEvent,
+    this.subtype,
+    this.action,
+    @JsonKey(name: '__action') this.actionElement,
+    this.period,
+    this.recorded,
+    @JsonKey(name: '__recorded') this.recordedElement,
+    this.outcome,
+    @JsonKey(name: '__outcome') this.outcomeElement,
+    this.outcomeDesc,
+    @JsonKey(name: '__outcomeDesc') this.outcomeDescElement,
+    this.purposeOfEvent,
     required this.agent,
     required this.source,
-    required this.entity,
+    this.entity,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Coding type;
   final List<Coding>? subtype;
   final Code? action;
@@ -76,24 +63,24 @@ class AuditEvent extends Resource {
 @JsonSerializable()
 class AuditEventAgent {
   const AuditEventAgent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.role,
-    required this.who,
-    required this.altId,
-    @JsonKey(name: '_altId') required this.altIdElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.requestor,
-    @JsonKey(name: '_requestor') required this.requestorElement,
-    required this.location,
-    required this.policy,
-    @JsonKey(name: '_policy') required this.policyElement,
-    required this.media,
-    required this.network,
-    required this.purposeOfUse,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.role,
+    this.who,
+    this.altId,
+    @JsonKey(name: '_altId') this.altIdElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.requestor,
+    @JsonKey(name: '_requestor') this.requestorElement,
+    this.location,
+    this.policy,
+    @JsonKey(name: '_policy') this.policyElement,
+    this.media,
+    this.network,
+    this.purposeOfUse,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -121,13 +108,13 @@ class AuditEventAgent {
 @JsonSerializable()
 class AuditEventNetwork {
   const AuditEventNetwork({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.address,
+    @JsonKey(name: '_address') this.addressElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -144,13 +131,13 @@ class AuditEventNetwork {
 @JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.site,
-    @JsonKey(name: '_site') required this.siteElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.site,
+    @JsonKey(name: '_site') this.siteElement,
     required this.observer,
-    required this.type,
+    this.type,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -167,21 +154,21 @@ class AuditEventSource {
 @JsonSerializable()
 class AuditEventEntity {
   const AuditEventEntity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.what,
-    required this.type,
-    required this.role,
-    required this.lifecycle,
-    required this.securityLabel,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.query,
-    @JsonKey(name: '_query') required this.queryElement,
-    required this.detail,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.what,
+    this.type,
+    this.role,
+    this.lifecycle,
+    this.securityLabel,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.query,
+    @JsonKey(name: '_query') this.queryElement,
+    this.detail,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -206,15 +193,15 @@ class AuditEventEntity {
 @JsonSerializable()
 class AuditEventDetail {
   const AuditEventDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') required this.valueBase64BinaryElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -234,47 +221,34 @@ class AuditEventDetail {
 class Consent extends Resource {
   const Consent({
     super.resourceType = R4ResourceType.Consent,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
     required this.scope,
     required this.category,
-    required this.patient,
-    required this.dateTime,
-    @JsonKey(name: '__dateTime') required this.dateTimeElement,
-    required this.performer,
-    required this.organization,
-    required this.sourceAttachment,
-    required this.sourceReference,
-    required this.policy,
-    required this.policyRule,
-    required this.verification,
-    required this.provision,
+    this.patient,
+    this.dateTime,
+    @JsonKey(name: '__dateTime') this.dateTimeElement,
+    this.performer,
+    this.organization,
+    this.sourceAttachment,
+    this.sourceReference,
+    this.policy,
+    this.policyRule,
+    this.verification,
+    this.provision,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Code? status;
 
@@ -301,13 +275,13 @@ class Consent extends Resource {
 @JsonSerializable()
 class ConsentPolicy {
   const ConsentPolicy({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.authority,
-    @JsonKey(name: '_authority') required this.authorityElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.authority,
+    @JsonKey(name: '_authority') this.authorityElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -324,14 +298,14 @@ class ConsentPolicy {
 @JsonSerializable()
 class ConsentVerification {
   const ConsentVerification({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.verified,
-    @JsonKey(name: '_verified') required this.verifiedElement,
-    required this.verifiedWith,
-    required this.verificationDate,
-    @JsonKey(name: '_verificationDate') required this.verificationDateElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.verified,
+    @JsonKey(name: '_verified') this.verifiedElement,
+    this.verifiedWith,
+    this.verificationDate,
+    @JsonKey(name: '_verificationDate') this.verificationDateElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -349,21 +323,21 @@ class ConsentVerification {
 @JsonSerializable()
 class ConsentProvision {
   const ConsentProvision({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.period,
-    required this.actor,
-    required this.action,
-    required this.securityLabel,
-    required this.purpose,
-    @JsonKey(name: 'class') required this.class_,
-    required this.code,
-    required this.dataPeriod,
-    required this.data,
-    required this.provision,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.period,
+    this.actor,
+    this.action,
+    this.securityLabel,
+    this.purpose,
+    @JsonKey(name: 'class') this.class_,
+    this.code,
+    this.dataPeriod,
+    this.data,
+    this.provision,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -388,9 +362,9 @@ class ConsentProvision {
 @JsonSerializable()
 class ConsentActor {
   const ConsentActor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.role,
     required this.reference,
   });
@@ -407,11 +381,11 @@ class ConsentActor {
 @JsonSerializable()
 class ConsentData {
   const ConsentData({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.meaning,
-    @JsonKey(name: '_meaning') required this.meaningElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.meaning,
+    @JsonKey(name: '_meaning') this.meaningElement,
     required this.reference,
   });
   final String? id;
@@ -429,45 +403,32 @@ class ConsentData {
 class Provenance extends Resource {
   const Provenance({
     super.resourceType = R4ResourceType.Provenance,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.target,
-    required this.occurredPeriod,
-    required this.occurredDateTime,
-    @JsonKey(name: '__occurredDateTime') required this.occurredDateTimeElement,
-    required this.recorded,
-    @JsonKey(name: '__recorded') required this.recordedElement,
-    required this.policy,
-    @JsonKey(name: '__policy') required this.policyElement,
-    required this.location,
-    required this.reason,
-    required this.activity,
+    this.occurredPeriod,
+    this.occurredDateTime,
+    @JsonKey(name: '__occurredDateTime') this.occurredDateTimeElement,
+    this.recorded,
+    @JsonKey(name: '__recorded') this.recordedElement,
+    this.policy,
+    @JsonKey(name: '__policy') this.policyElement,
+    this.location,
+    this.reason,
+    this.activity,
     required this.agent,
-    required this.entity,
-    required this.signature,
+    this.entity,
+    this.signature,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Reference> target;
   final Period? occurredPeriod;
   final FhirDateTime? occurredDateTime;
@@ -493,13 +454,13 @@ class Provenance extends Resource {
 @JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.role,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.role,
     required this.who,
-    required this.onBehalfOf,
+    this.onBehalfOf,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -516,13 +477,13 @@ class ProvenanceAgent {
 @JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    @JsonKey(name: '_role') required this.roleElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    @JsonKey(name: '_role') this.roleElement,
     required this.what,
-    required this.agent,
+    this.agent,
   });
   final String? id;
   final List<FhirExtension>? extension_;

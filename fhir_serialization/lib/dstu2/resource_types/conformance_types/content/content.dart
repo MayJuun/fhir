@@ -35,11 +35,11 @@ class StructureDefinition extends Resource {
 @JsonSerializable()
 class StructureDefinitionContact {
   const StructureDefinitionContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    this.telecom,
   });
 
   final Id? id;
@@ -55,18 +55,18 @@ class StructureDefinitionContact {
 @JsonSerializable()
 class StructureDefinitionMapping {
   const StructureDefinitionMapping({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.identity,
-    @JsonKey(name: '_identity') required this.identityElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.comments,
-    @JsonKey(name: '_comments') required this.commentElement,
+    @JsonKey(name: '_identity') this.identityElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.comments,
+    @JsonKey(name: '_comments') this.commentElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -88,9 +88,9 @@ class StructureDefinitionMapping {
 @JsonSerializable()
 class StructureDefinitionSnapshot {
   const StructureDefinitionSnapshot({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.element,
   });
   final Id? id;
@@ -105,9 +105,9 @@ class StructureDefinitionSnapshot {
 @JsonSerializable()
 class StructureDefinitionDifferential {
   const StructureDefinitionDifferential({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.element,
   });
   final Id? id;
@@ -124,27 +124,27 @@ class StructureDefinitionDifferential {
 class DataElement extends Resource {
   const DataElement({
     super.resourceType = Dstu2ResourceType.DataElement,
-    required super.id,
-    required super.meta,
-    required super.implicitRules,
-    required super.language,
-    required super.text,
-    required super.contained,
-    @JsonKey(name: 'extension') required super.extension_,
-    required super.modifierExtension,
-    required this.url,
-    required this.identifier,
-    required this.version,
-    required this.name,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.url,
+    this.identifier,
+    this.version,
+    this.name,
     required this.status,
-    required this.experimental,
-    required this.publisher,
-    required this.contact,
-    required this.date,
-    required this.useContext,
-    required this.copyright,
-    required this.stringency,
-    required this.mapping,
+    this.experimental,
+    this.publisher,
+    this.contact,
+    this.date,
+    this.useContext,
+    this.copyright,
+    this.stringency,
+    this.mapping,
     required this.element,
   });
 
@@ -172,11 +172,11 @@ class DataElement extends Resource {
 @JsonSerializable()
 class DataElementContact {
   const DataElementContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    this.telecom,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -191,18 +191,18 @@ class DataElementContact {
 @JsonSerializable()
 class DataElementMapping {
   const DataElementMapping({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.identity,
-    @JsonKey(name: '_identity') required this.identityElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.comments,
-    @JsonKey(name: '_comment') required this.commentElement,
+    @JsonKey(name: '_identity') this.identityElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.comments,
+    @JsonKey(name: '_comment') this.commentElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

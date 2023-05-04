@@ -11,7 +11,7 @@ class ResearchStudy extends Resource {
     super.resourceType = R5ResourceType.ResearchStudy,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -19,49 +19,47 @@ class ResearchStudy extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.label,
-    required this.protocol,
-    required this.partOf,
-    required this.relatedArtifact,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.primaryPurposeType,
-    required this.phase,
-    required this.studyDesign,
-    required this.focus,
-    required this.condition,
-    required this.keyword,
-    required this.region,
-    required this.descriptionSummary,
-    @JsonKey(name: '_descriptionSummary')
-        required this.descriptionSummaryElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.period,
-    required this.site,
-    required this.note,
-    required this.classifier,
-    required this.associatedParty,
-    required this.progressStatus,
-    required this.whyStopped,
-    required this.recruitment,
-    required this.comparisonGroup,
-    required this.objective,
-    required this.outcomeMeasure,
-    required this.result,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.label,
+    this.protocol,
+    this.partOf,
+    this.relatedArtifact,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.primaryPurposeType,
+    this.phase,
+    this.studyDesign,
+    this.focus,
+    this.condition,
+    this.keyword,
+    this.region,
+    this.descriptionSummary,
+    @JsonKey(name: '_descriptionSummary') this.descriptionSummaryElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.period,
+    this.site,
+    this.note,
+    this.classifier,
+    this.associatedParty,
+    this.progressStatus,
+    this.whyStopped,
+    this.recruitment,
+    this.comparisonGroup,
+    this.objective,
+    this.outcomeMeasure,
+    this.result,
   });
-  final R5ResourceType resourceType;
 
   final FhirUri? url;
   final Element? urlElement;
@@ -111,12 +109,12 @@ class ResearchStudy extends Resource {
 @JsonSerializable()
 class ResearchStudyLabel {
   const ResearchStudyLabel({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -132,15 +130,15 @@ class ResearchStudyLabel {
 @JsonSerializable()
 class ResearchStudyAssociatedParty {
   const ResearchStudyAssociatedParty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.role,
-    required this.period,
-    required this.classifier,
-    required this.party,
+    this.period,
+    this.classifier,
+    this.party,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -159,13 +157,13 @@ class ResearchStudyAssociatedParty {
 @JsonSerializable()
 class ResearchStudyProgressStatus {
   const ResearchStudyProgressStatus({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.state,
-    required this.actual,
-    @JsonKey(name: '_actual') required this.actualElement,
-    required this.period,
+    this.actual,
+    @JsonKey(name: '_actual') this.actualElement,
+    this.period,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -182,15 +180,15 @@ class ResearchStudyProgressStatus {
 @JsonSerializable()
 class ResearchStudyRecruitment {
   const ResearchStudyRecruitment({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.targetNumber,
-    @JsonKey(name: '_targetNumber') required this.targetNumberElement,
-    required this.actualNumber,
-    @JsonKey(name: '_actualNumber') required this.actualNumberElement,
-    required this.eligibility,
-    required this.actualGroup,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.targetNumber,
+    @JsonKey(name: '_targetNumber') this.targetNumberElement,
+    this.actualNumber,
+    @JsonKey(name: '_actualNumber') this.actualNumberElement,
+    this.eligibility,
+    this.actualGroup,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -209,17 +207,17 @@ class ResearchStudyRecruitment {
 @JsonSerializable()
 class ResearchStudyComparisonGroup {
   const ResearchStudyComparisonGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.intendedExposure,
-    required this.observedGroup,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.intendedExposure,
+    this.observedGroup,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -240,14 +238,14 @@ class ResearchStudyComparisonGroup {
 @JsonSerializable()
 class ResearchStudyObjective {
   const ResearchStudyObjective({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -265,15 +263,15 @@ class ResearchStudyObjective {
 @JsonSerializable()
 class ResearchStudyOutcomeMeasure {
   const ResearchStudyOutcomeMeasure({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.reference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.reference,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -295,7 +293,7 @@ class ResearchSubject extends Resource {
     super.resourceType = R5ResourceType.ResearchSubject,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -303,20 +301,19 @@ class ResearchSubject extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.progress,
-    required this.period,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.progress,
+    this.period,
     required this.study,
     required this.subject,
-    required this.assignedArm,
-    @JsonKey(name: '_assignedArm') required this.assignedArmElement,
-    required this.actualArm,
-    @JsonKey(name: '_actualArm') required this.actualArmElement,
-    required this.consent,
+    this.assignedArm,
+    @JsonKey(name: '_assignedArm') this.assignedArmElement,
+    this.actualArm,
+    @JsonKey(name: '_actualArm') this.actualArmElement,
+    this.consent,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -338,17 +335,17 @@ class ResearchSubject extends Resource {
 @JsonSerializable()
 class ResearchSubjectProgress {
   const ResearchSubjectProgress({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.subjectState,
-    required this.milestone,
-    required this.reason,
-    required this.startDate,
-    @JsonKey(name: '_startDate') required this.startDateElement,
-    required this.endDate,
-    @JsonKey(name: '_endDate') required this.endDateElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.subjectState,
+    this.milestone,
+    this.reason,
+    this.startDate,
+    @JsonKey(name: '_startDate') this.startDateElement,
+    this.endDate,
+    @JsonKey(name: '_endDate') this.endDateElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;

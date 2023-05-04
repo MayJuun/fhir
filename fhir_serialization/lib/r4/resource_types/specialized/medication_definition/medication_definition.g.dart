@@ -9,8 +9,10 @@ part of 'medication_definition.dart';
 AdministrableProductDefinition _$AdministrableProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     AdministrableProductDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.AdministrableProductDefinition,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -78,9 +80,7 @@ AdministrableProductDefinition _$AdministrableProductDefinitionFromJson(
 
 Map<String, dynamic> _$AdministrableProductDefinitionToJson(
     AdministrableProductDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -88,7 +88,8 @@ Map<String, dynamic> _$AdministrableProductDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1277,8 +1278,10 @@ Map<String, dynamic> _$ClinicalUseDefinitionWarningToJson(
 ManufacturedItemDefinition _$ManufacturedItemDefinitionFromJson(
         Map<String, dynamic> json) =>
     ManufacturedItemDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ManufacturedItemDefinition,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1333,9 +1336,7 @@ ManufacturedItemDefinition _$ManufacturedItemDefinitionFromJson(
 
 Map<String, dynamic> _$ManufacturedItemDefinitionToJson(
     ManufacturedItemDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1343,7 +1344,8 @@ Map<String, dynamic> _$ManufacturedItemDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1435,8 +1437,10 @@ Map<String, dynamic> _$ManufacturedItemDefinitionPropertyToJson(
 MedicinalProductDefinition _$MedicinalProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     MedicinalProductDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MedicinalProductDefinition,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1575,9 +1579,7 @@ MedicinalProductDefinition _$MedicinalProductDefinitionFromJson(
 
 Map<String, dynamic> _$MedicinalProductDefinitionToJson(
     MedicinalProductDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1585,7 +1587,8 @@ Map<String, dynamic> _$MedicinalProductDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1973,8 +1976,10 @@ Map<String, dynamic> _$MedicinalProductDefinitionCharacteristicToJson(
 PackagedProductDefinition _$PackagedProductDefinitionFromJson(
         Map<String, dynamic> json) =>
     PackagedProductDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.PackagedProductDefinition,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2062,9 +2067,7 @@ PackagedProductDefinition _$PackagedProductDefinitionFromJson(
 
 Map<String, dynamic> _$PackagedProductDefinitionToJson(
     PackagedProductDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2072,7 +2075,8 @@ Map<String, dynamic> _$PackagedProductDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

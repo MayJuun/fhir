@@ -13,7 +13,7 @@ class TestReport extends Resource {
     super.resourceType = Stu3ResourceType.TestReport,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,24 +21,24 @@ class TestReport extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
     required this.testScript,
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.score,
-    @JsonKey(name: '_score') required this.scoreElement,
-    required this.tester,
-    @JsonKey(name: '_tester') required this.testerElement,
-    required this.issued,
-    @JsonKey(name: '_issued') required this.issuedElement,
-    required this.participant,
-    required this.setup,
-    required this.test,
-    required this.teardown,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.score,
+    @JsonKey(name: '_score') this.scoreElement,
+    this.tester,
+    @JsonKey(name: '_tester') this.testerElement,
+    this.issued,
+    @JsonKey(name: '_issued') this.issuedElement,
+    this.participant,
+    this.setup,
+    this.test,
+    this.teardown,
   });
   final Identifier? identifier;
   final String? name;
@@ -66,12 +66,12 @@ class TestReport extends Resource {
 @JsonSerializable()
 class TestReportParticipant {
   const TestReportParticipant({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
   });
   final TestReportParticipantType? type;
   final Element? typeElement;
@@ -98,8 +98,8 @@ class TestReportSetup {
 @JsonSerializable()
 class TestReportAction {
   const TestReportAction({
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final TestReportOperation? operation;
   final TestReportAssert? assert_;
@@ -111,12 +111,12 @@ class TestReportAction {
 @JsonSerializable()
 class TestReportOperation {
   const TestReportOperation({
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.message,
-    @JsonKey(name: '_message') required this.messageElement,
-    required this.detail,
-    @JsonKey(name: '_detail') required this.detailElement,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.message,
+    @JsonKey(name: '_message') this.messageElement,
+    this.detail,
+    @JsonKey(name: '_detail') this.detailElement,
   });
   final TestReportOperationResult? result;
   final Element? resultElement;
@@ -132,12 +132,12 @@ class TestReportOperation {
 @JsonSerializable()
 class TestReportAssert {
   const TestReportAssert({
-    required this.result,
-    @JsonKey(name: '_result') required this.resultElement,
-    required this.message,
-    @JsonKey(name: '_message') required this.messageElement,
-    required this.detail,
-    @JsonKey(name: '_detail') required this.detailElement,
+    this.result,
+    @JsonKey(name: '_result') this.resultElement,
+    this.message,
+    @JsonKey(name: '_message') this.messageElement,
+    this.detail,
+    @JsonKey(name: '_detail') this.detailElement,
   });
   final TestReportAssertResult? result;
   final Element? resultElement;
@@ -153,10 +153,10 @@ class TestReportAssert {
 @JsonSerializable()
 class TestReportTest {
   const TestReportTest({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.action,
   });
   final String? name;
@@ -172,8 +172,8 @@ class TestReportTest {
 @JsonSerializable()
 class TestReportAction1 {
   const TestReportAction1({
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final TestReportOperation? operation;
   final TestReportAssert? assert_;
@@ -210,7 +210,7 @@ class TestScript extends Resource {
     super.resourceType = Stu3ResourceType.TestScript,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -218,43 +218,43 @@ class TestScript extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.origin,
-    required this.destination,
-    required this.metadata,
-    required this.fixture,
-    required this.profile,
-    required this.variable,
-    required this.rule,
-    required this.ruleset,
-    required this.setup,
-    required this.test,
-    required this.teardown,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.experimental,
+    @JsonKey(name: '_experimental') this.experimentalElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.contact,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.useContext,
+    this.jurisdiction,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
+    this.copyright,
+    @JsonKey(name: '_copyright') this.copyrightElement,
+    this.origin,
+    this.destination,
+    this.metadata,
+    this.fixture,
+    this.profile,
+    this.variable,
+    this.rule,
+    this.ruleset,
+    this.setup,
+    this.test,
+    this.teardown,
   });
   final String? url;
   final Element? urlElement;
@@ -301,8 +301,8 @@ class TestScript extends Resource {
 @JsonSerializable()
 class TestScriptOrigin {
   const TestScriptOrigin({
-    required this.index,
-    @JsonKey(name: '_index') required this.indexElement,
+    this.index,
+    @JsonKey(name: '_index') this.indexElement,
     required this.profile,
   });
   final Decimal? index;
@@ -316,8 +316,8 @@ class TestScriptOrigin {
 @JsonSerializable()
 class TestScriptDestination {
   const TestScriptDestination({
-    required this.index,
-    @JsonKey(name: '_index') required this.indexElement,
+    this.index,
+    @JsonKey(name: '_index') this.indexElement,
     required this.profile,
   });
   final Decimal? index;
@@ -331,7 +331,7 @@ class TestScriptDestination {
 @JsonSerializable()
 class TestScriptMetadata {
   const TestScriptMetadata({
-    required this.link,
+    this.link,
     required this.capability,
   });
   final List<TestScriptLink>? link;
@@ -344,10 +344,10 @@ class TestScriptMetadata {
 @JsonSerializable()
 class TestScriptLink {
   const TestScriptLink({
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? url;
   final Element? urlElement;
@@ -361,18 +361,18 @@ class TestScriptLink {
 @JsonSerializable()
 class TestScriptCapability {
   const TestScriptCapability({
-    @JsonKey(name: 'required') required this.required_,
-    @JsonKey(name: '_required') required this.requiredElement,
-    required this.validated,
-    @JsonKey(name: '_validated') required this.validatedElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.origin,
-    @JsonKey(name: '_origin') required this.originElement,
-    required this.destination,
-    @JsonKey(name: '_destination') required this.destinationElement,
-    required this.link,
-    @JsonKey(name: '_link') required this.linkElement,
+    @JsonKey(name: 'required') this.required_,
+    @JsonKey(name: '_required') this.requiredElement,
+    this.validated,
+    @JsonKey(name: '_validated') this.validatedElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.origin,
+    @JsonKey(name: '_origin') this.originElement,
+    this.destination,
+    @JsonKey(name: '_destination') this.destinationElement,
+    this.link,
+    @JsonKey(name: '_link') this.linkElement,
     required this.capabilities,
   });
   final Boolean? required_;
@@ -396,11 +396,11 @@ class TestScriptCapability {
 @JsonSerializable()
 class TestScriptFixture {
   const TestScriptFixture({
-    required this.autocreate,
-    @JsonKey(name: '_autocreate') required this.autocreateElement,
-    required this.autodelete,
-    @JsonKey(name: '_autodelete') required this.autodeleteElement,
-    required this.resource,
+    this.autocreate,
+    @JsonKey(name: '_autocreate') this.autocreateElement,
+    this.autodelete,
+    @JsonKey(name: '_autodelete') this.autodeleteElement,
+    this.resource,
   });
   final Boolean? autocreate;
   final Element? autocreateElement;
@@ -415,22 +415,22 @@ class TestScriptFixture {
 @JsonSerializable()
 class TestScriptVariable {
   const TestScriptVariable({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.defaultValue,
-    @JsonKey(name: '_defaultValue') required this.defaultValueElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.headerField,
-    @JsonKey(name: '_headerField') required this.headerFieldElement,
-    required this.hint,
-    @JsonKey(name: '_hint') required this.hintElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.defaultValue,
+    @JsonKey(name: '_defaultValue') this.defaultValueElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
+    this.headerField,
+    @JsonKey(name: '_headerField') this.headerFieldElement,
+    this.hint,
+    @JsonKey(name: '_hint') this.hintElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
   });
   final String? name;
   final Element? nameElement;
@@ -457,7 +457,7 @@ class TestScriptVariable {
 class TestScriptRule {
   const TestScriptRule({
     required this.resource,
-    required this.param,
+    this.param,
   });
   final Reference resource;
   final List<TestScriptParam>? param;
@@ -469,10 +469,10 @@ class TestScriptRule {
 @JsonSerializable()
 class TestScriptParam {
   const TestScriptParam({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? name;
   final Element? nameElement;
@@ -499,9 +499,9 @@ class TestScriptRuleset {
 @JsonSerializable()
 class TestScriptRule1 {
   const TestScriptRule1({
-    required this.ruleId,
-    @JsonKey(name: '_ruleId') required this.ruleIdElement,
-    required this.param,
+    this.ruleId,
+    @JsonKey(name: '_ruleId') this.ruleIdElement,
+    this.param,
   });
   final Id? ruleId;
   final Element? ruleIdElement;
@@ -514,10 +514,10 @@ class TestScriptRule1 {
 @JsonSerializable()
 class TestScriptParam1 {
   const TestScriptParam1({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? name;
   final Element? nameElement;
@@ -542,8 +542,8 @@ class TestScriptSetup {
 @JsonSerializable()
 class TestScriptAction {
   const TestScriptAction({
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final TestScriptOperation? operation;
   final TestScriptAssert? assert_;
@@ -555,36 +555,36 @@ class TestScriptAction {
 @JsonSerializable()
 class TestScriptOperation {
   const TestScriptOperation({
-    required this.type,
-    required this.resource,
-    @JsonKey(name: '_resource') required this.resourceElement,
-    required this.label,
-    @JsonKey(name: '_label') required this.labelElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.accept,
-    @JsonKey(name: '_accept') required this.acceptElement,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.destination,
-    @JsonKey(name: '_destination') required this.destinationElement,
-    required this.encodeRequestUrl,
-    @JsonKey(name: '_encodeRequestUrl') required this.encodeRequestUrlElement,
-    required this.origin,
-    @JsonKey(name: '_origin') required this.originElement,
-    required this.params,
-    @JsonKey(name: '_params') required this.paramsElement,
-    required this.requestHeader,
-    required this.requestId,
-    @JsonKey(name: '_requestId') required this.requestIdElement,
-    required this.responseId,
-    @JsonKey(name: '_responseId') required this.responseIdElement,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
-    required this.targetId,
-    @JsonKey(name: '_targetId') required this.targetIdElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.type,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.label,
+    @JsonKey(name: '_label') this.labelElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.accept,
+    @JsonKey(name: '_accept') this.acceptElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.destination,
+    @JsonKey(name: '_destination') this.destinationElement,
+    this.encodeRequestUrl,
+    @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
+    this.origin,
+    @JsonKey(name: '_origin') this.originElement,
+    this.params,
+    @JsonKey(name: '_params') this.paramsElement,
+    this.requestHeader,
+    this.requestId,
+    @JsonKey(name: '_requestId') this.requestIdElement,
+    this.responseId,
+    @JsonKey(name: '_responseId') this.responseIdElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
+    this.targetId,
+    @JsonKey(name: '_targetId') this.targetIdElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final Coding? type;
   final String? resource;
@@ -624,10 +624,10 @@ class TestScriptOperation {
 @JsonSerializable()
 class TestScriptRequestHeader {
   const TestScriptRequestHeader({
-    required this.field,
-    @JsonKey(name: '_field') required this.fieldElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.field,
+    @JsonKey(name: '_field') this.fieldElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? field;
   final Element? fieldElement;
@@ -641,54 +641,53 @@ class TestScriptRequestHeader {
 @JsonSerializable()
 class TestScriptAssert {
   const TestScriptAssert({
-    required this.label,
-    @JsonKey(name: '_label') required this.labelElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.direction,
-    @JsonKey(name: '_direction') required this.directionElement,
-    required this.compareToSourceId,
-    @JsonKey(name: '_compareToSourceId') required this.compareToSourceIdElement,
-    required this.compareToSourceExpression,
+    this.label,
+    @JsonKey(name: '_label') this.labelElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.direction,
+    @JsonKey(name: '_direction') this.directionElement,
+    this.compareToSourceId,
+    @JsonKey(name: '_compareToSourceId') this.compareToSourceIdElement,
+    this.compareToSourceExpression,
     @JsonKey(name: '__compareToSourceExpression')
-        required this.compareToSourceExpressionElement,
-    required this.compareToSourcePath,
-    @JsonKey(name: '_compareToSourcePath')
-        required this.compareToSourcePathElement,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.headerField,
-    @JsonKey(name: '_headerField') required this.headerFieldElement,
-    required this.minimumId,
-    @JsonKey(name: '_minimumId') required this.minimumIdElement,
-    required this.navigationLinks,
-    @JsonKey(name: '_navigationLinks') required this.navigationLinksElement,
-    @JsonKey(name: 'operator') required this.operator_,
-    @JsonKey(name: '_operator') required this.operatorElement,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.requestMethod,
-    @JsonKey(name: '_requestMethod') required this.requestMethodElement,
-    required this.requestURL,
-    @JsonKey(name: '_requestURL') required this.requestURLElement,
-    required this.resource,
-    @JsonKey(name: '_resource') required this.resourceElement,
-    required this.response,
-    @JsonKey(name: '_response') required this.responseElement,
-    required this.responseCode,
-    @JsonKey(name: '_responseCode') required this.responseCodeElement,
-    required this.rule,
-    required this.ruleset,
-    required this.sourceId,
-    @JsonKey(name: '_sourceId') required this.sourceIdElement,
-    required this.validateProfileId,
-    @JsonKey(name: '_validateProfileId') required this.validateProfileIdElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.warningOnly,
-    @JsonKey(name: '_warningOnly') required this.warningOnlyElement,
+        this.compareToSourceExpressionElement,
+    this.compareToSourcePath,
+    @JsonKey(name: '_compareToSourcePath') this.compareToSourcePathElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.expression,
+    @JsonKey(name: '_expression') this.expressionElement,
+    this.headerField,
+    @JsonKey(name: '_headerField') this.headerFieldElement,
+    this.minimumId,
+    @JsonKey(name: '_minimumId') this.minimumIdElement,
+    this.navigationLinks,
+    @JsonKey(name: '_navigationLinks') this.navigationLinksElement,
+    @JsonKey(name: 'operator') this.operator_,
+    @JsonKey(name: '_operator') this.operatorElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.requestMethod,
+    @JsonKey(name: '_requestMethod') this.requestMethodElement,
+    this.requestURL,
+    @JsonKey(name: '_requestURL') this.requestURLElement,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.response,
+    @JsonKey(name: '_response') this.responseElement,
+    this.responseCode,
+    @JsonKey(name: '_responseCode') this.responseCodeElement,
+    this.rule,
+    this.ruleset,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
+    this.validateProfileId,
+    @JsonKey(name: '_validateProfileId') this.validateProfileIdElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.warningOnly,
+    @JsonKey(name: '_warningOnly') this.warningOnlyElement,
   });
   final String? label;
   final Element? labelElement;
@@ -745,9 +744,9 @@ class TestScriptAssert {
 @JsonSerializable()
 class TestScriptRule2 {
   const TestScriptRule2({
-    required this.ruleId,
-    @JsonKey(name: '_ruleId') required this.ruleIdElement,
-    required this.param,
+    this.ruleId,
+    @JsonKey(name: '_ruleId') this.ruleIdElement,
+    this.param,
   });
   final Id? ruleId;
   final Element? ruleIdElement;
@@ -760,10 +759,10 @@ class TestScriptRule2 {
 @JsonSerializable()
 class TestScriptParam2 {
   const TestScriptParam2({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? name;
   final Element? nameElement;
@@ -777,9 +776,9 @@ class TestScriptParam2 {
 @JsonSerializable()
 class TestScriptRuleset1 {
   const TestScriptRuleset1({
-    required this.rulesetId,
-    @JsonKey(name: '_rulesetId') required this.rulesetIdElement,
-    required this.rule,
+    this.rulesetId,
+    @JsonKey(name: '_rulesetId') this.rulesetIdElement,
+    this.rule,
   });
   final Id? rulesetId;
   final Element? rulesetIdElement;
@@ -792,9 +791,9 @@ class TestScriptRuleset1 {
 @JsonSerializable()
 class TestScriptRule3 {
   const TestScriptRule3({
-    required this.ruleId,
-    @JsonKey(name: '_ruleId') required this.ruleIdElement,
-    required this.param,
+    this.ruleId,
+    @JsonKey(name: '_ruleId') this.ruleIdElement,
+    this.param,
   });
   final Id? ruleId;
   final Element? ruleIdElement;
@@ -807,10 +806,10 @@ class TestScriptRule3 {
 @JsonSerializable()
 class TestScriptParam3 {
   const TestScriptParam3({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? name;
   final Element? nameElement;
@@ -824,10 +823,10 @@ class TestScriptParam3 {
 @JsonSerializable()
 class TestScriptTest {
   const TestScriptTest({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
     required this.action,
   });
   final String? name;
@@ -843,8 +842,8 @@ class TestScriptTest {
 @JsonSerializable()
 class TestScriptAction1 {
   const TestScriptAction1({
-    required this.operation,
-    @JsonKey(name: 'assert') required this.assert_,
+    this.operation,
+    @JsonKey(name: 'assert') this.assert_,
   });
   final TestScriptOperation? operation;
   final TestScriptAssert? assert_;

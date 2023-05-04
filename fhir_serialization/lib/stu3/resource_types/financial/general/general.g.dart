@@ -1734,7 +1734,10 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
           ?.map((e) => ExplanationOfBenefitAdjudication.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      detail: json['detail'] as List<dynamic>?,
+      detail: (json['detail'] as List<dynamic>?)
+          ?.map((e) =>
+              ExplanationOfBenefitDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$ExplanationOfBenefitItemToJson(
@@ -1794,7 +1797,100 @@ Map<String, dynamic> _$ExplanationOfBenefitItemToJson(
       instance.noteNumberElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  writeNotNull('detail', instance.detail);
+  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+ExplanationOfBenefitDetail _$ExplanationOfBenefitDetailFromJson(
+        Map<String, dynamic> json) =>
+    ExplanationOfBenefitDetail(
+      sequence:
+          json['sequence'] == null ? null : Decimal.fromJson(json['sequence']),
+      sequenceElement: json['sequenceElement'] == null
+          ? null
+          : Element.fromJson(json['sequenceElement'] as Map<String, dynamic>),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      revenue: json['revenue'] == null
+          ? null
+          : CodeableConcept.fromJson(json['revenue'] as Map<String, dynamic>),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      service: json['service'] == null
+          ? null
+          : CodeableConcept.fromJson(json['service'] as Map<String, dynamic>),
+      modifier: (json['modifier'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      programCode: (json['programCode'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      quantity: json['quantity'] == null
+          ? null
+          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      unitPrice: json['unitPrice'] == null
+          ? null
+          : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
+      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factorElement: json['factorElement'] == null
+          ? null
+          : Element.fromJson(json['factorElement'] as Map<String, dynamic>),
+      net: json['net'] == null
+          ? null
+          : Money.fromJson(json['net'] as Map<String, dynamic>),
+      udi: (json['udi'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      noteNumber: (json['noteNumber'] as List<dynamic>?)
+          ?.map((e) => Decimal.fromJson(e))
+          .toList(),
+      noteNumberElement: (json['noteNumberElement'] as List<dynamic>?)
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      adjudication: (json['adjudication'] as List<dynamic>?)
+          ?.map((e) => ExplanationOfBenefitAdjudication.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      subDetail: (json['subDetail'] as List<dynamic>?)
+          ?.map((e) =>
+              ExplanationOfBenefitSubDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ExplanationOfBenefitDetailToJson(
+    ExplanationOfBenefitDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('sequence', instance.sequence?.toJson());
+  writeNotNull('sequenceElement', instance.sequenceElement?.toJson());
+  val['type'] = instance.type.toJson();
+  writeNotNull('revenue', instance.revenue?.toJson());
+  writeNotNull('category', instance.category?.toJson());
+  writeNotNull('service', instance.service?.toJson());
+  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'programCode', instance.programCode?.map((e) => e.toJson()).toList());
+  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('unitPrice', instance.unitPrice?.toJson());
+  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factorElement', instance.factorElement?.toJson());
+  writeNotNull('net', instance.net?.toJson());
+  writeNotNull('udi', instance.udi?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
+  writeNotNull('noteNumberElement',
+      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'subDetail', instance.subDetail?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2162,7 +2258,10 @@ ExplanationOfBenefitBenefitBalance _$ExplanationOfBenefitBenefitBalanceFromJson(
       term: json['term'] == null
           ? null
           : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
-      financial: json['financial'] as List<dynamic>?,
+      financial: (json['financial'] as List<dynamic>?)
+          ?.map((e) =>
+              ExplanationOfBenefitFinancial.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$ExplanationOfBenefitBenefitBalanceToJson(
@@ -2187,6 +2286,63 @@ Map<String, dynamic> _$ExplanationOfBenefitBenefitBalanceToJson(
   writeNotNull('network', instance.network?.toJson());
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('term', instance.term?.toJson());
-  writeNotNull('financial', instance.financial);
+  writeNotNull(
+      'financial', instance.financial?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+ExplanationOfBenefitFinancial _$ExplanationOfBenefitFinancialFromJson(
+        Map<String, dynamic> json) =>
+    ExplanationOfBenefitFinancial(
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      allowedUnsignedInt: json['allowedUnsignedInt'] == null
+          ? null
+          : Decimal.fromJson(json['allowedUnsignedInt']),
+      allowedUnsignedIntElement: json['allowedUnsignedIntElement'] == null
+          ? null
+          : Element.fromJson(
+              json['allowedUnsignedIntElement'] as Map<String, dynamic>),
+      allowedString: json['allowedString'] as String?,
+      allowedStringElement: json['allowedStringElement'] == null
+          ? null
+          : Element.fromJson(
+              json['allowedStringElement'] as Map<String, dynamic>),
+      allowedMoney: json['allowedMoney'] == null
+          ? null
+          : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
+      usedUnsignedInt: json['usedUnsignedInt'] == null
+          ? null
+          : Decimal.fromJson(json['usedUnsignedInt']),
+      usedUnsignedIntElement: json['usedUnsignedIntElement'] == null
+          ? null
+          : Element.fromJson(
+              json['usedUnsignedIntElement'] as Map<String, dynamic>),
+      usedMoney: json['usedMoney'] == null
+          ? null
+          : Money.fromJson(json['usedMoney'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ExplanationOfBenefitFinancialToJson(
+    ExplanationOfBenefitFinancial instance) {
+  final val = <String, dynamic>{
+    'type': instance.type.toJson(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
+  writeNotNull('allowedUnsignedIntElement',
+      instance.allowedUnsignedIntElement?.toJson());
+  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedStringElement', instance.allowedStringElement?.toJson());
+  writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
+  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
+  writeNotNull(
+      'usedUnsignedIntElement', instance.usedUnsignedIntElement?.toJson());
+  writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;
 }

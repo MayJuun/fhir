@@ -8,11 +8,10 @@ part 'medication_definition.g.dart';
 @JsonSerializable()
 class AdministrableProductDefinition extends Resource {
   const AdministrableProductDefinition({
-    @Default(R5ResourceType.AdministrableProductDefinition)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.AdministrableProductDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -20,20 +19,18 @@ class AdministrableProductDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.formOf,
-    required this.administrableDoseForm,
-    required this.unitOfPresentation,
-    required this.producedFrom,
-    required this.ingredient,
-    required this.device,
-    required this.property,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.formOf,
+    this.administrableDoseForm,
+    this.unitOfPresentation,
+    this.producedFrom,
+    this.ingredient,
+    this.device,
+    this.property,
     required this.routeOfAdministration,
   });
-
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -55,18 +52,18 @@ class AdministrableProductDefinition extends Resource {
 @JsonSerializable()
 class AdministrableProductDefinitionProperty {
   const AdministrableProductDefinitionProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueAttachment,
-    required this.status,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueAttachment,
+    this.status,
   });
 
   final String? id;
@@ -91,16 +88,16 @@ class AdministrableProductDefinitionProperty {
 @JsonSerializable()
 class AdministrableProductDefinitionRouteOfAdministration {
   const AdministrableProductDefinitionRouteOfAdministration({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.firstDose,
-    required this.maxSingleDose,
-    required this.maxDosePerDay,
-    required this.maxDosePerTreatmentPeriod,
-    required this.maxTreatmentPeriod,
-    required this.targetSpecies,
+    this.firstDose,
+    this.maxSingleDose,
+    this.maxDosePerDay,
+    this.maxDosePerTreatmentPeriod,
+    this.maxTreatmentPeriod,
+    this.targetSpecies,
   });
 
   final String? id;
@@ -123,11 +120,11 @@ class AdministrableProductDefinitionRouteOfAdministration {
 @JsonSerializable()
 class AdministrableProductDefinitionTargetSpecies {
   const AdministrableProductDefinitionTargetSpecies({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.withdrawalPeriod,
+    this.withdrawalPeriod,
   });
 
   final String? id;
@@ -145,14 +142,13 @@ class AdministrableProductDefinitionTargetSpecies {
 @JsonSerializable()
 class AdministrableProductDefinitionWithdrawalPeriod {
   const AdministrableProductDefinitionWithdrawalPeriod({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.tissue,
     required this.value,
-    required this.supportingInformation,
-    @JsonKey(name: '__supportingInformation')
-        required this.supportingInformationElement,
+    this.supportingInformation,
+    @JsonKey(name: '__supportingInformation') this.supportingInformationElement,
   });
 
   final String? id;
@@ -176,7 +172,7 @@ class ClinicalUseDefinition extends Resource {
     super.resourceType = R5ResourceType.ClinicalUseDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -184,21 +180,20 @@ class ClinicalUseDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.category,
-    required this.subject,
-    required this.status,
-    required this.contraindication,
-    required this.indication,
-    required this.interaction,
-    required this.population,
-    @JsonKey(name: 'library') required this.library_,
-    required this.undesirableEffect,
-    required this.warning,
+    this.identifier,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.category,
+    this.subject,
+    this.status,
+    this.contraindication,
+    this.indication,
+    this.interaction,
+    this.population,
+    @JsonKey(name: 'library') this.library_,
+    this.undesirableEffect,
+    this.warning,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? type;
@@ -221,15 +216,15 @@ class ClinicalUseDefinition extends Resource {
 @JsonSerializable()
 class ClinicalUseDefinitionContraindication {
   const ClinicalUseDefinitionContraindication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.diseaseSymptomProcedure,
-    required this.diseaseStatus,
-    required this.comorbidity,
-    required this.indication,
-    required this.applicability,
-    required this.otherTherapy,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.diseaseSymptomProcedure,
+    this.diseaseStatus,
+    this.comorbidity,
+    this.indication,
+    this.applicability,
+    this.otherTherapy,
   });
 
   final String? id;
@@ -251,9 +246,9 @@ class ClinicalUseDefinitionContraindication {
 @JsonSerializable()
 class ClinicalUseDefinitionOtherTherapy {
   const ClinicalUseDefinitionOtherTherapy({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.relationshipType,
     required this.treatment,
   });
@@ -273,19 +268,19 @@ class ClinicalUseDefinitionOtherTherapy {
 @JsonSerializable()
 class ClinicalUseDefinitionIndication {
   const ClinicalUseDefinitionIndication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.diseaseSymptomProcedure,
-    required this.diseaseStatus,
-    required this.comorbidity,
-    required this.intendedEffect,
-    required this.durationRange,
-    required this.durationString,
-    @JsonKey(name: '_durationString') required this.durationStringElement,
-    required this.undesirableEffect,
-    required this.applicability,
-    required this.otherTherapy,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.diseaseSymptomProcedure,
+    this.diseaseStatus,
+    this.comorbidity,
+    this.intendedEffect,
+    this.durationRange,
+    this.durationString,
+    @JsonKey(name: '_durationString') this.durationStringElement,
+    this.undesirableEffect,
+    this.applicability,
+    this.otherTherapy,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -309,14 +304,14 @@ class ClinicalUseDefinitionIndication {
 @JsonSerializable()
 class ClinicalUseDefinitionInteraction {
   const ClinicalUseDefinitionInteraction({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.interactant,
-    required this.type,
-    required this.effect,
-    required this.incidence,
-    required this.management,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.interactant,
+    this.type,
+    this.effect,
+    this.incidence,
+    this.management,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -336,11 +331,11 @@ class ClinicalUseDefinitionInteraction {
 @JsonSerializable()
 class ClinicalUseDefinitionInteractant {
   const ClinicalUseDefinitionInteractant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.itemReference,
-    required this.itemCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.itemReference,
+    this.itemCodeableConcept,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -357,12 +352,12 @@ class ClinicalUseDefinitionInteractant {
 @JsonSerializable()
 class ClinicalUseDefinitionUndesirableEffect {
   const ClinicalUseDefinitionUndesirableEffect({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.symptomConditionEffect,
-    required this.classification,
-    required this.frequencyOfOccurrence,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.symptomConditionEffect,
+    this.classification,
+    this.frequencyOfOccurrence,
   });
 
   final String? id;
@@ -381,12 +376,12 @@ class ClinicalUseDefinitionUndesirableEffect {
 @JsonSerializable()
 class ClinicalUseDefinitionWarning {
   const ClinicalUseDefinitionWarning({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.code,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.code,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -405,7 +400,7 @@ class Ingredient extends Resource {
     super.resourceType = R5ResourceType.Ingredient,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -413,20 +408,18 @@ class Ingredient extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    @JsonKey(name: 'for') required this.for_,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    @JsonKey(name: 'for') this.for_,
     required this.role,
-    @JsonKey(name: 'function') required this.function_,
-    required this.group,
-    required this.allergenicIndicator,
-    @JsonKey(name: '_allergenicIndicator')
-        required this.allergenicIndicatorElement,
+    @JsonKey(name: 'function') this.function_,
+    this.group,
+    this.allergenicIndicator,
+    @JsonKey(name: '_allergenicIndicator') this.allergenicIndicatorElement,
     required this.manufacturer,
     required this.substance,
   });
-  final R5ResourceType resourceType;
 
   final Identifier? identifier;
   final Code? status;
@@ -447,11 +440,11 @@ class Ingredient extends Resource {
 @JsonSerializable()
 class IngredientManufacturer {
   const IngredientManufacturer({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    @JsonKey(name: '_role') required this.roleElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    @JsonKey(name: '_role') this.roleElement,
     required this.manufacturer,
   });
   final String? id;
@@ -468,11 +461,11 @@ class IngredientManufacturer {
 @JsonSerializable()
 class IngredientSubstance {
   const IngredientSubstance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.strength,
+    this.strength,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -487,26 +480,26 @@ class IngredientSubstance {
 @JsonSerializable()
 class IngredientStrength {
   const IngredientStrength({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.presentationRatio,
-    required this.presentationRatioRange,
-    required this.presentationCodeableConcept,
-    required this.presentationQuantity,
-    required this.textPresentation,
-    @JsonKey(name: '_textPresentation') required this.textPresentationElement,
-    required this.concentrationRatio,
-    required this.concentrationRatioRange,
-    required this.concentrationCodeableConcept,
-    required this.concentrationQuantity,
-    required this.textConcentration,
-    @JsonKey(name: '_textConcentration') required this.textConcentrationElement,
-    required this.basis,
-    required this.measurementPoint,
-    @JsonKey(name: '_measurementPoint') required this.measurementPointElement,
-    required this.country,
-    required this.referenceStrength,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.presentationRatio,
+    this.presentationRatioRange,
+    this.presentationCodeableConcept,
+    this.presentationQuantity,
+    this.textPresentation,
+    @JsonKey(name: '_textPresentation') this.textPresentationElement,
+    this.concentrationRatio,
+    this.concentrationRatioRange,
+    this.concentrationCodeableConcept,
+    this.concentrationQuantity,
+    this.textConcentration,
+    @JsonKey(name: '_textConcentration') this.textConcentrationElement,
+    this.basis,
+    this.measurementPoint,
+    @JsonKey(name: '_measurementPoint') this.measurementPointElement,
+    this.country,
+    this.referenceStrength,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -536,16 +529,16 @@ class IngredientStrength {
 @JsonSerializable()
 class IngredientReferenceStrength {
   const IngredientReferenceStrength({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.substance,
-    required this.strengthRatio,
-    required this.strengthRatioRange,
-    required this.strengthQuantity,
-    required this.measurementPoint,
-    @JsonKey(name: '_measurementPoint') required this.measurementPointElement,
-    required this.country,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.substance,
+    this.strengthRatio,
+    this.strengthRatioRange,
+    this.strengthQuantity,
+    this.measurementPoint,
+    @JsonKey(name: '_measurementPoint') this.measurementPointElement,
+    this.country,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -565,11 +558,10 @@ class IngredientReferenceStrength {
 @JsonSerializable()
 class ManufacturedItemDefinition extends Resource {
   const ManufacturedItemDefinition({
-    @Default(R5ResourceType.ManufacturedItemDefinition)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.ManufacturedItemDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -577,20 +569,19 @@ class ManufacturedItemDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.manufacturedDoseForm,
-    required this.unitOfPresentation,
-    required this.manufacturer,
-    required this.marketingStatus,
-    required this.ingredient,
-    required this.property,
-    required this.component,
+    this.unitOfPresentation,
+    this.manufacturer,
+    this.marketingStatus,
+    this.ingredient,
+    this.property,
+    this.component,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -612,17 +603,17 @@ class ManufacturedItemDefinition extends Resource {
 @JsonSerializable()
 class ManufacturedItemDefinitionProperty {
   const ManufacturedItemDefinitionProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueAttachment,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueAttachment,
   });
 
   final String? id;
@@ -703,11 +694,10 @@ class ManufacturedItemDefinitionConstituent {
 @JsonSerializable()
 class MedicinalProductDefinition extends Resource {
   const MedicinalProductDefinition({
-    @Default(R5ResourceType.MedicinalProductDefinition)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.MedicinalProductDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -715,41 +705,40 @@ class MedicinalProductDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.type,
-    required this.domain,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.status,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.combinedPharmaceuticalDoseForm,
-    required this.route,
-    required this.indication,
-    @JsonKey(name: '_indication') required this.indicationElement,
-    required this.legalStatusOfSupply,
-    required this.additionalMonitoringIndicator,
-    required this.specialMeasures,
-    required this.pediatricUseIndicator,
-    required this.classification,
-    required this.marketingStatus,
-    required this.packagedMedicinalProduct,
-    required this.comprisedOf,
-    required this.ingredient,
-    required this.impurity,
-    required this.attachedDocument,
-    required this.masterFile,
-    required this.contact,
-    required this.clinicalTrial,
-    required this.code,
+    this.identifier,
+    this.type,
+    this.domain,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.status,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.combinedPharmaceuticalDoseForm,
+    this.route,
+    this.indication,
+    @JsonKey(name: '_indication') this.indicationElement,
+    this.legalStatusOfSupply,
+    this.additionalMonitoringIndicator,
+    this.specialMeasures,
+    this.pediatricUseIndicator,
+    this.classification,
+    this.marketingStatus,
+    this.packagedMedicinalProduct,
+    this.comprisedOf,
+    this.ingredient,
+    this.impurity,
+    this.attachedDocument,
+    this.masterFile,
+    this.contact,
+    this.clinicalTrial,
+    this.code,
     required this.name,
-    required this.crossReference,
-    required this.operation,
-    required this.characteristic,
+    this.crossReference,
+    this.operation,
+    this.characteristic,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final CodeableConcept? type;
@@ -792,10 +781,10 @@ class MedicinalProductDefinition extends Resource {
 @JsonSerializable()
 class MedicinalProductDefinitionContact {
   const MedicinalProductDefinitionContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
     required this.contact,
   });
 
@@ -814,14 +803,14 @@ class MedicinalProductDefinitionContact {
 @JsonSerializable()
 class MedicinalProductDefinitionName {
   const MedicinalProductDefinitionName({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.productName,
-    @JsonKey(name: '_productName') required this.productNameElement,
-    required this.type,
-    @JsonKey(name: 'part') required this.part_,
-    required this.usage,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.productName,
+    @JsonKey(name: '_productName') this.productNameElement,
+    this.type,
+    @JsonKey(name: 'part') this.part_,
+    this.usage,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -839,11 +828,11 @@ class MedicinalProductDefinitionName {
 @JsonSerializable()
 class MedicinalProductDefinitionPart {
   const MedicinalProductDefinitionPart({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'part') required this.part_,
-    @JsonKey(name: '_part') required this.partElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'part') this.part_,
+    @JsonKey(name: '_part') this.partElement,
     required this.type,
   });
   final String? id;
@@ -860,11 +849,11 @@ class MedicinalProductDefinitionPart {
 @JsonSerializable()
 class MedicinalProductDefinitionUsage {
   const MedicinalProductDefinitionUsage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.country,
-    required this.jurisdiction,
+    this.jurisdiction,
     required this.language,
   });
   final String? id;
@@ -882,11 +871,11 @@ class MedicinalProductDefinitionUsage {
 @JsonSerializable()
 class MedicinalProductDefinitionCrossReference {
   const MedicinalProductDefinitionCrossReference({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.product,
-    required this.type,
+    this.type,
   });
 
   final String? id;
@@ -904,13 +893,13 @@ class MedicinalProductDefinitionCrossReference {
 @JsonSerializable()
 class MedicinalProductDefinitionOperation {
   const MedicinalProductDefinitionOperation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.effectiveDate,
-    required this.organization,
-    required this.confidentialityIndicator,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.effectiveDate,
+    this.organization,
+    this.confidentialityIndicator,
   });
 
   final String? id;
@@ -930,21 +919,21 @@ class MedicinalProductDefinitionOperation {
 @JsonSerializable()
 class MedicinalProductDefinitionCharacteristic {
   const MedicinalProductDefinitionCharacteristic({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueQuantity,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueAttachment,
+    this.valueCodeableConcept,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueQuantity,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueAttachment,
   });
 
   final String? id;
@@ -972,11 +961,10 @@ class MedicinalProductDefinitionCharacteristic {
 @JsonSerializable()
 class PackagedProductDefinition extends Resource {
   const PackagedProductDefinition({
-    @Default(R5ResourceType.PackagedProductDefinition)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.PackagedProductDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -984,28 +972,26 @@ class PackagedProductDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.packageFor,
-    required this.status,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.containedItemQuantity,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.legalStatusOfSupply,
-    required this.marketingStatus,
-    required this.copackagedIndicator,
-    @JsonKey(name: '_copackagedIndicator')
-        required this.copackagedIndicatorElement,
-    required this.manufacturer,
-    required this.attachedDocument,
-    required this.packaging,
-    required this.characteristic,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.packageFor,
+    this.status,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.containedItemQuantity,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.legalStatusOfSupply,
+    this.marketingStatus,
+    this.copackagedIndicator,
+    @JsonKey(name: '_copackagedIndicator') this.copackagedIndicatorElement,
+    this.manufacturer,
+    this.attachedDocument,
+    this.packaging,
+    this.characteristic,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final String? name;
@@ -1034,11 +1020,11 @@ class PackagedProductDefinition extends Resource {
 @JsonSerializable()
 class PackagedProductDefinitionLegalStatusOfSupply {
   const PackagedProductDefinitionLegalStatusOfSupply({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.jurisdiction,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.jurisdiction,
   });
 
   final String? id;
@@ -1056,22 +1042,22 @@ class PackagedProductDefinitionLegalStatusOfSupply {
 @JsonSerializable()
 class PackagedProductDefinitionPackaging {
   const PackagedProductDefinitionPackaging({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.type,
-    required this.componentPart,
-    @JsonKey(name: '_componentPart') required this.componentPartElement,
-    required this.quantity,
-    @JsonKey(name: '_quantity') required this.quantityElement,
-    required this.material,
-    required this.alternateMaterial,
-    required this.shelfLifeStorage,
-    required this.manufacturer,
-    required this.property,
-    required this.containedItem,
-    required this.packaging,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.type,
+    this.componentPart,
+    @JsonKey(name: '_componentPart') this.componentPartElement,
+    this.quantity,
+    @JsonKey(name: '_quantity') this.quantityElement,
+    this.material,
+    this.alternateMaterial,
+    this.shelfLifeStorage,
+    this.manufacturer,
+    this.property,
+    this.containedItem,
+    this.packaging,
   });
 
   final String? id;
@@ -1100,17 +1086,17 @@ class PackagedProductDefinitionPackaging {
 @JsonSerializable()
 class PackagedProductDefinitionProperty {
   const PackagedProductDefinitionProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueAttachment,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueAttachment,
   });
 
   final String? id;
@@ -1134,11 +1120,11 @@ class PackagedProductDefinitionProperty {
 @JsonSerializable()
 class PackagedProductDefinitionContainedItem {
   const PackagedProductDefinitionContainedItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.item,
-    required this.amount,
+    this.amount,
   });
 
   final String? id;
@@ -1159,7 +1145,7 @@ class RegulatedAuthorization extends Resource {
     super.resourceType = R5ResourceType.RegulatedAuthorization,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -1167,25 +1153,24 @@ class RegulatedAuthorization extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.subject,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.region,
-    required this.status,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.validityPeriod,
-    required this.indication,
-    required this.intendedUse,
-    required this.basis,
-    required this.holder,
-    required this.regulator,
-    required this.attachedDocument,
-    @JsonKey(name: 'case') required this.case_,
+    this.identifier,
+    this.subject,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.region,
+    this.status,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.validityPeriod,
+    this.indication,
+    this.intendedUse,
+    this.basis,
+    this.holder,
+    this.regulator,
+    this.attachedDocument,
+    @JsonKey(name: 'case') this.case_,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final List<Reference>? subject;
@@ -1212,16 +1197,16 @@ class RegulatedAuthorization extends Resource {
 @JsonSerializable()
 class RegulatedAuthorizationCase {
   const RegulatedAuthorizationCase({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.type,
-    required this.status,
-    required this.datePeriod,
-    required this.dateDateTime,
-    @JsonKey(name: '_dateDateTime') required this.dateDateTimeElement,
-    required this.application,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.type,
+    this.status,
+    this.datePeriod,
+    this.dateDateTime,
+    @JsonKey(name: '_dateDateTime') this.dateDateTimeElement,
+    this.application,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1244,7 +1229,7 @@ class SubstanceDefinition extends Resource {
     super.resourceType = R5ResourceType.SubstanceDefinition,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -1252,34 +1237,33 @@ class SubstanceDefinition extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.status,
-    required this.classification,
-    required this.domain,
-    required this.grade,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.informationSource,
-    required this.note,
-    required this.manufacturer,
-    required this.supplier,
-    required this.moiety,
-    required this.characterization,
-    required this.property,
-    required this.referenceInformation,
-    required this.molecularWeight,
-    required this.structure,
-    required this.code,
-    required this.name,
-    required this.relationship,
-    required this.nucleicAcid,
-    required this.polymer,
-    required this.protein,
-    required this.sourceMaterial,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.status,
+    this.classification,
+    this.domain,
+    this.grade,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.informationSource,
+    this.note,
+    this.manufacturer,
+    this.supplier,
+    this.moiety,
+    this.characterization,
+    this.property,
+    this.referenceInformation,
+    this.molecularWeight,
+    this.structure,
+    this.code,
+    this.name,
+    this.relationship,
+    this.nucleicAcid,
+    this.polymer,
+    this.protein,
+    this.sourceMaterial,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final String? version;
@@ -1315,21 +1299,21 @@ class SubstanceDefinition extends Resource {
 @JsonSerializable()
 class SubstanceDefinitionMoiety {
   const SubstanceDefinitionMoiety({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.stereochemistry,
-    required this.opticalActivity,
-    required this.molecularFormula,
-    @JsonKey(name: '_molecularFormula') required this.molecularFormulaElement,
-    required this.amountQuantity,
-    required this.amountString,
-    @JsonKey(name: '_amountString') required this.amountStringElement,
-    required this.measurementType,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.stereochemistry,
+    this.opticalActivity,
+    this.molecularFormula,
+    @JsonKey(name: '_molecularFormula') this.molecularFormulaElement,
+    this.amountQuantity,
+    this.amountString,
+    @JsonKey(name: '_amountString') this.amountStringElement,
+    this.measurementType,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1354,14 +1338,14 @@ class SubstanceDefinitionMoiety {
 @JsonSerializable()
 class SubstanceDefinitionCharacterization {
   const SubstanceDefinitionCharacterization({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.technique,
-    required this.form,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.file,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.technique,
+    this.form,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.file,
   });
 
   final String? id;
@@ -1382,17 +1366,17 @@ class SubstanceDefinitionCharacterization {
 @JsonSerializable()
 class SubstanceDefinitionProperty {
   const SubstanceDefinitionProperty({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueAttachment,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueAttachment,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1413,11 +1397,11 @@ class SubstanceDefinitionProperty {
 @JsonSerializable()
 class SubstanceDefinitionMolecularWeight {
   const SubstanceDefinitionMolecularWeight({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.method,
-    required this.type,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.method,
+    this.type,
     required this.amount,
   });
 
@@ -1437,20 +1421,20 @@ class SubstanceDefinitionMolecularWeight {
 @JsonSerializable()
 class SubstanceDefinitionStructure {
   const SubstanceDefinitionStructure({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.stereochemistry,
-    required this.opticalActivity,
-    required this.molecularFormula,
-    @JsonKey(name: '_molecularFormula') required this.molecularFormulaElement,
-    required this.molecularFormulaByMoiety,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.stereochemistry,
+    this.opticalActivity,
+    this.molecularFormula,
+    @JsonKey(name: '_molecularFormula') this.molecularFormulaElement,
+    this.molecularFormulaByMoiety,
     @JsonKey(name: '__molecularFormulaByMoiety')
-        required this.molecularFormulaByMoietyElement,
-    required this.molecularWeight,
-    required this.technique,
-    required this.sourceDocument,
-    required this.representation,
+        this.molecularFormulaByMoietyElement,
+    this.molecularWeight,
+    this.technique,
+    this.sourceDocument,
+    this.representation,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1474,14 +1458,14 @@ class SubstanceDefinitionStructure {
 @JsonSerializable()
 class SubstanceDefinitionRepresentation {
   const SubstanceDefinitionRepresentation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.representation,
-    @JsonKey(name: '_representation') required this.representationElement,
-    required this.format,
-    required this.document,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.representation,
+    @JsonKey(name: '_representation') this.representationElement,
+    this.format,
+    this.document,
   });
 
   final String? id;
@@ -1502,15 +1486,15 @@ class SubstanceDefinitionRepresentation {
 @JsonSerializable()
 class SubstanceDefinitionCode {
   const SubstanceDefinitionCode({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.status,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.note,
-    required this.source,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.status,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.note,
+    this.source,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1529,22 +1513,22 @@ class SubstanceDefinitionCode {
 @JsonSerializable()
 class SubstanceDefinitionName {
   const SubstanceDefinitionName({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.status,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
-    required this.language,
-    required this.domain,
-    required this.jurisdiction,
-    required this.synonym,
-    required this.translation,
-    required this.official,
-    required this.source,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.status,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
+    this.language,
+    this.domain,
+    this.jurisdiction,
+    this.synonym,
+    this.translation,
+    this.official,
+    this.source,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1570,13 +1554,13 @@ class SubstanceDefinitionName {
 @JsonSerializable()
 class SubstanceDefinitionOfficial {
   const SubstanceDefinitionOfficial({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.authority,
-    required this.status,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.authority,
+    this.status,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1593,21 +1577,21 @@ class SubstanceDefinitionOfficial {
 @JsonSerializable()
 class SubstanceDefinitionRelationship {
   const SubstanceDefinitionRelationship({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.substanceDefinitionReference,
-    required this.substanceDefinitionCodeableConcept,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.substanceDefinitionReference,
+    this.substanceDefinitionCodeableConcept,
     required this.type,
-    required this.isDefining,
-    @JsonKey(name: '_isDefining') required this.isDefiningElement,
-    required this.amountQuantity,
-    required this.amountRatio,
-    required this.amountString,
-    @JsonKey(name: '_amountString') required this.amountStringElement,
-    required this.ratioHighLimitAmount,
-    required this.comparator,
-    required this.source,
+    this.isDefining,
+    @JsonKey(name: '_isDefining') this.isDefiningElement,
+    this.amountQuantity,
+    this.amountRatio,
+    this.amountString,
+    @JsonKey(name: '_amountString') this.amountStringElement,
+    this.ratioHighLimitAmount,
+    this.comparator,
+    this.source,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1633,14 +1617,14 @@ class SubstanceDefinitionRelationship {
 @JsonSerializable()
 class SubstanceDefinitionSourceMaterial {
   const SubstanceDefinitionSourceMaterial({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.genus,
-    required this.species,
-    @JsonKey(name: 'part') required this.part_,
-    required this.countryOfOrigin,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.genus,
+    this.species,
+    @JsonKey(name: 'part') this.part_,
+    this.countryOfOrigin,
   });
 
   final String? id;
@@ -1664,7 +1648,7 @@ class SubstanceNucleicAcid extends Resource {
     super.resourceType = R5ResourceType.SubstanceNucleicAcid,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -1672,16 +1656,14 @@ class SubstanceNucleicAcid extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.sequenceType,
-    required this.numberOfSubunits,
-    @JsonKey(name: '_numberOfSubunits') required this.numberOfSubunitsElement,
-    required this.areaOfHybridisation,
-    @JsonKey(name: '_areaOfHybridisation')
-        required this.areaOfHybridisationElement,
-    required this.oligoNucleotideType,
-    required this.subunit,
+    this.sequenceType,
+    this.numberOfSubunits,
+    @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
+    this.areaOfHybridisation,
+    @JsonKey(name: '_areaOfHybridisation') this.areaOfHybridisationElement,
+    this.oligoNucleotideType,
+    this.subunit,
   });
-  final R5ResourceType resourceType;
 
   final CodeableConcept? sequenceType;
   final Integer? numberOfSubunits;
@@ -1698,20 +1680,20 @@ class SubstanceNucleicAcid extends Resource {
 @JsonSerializable()
 class SubstanceNucleicAcidSubunit {
   const SubstanceNucleicAcidSubunit({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.subunit,
-    @JsonKey(name: '_subunit') required this.subunitElement,
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.length,
-    @JsonKey(name: '_length') required this.lengthElement,
-    required this.sequenceAttachment,
-    required this.fivePrime,
-    required this.threePrime,
-    required this.linkage,
-    required this.sugar,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.subunit,
+    @JsonKey(name: '_subunit') this.subunitElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.length,
+    @JsonKey(name: '_length') this.lengthElement,
+    this.sequenceAttachment,
+    this.fivePrime,
+    this.threePrime,
+    this.linkage,
+    this.sugar,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1735,16 +1717,16 @@ class SubstanceNucleicAcidSubunit {
 @JsonSerializable()
 class SubstanceNucleicAcidLinkage {
   const SubstanceNucleicAcidLinkage({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.connectivity,
-    @JsonKey(name: '_connectivity') required this.connectivityElement,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.residueSite,
-    @JsonKey(name: '_residueSite') required this.residueSiteElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.connectivity,
+    @JsonKey(name: '_connectivity') this.connectivityElement,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.residueSite,
+    @JsonKey(name: '_residueSite') this.residueSiteElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1764,14 +1746,14 @@ class SubstanceNucleicAcidLinkage {
 @JsonSerializable()
 class SubstanceNucleicAcidSugar {
   const SubstanceNucleicAcidSugar({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.residueSite,
-    @JsonKey(name: '_residueSite') required this.residueSiteElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.residueSite,
+    @JsonKey(name: '_residueSite') this.residueSiteElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1792,7 +1774,7 @@ class SubstancePolymer extends Resource {
     super.resourceType = R5ResourceType.SubstancePolymer,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -1800,16 +1782,15 @@ class SubstancePolymer extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    @JsonKey(name: 'class') required this.class_,
-    required this.geometry,
-    required this.copolymerConnectivity,
-    required this.modification,
-    @JsonKey(name: '_modification') required this.modificationElement,
-    required this.monomerSet,
-    required this.repeat,
+    this.identifier,
+    @JsonKey(name: 'class') this.class_,
+    this.geometry,
+    this.copolymerConnectivity,
+    this.modification,
+    @JsonKey(name: '_modification') this.modificationElement,
+    this.monomerSet,
+    this.repeat,
   });
-  final R5ResourceType resourceType;
 
   final Identifier? identifier;
   final CodeableConcept? class_;
@@ -1827,11 +1808,11 @@ class SubstancePolymer extends Resource {
 @JsonSerializable()
 class SubstancePolymerMonomerSet {
   const SubstancePolymerMonomerSet({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.ratioType,
-    required this.startingMaterial,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.ratioType,
+    this.startingMaterial,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1846,14 +1827,14 @@ class SubstancePolymerMonomerSet {
 @JsonSerializable()
 class SubstancePolymerStartingMaterial {
   const SubstancePolymerStartingMaterial({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.code,
-    required this.category,
-    required this.isDefining,
-    @JsonKey(name: '_isDefining') required this.isDefiningElement,
-    required this.amount,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
+    this.category,
+    this.isDefining,
+    @JsonKey(name: '_isDefining') this.isDefiningElement,
+    this.amount,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1873,14 +1854,14 @@ class SubstancePolymerStartingMaterial {
 @JsonSerializable()
 class SubstancePolymerRepeat {
   const SubstancePolymerRepeat({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.averageMolecularFormula,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.averageMolecularFormula,
     @JsonKey(name: '__averageMolecularFormula')
-        required this.averageMolecularFormulaElement,
-    required this.repeatUnitAmountType,
-    required this.repeatUnit,
+        this.averageMolecularFormulaElement,
+    this.repeatUnitAmountType,
+    this.repeatUnit,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1898,16 +1879,16 @@ class SubstancePolymerRepeat {
 @JsonSerializable()
 class SubstancePolymerRepeatUnit {
   const SubstancePolymerRepeatUnit({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.orientation,
-    required this.amount,
-    @JsonKey(name: '_amount') required this.amountElement,
-    required this.degreeOfPolymerisation,
-    required this.structuralRepresentation,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.orientation,
+    this.amount,
+    @JsonKey(name: '_amount') this.amountElement,
+    this.degreeOfPolymerisation,
+    this.structuralRepresentation,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -1928,16 +1909,16 @@ class SubstancePolymerRepeatUnit {
 @JsonSerializable()
 class SubstancePolymerDegreeOfPolymerisation {
   const SubstancePolymerDegreeOfPolymerisation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.average,
-    @JsonKey(name: '_average') required this.averageElement,
-    required this.low,
-    @JsonKey(name: '_low') required this.lowElement,
-    required this.high,
-    @JsonKey(name: '_high') required this.highElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.average,
+    @JsonKey(name: '_average') this.averageElement,
+    this.low,
+    @JsonKey(name: '_low') this.lowElement,
+    this.high,
+    @JsonKey(name: '_high') this.highElement,
   });
 
   final String? id;
@@ -1960,14 +1941,14 @@ class SubstancePolymerDegreeOfPolymerisation {
 @JsonSerializable()
 class SubstancePolymerStructuralRepresentation {
   const SubstancePolymerStructuralRepresentation({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.representation,
-    @JsonKey(name: '_representation') required this.representationElement,
-    required this.format,
-    required this.attachment,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.representation,
+    @JsonKey(name: '_representation') this.representationElement,
+    this.format,
+    this.attachment,
   });
 
   final String? id;
@@ -1991,7 +1972,7 @@ class SubstanceProtein extends Resource {
     super.resourceType = R5ResourceType.SubstanceProtein,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -1999,14 +1980,13 @@ class SubstanceProtein extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.sequenceType,
-    required this.numberOfSubunits,
-    @JsonKey(name: '_numberOfSubunits') required this.numberOfSubunitsElement,
-    required this.disulfideLinkage,
-    @JsonKey(name: '_disulfideLinkage') required this.disulfideLinkageElement,
-    required this.subunit,
+    this.sequenceType,
+    this.numberOfSubunits,
+    @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
+    this.disulfideLinkage,
+    @JsonKey(name: '_disulfideLinkage') this.disulfideLinkageElement,
+    this.subunit,
   });
-  final R5ResourceType resourceType;
 
   final CodeableConcept? sequenceType;
   final Integer? numberOfSubunits;
@@ -2022,24 +2002,22 @@ class SubstanceProtein extends Resource {
 @JsonSerializable()
 class SubstanceProteinSubunit {
   const SubstanceProteinSubunit({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.subunit,
-    @JsonKey(name: '_subunit') required this.subunitElement,
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.length,
-    @JsonKey(name: '_length') required this.lengthElement,
-    required this.sequenceAttachment,
-    required this.nTerminalModificationId,
-    required this.nTerminalModification,
-    @JsonKey(name: '__nTerminalModification')
-        required this.nTerminalModificationElement,
-    required this.cTerminalModificationId,
-    required this.cTerminalModification,
-    @JsonKey(name: '__cTerminalModification')
-        required this.cTerminalModificationElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.subunit,
+    @JsonKey(name: '_subunit') this.subunitElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.length,
+    @JsonKey(name: '_length') this.lengthElement,
+    this.sequenceAttachment,
+    this.nTerminalModificationId,
+    this.nTerminalModification,
+    @JsonKey(name: '__nTerminalModification') this.nTerminalModificationElement,
+    this.cTerminalModificationId,
+    this.cTerminalModification,
+    @JsonKey(name: '__cTerminalModification') this.cTerminalModificationElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2067,11 +2045,10 @@ class SubstanceProteinSubunit {
 @JsonSerializable()
 class SubstanceReferenceInformation extends Resource {
   const SubstanceReferenceInformation({
-    @Default(R5ResourceType.SubstanceReferenceInformation)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.SubstanceReferenceInformation,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -2079,14 +2056,12 @@ class SubstanceReferenceInformation extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
-    required this.gene,
-    required this.geneElement,
-    required this.target,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.gene,
+    this.geneElement,
+    this.target,
   });
-
-  final R5ResourceType resourceType;
 
   final String? comment;
   final Element? commentElement;
@@ -2101,12 +2076,12 @@ class SubstanceReferenceInformation extends Resource {
 @JsonSerializable()
 class SubstanceReferenceInformationGene {
   const SubstanceReferenceInformationGene({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.geneSequenceOrigin,
-    required this.gene,
-    required this.source,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.geneSequenceOrigin,
+    this.gene,
+    this.source,
   });
 
   final String? id;
@@ -2125,12 +2100,12 @@ class SubstanceReferenceInformationGene {
 @JsonSerializable()
 class SubstanceReferenceInformationGeneElement {
   const SubstanceReferenceInformationGeneElement({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.element,
-    required this.source,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.element,
+    this.source,
   });
 
   final String? id;
@@ -2149,20 +2124,20 @@ class SubstanceReferenceInformationGeneElement {
 @JsonSerializable()
 class SubstanceReferenceInformationTarget {
   const SubstanceReferenceInformationTarget({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.target,
-    required this.type,
-    required this.interaction,
-    required this.organism,
-    required this.organismType,
-    required this.amountQuantity,
-    required this.amountRange,
-    required this.amountString,
-    @JsonKey(name: '_amountString') required this.amountStringElement,
-    required this.amountType,
-    required this.source,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.target,
+    this.type,
+    this.interaction,
+    this.organism,
+    this.organismType,
+    this.amountQuantity,
+    this.amountRange,
+    this.amountString,
+    @JsonKey(name: '_amountString') this.amountStringElement,
+    this.amountType,
+    this.source,
   });
 
   final String? id;
@@ -2192,7 +2167,7 @@ class SubstanceSourceMaterial extends Resource {
     super.resourceType = R5ResourceType.SubstanceSourceMaterial,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -2200,26 +2175,23 @@ class SubstanceSourceMaterial extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.sourceMaterialClass,
-    required this.sourceMaterialType,
-    required this.sourceMaterialState,
-    required this.organismId,
-    required this.organismName,
-    @JsonKey(name: '_organismName') required this.organismNameElement,
-    required this.parentSubstanceId,
-    required this.parentSubstanceName,
-    @JsonKey(name: '__parentSubstanceName')
-        required this.parentSubstanceNameElement,
-    required this.countryOfOrigin,
-    required this.geographicalLocation,
-    @JsonKey(name: '__geographicalLocation')
-        required this.geographicalLocationElement,
-    required this.developmentStage,
-    required this.fractionDescription,
-    required this.organism,
-    required this.partDescription,
+    this.sourceMaterialClass,
+    this.sourceMaterialType,
+    this.sourceMaterialState,
+    this.organismId,
+    this.organismName,
+    @JsonKey(name: '_organismName') this.organismNameElement,
+    this.parentSubstanceId,
+    this.parentSubstanceName,
+    @JsonKey(name: '__parentSubstanceName') this.parentSubstanceNameElement,
+    this.countryOfOrigin,
+    this.geographicalLocation,
+    @JsonKey(name: '__geographicalLocation') this.geographicalLocationElement,
+    this.developmentStage,
+    this.fractionDescription,
+    this.organism,
+    this.partDescription,
   });
-  final R5ResourceType resourceType;
 
   final CodeableConcept? sourceMaterialClass;
   final CodeableConcept? sourceMaterialType;
@@ -2247,12 +2219,12 @@ class SubstanceSourceMaterial extends Resource {
 @JsonSerializable()
 class SubstanceSourceMaterialFractionDescription {
   const SubstanceSourceMaterialFractionDescription({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.fraction,
-    @JsonKey(name: '_fraction') required this.fractionElement,
-    required this.materialType,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.fraction,
+    @JsonKey(name: '_fraction') this.fractionElement,
+    this.materialType,
   });
 
   final String? id;
@@ -2271,19 +2243,19 @@ class SubstanceSourceMaterialFractionDescription {
 @JsonSerializable()
 class SubstanceSourceMaterialOrganism {
   const SubstanceSourceMaterialOrganism({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.family,
-    required this.genus,
-    required this.species,
-    required this.intraspecificType,
-    required this.intraspecificDescription,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.family,
+    this.genus,
+    this.species,
+    this.intraspecificType,
+    this.intraspecificDescription,
     @JsonKey(name: '__intraspecificDescription')
-        required this.intraspecificDescriptionElement,
-    required this.author,
-    required this.hybrid,
-    required this.organismGeneral,
+        this.intraspecificDescriptionElement,
+    this.author,
+    this.hybrid,
+    this.organismGeneral,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2307,12 +2279,12 @@ class SubstanceSourceMaterialOrganism {
 @JsonSerializable()
 class SubstanceSourceMaterialAuthor {
   const SubstanceSourceMaterialAuthor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.authorType,
-    required this.authorDescription,
-    @JsonKey(name: '_authorDescription') required this.authorDescriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.authorType,
+    this.authorDescription,
+    @JsonKey(name: '_authorDescription') this.authorDescriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2328,22 +2300,18 @@ class SubstanceSourceMaterialAuthor {
 @JsonSerializable()
 class SubstanceSourceMaterialHybrid {
   const SubstanceSourceMaterialHybrid({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.maternalOrganismId,
-    @JsonKey(name: '_maternalOrganismId')
-        required this.maternalOrganismIdElement,
-    required this.maternalOrganismName,
-    @JsonKey(name: '__maternalOrganismName')
-        required this.maternalOrganismNameElement,
-    required this.paternalOrganismId,
-    @JsonKey(name: '_paternalOrganismId')
-        required this.paternalOrganismIdElement,
-    required this.paternalOrganismName,
-    @JsonKey(name: '__paternalOrganismName')
-        required this.paternalOrganismNameElement,
-    required this.hybridType,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.maternalOrganismId,
+    @JsonKey(name: '_maternalOrganismId') this.maternalOrganismIdElement,
+    this.maternalOrganismName,
+    @JsonKey(name: '__maternalOrganismName') this.maternalOrganismNameElement,
+    this.paternalOrganismId,
+    @JsonKey(name: '_paternalOrganismId') this.paternalOrganismIdElement,
+    this.paternalOrganismName,
+    @JsonKey(name: '__paternalOrganismName') this.paternalOrganismNameElement,
+    this.hybridType,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -2367,13 +2335,13 @@ class SubstanceSourceMaterialHybrid {
 @JsonSerializable()
 class SubstanceSourceMaterialOrganismGeneral {
   const SubstanceSourceMaterialOrganismGeneral({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.kingdom,
-    required this.phylum,
-    @JsonKey(name: 'class') required this.class_,
-    required this.order,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.kingdom,
+    this.phylum,
+    @JsonKey(name: 'class') this.class_,
+    this.order,
   });
 
   final String? id;
@@ -2393,11 +2361,11 @@ class SubstanceSourceMaterialOrganismGeneral {
 @JsonSerializable()
 class SubstanceSourceMaterialPartDescription {
   const SubstanceSourceMaterialPartDescription({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'part') required this.part_,
-    required this.partLocation,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'part') this.part_,
+    this.partLocation,
   });
 
   final String? id;

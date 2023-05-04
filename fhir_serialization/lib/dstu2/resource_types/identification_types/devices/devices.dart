@@ -135,6 +135,53 @@ class DeviceComponentProductionSpecification {
 }
 
 @JsonSerializable()
+class DeviceMetric extends Resource {
+  const DeviceMetric({
+    super.resourceType = Dstu2ResourceType.DeviceMetric,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.type,
+    required this.identifier,
+    this.unit,
+    this.source,
+    this.parent,
+    this.operationalStatus,
+    @JsonKey(name: '_operationalStatus') this.operationalStatusElement,
+    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown) this.color,
+    @JsonKey(name: '_color') this.colorElement,
+    required this.category,
+    @JsonKey(name: '_category') this.categoryElement,
+    this.measurementPeriod,
+    this.calibration,
+  });
+
+  final CodeableConcept type;
+  final Identifier identifier;
+  final CodeableConcept? unit;
+  final Reference? source;
+  final Reference? parent;
+  final DeviceMetricOperationalStatus? operationalStatus;
+  final Element? operationalStatusElement;
+  final DeviceMetricColor? color;
+  final Element? colorElement;
+  final DeviceMetricCategory category;
+  final Element? categoryElement;
+  final Timing? measurementPeriod;
+  final List<DeviceMetricCalibration>? calibration;
+
+  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceMetricToJson(this);
+}
+
+@JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
     this.id,

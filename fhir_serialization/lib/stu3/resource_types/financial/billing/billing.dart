@@ -13,7 +13,7 @@ class Claim extends Resource {
     super.resourceType = Stu3ResourceType.Claim,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -21,39 +21,39 @@ class Claim extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.type,
-    required this.subType,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.patient,
-    required this.billablePeriod,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.enterer,
-    required this.insurer,
-    required this.provider,
-    required this.organization,
-    required this.priority,
-    required this.fundsReserve,
-    required this.related,
-    required this.prescription,
-    required this.originalPrescription,
-    required this.payee,
-    required this.referral,
-    required this.facility,
-    required this.careTeam,
-    required this.information,
-    required this.diagnosis,
-    required this.procedure,
-    required this.insurance,
-    required this.accident,
-    required this.employmentImpacted,
-    required this.hospitalization,
-    required this.item,
-    required this.total,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.type,
+    this.subType,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.patient,
+    this.billablePeriod,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.enterer,
+    this.insurer,
+    this.provider,
+    this.organization,
+    this.priority,
+    this.fundsReserve,
+    this.related,
+    this.prescription,
+    this.originalPrescription,
+    this.payee,
+    this.referral,
+    this.facility,
+    this.careTeam,
+    this.information,
+    this.diagnosis,
+    this.procedure,
+    this.insurance,
+    this.accident,
+    this.employmentImpacted,
+    this.hospitalization,
+    this.item,
+    this.total,
   });
   final List<Identifier>? identifier;
   final String? status;
@@ -95,9 +95,9 @@ class Claim extends Resource {
 @JsonSerializable()
 class ClaimRelated {
   const ClaimRelated({
-    required this.claim,
-    required this.relationship,
-    required this.reference,
+    this.claim,
+    this.relationship,
+    this.reference,
   });
   final Reference? claim;
   final CodeableConcept? relationship;
@@ -111,7 +111,7 @@ class ClaimRelated {
 class ClaimPayee {
   const ClaimPayee({
     required this.type,
-    required this.party,
+    this.party,
   });
   final CodeableConcept type;
   final Reference? party;
@@ -123,13 +123,13 @@ class ClaimPayee {
 @JsonSerializable()
 class ClaimCareTeam {
   const ClaimCareTeam({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.provider,
-    required this.responsible,
-    @JsonKey(name: '_responsible') required this.responsibleElement,
-    required this.role,
-    required this.qualification,
+    this.responsible,
+    @JsonKey(name: '_responsible') this.responsibleElement,
+    this.role,
+    this.qualification,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -146,19 +146,19 @@ class ClaimCareTeam {
 @JsonSerializable()
 class ClaimInformation {
   const ClaimInformation({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.category,
-    required this.code,
-    required this.timingDate,
-    @JsonKey(name: '_timingDate') required this.timingDateElement,
-    required this.timingPeriod,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueQuantity,
-    required this.valueAttachment,
-    required this.valueReference,
-    required this.reason,
+    this.code,
+    this.timingDate,
+    @JsonKey(name: '_timingDate') this.timingDateElement,
+    this.timingPeriod,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueQuantity,
+    this.valueAttachment,
+    this.valueReference,
+    this.reason,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -181,12 +181,12 @@ class ClaimInformation {
 @JsonSerializable()
 class ClaimDiagnosis {
   const ClaimDiagnosis({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.diagnosisCodeableConcept,
-    required this.diagnosisReference,
-    required this.type,
-    required this.packageCode,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.diagnosisCodeableConcept,
+    this.diagnosisReference,
+    this.type,
+    this.packageCode,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -202,12 +202,12 @@ class ClaimDiagnosis {
 @JsonSerializable()
 class ClaimProcedure {
   const ClaimProcedure({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.procedureCodeableConcept,
-    required this.procedureReference,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.procedureCodeableConcept,
+    this.procedureReference,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -223,17 +223,16 @@ class ClaimProcedure {
 @JsonSerializable()
 class ClaimInsurance {
   const ClaimInsurance({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.focal,
-    @JsonKey(name: '_focal') required this.focalElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.focal,
+    @JsonKey(name: '_focal') this.focalElement,
     required this.coverage,
-    required this.businessArrangement,
-    @JsonKey(name: '_businessArrangement')
-        required this.businessArrangementElement,
-    required this.preAuthRef,
-    @JsonKey(name: '_preAuthRef') required this.preAuthRefElement,
-    required this.claimResponse,
+    this.businessArrangement,
+    @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
+    this.preAuthRef,
+    @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
+    this.claimResponse,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -253,11 +252,11 @@ class ClaimInsurance {
 @JsonSerializable()
 class ClaimAccident {
   const ClaimAccident({
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.type,
-    required this.locationAddress,
-    required this.locationReference,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.type,
+    this.locationAddress,
+    this.locationReference,
   });
   final Date? date;
   final Element? dateElement;
@@ -272,38 +271,37 @@ class ClaimAccident {
 @JsonSerializable()
 class ClaimItem {
   const ClaimItem({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.careTeamLinkId,
-    @JsonKey(name: '_careTeamLinkId') required this.careTeamLinkIdElement,
-    required this.diagnosisLinkId,
-    @JsonKey(name: '_diagnosisLinkId') required this.diagnosisLinkIdElement,
-    required this.procedureLinkId,
-    @JsonKey(name: '_procedureLinkId') required this.procedureLinkIdElement,
-    required this.informationLinkId,
-    @JsonKey(name: '__informationLinkId')
-        required this.informationLinkIdElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.programCode,
-    required this.servicedDate,
-    @JsonKey(name: '_servicedDate') required this.servicedDateElement,
-    required this.servicedPeriod,
-    required this.locationCodeableConcept,
-    required this.locationAddress,
-    required this.locationReference,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.net,
-    required this.udi,
-    required this.bodySite,
-    required this.subSite,
-    required this.encounter,
-    required this.detail,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.careTeamLinkId,
+    @JsonKey(name: '_careTeamLinkId') this.careTeamLinkIdElement,
+    this.diagnosisLinkId,
+    @JsonKey(name: '_diagnosisLinkId') this.diagnosisLinkIdElement,
+    this.procedureLinkId,
+    @JsonKey(name: '_procedureLinkId') this.procedureLinkIdElement,
+    this.informationLinkId,
+    @JsonKey(name: '__informationLinkId') this.informationLinkIdElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.servicedDate,
+    @JsonKey(name: '_servicedDate') this.servicedDateElement,
+    this.servicedPeriod,
+    this.locationCodeableConcept,
+    this.locationAddress,
+    this.locationReference,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
+    this.bodySite,
+    this.subSite,
+    this.encounter,
+    this.detail,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -345,20 +343,20 @@ class ClaimItem {
 @JsonSerializable()
 class ClaimDetail {
   const ClaimDetail({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.programCode,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.net,
-    required this.udi,
-    required this.subDetail,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
+    this.subDetail,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -382,19 +380,19 @@ class ClaimDetail {
 @JsonSerializable()
 class ClaimSubDetail {
   const ClaimSubDetail({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.programCode,
-    required this.quantity,
-    required this.unitPrice,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.net,
-    required this.udi,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.programCode,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.net,
+    this.udi,
   });
   final Decimal? sequence;
   final Element? sequenceElement;
@@ -420,7 +418,7 @@ class ClaimResponse extends Resource {
     super.resourceType = Stu3ResourceType.ClaimResponse,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -428,32 +426,32 @@ class ClaimResponse extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.patient,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.insurer,
-    required this.requestProvider,
-    required this.requestOrganization,
-    required this.request,
-    required this.outcome,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
-    required this.payeeType,
-    required this.item,
-    required this.addItem,
-    required this.error,
-    required this.totalCost,
-    required this.unallocDeductable,
-    required this.totalBenefit,
-    required this.payment,
-    required this.reserved,
-    required this.form,
-    required this.processNote,
-    required this.communicationRequest,
-    required this.insurance,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.patient,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.insurer,
+    this.requestProvider,
+    this.requestOrganization,
+    this.request,
+    this.outcome,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
+    this.payeeType,
+    this.item,
+    this.addItem,
+    this.error,
+    this.totalCost,
+    this.unallocDeductable,
+    this.totalBenefit,
+    this.payment,
+    this.reserved,
+    this.form,
+    this.processNote,
+    this.communicationRequest,
+    this.insurance,
   });
   final List<Identifier>? identifier;
   final String? status;
@@ -489,12 +487,12 @@ class ClaimResponse extends Resource {
 @JsonSerializable()
 class ClaimResponseItem {
   const ClaimResponseItem({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.detail,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.detail,
   });
   final Id? sequenceLinkId;
   final Element? sequenceLinkIdElement;
@@ -511,10 +509,10 @@ class ClaimResponseItem {
 class ClaimResponseAdjudication {
   const ClaimResponseAdjudication({
     required this.category,
-    required this.reason,
-    required this.amount,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.reason,
+    this.amount,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final CodeableConcept category;
   final CodeableConcept? reason;
@@ -529,12 +527,12 @@ class ClaimResponseAdjudication {
 @JsonSerializable()
 class ClaimResponseDetail {
   const ClaimResponseDetail({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.subDetail,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.subDetail,
   });
   final Id? sequenceLinkId;
   final Element? sequenceLinkIdElement;
@@ -550,11 +548,11 @@ class ClaimResponseDetail {
 @JsonSerializable()
 class ClaimResponseSubDetail {
   const ClaimResponseSubDetail({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
   });
   final Id? sequenceLinkId;
   final Element? sequenceLinkIdElement;
@@ -569,17 +567,17 @@ class ClaimResponseSubDetail {
 @JsonSerializable()
 class ClaimResponseAddItem {
   const ClaimResponseAddItem({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.fee,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
-    required this.detail,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.fee,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
+    this.detail,
   });
   final List<Id>? sequenceLinkId;
   final List<Element?>? sequenceLinkIdElement;
@@ -600,14 +598,14 @@ class ClaimResponseAddItem {
 @JsonSerializable()
 class ClaimResponseDetail1 {
   const ClaimResponseDetail1({
-    required this.revenue,
-    required this.category,
-    required this.service,
-    required this.modifier,
-    required this.fee,
-    required this.noteNumber,
-    @JsonKey(name: '_noteNumber') required this.noteNumberElement,
-    required this.adjudication,
+    this.revenue,
+    this.category,
+    this.service,
+    this.modifier,
+    this.fee,
+    this.noteNumber,
+    @JsonKey(name: '_noteNumber') this.noteNumberElement,
+    this.adjudication,
   });
   final CodeableConcept? revenue;
   final CodeableConcept? category;
@@ -625,14 +623,13 @@ class ClaimResponseDetail1 {
 @JsonSerializable()
 class ClaimResponseError {
   const ClaimResponseError({
-    required this.sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') required this.sequenceLinkIdElement,
-    required this.detailSequenceLinkId,
-    @JsonKey(name: '__detailSequenceLinkId')
-        required this.detailSequenceLinkIdElement,
-    required this.subdetailSequenceLinkId,
+    this.sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
+    this.detailSequenceLinkId,
+    @JsonKey(name: '__detailSequenceLinkId') this.detailSequenceLinkIdElement,
+    this.subdetailSequenceLinkId,
     @JsonKey(name: '__subdetailSequenceLinkId')
-        required this.subdetailSequenceLinkIdElement,
+        this.subdetailSequenceLinkIdElement,
     required this.code,
   });
   final Id? sequenceLinkId;
@@ -652,13 +649,13 @@ class ClaimResponseError {
 @JsonSerializable()
 class ClaimResponsePayment {
   const ClaimResponsePayment({
-    required this.type,
-    required this.adjustment,
-    required this.adjustmentReason,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.amount,
-    required this.identifier,
+    this.type,
+    this.adjustment,
+    this.adjustmentReason,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.amount,
+    this.identifier,
   });
   final CodeableConcept? type;
   final Money? adjustment;
@@ -675,12 +672,12 @@ class ClaimResponsePayment {
 @JsonSerializable()
 class ClaimResponseProcessNote {
   const ClaimResponseProcessNote({
-    required this.number,
-    @JsonKey(name: '_number') required this.numberElement,
-    required this.type,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.language,
+    this.number,
+    @JsonKey(name: '_number') this.numberElement,
+    this.type,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.language,
   });
   final Decimal? number;
   final Element? numberElement;
@@ -696,17 +693,16 @@ class ClaimResponseProcessNote {
 @JsonSerializable()
 class ClaimResponseInsurance {
   const ClaimResponseInsurance({
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
-    required this.focal,
-    @JsonKey(name: '_focal') required this.focalElement,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
+    this.focal,
+    @JsonKey(name: '_focal') this.focalElement,
     required this.coverage,
-    required this.businessArrangement,
-    @JsonKey(name: '_businessArrangement')
-        required this.businessArrangementElement,
-    required this.preAuthRef,
-    @JsonKey(name: '_preAuthRef') required this.preAuthRefElement,
-    required this.claimResponse,
+    this.businessArrangement,
+    @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
+    this.preAuthRef,
+    @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
+    this.claimResponse,
   });
   final Decimal? sequence;
   final Element? sequenceElement;

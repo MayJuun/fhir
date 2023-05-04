@@ -12,9 +12,9 @@ class BackboneType {
     @JsonKey(name: 'extension') this.extension_,
     this.modifierExtension,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
   factory BackboneType.fromJson(Map<String, dynamic> json) =>
       _$BackboneTypeFromJson(json);
   Map<String, dynamic> toJson() => _$BackboneTypeToJson(this);

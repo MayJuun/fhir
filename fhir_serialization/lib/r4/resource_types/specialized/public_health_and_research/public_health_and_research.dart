@@ -9,58 +9,45 @@ part 'public_health_and_research.g.dart';
 class ResearchStudy extends Resource {
   const ResearchStudy({
     super.resourceType = R4ResourceType.ResearchStudy,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.title,
-    @JsonKey(name: '__title') required this.titleElement,
-    required this.protocol,
-    required this.partOf,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.primaryPurposeType,
-    required this.phase,
-    required this.category,
-    required this.focus,
-    required this.condition,
-    required this.contact,
-    required this.relatedArtifact,
-    required this.keyword,
-    required this.location,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.enrollment,
-    required this.period,
-    required this.sponsor,
-    required this.principalInvestigator,
-    required this.site,
-    required this.reasonStopped,
-    required this.note,
-    required this.arm,
-    required this.objective,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.title,
+    @JsonKey(name: '__title') this.titleElement,
+    this.protocol,
+    this.partOf,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.primaryPurposeType,
+    this.phase,
+    this.category,
+    this.focus,
+    this.condition,
+    this.contact,
+    this.relatedArtifact,
+    this.keyword,
+    this.location,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.enrollment,
+    this.period,
+    this.sponsor,
+    this.principalInvestigator,
+    this.site,
+    this.reasonStopped,
+    this.note,
+    this.arm,
+    this.objective,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? title;
 
@@ -99,14 +86,14 @@ class ResearchStudy extends Resource {
 @JsonSerializable()
 class ResearchStudyArm {
   const ResearchStudyArm({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -124,12 +111,12 @@ class ResearchStudyArm {
 @JsonSerializable()
 class ResearchStudyObjective {
   const ResearchStudyObjective({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.type,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.type,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -146,42 +133,29 @@ class ResearchStudyObjective {
 class ResearchSubject extends Resource {
   const ResearchSubject({
     super.resourceType = R4ResourceType.ResearchSubject,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '__implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '__status') required this.statusElement,
-    required this.period,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '__status') this.statusElement,
+    this.period,
     required this.study,
     required this.individual,
-    required this.assignedArm,
-    @JsonKey(name: '__assignedArm') required this.assignedArmElement,
-    required this.actualArm,
-    @JsonKey(name: '__actualArm') required this.actualArmElement,
-    required this.consent,
+    this.assignedArm,
+    @JsonKey(name: '__assignedArm') this.assignedArmElement,
+    this.actualArm,
+    @JsonKey(name: '__actualArm') this.actualArmElement,
+    this.consent,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
 
-  final Element? implicitRulesElement;
-  final Code? language;
-
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Code? status;
 

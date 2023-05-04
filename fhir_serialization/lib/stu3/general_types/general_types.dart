@@ -10,7 +10,7 @@ part 'general_types.g.dart';
 @JsonSerializable()
 class BackboneElement {
   const BackboneElement({
-    required this.modifierExtension,
+    this.modifierExtension,
   });
   final List<FhirExtension>? modifierExtension;
   factory BackboneElement.fromJson(Map<String, dynamic> json) =>
@@ -21,13 +21,13 @@ class BackboneElement {
 @JsonSerializable()
 class Annotation {
   const Annotation({
-    required this.authorReference,
-    required this.authorString,
-    @JsonKey(name: '_authorString') required this.authorStringElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
+    this.authorReference,
+    this.authorString,
+    @JsonKey(name: '_authorString') this.authorStringElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
   });
   final Reference? authorReference;
   final String? authorString;
@@ -44,22 +44,22 @@ class Annotation {
 @JsonSerializable()
 class Attachment {
   const Attachment({
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.data,
-    @JsonKey(name: '_data') required this.dataElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.size,
-    @JsonKey(name: '_size') required this.sizeElement,
-    required this.hash,
-    @JsonKey(name: '_hash') required this.hashElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.creation,
-    @JsonKey(name: '_creation') required this.creationElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.data,
+    @JsonKey(name: '_data') this.dataElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.size,
+    @JsonKey(name: '_size') this.sizeElement,
+    this.hash,
+    @JsonKey(name: '_hash') this.hashElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.creation,
+    @JsonKey(name: '_creation') this.creationElement,
   });
   final String? contentType;
   final Element? contentTypeElement;
@@ -85,15 +85,15 @@ class Attachment {
 @JsonSerializable()
 class Identifier {
   const Identifier({
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.type,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.period,
-    required this.assigner,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.type,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.period,
+    this.assigner,
   });
   final IdentifierUse? use;
   final Element? useElement;
@@ -112,9 +112,9 @@ class Identifier {
 @JsonSerializable()
 class CodeableConcept {
   const CodeableConcept({
-    required this.coding,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
+    this.coding,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
   });
   final List<Coding>? coding;
   final String? text;
@@ -127,16 +127,16 @@ class CodeableConcept {
 @JsonSerializable()
 class Coding {
   const Coding({
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.userSelected,
-    @JsonKey(name: '_userSelected') required this.userSelectedElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.userSelected,
+    @JsonKey(name: '_userSelected') this.userSelectedElement,
   });
   final String? system;
   final Element? systemElement;
@@ -155,16 +155,16 @@ class Coding {
 @JsonSerializable()
 class Quantity {
   const Quantity({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -184,16 +184,16 @@ class Quantity {
 @JsonSerializable()
 class FhirDuration {
   const FhirDuration({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -213,16 +213,16 @@ class FhirDuration {
 @JsonSerializable()
 class Distance {
   const Distance({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -242,16 +242,16 @@ class Distance {
 @JsonSerializable()
 class Count {
   const Count({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -270,16 +270,16 @@ class Count {
 @JsonSerializable()
 class Money {
   const Money({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -298,16 +298,16 @@ class Money {
 @JsonSerializable()
 class Age {
   const Age({
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.comparator,
-    @JsonKey(name: '_comparator') required this.comparatorElement,
-    required this.unit,
-    @JsonKey(name: '_unit') required this.unitElement,
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.comparator,
+    @JsonKey(name: '_comparator') this.comparatorElement,
+    this.unit,
+    @JsonKey(name: '_unit') this.unitElement,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.code,
+    @JsonKey(name: '_code') this.codeElement,
   });
   final Decimal? value;
   final Element? valueElement;
@@ -326,8 +326,8 @@ class Age {
 @JsonSerializable()
 class Range {
   const Range({
-    required this.low,
-    required this.high,
+    this.low,
+    this.high,
   });
   final Quantity? low;
   final Quantity? high;
@@ -338,10 +338,10 @@ class Range {
 @JsonSerializable()
 class Period {
   const Period({
-    required this.start,
-    @JsonKey(name: '_start') required this.startElement,
-    required this.end,
-    @JsonKey(name: '_end') required this.endElement,
+    this.start,
+    @JsonKey(name: '_start') this.startElement,
+    this.end,
+    @JsonKey(name: '_end') this.endElement,
   });
   final String? start;
   final Element? startElement;
@@ -354,8 +354,8 @@ class Period {
 @JsonSerializable()
 class Ratio {
   const Ratio({
-    required this.numerator,
-    required this.denominator,
+    this.numerator,
+    this.denominator,
   });
   final Quantity? numerator;
   final Quantity? denominator;
@@ -367,18 +367,18 @@ class Ratio {
 class SampledData {
   const SampledData({
     required this.origin,
-    required this.period,
-    @JsonKey(name: '_period') required this.periodElement,
-    required this.factor,
-    @JsonKey(name: '_factor') required this.factorElement,
-    required this.lowerLimit,
-    @JsonKey(name: '_lowerLimit') required this.lowerLimitElement,
-    required this.upperLimit,
-    @JsonKey(name: '_upperLimit') required this.upperLimitElement,
-    required this.dimensions,
-    @JsonKey(name: '_dimensions') required this.dimensionsElement,
-    required this.data,
-    @JsonKey(name: '_data') required this.dataElement,
+    this.period,
+    @JsonKey(name: '_period') this.periodElement,
+    this.factor,
+    @JsonKey(name: '_factor') this.factorElement,
+    this.lowerLimit,
+    @JsonKey(name: '_lowerLimit') this.lowerLimitElement,
+    this.upperLimit,
+    @JsonKey(name: '_upperLimit') this.upperLimitElement,
+    this.dimensions,
+    @JsonKey(name: '_dimensions') this.dimensionsElement,
+    this.data,
+    @JsonKey(name: '_data') this.dataElement,
   });
   final Quantity origin;
   final Decimal? period;
@@ -402,18 +402,18 @@ class SampledData {
 class Signature {
   const Signature({
     required this.type,
-    required this.when,
-    @JsonKey(name: '_when') required this.whenElement,
-    required this.whoUri,
-    @JsonKey(name: '_whoUri') required this.whoUriElement,
-    required this.whoReference,
-    required this.onBehalfOfUri,
-    @JsonKey(name: '_onBehalfOfUri') required this.onBehalfOfUriElement,
-    required this.onBehalfOfReference,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.blob,
-    @JsonKey(name: '_blob') required this.blobElement,
+    this.when,
+    @JsonKey(name: '_when') this.whenElement,
+    this.whoUri,
+    @JsonKey(name: '_whoUri') this.whoUriElement,
+    this.whoReference,
+    this.onBehalfOfUri,
+    @JsonKey(name: '_onBehalfOfUri') this.onBehalfOfUriElement,
+    this.onBehalfOfReference,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.blob,
+    @JsonKey(name: '_blob') this.blobElement,
   });
   final List<Coding> type;
   final String? when;
@@ -436,19 +436,19 @@ class Signature {
 @JsonSerializable()
 class HumanName {
   const HumanName({
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.family,
-    @JsonKey(name: '_family') required this.familyElement,
-    required this.given,
-    @JsonKey(name: '_given') required this.givenElement,
-    required this.prefix,
-    @JsonKey(name: '_prefix') required this.prefixElement,
-    required this.suffix,
-    @JsonKey(name: '_suffix') required this.suffixElement,
-    required this.period,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.family,
+    @JsonKey(name: '_family') this.familyElement,
+    this.given,
+    @JsonKey(name: '_given') this.givenElement,
+    this.prefix,
+    @JsonKey(name: '_prefix') this.prefixElement,
+    this.suffix,
+    @JsonKey(name: '_suffix') this.suffixElement,
+    this.period,
   });
   final HumanNameUse? use;
   final Element? useElement;
@@ -471,25 +471,25 @@ class HumanName {
 @JsonSerializable()
 class Address {
   const Address({
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.text,
-    @JsonKey(name: '_text') required this.textElement,
-    required this.line,
-    @JsonKey(name: '_line') required this.lineElement,
-    required this.city,
-    @JsonKey(name: '_city') required this.cityElement,
-    required this.district,
-    @JsonKey(name: '_district') required this.districtElement,
-    required this.state,
-    @JsonKey(name: '_state') required this.stateElement,
-    required this.postalCode,
-    @JsonKey(name: '_postalCode') required this.postalCodeElement,
-    required this.country,
-    @JsonKey(name: '_country') required this.countryElement,
-    required this.period,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.text,
+    @JsonKey(name: '_text') this.textElement,
+    this.line,
+    @JsonKey(name: '_line') this.lineElement,
+    this.city,
+    @JsonKey(name: '_city') this.cityElement,
+    this.district,
+    @JsonKey(name: '_district') this.districtElement,
+    this.state,
+    @JsonKey(name: '_state') this.stateElement,
+    this.postalCode,
+    @JsonKey(name: '_postalCode') this.postalCodeElement,
+    this.country,
+    @JsonKey(name: '_country') this.countryElement,
+    this.period,
   });
   final AddressUse? use;
   final Element? useElement;
@@ -518,15 +518,15 @@ class Address {
 @JsonSerializable()
 class ContactPoint {
   const ContactPoint({
-    required this.system,
-    @JsonKey(name: '_system') required this.systemElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.rank,
-    @JsonKey(name: '_rank') required this.rankElement,
-    required this.period,
+    this.system,
+    @JsonKey(name: '_system') this.systemElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.rank,
+    @JsonKey(name: '_rank') this.rankElement,
+    this.period,
   });
   final ContactPointSystem? system;
   final Element? systemElement;
@@ -545,10 +545,10 @@ class ContactPoint {
 @JsonSerializable()
 class Timing {
   const Timing({
-    required this.event,
-    @JsonKey(name: '_event') required this.eventElement,
-    required this.repeat,
-    required this.code,
+    this.event,
+    @JsonKey(name: '_event') this.eventElement,
+    this.repeat,
+    this.code,
   });
   final List<String>? event;
   final List<Element?>? eventElement;
@@ -561,37 +561,37 @@ class Timing {
 @JsonSerializable()
 class TimingRepeat {
   const TimingRepeat({
-    required this.boundsDuration,
-    required this.boundsRange,
-    required this.boundsPeriod,
-    required this.count,
-    @JsonKey(name: '_count') required this.countElement,
-    required this.countMax,
-    @JsonKey(name: '_countMax') required this.countMaxElement,
-    required this.duration,
-    @JsonKey(name: '_duration') required this.durationElement,
-    required this.durationMax,
-    @JsonKey(name: '_durationMax') required this.durationMaxElement,
-    required this.durationUnit,
-    @JsonKey(name: '_durationUnit') required this.durationUnitElement,
-    required this.frequency,
-    @JsonKey(name: '_frequency') required this.frequencyElement,
-    required this.frequencyMax,
-    @JsonKey(name: '_frequencyMax') required this.frequencyMaxElement,
-    required this.period,
-    @JsonKey(name: '_period') required this.periodElement,
-    required this.periodMax,
-    @JsonKey(name: '_periodMax') required this.periodMaxElement,
-    required this.periodUnit,
-    @JsonKey(name: '_periodUnit') required this.periodUnitElement,
-    required this.dayOfWeek,
-    @JsonKey(name: '_dayOfWeek') required this.dayOfWeekElement,
-    required this.timeOfDay,
-    @JsonKey(name: '_timeOfDay') required this.timeOfDayElement,
-    required this.when,
-    @JsonKey(name: '_when') required this.whenElement,
-    required this.offset,
-    @JsonKey(name: '_offset') required this.offsetElement,
+    this.boundsDuration,
+    this.boundsRange,
+    this.boundsPeriod,
+    this.count,
+    @JsonKey(name: '_count') this.countElement,
+    this.countMax,
+    @JsonKey(name: '_countMax') this.countMaxElement,
+    this.duration,
+    @JsonKey(name: '_duration') this.durationElement,
+    this.durationMax,
+    @JsonKey(name: '_durationMax') this.durationMaxElement,
+    this.durationUnit,
+    @JsonKey(name: '_durationUnit') this.durationUnitElement,
+    this.frequency,
+    @JsonKey(name: '_frequency') this.frequencyElement,
+    this.frequencyMax,
+    @JsonKey(name: '_frequencyMax') this.frequencyMaxElement,
+    this.period,
+    @JsonKey(name: '_period') this.periodElement,
+    this.periodMax,
+    @JsonKey(name: '_periodMax') this.periodMaxElement,
+    this.periodUnit,
+    @JsonKey(name: '_periodUnit') this.periodUnitElement,
+    this.dayOfWeek,
+    @JsonKey(name: '_dayOfWeek') this.dayOfWeekElement,
+    this.timeOfDay,
+    @JsonKey(name: '_timeOfDay') this.timeOfDayElement,
+    this.when,
+    @JsonKey(name: '_when') this.whenElement,
+    this.offset,
+    @JsonKey(name: '_offset') this.offsetElement,
   });
   final FhirDuration? boundsDuration;
   final Range? boundsRange;
@@ -628,4 +628,3 @@ class TimingRepeat {
       _$TimingRepeatFromJson(json);
   Map<String, dynamic> toJson() => _$TimingRepeatToJson(this);
 }
-

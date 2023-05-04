@@ -11,7 +11,7 @@ BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.BodyStructure,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -68,9 +68,7 @@ BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$BodyStructureToJson(BodyStructure instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -78,7 +76,8 @@ Map<String, dynamic> _$BodyStructureToJson(BodyStructure instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -256,7 +255,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.DiagnosticReport,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -350,9 +349,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -360,7 +357,8 @@ Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -448,7 +446,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ImagingStudy,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -552,9 +550,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
     );
 
 Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -562,7 +558,8 @@ Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -795,7 +792,7 @@ Media _$MediaFromJson(Map<String, dynamic> json) => Media(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Media,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -907,9 +904,7 @@ Media _$MediaFromJson(Map<String, dynamic> json) => Media(
     );
 
 Map<String, dynamic> _$MediaToJson(Media instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -917,7 +912,8 @@ Map<String, dynamic> _$MediaToJson(Media instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -972,7 +968,7 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MolecularSequence,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1067,9 +1063,7 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MolecularSequenceToJson(MolecularSequence instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1077,7 +1071,8 @@ Map<String, dynamic> _$MolecularSequenceToJson(MolecularSequence instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1587,7 +1582,10 @@ MolecularSequenceStructureVariant _$MolecularSequenceStructureVariantFromJson(
       lengthElement: json['lengthElement'] == null
           ? null
           : Element.fromJson(json['lengthElement'] as Map<String, dynamic>),
-      outer: json['outer'],
+      outer: json['outer'] == null
+          ? null
+          : MolecularSequenceOuter.fromJson(
+              json['outer'] as Map<String, dynamic>),
       inner: json['inner'] == null
           ? null
           : MolecularSequenceInner.fromJson(
@@ -1614,8 +1612,50 @@ Map<String, dynamic> _$MolecularSequenceStructureVariantToJson(
   writeNotNull('exactElement', instance.exactElement?.toJson());
   writeNotNull('length', instance.length?.toJson());
   writeNotNull('lengthElement', instance.lengthElement?.toJson());
-  writeNotNull('outer', instance.outer);
+  writeNotNull('outer', instance.outer?.toJson());
   writeNotNull('inner', instance.inner?.toJson());
+  return val;
+}
+
+MolecularSequenceOuter _$MolecularSequenceOuterFromJson(
+        Map<String, dynamic> json) =>
+    MolecularSequenceOuter(
+      id: json['id'] as String?,
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      start: json['start'] == null ? null : Integer.fromJson(json['start']),
+      startElement: json['startElement'] == null
+          ? null
+          : Element.fromJson(json['startElement'] as Map<String, dynamic>),
+      end: json['end'] == null ? null : Integer.fromJson(json['end']),
+      endElement: json['endElement'] == null
+          ? null
+          : Element.fromJson(json['endElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$MolecularSequenceOuterToJson(
+    MolecularSequenceOuter instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('startElement', instance.startElement?.toJson());
+  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('endElement', instance.endElement?.toJson());
   return val;
 }
 
@@ -1665,7 +1705,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Observation,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1835,9 +1875,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
     );
 
 Map<String, dynamic> _$ObservationToJson(Observation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1845,7 +1883,8 @@ Map<String, dynamic> _$ObservationToJson(Observation instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2094,7 +2133,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.QuestionnaireResponse,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2168,9 +2207,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 
 Map<String, dynamic> _$QuestionnaireResponseToJson(
     QuestionnaireResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2178,7 +2215,8 @@ Map<String, dynamic> _$QuestionnaireResponseToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2388,7 +2426,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Specimen,
-      id: json['id'] as String?,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2465,9 +2503,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
     );
 
 Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2475,7 +2511,8 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

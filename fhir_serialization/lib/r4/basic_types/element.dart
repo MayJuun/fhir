@@ -8,8 +8,8 @@ part 'element.g.dart';
 @JsonSerializable()
 class Element {
   const Element({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -17,4 +17,3 @@ class Element {
       _$ElementFromJson(json);
   Map<String, dynamic> toJson() => _$ElementToJson(this);
 }
-

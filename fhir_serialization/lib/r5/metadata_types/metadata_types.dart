@@ -16,11 +16,11 @@ class ContactDetail {
     @JsonKey(name: '_name') this.nameElement,
     this.telecom,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  String? name;
-  Element? nameElement;
-  List<ContactPoint>? telecom;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final String? name;
+  final Element? nameElement;
+  final List<ContactPoint>? telecom;
   factory ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$ContactDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ContactDetailToJson(this);
@@ -38,14 +38,14 @@ class ExtendedContactDetail {
     this.organization,
     this.period,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  CodeableConcept? purpose;
-  List<HumanName>? name;
-  List<ContactPoint>? telecom;
-  Address? address;
-  Reference? organization;
-  Period? period;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final CodeableConcept? purpose;
+  final List<HumanName>? name;
+  final List<ContactPoint>? telecom;
+  final Address? address;
+  final Reference? organization;
+  final Period? period;
   factory ExtendedContactDetail.fromJson(Map<String, dynamic> json) =>
       _$ExtendedContactDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ExtendedContactDetailToJson(this);
@@ -70,21 +70,21 @@ class VirtualServiceDetail {
     this.sessionKey,
     @JsonKey(name: '_sessionKey') this.sessionKeyElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  Coding? channelType;
-  FhirUrl? addressUrl;
-  Element? addressUrlElement;
-  String? addressString;
-  Element? addressStringElement;
-  ContactPoint? addressContactPoint;
-  ExtendedContactDetail? addressExtendedContactDetail;
-  List<FhirUrl>? additionalInfo;
-  List<Element>? additionalInfoElement;
-  PositiveInt? maxParticipants;
-  Element? maxParticipantsElement;
-  String? sessionKey;
-  Element? sessionKeyElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final Coding? channelType;
+  final FhirUrl? addressUrl;
+  final Element? addressUrlElement;
+  final String? addressString;
+  final Element? addressStringElement;
+  final ContactPoint? addressContactPoint;
+  final ExtendedContactDetail? addressExtendedContactDetail;
+  final List<FhirUrl>? additionalInfo;
+  final List<Element>? additionalInfoElement;
+  final PositiveInt? maxParticipants;
+  final Element? maxParticipantsElement;
+  final String? sessionKey;
+  final Element? sessionKeyElement;
   factory VirtualServiceDetail.fromJson(Map<String, dynamic> json) =>
       _$VirtualServiceDetailFromJson(json);
   Map<String, dynamic> toJson() => _$VirtualServiceDetailToJson(this);
@@ -98,10 +98,10 @@ class Availability {
     this.availableTime,
     this.notAvailableTime,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<AvailabilityAvailableTime>? availableTime;
-  List<AvailabilityNotAvailableTime>? notAvailableTime;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<AvailabilityAvailableTime>? availableTime;
+  final List<AvailabilityNotAvailableTime>? notAvailableTime;
   factory Availability.fromJson(Map<String, dynamic> json) =>
       _$AvailabilityFromJson(json);
   Map<String, dynamic> toJson() => _$AvailabilityToJson(this);
@@ -122,17 +122,17 @@ class AvailabilityAvailableTime {
     this.availableEndTime,
     @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  List<Code>? daysOfWeek;
-  List<Element>? daysOfWeekElement;
-  Boolean? allDay;
-  Element? allDayElement;
-  Time? availableStartTime;
-  Element? availableStartTimeElement;
-  Time? availableEndTime;
-  Element? availableEndTimeElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final List<Code>? daysOfWeek;
+  final List<Element>? daysOfWeekElement;
+  final Boolean? allDay;
+  final Element? allDayElement;
+  final Time? availableStartTime;
+  final Element? availableStartTimeElement;
+  final Time? availableEndTime;
+  final Element? availableEndTimeElement;
   factory AvailabilityAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$AvailabilityAvailableTimeFromJson(json);
   Map<String, dynamic> toJson() => _$AvailabilityAvailableTimeToJson(this);
@@ -148,12 +148,12 @@ class AvailabilityNotAvailableTime {
     @JsonKey(name: '_description') this.descriptionElement,
     this.during,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  String? description;
-  Element? descriptionElement;
-  Period? during;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? description;
+  final Element? descriptionElement;
+  final Period? during;
   factory AvailabilityNotAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$AvailabilityNotAvailableTimeFromJson(json);
   Map<String, dynamic> toJson() => _$AvailabilityNotAvailableTimeToJson(this);
@@ -171,14 +171,14 @@ class MonetaryComponent {
     @JsonKey(name: '_factor') this.factorElement,
     this.amount,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  Code? type;
-  Element? typeElement;
-  CodeableConcept? code;
-  Decimal? factor;
-  Element? factorElement;
-  Money? amount;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final Code? type;
+  final Element? typeElement;
+  final CodeableConcept? code;
+  final Decimal? factor;
+  final Element? factorElement;
+  final Money? amount;
   factory MonetaryComponent.fromJson(Map<String, dynamic> json) =>
       _$MonetaryComponentFromJson(json);
   Map<String, dynamic> toJson() => _$MonetaryComponentToJson(this);
@@ -195,13 +195,13 @@ class Contributor {
     @JsonKey(name: '_name') this.nameElement,
     this.contact,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  ContributorType? type;
-  Element? typeElement;
-  String? name;
-  Element? nameElement;
-  List<ContactDetail>? contact;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final ContributorType? type;
+  final Element? typeElement;
+  final String? name;
+  final Element? nameElement;
+  final List<ContactDetail>? contact;
   factory Contributor.fromJson(Map<String, dynamic> json) =>
       _$ContributorFromJson(json);
   Map<String, dynamic> toJson() => _$ContributorToJson(this);
@@ -226,21 +226,21 @@ class DataRequirement {
     @JsonKey(name: '_limit') this.limitElement,
     this.sort,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  Code? type;
-  Element? typeElement;
-  List<Canonical>? profile;
-  CodeableConcept? subjectCodeableConcept;
-  Reference? subjectReference;
-  List<String>? mustSupport;
-  List<Element>? mustSupportElement;
-  List<DataRequirementCodeFilter>? codeFilter;
-  List<DataRequirementDateFilter>? dateFilter;
-  List<DataRequirementValueFilter>? valueFilter;
-  PositiveInt? limit;
-  Element? limitElement;
-  List<DataRequirementSort>? sort;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final Code? type;
+  final Element? typeElement;
+  final List<Canonical>? profile;
+  final CodeableConcept? subjectCodeableConcept;
+  final Reference? subjectReference;
+  final List<String>? mustSupport;
+  final List<Element>? mustSupportElement;
+  final List<DataRequirementCodeFilter>? codeFilter;
+  final List<DataRequirementDateFilter>? dateFilter;
+  final List<DataRequirementValueFilter>? valueFilter;
+  final PositiveInt? limit;
+  final Element? limitElement;
+  final List<DataRequirementSort>? sort;
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementFromJson(json);
   Map<String, dynamic> toJson() => _$DataRequirementToJson(this);
@@ -259,15 +259,15 @@ class DataRequirementCodeFilter {
     this.valueSet,
     this.code,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  String? path;
-  Element? pathElement;
-  String? searchParam;
-  Element? searchParamElement;
-  Canonical? valueSet;
-  List<Coding>? code;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? path;
+  final Element? pathElement;
+  final String? searchParam;
+  final Element? searchParamElement;
+  final Canonical? valueSet;
+  final List<Coding>? code;
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementCodeFilterFromJson(json);
   Map<String, dynamic> toJson() => _$DataRequirementCodeFilterToJson(this);
@@ -288,17 +288,17 @@ class DataRequirementDateFilter {
     this.valuePeriod,
     this.valueDuration,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  String? path;
-  Element? pathElement;
-  String? searchParam;
-  Element? searchParamElement;
-  FhirDateTime? valueDateTime;
-  Element? valueDateTimeElement;
-  Period? valuePeriod;
-  FhirDuration? valueDuration;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? path;
+  final Element? pathElement;
+  final String? searchParam;
+  final Element? searchParamElement;
+  final FhirDateTime? valueDateTime;
+  final Element? valueDateTimeElement;
+  final Period? valuePeriod;
+  final FhirDuration? valueDuration;
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementDateFilterFromJson(json);
   Map<String, dynamic> toJson() => _$DataRequirementDateFilterToJson(this);
@@ -321,19 +321,19 @@ class DataRequirementValueFilter {
     this.valuePeriod,
     this.valueDuration,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  String? path;
-  Element? pathElement;
-  String? searchParam;
-  Element? searchParamElement;
-  Code? comparator;
-  Element? comparatorElement;
-  FhirDateTime? valueDateTime;
-  Element? valueDateTimeElement;
-  Period? valuePeriod;
-  FhirDuration? valueDuration;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? path;
+  final Element? pathElement;
+  final String? searchParam;
+  final Element? searchParamElement;
+  final Code? comparator;
+  final Element? comparatorElement;
+  final FhirDateTime? valueDateTime;
+  final Element? valueDateTimeElement;
+  final Period? valuePeriod;
+  final FhirDuration? valueDuration;
   factory DataRequirementValueFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementValueFilterFromJson(json);
   Map<String, dynamic> toJson() => _$DataRequirementValueFilterToJson(this);
@@ -350,13 +350,13 @@ class DataRequirementSort {
     this.direction,
     @JsonKey(name: '_direction') this.directionElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  String? path;
-  Element? pathElement;
-  DataRequirementSortDirection? direction;
-  Element? directionElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? path;
+  final Element? pathElement;
+  final DataRequirementSortDirection? direction;
+  final Element? directionElement;
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementSortFromJson(json);
   Map<String, dynamic> toJson() => _$DataRequirementSortToJson(this);
@@ -381,21 +381,21 @@ class ParameterDefinition {
     @JsonKey(name: '_type') this.typeElement,
     this.profile,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  Code? name;
-  Element? nameElement;
-  Code? use;
-  Element? useElement;
-  Integer? min;
-  Element? minElement;
-  String? max;
-  Element? maxElement;
-  String? documentation;
-  Element? documentationElement;
-  Code? type;
-  Element? typeElement;
-  Canonical? profile;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final Code? name;
+  final Element? nameElement;
+  final Code? use;
+  final Element? useElement;
+  final Integer? min;
+  final Element? minElement;
+  final String? max;
+  final Element? maxElement;
+  final String? documentation;
+  final Element? documentationElement;
+  final Code? type;
+  final Element? typeElement;
+  final Canonical? profile;
   factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$ParameterDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ParameterDefinitionToJson(this);
@@ -423,24 +423,24 @@ class RelatedArtifact {
     this.publicationDate,
     @JsonKey(name: '_publicationDate') this.publicationDateElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  RelatedArtifactType? type;
-  Element? typeElement;
-  List<CodeableConcept>? classifier;
-  String? label;
-  Element? labelElement;
-  String? display;
-  Element? displayElement;
-  Markdown? citation;
-  Element? citationElement;
-  Attachment? document;
-  Canonical? resource;
-  Reference? resourceReference;
-  Code? publicationStatus;
-  Element? publicationStatusElement;
-  Date? publicationDate;
-  Element? publicationDateElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final RelatedArtifactType? type;
+  final Element? typeElement;
+  final List<CodeableConcept>? classifier;
+  final String? label;
+  final Element? labelElement;
+  final String? display;
+  final Element? displayElement;
+  final Markdown? citation;
+  final Element? citationElement;
+  final Attachment? document;
+  final Canonical? resource;
+  final Reference? resourceReference;
+  final Code? publicationStatus;
+  final Element? publicationStatusElement;
+  final Date? publicationDate;
+  final Element? publicationDateElement;
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$RelatedArtifactFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedArtifactToJson(this);
@@ -466,22 +466,22 @@ class TriggerDefinition {
     this.data,
     this.condition,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  TriggerDefinitionType? type;
-  Element? typeElement;
-  String? name;
-  Element? nameElement;
-  CodeableConcept? code;
-  Canonical? subscriptionTopic;
-  Timing? timingTiming;
-  Reference? timingReference;
-  Date? timingDate;
-  Element? timingDateElement;
-  FhirDateTime? timingDateTime;
-  Element? timingDateTimeElement;
-  List<DataRequirement>? data;
-  Expression? condition;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final TriggerDefinitionType? type;
+  final Element? typeElement;
+  final String? name;
+  final Element? nameElement;
+  final CodeableConcept? code;
+  final Canonical? subscriptionTopic;
+  final Timing? timingTiming;
+  final Reference? timingReference;
+  final Date? timingDate;
+  final Element? timingDateElement;
+  final FhirDateTime? timingDateTime;
+  final Element? timingDateTimeElement;
+  final List<DataRequirement>? data;
+  final Expression? condition;
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$TriggerDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
@@ -498,13 +498,13 @@ class UsageContext {
     this.valueRange,
     this.valueReference,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  Coding code;
-  CodeableConcept? valueCodeableConcept;
-  Quantity? valueQuantity;
-  Range? valueRange;
-  Reference? valueReference;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final Coding code;
+  final CodeableConcept? valueCodeableConcept;
+  final Quantity? valueQuantity;
+  final Range? valueRange;
+  final Reference? valueReference;
   factory UsageContext.fromJson(Map<String, dynamic> json) =>
       _$UsageContextFromJson(json);
   Map<String, dynamic> toJson() => _$UsageContextToJson(this);
@@ -526,20 +526,19 @@ class Expression {
     this.reference,
     @JsonKey(name: '_reference') this.referenceElement,
   });
-  String? id;
-  List<FhirExtension>? extension_;
-  String? description;
-  Element? descriptionElement;
-  Id? name;
-  Element? nameElement;
-  Code? language;
-  Element? languageElement;
-  String? expression;
-  Element? expressionElement;
-  FhirUri? reference;
-  Element? referenceElement;
+  final String? id;
+  final List<FhirExtension>? extension_;
+  final String? description;
+  final Element? descriptionElement;
+  final Id? name;
+  final Element? nameElement;
+  final Code? language;
+  final Element? languageElement;
+  final String? expression;
+  final Element? expressionElement;
+  final FhirUri? reference;
+  final Element? referenceElement;
   factory Expression.fromJson(Map<String, dynamic> json) =>
       _$ExpressionFromJson(json);
   Map<String, dynamic> toJson() => _$ExpressionToJson(this);
 }
-

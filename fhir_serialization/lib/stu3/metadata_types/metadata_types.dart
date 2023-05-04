@@ -10,9 +10,9 @@ part 'metadata_types.g.dart';
 @JsonSerializable()
 class ContactDetail {
   const ContactDetail({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.telecom,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.telecom,
   });
   final String? name;
   final Element? nameElement;
@@ -25,11 +25,11 @@ class ContactDetail {
 @JsonSerializable()
 class Contributor {
   const Contributor({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.contact,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.contact,
   });
   final ContributorType? type;
   final Element? typeElement;
@@ -44,16 +44,16 @@ class Contributor {
 @JsonSerializable()
 class RelatedArtifact {
   const RelatedArtifact({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.display,
-    @JsonKey(name: '_display') required this.displayElement,
-    required this.citation,
-    @JsonKey(name: '_citation') required this.citationElement,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.document,
-    required this.resource,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.display,
+    @JsonKey(name: '_display') this.displayElement,
+    this.citation,
+    @JsonKey(name: '_citation') this.citationElement,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
+    this.document,
+    this.resource,
   });
   final RelatedArtifactType? type;
   final Element? typeElement;
@@ -74,9 +74,9 @@ class RelatedArtifact {
 class UsageContext {
   const UsageContext({
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueRange,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueRange,
   });
   final Coding code;
   final CodeableConcept? valueCodeableConcept;
@@ -90,14 +90,14 @@ class UsageContext {
 @JsonSerializable()
 class DataRequirement {
   const DataRequirement({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
-    @JsonKey(name: '_profile') required this.profileElement,
-    required this.mustSupport,
-    @JsonKey(name: '_mustSupport') required this.mustSupportElement,
-    required this.codeFilter,
-    required this.dateFilter,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
+    @JsonKey(name: '_profile') this.profileElement,
+    this.mustSupport,
+    @JsonKey(name: '_mustSupport') this.mustSupportElement,
+    this.codeFilter,
+    this.dateFilter,
   });
   final String? type;
   final Element? typeElement;
@@ -115,15 +115,15 @@ class DataRequirement {
 @JsonSerializable()
 class DataRequirementCodeFilter {
   const DataRequirementCodeFilter({
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.valueSetString,
-    @JsonKey(name: '_valueSetString') required this.valueSetStringElement,
-    required this.valueSetReference,
-    required this.valueCode,
-    @JsonKey(name: '_valueCode') required this.valueCodeElement,
-    required this.valueCoding,
-    required this.valueCodeableConcept,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.valueSetString,
+    @JsonKey(name: '_valueSetString') this.valueSetStringElement,
+    this.valueSetReference,
+    this.valueCode,
+    @JsonKey(name: '_valueCode') this.valueCodeElement,
+    this.valueCoding,
+    this.valueCodeableConcept,
   });
   final String? path;
   final Element? pathElement;
@@ -142,12 +142,12 @@ class DataRequirementCodeFilter {
 @JsonSerializable()
 class DataRequirementDateFilter {
   const DataRequirementDateFilter({
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.valueDateTime,
-    @JsonKey(name: '_valueDateTime') required this.valueDateTimeElement,
-    required this.valuePeriod,
-    required this.valueDuration,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.valueDateTime,
+    @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+    this.valuePeriod,
+    this.valueDuration,
   });
   final String? path;
   final Element? pathElement;
@@ -163,19 +163,19 @@ class DataRequirementDateFilter {
 @JsonSerializable()
 class ParameterDefinition {
   const ParameterDefinition({
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.min,
-    @JsonKey(name: '_min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '_max') required this.maxElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.min,
+    @JsonKey(name: '_min') this.minElement,
+    this.max,
+    @JsonKey(name: '_max') this.maxElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
   });
   final String? name;
   final Element? nameElement;
@@ -198,18 +198,17 @@ class ParameterDefinition {
 @JsonSerializable()
 class TriggerDefinition {
   const TriggerDefinition({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.eventName,
-    @JsonKey(name: '_eventName') required this.eventNameElement,
-    required this.eventTimingTiming,
-    required this.eventTimingReference,
-    required this.eventTimingDate,
-    @JsonKey(name: '_eventTimingDate') required this.eventTimingDateElement,
-    required this.eventTimingDateTime,
-    @JsonKey(name: '_eventTimingDateTime')
-        required this.eventTimingDateTimeElement,
-    required this.eventData,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.eventName,
+    @JsonKey(name: '_eventName') this.eventNameElement,
+    this.eventTimingTiming,
+    this.eventTimingReference,
+    this.eventTimingDate,
+    @JsonKey(name: '_eventTimingDate') this.eventTimingDateElement,
+    this.eventTimingDateTime,
+    @JsonKey(name: '_eventTimingDateTime') this.eventTimingDateTimeElement,
+    this.eventData,
   });
   final TriggerDefinitionType? type;
   final Element? typeElement;
@@ -226,4 +225,3 @@ class TriggerDefinition {
       _$TriggerDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
 }
-

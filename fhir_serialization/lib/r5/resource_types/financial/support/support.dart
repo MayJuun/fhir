@@ -11,7 +11,7 @@ class Coverage extends Resource {
     super.resourceType = R5ResourceType.Coverage,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -19,34 +19,33 @@ class Coverage extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.kind,
-    @JsonKey(name: '_kind') required this.kindElement,
-    required this.paymentBy,
-    required this.type,
-    required this.policyHolder,
-    required this.subscriber,
-    required this.subscriberId,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.kind,
+    @JsonKey(name: '_kind') this.kindElement,
+    this.paymentBy,
+    this.type,
+    this.policyHolder,
+    this.subscriber,
+    this.subscriberId,
     required this.beneficiary,
-    required this.dependent,
-    @JsonKey(name: '_dependent') required this.dependentElement,
-    required this.relationship,
-    required this.period,
-    required this.insurer,
-    @JsonKey(name: 'class') required this.class_,
-    required this.order,
-    @JsonKey(name: '_order') required this.orderElement,
-    required this.network,
-    @JsonKey(name: '_network') required this.networkElement,
-    required this.costToBeneficiary,
-    required this.subrogation,
-    @JsonKey(name: '_subrogation') required this.subrogationElement,
-    required this.contract,
-    required this.insurancePlan,
+    this.dependent,
+    @JsonKey(name: '_dependent') this.dependentElement,
+    this.relationship,
+    this.period,
+    this.insurer,
+    @JsonKey(name: 'class') this.class_,
+    this.order,
+    @JsonKey(name: '_order') this.orderElement,
+    this.network,
+    @JsonKey(name: '_network') this.networkElement,
+    this.costToBeneficiary,
+    this.subrogation,
+    @JsonKey(name: '_subrogation') this.subrogationElement,
+    this.contract,
+    this.insurancePlan,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -82,12 +81,12 @@ class Coverage extends Resource {
 @JsonSerializable()
 class CoveragePaymentBy {
   const CoveragePaymentBy({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.party,
-    required this.responsibility,
-    @JsonKey(name: '_responsibility') required this.responsibilityElement,
+    this.responsibility,
+    @JsonKey(name: '_responsibility') this.responsibilityElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -103,13 +102,13 @@ class CoveragePaymentBy {
 @JsonSerializable()
 class CoverageClass {
   const CoverageClass({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
     required this.value,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -126,17 +125,17 @@ class CoverageClass {
 @JsonSerializable()
 class CoverageCostToBeneficiary {
   const CoverageCostToBeneficiary({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.type,
-    required this.category,
-    required this.network,
-    required this.unit,
-    required this.term,
-    required this.valueQuantity,
-    required this.valueMoney,
-    required this.exception,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    this.category,
+    this.network,
+    this.unit,
+    this.term,
+    this.valueQuantity,
+    this.valueMoney,
+    this.exception,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -157,11 +156,11 @@ class CoverageCostToBeneficiary {
 @JsonSerializable()
 class CoverageException {
   const CoverageException({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.period,
+    this.period,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -176,11 +175,10 @@ class CoverageException {
 @JsonSerializable()
 class CoverageEligibilityRequest extends Resource {
   const CoverageEligibilityRequest({
-    @Default(R5ResourceType.CoverageEligibilityRequest)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.CoverageEligibilityRequest,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -188,27 +186,26 @@ class CoverageEligibilityRequest extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.priority,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.priority,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
     required this.patient,
-    required this.servicedDate,
-    @JsonKey(name: '_servicedDate') required this.servicedDateElement,
-    required this.servicedPeriod,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.enterer,
-    required this.provider,
+    this.servicedDate,
+    @JsonKey(name: '_servicedDate') this.servicedDateElement,
+    this.servicedPeriod,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.enterer,
+    this.provider,
     required this.insurer,
-    required this.facility,
-    required this.supportingInfo,
-    required this.insurance,
-    required this.item,
+    this.facility,
+    this.supportingInfo,
+    this.insurance,
+    this.item,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -237,14 +234,14 @@ class CoverageEligibilityRequest extends Resource {
 @JsonSerializable()
 class CoverageEligibilityRequestSupportingInfo {
   const CoverageEligibilityRequestSupportingInfo({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.sequence,
-    @JsonKey(name: '_sequence') required this.sequenceElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.sequence,
+    @JsonKey(name: '_sequence') this.sequenceElement,
     required this.information,
-    required this.appliesToAll,
-    @JsonKey(name: '_appliesToAll') required this.appliesToAllElement,
+    this.appliesToAll,
+    @JsonKey(name: '_appliesToAll') this.appliesToAllElement,
   });
 
   final String? id;
@@ -265,15 +262,14 @@ class CoverageEligibilityRequestSupportingInfo {
 @JsonSerializable()
 class CoverageEligibilityRequestInsurance {
   const CoverageEligibilityRequestInsurance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.focal,
-    @JsonKey(name: '_focal') required this.focalElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.focal,
+    @JsonKey(name: '_focal') this.focalElement,
     required this.coverage,
-    required this.businessArrangement,
-    @JsonKey(name: '_businessArrangement')
-        required this.businessArrangementElement,
+    this.businessArrangement,
+    @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
   });
 
   final String? id;
@@ -294,21 +290,21 @@ class CoverageEligibilityRequestInsurance {
 @JsonSerializable()
 class CoverageEligibilityRequestItem {
   const CoverageEligibilityRequestItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.supportingInfoSequence,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.supportingInfoSequence,
     @JsonKey(name: '__supportingInfoSequence')
-        required this.supportingInfoSequenceElement,
-    required this.category,
-    required this.productOrService,
-    required this.modifier,
-    required this.provider,
-    required this.quantity,
-    required this.unitPrice,
-    required this.facility,
-    required this.diagnosis,
-    required this.detail,
+        this.supportingInfoSequenceElement,
+    this.category,
+    this.productOrService,
+    this.modifier,
+    this.provider,
+    this.quantity,
+    this.unitPrice,
+    this.facility,
+    this.diagnosis,
+    this.detail,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -333,11 +329,11 @@ class CoverageEligibilityRequestItem {
 @JsonSerializable()
 class CoverageEligibilityRequestDiagnosis {
   const CoverageEligibilityRequestDiagnosis({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.diagnosisCodeableConcept,
-    required this.diagnosisReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.diagnosisCodeableConcept,
+    this.diagnosisReference,
   });
 
   final String? id;
@@ -355,11 +351,10 @@ class CoverageEligibilityRequestDiagnosis {
 @JsonSerializable()
 class CoverageEligibilityResponse extends Resource {
   const CoverageEligibilityResponse({
-    @Default(R5ResourceType.CoverageEligibilityResponse)
-        required this.resourceType,
+    super.resourceType = R5ResourceType.CoverageEligibilityResponse,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -367,31 +362,30 @@ class CoverageEligibilityResponse extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.purpose,
+    @JsonKey(name: '_purpose') this.purposeElement,
     required this.patient,
-    required this.servicedDate,
-    @JsonKey(name: '_servicedDate') required this.servicedDateElement,
-    required this.servicedPeriod,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.requestor,
+    this.servicedDate,
+    @JsonKey(name: '_servicedDate') this.servicedDateElement,
+    this.servicedPeriod,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.requestor,
     required this.request,
-    required this.outcome,
-    @JsonKey(name: '_outcome') required this.outcomeElement,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
+    this.outcome,
+    @JsonKey(name: '_outcome') this.outcomeElement,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
     required this.insurer,
-    required this.insurance,
-    required this.preAuthRef,
-    @JsonKey(name: '_preAuthRef') required this.preAuthRefElement,
-    required this.form,
-    required this.error,
+    this.insurance,
+    this.preAuthRef,
+    @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
+    this.form,
+    this.error,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -424,14 +418,14 @@ class CoverageEligibilityResponse extends Resource {
 @JsonSerializable()
 class CoverageEligibilityResponseInsurance {
   const CoverageEligibilityResponseInsurance({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.coverage,
-    required this.inforce,
-    @JsonKey(name: '_inforce') required this.inforceElement,
-    required this.benefitPeriod,
-    required this.item,
+    this.inforce,
+    @JsonKey(name: '_inforce') this.inforceElement,
+    this.benefitPeriod,
+    this.item,
   });
 
   final String? id;
@@ -452,29 +446,28 @@ class CoverageEligibilityResponseInsurance {
 @JsonSerializable()
 class CoverageEligibilityResponseItem {
   const CoverageEligibilityResponseItem({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.category,
-    required this.productOrService,
-    required this.modifier,
-    required this.provider,
-    required this.excluded,
-    @JsonKey(name: '_excluded') required this.excludedElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.network,
-    required this.unit,
-    required this.term,
-    required this.benefit,
-    required this.authorizationRequired,
-    @JsonKey(name: '__authorizationRequired')
-        required this.authorizationRequiredElement,
-    required this.authorizationSupporting,
-    required this.authorizationUrl,
-    @JsonKey(name: '_authorizationUrl') required this.authorizationUrlElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.category,
+    this.productOrService,
+    this.modifier,
+    this.provider,
+    this.excluded,
+    @JsonKey(name: '_excluded') this.excludedElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.network,
+    this.unit,
+    this.term,
+    this.benefit,
+    this.authorizationRequired,
+    @JsonKey(name: '__authorizationRequired') this.authorizationRequiredElement,
+    this.authorizationSupporting,
+    this.authorizationUrl,
+    @JsonKey(name: '_authorizationUrl') this.authorizationUrlElement,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -508,21 +501,20 @@ class CoverageEligibilityResponseItem {
 @JsonSerializable()
 class CoverageEligibilityResponseBenefit {
   const CoverageEligibilityResponseBenefit({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.allowedUnsignedInt,
-    @JsonKey(name: '_allowedUnsignedInt')
-        required this.allowedUnsignedIntElement,
-    required this.allowedString,
-    @JsonKey(name: '_allowedString') required this.allowedStringElement,
-    required this.allowedMoney,
-    required this.usedUnsignedInt,
-    @JsonKey(name: '_usedUnsignedInt') required this.usedUnsignedIntElement,
-    required this.usedString,
-    @JsonKey(name: '_usedString') required this.usedStringElement,
-    required this.usedMoney,
+    this.allowedUnsignedInt,
+    @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
+    this.allowedString,
+    @JsonKey(name: '_allowedString') this.allowedStringElement,
+    this.allowedMoney,
+    this.usedUnsignedInt,
+    @JsonKey(name: '_usedUnsignedInt') this.usedUnsignedIntElement,
+    this.usedString,
+    @JsonKey(name: '_usedString') this.usedStringElement,
+    this.usedMoney,
   });
 
   final String? id;
@@ -549,9 +541,9 @@ class CoverageEligibilityResponseBenefit {
 @JsonSerializable()
 class CoverageEligibilityResponseError {
   const CoverageEligibilityResponseError({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
   });
   final String? id;
@@ -571,7 +563,7 @@ class EnrollmentRequest extends Resource {
     super.resourceType = R5ResourceType.EnrollmentRequest,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -579,17 +571,16 @@ class EnrollmentRequest extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.insurer,
-    required this.provider,
-    required this.candidate,
-    required this.coverage,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.insurer,
+    this.provider,
+    this.candidate,
+    this.coverage,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;
@@ -611,7 +602,7 @@ class EnrollmentResponse extends Resource {
     super.resourceType = R5ResourceType.EnrollmentResponse,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -619,20 +610,19 @@ class EnrollmentResponse extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.request,
-    required this.outcome,
-    @JsonKey(name: '_outcome') required this.outcomeElement,
-    required this.disposition,
-    @JsonKey(name: '_disposition') required this.dispositionElement,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
-    required this.organization,
-    required this.requestProvider,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.request,
+    this.outcome,
+    @JsonKey(name: '_outcome') this.outcomeElement,
+    this.disposition,
+    @JsonKey(name: '_disposition') this.dispositionElement,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
+    this.organization,
+    this.requestProvider,
   });
-  final R5ResourceType resourceType;
 
   final List<Identifier>? identifier;
   final Code? status;

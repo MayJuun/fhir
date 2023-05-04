@@ -13,7 +13,7 @@ class AuditEvent extends Resource {
     super.resourceType = Stu3ResourceType.AuditEvent,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -22,19 +22,19 @@ class AuditEvent extends Resource {
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
     required this.type,
-    required this.subtype,
-    required this.action,
-    @JsonKey(name: '_action') required this.actionElement,
-    required this.recorded,
-    @JsonKey(name: '_recorded') required this.recordedElement,
-    required this.outcome,
-    @JsonKey(name: '_outcome') required this.outcomeElement,
-    required this.outcomeDesc,
-    @JsonKey(name: '_outcomeDesc') required this.outcomeDescElement,
-    required this.purposeOfEvent,
+    this.subtype,
+    this.action,
+    @JsonKey(name: '_action') this.actionElement,
+    this.recorded,
+    @JsonKey(name: '_recorded') this.recordedElement,
+    this.outcome,
+    @JsonKey(name: '_outcome') this.outcomeElement,
+    this.outcomeDesc,
+    @JsonKey(name: '_outcomeDesc') this.outcomeDescElement,
+    this.purposeOfEvent,
     required this.agent,
     required this.source,
-    required this.entity,
+    this.entity,
   });
   final Coding type;
   final List<Coding>? subtype;
@@ -58,21 +58,21 @@ class AuditEvent extends Resource {
 @JsonSerializable()
 class AuditEventAgent {
   const AuditEventAgent({
-    required this.role,
-    required this.reference,
-    required this.userId,
-    required this.altId,
-    @JsonKey(name: '_altId') required this.altIdElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.requestor,
-    @JsonKey(name: '_requestor') required this.requestorElement,
-    required this.location,
-    required this.policy,
-    @JsonKey(name: '_policy') required this.policyElement,
-    required this.media,
-    required this.network,
-    required this.purposeOfUse,
+    this.role,
+    this.reference,
+    this.userId,
+    this.altId,
+    @JsonKey(name: '_altId') this.altIdElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.requestor,
+    @JsonKey(name: '_requestor') this.requestorElement,
+    this.location,
+    this.policy,
+    @JsonKey(name: '_policy') this.policyElement,
+    this.media,
+    this.network,
+    this.purposeOfUse,
   });
   final List<CodeableConcept>? role;
   final Reference? reference;
@@ -97,10 +97,10 @@ class AuditEventAgent {
 @JsonSerializable()
 class AuditEventNetwork {
   const AuditEventNetwork({
-    required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.address,
+    @JsonKey(name: '_address') this.addressElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final String? address;
   final Element? addressElement;
@@ -114,10 +114,10 @@ class AuditEventNetwork {
 @JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
-    required this.site,
-    @JsonKey(name: '_site') required this.siteElement,
+    this.site,
+    @JsonKey(name: '_site') this.siteElement,
     required this.identifier,
-    required this.type,
+    this.type,
   });
   final String? site;
   final Element? siteElement;
@@ -131,19 +131,19 @@ class AuditEventSource {
 @JsonSerializable()
 class AuditEventEntity {
   const AuditEventEntity({
-    required this.identifier,
-    required this.reference,
-    required this.type,
-    required this.role,
-    required this.lifecycle,
-    required this.securityLabel,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.query,
-    @JsonKey(name: '_query') required this.queryElement,
-    required this.detail,
+    this.identifier,
+    this.reference,
+    this.type,
+    this.role,
+    this.lifecycle,
+    this.securityLabel,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.query,
+    @JsonKey(name: '_query') this.queryElement,
+    this.detail,
   });
   final Identifier? identifier;
   final Reference? reference;
@@ -166,10 +166,10 @@ class AuditEventEntity {
 @JsonSerializable()
 class AuditEventDetail {
   const AuditEventDetail({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.value,
-    @JsonKey(name: '_value') required this.valueElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
   });
   final String? type;
   final Element? typeElement;
@@ -186,7 +186,7 @@ class Consent extends Resource {
     super.resourceType = Stu3ResourceType.Consent,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -194,29 +194,29 @@ class Consent extends Resource {
     super.contained,
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
-    required this.identifier,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.category,
+    this.identifier,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.category,
     required this.patient,
-    required this.period,
-    required this.dateTime,
-    @JsonKey(name: '_dateTime') required this.dateTimeElement,
-    required this.consentingParty,
-    required this.actor,
-    required this.action,
-    required this.organization,
-    required this.sourceAttachment,
-    required this.sourceIdentifier,
-    required this.sourceReference,
-    required this.policy,
-    required this.policyRule,
-    @JsonKey(name: '_policyRule') required this.policyRuleElement,
-    required this.securityLabel,
-    required this.purpose,
-    required this.dataPeriod,
-    required this.data,
-    required this.except,
+    this.period,
+    this.dateTime,
+    @JsonKey(name: '_dateTime') this.dateTimeElement,
+    this.consentingParty,
+    this.actor,
+    this.action,
+    this.organization,
+    this.sourceAttachment,
+    this.sourceIdentifier,
+    this.sourceReference,
+    this.policy,
+    this.policyRule,
+    @JsonKey(name: '_policyRule') this.policyRuleElement,
+    this.securityLabel,
+    this.purpose,
+    this.dataPeriod,
+    this.data,
+    this.except,
   });
   final Identifier? identifier;
   final ConsentStatus? status;
@@ -262,10 +262,10 @@ class ConsentActor {
 @JsonSerializable()
 class ConsentPolicy {
   const ConsentPolicy({
-    required this.authority,
-    @JsonKey(name: '_authority') required this.authorityElement,
-    required this.uri,
-    @JsonKey(name: '_uri') required this.uriElement,
+    this.authority,
+    @JsonKey(name: '_authority') this.authorityElement,
+    this.uri,
+    @JsonKey(name: '_uri') this.uriElement,
   });
   final String? authority;
   final Element? authorityElement;
@@ -279,8 +279,8 @@ class ConsentPolicy {
 @JsonSerializable()
 class ConsentData {
   const ConsentData({
-    required this.meaning,
-    @JsonKey(name: '_meaning') required this.meaningElement,
+    this.meaning,
+    @JsonKey(name: '_meaning') this.meaningElement,
     required this.reference,
   });
   final ConsentDataMeaning? meaning;
@@ -294,17 +294,17 @@ class ConsentData {
 @JsonSerializable()
 class ConsentExcept {
   const ConsentExcept({
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.period,
-    required this.actor,
-    required this.action,
-    required this.securityLabel,
-    required this.purpose,
-    @JsonKey(name: 'class') required this.class_,
-    required this.code,
-    required this.dataPeriod,
-    required this.data,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.period,
+    this.actor,
+    this.action,
+    this.securityLabel,
+    this.purpose,
+    @JsonKey(name: 'class') this.class_,
+    this.code,
+    this.dataPeriod,
+    this.data,
   });
   final ConsentExceptType? type;
   final Element? typeElement;
@@ -338,8 +338,8 @@ class ConsentActor1 {
 @JsonSerializable()
 class ConsentData1 {
   const ConsentData1({
-    required this.meaning,
-    @JsonKey(name: '_meaning') required this.meaningElement,
+    this.meaning,
+    @JsonKey(name: '_meaning') this.meaningElement,
     required this.reference,
   });
   final ConsentData1Meaning? meaning;
@@ -356,7 +356,7 @@ class Provenance extends Resource {
     super.resourceType = Stu3ResourceType.Provenance,
     super.id,
     super.meta,
-    required super.implicitRules,
+    super.implicitRules,
     @JsonKey(name: '_implicitRules') super.implicitRulesElement,
     super.language,
     @JsonKey(name: '_language') super.languageElement,
@@ -365,17 +365,17 @@ class Provenance extends Resource {
     @JsonKey(name: 'extension') super.extension_,
     super.modifierExtension,
     required this.target,
-    required this.period,
-    required this.recorded,
-    @JsonKey(name: '_recorded') required this.recordedElement,
-    required this.policy,
-    @JsonKey(name: '_policy') required this.policyElement,
-    required this.location,
-    required this.reason,
-    required this.activity,
+    this.period,
+    this.recorded,
+    @JsonKey(name: '_recorded') this.recordedElement,
+    this.policy,
+    @JsonKey(name: '_policy') this.policyElement,
+    this.location,
+    this.reason,
+    this.activity,
     required this.agent,
-    required this.entity,
-    required this.signature,
+    this.entity,
+    this.signature,
   });
   final List<Reference> target;
   final Period? period;
@@ -397,14 +397,14 @@ class Provenance extends Resource {
 @JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
-    required this.role,
-    required this.whoUri,
-    @JsonKey(name: '_whoUri') required this.whoUriElement,
-    required this.whoReference,
-    required this.onBehalfOfUri,
-    @JsonKey(name: '_onBehalfOfUri') required this.onBehalfOfUriElement,
-    required this.onBehalfOfReference,
-    required this.relatedAgentType,
+    this.role,
+    this.whoUri,
+    @JsonKey(name: '_whoUri') this.whoUriElement,
+    this.whoReference,
+    this.onBehalfOfUri,
+    @JsonKey(name: '_onBehalfOfUri') this.onBehalfOfUriElement,
+    this.onBehalfOfReference,
+    this.relatedAgentType,
   });
   final List<CodeableConcept>? role;
   final String? whoUri;
@@ -422,13 +422,13 @@ class ProvenanceAgent {
 @JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
-    required this.role,
-    @JsonKey(name: '_role') required this.roleElement,
-    required this.whatUri,
-    @JsonKey(name: '_whatUri') required this.whatUriElement,
-    required this.whatReference,
-    required this.whatIdentifier,
-    required this.agent,
+    this.role,
+    @JsonKey(name: '_role') this.roleElement,
+    this.whatUri,
+    @JsonKey(name: '_whatUri') this.whatUriElement,
+    this.whatReference,
+    this.whatIdentifier,
+    this.agent,
   });
   final ProvenanceEntityRole? role;
   final Element? roleElement;

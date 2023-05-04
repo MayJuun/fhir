@@ -373,13 +373,13 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
       referralMethod: (json['referralMethod'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      appointmentRequired: json['appointmentRequired'] == null
+      appointment: json['appointment'] == null
           ? null
-          : Boolean.fromJson(json['appointmentRequired']),
-      appointmentRequiredElement: json['appointmentRequiredElement'] == null
+          : Boolean.fromJson(json['appointment']),
+      appointmentElement: json['appointmentElement'] == null
           ? null
           : Element.fromJson(
-              json['appointmentRequiredElement'] as Map<String, dynamic>),
+              json['appointmentElement'] as Map<String, dynamic>),
       availableTime: (json['availableTime'] as List<dynamic>?)
           ?.map((e) => HealthcareServiceAvailableTime.fromJson(
               e as Map<String, dynamic>))
@@ -453,9 +453,8 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
       'communication', instance.communication?.map((e) => e.toJson()).toList());
   writeNotNull('referralMethod',
       instance.referralMethod?.map((e) => e.toJson()).toList());
-  writeNotNull('appointmentRequired', instance.appointmentRequired?.toJson());
-  writeNotNull('appointmentRequiredElement',
-      instance.appointmentRequiredElement?.toJson());
+  writeNotNull('appointment', instance.appointment?.toJson());
+  writeNotNull('appointmentElement', instance.appointmentElement?.toJson());
   writeNotNull(
       'availableTime', instance.availableTime?.map((e) => e.toJson()).toList());
   writeNotNull(

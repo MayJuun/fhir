@@ -10,11 +10,11 @@ part 'metadata_types.g.dart';
 @JsonSerializable()
 class ContactDetail {
   const ContactDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.telecom,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.telecom,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -29,13 +29,13 @@ class ContactDetail {
 @JsonSerializable()
 class Contributor {
   const Contributor({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.contact,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.contact,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -52,20 +52,20 @@ class Contributor {
 @JsonSerializable()
 class DataRequirement {
   const DataRequirement({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
-    required this.subjectCodeableConcept,
-    required this.subjectReference,
-    required this.mustSupport,
-    @JsonKey(name: '_mustSupport') required this.mustSupportElement,
-    required this.codeFilter,
-    required this.dateFilter,
-    required this.limit,
-    @JsonKey(name: '_limit') required this.limitElement,
-    required this.sort,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
+    this.subjectCodeableConcept,
+    this.subjectReference,
+    this.mustSupport,
+    @JsonKey(name: '_mustSupport') this.mustSupportElement,
+    this.codeFilter,
+    this.dateFilter,
+    this.limit,
+    @JsonKey(name: '_limit') this.limitElement,
+    this.sort,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -89,15 +89,15 @@ class DataRequirement {
 @JsonSerializable()
 class DataRequirementCodeFilter {
   const DataRequirementCodeFilter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.searchParam,
-    @JsonKey(name: '_searchParam') required this.searchParamElement,
-    required this.valueSet,
-    required this.code,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.searchParam,
+    @JsonKey(name: '_searchParam') this.searchParamElement,
+    this.valueSet,
+    this.code,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -116,17 +116,17 @@ class DataRequirementCodeFilter {
 @JsonSerializable()
 class DataRequirementDateFilter {
   const DataRequirementDateFilter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.path,
-    @JsonKey(name: '_path') required this.pathElement,
-    required this.searchParam,
-    @JsonKey(name: '_searchParam') required this.searchParamElement,
-    required this.valueDateTime,
-    @JsonKey(name: '_valueDateTime') required this.valueDateTimeElement,
-    required this.valuePeriod,
-    required this.valueDuration,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.searchParam,
+    @JsonKey(name: '_searchParam') this.searchParamElement,
+    this.valueDateTime,
+    @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+    this.valuePeriod,
+    this.valueDuration,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -147,13 +147,13 @@ class DataRequirementDateFilter {
 @JsonSerializable()
 class DataRequirementSort {
   const DataRequirementSort({
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
-    required this.path,
-    @JsonKey(name: '__path') required this.pathElement,
-    required this.direction,
-    @JsonKey(name: '__direction') required this.directionElement,
+    this.id,
+    @JsonKey(name: '_extension') this.extension_,
+    this.modifierExtension,
+    this.path,
+    @JsonKey(name: '__path') this.pathElement,
+    this.direction,
+    @JsonKey(name: '__direction') this.directionElement,
   });
   final String? id;
 
@@ -174,21 +174,21 @@ class DataRequirementSort {
 @JsonSerializable()
 class ParameterDefinition {
   const ParameterDefinition({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.use,
-    @JsonKey(name: '_use') required this.useElement,
-    required this.min,
-    @JsonKey(name: '_min') required this.minElement,
-    required this.max,
-    @JsonKey(name: '_max') required this.maxElement,
-    required this.documentation,
-    @JsonKey(name: '_documentation') required this.documentationElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.profile,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.use,
+    @JsonKey(name: '_use') this.useElement,
+    this.min,
+    @JsonKey(name: '_min') this.minElement,
+    this.max,
+    @JsonKey(name: '_max') this.maxElement,
+    this.documentation,
+    @JsonKey(name: '_documentation') this.documentationElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.profile,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -213,20 +213,20 @@ class ParameterDefinition {
 @JsonSerializable()
 class RelatedArtifact {
   const RelatedArtifact({
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.type,
-    @JsonKey(name: '__type') required this.typeElement,
-    required this.label,
-    @JsonKey(name: '__label') required this.labelElement,
-    required this.display,
-    @JsonKey(name: '__display') required this.displayElement,
-    required this.citation,
-    @JsonKey(name: '__citation') required this.citationElement,
-    required this.url,
-    @JsonKey(name: '__url') required this.urlElement,
-    required this.document,
-    required this.resource,
+    this.id,
+    @JsonKey(name: '_extension') this.extension_,
+    this.type,
+    @JsonKey(name: '__type') this.typeElement,
+    this.label,
+    @JsonKey(name: '__label') this.labelElement,
+    this.display,
+    @JsonKey(name: '__display') this.displayElement,
+    this.citation,
+    @JsonKey(name: '__citation') this.citationElement,
+    this.url,
+    @JsonKey(name: '__url') this.urlElement,
+    this.document,
+    this.resource,
   });
   final String? id;
 
@@ -257,20 +257,20 @@ class RelatedArtifact {
 @JsonSerializable()
 class TriggerDefinition {
   const TriggerDefinition({
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.type,
-    @JsonKey(name: '__type') required this.typeElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.timingTiming,
-    required this.timingReference,
-    required this.timingDate,
-    @JsonKey(name: '__timingDate') required this.timingDateElement,
-    required this.timingDateTime,
-    @JsonKey(name: '__timingDateTime') required this.timingDateTimeElement,
-    required this.data,
-    required this.condition,
+    this.id,
+    @JsonKey(name: '_extension') this.extension_,
+    this.type,
+    @JsonKey(name: '__type') this.typeElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.timingTiming,
+    this.timingReference,
+    this.timingDate,
+    @JsonKey(name: '__timingDate') this.timingDateElement,
+    this.timingDateTime,
+    @JsonKey(name: '__timingDateTime') this.timingDateTimeElement,
+    this.data,
+    this.condition,
   });
   final String? id;
 
@@ -300,13 +300,13 @@ class TriggerDefinition {
 @JsonSerializable()
 class UsageContext {
   const UsageContext({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valueReference,
+    this.valueCodeableConcept,
+    this.valueQuantity,
+    this.valueRange,
+    this.valueReference,
   });
   final String? id;
   final List<FhirExtension>? extension_;
@@ -323,18 +323,18 @@ class UsageContext {
 @JsonSerializable()
 class Expression {
   const Expression({
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.description,
-    @JsonKey(name: '__description') required this.descriptionElement,
-    required this.name,
-    @JsonKey(name: '__name') required this.nameElement,
-    required this.language,
-    @JsonKey(name: '__language') required this.languageElement,
-    required this.expression,
-    @JsonKey(name: '__expression') required this.expressionElement,
-    required this.reference,
-    @JsonKey(name: '__reference') required this.referenceElement,
+    this.id,
+    @JsonKey(name: '_extension') this.extension_,
+    this.description,
+    @JsonKey(name: '__description') this.descriptionElement,
+    this.name,
+    @JsonKey(name: '__name') this.nameElement,
+    this.language,
+    @JsonKey(name: '__language') this.languageElement,
+    this.expression,
+    @JsonKey(name: '__expression') this.expressionElement,
+    this.reference,
+    @JsonKey(name: '__reference') this.referenceElement,
   });
   final String? id;
 
