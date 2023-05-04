@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:isar/isar.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +13,6 @@ part 'entities1.g.dart';
 
 /// [Endpoint] The technical details of an endpoint that can be used for
 @freezed
-@Collection(ignore: {'copyWith'})
 class Endpoint with Resource, _$Endpoint {
   /// [Endpoint] The technical details of an endpoint that can be used for
   Endpoint._();
@@ -287,7 +285,6 @@ class Endpoint with Resource, _$Endpoint {
 
 /// [HealthcareService] The details of a healthcare service available at a
 @freezed
-@Collection(ignore: {'copyWith'})
 class HealthcareService with Resource, _$HealthcareService {
   /// [HealthcareService] The details of a healthcare service available at a
   HealthcareService._();
@@ -1014,7 +1011,6 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 
 /// [Location] Details and position information for a physical place where
 @freezed
-@Collection(ignore: {'copyWith'})
 class Location with Resource, _$Location {
   /// [Location] Details and position information for a physical place where
   Location._();
@@ -1602,7 +1598,6 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 
 /// [Organization] A formally or informally recognized grouping of people or
 @freezed
-@Collection(ignore: {'copyWith'})
 class Organization with Resource, _$Organization {
   /// [Organization] A formally or informally recognized grouping of people or
   Organization._();
@@ -1957,7 +1952,6 @@ class OrganizationContact with _$OrganizationContact {
 
 /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
 @freezed
-@Collection(ignore: {'copyWith'})
 class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
   OrganizationAffiliation._();
