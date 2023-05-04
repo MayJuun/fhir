@@ -15,7 +15,10 @@ class Element {
   final FhirId? id;
   final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
-  factory Element.fromJson(Map<String, dynamic> json) =>
+  factory Element.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
       _$ElementFromJson(json);
   Map<String, dynamic> toJson() => _$ElementToJson(this);
 }
