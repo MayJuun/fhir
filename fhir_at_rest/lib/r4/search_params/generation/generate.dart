@@ -6,6 +6,8 @@ import 'sql_row.dart';
 import 'utils/utils.dart';
 
 Future<void> main() async {
+  final expressions = [];
+
   /// Map where we're going to store our resource search parameters
   final paramMap = <String, List<ParameterGenerator>>{};
 
@@ -37,21 +39,30 @@ Future<void> main() async {
 
           /// They should each have an expression
           if (resource.expression == null) {
-            print('This resource has no expression: ${resource.id}');
-            paramMap[resourceString]!
-                .add(ParameterGenerator(resourceString, resource));
-            sqlMap[resourceString]!.add(SqlRow(resourceString, resource));
+            // print('This resource has no expression: ${resource.id}');
+            // paramMap[resourceString]!
+            //     .add(ParameterGenerator(resourceString, resource));
+            // sqlMap[resourceString]!.add(SqlRow(resourceString, resource));
           } else {
+            expressions.add(resource.expression);
+
             /// Add a Parameter entry to that entry in the map (the format is
             /// different, obviously, for the classes we're going to use for
             /// searches in Dart an those that we're going to use in SQL)
-            paramMap[resourceString]!
-                .add(ParameterGenerator(resourceString, resource));
-            sqlMap[resourceString]!.add(SqlRow(resourceString, resource));
+            // paramMap[resourceString]!
+            //     .add(ParameterGenerator(resourceString, resource));
+            // sqlMap[resourceString]!.add(SqlRow(resourceString, resource));
           }
         }
       }
     }
+
+    var expressionsFile = 'const expressions = [';
+    for (final expression in expressions) {
+      expressionsFile += '"$expression",';
+    }
+    expressionsFile += '];';
+    await File('expressions.dart').writeAsString(expressionsFile);
   }
 
   /// Because the entries in the
