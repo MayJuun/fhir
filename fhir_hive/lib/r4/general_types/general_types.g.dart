@@ -16,12 +16,29 @@ class CodeableConceptAdapter extends TypeAdapter<_$_CodeableConcept> {
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return _$_CodeableConcept();
+    return _$_CodeableConcept(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      coding: (fields[2] as List?)?.cast<Coding>(),
+      text: fields[3] as String?,
+      textElement: fields[4] as Element?,
+    );
   }
 
   @override
   void write(BinaryWriter writer, _$_CodeableConcept obj) {
-    writer.writeByte(0);
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.text)
+      ..writeByte(4)
+      ..write(obj.textElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.coding);
   }
 
   @override

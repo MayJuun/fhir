@@ -381,7 +381,7 @@ class Identifier with _$Identifier {
 
 /// [CodeableConcept] A concept that may be defined by a formal reference to
 @freezed
-class CodeableConcept with _$CodeableConcept {
+class CodeableConcept extends HiveObject with _$CodeableConcept {
   /// [CodeableConcept] A concept that may be defined by a formal reference to
   CodeableConcept._();
 
@@ -409,7 +409,7 @@ class CodeableConcept with _$CodeableConcept {
   factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -417,18 +417,18 @@ class CodeableConcept with _$CodeableConcept {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [coding] A reference to a code defined by a terminology system.
-    List<Coding>? coding,
+    @HiveField(2) List<Coding>? coding,
 
     /// [text] A human language representation of the concept as
     /// seen/selected/uttered by the user who entered the data and/or which
     ///  represents the intended meaning of the user.
-    String? text,
+    @HiveField(3) String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text') Element? textElement,
+    @HiveField(4) @JsonKey(name: '_text') Element? textElement,
   }) = _CodeableConcept;
 
   /// Produces a Yaml formatted String version of the object

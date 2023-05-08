@@ -1896,6 +1896,7 @@ CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
 mixin _$CodeableConcept {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension] May be used to represent additional information that is not
@@ -1904,18 +1905,22 @@ mixin _$CodeableConcept {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [coding] A reference to a code defined by a terminology system.
+  @HiveField(2)
   List<Coding>? get coding => throw _privateConstructorUsedError;
 
   /// [text] A human language representation of the concept as
   /// seen/selected/uttered by the user who entered the data and/or which
   ///  represents the intended meaning of the user.
+  @HiveField(3)
   String? get text => throw _privateConstructorUsedError;
 
   /// [textElement] Extensions for text
+  @HiveField(4)
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
@@ -1932,11 +1937,11 @@ abstract class $CodeableConceptCopyWith<$Res> {
       _$CodeableConceptCopyWithImpl<$Res, CodeableConcept>;
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<Coding>? coding,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<Coding>? coding,
+      @HiveField(3) String? text,
+      @HiveField(4) @JsonKey(name: '_text') Element? textElement});
 
   $ElementCopyWith<$Res>? get textElement;
 }
@@ -2006,11 +2011,11 @@ abstract class _$$_CodeableConceptCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<Coding>? coding,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<Coding>? coding,
+      @HiveField(3) String? text,
+      @HiveField(4) @JsonKey(name: '_text') Element? textElement});
 
   @override
   $ElementCopyWith<$Res>? get textElement;
@@ -2063,11 +2068,18 @@ class __$$_CodeableConceptCopyWithImpl<$Res>
 @HiveType(typeId: 0)
 class _$_CodeableConcept extends _CodeableConcept {
   _$_CodeableConcept(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<Coding>? coding,
-      this.text,
-      @JsonKey(name: '_text') this.textElement})
+      {@HiveField(0)
+          this.id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<Coding>? coding,
+      @HiveField(3)
+          this.text,
+      @HiveField(4)
+      @JsonKey(name: '_text')
+          this.textElement})
       : _extension_ = extension_,
         _coding = coding,
         super._();
@@ -2078,6 +2090,7 @@ class _$_CodeableConcept extends _CodeableConcept {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
+  @HiveField(0)
   final String? id;
 
   /// [extension] May be used to represent additional information that is not
@@ -2095,6 +2108,7 @@ class _$_CodeableConcept extends _CodeableConcept {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -2109,6 +2123,7 @@ class _$_CodeableConcept extends _CodeableConcept {
 
   /// [coding] A reference to a code defined by a terminology system.
   @override
+  @HiveField(2)
   List<Coding>? get coding {
     final value = _coding;
     if (value == null) return null;
@@ -2121,10 +2136,12 @@ class _$_CodeableConcept extends _CodeableConcept {
   /// seen/selected/uttered by the user who entered the data and/or which
   ///  represents the intended meaning of the user.
   @override
+  @HiveField(3)
   final String? text;
 
   /// [textElement] Extensions for text
   @override
+  @HiveField(4)
   @JsonKey(name: '_text')
   final Element? textElement;
 
@@ -2173,11 +2190,18 @@ class _$_CodeableConcept extends _CodeableConcept {
 
 abstract class _CodeableConcept extends CodeableConcept {
   factory _CodeableConcept(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<Coding>? coding,
-      final String? text,
-      @JsonKey(name: '_text') final Element? textElement}) = _$_CodeableConcept;
+      {@HiveField(0)
+          final String? id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<Coding>? coding,
+      @HiveField(3)
+          final String? text,
+      @HiveField(4)
+      @JsonKey(name: '_text')
+          final Element? textElement}) = _$_CodeableConcept;
   _CodeableConcept._() : super._();
 
   factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
@@ -2187,6 +2211,7 @@ abstract class _CodeableConcept extends CodeableConcept {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
+  @HiveField(0)
   String? get id;
   @override
 
@@ -2196,21 +2221,25 @@ abstract class _CodeableConcept extends CodeableConcept {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [coding] A reference to a code defined by a terminology system.
+  @HiveField(2)
   List<Coding>? get coding;
   @override
 
   /// [text] A human language representation of the concept as
   /// seen/selected/uttered by the user who entered the data and/or which
   ///  represents the intended meaning of the user.
+  @HiveField(3)
   String? get text;
   @override
 
   /// [textElement] Extensions for text
+  @HiveField(4)
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
