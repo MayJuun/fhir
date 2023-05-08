@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -13,7 +14,7 @@ part 'element.g.dart';
 
 /// [Element] Base definition for all elements in a resource.
 @freezed
-class Element with _$Element {
+class Element extends HiveObject with _$Element {
   /// [Element] Base definition for all elements in a resource.
   Element._();
 
@@ -28,10 +29,11 @@ class Element with _$Element {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
+  @HiveType(typeId: 16)
   factory Element({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -39,7 +41,7 @@ class Element with _$Element {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object

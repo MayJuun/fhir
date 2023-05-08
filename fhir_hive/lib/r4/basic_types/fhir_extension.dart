@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -13,7 +14,7 @@ part 'fhir_extension.g.dart';
 
 /// [extension_] Optional Extension Element - found in all resources.
 @freezed
-class FhirExtension with _$FhirExtension {
+class FhirExtension extends HiveObject with _$FhirExtension {
   /// [FhirExtension] Optional Extension Element - found in all resources.
   FhirExtension._();
 
@@ -252,10 +253,11 @@ class FhirExtension with _$FhirExtension {
   /// [statusElement] Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
+  @HiveType(typeId: 15)
   factory FhirExtension({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -263,291 +265,303 @@ class FhirExtension with _$FhirExtension {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [url] Source of the definition for the extension code - a logical name or
     ///  a URL.
-    FhirUri? url,
+    @HiveField(2) FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url') Element? urlElement,
+    @HiveField(3) @JsonKey(name: '_url') Element? urlElement,
 
     /// [valueBase64Binary] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Base64Binary? valueBase64Binary,
+    @HiveField(4) Base64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    @HiveField(5)
+    @JsonKey(name: '_valueBase64Binary')
+        Element? valueBase64BinaryElement,
 
     /// [valueBoolean] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Boolean? valueBoolean,
+    @HiveField(6) Boolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    @HiveField(7) @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Canonical? valueCanonical,
+    @HiveField(8) Canonical? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
-    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    @HiveField(9)
+    @JsonKey(name: '_valueCanonical')
+        Element? valueCanonicalElement,
 
     /// [valueCode] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Code? valueCode,
+    @HiveField(10) Code? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    @HiveField(11) @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Date? valueDate,
+    @HiveField(12) Date? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    @HiveField(13) @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueDateTime] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    FhirDateTime? valueDateTime,
+    @HiveField(14) FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    @HiveField(15)
+    @JsonKey(name: '_valueDateTime')
+        Element? valueDateTimeElement,
 
     /// [valueDecimal] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Decimal? valueDecimal,
+    @HiveField(16) Decimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    @HiveField(17) @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Id? valueId,
+    @HiveField(18) Id? valueId,
 
     /// [valueIdElement] Extensions for valueId
-    @JsonKey(name: '_valueId') Element? valueIdElement,
+    @HiveField(19) @JsonKey(name: '_valueId') Element? valueIdElement,
 
     /// [valueInstant] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Instant? valueInstant,
+    @HiveField(20) Instant? valueInstant,
 
     /// [valueInstantElement] Extensions for valueInstant
-    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    @HiveField(21) @JsonKey(name: '_valueInstant') Element? valueInstantElement,
 
     /// [valueInteger] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Integer? valueInteger,
+    @HiveField(22) Integer? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    @HiveField(23) @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueMarkdown] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Markdown? valueMarkdown,
+    @HiveField(24) Markdown? valueMarkdown,
 
     /// [valueMarkdownElement] Extensions for valueMarkdown
-    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    @HiveField(25)
+    @JsonKey(name: '_valueMarkdown')
+        Element? valueMarkdownElement,
 
     /// [valueOid] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Oid? valueOid,
+    @HiveField(26) Oid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
-    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    @HiveField(27) @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    PositiveInt? valuePositiveInt,
+    @HiveField(28) PositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
-    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    @HiveField(29)
+    @JsonKey(name: '_valuePositiveInt')
+        Element? valuePositiveIntElement,
 
     /// [valueString] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    String? valueString,
+    @HiveField(30) String? valueString,
 
     /// [valueStringElement] Extensions for valueString
-    @JsonKey(name: '_valueString') Element? valueStringElement,
+    @HiveField(31) @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Time? valueTime,
+    @HiveField(32) Time? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    @HiveField(33) @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    UnsignedInt? valueUnsignedInt,
+    @HiveField(34) UnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
-    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    @HiveField(35)
+    @JsonKey(name: '_valueUnsignedInt')
+        Element? valueUnsignedIntElement,
 
     /// [valueUri] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    FhirUri? valueUri,
+    @HiveField(36) FhirUri? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    @HiveField(37) @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueUrl] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    FhirUrl? valueUrl,
+    @HiveField(38) FhirUrl? valueUrl,
 
     /// [valueUrlElement] Extensions for valueUrl
-    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    @HiveField(39) @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Uuid? valueUuid,
+    @HiveField(40) Uuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
-    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    @HiveField(41) @JsonKey(name: '_valueUuid') Element? valueUuidElement,
 
     /// [valueAddress] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Address? valueAddress,
+    @HiveField(42) Address? valueAddress,
 
     /// [valueAge] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Age? valueAge,
+    @HiveField(43) Age? valueAge,
 
     /// [valueAnnotation] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Annotation? valueAnnotation,
+    @HiveField(44) Annotation? valueAnnotation,
 
     /// [valueAttachment] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Attachment? valueAttachment,
+    @HiveField(45) Attachment? valueAttachment,
 
     /// [valueCodeableConcept] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
-    CodeableConcept? valueCodeableConcept,
+    @HiveField(46) CodeableConcept? valueCodeableConcept,
 
     /// [valueCodeableReference] Value of extension - must be one of a
     /// constrained set of the data types (see [Extensibility](extensibility.html)
     /// for a list).
-    CodeableReference? valueCodeableReference,
+    @HiveField(47) CodeableReference? valueCodeableReference,
 
     /// [valueCoding] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Coding? valueCoding,
+    @HiveField(48) Coding? valueCoding,
 
     /// [valueContactPoint] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    ContactPoint? valueContactPoint,
+    @HiveField(49) ContactPoint? valueContactPoint,
 
     /// [valueCount] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Count? valueCount,
+    @HiveField(50) Count? valueCount,
 
     /// [valueDistance] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Distance? valueDistance,
+    @HiveField(51) Distance? valueDistance,
 
     /// [valueDuration] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    FhirDuration? valueDuration,
+    @HiveField(52) FhirDuration? valueDuration,
 
     /// [valueHumanName] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    HumanName? valueHumanName,
+    @HiveField(53) HumanName? valueHumanName,
 
     /// [valueIdentifier] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Identifier? valueIdentifier,
+    @HiveField(54) Identifier? valueIdentifier,
 
     /// [valueMoney] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Money? valueMoney,
+    @HiveField(55) Money? valueMoney,
 
     /// [valuePeriod] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Period? valuePeriod,
+    @HiveField(56) Period? valuePeriod,
 
     /// [valueQuantity] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-    Quantity? valueQuantity,
+    @HiveField(57) Quantity? valueQuantity,
 
     /// [valueRange] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Range? valueRange,
+    @HiveField(58) Range? valueRange,
 
     /// [valueRatio] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Ratio? valueRatio,
-    RatioRange? valueRatioRange,
+    @HiveField(59) Ratio? valueRatio,
+    @HiveField(60) RatioRange? valueRatioRange,
 
     /// [valueReference] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
 
-    Reference? valueReference,
+    @HiveField(61) Reference? valueReference,
 
     /// [valueSampledData] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
 
-    SampledData? valueSampledData,
+    @HiveField(62) SampledData? valueSampledData,
 
     /// [valueSignature] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
 
-    Signature? valueSignature,
+    @HiveField(63) Signature? valueSignature,
 
     /// [valueTiming] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
 
-    Timing? valueTiming,
+    @HiveField(64) Timing? valueTiming,
 
     /// [valueContactDetail] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
 
-    ContactDetail? valueContactDetail,
+    @HiveField(65) ContactDetail? valueContactDetail,
 
     /// [valueContributor] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
 
-    Contributor? valueContributor,
+    @HiveField(66) Contributor? valueContributor,
 
     /// [valueDataRequirement] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
 
-    DataRequirement? valueDataRequirement,
+    @HiveField(67) DataRequirement? valueDataRequirement,
 
     /// [valueExpression] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
 
-    Expression? valueExpression,
+    @HiveField(68) Expression? valueExpression,
 
     /// [valueParameterDefinition] Value of extension - must be one of a
     /// constrained set of the data types (see [Extensibility](extensibility.html)
     ///  for a list).
 
-    ParameterDefinition? valueParameterDefinition,
+    @HiveField(69) ParameterDefinition? valueParameterDefinition,
 
     /// [valueRelatedArtifact] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
 
-    RelatedArtifact? valueRelatedArtifact,
+    @HiveField(70) RelatedArtifact? valueRelatedArtifact,
 
     /// [valueTriggerDefinition] Value of extension - must be one of a
     /// constrained set of the data types (see [Extensibility](extensibility.html)
     ///  for a list).
 
-    TriggerDefinition? valueTriggerDefinition,
+    @HiveField(71) TriggerDefinition? valueTriggerDefinition,
 
     /// [valueUsageContext] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).`
-    UsageContext? valueUsageContext,
+    @HiveField(72) UsageContext? valueUsageContext,
 
     /// [valueDosage] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
 
-    Dosage? valueDosage,
+    @HiveField(73) Dosage? valueDosage,
   }) = _FhirExtension;
 
   /// Produces a Yaml formatted String version of the object

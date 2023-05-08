@@ -3,6 +3,258 @@
 part of 'draft_types.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class PopulationAdapter extends TypeAdapter<_$_Population> {
+  @override
+  final int typeId = 11;
+
+  @override
+  _$_Population read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Population(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      ageRange: fields[3] as Range?,
+      ageCodeableConcept: fields[4] as CodeableConcept?,
+      gender: fields[5] as CodeableConcept?,
+      race: fields[6] as CodeableConcept?,
+      physiologicalCondition: fields[7] as CodeableConcept?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Population obj) {
+    writer
+      ..writeByte(8)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.ageRange)
+      ..writeByte(4)
+      ..write(obj.ageCodeableConcept)
+      ..writeByte(5)
+      ..write(obj.gender)
+      ..writeByte(6)
+      ..write(obj.race)
+      ..writeByte(7)
+      ..write(obj.physiologicalCondition)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PopulationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ProductShelfLifeAdapter extends TypeAdapter<_$_ProductShelfLife> {
+  @override
+  final int typeId = 12;
+
+  @override
+  _$_ProductShelfLife read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ProductShelfLife(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      identifier: fields[3] as Identifier?,
+      type: fields[4] as CodeableConcept?,
+      period: fields[5] as Quantity?,
+      specialPrecautionsForStorage:
+          (fields[6] as List?)?.cast<CodeableConcept>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ProductShelfLife obj) {
+    writer
+      ..writeByte(7)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.identifier)
+      ..writeByte(4)
+      ..write(obj.type)
+      ..writeByte(5)
+      ..write(obj.period)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension)
+      ..writeByte(6)
+      ..write(obj.specialPrecautionsForStorage);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ProductShelfLifeAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ProdCharacteristicAdapter extends TypeAdapter<_$_ProdCharacteristic> {
+  @override
+  final int typeId = 13;
+
+  @override
+  _$_ProdCharacteristic read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ProdCharacteristic(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      height: fields[3] as Quantity?,
+      width: fields[4] as Quantity?,
+      depth: fields[5] as Quantity?,
+      weight: fields[6] as Quantity?,
+      nominalVolume: fields[7] as Quantity?,
+      externalDiameter: fields[8] as Quantity?,
+      shape: fields[9] as String?,
+      shapeElement: fields[10] as Element?,
+      color: (fields[11] as List?)?.cast<String>(),
+      colorElement: (fields[12] as List?)?.cast<Element?>(),
+      imprint: (fields[13] as List?)?.cast<String>(),
+      imprintElement: (fields[14] as List?)?.cast<Element?>(),
+      image: (fields[15] as List?)?.cast<Attachment>(),
+      scoring: fields[16] as CodeableConcept?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ProdCharacteristic obj) {
+    writer
+      ..writeByte(17)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.height)
+      ..writeByte(4)
+      ..write(obj.width)
+      ..writeByte(5)
+      ..write(obj.depth)
+      ..writeByte(6)
+      ..write(obj.weight)
+      ..writeByte(7)
+      ..write(obj.nominalVolume)
+      ..writeByte(8)
+      ..write(obj.externalDiameter)
+      ..writeByte(9)
+      ..write(obj.shape)
+      ..writeByte(10)
+      ..write(obj.shapeElement)
+      ..writeByte(16)
+      ..write(obj.scoring)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.color)
+      ..writeByte(12)
+      ..write(obj.colorElement)
+      ..writeByte(13)
+      ..write(obj.imprint)
+      ..writeByte(14)
+      ..write(obj.imprintElement)
+      ..writeByte(15)
+      ..write(obj.image);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ProdCharacteristicAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MarketingStatusAdapter extends TypeAdapter<_$_MarketingStatus> {
+  @override
+  final int typeId = 14;
+
+  @override
+  _$_MarketingStatus read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MarketingStatus(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      country: fields[3] as CodeableConcept?,
+      jurisdiction: fields[4] as CodeableConcept?,
+      status: fields[5] as CodeableConcept,
+      dateRange: fields[6] as Period?,
+      restoreDate: fields[7] as FhirDateTime?,
+      restoreDateElement: fields[8] as Element?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MarketingStatus obj) {
+    writer
+      ..writeByte(9)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.country)
+      ..writeByte(4)
+      ..write(obj.jurisdiction)
+      ..writeByte(5)
+      ..write(obj.status)
+      ..writeByte(6)
+      ..write(obj.dateRange)
+      ..writeByte(7)
+      ..write(obj.restoreDate)
+      ..writeByte(8)
+      ..write(obj.restoreDateElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MarketingStatusAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

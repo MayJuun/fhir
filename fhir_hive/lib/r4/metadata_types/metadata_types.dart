@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -14,7 +15,7 @@ part 'metadata_types.g.dart';
 
 /// [ContactDetail] Specifies contact information for a person or
 @freezed
-class ContactDetail with _$ContactDetail {
+class ContactDetail extends HiveObject with _$ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or
   ContactDetail._();
 
@@ -37,10 +38,11 @@ class ContactDetail with _$ContactDetail {
   ///
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
+  @HiveType(typeId: 0)
   factory ContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -48,17 +50,17 @@ class ContactDetail with _$ContactDetail {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [name] The name of an individual to contact.
-    String? name,
+    @HiveField(2) String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name') Element? nameElement,
+    @HiveField(3) @JsonKey(name: '_name') Element? nameElement,
 
     /// [telecom] The contact details for the individual (if a name was provided)
     ///  or the organization.
-    List<ContactPoint>? telecom,
+    @HiveField(4) List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -94,7 +96,7 @@ class ContactDetail with _$ContactDetail {
 
 /// [Contributor] A contributor to the content of a knowledge asset,
 @freezed
-class Contributor with _$Contributor {
+class Contributor extends HiveObject with _$Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset,
   Contributor._();
 
@@ -122,10 +124,11 @@ class Contributor with _$Contributor {
   ///
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
+  @HiveType(typeId: 1)
   factory Contributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -133,24 +136,26 @@ class Contributor with _$Contributor {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [type] The type of contributor.
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+    @HiveField(2)
+    @JsonKey(unknownEnumValue: ContributorType.unknown)
+        ContributorType? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type') Element? typeElement,
+    @HiveField(3) @JsonKey(name: '_type') Element? typeElement,
 
     /// [name] The name of the individual or organization responsible for the
     ///  contribution.
-    String? name,
+    @HiveField(4) String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name') Element? nameElement,
+    @HiveField(5) @JsonKey(name: '_name') Element? nameElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the contributor.
-    List<ContactDetail>? contact,
+    @HiveField(6) List<ContactDetail>? contact,
   }) = _Contributor;
 
   /// Produces a Yaml formatted String version of the object
@@ -186,7 +191,7 @@ class Contributor with _$Contributor {
 
 /// [DataRequirement] Describes a required data item for evaluation in terms
 @freezed
-class DataRequirement with _$DataRequirement {
+class DataRequirement extends HiveObject with _$DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms
   DataRequirement._();
 
@@ -246,10 +251,12 @@ class DataRequirement with _$DataRequirement {
   /// [limitElement] Extensions for limit
   ///
   /// [sort] Specifies the order of the results to be returned.
+  @HiveType(typeId: 2)
   factory DataRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -257,27 +264,35 @@ class DataRequirement with _$DataRequirement {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [type] The type of the required data, specified as the type name of a
     /// resource. For profiles, this value is set to the type of the base resource
     ///  of the profile.
-    Code? type,
+    @HiveField(2)
+        Code? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type') Element? typeElement,
+    @HiveField(3)
+    @JsonKey(name: '_type')
+        Element? typeElement,
 
     /// [profile] The profile of the required data, specified as the uri of the
     ///  profile definition.
-    List<Canonical>? profile,
+    @HiveField(4)
+        List<Canonical>? profile,
 
     /// [subjectCodeableConcept] The intended subjects of the data requirement.
     ///  If this element is not provided, a Patient subject is assumed.
-    CodeableConcept? subjectCodeableConcept,
+    @HiveField(5)
+        CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] The intended subjects of the data requirement. If this
     ///  element is not provided, a Patient subject is assumed.
-    Reference? subjectReference,
+    @HiveField(6)
+        Reference? subjectReference,
 
     /// [mustSupport] Indicates that specific elements of the type are referenced
     /// by the knowledge module and must be supported by the consumer in order to
@@ -288,32 +303,42 @@ class DataRequirement with _$DataRequirement {
     /// the DataRequirement. The path SHALL consist only of identifiers, constant
     /// indexers, and .resolve() (see the [Simple FHIRPath
     ///  Profile](fhirpath.html#simple) for full details).
-    List<String>? mustSupport,
+    @HiveField(7)
+        List<String>? mustSupport,
 
     /// [mustSupportElement] Extensions for mustSupport
-    @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+    @HiveField(8)
+    @JsonKey(name: '_mustSupport')
+        List<Element?>? mustSupportElement,
+    @HiveField(9)
 
     /// [codeFilter] Code filters specify additional constraints on the data,
     /// specifying the value set of interest for a particular element of the data.
     /// Each code filter defines an additional constraint on the data, i.e. code
     ///  filters are AND'ed, not OR'ed.
-    List<DataRequirementCodeFilter>? codeFilter,
+    @HiveField(10)
+        List<DataRequirementCodeFilter>? codeFilter,
 
     /// [dateFilter] Date filters specify additional constraints on the data in
     /// terms of the applicable date range for specific elements. Each date filter
     /// specifies an additional constraint on the data, i.e. date filters are
     ///  AND'ed, not OR'ed.
-    List<DataRequirementDateFilter>? dateFilter,
+    @HiveField(11)
+        List<DataRequirementDateFilter>? dateFilter,
 
     /// [limit] Specifies a maximum number of results that are required (uses the
     ///  _count search parameter).
-    PositiveInt? limit,
+    @HiveField(12)
+        PositiveInt? limit,
 
     /// [limitElement] Extensions for limit
-    @JsonKey(name: '_limit') Element? limitElement,
+    @HiveField(13)
+    @JsonKey(name: '_limit')
+        Element? limitElement,
 
     /// [sort] Specifies the order of the results to be returned.
-    List<DataRequirementSort>? sort,
+    @HiveField(14)
+        List<DataRequirementSort>? sort,
   }) = _DataRequirement;
 
   /// Produces a Yaml formatted String version of the object
@@ -349,7 +374,8 @@ class DataRequirement with _$DataRequirement {
 
 /// [DataRequirementCodeFilter] Describes a required data item for
 @freezed
-class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
+class DataRequirementCodeFilter extends HiveObject
+    with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for
   DataRequirementCodeFilter._();
 
@@ -408,10 +434,12 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
+  @HiveType(typeId: 3)
   factory DataRequirementCodeFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -419,7 +447,9 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -434,9 +464,12 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [path] The code-valued attribute of the filter. The specified path SHALL
+    @HiveField(3)
+
     /// be a FHIRPath resolveable on the specified type of the DataRequirement,
     /// and SHALL consist only of identifiers, constant indexers, and .resolve().
     /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -444,31 +477,39 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
     /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
     /// Note that the index must be an integer constant. The path must resolve to
     ///  an element of type code, Coding, or CodeableConcept.
-    String? path,
+    @HiveField(4)
+        String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path') Element? pathElement,
+    @HiveField(5)
+    @JsonKey(name: '_path')
+        Element? pathElement,
 
     /// [searchParam] A token parameter that refers to a search parameter defined
     /// on the specified type of the DataRequirement, and which searches on
     ///  elements of type code, Coding, or CodeableConcept.
-    String? searchParam,
+    @HiveField(6)
+        String? searchParam,
 
     /// [searchParamElement] Extensions for searchParam
-    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    @HiveField(7)
+    @JsonKey(name: '_searchParam')
+        Element? searchParamElement,
 
     /// [valueSet] The valueset for the code filter. The valueSet and code
     /// elements are additive. If valueSet is specified, the filter will return
     /// only those data items for which the value of the code-valued element
     ///  specified in the path is a member of the specified valueset.
-    Canonical? valueSet,
+    @HiveField(8)
+        Canonical? valueSet,
 
     /// [code] The codes for the code filter. If values are given, the filter
     /// will return only those data items for which the code-valued attribute
     /// specified by the path has a value that is one of the specified codes. If
     /// codes are specified in addition to a value set, the filter returns items
     ///  matching a code in the value set or one of the specified codes.
-    List<Coding>? code,
+    @HiveField(9)
+        List<Coding>? code,
   }) = _DataRequirementCodeFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -504,7 +545,8 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 
 /// [DataRequirementDateFilter] Describes a required data item for
 @freezed
-class DataRequirementDateFilter with _$DataRequirementDateFilter {
+class DataRequirementDateFilter extends HiveObject
+    with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for
   DataRequirementDateFilter._();
 
@@ -575,10 +617,12 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
+  @HiveType(typeId: 4)
   factory DataRequirementDateFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -586,7 +630,9 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -601,9 +647,12 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [path] The date-valued attribute of the filter. The specified path SHALL
+    @HiveField(3)
+
     /// be a FHIRPath resolveable on the specified type of the DataRequirement,
     /// and SHALL consist only of identifiers, constant indexers, and .resolve().
     /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
@@ -611,18 +660,24 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
     /// Note that the index must be an integer constant. The path must resolve to
     ///  an element of type date, dateTime, Period, Schedule, or Timing.
-    String? path,
+    @HiveField(4)
+        String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path') Element? pathElement,
+    @HiveField(5)
+    @JsonKey(name: '_path')
+        Element? pathElement,
 
     /// [searchParam] A date parameter that refers to a search parameter defined
     /// on the specified type of the DataRequirement, and which searches on
     ///  elements of type date, dateTime, Period, Schedule, or Timing.
-    String? searchParam,
+    @HiveField(6)
+        String? searchParam,
 
     /// [searchParamElement] Extensions for searchParam
-    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    @HiveField(7)
+    @JsonKey(name: '_searchParam')
+        Element? searchParamElement,
 
     /// [valueDateTime] The value of the filter. If period is specified, the
     /// filter will return only those data items that fall within the bounds
@@ -630,10 +685,13 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// is specified, the filter will return only those data items that are equal
     /// to the specified dateTime. If a Duration is specified, the filter will
     ///  return only those data items that fall within Duration before now.
-    FhirDateTime? valueDateTime,
+    @HiveField(8)
+        FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    @HiveField(9)
+    @JsonKey(name: '_valueDateTime')
+        Element? valueDateTimeElement,
 
     /// [valuePeriod] The value of the filter. If period is specified, the filter
     /// will return only those data items that fall within the bounds determined
@@ -641,7 +699,8 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// specified, the filter will return only those data items that are equal to
     /// the specified dateTime. If a Duration is specified, the filter will return
     ///  only those data items that fall within Duration before now.
-    Period? valuePeriod,
+    @HiveField(10)
+        Period? valuePeriod,
 
     /// [valueDuration] The value of the filter. If period is specified, the
     /// filter will return only those data items that fall within the bounds
@@ -649,7 +708,8 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
     /// is specified, the filter will return only those data items that are equal
     /// to the specified dateTime. If a Duration is specified, the filter will
     ///  return only those data items that fall within Duration before now.
-    FhirDuration? valueDuration,
+    @HiveField(11)
+        FhirDuration? valueDuration,
   }) = _DataRequirementDateFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -685,7 +745,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 
 /// [DataRequirementSort] Describes a required data item for evaluation in
 @freezed
-class DataRequirementSort with _$DataRequirementSort {
+class DataRequirementSort extends HiveObject with _$DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
   DataRequirementSort._();
 
@@ -728,10 +788,12 @@ class DataRequirementSort with _$DataRequirementSort {
   /// [direction] The direction of the sort, ascending or descending.
   ///
   /// [directionElement] Extensions for direction
+  @HiveType(typeId: 5)
   factory DataRequirementSort({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -740,6 +802,7 @@ class DataRequirementSort with _$DataRequirementSort {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -755,25 +818,30 @@ class DataRequirementSort with _$DataRequirementSort {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [path] The attribute of the sort. The specified path must be resolvable
     /// from the type of the required data. The path is allowed to contain
     /// qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to
     /// traverse multiple-cardinality sub-elements. Note that the index must be an
     ///  integer constant.
-    String? path,
+    @HiveField(3)
+        String? path,
 
     /// [pathElement] Extensions for path
     @JsonKey(name: '_path')
+    @HiveField(4)
         Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
 
-        /// [direction] The direction of the sort, ascending or descending.
+    /// [direction] The direction of the sort, ascending or descending.
+    @HiveField(5)
         DataRequirementSortDirection? direction,
 
     /// [directionElement] Extensions for direction
     @JsonKey(name: '_direction')
+    @HiveField(6)
         Element? directionElement,
   }) = _DataRequirementSort;
 
@@ -810,7 +878,7 @@ class DataRequirementSort with _$DataRequirementSort {
 
 /// [ParameterDefinition] The parameters to the module. This collection
 @freezed
-class ParameterDefinition with _$ParameterDefinition {
+class ParameterDefinition extends HiveObject with _$ParameterDefinition {
   /// [ParameterDefinition] The parameters to the module. This collection
   ParameterDefinition._();
 
@@ -859,10 +927,11 @@ class ParameterDefinition with _$ParameterDefinition {
   ///
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
+  @HiveType(typeId: 6)
   factory ParameterDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -870,51 +939,53 @@ class ParameterDefinition with _$ParameterDefinition {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [name] The name of the parameter used to allow access to the value of the
     ///  parameter in evaluation contexts.
-    Code? name,
+    @HiveField(2) Code? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name') Element? nameElement,
+    @HiveField(3) @JsonKey(name: '_name') Element? nameElement,
 
     /// [use] Whether the parameter is input or output for the module.
-    Code? use,
+    @HiveField(4) Code? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use') Element? useElement,
+    @HiveField(5) @JsonKey(name: '_use') Element? useElement,
 
     /// [min] The minimum number of times this parameter SHALL appear in the
     ///  request or response.
-    Integer? min,
+    @HiveField(6) Integer? min,
 
     /// [minElement] Extensions for min
-    @JsonKey(name: '_min') Element? minElement,
+    @HiveField(7) @JsonKey(name: '_min') Element? minElement,
 
     /// [max] The maximum number of times this element is permitted to appear in
     ///  the request or response.
-    String? max,
+    @HiveField(8) String? max,
 
     /// [maxElement] Extensions for max
-    @JsonKey(name: '_max') Element? maxElement,
+    @HiveField(9) @JsonKey(name: '_max') Element? maxElement,
 
     /// [documentation] A brief discussion of what the parameter is for and how
     ///  it is used by the module.
-    String? documentation,
+    @HiveField(10) String? documentation,
 
     /// [documentationElement] Extensions for documentation
-    @JsonKey(name: '_documentation') Element? documentationElement,
+    @HiveField(11)
+    @JsonKey(name: '_documentation')
+        Element? documentationElement,
 
     /// [type] The type of the parameter.
-    Code? type,
+    @HiveField(12) Code? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type') Element? typeElement,
+    @HiveField(13) @JsonKey(name: '_type') Element? typeElement,
 
     /// [profile] If specified, this indicates a profile that the input data must
     ///  conform to, or that the output data will conform to.
-    Canonical? profile,
+    @HiveField(14) Canonical? profile,
   }) = _ParameterDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -950,7 +1021,7 @@ class ParameterDefinition with _$ParameterDefinition {
 
 /// [RelatedArtifact] Related artifacts such as additional documentation,
 @freezed
-class RelatedArtifact with _$RelatedArtifact {
+class RelatedArtifact extends HiveObject with _$RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   RelatedArtifact._();
 
@@ -996,10 +1067,12 @@ class RelatedArtifact with _$RelatedArtifact {
   ///
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
+  @HiveType(typeId: 7)
   factory RelatedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1008,55 +1081,69 @@ class RelatedArtifact with _$RelatedArtifact {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
 
-        /// [type] The type of relationship to the related artifact.
+    /// [type] The type of relationship to the related artifact.
+    @HiveField(2)
         RelatedArtifactType? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(3)
         Element? typeElement,
 
     /// [label] A short label that can be used to reference the citation from
     ///  elsewhere in the containing artifact, such as a footnote index.
-    String? label,
+    @HiveField(4)
+        String? label,
 
     /// [labelElement] Extensions for label
     @JsonKey(name: '_label')
+    @HiveField(5)
         Element? labelElement,
 
     /// [display] A brief description of the document or knowledge resource being
     ///  referenced, suitable for display to a consumer.
-    String? display,
+    @HiveField(6)
+        String? display,
 
     /// [displayElement] Extensions for display
     @JsonKey(name: '_display')
+    @HiveField(7)
         Element? displayElement,
 
     /// [citation] A bibliographic citation for the related artifact. This text
     ///  SHOULD be formatted according to an accepted citation format.
-    Markdown? citation,
+    @HiveField(8)
+        Markdown? citation,
 
     /// [citationElement] Extensions for citation
     @JsonKey(name: '_citation')
+    @HiveField(9)
         Element? citationElement,
 
     /// [url] A url for the artifact that can be followed to access the actual
     ///  content.
-    FhirUrl? url,
+    @HiveField(10)
+        FhirUrl? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
+    @HiveField(11)
         Element? urlElement,
 
     /// [document] The document being referenced, represented as an attachment.
     ///  This is exclusive with the resource element.
-    Attachment? document,
+    @HiveField(12)
+        Attachment? document,
+    @HiveField(13)
 
     /// [resource] The related resource, such as a library, value set, profile,
     ///  or other knowledge resource.
-    Canonical? resource,
+    @HiveField(14)
+        Canonical? resource,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object
@@ -1092,7 +1179,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
 /// [TriggerDefinition] A description of a triggering event. Triggering
 @freezed
-class TriggerDefinition with _$TriggerDefinition {
+class TriggerDefinition extends HiveObject with _$TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering
   TriggerDefinition._();
 
@@ -1140,10 +1227,12 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
+  @HiveType(typeId: 8)
   factory TriggerDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1152,55 +1241,68 @@ class TriggerDefinition with _$TriggerDefinition {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
 
-        /// [type] The type of triggering event.
+    /// [type] The type of triggering event.
+    @HiveField(2)
         TriggerDefinitionType? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(3)
         Element? typeElement,
 
     /// [name] A formal name for the event. This may be an absolute URI that
     /// identifies the event formally (e.g. from a trigger registry), or a simple
     ///  relative URI that identifies the event in a local context.
-    String? name,
+    @HiveField(4)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(5)
         Element? nameElement,
 
     /// [timingTiming] The timing of the event (if this is a periodic trigger).
-    Timing? timingTiming,
+    @HiveField(6)
+        Timing? timingTiming,
 
     /// [timingReference] The timing of the event (if this is a periodic
     ///  trigger).
-    Reference? timingReference,
+    @HiveField(7)
+        Reference? timingReference,
 
     /// [timingDate] The timing of the event (if this is a periodic trigger).
-    Date? timingDate,
+    @HiveField(8)
+        Date? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
     @JsonKey(name: '_timingDate')
+    @HiveField(9)
         Element? timingDateElement,
 
     /// [timingDateTime] The timing of the event (if this is a periodic trigger).
-    FhirDateTime? timingDateTime,
+    @HiveField(10)
+        FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
     @JsonKey(name: '_timingDateTime')
+    @HiveField(11)
         Element? timingDateTimeElement,
 
     /// [data] The triggering data of the event (if this is a data trigger). If
     /// more than one data is requirement is specified, then all the data
     ///  requirements must be true.
-    List<DataRequirement>? data,
+    @HiveField(12)
+        List<DataRequirement>? data,
 
     /// [condition] A boolean-valued expression that is evaluated in the context
     /// of the container of the trigger definition and returns whether or not the
     ///  trigger fires.
-    Expression? condition,
+    @HiveField(13)
+        Expression? condition,
   }) = _TriggerDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1236,7 +1338,7 @@ class TriggerDefinition with _$TriggerDefinition {
 
 /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
 @freezed
-class UsageContext with _$UsageContext {
+class UsageContext extends HiveObject with _$UsageContext {
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   UsageContext._();
 
@@ -1269,10 +1371,11 @@ class UsageContext with _$UsageContext {
   ///
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
+  @HiveType(typeId: 9)
   factory UsageContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1280,27 +1383,27 @@ class UsageContext with _$UsageContext {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [code] A code that identifies the type of context being specified by this
     ///  usage context.
-    required Coding code,
+    @HiveField(2) required Coding code,
 
     /// [valueCodeableConcept] A value that defines the context specified in this
     ///  context of use. The interpretation of the value is defined by the code.
-    CodeableConcept? valueCodeableConcept,
+    @HiveField(3) CodeableConcept? valueCodeableConcept,
 
     /// [valueQuantity] A value that defines the context specified in this
     ///  context of use. The interpretation of the value is defined by the code.
-    Quantity? valueQuantity,
+    @HiveField(4) Quantity? valueQuantity,
 
     /// [valueRange] A value that defines the context specified in this context
     ///  of use. The interpretation of the value is defined by the code.
-    Range? valueRange,
+    @HiveField(5) Range? valueRange,
 
     /// [valueReference] A value that defines the context specified in this
     ///  context of use. The interpretation of the value is defined by the code.
-    Reference? valueReference,
+    @HiveField(6) Reference? valueReference,
   }) = _UsageContext;
 
   /// Produces a Yaml formatted String version of the object
@@ -1336,7 +1439,7 @@ class UsageContext with _$UsageContext {
 
 /// [Expression] A expression that is evaluated in a specified context and
 @freezed
-class Expression with _$Expression {
+class Expression extends HiveObject with _$Expression {
   /// [Expression] A expression that is evaluated in a specified context and
   Expression._();
 
@@ -1377,10 +1480,12 @@ class Expression with _$Expression {
   /// [reference] A URI that defines where the expression is found.
   ///
   /// [referenceElement] Extensions for reference
+  @HiveType(typeId: 10)
   factory Expression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1389,45 +1494,56 @@ class Expression with _$Expression {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [description] A brief, natural language description of the condition that
     ///  effectively communicates the intended semantics.
-    String? description,
+    @HiveField(2)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(3)
         Element? descriptionElement,
 
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
-    Id? name,
+    @HiveField(4)
+        Id? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(5)
         Element? nameElement,
     @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
 
-        /// [language] The media type of the language for the expression.
+    /// [language] The media type of the language for the expression.
+    @HiveField(6)
         ExpressionLanguage? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(7)
         Element? languageElement,
 
     /// [expression] An expression in the specified language that returns a
     ///  value.
-    String? expression,
+    @HiveField(8)
+        String? expression,
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression')
+    @HiveField(9)
         Element? expressionElement,
 
     /// [reference] A URI that defines where the expression is found.
-    FhirUri? reference,
+    @HiveField(10)
+        FhirUri? reference,
 
     /// [referenceElement] Extensions for reference
     @JsonKey(name: '_reference')
+    @HiveField(11)
         Element? referenceElement,
   }) = _Expression;
 

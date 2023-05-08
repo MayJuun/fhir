@@ -15,7 +15,7 @@ part 'general_types.g.dart';
 
 /// [Annotation] A  text note which also  contains information about who made
 @freezed
-class Annotation with _$Annotation {
+class Annotation extends HiveObject with _$Annotation {
   /// [Annotation] A  text note which also  contains information about who made
   Annotation._();
 
@@ -45,10 +45,11 @@ class Annotation with _$Annotation {
   /// [text] The text of the annotation in markdown format.
   ///
   /// [textElement] Extensions for text
+  @HiveType(typeId: 17)
   factory Annotation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -56,28 +57,28 @@ class Annotation with _$Annotation {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [authorReference] The individual responsible for making the annotation.
-    Reference? authorReference,
+    @HiveField(2) Reference? authorReference,
 
     /// [authorString] The individual responsible for making the annotation.
-    String? authorString,
+    @HiveField(3) String? authorString,
 
     /// [authorStringElement] Extensions for authorString
-    @JsonKey(name: '_authorString') Element? authorStringElement,
+    @HiveField(4) @JsonKey(name: '_authorString') Element? authorStringElement,
 
     /// [time] Indicates when this particular annotation was made.
-    FhirDateTime? time,
+    @HiveField(5) FhirDateTime? time,
 
     /// [timeElement] Extensions for time
-    @JsonKey(name: '_time') Element? timeElement,
+    @HiveField(6) @JsonKey(name: '_time') Element? timeElement,
 
     /// [text] The text of the annotation in markdown format.
-    Markdown? text,
+    @HiveField(7) Markdown? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text') Element? textElement,
+    @HiveField(8) @JsonKey(name: '_text') Element? textElement,
   }) = _Annotation;
 
   /// Produces a Yaml formatted String version of the object
@@ -113,7 +114,7 @@ class Annotation with _$Annotation {
 
 /// [Attachment] For referring to data content defined in other formats.
 @freezed
-class Attachment with _$Attachment {
+class Attachment extends HiveObject with _$Attachment {
   /// [Attachment] For referring to data content defined in other formats.
   Attachment._();
 
@@ -166,10 +167,11 @@ class Attachment with _$Attachment {
   /// [creation] The date that the attachment was first created.
   ///
   /// [creationElement] Extensions for creation
+  @HiveType(typeId: 18)
   factory Attachment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -177,61 +179,61 @@ class Attachment with _$Attachment {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [contentType] Identifies the type of the data in the attachment and
     /// allows a method to be chosen to interpret or render the data. Includes
     ///  mime type parameters such as charset where appropriate.
-    Code? contentType,
+    @HiveField(2) Code? contentType,
 
     /// [contentTypeElement] Extensions for contentType
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
+    @HiveField(3) @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [language] The human language of the content. The value can be any valid
     ///  value according to BCP 47.
-    Code? language,
+    @HiveField(4) Code? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language') Element? languageElement,
+    @HiveField(5) @JsonKey(name: '_language') Element? languageElement,
 
     /// [data] The actual data of the attachment - a sequence of bytes, base64
     ///  encoded.
-    Base64Binary? data,
+    @HiveField(6) Base64Binary? data,
 
     /// [dataElement] Extensions for data
-    @JsonKey(name: '_data') Element? dataElement,
+    @HiveField(7) @JsonKey(name: '_data') Element? dataElement,
 
     /// [url] A location where the data can be accessed.
-    FhirUrl? url,
+    @HiveField(8) FhirUrl? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url') Element? urlElement,
+    @HiveField(9) @JsonKey(name: '_url') Element? urlElement,
 
     /// [size] The number of bytes of data that make up this attachment (before
     ///  base64 encoding, if that is done).
-    UnsignedInt? size,
+    @HiveField(10) UnsignedInt? size,
 
     /// [sizeElement] Extensions for size
-    @JsonKey(name: '_size') Element? sizeElement,
+    @HiveField(11) @JsonKey(name: '_size') Element? sizeElement,
 
     /// [hash] The calculated hash of the data using SHA-1. Represented using
     ///  base64.
-    Base64Binary? hash,
+    @HiveField(12) Base64Binary? hash,
 
     /// [hashElement] Extensions for hash
-    @JsonKey(name: '_hash') Element? hashElement,
+    @HiveField(13) @JsonKey(name: '_hash') Element? hashElement,
 
     /// [title] A label or set of text to display in place of the data.
-    String? title,
+    @HiveField(14) String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title') Element? titleElement,
+    @HiveField(15) @JsonKey(name: '_title') Element? titleElement,
 
     /// [creation] The date that the attachment was first created.
-    FhirDateTime? creation,
+    @HiveField(16) FhirDateTime? creation,
 
     /// [creationElement] Extensions for creation
-    @JsonKey(name: '_creation') Element? creationElement,
+    @HiveField(17) @JsonKey(name: '_creation') Element? creationElement,
   }) = _Attachment;
 
   /// Produces a Yaml formatted String version of the object
@@ -267,7 +269,7 @@ class Attachment with _$Attachment {
 
 /// [Identifier] An identifier - identifies some entity uniquely and
 @freezed
-class Identifier with _$Identifier {
+class Identifier extends HiveObject with _$Identifier {
   /// [Identifier] An identifier - identifies some entity uniquely and
   Identifier._();
 
@@ -304,10 +306,11 @@ class Identifier with _$Identifier {
   /// [period] Time period during which identifier is/was valid for use.
   ///
   /// [assigner] Organization that issued/manages the identifier.
+  @HiveType(typeId: 19)
   factory Identifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -315,37 +318,39 @@ class Identifier with _$Identifier {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [use] The purpose of this identifier.
-    @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
+    @HiveField(2)
+    @JsonKey(unknownEnumValue: IdentifierUse.unknown)
+        IdentifierUse? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use') Element? useElement,
+    @HiveField(3) @JsonKey(name: '_use') Element? useElement,
 
     /// [type] A coded type for the identifier that can be used to determine
     ///  which identifier to use for a specific purpose.
-    CodeableConcept? type,
+    @HiveField(4) CodeableConcept? type,
 
     /// [system] Establishes the namespace for the value - that is, a URL that
     ///  describes a set values that are unique.
-    FhirUri? system,
+    @HiveField(5) FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system') Element? systemElement,
+    @HiveField(6) @JsonKey(name: '_system') Element? systemElement,
 
     /// [value] The portion of the identifier typically relevant to the user and
     ///  which is unique within the context of the system.
-    String? value,
+    @HiveField(7) String? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value') Element? valueElement,
+    @HiveField(8) @JsonKey(name: '_value') Element? valueElement,
 
     /// [period] Time period during which identifier is/was valid for use.
-    Period? period,
+    @HiveField(9) Period? period,
 
     /// [assigner] Organization that issued/manages the identifier.
-    Reference? assigner,
+    @HiveField(10) Reference? assigner,
   }) = _Identifier;
 
   /// Produces a Yaml formatted String version of the object
@@ -406,10 +411,11 @@ class CodeableConcept extends HiveObject with _$CodeableConcept {
   ///
   /// [textElement] Extensions for text
   @HiveType(typeId: 0)
+  @HiveType(typeId: 20)
   factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    @HiveField(0) @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -417,18 +423,21 @@ class CodeableConcept extends HiveObject with _$CodeableConcept {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [coding] A reference to a code defined by a terminology system.
-    @HiveField(2) List<Coding>? coding,
+    @HiveField(2) @HiveField(2) List<Coding>? coding,
 
     /// [text] A human language representation of the concept as
     /// seen/selected/uttered by the user who entered the data and/or which
     ///  represents the intended meaning of the user.
-    @HiveField(3) String? text,
+    @HiveField(3) @HiveField(3) String? text,
 
     /// [textElement] Extensions for text
-    @HiveField(4) @JsonKey(name: '_text') Element? textElement,
+    @HiveField(4) @HiveField(4) @JsonKey(name: '_text') Element? textElement,
   }) = _CodeableConcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -510,10 +519,12 @@ class Coding extends HiveObject with _$Coding {
   ///
   /// [userSelectedElement] Extensions for userSelected
   @HiveType(typeId: 1)
+  @HiveType(typeId: 21)
   factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -521,14 +532,19 @@ class Coding extends HiveObject with _$Coding {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [system] The identification of the code system that defines the meaning
     ///  of the symbol in the code.
-    FhirUri? system,
+    @HiveField(2)
+        FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system') Element? systemElement,
+    @HiveField(3)
+    @JsonKey(name: '_system')
+        Element? systemElement,
 
     /// [version] The version of the code system which was used when choosing
     /// this code. Note that a well-maintained code system does not need the
@@ -536,32 +552,45 @@ class Coding extends HiveObject with _$Coding {
     /// versions. However this cannot consistently be assured, and when the
     /// meaning is not guaranteed to be consistent, the version SHOULD be
     ///  exchanged.
-    String? version,
+    @HiveField(4)
+        String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version') Element? versionElement,
+    @HiveField(5)
+    @JsonKey(name: '_version')
+        Element? versionElement,
 
     /// [code] A symbol in syntax defined by the system. The symbol may be a
     /// predefined code or an expression in a syntax defined by the coding system
     ///  (e.g. post-coordination).
-    Code? code,
+    @HiveField(6)
+        Code? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code') Element? codeElement,
+    @HiveField(7)
+    @JsonKey(name: '_code')
+        Element? codeElement,
+    @HiveField(8)
 
     /// [display] A representation of the meaning of the code in the system,
     ///  following the rules of the system.
-    String? display,
+    @HiveField(9)
+        String? display,
 
     /// [displayElement] Extensions for display
-    @JsonKey(name: '_display') Element? displayElement,
+    @HiveField(10)
+    @JsonKey(name: '_display')
+        Element? displayElement,
 
     /// [userSelected] Indicates that this coding was chosen by a user directly -
     ///  e.g. off a pick list of available items (codes or displays).
-    Boolean? userSelected,
+    @HiveField(11)
+        Boolean? userSelected,
 
     /// [userSelectedElement] Extensions for userSelected
-    @JsonKey(name: '_userSelected') Element? userSelectedElement,
+    @HiveField(12)
+    @JsonKey(name: '_userSelected')
+        Element? userSelectedElement,
   }) = _Coding;
 
   /// Produces a Yaml formatted String version of the object
@@ -596,7 +625,7 @@ class Coding extends HiveObject with _$Coding {
 
 /// [Quantity] A measured amount (or an amount that can potentially be
 @freezed
-class Quantity with _$Quantity {
+class Quantity extends HiveObject with _$Quantity {
   /// [Quantity] A measured amount (or an amount that can potentially be
   Quantity._();
 
@@ -640,10 +669,12 @@ class Quantity with _$Quantity {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
+  @HiveType(typeId: 22)
   factory Quantity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -652,48 +683,59 @@ class Quantity with _$Quantity {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-    Decimal? value,
+    @HiveField(2)
+        Decimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value')
+    @HiveField(3)
         Element? valueElement,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    @HiveField(4)
         QuantityComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
     @JsonKey(name: '_comparator')
+    @HiveField(5)
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-    String? unit,
+    @HiveField(6)
+        String? unit,
 
     /// [unitElement] Extensions for unit
     @JsonKey(name: '_unit')
+    @HiveField(7)
         Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    @HiveField(8)
+        FhirUri? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
+    @HiveField(9)
         Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    @HiveField(10)
+        Code? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
+    @HiveField(11)
         Element? codeElement,
   }) = _Quantity;
 
@@ -730,7 +772,7 @@ class Quantity with _$Quantity {
 
 /// [Duration] A length of time.
 @freezed
-class FhirDuration with _$FhirDuration {
+class FhirDuration extends HiveObject with _$FhirDuration {
   /// [Duration] A length of time.
   FhirDuration._();
 
@@ -771,10 +813,12 @@ class FhirDuration with _$FhirDuration {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
+  @HiveType(typeId: 23)
   factory FhirDuration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -783,48 +827,59 @@ class FhirDuration with _$FhirDuration {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-    Decimal? value,
+    @HiveField(2)
+        Decimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value')
+    @HiveField(3)
         Element? valueElement,
     @JsonKey(unknownEnumValue: DurationComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    @HiveField(4)
         DurationComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
     @JsonKey(name: '_comparator')
+    @HiveField(5)
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-    String? unit,
+    @HiveField(6)
+        String? unit,
 
     /// [unitElement] Extensions for unit
     @JsonKey(name: '_unit')
+    @HiveField(7)
         Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    @HiveField(8)
+        FhirUri? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
+    @HiveField(9)
         Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    @HiveField(10)
+        Code? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
+    @HiveField(11)
         Element? codeElement,
   }) = _FhirDuration;
 
@@ -861,7 +916,7 @@ class FhirDuration with _$FhirDuration {
 
 /// [Distance] A length - a value with a unit that is a physical distance.
 @freezed
-class Distance with _$Distance {
+class Distance extends HiveObject with _$Distance {
   /// [Distance] A length - a value with a unit that is a physical distance.
   Distance._();
 
@@ -902,10 +957,12 @@ class Distance with _$Distance {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
+  @HiveType(typeId: 24)
   factory Distance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -914,48 +971,59 @@ class Distance with _$Distance {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-    Decimal? value,
+    @HiveField(2)
+        Decimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value')
+    @HiveField(3)
         Element? valueElement,
     @JsonKey(unknownEnumValue: DistanceComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    @HiveField(4)
         DistanceComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
     @JsonKey(name: '_comparator')
+    @HiveField(5)
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-    String? unit,
+    @HiveField(6)
+        String? unit,
 
     /// [unitElement] Extensions for unit
     @JsonKey(name: '_unit')
+    @HiveField(7)
         Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    @HiveField(8)
+        FhirUri? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
+    @HiveField(9)
         Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    @HiveField(10)
+        Code? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
+    @HiveField(11)
         Element? codeElement,
   }) = _Distance;
 
@@ -992,7 +1060,7 @@ class Distance with _$Distance {
 
 /// [Count] A measured amount (or an amount that can potentially be
 @freezed
-class Count with _$Count {
+class Count extends HiveObject with _$Count {
   /// [Count] A measured amount (or an amount that can potentially be
   Count._();
 
@@ -1036,10 +1104,12 @@ class Count with _$Count {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
+  @HiveType(typeId: 25)
   factory Count({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1048,48 +1118,59 @@ class Count with _$Count {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-    Decimal? value,
+    @HiveField(2)
+        Decimal? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value')
+    @HiveField(3)
         Element? valueElement,
     @JsonKey(unknownEnumValue: CountComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    @HiveField(4)
         CountComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
     @JsonKey(name: '_comparator')
+    @HiveField(5)
         Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-    String? unit,
+    @HiveField(6)
+        String? unit,
 
     /// [unitElement] Extensions for unit
     @JsonKey(name: '_unit')
+    @HiveField(7)
         Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    @HiveField(8)
+        FhirUri? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
+    @HiveField(9)
         Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    @HiveField(10)
+        Code? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
+    @HiveField(11)
         Element? codeElement,
   }) = _Count;
 
@@ -1124,7 +1205,7 @@ class Count with _$Count {
 
 /// [Money] An amount of economic utility in some recognized currency.
 @freezed
-class Money with _$Money {
+class Money extends HiveObject with _$Money {
   /// [Money] An amount of economic utility in some recognized currency.
   Money._();
 
@@ -1147,10 +1228,11 @@ class Money with _$Money {
   /// [currency] ISO 4217 Currency Code.
   ///
   /// [currencyElement] Extensions for currency
+  @HiveType(typeId: 26)
   factory Money({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1158,19 +1240,19 @@ class Money with _$Money {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] Numerical value (with implicit precision).
-    Decimal? value,
+    @HiveField(2) Decimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value') Element? valueElement,
+    @HiveField(3) @JsonKey(name: '_value') Element? valueElement,
 
     /// [currency] ISO 4217 Currency Code.
-    Code? currency,
+    @HiveField(4) Code? currency,
 
     /// [currencyElement] Extensions for currency
-    @JsonKey(name: '_currency') Element? currencyElement,
+    @HiveField(5) @JsonKey(name: '_currency') Element? currencyElement,
   }) = _Money;
 
   /// Produces a Yaml formatted String version of the object
@@ -1204,7 +1286,7 @@ class Money with _$Money {
 
 /// [Age] A duration of time during which an organism (or a process) has
 @freezed
-class Age with _$Age {
+class Age extends HiveObject with _$Age {
   /// [Age] A duration of time during which an organism (or a process) has
   Age._();
 
@@ -1246,10 +1328,11 @@ class Age with _$Age {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
+  @HiveType(typeId: 27)
   factory Age({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1257,43 +1340,45 @@ class Age with _$Age {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
-    Decimal? value,
+    @HiveField(2) Decimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value') Element? valueElement,
+    @HiveField(3) @JsonKey(name: '_value') Element? valueElement,
 
     /// [comparator] How the value should be understood and represented - whether
     /// the actual value is greater or less than the stated value due to
     /// measurement issues; e.g. if the comparator is "<" , then the real value is
     ///  < stated value.
-    @JsonKey(unknownEnumValue: AgeComparator.unknown) AgeComparator? comparator,
+    @HiveField(4)
+    @JsonKey(unknownEnumValue: AgeComparator.unknown)
+        AgeComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator') Element? comparatorElement,
+    @HiveField(5) @JsonKey(name: '_comparator') Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
-    String? unit,
+    @HiveField(6) String? unit,
 
     /// [unitElement] Extensions for unit
-    @JsonKey(name: '_unit') Element? unitElement,
+    @HiveField(7) @JsonKey(name: '_unit') Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
-    FhirUri? system,
+    @HiveField(8) FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system') Element? systemElement,
+    @HiveField(9) @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
-    Code? code,
+    @HiveField(10) Code? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code') Element? codeElement,
+    @HiveField(11) @JsonKey(name: '_code') Element? codeElement,
   }) = _Age;
 
   /// Produces a Yaml formatted String version of the object
@@ -1326,7 +1411,7 @@ class Age with _$Age {
 
 /// [Range] A set of ordered Quantities defined by a low and high limit.
 @freezed
-class Range with _$Range {
+class Range extends HiveObject with _$Range {
   /// [Range] A set of ordered Quantities defined by a low and high limit.
   Range._();
 
@@ -1345,10 +1430,11 @@ class Range with _$Range {
   /// [low] The low limit. The boundary is inclusive.
   ///
   /// [high] The high limit. The boundary is inclusive.
+  @HiveType(typeId: 28)
   factory Range({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1356,13 +1442,13 @@ class Range with _$Range {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [low] The low limit. The boundary is inclusive.
-    Quantity? low,
+    @HiveField(2) Quantity? low,
 
     /// [high] The high limit. The boundary is inclusive.
-    Quantity? high,
+    @HiveField(3) Quantity? high,
   }) = _Range;
 
   /// Produces a Yaml formatted String version of the object
@@ -1396,7 +1482,7 @@ class Range with _$Range {
 
 /// [Period] A time period defined by a start and end date and optionally
 @freezed
-class Period with _$Period {
+class Period extends HiveObject with _$Period {
   /// [Period] A time period defined by a start and end date and optionally
   Period._();
 
@@ -1423,10 +1509,11 @@ class Period with _$Period {
   ///  that period is expected/planned to end at that time.
   ///
   /// [endElement] Extensions for end
+  @HiveType(typeId: 29)
   factory Period({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1434,22 +1521,22 @@ class Period with _$Period {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [start] The start of the period. The boundary is inclusive.
-    FhirDateTime? start,
+    @HiveField(2) FhirDateTime? start,
 
     /// [startElement] Extensions for start
-    @JsonKey(name: '_start') Element? startElement,
+    @HiveField(3) @JsonKey(name: '_start') Element? startElement,
 
     /// [end] The end of the period. If the end of the period is missing, it
     /// means no end was known or planned at the time the instance was created.
     /// The start may be in the past, and the end date in the future, which means
     ///  that period is expected/planned to end at that time.
-    FhirDateTime? end,
+    @HiveField(4) FhirDateTime? end,
 
     /// [endElement] Extensions for end
-    @JsonKey(name: '_end') Element? endElement,
+    @HiveField(5) @JsonKey(name: '_end') Element? endElement,
   }) = _Period;
 
   /// Produces a Yaml formatted String version of the object
@@ -1484,7 +1571,7 @@ class Period with _$Period {
 
 /// [Ratio] A relationship of two Quantity values - expressed as a numerator
 @freezed
-class Ratio with _$Ratio {
+class Ratio extends HiveObject with _$Ratio {
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   Ratio._();
 
@@ -1504,10 +1591,11 @@ class Ratio with _$Ratio {
   /// [numerator] The value of the numerator.
   ///
   /// [denominator] The value of the denominator.
+  @HiveType(typeId: 30)
   factory Ratio({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1515,13 +1603,13 @@ class Ratio with _$Ratio {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [numerator] The value of the numerator.
-    Quantity? numerator,
+    @HiveField(2) Quantity? numerator,
 
     /// [denominator] The value of the denominator.
-    Quantity? denominator,
+    @HiveField(3) Quantity? denominator,
   }) = _Ratio;
 
   /// Produces a Yaml formatted String version of the object
@@ -1555,7 +1643,7 @@ class Ratio with _$Ratio {
 
 /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
 @freezed
-class RatioRange with _$RatioRange {
+class RatioRange extends HiveObject with _$RatioRange {
   /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
   RatioRange._();
 
@@ -1565,21 +1653,29 @@ class RatioRange with _$RatioRange {
   /// [lowNumerator] "The value of the low limit numerator."
   /// [highNumerator] "The value of the high limit numerator."
   /// [denominator] "The value of the denominator."
+  @HiveType(typeId: 31)
   factory RatioRange({
     /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-    String? id,
+    @HiveField(0)
+        String? id,
+    @HiveField(1)
 
     /// [extension] "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(2)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [lowNumerator] "The value of the low limit numerator."
-    Quantity? lowNumerator,
+    @HiveField(3)
+        Quantity? lowNumerator,
 
     /// [highNumerator] "The value of the high limit numerator."
-    Quantity? highNumerator,
+    @HiveField(4)
+        Quantity? highNumerator,
 
     /// [denominator] "The value of the denominator."
-    Quantity? denominator,
+    @HiveField(5)
+        Quantity? denominator,
   }) = _RatioRange;
 
   /// Produces a Yaml formatted String version of the object
@@ -1615,7 +1711,7 @@ class RatioRange with _$RatioRange {
 
 /// [SampledData] A series of measurements taken by a device, with upper and
 @freezed
-class SampledData with _$SampledData {
+class SampledData extends HiveObject with _$SampledData {
   /// [SampledData] A series of measurements taken by a device, with upper and
   SampledData._();
 
@@ -1669,10 +1765,11 @@ class SampledData with _$SampledData {
   ///  of a decimal value.
   ///
   /// [dataElement] Extensions for data
+  @HiveType(typeId: 32)
   factory SampledData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1680,58 +1777,58 @@ class SampledData with _$SampledData {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [origin] The base quantity that a measured value of zero represents. In
     ///  addition, this provides the units of the entire measurement series.
-    required Quantity origin,
+    @HiveField(2) required Quantity origin,
 
     /// [period] The length of time between sampling times, measured in
     ///  milliseconds.
-    Decimal? period,
+    @HiveField(3) Decimal? period,
 
     /// [periodElement] Extensions for period
-    @JsonKey(name: '_period') Element? periodElement,
+    @HiveField(4) @JsonKey(name: '_period') Element? periodElement,
 
     /// [factor] A correction factor that is applied to the sampled data points
     ///  before they are added to the origin.
-    Decimal? factor,
+    @HiveField(5) Decimal? factor,
 
     /// [factorElement] Extensions for factor
-    @JsonKey(name: '_factor') Element? factorElement,
+    @HiveField(6) @JsonKey(name: '_factor') Element? factorElement,
 
     /// [lowerLimit] The lower limit of detection of the measured points. This is
     /// needed if any of the data points have the value "L" (lower than detection
     ///  limit).
-    Decimal? lowerLimit,
+    @HiveField(7) Decimal? lowerLimit,
 
     /// [lowerLimitElement] Extensions for lowerLimit
-    @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
+    @HiveField(8) @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
 
     /// [upperLimit] The upper limit of detection of the measured points. This is
     /// needed if any of the data points have the value "U" (higher than detection
     ///  limit).
-    Decimal? upperLimit,
+    @HiveField(9) Decimal? upperLimit,
 
     /// [upperLimitElement] Extensions for upperLimit
-    @JsonKey(name: '_upperLimit') Element? upperLimitElement,
+    @HiveField(10) @JsonKey(name: '_upperLimit') Element? upperLimitElement,
 
     /// [dimensions] The number of sample points at each time point. If this
     /// value is greater than one, then the dimensions will be interlaced - all
     ///  the sample points for a point in time will be recorded at once.
-    PositiveInt? dimensions,
+    @HiveField(11) PositiveInt? dimensions,
 
     /// [dimensionsElement] Extensions for dimensions
-    @JsonKey(name: '_dimensions') Element? dimensionsElement,
+    @HiveField(12) @JsonKey(name: '_dimensions') Element? dimensionsElement,
 
     /// [data] A series of data points which are decimal values separated by a
     /// single space (character u20). The special values "E" (error), "L" (below
     /// detection limit) and "U" (above detection limit) can also be used in place
     ///  of a decimal value.
-    String? data,
+    @HiveField(13) String? data,
 
     /// [dataElement] Extensions for data
-    @JsonKey(name: '_data') Element? dataElement,
+    @HiveField(14) @JsonKey(name: '_data') Element? dataElement,
   }) = _SampledData;
 
   /// Produces a Yaml formatted String version of the object
@@ -1767,7 +1864,7 @@ class SampledData with _$SampledData {
 
 /// [Signature] A signature along with supporting context. The signature may
 @freezed
-class Signature with _$Signature {
+class Signature extends HiveObject with _$Signature {
   /// [Signature] A signature along with supporting context. The signature may
   Signature._();
 
@@ -1818,10 +1915,11 @@ class Signature with _$Signature {
   ///  not recorded electronically this element would be empty.
   ///
   /// [dataElement] Extensions for data
+  @HiveType(typeId: 33)
   factory Signature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1829,50 +1927,50 @@ class Signature with _$Signature {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [type] An indication of the reason that the entity signed this document.
     /// This may be explicitly included as part of the signature information and
     /// can be used when determining accountability for various actions concerning
     ///  the document.
-    required List<Coding> type,
+    @HiveField(2) required List<Coding> type,
 
     /// [when] When the digital signature was signed.
-    Instant? when,
+    @HiveField(3) Instant? when,
 
     /// [whenElement] Extensions for when
-    @JsonKey(name: '_when') Element? whenElement,
+    @HiveField(4) @JsonKey(name: '_when') Element? whenElement,
 
     /// [who] A reference to an application-usable description of the identity
     ///  that signed  (e.g. the signature used their private key).
-    required Reference who,
+    @HiveField(5) required Reference who,
 
     /// [onBehalfOf] A reference to an application-usable description of the
     ///  identity that is represented by the signature.
-    Reference? onBehalfOf,
+    @HiveField(6) Reference? onBehalfOf,
 
     /// [targetFormat] A mime type that indicates the technical format of the
     ///  target resources signed by the signature.
-    Code? targetFormat,
+    @HiveField(7) Code? targetFormat,
 
     /// [targetFormatElement] Extensions for targetFormat
-    @JsonKey(name: '_targetFormat') Element? targetFormatElement,
+    @HiveField(8) @JsonKey(name: '_targetFormat') Element? targetFormatElement,
 
     /// [sigFormat] A mime type that indicates the technical format of the
     /// signature. Important mime types are application/signature+xml for X ML
     /// DigSig, application/jose for JWS, and image/* for a graphical image of a
     ///  signature, etc.
-    Code? sigFormat,
+    @HiveField(9) Code? sigFormat,
 
     /// [sigFormatElement] Extensions for sigFormat
-    @JsonKey(name: '_sigFormat') Element? sigFormatElement,
+    @HiveField(10) @JsonKey(name: '_sigFormat') Element? sigFormatElement,
 
     /// [data] The base64 encoding of the Signature content. When signature is
     ///  not recorded electronically this element would be empty.
-    Base64Binary? data,
+    @HiveField(11) Base64Binary? data,
 
     /// [dataElement] Extensions for data
-    @JsonKey(name: '_data') Element? dataElement,
+    @HiveField(12) @JsonKey(name: '_data') Element? dataElement,
   }) = _Signature;
 
   /// Produces a Yaml formatted String version of the object
@@ -1908,7 +2006,7 @@ class Signature with _$Signature {
 
 /// [HumanName] A human's name with the ability to identify parts and usage.
 @freezed
-class HumanName with _$HumanName {
+class HumanName extends HiveObject with _$HumanName {
   /// [HumanName] A human's name with the ability to identify parts and usage.
   HumanName._();
 
@@ -1957,10 +2055,12 @@ class HumanName with _$HumanName {
   ///
   /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
+  @HiveType(typeId: 34)
   factory HumanName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1968,54 +2068,78 @@ class HumanName with _$HumanName {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [use] Identifies the purpose for this name.
-    @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
+    @HiveField(2)
+    @JsonKey(unknownEnumValue: HumanNameUse.unknown)
+        HumanNameUse? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use') Element? useElement,
+    @HiveField(3)
+    @JsonKey(name: '_use')
+        Element? useElement,
 
     /// [text] Specifies the entire name as it should be displayed e.g. on an
     /// application UI. This may be provided instead of or as well as the specific
     ///  parts.
-    String? text,
+    @HiveField(4)
+        String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text') Element? textElement,
+    @HiveField(5)
+    @JsonKey(name: '_text')
+        Element? textElement,
 
     /// [family] The part of a name that links to the genealogy. In some cultures
     ///  (e.g. Eritrea) the family name of a son is the first name of his father.
-    String? family,
+    @HiveField(6)
+        String? family,
 
     /// [familyElement] Extensions for family
-    @JsonKey(name: '_family') Element? familyElement,
+    @HiveField(7)
+    @JsonKey(name: '_family')
+        Element? familyElement,
 
     /// [given] Given name.
-    List<String>? given,
+    @HiveField(8)
+        List<String>? given,
 
     /// [givenElement] Extensions for given
-    @JsonKey(name: '_given') List<Element?>? givenElement,
+    @HiveField(9)
+    @JsonKey(name: '_given')
+        List<Element?>? givenElement,
+    @HiveField(10)
 
     /// [prefix] Part of the name that is acquired as a title due to academic,
     /// legal, employment or nobility status, etc. and that appears at the start
     ///  of the name.
-    List<String>? prefix,
+    @HiveField(11)
+        List<String>? prefix,
 
     /// [prefixElement] Extensions for prefix
-    @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+    @HiveField(12)
+    @JsonKey(name: '_prefix')
+        List<Element?>? prefixElement,
+    @HiveField(13)
 
     /// [suffix] Part of the name that is acquired as a title due to academic,
     /// legal, employment or nobility status, etc. and that appears at the end of
     ///  the name.
-    List<String>? suffix,
+    @HiveField(14)
+        List<String>? suffix,
 
     /// [suffixElement] Extensions for suffix
-    @JsonKey(name: '_suffix') List<Element?>? suffixElement,
+    @HiveField(15)
+    @JsonKey(name: '_suffix')
+        List<Element?>? suffixElement,
 
     /// [period] Indicates the period of time when this name was valid for the
     ///  named person.
-    Period? period,
+    @HiveField(16)
+        Period? period,
   }) = _HumanName;
 
   /// Produces a Yaml formatted String version of the object
@@ -2051,7 +2175,7 @@ class HumanName with _$HumanName {
 
 /// [Address] An address expressed using postal conventions (as opposed to
 @freezed
-class Address with _$Address {
+class Address extends HiveObject with _$Address {
   /// [Address] An address expressed using postal conventions (as opposed to
   Address._();
 
@@ -2119,10 +2243,11 @@ class Address with _$Address {
   /// [countryElement] Extensions for country
   ///
   /// [period] Time period when address was/is in use.
+  @HiveType(typeId: 35)
   factory Address({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2130,75 +2255,79 @@ class Address with _$Address {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [use] The purpose of this address.
-    @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
+    @HiveField(2)
+    @JsonKey(unknownEnumValue: AddressUse.unknown)
+        AddressUse? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use') Element? useElement,
+    @HiveField(3) @JsonKey(name: '_use') Element? useElement,
 
     /// [type] Distinguishes between physical addresses (those you can visit) and
     /// mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses
     ///  are both.
-    @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
+    @HiveField(4)
+    @JsonKey(unknownEnumValue: AddressType.unknown)
+        AddressType? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type') Element? typeElement,
+    @HiveField(5) @JsonKey(name: '_type') Element? typeElement,
 
     /// [text] Specifies the entire address as it should be displayed e.g. on a
     /// postal label. This may be provided instead of or as well as the specific
     ///  parts.
-    String? text,
+    @HiveField(6) String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text') Element? textElement,
+    @HiveField(7) @JsonKey(name: '_text') Element? textElement,
 
     /// [line] This component contains the house number, apartment number, street
     /// name, street direction,  P.O. Box number, delivery hints, and similar
     ///  address information.
-    List<String>? line,
+    @HiveField(8) List<String>? line,
 
     /// [lineElement] Extensions for line
-    @JsonKey(name: '_line') List<Element?>? lineElement,
+    @HiveField(9) @JsonKey(name: '_line') List<Element?>? lineElement,
 
     /// [city] The name of the city, town, suburb, village or other community or
     ///  delivery center.
-    String? city,
+    @HiveField(10) String? city,
 
     /// [cityElement] Extensions for city
-    @JsonKey(name: '_city') Element? cityElement,
+    @HiveField(11) @JsonKey(name: '_city') Element? cityElement,
 
     /// [district] The name of the administrative area (county).
-    String? district,
+    @HiveField(12) String? district,
 
     /// [districtElement] Extensions for district
-    @JsonKey(name: '_district') Element? districtElement,
+    @HiveField(13) @JsonKey(name: '_district') Element? districtElement,
 
     /// [state] Sub-unit of a country with limited sovereignty in a federally
     /// organized country. A code may be used if codes are in common use (e.g. US
     ///  2 letter state codes).
-    String? state,
+    @HiveField(14) String? state,
 
     /// [stateElement] Extensions for state
-    @JsonKey(name: '_state') Element? stateElement,
+    @HiveField(15) @JsonKey(name: '_state') Element? stateElement,
 
     /// [postalCode] A postal code designating a region defined by the postal
     ///  service.
-    String? postalCode,
+    @HiveField(16) String? postalCode,
 
     /// [postalCodeElement] Extensions for postalCode
-    @JsonKey(name: '_postalCode') Element? postalCodeElement,
+    @HiveField(17) @JsonKey(name: '_postalCode') Element? postalCodeElement,
 
     /// [country] Country - a nation as commonly understood or generally
     ///  accepted.
-    String? country,
+    @HiveField(18) String? country,
 
     /// [countryElement] Extensions for country
-    @JsonKey(name: '_country') Element? countryElement,
+    @HiveField(19) @JsonKey(name: '_country') Element? countryElement,
 
     /// [period] Time period when address was/is in use.
-    Period? period,
+    @HiveField(20) Period? period,
   }) = _Address;
 
   /// Produces a Yaml formatted String version of the object
@@ -2234,7 +2363,7 @@ class Address with _$Address {
 
 /// [ContactPoint] Details for all kinds of technology mediated contact
 @freezed
-class ContactPoint with _$ContactPoint {
+class ContactPoint extends HiveObject with _$ContactPoint {
   /// [ContactPoint] Details for all kinds of technology mediated contact
   ContactPoint._();
 
@@ -2272,10 +2401,12 @@ class ContactPoint with _$ContactPoint {
   /// [rankElement] Extensions for rank
   ///
   /// [period] Time period when the contact point was/is in use.
+  @HiveType(typeId: 36)
   factory ContactPoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2284,44 +2415,54 @@ class ContactPoint with _$ContactPoint {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
 
-        /// [system] Telecommunications form for contact point - what communications
-        ///  system is required to make use of the contact.
+    /// [system] Telecommunications form for contact point - what communications
+    ///  system is required to make use of the contact.
+    @HiveField(2)
         ContactPointSystem? system,
 
     /// [systemElement] Extensions for system
     @JsonKey(name: '_system')
+    @HiveField(3)
         Element? systemElement,
 
     /// [value] The actual contact point details, in a form that is meaningful to
     ///  the designated communication system (i.e. phone number or email address).
-    String? value,
+    @HiveField(4)
+        String? value,
 
     /// [valueElement] Extensions for value
     @JsonKey(name: '_value')
+    @HiveField(5)
         Element? valueElement,
 
     /// [use] Identifies the purpose for the contact point.
     @JsonKey(unknownEnumValue: ContactPointUse.unknown)
+    @HiveField(6)
         ContactPointUse? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
+    @HiveField(7)
         Element? useElement,
 
     /// [rank] Specifies a preferred order in which to use a set of contacts.
     /// ContactPoints with lower rank values are more preferred than those with
     ///  higher rank values.
-    PositiveInt? rank,
+    @HiveField(8)
+        PositiveInt? rank,
 
     /// [rankElement] Extensions for rank
     @JsonKey(name: '_rank')
+    @HiveField(9)
         Element? rankElement,
 
     /// [period] Time period when the contact point was/is in use.
-    Period? period,
+    @HiveField(10)
+        Period? period,
   }) = _ContactPoint;
 
   /// Produces a Yaml formatted String version of the object
@@ -2357,7 +2498,7 @@ class ContactPoint with _$ContactPoint {
 
 /// [Timing] Specifies an event that may occur multiple times. Timing
 @freezed
-class Timing with _$Timing {
+class Timing extends HiveObject with _$Timing {
   /// [Timing] Specifies an event that may occur multiple times. Timing
   Timing._();
 
@@ -2405,10 +2546,12 @@ class Timing with _$Timing {
   /// and either the code or the data may be used to interpret the Timing, with
   /// the exception that .repeat.bounds still applies over the code (and is not
   ///  contained in the code).
+  @HiveType(typeId: 37)
   factory Timing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2416,7 +2559,9 @@ class Timing with _$Timing {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -2431,25 +2576,33 @@ class Timing with _$Timing {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [event] Identifies specific times when the event occurs.
-    List<FhirDateTime>? event,
+    @HiveField(3)
+        List<FhirDateTime>? event,
 
     /// [eventElement] Extensions for event
-    @JsonKey(name: '_event') List<Element?>? eventElement,
+    @HiveField(4)
+    @JsonKey(name: '_event')
+        List<Element?>? eventElement,
 
     /// [repeat] A set of rules that describe when the event is scheduled.
-    TimingRepeat? repeat,
+    @HiveField(5)
+        TimingRepeat? repeat,
 
     /// [code] A code for the timing schedule (or just text in code.text). Some
     /// codes such as BID are ubiquitous, but many institutions define their own
     /// additional codes. If a code is provided, the code is understood to be a
+    @HiveField(6)
+
     /// complete statement of whatever is specified in the structured timing data,
     /// and either the code or the data may be used to interpret the Timing, with
     /// the exception that .repeat.bounds still applies over the code (and is not
     ///  contained in the code).
-    CodeableConcept? code,
+    @HiveField(7)
+        CodeableConcept? code,
   }) = _Timing;
 
   /// Produces a Yaml formatted String version of the object
@@ -2484,7 +2637,7 @@ class Timing with _$Timing {
 
 /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
 @freezed
-class TimingRepeat with _$TimingRepeat {
+class TimingRepeat extends HiveObject with _$TimingRepeat {
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   TimingRepeat._();
 
@@ -2605,10 +2758,12 @@ class TimingRepeat with _$TimingRepeat {
   ///  is assumed to be after the event.
   ///
   /// [offsetElement] Extensions for offset
+  @HiveType(typeId: 38)
   factory TimingRepeat({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2617,6 +2772,7 @@ class TimingRepeat with _$TimingRepeat {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2632,140 +2788,173 @@ class TimingRepeat with _$TimingRepeat {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
+    @HiveField(3)
 
     /// [boundsDuration] Either a duration for the length of the timing schedule,
     /// a range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-    FhirDuration? boundsDuration,
+    @HiveField(4)
+        FhirDuration? boundsDuration,
 
     /// [boundsRange] Either a duration for the length of the timing schedule, a
     /// range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-    Range? boundsRange,
+    @HiveField(5)
+        Range? boundsRange,
 
     /// [boundsPeriod] Either a duration for the length of the timing schedule, a
     /// range of possible length, or outer bounds for start and/or end limits of
     ///  the timing schedule.
-    Period? boundsPeriod,
+    @HiveField(6)
+        Period? boundsPeriod,
 
     /// [count] A total count of the desired number of repetitions across the
     /// duration of the entire timing specification. If countMax is present, this
     ///  element indicates the lower bound of the allowed range of count values.
-    PositiveInt? count,
+    @HiveField(7)
+        PositiveInt? count,
 
     /// [countElement] Extensions for count
     @JsonKey(name: '_count')
+    @HiveField(8)
         Element? countElement,
 
     /// [countMax] If present, indicates that the count is a range - so to
     ///  perform the action between [count] and [countMax] times.
-    PositiveInt? countMax,
+    @HiveField(9)
+        PositiveInt? countMax,
 
     /// [countMaxElement] Extensions for countMax
     @JsonKey(name: '_countMax')
+    @HiveField(10)
         Element? countMaxElement,
 
     /// [duration] How long this thing happens for when it happens. If
     /// durationMax is present, this element indicates the lower bound of the
     ///  allowed range of the duration.
-    Decimal? duration,
+    @HiveField(11)
+        Decimal? duration,
 
     /// [durationElement] Extensions for duration
     @JsonKey(name: '_duration')
+    @HiveField(12)
         Element? durationElement,
 
     /// [durationMax] If present, indicates that the duration is a range - so to
     ///  perform the action between [duration] and [durationMax] time length.
-    Decimal? durationMax,
+    @HiveField(13)
+        Decimal? durationMax,
 
     /// [durationMaxElement] Extensions for durationMax
     @JsonKey(name: '_durationMax')
+    @HiveField(14)
         Element? durationMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
 
-        /// [durationUnit] The units of time for the duration, in UCUM units.
+    /// [durationUnit] The units of time for the duration, in UCUM units.
+    @HiveField(15)
         TimingRepeatDurationUnit? durationUnit,
 
     /// [durationUnitElement] Extensions for durationUnit
     @JsonKey(name: '_durationUnit')
+    @HiveField(16)
         Element? durationUnitElement,
 
     /// [frequency] The number of times to repeat the action within the specified
     /// period. If frequencyMax is present, this element indicates the lower bound
     ///  of the allowed range of the frequency.
-    PositiveInt? frequency,
+    @HiveField(17)
+        PositiveInt? frequency,
 
     /// [frequencyElement] Extensions for frequency
     @JsonKey(name: '_frequency')
+    @HiveField(18)
         Element? frequencyElement,
 
     /// [frequencyMax] If present, indicates that the frequency is a range - so
     /// to repeat between [frequency] and [frequencyMax] times within the period
     ///  or period range.
-    PositiveInt? frequencyMax,
+    @HiveField(19)
+        PositiveInt? frequencyMax,
 
     /// [frequencyMaxElement] Extensions for frequencyMax
     @JsonKey(name: '_frequencyMax')
+    @HiveField(20)
         Element? frequencyMaxElement,
 
     /// [period] Indicates the duration of time over which repetitions are to
     /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
     /// day" would be the period. If periodMax is present, this element indicates
     ///  the lower bound of the allowed range of the period length.
-    Decimal? period,
+    @HiveField(21)
+        Decimal? period,
 
     /// [periodElement] Extensions for period
     @JsonKey(name: '_period')
+    @HiveField(22)
         Element? periodElement,
 
     /// [periodMax] If present, indicates that the period is a range from [period]
     /// to [periodMax], allowing expressing concepts such as "do this once every
     /// 3-5 days.
-    Decimal? periodMax,
+    @HiveField(23)
+        Decimal? periodMax,
 
     /// [periodMaxElement] Extensions for periodMax
     @JsonKey(name: '_periodMax')
+    @HiveField(24)
         Element? periodMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
 
-        /// [periodUnit] The units of time for the period in UCUM units.
+    /// [periodUnit] The units of time for the period in UCUM units.
+    @HiveField(25)
         TimingRepeatPeriodUnit? periodUnit,
 
     /// [periodUnitElement] Extensions for periodUnit
     @JsonKey(name: '_periodUnit')
+    @HiveField(26)
         Element? periodUnitElement,
 
     /// [dayOfWeek] If one or more days of week is provided, then the action
     ///  happens only on the specified day(s).
-    List<Code>? dayOfWeek,
+    @HiveField(27)
+        List<Code>? dayOfWeek,
 
     /// [dayOfWeekElement] Extensions for dayOfWeek
     @JsonKey(name: '_dayOfWeek')
+    @HiveField(28)
         List<Element?>? dayOfWeekElement,
 
     /// [timeOfDay] Specified time of day for action to take place.
-    List<Time>? timeOfDay,
+    @HiveField(29)
+        List<Time>? timeOfDay,
 
     /// [timeOfDayElement] Extensions for timeOfDay
     @JsonKey(name: '_timeOfDay')
+    @HiveField(30)
         List<Element?>? timeOfDayElement,
 
     /// [when] An approximate time period during the day, potentially linked to
     ///  an event of daily living that indicates when the action should occur.
-    List<TimingRepeatWhen>? when,
+    @HiveField(31)
+        List<TimingRepeatWhen>? when,
 
     /// [whenElement] Extensions for when
     @JsonKey(name: '_when')
+    @HiveField(32)
         List<Element?>? whenElement,
 
     /// [offset] The number of minutes from the event. If the event code does not
     /// indicate whether the minutes is before or after the event, then the offset
     ///  is assumed to be after the event.
-    UnsignedInt? offset,
+    @HiveField(33)
+        UnsignedInt? offset,
 
     /// [offsetElement] Extensions for offset
     @JsonKey(name: '_offset')
+    @HiveField(34)
         Element? offsetElement,
   }) = _TimingRepeat;
 

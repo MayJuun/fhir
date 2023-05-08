@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -15,7 +16,7 @@ part 'special_types.g.dart';
 /// [Narrative] A human-readable summary of the resource conveying the essential
 /// clinical and business information for the resource.
 @freezed
-class Narrative with _$Narrative {
+class Narrative extends HiveObject with _$Narrative {
   /// [Narrative] A human-readable summary of the resource conveying the essential
   /// clinical and business information for the resource.
 
@@ -41,10 +42,11 @@ class Narrative with _$Narrative {
   /// [statusElement] (_status) Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
+  @HiveType(typeId: 39)
   factory Narrative({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -52,18 +54,20 @@ class Narrative with _$Narrative {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     /// definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [status] The status of the narrative - whether it\u0027s entirely generated
     /// (from just the defined data or the extensions too), or whether a human
     /// authored it and it may contain additional data.
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
+    @HiveField(2)
+    @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
+        NarrativeStatus? status,
 
     /// [statusElement] (_status) Extensions for status
-    @JsonKey(name: '_status') Element? statusElement,
+    @HiveField(3) @JsonKey(name: '_status') Element? statusElement,
 
     /// [div] The actual narrative content, a stripped down version of XHTML.
-    required String div,
+    @HiveField(4) required String div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object
@@ -101,7 +105,7 @@ class Narrative with _$Narrative {
 /// reference to a concept defined in a terminology or ontology (by class).
 
 @freezed
-class CodeableReference with _$CodeableReference {
+class CodeableReference extends HiveObject with _$CodeableReference {
   /// [CodeableReference] A reference to a resource (by instance), or instead, a
   /// reference to a concept defined in a terminology or ontology (by class).
 
@@ -125,10 +129,14 @@ class CodeableReference with _$CodeableReference {
   ///
   /// [reference] A reference to a resource the provides exact details about the
   /// information being referenced.
+  @HiveType(typeId: 40)
   factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal references).
+    @HiveField(0)
+
     /// This may be any string value that does not contain spaces.",
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -136,15 +144,21 @@ class CodeableReference with _$CodeableReference {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     /// definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(2)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [concept] A reference to a concept - e.g. the information is identified by
+    @HiveField(3)
+
     /// its general class to the degree of precision found in the terminology.",
-    CodeableConcept? concept,
+    @HiveField(4)
+        CodeableConcept? concept,
 
     /// [reference] A reference to a resource the provides exact details about the
     /// information being referenced.
-    Reference? reference,
+    @HiveField(5)
+        Reference? reference,
   }) = _CodeableReference;
 
   /// Produces a Yaml formatted String version of the object
@@ -180,7 +194,7 @@ class CodeableReference with _$CodeableReference {
 
 /// [Reference] A reference from one resource to another.
 @freezed
-class Reference with _$Reference {
+class Reference extends HiveObject with _$Reference {
   /// [Reference] A reference from one resource to another.
   Reference._();
 
@@ -232,10 +246,11 @@ class Reference with _$Reference {
   ///  to the resource reference.
   ///
   /// [displayElement] Extensions for display
+  @HiveType(typeId: 41)
   factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -243,7 +258,7 @@ class Reference with _$Reference {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [reference] A reference to a location at which the other resource is
     /// found. The reference may be a relative reference, in which case it is
@@ -252,10 +267,10 @@ class Reference with _$Reference {
     /// specific or not. If the reference is not to a FHIR RESTful server, then it
     /// should be assumed to be version specific. Internal fragment references
     ///  (start with '#') refer to contained resources.
-    String? reference,
+    @HiveField(2) String? reference,
 
     /// [referenceElement] Extensions for reference
-    @JsonKey(name: '_reference') Element? referenceElement,
+    @HiveField(3) @JsonKey(name: '_reference') Element? referenceElement,
 
     /// [type] The expected type of the target of the reference. If both
     /// Reference.type and Reference.reference are populated and
@@ -266,10 +281,10 @@ class Reference with _$Reference {
     /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
     /// allowed for logical models (and can only be used in references in logical
     ///  models, not resources).
-    FhirUri? type,
+    @HiveField(4) FhirUri? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type') Element? typeElement,
+    @HiveField(5) @JsonKey(name: '_type') Element? typeElement,
 
     /// [identifier] An identifier for the target resource. This is used when
     /// there is no way to reference the other resource directly, either because
@@ -280,14 +295,14 @@ class Reference with _$Reference {
     /// instance, but it SHALL point to a business concept that would be expected
     /// to be exposed as a FHIR instance, and that instance would need to be of a
     ///  FHIR resource type allowed by the reference.
-    Identifier? identifier,
+    @HiveField(6) Identifier? identifier,
 
     /// [display] Plain text narrative that identifies the resource in addition
     ///  to the resource reference.
-    String? display,
+    @HiveField(7) String? display,
 
     /// [displayElement] Extensions for display
-    @JsonKey(name: '_display') Element? displayElement,
+    @HiveField(8) @JsonKey(name: '_display') Element? displayElement,
   }) = _Reference;
 
   /// Produces a Yaml formatted String version of the object
@@ -323,7 +338,7 @@ class Reference with _$Reference {
 
 /// [Meta] The metadata about a resource. This is content in the resource
 @freezed
-class Meta with _$Meta {
+class Meta extends HiveObject with _$Meta {
   /// [Meta] The metadata about a resource. This is content in the resource
   Meta._();
 
@@ -371,10 +386,12 @@ class Meta with _$Meta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
+  @HiveType(typeId: 42)
   factory Meta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -382,47 +399,65 @@ class Meta with _$Meta {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1)
+    @JsonKey(name: 'extension')
+        List<FhirExtension>? extension_,
 
     /// [versionId] The version specific identifier, as it appears in the version
+    @HiveField(2)
+
     /// portion of the URL. This value changes when the resource is created,
     ///  updated, or deleted.
-    Id? versionId,
+    @HiveField(3)
+        Id? versionId,
 
     /// [versionIdElement] Extensions for versionId
-    @JsonKey(name: '_versionId') Element? versionIdElement,
+    @HiveField(4)
+    @JsonKey(name: '_versionId')
+        Element? versionIdElement,
 
     /// [lastUpdated] When the resource last changed - e.g. when the version
     ///  changed.
-    Instant? lastUpdated,
+    @HiveField(5)
+        Instant? lastUpdated,
 
     /// [lastUpdatedElement] Extensions for lastUpdated
-    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
+    @HiveField(6)
+    @JsonKey(name: '_lastUpdated')
+        Element? lastUpdatedElement,
 
     /// [source] A uri that identifies the source system of the resource. This
     /// provides a minimal amount of [[[Provenance]]] information that can be used
     /// to track or differentiate the source of information in the resource. The
+    @HiveField(7)
+
     /// source may identify another FHIR server, document, message, database,
     ///  etc.
-    FhirUri? source,
+    @HiveField(8)
+        FhirUri? source,
 
     /// [sourceElement] Extensions for source
-    @JsonKey(name: '_source') Element? sourceElement,
+    @HiveField(9)
+    @JsonKey(name: '_source')
+        Element? sourceElement,
 
     /// [profile] A list of profiles (references to [[[StructureDefinition]]]
     /// resources) that this resource claims to conform to. The URL is a reference
     ///  to [[[StructureDefinition.url]]].
-    List<Canonical>? profile,
+    @HiveField(10)
+        List<Canonical>? profile,
 
     /// [security] Security labels applied to this resource. These tags connect
     ///  specific resources to the overall security policy and infrastructure.
-    List<Coding>? security,
+    @HiveField(11)
+        List<Coding>? security,
 
     /// [tag] Tags applied to this resource. Tags are intended to be used to
     /// identify and relate resources to process and workflow, and applications
     /// are not required to consider the tags when interpreting the meaning of a
     ///  resource.
-    List<Coding>? tag,
+    @HiveField(12)
+        List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object
@@ -456,7 +491,7 @@ class Meta with _$Meta {
 
 /// [Dosage] Indicates how the medication is/was taken or should be taken by
 @freezed
-class Dosage with _$Dosage {
+class Dosage extends HiveObject with _$Dosage {
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
   Dosage._();
 
@@ -532,10 +567,11 @@ class Dosage with _$Dosage {
   ///
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
+  @HiveType(typeId: 43)
   factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -543,7 +579,7 @@ class Dosage with _$Dosage {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -558,71 +594,75 @@ class Dosage with _$Dosage {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [sequence] Indicates the order in which the dosage instructions should be
     ///  applied or interpreted.
-    Integer? sequence,
+    @HiveField(3) Integer? sequence,
 
     /// [sequenceElement] Extensions for sequence
-    @JsonKey(name: '_sequence') Element? sequenceElement,
+    @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [text] Free text dosage instructions e.g. SIG.
-    String? text,
+    @HiveField(5) String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text') Element? textElement,
+    @HiveField(6) @JsonKey(name: '_text') Element? textElement,
 
     /// [additionalInstruction] Supplemental instructions to the patient on how
     /// to take the medication  (e.g. "with meals" or"take half to one hour before
     /// food") or warnings for the patient about the medication (e.g. "may cause
     ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
-    List<CodeableConcept>? additionalInstruction,
+    @HiveField(7) List<CodeableConcept>? additionalInstruction,
 
     /// [patientInstruction] Instructions in terms that are understood by the
     ///  patient or consumer.
-    String? patientInstruction,
+    @HiveField(8) String? patientInstruction,
 
     /// [patientInstructionElement] Extensions for patientInstruction
-    @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
+    @HiveField(9)
+    @JsonKey(name: '_patientInstruction')
+        Element? patientInstructionElement,
 
     /// [timing] When medication should be administered.
-    Timing? timing,
+    @HiveField(10) Timing? timing,
 
     /// [asNeededBoolean] Indicates whether the Medication is only taken when
     /// needed within a specific dosing schedule (Boolean option), or it indicates
     ///  the precondition for taking the Medication (CodeableConcept).
-    Boolean? asNeededBoolean,
+    @HiveField(11) Boolean? asNeededBoolean,
 
     /// [asNeededBooleanElement] Extensions for asNeededBoolean
-    @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
+    @HiveField(12)
+    @JsonKey(name: '_asNeededBoolean')
+        Element? asNeededBooleanElement,
 
     /// [asNeededCodeableConcept] Indicates whether the Medication is only taken
     /// when needed within a specific dosing schedule (Boolean option), or it
     ///  indicates the precondition for taking the Medication (CodeableConcept).
-    CodeableConcept? asNeededCodeableConcept,
+    @HiveField(13) CodeableConcept? asNeededCodeableConcept,
 
     /// [site] Body site to administer to.
-    CodeableConcept? site,
+    @HiveField(14) CodeableConcept? site,
 
     /// [route] How drug should enter body.
-    CodeableConcept? route,
+    @HiveField(15) CodeableConcept? route,
 
     /// [method] Technique for administering medication.
-    CodeableConcept? method,
+    @HiveField(16) CodeableConcept? method,
 
     /// [doseAndRate] The amount of medication administered.
-    List<DosageDoseAndRate>? doseAndRate,
+    @HiveField(17) List<DosageDoseAndRate>? doseAndRate,
 
     /// [maxDosePerPeriod] Upper limit on medication per unit of time.
-    Ratio? maxDosePerPeriod,
+    @HiveField(18) Ratio? maxDosePerPeriod,
 
     /// [maxDosePerAdministration] Upper limit on medication per administration.
-    Quantity? maxDosePerAdministration,
+    @HiveField(19) Quantity? maxDosePerAdministration,
 
     /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
     ///  patient.
-    Quantity? maxDosePerLifetime,
+    @HiveField(20) Quantity? maxDosePerLifetime,
   }) = _Dosage;
 
   /// Produces a Yaml formatted String version of the object
@@ -657,7 +697,7 @@ class Dosage with _$Dosage {
 
 /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
 @freezed
-class DosageDoseAndRate with _$DosageDoseAndRate {
+class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
   DosageDoseAndRate._();
 
@@ -700,10 +740,11 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [rateRange] Amount of medication per unit of time.
   ///
   /// [rateQuantity] Amount of medication per unit of time.
+  @HiveType(typeId: 44)
   factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -711,7 +752,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -726,26 +767,26 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [type] The kind of dose or rate specified, for example, ordered or
     ///  calculated.
-    CodeableConcept? type,
+    @HiveField(3) CodeableConcept? type,
 
     /// [doseRange] Amount of medication per dose.
-    Range? doseRange,
+    @HiveField(4) Range? doseRange,
 
     /// [doseQuantity] Amount of medication per dose.
-    Quantity? doseQuantity,
+    @HiveField(5) Quantity? doseQuantity,
 
     /// [rateRatio] Amount of medication per unit of time.
-    Ratio? rateRatio,
+    @HiveField(6) Ratio? rateRatio,
 
     /// [rateRange] Amount of medication per unit of time.
-    Range? rateRange,
+    @HiveField(7) Range? rateRange,
 
     /// [rateQuantity] Amount of medication per unit of time.
-    Quantity? rateQuantity,
+    @HiveField(8) Quantity? rateQuantity,
   }) = _DosageDoseAndRate;
 
   /// Produces a Yaml formatted String version of the object
@@ -781,7 +822,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
 
 /// [ElementDefinition] Captures constraints on each element within the
 @freezed
-class ElementDefinition with _$ElementDefinition {
+class ElementDefinition extends HiveObject with _$ElementDefinition {
   /// [ElementDefinition] Captures constraints on each element within the
   ElementDefinition._();
 
@@ -2433,10 +2474,12 @@ class ElementDefinition with _$ElementDefinition {
   ///
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
+  @HiveType(typeId: 45)
   factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2445,6 +2488,7 @@ class ElementDefinition with _$ElementDefinition {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2460,11 +2504,13 @@ class ElementDefinition with _$ElementDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [path] The path identifies the element and is expressed as a
     /// "."-separated list of ancestor elements, beginning with the name of the
     ///  resource or extension.
+
     String? path,
 
     /// [pathElement] Extensions for path
@@ -2473,6 +2519,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [representation] Codes that define how this element is represented in
     ///  instances, when the deviation varies from the normal case.
+
     List<ElementDefinitionRepresentation>? representation,
 
     /// [representationElement] Extensions for representation
@@ -2481,8 +2528,10 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [sliceName] The name of this element definition slice, when slicing is
     /// working. The name must be a token with no dots or spaces. This is a unique
+
     /// name referring to a specific set of constraints applied to this element,
     ///  used to provide a name to different slices of the same element.
+
     String? sliceName,
 
     /// [sliceNameElement] Extensions for sliceName
@@ -2494,6 +2543,7 @@ class ElementDefinition with _$ElementDefinition {
     /// profile. If false, the slice is not overriding any slice in an inherited
     /// profile. If missing, the slice might or might not be overriding a slice in
     ///  an inherited profile, depending on the sliceName.
+
     Boolean? sliceIsConstraining,
 
     /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
@@ -2503,6 +2553,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [label] A single preferred label which is the text to display beside the
     /// element indicating its meaning or to use to prompt for the element in a
     ///  user display or form.
+
     String? label,
 
     /// [labelElement] Extensions for label
@@ -2511,6 +2562,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [code] A code that has the same meaning as the element in a particular
     ///  terminology.
+
     List<Coding>? code,
 
     /// [slicing] Indicates that the element is sliced into a set of alternative
@@ -2520,10 +2572,12 @@ class ElementDefinition with _$ElementDefinition {
     /// resource with a choice of types. The set of slices is any elements that
     /// come after this in the element sequence that have the same path, until a
     ///  shorter path occurs (the shorter path terminates the set).
+
     ElementDefinitionSlicing? slicing,
 
     /// [short] A concise description of what this element means (e.g. for use in
     ///  autogenerated summaries).
+
     String? short,
 
     /// [shortElement] Extensions for short
@@ -2536,6 +2590,7 @@ class ElementDefinition with _$ElementDefinition {
     /// with the base definition, but convey the meaning of the element in the
     /// particular context of use of the resource. (Note: The text you are reading
     ///  is specified in ElementDefinition.definition).
+
     Markdown? definition,
 
     /// [definitionElement] Extensions for definition
@@ -2546,6 +2601,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element, including notes about how to use the data properly, exceptions to
     /// proper use, etc. (Note: The text you are reading is specified in
     ///  ElementDefinition.comment).
+
     Markdown? comment,
 
     /// [commentElement] Extensions for comment
@@ -2556,6 +2612,7 @@ class ElementDefinition with _$ElementDefinition {
     /// created and why the constraints exist as they do. This may be used to
     /// point to source materials or specifications that drove the structure of
     ///  this element.
+
     Markdown? requirements,
 
     /// [requirementsElement] Extensions for requirements
@@ -2564,6 +2621,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [alias] Identifies additional names by which this element might also be
     ///  known.
+
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
@@ -2572,6 +2630,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [min] The minimum number of times this element SHALL appear in the
     ///  instance.
+
     UnsignedInt? min,
 
     /// [minElement] Extensions for min
@@ -2580,6 +2639,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [max] The maximum number of times this element is permitted to appear in
     ///  the instance.
+
     String? max,
 
     /// [maxElement] Extensions for max
@@ -2594,6 +2654,7 @@ class ElementDefinition with _$ElementDefinition {
     /// information in provided in the element definition may be different to the
     /// base definition. On the original definition of the element, it will be
     ///  same.
+
     ElementDefinitionBase? base,
 
     /// [contentReference] Identifies an element defined elsewhere in the
@@ -2601,6 +2662,7 @@ class ElementDefinition with _$ElementDefinition {
     /// ContentReferences bring across all the rules that are in the
     /// ElementDefinition for the element, including definitions, cardinality
     ///  constraints, bindings, invariants etc.
+
     FhirUri? contentReference,
 
     /// [contentReferenceElement] Extensions for contentReference
@@ -2609,20 +2671,24 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [type] The data type or resource that the value of this element is
     ///  permitted to be.
+
     List<ElementDefinitionType>? type,
 
     /// [defaultValueBase64Binary] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
 
         /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
+
         Element? defaultValueBase64BinaryElement,
 
     /// [defaultValueBoolean] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Boolean? defaultValueBoolean,
 
     /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
@@ -2632,15 +2698,18 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueCanonical] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Canonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
 
         /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
+
         Element? defaultValueCanonicalElement,
 
     /// [defaultValueCode] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Code? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
@@ -2650,6 +2719,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueDate] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Date? defaultValueDate,
 
     /// [defaultValueDateElement] Extensions for defaultValueDate
@@ -2659,15 +2729,18 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueDateTime] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
 
         /// [defaultValueDateTimeElement] Extensions for defaultValueDateTime
+
         Element? defaultValueDateTimeElement,
 
     /// [defaultValueDecimal] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Decimal? defaultValueDecimal,
 
     /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
@@ -2677,6 +2750,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueId] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Id? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
@@ -2686,6 +2760,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueInstant] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Instant? defaultValueInstant,
 
     /// [defaultValueInstantElement] Extensions for defaultValueInstant
@@ -2695,6 +2770,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueInteger] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Integer? defaultValueInteger,
 
     /// [defaultValueIntegerElement] Extensions for defaultValueInteger
@@ -2704,15 +2780,18 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueMarkdown] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Markdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkdown')
 
         /// [defaultValueMarkdownElement] Extensions for defaultValueMarkdown
+
         Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Oid? defaultValueOid,
 
     /// [defaultValueOidElement] Extensions for defaultValueOid
@@ -2722,15 +2801,18 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValuePositiveInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     PositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
 
         /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
+
         Element? defaultValuePositiveIntElement,
 
     /// [defaultValueString] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     String? defaultValueString,
 
     /// [defaultValueStringElement] Extensions for defaultValueString
@@ -2740,6 +2822,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueTime] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Time? defaultValueTime,
 
     /// [defaultValueTimeElement] Extensions for defaultValueTime
@@ -2749,15 +2832,18 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUnsignedInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
 
         /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
+
         Element? defaultValueUnsignedIntElement,
 
     /// [defaultValueUri] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     FhirUri? defaultValueUri,
 
     /// [defaultValueUriElement] Extensions for defaultValueUri
@@ -2767,6 +2853,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUrl] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     FhirUrl? defaultValueUrl,
 
     /// [defaultValueUrlElement] Extensions for defaultValueUrl
@@ -2776,6 +2863,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUuid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Uuid? defaultValueUuid,
 
     /// [defaultValueUuidElement] Extensions for defaultValueUuid
@@ -2785,158 +2873,189 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueAddress] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Address? defaultValueAddress,
 
     /// [defaultValueAge] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Age? defaultValueAge,
 
     /// [defaultValueAnnotation] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Annotation? defaultValueAnnotation,
 
     /// [defaultValueAttachment] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Attachment? defaultValueAttachment,
 
     /// [defaultValueCodeableConcept] The value that should be used if there is
     /// no value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     CodeableConcept? defaultValueCodeableConcept,
     CodeableReference? defaultValueCodeableReference,
 
     /// [defaultValueCoding] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Coding? defaultValueCoding,
 
     /// [defaultValueContactPoint] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     ContactPoint? defaultValueContactPoint,
 
     /// [defaultValueCount] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Count? defaultValueCount,
 
     /// [defaultValueDistance] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Distance? defaultValueDistance,
 
     /// [defaultValueDuration] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     FhirDuration? defaultValueDuration,
 
     /// [defaultValueHumanName] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     HumanName? defaultValueHumanName,
 
     /// [defaultValueIdentifier] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Identifier? defaultValueIdentifier,
 
     /// [defaultValueMoney] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Money? defaultValueMoney,
 
     /// [defaultValuePeriod] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Period? defaultValuePeriod,
 
     /// [defaultValueQuantity] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Quantity? defaultValueQuantity,
 
     /// [defaultValueRange] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Range? defaultValueRange,
 
     /// [defaultValueRatio] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Ratio? defaultValueRatio,
     RatioRange? defaultValueRatioRange,
 
     /// [defaultValueReference] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Reference? defaultValueReference,
 
     /// [defaultValueSampledData] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     SampledData? defaultValueSampledData,
 
     /// [defaultValueSignature] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Signature? defaultValueSignature,
 
     /// [defaultValueTiming] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Timing? defaultValueTiming,
 
     /// [defaultValueContactDetail] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     ContactDetail? defaultValueContactDetail,
 
     /// [defaultValueContributor] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Contributor? defaultValueContributor,
 
     /// [defaultValueDataRequirement] The value that should be used if there is
     /// no value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     DataRequirement? defaultValueDataRequirement,
 
     /// [defaultValueExpression] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     Expression? defaultValueExpression,
 
     /// [defaultValueParameterDefinition] The value that should be used if there
     /// is no value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     ParameterDefinition? defaultValueParameterDefinition,
 
     /// [defaultValueRelatedArtifact] The value that should be used if there is
     /// no value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     RelatedArtifact? defaultValueRelatedArtifact,
 
     /// [defaultValueTriggerDefinition] The value that should be used if there is
     /// no value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     TriggerDefinition? defaultValueTriggerDefinition,
 
     /// [defaultValueUsageContext] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
+
     UsageContext? defaultValueUsageContext,
 
     /// [defaultValueDosage] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
+
     Dosage? defaultValueDosage,
 
     /// [meaningWhenMissing] The Implicit meaning that is to be understood when
     /// this element is missing (e.g. 'when this element is missing, the period is
     ///  ongoing').
+
     Markdown? meaningWhenMissing,
 
     /// [meaningWhenMissingElement] Extensions for meaningWhenMissing
@@ -2946,6 +3065,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [orderMeaning] If present, indicates that the order of the repeating
     /// element has meaning and describes what that meaning is.  If absent, it
     ///  means that the order of the element has no meaning.
+
     String? orderMeaning,
 
     /// [orderMeaningElement] Extensions for orderMeaning
@@ -2953,10 +3073,12 @@ class ElementDefinition with _$ElementDefinition {
         Element? orderMeaningElement,
 
     /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     Base64Binary? fixedBase64Binary,
 
     /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
@@ -2967,6 +3089,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Boolean? fixedBoolean,
 
     /// [fixedBooleanElement] Extensions for fixedBoolean
@@ -2977,6 +3100,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Canonical? fixedCanonical,
 
     /// [fixedCanonicalElement] Extensions for fixedCanonical
@@ -2987,6 +3111,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Code? fixedCode,
 
     /// [fixedCodeElement] Extensions for fixedCode
@@ -2997,6 +3122,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Date? fixedDate,
 
     /// [fixedDateElement] Extensions for fixedDate
@@ -3007,6 +3133,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     FhirDateTime? fixedDateTime,
 
     /// [fixedDateTimeElement] Extensions for fixedDateTime
@@ -3017,6 +3144,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Decimal? fixedDecimal,
 
     /// [fixedDecimalElement] Extensions for fixedDecimal
@@ -3027,6 +3155,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Id? fixedId,
 
     /// [fixedIdElement] Extensions for fixedId
@@ -3037,6 +3166,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Instant? fixedInstant,
 
     /// [fixedInstantElement] Extensions for fixedInstant
@@ -3047,6 +3177,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Integer? fixedInteger,
 
     /// [fixedIntegerElement] Extensions for fixedInteger
@@ -3057,6 +3188,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Markdown? fixedMarkdown,
 
     /// [fixedMarkdownElement] Extensions for fixedMarkdown
@@ -3067,6 +3199,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Oid? fixedOid,
 
     /// [fixedOidElement] Extensions for fixedOid
@@ -3077,6 +3210,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     PositiveInt? fixedPositiveInt,
 
     /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
@@ -3087,6 +3221,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     String? fixedString,
 
     /// [fixedStringElement] Extensions for fixedString
@@ -3097,6 +3232,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Time? fixedTime,
 
     /// [fixedTimeElement] Extensions for fixedTime
@@ -3107,6 +3243,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     UnsignedInt? fixedUnsignedInt,
 
     /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
@@ -3117,6 +3254,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     FhirUri? fixedUri,
 
     /// [fixedUriElement] Extensions for fixedUri
@@ -3127,6 +3265,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     FhirUrl? fixedUrl,
 
     /// [fixedUrlElement] Extensions for fixedUrl
@@ -3137,6 +3276,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Uuid? fixedUuid,
 
     /// [fixedUuidElement] Extensions for fixedUuid
@@ -3147,31 +3287,37 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Address? fixedAddress,
 
     /// [fixedAge] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Age? fixedAge,
 
     /// [fixedAnnotation] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Annotation? fixedAnnotation,
 
     /// [fixedAttachment] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Attachment? fixedAttachment,
 
     /// [fixedCodeableConcept] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     CodeableConcept? fixedCodeableConcept,
     CodeableReference? fixedCodeableReference,
 
@@ -3179,73 +3325,86 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Coding? fixedCoding,
 
     /// [fixedContactPoint] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     ContactPoint? fixedContactPoint,
 
     /// [fixedCount] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Count? fixedCount,
 
     /// [fixedDistance] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Distance? fixedDistance,
 
     /// [fixedDuration] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     FhirDuration? fixedDuration,
 
     /// [fixedHumanName] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     HumanName? fixedHumanName,
 
     /// [fixedIdentifier] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Identifier? fixedIdentifier,
 
     /// [fixedMoney] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Money? fixedMoney,
 
     /// [fixedPeriod] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Period? fixedPeriod,
 
     /// [fixedQuantity] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Quantity? fixedQuantity,
 
     /// [fixedRange] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Range? fixedRange,
 
     /// [fixedRatio] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Ratio? fixedRatio,
     RatioRange? fixedRatioRange,
 
@@ -3253,84 +3412,103 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Reference? fixedReference,
 
     /// [fixedSampledData] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     SampledData? fixedSampledData,
 
     /// [fixedSignature] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Signature? fixedSignature,
 
     /// [fixedTiming] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Timing? fixedTiming,
 
     /// [fixedContactDetail] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     ContactDetail? fixedContactDetail,
 
     /// [fixedContributor] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Contributor? fixedContributor,
 
     /// [fixedDataRequirement] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     DataRequirement? fixedDataRequirement,
 
     /// [fixedExpression] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Expression? fixedExpression,
 
     /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
+
     /// value  for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     ParameterDefinition? fixedParameterDefinition,
 
     /// [fixedRelatedArtifact] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     RelatedArtifact? fixedRelatedArtifact,
 
     /// [fixedTriggerDefinition] Specifies a value that SHALL be exactly the
+
     /// value  for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     TriggerDefinition? fixedTriggerDefinition,
 
     /// [fixedUsageContext] Specifies a value that SHALL be exactly the value
+
     /// for this element in the instance. For purposes of comparison,
     /// non-significant whitespace is ignored, and all values must be an exact
     /// match (case and accent sensitive). Missing elements/attributes must also
     ///  be missing.
+
     UsageContext? fixedUsageContext,
 
     /// [fixedDosage] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
+
     Dosage? fixedDosage,
 
     /// [patternBase64Binary] Specifies a value that the value in the instance
@@ -3344,10 +3522,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Base64Binary? patternBase64Binary,
 
     /// [patternBase64BinaryElement] Extensions for patternBase64Binary
@@ -3365,10 +3545,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Boolean? patternBoolean,
 
     /// [patternBooleanElement] Extensions for patternBoolean
@@ -3386,10 +3568,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Canonical? patternCanonical,
 
     /// [patternCanonicalElement] Extensions for patternCanonical
@@ -3407,10 +3591,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Code? patternCode,
 
     /// [patternCodeElement] Extensions for patternCode
@@ -3428,10 +3614,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Date? patternDate,
 
     /// [patternDateElement] Extensions for patternDate
@@ -3449,10 +3637,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     FhirDateTime? patternDateTime,
 
     /// [patternDateTimeElement] Extensions for patternDateTime
@@ -3470,10 +3660,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Decimal? patternDecimal,
 
     /// [patternDecimalElement] Extensions for patternDecimal
@@ -3491,10 +3683,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Id? patternId,
 
     /// [patternIdElement] Extensions for patternId
@@ -3512,10 +3706,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Instant? patternInstant,
 
     /// [patternInstantElement] Extensions for patternInstant
@@ -3533,10 +3729,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Integer? patternInteger,
 
     /// [patternIntegerElement] Extensions for patternInteger
@@ -3554,10 +3752,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Markdown? patternMarkdown,
 
     /// [patternMarkdownElement] Extensions for patternMarkdown
@@ -3575,10 +3775,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Oid? patternOid,
 
     /// [patternOidElement] Extensions for patternOid
@@ -3596,10 +3798,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     PositiveInt? patternPositiveInt,
 
     /// [patternPositiveIntElement] Extensions for patternPositiveInt
@@ -3617,10 +3821,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     String? patternString,
 
     /// [patternStringElement] Extensions for patternString
@@ -3638,10 +3844,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Time? patternTime,
 
     /// [patternTimeElement] Extensions for patternTime
@@ -3659,10 +3867,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     UnsignedInt? patternUnsignedInt,
 
     /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
@@ -3680,10 +3890,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     FhirUri? patternUri,
 
     /// [patternUriElement] Extensions for patternUri
@@ -3701,10 +3913,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     FhirUrl? patternUrl,
 
     /// [patternUrlElement] Extensions for patternUrl
@@ -3722,10 +3936,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Uuid? patternUuid,
 
     /// [patternUuidElement] Extensions for patternUuid
@@ -3743,10 +3959,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Address? patternAddress,
 
     /// [patternAge] Specifies a value that the value in the instance SHALL
@@ -3760,10 +3978,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Age? patternAge,
 
     /// [patternAnnotation] Specifies a value that the value in the instance
@@ -3777,10 +3997,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Annotation? patternAnnotation,
 
     /// [patternAttachment] Specifies a value that the value in the instance
@@ -3794,10 +4016,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Attachment? patternAttachment,
 
     /// [patternCodeableConcept] Specifies a value that the value in the instance
@@ -3811,10 +4035,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     CodeableConcept? patternCodeableConcept,
     CodeableReference? patternCodeableReference,
 
@@ -3829,10 +4055,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Coding? patternCoding,
 
     /// [patternContactPoint] Specifies a value that the value in the instance
@@ -3846,10 +4074,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     ContactPoint? patternContactPoint,
 
     /// [patternCount] Specifies a value that the value in the instance SHALL
@@ -3863,10 +4093,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Count? patternCount,
 
     /// [patternDistance] Specifies a value that the value in the instance SHALL
@@ -3880,10 +4112,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Distance? patternDistance,
 
     /// [patternDuration] Specifies a value that the value in the instance SHALL
@@ -3897,10 +4131,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     FhirDuration? patternDuration,
 
     /// [patternHumanName] Specifies a value that the value in the instance SHALL
@@ -3914,10 +4150,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     HumanName? patternHumanName,
 
     /// [patternIdentifier] Specifies a value that the value in the instance
@@ -3931,10 +4169,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Identifier? patternIdentifier,
 
     /// [patternMoney] Specifies a value that the value in the instance SHALL
@@ -3948,10 +4188,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Money? patternMoney,
 
     /// [patternPeriod] Specifies a value that the value in the instance SHALL
@@ -3965,10 +4207,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Period? patternPeriod,
 
     /// [patternQuantity] Specifies a value that the value in the instance SHALL
@@ -3982,10 +4226,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Quantity? patternQuantity,
 
     /// [patternRange] Specifies a value that the value in the instance SHALL
@@ -3999,10 +4245,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Range? patternRange,
 
     /// [patternRatio] Specifies a value that the value in the instance SHALL
@@ -4016,10 +4264,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Ratio? patternRatio,
     RatioRange? patternRatioRange,
 
@@ -4034,10 +4284,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Reference? patternReference,
 
     /// [patternSampledData] Specifies a value that the value in the instance
@@ -4051,10 +4303,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     SampledData? patternSampledData,
 
     /// [patternSignature] Specifies a value that the value in the instance SHALL
@@ -4068,10 +4322,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Signature? patternSignature,
 
     /// [patternTiming] Specifies a value that the value in the instance SHALL
@@ -4085,10 +4341,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Timing? patternTiming,
 
     /// [patternContactDetail] Specifies a value that the value in the instance
@@ -4102,10 +4360,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     ContactDetail? patternContactDetail,
 
     /// [patternContributor] Specifies a value that the value in the instance
@@ -4119,10 +4379,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Contributor? patternContributor,
 
     /// [patternDataRequirement] Specifies a value that the value in the instance
@@ -4136,10 +4398,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     DataRequirement? patternDataRequirement,
 
     /// [patternExpression] Specifies a value that the value in the instance
@@ -4153,10 +4417,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Expression? patternExpression,
 
     /// [patternParameterDefinition] Specifies a value that the value in the
@@ -4170,10 +4436,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     ParameterDefinition? patternParameterDefinition,
 
     /// [patternRelatedArtifact] Specifies a value that the value in the instance
@@ -4187,10 +4455,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     RelatedArtifact? patternRelatedArtifact,
 
     /// [patternTriggerDefinition] Specifies a value that the value in the
@@ -4204,10 +4474,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     TriggerDefinition? patternTriggerDefinition,
 
     /// [patternUsageContext] Specifies a value that the value in the instance
@@ -4221,10 +4493,12 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     UsageContext? patternUsageContext,
 
     /// [patternDosage] Specifies a value that the value in the instance SHALL
@@ -4238,19 +4512,24 @@ class ElementDefinition with _$ElementDefinition {
     ///  element from the instance array.
     /// When pattern[x] is used to constrain a complex object, it means that each
     /// property in the pattern must be present in the complex object, and its
+
     ///  value must recursively match -- i.e.,
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
+
     Dosage? patternDosage,
 
     /// [example] A sample value for this element demonstrating the type of
     ///  information that would typically be found in the element.
+
     List<ElementDefinitionExample>? example,
 
     /// [minValueDate] The minimum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Date? minValueDate,
 
     /// [minValueDateElement] Extensions for minValueDate
@@ -4258,8 +4537,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueDateElement,
 
     /// [minValueDateTime] The minimum allowed value for the element. The value
+
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     FhirDateTime? minValueDateTime,
 
     /// [minValueDateTimeElement] Extensions for minValueDateTime
@@ -4267,8 +4548,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueDateTimeElement,
 
     /// [minValueInstant] The minimum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Instant? minValueInstant,
 
     /// [minValueInstantElement] Extensions for minValueInstant
@@ -4276,8 +4559,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueInstantElement,
 
     /// [minValueTime] The minimum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Time? minValueTime,
 
     /// [minValueTimeElement] Extensions for minValueTime
@@ -4285,8 +4570,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueTimeElement,
 
     /// [minValueDecimal] The minimum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Decimal? minValueDecimal,
 
     /// [minValueDecimalElement] Extensions for minValueDecimal
@@ -4294,8 +4581,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueDecimalElement,
 
     /// [minValueInteger] The minimum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Integer? minValueInteger,
 
     /// [minValueIntegerElement] Extensions for minValueInteger
@@ -4303,8 +4592,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueIntegerElement,
 
     /// [minValuePositiveInt] The minimum allowed value for the element. The
+
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
+
     PositiveInt? minValuePositiveInt,
 
     /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
@@ -4312,8 +4603,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValuePositiveIntElement,
 
     /// [minValueUnsignedInt] The minimum allowed value for the element. The
+
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
+
     UnsignedInt? minValueUnsignedInt,
 
     /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
@@ -4321,13 +4614,17 @@ class ElementDefinition with _$ElementDefinition {
         Element? minValueUnsignedIntElement,
 
     /// [minValueQuantity] The minimum allowed value for the element. The value
+
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Quantity? minValueQuantity,
 
     /// [maxValueDate] The maximum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Date? maxValueDate,
 
     /// [maxValueDateElement] Extensions for maxValueDate
@@ -4335,8 +4632,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueDateElement,
 
     /// [maxValueDateTime] The maximum allowed value for the element. The value
+
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     FhirDateTime? maxValueDateTime,
 
     /// [maxValueDateTimeElement] Extensions for maxValueDateTime
@@ -4344,8 +4643,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueDateTimeElement,
 
     /// [maxValueInstant] The maximum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Instant? maxValueInstant,
 
     /// [maxValueInstantElement] Extensions for maxValueInstant
@@ -4353,8 +4654,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueInstantElement,
 
     /// [maxValueTime] The maximum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Time? maxValueTime,
 
     /// [maxValueTimeElement] Extensions for maxValueTime
@@ -4362,8 +4665,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueTimeElement,
 
     /// [maxValueDecimal] The maximum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Decimal? maxValueDecimal,
 
     /// [maxValueDecimalElement] Extensions for maxValueDecimal
@@ -4371,8 +4676,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueDecimalElement,
 
     /// [maxValueInteger] The maximum allowed value for the element. The value is
+
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Integer? maxValueInteger,
 
     /// [maxValueIntegerElement] Extensions for maxValueInteger
@@ -4380,8 +4687,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueIntegerElement,
 
     /// [maxValuePositiveInt] The maximum allowed value for the element. The
+
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
+
     PositiveInt? maxValuePositiveInt,
 
     /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
@@ -4389,8 +4698,10 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValuePositiveIntElement,
 
     /// [maxValueUnsignedInt] The maximum allowed value for the element. The
+
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
     ///  time, decimal, integer, and Quantity.
+
     UnsignedInt? maxValueUnsignedInt,
 
     /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
@@ -4398,13 +4709,16 @@ class ElementDefinition with _$ElementDefinition {
         Element? maxValueUnsignedIntElement,
 
     /// [maxValueQuantity] The maximum allowed value for the element. The value
+
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
     ///  decimal, integer, and Quantity.
+
     Quantity? maxValueQuantity,
 
     /// [maxLength] Indicates the maximum length in characters that is permitted
     /// to be present in conformant instances and which is expected to be
     ///  supported by conformant consumers that support the element.
+
     Integer? maxLength,
 
     /// [maxLengthElement] Extensions for maxLength
@@ -4413,6 +4727,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [condition] A reference to an invariant that may make additional
     ///  statements about the cardinality or value in the instance.
+
     List<Id>? condition,
 
     /// [conditionElement] Extensions for condition
@@ -4422,13 +4737,16 @@ class ElementDefinition with _$ElementDefinition {
     /// [constraint] Formal constraints such as co-occurrence and other
     /// constraints that can be computationally evaluated within the context of
     ///  the instance.
+
     List<ElementDefinitionConstraint>? constraint,
 
     /// [mustSupport] If true, implementations that produce or consume resources
+
     /// SHALL provide "support" for the element in some meaningful way.  If false,
     /// the element may be ignored and not supported. If false, whether to
     /// populate or use the data element in any way is at the discretion of the
     ///  implementation.
+
     Boolean? mustSupport,
 
     /// [mustSupportElement] Extensions for mustSupport
@@ -4437,11 +4755,13 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [isModifier] If true, the value of this element affects the
     /// interpretation of the element or resource that contains it, and the value
+
     /// of the element cannot be ignored. Typically, this is used for status,
     /// negation and qualification codes. The effect of this is that the element
     /// cannot be ignored by systems: they SHALL either recognize the element and
     /// process it, and/or a pre-determination has been made that it is not
     ///  relevant to their particular system.
+
     Boolean? isModifier,
 
     /// [isModifierElement] Extensions for isModifier
@@ -4450,6 +4770,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [isModifierReason] Explains how that element affects the interpretation
     ///  of the resource or element that contains it.
+
     String? isModifierReason,
 
     /// [isModifierReasonElement] Extensions for isModifierReason
@@ -4458,6 +4779,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [isSummary] Whether the element should be included if a client requests a
     ///  search with the parameter _summary=true.
+
     Boolean? isSummary,
 
     /// [isSummaryElement] Extensions for isSummary
@@ -4466,10 +4788,12 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [binding] Binds to a value set if this element is coded (code, Coding,
     ///  CodeableConcept, Quantity), or the data types (string, uri).
+
     ElementDefinitionBinding? binding,
 
     /// [mapping] Identifies a concept from an external specification that
     ///  roughly corresponds to this element.
+
     List<ElementDefinitionMapping>? mapping,
   }) = _ElementDefinition;
 
@@ -4506,7 +4830,8 @@ class ElementDefinition with _$ElementDefinition {
 
 /// [ElementDefinitionSlicing] Captures constraints on each element within
 @freezed
-class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
+class ElementDefinitionSlicing extends HiveObject
+    with _$ElementDefinitionSlicing {
   /// [ElementDefinitionSlicing] Captures constraints on each element within
   ElementDefinitionSlicing._();
 
@@ -4561,10 +4886,12 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ///  allowed at the end.
   ///
   /// [rulesElement] Extensions for rules
+  @HiveType(typeId: 46)
   factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4573,6 +4900,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4588,7 +4916,8 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [discriminator] Designates which child elements are used to discriminate
     /// between the slices when processing an instance. If one or more
@@ -4596,34 +4925,41 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     /// instance data SHALL completely distinguish which slice the element in the
     /// resource matches based on the allowed values for those elements in each of
     ///  the slices.
-    List<ElementDefinitionDiscriminator>? discriminator,
+    @HiveField(3)
+        List<ElementDefinitionDiscriminator>? discriminator,
 
     /// [description] A human-readable text description of how the slicing works.
     /// If there is no discriminator, this is required to be present to provide
     /// whatever information is possible about how the slices can be
     ///  differentiated.
-    String? description,
+    @HiveField(4)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(5)
         Element? descriptionElement,
 
     /// [ordered] If the matching elements have to occur in the same order as
     ///  defined in the profile.
-    Boolean? ordered,
+    @HiveField(6)
+        Boolean? ordered,
 
     /// [orderedElement] Extensions for ordered
     @JsonKey(name: '_ordered')
+    @HiveField(7)
         Element? orderedElement,
     @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
 
-        /// [rules] Whether additional slices are allowed or not. When the slices are
-        /// ordered, profile authors can also say that additional slices are only
-        ///  allowed at the end.
+    /// [rules] Whether additional slices are allowed or not. When the slices are
+    /// ordered, profile authors can also say that additional slices are only
+    ///  allowed at the end.
+    @HiveField(8)
         ElementDefinitionSlicingRules? rules,
 
     /// [rulesElement] Extensions for rules
     @JsonKey(name: '_rules')
+    @HiveField(9)
         Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -4660,7 +4996,8 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 
 /// [ElementDefinitionDiscriminator] Captures constraints on each element
 @freezed
-class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
+class ElementDefinitionDiscriminator extends HiveObject
+    with _$ElementDefinitionDiscriminator {
   /// [ElementDefinitionDiscriminator] Captures constraints on each element
   ElementDefinitionDiscriminator._();
 
@@ -4701,10 +5038,12 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ///  which discrimination is based.
   ///
   /// [pathElement] Extensions for path
+  @HiveType(typeId: 47)
   factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4713,6 +5052,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4728,24 +5068,29 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
 
-        /// [type] How the element value is interpreted when discrimination is
-        ///  evaluated.
+    /// [type] How the element value is interpreted when discrimination is
+    ///  evaluated.
+    @HiveField(3)
         ElementDefinitionDiscriminatorType? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(4)
         Element? typeElement,
 
     /// [path] A FHIRPath expression, using [the simple subset of
     /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
     ///  which discrimination is based.
-    String? path,
+    @HiveField(5)
+        String? path,
 
     /// [pathElement] Extensions for path
     @JsonKey(name: '_path')
+    @HiveField(6)
         Element? pathElement,
   }) = _ElementDefinitionDiscriminator;
 
@@ -4783,7 +5128,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
 
 /// [ElementDefinitionBase] Captures constraints on each element within the
 @freezed
-class ElementDefinitionBase with _$ElementDefinitionBase {
+class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
   /// [ElementDefinitionBase] Captures constraints on each element within the
   ElementDefinitionBase._();
 
@@ -4828,10 +5173,11 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [max] Maximum cardinality of the base element identified by the path.
   ///
   /// [maxElement] Extensions for max
+  @HiveType(typeId: 48)
   factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4839,7 +5185,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -4854,28 +5200,28 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [path] The Path that identifies the base element - this matches the
     /// ElementDefinition.path for that element. Across FHIR, there is only one
     /// base definition of any element - that is, an element definition on a
     ///  [[[StructureDefinition]]] without a StructureDefinition.base.
-    String? path,
+    @HiveField(3) String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path') Element? pathElement,
+    @HiveField(4) @JsonKey(name: '_path') Element? pathElement,
 
     /// [min] Minimum cardinality of the base element identified by the path.
-    UnsignedInt? min,
+    @HiveField(5) UnsignedInt? min,
 
     /// [minElement] Extensions for min
-    @JsonKey(name: '_min') Element? minElement,
+    @HiveField(6) @JsonKey(name: '_min') Element? minElement,
 
     /// [max] Maximum cardinality of the base element identified by the path.
-    String? max,
+    @HiveField(7) String? max,
 
     /// [maxElement] Extensions for max
-    @JsonKey(name: '_max') Element? maxElement,
+    @HiveField(8) @JsonKey(name: '_max') Element? maxElement,
   }) = _ElementDefinitionBase;
 
   /// Produces a Yaml formatted String version of the object
@@ -4911,7 +5257,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 
 /// [ElementDefinitionType] Captures constraints on each element within the
 @freezed
-class ElementDefinitionType with _$ElementDefinitionType {
+class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
   /// [ElementDefinitionType] Captures constraints on each element within the
   ElementDefinitionType._();
 
@@ -4978,10 +5324,12 @@ class ElementDefinitionType with _$ElementDefinitionType {
   ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] Extensions for versioning
+  @HiveType(typeId: 49)
   factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4990,6 +5338,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5005,17 +5354,20 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [code] URL of Data type or Resource that is a(or the) type used for this
     /// element. References are URLs that are relative to
     /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
     /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
     ///  allowed in logical models.
-    FhirUri? code,
+    @HiveField(3)
+        FhirUri? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
+    @HiveField(4)
         Element? codeElement,
 
     /// [profile] Identifies a profile structure or implementation Guide that
@@ -5025,8 +5377,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// reference to another StructureDefinition or Implementation Guide by a
     /// canonical URL. When an implementation guide is specified, the type SHALL
     ///  conform to at least one profile defined in the implementation guide.
-    List<Canonical>? profile,
+    @HiveField(5)
+        List<Canonical>? profile,
     @JsonKey(name: '_profile')
+    @HiveField(6)
         List<Element?>? profileElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
@@ -5038,24 +5392,29 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// canonical URL. When an implementation guide is specified, the target
     /// resource SHALL conform to at least one profile defined in the
     ///  implementation guide.
-    List<Canonical>? targetProfile,
+    @HiveField(7)
+        List<Canonical>? targetProfile,
 
     /// [aggregation] If the type is a reference to another resource, how the
     /// resource is or can be aggregated - is it a contained resource, or a
     ///  reference, and if the context is a bundle, is it included in the bundle.
-    List<ElementDefinitionTypeAggregation>? aggregation,
+    @HiveField(8)
+        List<ElementDefinitionTypeAggregation>? aggregation,
 
     /// [aggregationElement] Extensions for aggregation
     @JsonKey(name: '_aggregation')
+    @HiveField(9)
         List<Element?>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
 
-        /// [versioning] Whether this reference needs to be version specific or
-        ///  version independent, or whether either can be used.
+    /// [versioning] Whether this reference needs to be version specific or
+    ///  version independent, or whether either can be used.
+    @HiveField(10)
         ElementDefinitionTypeVersioning? versioning,
 
     /// [versioningElement] Extensions for versioning
     @JsonKey(name: '_versioning')
+    @HiveField(11)
         Element? versioningElement,
   }) = _ElementDefinitionType;
 
@@ -5092,7 +5451,8 @@ class ElementDefinitionType with _$ElementDefinitionType {
 
 /// [ElementDefinitionExample] Captures constraints on each element within
 @freezed
-class ElementDefinitionExample with _$ElementDefinitionExample {
+class ElementDefinitionExample extends HiveObject
+    with _$ElementDefinitionExample {
   /// [ElementDefinitionExample] Captures constraints on each element within
   ElementDefinitionExample._();
 
@@ -5314,10 +5674,11 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   ///
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
+  @HiveType(typeId: 50)
   factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5325,7 +5686,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5340,272 +5701,284 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [label] Describes the purpose of this example amoung the set of examples.
-    String? label,
+    @HiveField(3) String? label,
 
     /// [labelElement] Extensions for label
-    @JsonKey(name: '_label') Element? labelElement,
+    @HiveField(4) @JsonKey(name: '_label') Element? labelElement,
 
     /// [valueBase64Binary] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    Base64Binary? valueBase64Binary,
+    @HiveField(5) Base64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    @HiveField(6)
+    @JsonKey(name: '_valueBase64Binary')
+        Element? valueBase64BinaryElement,
 
     /// [valueBoolean] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Boolean? valueBoolean,
+    @HiveField(7) Boolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    @HiveField(8) @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Canonical? valueCanonical,
+    @HiveField(9) Canonical? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
-    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    @HiveField(10)
+    @JsonKey(name: '_valueCanonical')
+        Element? valueCanonicalElement,
 
     /// [valueCode] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Code? valueCode,
+    @HiveField(11) Code? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    @HiveField(12) @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Date? valueDate,
+    @HiveField(13) Date? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    @HiveField(14) @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueDateTime] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    FhirDateTime? valueDateTime,
+    @HiveField(15) FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    @HiveField(16)
+    @JsonKey(name: '_valueDateTime')
+        Element? valueDateTimeElement,
 
     /// [valueDecimal] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Decimal? valueDecimal,
+    @HiveField(17) Decimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    @HiveField(18) @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Id? valueId,
+    @HiveField(19) Id? valueId,
 
     /// [valueIdElement] Extensions for valueId
-    @JsonKey(name: '_valueId') Element? valueIdElement,
+    @HiveField(20) @JsonKey(name: '_valueId') Element? valueIdElement,
 
     /// [valueInstant] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Instant? valueInstant,
+    @HiveField(21) Instant? valueInstant,
 
     /// [valueInstantElement] Extensions for valueInstant
-    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    @HiveField(22) @JsonKey(name: '_valueInstant') Element? valueInstantElement,
 
     /// [valueInteger] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Integer? valueInteger,
+    @HiveField(23) Integer? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    @HiveField(24) @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueMarkdown] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Markdown? valueMarkdown,
+    @HiveField(25) Markdown? valueMarkdown,
 
     /// [valueMarkdownElement] Extensions for valueMarkdown
-    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    @HiveField(26)
+    @JsonKey(name: '_valueMarkdown')
+        Element? valueMarkdownElement,
 
     /// [valueOid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Oid? valueOid,
+    @HiveField(27) Oid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
-    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    @HiveField(28) @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    PositiveInt? valuePositiveInt,
+    @HiveField(29) PositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
-    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    @HiveField(30)
+    @JsonKey(name: '_valuePositiveInt')
+        Element? valuePositiveIntElement,
 
     /// [valueString] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    String? valueString,
+    @HiveField(31) String? valueString,
 
     /// [valueStringElement] Extensions for valueString
-    @JsonKey(name: '_valueString') Element? valueStringElement,
+    @HiveField(32) @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Time? valueTime,
+    @HiveField(33) Time? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    @HiveField(34) @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    UnsignedInt? valueUnsignedInt,
+    @HiveField(35) UnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
-    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    @HiveField(36)
+    @JsonKey(name: '_valueUnsignedInt')
+        Element? valueUnsignedIntElement,
 
     /// [valueUri] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    FhirUri? valueUri,
+    @HiveField(37) FhirUri? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    @HiveField(38) @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueUrl] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    FhirUrl? valueUrl,
+    @HiveField(39) FhirUrl? valueUrl,
 
     /// [valueUrlElement] Extensions for valueUrl
-    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    @HiveField(40) @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Uuid? valueUuid,
+    @HiveField(41) Uuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
-    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    @HiveField(42) @JsonKey(name: '_valueUuid') Element? valueUuidElement,
 
     /// [valueAddress] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Address? valueAddress,
+    @HiveField(43) Address? valueAddress,
 
     /// [valueAge] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Age? valueAge,
+    @HiveField(44) Age? valueAge,
 
     /// [valueAnnotation] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Annotation? valueAnnotation,
+    @HiveField(45) Annotation? valueAnnotation,
 
     /// [valueAttachment] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Attachment? valueAttachment,
+    @HiveField(46) Attachment? valueAttachment,
 
     /// [valueCodeableConcept] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    CodeableConcept? valueCodeableConcept,
-    CodeableReference? valueCodeableReference,
+    @HiveField(47) CodeableConcept? valueCodeableConcept,
+    @HiveField(48) CodeableReference? valueCodeableReference,
 
     /// [valueCoding] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Coding? valueCoding,
+    @HiveField(49) Coding? valueCoding,
 
     /// [valueContactPoint] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    ContactPoint? valueContactPoint,
+    @HiveField(50) ContactPoint? valueContactPoint,
 
     /// [valueCount] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Count? valueCount,
+    @HiveField(51) Count? valueCount,
 
     /// [valueDistance] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Distance? valueDistance,
+    @HiveField(52) Distance? valueDistance,
 
     /// [valueDuration] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    FhirDuration? valueDuration,
+    @HiveField(53) FhirDuration? valueDuration,
 
     /// [valueHumanName] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    HumanName? valueHumanName,
+    @HiveField(54) HumanName? valueHumanName,
 
     /// [valueIdentifier] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Identifier? valueIdentifier,
+    @HiveField(55) Identifier? valueIdentifier,
 
     /// [valueMoney] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Money? valueMoney,
+    @HiveField(56) Money? valueMoney,
 
     /// [valuePeriod] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Period? valuePeriod,
+    @HiveField(57) Period? valuePeriod,
 
     /// [valueQuantity] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Quantity? valueQuantity,
+    @HiveField(58) Quantity? valueQuantity,
 
     /// [valueRange] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Range? valueRange,
+    @HiveField(59) Range? valueRange,
 
     /// [valueRatio] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Ratio? valueRatio,
-    RatioRange? valueRatioRange,
+    @HiveField(60) Ratio? valueRatio,
+    @HiveField(61) RatioRange? valueRatioRange,
 
     /// [valueReference] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Reference? valueReference,
+    @HiveField(62) Reference? valueReference,
 
     /// [valueSampledData] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    SampledData? valueSampledData,
+    @HiveField(63) SampledData? valueSampledData,
 
     /// [valueSignature] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Signature? valueSignature,
+    @HiveField(64) Signature? valueSignature,
 
     /// [valueTiming] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Timing? valueTiming,
+    @HiveField(65) Timing? valueTiming,
 
     /// [valueContactDetail] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    ContactDetail? valueContactDetail,
+    @HiveField(66) ContactDetail? valueContactDetail,
 
     /// [valueContributor] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Contributor? valueContributor,
+    @HiveField(67) Contributor? valueContributor,
 
     /// [valueDataRequirement] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    DataRequirement? valueDataRequirement,
+    @HiveField(68) DataRequirement? valueDataRequirement,
 
     /// [valueExpression] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    Expression? valueExpression,
+    @HiveField(69) Expression? valueExpression,
 
     /// [valueParameterDefinition] The actual value for the element, which must
     ///  be one of the types allowed for this element.
-    ParameterDefinition? valueParameterDefinition,
+    @HiveField(70) ParameterDefinition? valueParameterDefinition,
 
     /// [valueRelatedArtifact] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    RelatedArtifact? valueRelatedArtifact,
+    @HiveField(71) RelatedArtifact? valueRelatedArtifact,
 
     /// [valueTriggerDefinition] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    TriggerDefinition? valueTriggerDefinition,
+    @HiveField(72) TriggerDefinition? valueTriggerDefinition,
 
     /// [valueUsageContext] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    UsageContext? valueUsageContext,
+    @HiveField(73) UsageContext? valueUsageContext,
 
     /// [valueDosage] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Dosage? valueDosage,
+    @HiveField(74) Dosage? valueDosage,
 
     /// [valueMeta] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Meta? valueMeta,
+    @HiveField(75) Meta? valueMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object
@@ -5641,7 +6014,8 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
 /// [ElementDefinitionConstraint] Captures constraints on each element
 @freezed
-class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
+class ElementDefinitionConstraint extends HiveObject
+    with _$ElementDefinitionConstraint {
   /// [ElementDefinitionConstraint] Captures constraints on each element
   ElementDefinitionConstraint._();
 
@@ -5705,10 +6079,12 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ///
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
+  @HiveType(typeId: 51)
   factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5717,6 +6093,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5732,61 +6109,75 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
 
     /// [key] Allows identification of which elements have their cardinalities
     /// impacted by the constraint.  Will not be referenced for constraints that
     ///  do not affect cardinality.
-    Id? key,
+    @HiveField(3)
+        Id? key,
 
     /// [keyElement] Extensions for key
     @JsonKey(name: '_key')
+    @HiveField(4)
         Element? keyElement,
 
     /// [requirements] Description of why this constraint is necessary or
     ///  appropriate.
-    String? requirements,
+    @HiveField(5)
+        String? requirements,
 
     /// [requirementsElement] Extensions for requirements
     @JsonKey(name: '_requirements')
+    @HiveField(6)
         Element? requirementsElement,
     @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
 
-        /// [severity] Identifies the impact constraint violation has on the
-        ///  conformance of the instance.
+    /// [severity] Identifies the impact constraint violation has on the
+    ///  conformance of the instance.
+    @HiveField(7)
         ElementDefinitionConstraintSeverity? severity,
 
     /// [severityElement] Extensions for severity
     @JsonKey(name: '_severity')
+    @HiveField(8)
         Element? severityElement,
 
     /// [human] Text that can be used to describe the constraint in messages
     ///  identifying that the constraint has been violated.
-    String? human,
+    @HiveField(9)
+        String? human,
 
     /// [humanElement] Extensions for human
     @JsonKey(name: '_human')
+    @HiveField(10)
         Element? humanElement,
 
     /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
     ///  can be executed to see if this constraint is met.
-    String? expression,
+    @HiveField(11)
+        String? expression,
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression')
+    @HiveField(12)
         Element? expressionElement,
 
     /// [xpath] An XPath expression of constraint that can be executed to see if
     ///  this constraint is met.
-    String? xpath,
+    @HiveField(13)
+        String? xpath,
 
     /// [xpathElement] Extensions for xpath
     @JsonKey(name: '_xpath')
+    @HiveField(14)
         Element? xpathElement,
 
     /// [source] A reference to the original source of the constraint, for
     ///  traceability purposes.
-    Canonical? source,
+    @HiveField(15)
+        Canonical? source,
   }) = _ElementDefinitionConstraint;
 
   /// Produces a Yaml formatted String version of the object
@@ -5822,7 +6213,8 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 
 /// [ElementDefinitionBinding] Captures constraints on each element within
 @freezed
-class ElementDefinitionBinding with _$ElementDefinitionBinding {
+class ElementDefinitionBinding extends HiveObject
+    with _$ElementDefinitionBinding {
   /// [ElementDefinitionBinding] Captures constraints on each element within
   ElementDefinitionBinding._();
 
@@ -5865,10 +6257,12 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ///
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
+  @HiveType(typeId: 52)
   factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0)
+        String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5877,6 +6271,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5892,28 +6287,34 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2)
+        List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
 
-        /// [strength] Indicates the degree of conformance expectations associated
-        /// with this binding - that is, the degree to which the provided value set
-        ///  must be adhered to in the instances.
+    /// [strength] Indicates the degree of conformance expectations associated
+    /// with this binding - that is, the degree to which the provided value set
+    ///  must be adhered to in the instances.
+    @HiveField(3)
         ElementDefinitionBindingStrength? strength,
 
     /// [strengthElement] Extensions for strength
     @JsonKey(name: '_strength')
+    @HiveField(4)
         Element? strengthElement,
 
     /// [description] Describes the intended use of this particular set of codes.
-    String? description,
+    @HiveField(5)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(6)
         Element? descriptionElement,
 
     /// [valueSet] Refers to the value set that identifies the set of codes the
     ///  binding refers to.
-    Canonical? valueSet,
+    @HiveField(7)
+        Canonical? valueSet,
   }) = _ElementDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -5949,7 +6350,8 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 
 /// [ElementDefinitionMapping] Captures constraints on each element within
 @freezed
-class ElementDefinitionMapping with _$ElementDefinitionMapping {
+class ElementDefinitionMapping extends HiveObject
+    with _$ElementDefinitionMapping {
   /// [ElementDefinitionMapping] Captures constraints on each element within
   ElementDefinitionMapping._();
 
@@ -5997,10 +6399,11 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// [comment] Comments that provide information about the mapping or its use.
   ///
   /// [commentElement] Extensions for comment
+  @HiveType(typeId: 53)
   factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6008,7 +6411,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -6023,33 +6426,33 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.
-    Id? identity,
+    @HiveField(3) Id? identity,
 
     /// [identityElement] Extensions for identity
-    @JsonKey(name: '_identity') Element? identityElement,
+    @HiveField(4) @JsonKey(name: '_identity') Element? identityElement,
 
     /// [language] Identifies the computable language in which mapping.map is
     ///  expressed.
-    Code? language,
+    @HiveField(5) Code? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language') Element? languageElement,
+    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
 
     /// [map] Expresses what part of the target specification corresponds to this
     ///  element.
-    String? map,
+    @HiveField(7) String? map,
 
     /// [mapElement] Extensions for map
-    @JsonKey(name: '_map') Element? mapElement,
+    @HiveField(8) @JsonKey(name: '_map') Element? mapElement,
 
     /// [comment] Comments that provide information about the mapping or its use.
-    String? comment,
+    @HiveField(9) String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment') Element? commentElement,
+    @HiveField(10) @JsonKey(name: '_comment') Element? commentElement,
   }) = _ElementDefinitionMapping;
 
   /// Produces a Yaml formatted String version of the object

@@ -3,6 +3,698 @@
 part of 'metadata_types.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class ContactDetailAdapter extends TypeAdapter<_$_ContactDetail> {
+  @override
+  final int typeId = 0;
+
+  @override
+  _$_ContactDetail read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ContactDetail(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      name: fields[2] as String?,
+      nameElement: fields[3] as Element?,
+      telecom: (fields[4] as List?)?.cast<ContactPoint>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ContactDetail obj) {
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.name)
+      ..writeByte(3)
+      ..write(obj.nameElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(4)
+      ..write(obj.telecom);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ContactDetailAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ContributorAdapter extends TypeAdapter<_$_Contributor> {
+  @override
+  final int typeId = 1;
+
+  @override
+  _$_Contributor read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Contributor(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      type: fields[2] as ContributorType?,
+      typeElement: fields[3] as Element?,
+      name: fields[4] as String?,
+      nameElement: fields[5] as Element?,
+      contact: (fields[6] as List?)?.cast<ContactDetail>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Contributor obj) {
+    writer
+      ..writeByte(7)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.type)
+      ..writeByte(3)
+      ..write(obj.typeElement)
+      ..writeByte(4)
+      ..write(obj.name)
+      ..writeByte(5)
+      ..write(obj.nameElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(6)
+      ..write(obj.contact);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ContributorAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DataRequirementAdapter extends TypeAdapter<_$_DataRequirement> {
+  @override
+  final int typeId = 2;
+
+  @override
+  _$_DataRequirement read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DataRequirement(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      type: fields[2] as Code?,
+      typeElement: fields[3] as Element?,
+      profile: (fields[4] as List?)?.cast<Canonical>(),
+      subjectCodeableConcept: fields[5] as CodeableConcept?,
+      subjectReference: fields[6] as Reference?,
+      mustSupport: (fields[7] as List?)?.cast<String>(),
+      mustSupportElement: (fields[8] as List?)?.cast<Element?>(),
+      codeFilter: (fields[9] as List?)?.cast<DataRequirementCodeFilter>(),
+      dateFilter: (fields[11] as List?)?.cast<DataRequirementDateFilter>(),
+      limit: fields[12] as PositiveInt?,
+      limitElement: fields[13] as Element?,
+      sort: (fields[14] as List?)?.cast<DataRequirementSort>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DataRequirement obj) {
+    writer
+      ..writeByte(14)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.type)
+      ..writeByte(3)
+      ..write(obj.typeElement)
+      ..writeByte(5)
+      ..write(obj.subjectCodeableConcept)
+      ..writeByte(6)
+      ..write(obj.subjectReference)
+      ..writeByte(12)
+      ..write(obj.limit)
+      ..writeByte(13)
+      ..write(obj.limitElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(4)
+      ..write(obj.profile)
+      ..writeByte(7)
+      ..write(obj.mustSupport)
+      ..writeByte(8)
+      ..write(obj.mustSupportElement)
+      ..writeByte(9)
+      ..write(obj.codeFilter)
+      ..writeByte(11)
+      ..write(obj.dateFilter)
+      ..writeByte(14)
+      ..write(obj.sort);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DataRequirementAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DataRequirementCodeFilterAdapter
+    extends TypeAdapter<_$_DataRequirementCodeFilter> {
+  @override
+  final int typeId = 3;
+
+  @override
+  _$_DataRequirementCodeFilter read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DataRequirementCodeFilter(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      path: fields[3] as String?,
+      pathElement: fields[5] as Element?,
+      searchParam: fields[6] as String?,
+      searchParamElement: fields[7] as Element?,
+      valueSet: fields[8] as Canonical?,
+      code: (fields[9] as List?)?.cast<Coding>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DataRequirementCodeFilter obj) {
+    writer
+      ..writeByte(9)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.path)
+      ..writeByte(5)
+      ..write(obj.pathElement)
+      ..writeByte(6)
+      ..write(obj.searchParam)
+      ..writeByte(7)
+      ..write(obj.searchParamElement)
+      ..writeByte(8)
+      ..write(obj.valueSet)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension)
+      ..writeByte(9)
+      ..write(obj.code);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DataRequirementCodeFilterAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DataRequirementDateFilterAdapter
+    extends TypeAdapter<_$_DataRequirementDateFilter> {
+  @override
+  final int typeId = 4;
+
+  @override
+  _$_DataRequirementDateFilter read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DataRequirementDateFilter(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      path: fields[3] as String?,
+      pathElement: fields[5] as Element?,
+      searchParam: fields[6] as String?,
+      searchParamElement: fields[7] as Element?,
+      valueDateTime: fields[8] as FhirDateTime?,
+      valueDateTimeElement: fields[9] as Element?,
+      valuePeriod: fields[10] as Period?,
+      valueDuration: fields[11] as FhirDuration?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DataRequirementDateFilter obj) {
+    writer
+      ..writeByte(11)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.path)
+      ..writeByte(5)
+      ..write(obj.pathElement)
+      ..writeByte(6)
+      ..write(obj.searchParam)
+      ..writeByte(7)
+      ..write(obj.searchParamElement)
+      ..writeByte(8)
+      ..write(obj.valueDateTime)
+      ..writeByte(9)
+      ..write(obj.valueDateTimeElement)
+      ..writeByte(10)
+      ..write(obj.valuePeriod)
+      ..writeByte(11)
+      ..write(obj.valueDuration)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DataRequirementDateFilterAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DataRequirementSortAdapter extends TypeAdapter<_$_DataRequirementSort> {
+  @override
+  final int typeId = 5;
+
+  @override
+  _$_DataRequirementSort read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DataRequirementSort(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[2] as List?)?.cast<FhirExtension>(),
+      path: fields[3] as String?,
+      pathElement: fields[4] as Element?,
+      direction: fields[5] as DataRequirementSortDirection?,
+      directionElement: fields[6] as Element?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DataRequirementSort obj) {
+    writer
+      ..writeByte(7)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(3)
+      ..write(obj.path)
+      ..writeByte(4)
+      ..write(obj.pathElement)
+      ..writeByte(5)
+      ..write(obj.direction)
+      ..writeByte(6)
+      ..write(obj.directionElement)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(2)
+      ..write(obj.modifierExtension);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DataRequirementSortAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ParameterDefinitionAdapter extends TypeAdapter<_$_ParameterDefinition> {
+  @override
+  final int typeId = 6;
+
+  @override
+  _$_ParameterDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ParameterDefinition(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      name: fields[2] as Code?,
+      nameElement: fields[3] as Element?,
+      use: fields[4] as Code?,
+      useElement: fields[5] as Element?,
+      min: fields[6] as Integer?,
+      minElement: fields[7] as Element?,
+      max: fields[8] as String?,
+      maxElement: fields[9] as Element?,
+      documentation: fields[10] as String?,
+      documentationElement: fields[11] as Element?,
+      type: fields[12] as Code?,
+      typeElement: fields[13] as Element?,
+      profile: fields[14] as Canonical?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ParameterDefinition obj) {
+    writer
+      ..writeByte(15)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.name)
+      ..writeByte(3)
+      ..write(obj.nameElement)
+      ..writeByte(4)
+      ..write(obj.use)
+      ..writeByte(5)
+      ..write(obj.useElement)
+      ..writeByte(6)
+      ..write(obj.min)
+      ..writeByte(7)
+      ..write(obj.minElement)
+      ..writeByte(8)
+      ..write(obj.max)
+      ..writeByte(9)
+      ..write(obj.maxElement)
+      ..writeByte(10)
+      ..write(obj.documentation)
+      ..writeByte(11)
+      ..write(obj.documentationElement)
+      ..writeByte(12)
+      ..write(obj.type)
+      ..writeByte(13)
+      ..write(obj.typeElement)
+      ..writeByte(14)
+      ..write(obj.profile)
+      ..writeByte(1)
+      ..write(obj.extension_);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ParameterDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class RelatedArtifactAdapter extends TypeAdapter<_$_RelatedArtifact> {
+  @override
+  final int typeId = 7;
+
+  @override
+  _$_RelatedArtifact read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_RelatedArtifact(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      type: fields[2] as RelatedArtifactType?,
+      typeElement: fields[3] as Element?,
+      label: fields[4] as String?,
+      labelElement: fields[5] as Element?,
+      display: fields[6] as String?,
+      displayElement: fields[7] as Element?,
+      citation: fields[8] as Markdown?,
+      citationElement: fields[9] as Element?,
+      url: fields[10] as FhirUrl?,
+      urlElement: fields[11] as Element?,
+      document: fields[12] as Attachment?,
+      resource: fields[13] as Canonical?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_RelatedArtifact obj) {
+    writer
+      ..writeByte(14)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.type)
+      ..writeByte(3)
+      ..write(obj.typeElement)
+      ..writeByte(4)
+      ..write(obj.label)
+      ..writeByte(5)
+      ..write(obj.labelElement)
+      ..writeByte(6)
+      ..write(obj.display)
+      ..writeByte(7)
+      ..write(obj.displayElement)
+      ..writeByte(8)
+      ..write(obj.citation)
+      ..writeByte(9)
+      ..write(obj.citationElement)
+      ..writeByte(10)
+      ..write(obj.url)
+      ..writeByte(11)
+      ..write(obj.urlElement)
+      ..writeByte(12)
+      ..write(obj.document)
+      ..writeByte(13)
+      ..write(obj.resource)
+      ..writeByte(1)
+      ..write(obj.extension_);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RelatedArtifactAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class TriggerDefinitionAdapter extends TypeAdapter<_$_TriggerDefinition> {
+  @override
+  final int typeId = 8;
+
+  @override
+  _$_TriggerDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_TriggerDefinition(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      type: fields[2] as TriggerDefinitionType?,
+      typeElement: fields[3] as Element?,
+      name: fields[4] as String?,
+      nameElement: fields[5] as Element?,
+      timingTiming: fields[6] as Timing?,
+      timingReference: fields[7] as Reference?,
+      timingDate: fields[8] as Date?,
+      timingDateElement: fields[9] as Element?,
+      timingDateTime: fields[10] as FhirDateTime?,
+      timingDateTimeElement: fields[11] as Element?,
+      data: (fields[12] as List?)?.cast<DataRequirement>(),
+      condition: fields[13] as Expression?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_TriggerDefinition obj) {
+    writer
+      ..writeByte(14)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.type)
+      ..writeByte(3)
+      ..write(obj.typeElement)
+      ..writeByte(4)
+      ..write(obj.name)
+      ..writeByte(5)
+      ..write(obj.nameElement)
+      ..writeByte(6)
+      ..write(obj.timingTiming)
+      ..writeByte(7)
+      ..write(obj.timingReference)
+      ..writeByte(8)
+      ..write(obj.timingDate)
+      ..writeByte(9)
+      ..write(obj.timingDateElement)
+      ..writeByte(10)
+      ..write(obj.timingDateTime)
+      ..writeByte(11)
+      ..write(obj.timingDateTimeElement)
+      ..writeByte(13)
+      ..write(obj.condition)
+      ..writeByte(1)
+      ..write(obj.extension_)
+      ..writeByte(12)
+      ..write(obj.data);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TriggerDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class UsageContextAdapter extends TypeAdapter<_$_UsageContext> {
+  @override
+  final int typeId = 9;
+
+  @override
+  _$_UsageContext read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_UsageContext(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      code: fields[2] as Coding,
+      valueCodeableConcept: fields[3] as CodeableConcept?,
+      valueQuantity: fields[4] as Quantity?,
+      valueRange: fields[5] as Range?,
+      valueReference: fields[6] as Reference?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_UsageContext obj) {
+    writer
+      ..writeByte(7)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.code)
+      ..writeByte(3)
+      ..write(obj.valueCodeableConcept)
+      ..writeByte(4)
+      ..write(obj.valueQuantity)
+      ..writeByte(5)
+      ..write(obj.valueRange)
+      ..writeByte(6)
+      ..write(obj.valueReference)
+      ..writeByte(1)
+      ..write(obj.extension_);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is UsageContextAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ExpressionAdapter extends TypeAdapter<_$_Expression> {
+  @override
+  final int typeId = 10;
+
+  @override
+  _$_Expression read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Expression(
+      id: fields[0] as String?,
+      extension_: (fields[1] as List?)?.cast<FhirExtension>(),
+      description: fields[2] as String?,
+      descriptionElement: fields[3] as Element?,
+      name: fields[4] as Id?,
+      nameElement: fields[5] as Element?,
+      language: fields[6] as ExpressionLanguage?,
+      languageElement: fields[7] as Element?,
+      expression: fields[8] as String?,
+      expressionElement: fields[9] as Element?,
+      reference: fields[10] as FhirUri?,
+      referenceElement: fields[11] as Element?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Expression obj) {
+    writer
+      ..writeByte(12)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.description)
+      ..writeByte(3)
+      ..write(obj.descriptionElement)
+      ..writeByte(4)
+      ..write(obj.name)
+      ..writeByte(5)
+      ..write(obj.nameElement)
+      ..writeByte(6)
+      ..write(obj.language)
+      ..writeByte(7)
+      ..write(obj.languageElement)
+      ..writeByte(8)
+      ..write(obj.expression)
+      ..writeByte(9)
+      ..write(obj.expressionElement)
+      ..writeByte(10)
+      ..write(obj.reference)
+      ..writeByte(11)
+      ..write(obj.referenceElement)
+      ..writeByte(1)
+      ..write(obj.extension_);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExpressionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
