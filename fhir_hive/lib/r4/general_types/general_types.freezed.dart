@@ -2592,6 +2592,7 @@ class __$$_CodingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 1)
 class _$_Coding extends _Coding {
   _$_Coding(
       {this.id,

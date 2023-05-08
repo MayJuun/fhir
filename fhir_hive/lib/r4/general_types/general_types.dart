@@ -464,7 +464,7 @@ class CodeableConcept extends HiveObject with _$CodeableConcept {
 
 /// [Coding] A reference to a code defined by a terminology system.
 @freezed
-class Coding with _$Coding {
+class Coding extends HiveObject with _$Coding {
   /// [Coding] A reference to a code defined by a terminology system.
   Coding._();
 
@@ -509,6 +509,7 @@ class Coding with _$Coding {
   ///  e.g. off a pick list of available items (codes or displays).
   ///
   /// [userSelectedElement] Extensions for userSelected
+  @HiveType(typeId: 1)
   factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.

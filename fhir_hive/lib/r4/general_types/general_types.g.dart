@@ -52,6 +52,35 @@ class CodeableConceptAdapter extends TypeAdapter<_$_CodeableConcept> {
           typeId == other.typeId;
 }
 
+class CodingAdapter extends TypeAdapter<_$_Coding> {
+  @override
+  final int typeId = 1;
+
+  @override
+  _$_Coding read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Coding();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Coding obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CodingAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
