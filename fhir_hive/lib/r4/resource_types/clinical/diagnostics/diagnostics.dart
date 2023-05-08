@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -13,7 +14,7 @@ part 'diagnostics.g.dart';
 
 /// [BodyStructure] Record details about an anatomical structure.  This
 @freezed
-class BodyStructure with Resource, _$BodyStructure {
+class BodyStructure extends HiveObject with Resource, _$BodyStructure {
   /// [BodyStructure] Record details about an anatomical structure.  This
   BodyStructure._();
 
@@ -99,37 +100,45 @@ class BodyStructure with Resource, _$BodyStructure {
   /// [image] Image or images used to identify a location.
   ///
   /// [patient] The person to which the body site belongs.
+  @HiveType(typeId: 184)
   factory BodyStructure({
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
 
-        /// [resourceType] This is a BodyStructure resource
+    /// [resourceType] This is a BodyStructure resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -138,13 +147,15 @@ class BodyStructure with Resource, _$BodyStructure {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -153,6 +164,7 @@ class BodyStructure with Resource, _$BodyStructure {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -168,45 +180,58 @@ class BodyStructure with Resource, _$BodyStructure {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for this instance of the anatomical structure.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Whether this body site is in active use.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [morphology] The kind of structure being represented by the body
     /// structure at `BodyStructure.location`.  This can define both normal and
     ///  abnormal morphologies.
-    CodeableConcept? morphology,
+    @HiveField(14)
+        CodeableConcept? morphology,
 
     /// [location] The anatomical location or region of the specimen, lesion, or
     ///  body structure.
-    CodeableConcept? location,
+    @HiveField(15)
+        CodeableConcept? location,
 
     /// [locationQualifier] Qualifier to refine the anatomical location.  These
+    @HiveField(16)
+
     /// include qualifiers for laterality, relative location, directionality,
     ///  number, and plane.
-    List<CodeableConcept>? locationQualifier,
+    @HiveField(17)
+        List<CodeableConcept>? locationQualifier,
 
     /// [description] A summary, characterization or explanation of the body
     ///  structure.
-    String? description,
+    @HiveField(18)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(19)
         Element? descriptionElement,
 
     /// [image] Image or images used to identify a location.
-    List<Attachment>? image,
+    @HiveField(20)
+        List<Attachment>? image,
 
     /// [patient] The person to which the body site belongs.
-    required Reference patient,
+    @HiveField(21)
+        required Reference patient,
   }) = _BodyStructure;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -239,7 +264,7 @@ class BodyStructure with Resource, _$BodyStructure {
 
 /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
 @freezed
-class DiagnosticReport with Resource, _$DiagnosticReport {
+class DiagnosticReport extends HiveObject with Resource, _$DiagnosticReport {
   /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
   DiagnosticReport._();
 
@@ -378,37 +403,45 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// [presentedForm] Rich text representation of the entire result as issued
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
+  @HiveType(typeId: 185)
   factory DiagnosticReport({
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
 
-        /// [resourceType] This is a DiagnosticReport resource
+    /// [resourceType] This is a DiagnosticReport resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -417,13 +450,15 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -432,6 +467,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -447,110 +483,136 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this report by the performer or
     ///  other systems.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [basedOn] Details concerning a service requested.
-    List<Reference>? basedOn,
+    @HiveField(12)
+        List<Reference>? basedOn,
 
     /// [status] The status of the diagnostic report.
-    Code? status,
+    @HiveField(13)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(14)
         Element? statusElement,
 
     /// [category] A code that classifies the clinical discipline, department or
+    @HiveField(15)
+
     /// diagnostic service that created the report (e.g. cardiology, biochemistry,
     /// hematology, MRI). This is used for searching, sorting and display
     ///  purposes.
-    List<CodeableConcept>? category,
+    @HiveField(16)
+        List<CodeableConcept>? category,
 
     /// [code] A code or name that describes this diagnostic report.
-    required CodeableConcept code,
+    @HiveField(17)
+        required CodeableConcept code,
 
     /// [subject] The subject of the report. Usually, but not always, this is a
     /// patient. However, diagnostic services also perform analyses on specimens
     ///  collected from a variety of other sources.
-    Reference? subject,
+    @HiveField(18)
+        Reference? subject,
 
     /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
     ///  interaction) which this DiagnosticReport is about.
-    Reference? encounter,
+    @HiveField(19)
+        Reference? encounter,
 
     /// [effectiveDateTime] The time or time-period the observed values are
     /// related to. When the subject of the report is a patient, this is usually
     /// either the time of the procedure or of specimen collection(s), but very
     /// often the source of the date/time is not known, only the date/time
     ///  itself.
-    FhirDateTime? effectiveDateTime,
+    @HiveField(20)
+        FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
     @JsonKey(name: '_effectiveDateTime')
+    @HiveField(21)
         Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The time or time-period the observed values are related
     /// to. When the subject of the report is a patient, this is usually either
     /// the time of the procedure or of specimen collection(s), but very often the
     ///  source of the date/time is not known, only the date/time itself.
-    Period? effectivePeriod,
+    @HiveField(22)
+        Period? effectivePeriod,
 
     /// [issued] The date and time that this version of the report was made
     /// available to providers, typically after the report was reviewed and
     ///  verified.
-    Instant? issued,
+    @HiveField(23)
+        Instant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
+    @HiveField(24)
         Element? issuedElement,
 
     /// [performer] The diagnostic service that is responsible for issuing the
     ///  report.
-    List<Reference>? performer,
+    @HiveField(25)
+        List<Reference>? performer,
 
     /// [resultsInterpreter] The practitioner or organization that is responsible
     ///  for the report's conclusions and interpretations.
-    List<Reference>? resultsInterpreter,
+    @HiveField(26)
+        List<Reference>? resultsInterpreter,
 
     /// [specimen] Details about the specimens on which this diagnostic report is
     ///  based.
-    List<Reference>? specimen,
+    @HiveField(27)
+        List<Reference>? specimen,
 
     /// [result] [Observations](observation.html)  that are part of this
     ///  diagnostic report.
-    List<Reference>? result,
+    @HiveField(28)
+        List<Reference>? result,
 
     /// [imagingStudy] One or more links to full details of any imaging performed
     /// during the diagnostic investigation. Typically, this is imaging performed
     /// by DICOM enabled modalities, but this is not required. A fully enabled
     /// PACS viewer can use this information to provide views of the source
     ///  images.
-    List<Reference>? imagingStudy,
+    @HiveField(29)
+        List<Reference>? imagingStudy,
 
     /// [media] A list of key images associated with this report. The images are
     /// generally created during the diagnostic process, and may be directly of
     ///  the patient, or of treated specimens (i.e. slides of interest).
-    List<DiagnosticReportMedia>? media,
+    @HiveField(30)
+        List<DiagnosticReportMedia>? media,
 
     /// [conclusion] Concise and clinically contextualized summary conclusion
     ///  (interpretation/impression) of the diagnostic report.
-    String? conclusion,
+    @HiveField(31)
+        String? conclusion,
 
     /// [conclusionElement] Extensions for conclusion
     @JsonKey(name: '_conclusion')
+    @HiveField(32)
         Element? conclusionElement,
 
     /// [conclusionCode] One or more codes that represent the summary conclusion
     ///  (interpretation/impression) of the diagnostic report.
-    List<CodeableConcept>? conclusionCode,
+    @HiveField(33)
+        List<CodeableConcept>? conclusionCode,
 
     /// [presentedForm] Rich text representation of the entire result as issued
     /// by the diagnostic service. Multiple formats are allowed but they SHALL be
     ///  semantically equivalent.
-    List<Attachment>? presentedForm,
+    @HiveField(34)
+        List<Attachment>? presentedForm,
   }) = _DiagnosticReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -625,10 +687,11 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// [commentElement] Extensions for comment
   ///
   /// [link] Reference to the image source.
+  @HiveType(typeId: 186)
   factory DiagnosticReportMedia({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @HiveField(0) String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -636,7 +699,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -651,18 +714,18 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(2) List<FhirExtension>? modifierExtension,
 
     /// [comment] A comment about the image. Typically, this is used to provide
     /// an explanation for why the image is included, or to draw the viewer's
     ///  attention to important features.
-    String? comment,
+    @HiveField(3) String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment') Element? commentElement,
+    @HiveField(4) @JsonKey(name: '_comment') Element? commentElement,
 
     /// [link] Reference to the image source.
-    required Reference link,
+    @HiveField(5) required Reference link,
   }) = _DiagnosticReportMedia;
 
   /// Produces a Yaml formatted String version of the object
@@ -698,7 +761,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 
 /// [ImagingStudy] Representation of the content produced in a DICOM imaging
 @freezed
-class ImagingStudy with Resource, _$ImagingStudy {
+class ImagingStudy extends HiveObject with Resource, _$ImagingStudy {
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   ImagingStudy._();
 
@@ -835,37 +898,45 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// [descriptionElement] Extensions for description
   ///
   /// [series] Each study has one or more series of images or other content.
+  @HiveType(typeId: 187)
   factory ImagingStudy({
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
 
-        /// [resourceType] This is a ImagingStudy resource
+    /// [resourceType] This is a ImagingStudy resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -874,13 +945,15 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -889,6 +962,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -904,111 +978,137 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers for the ImagingStudy such as DICOM Study
     ///  Instance UID, and Accession Number.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The current state of the ImagingStudy.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [modality] A list of all the series.modality values that are actual
     /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
     ///  set OID 1.2.840.10008.6.1.19).
-    List<Coding>? modality,
+    @HiveField(14)
+        List<Coding>? modality,
 
     /// [subject] The subject, typically a patient, of the imaging study.
-    required Reference subject,
+    @HiveField(15)
+        required Reference subject,
 
     /// [encounter] The healthcare event (e.g. a patient and healthcare provider
     ///  interaction) during which this ImagingStudy is made.
-    Reference? encounter,
+    @HiveField(16)
+        Reference? encounter,
 
     /// [started] Date and time the study started.
-    FhirDateTime? started,
+    @HiveField(17)
+        FhirDateTime? started,
 
     /// [startedElement] Extensions for started
     @JsonKey(name: '_started')
+    @HiveField(18)
         Element? startedElement,
 
     /// [basedOn] A list of the diagnostic requests that resulted in this imaging
     ///  study being performed.
-    List<Reference>? basedOn,
+    @HiveField(19)
+        List<Reference>? basedOn,
 
     /// [referrer] The requesting/referring physician.
-    Reference? referrer,
+    @HiveField(20)
+        Reference? referrer,
 
     /// [interpreter] Who read the study and interpreted the images or other
     ///  content.
-    List<Reference>? interpreter,
+    @HiveField(21)
+        List<Reference>? interpreter,
 
     /// [endpoint] The network service providing access (e.g., query, view, or
     /// retrieval) for the study. See implementation notes for information about
     /// using DICOM endpoints. A study-level endpoint applies to each series in
     /// the study, unless overridden by a series-level endpoint with the same
     ///  Endpoint.connectionType.
-    List<Reference>? endpoint,
+    @HiveField(22)
+        List<Reference>? endpoint,
 
     /// [numberOfSeries] Number of Series in the Study. This value given may be
     /// larger than the number of series elements this Resource contains due to
     /// resource availability, security, or other factors. This element should be
     ///  present if any series elements are present.
-    UnsignedInt? numberOfSeries,
+    @HiveField(23)
+        UnsignedInt? numberOfSeries,
 
     /// [numberOfSeriesElement] Extensions for numberOfSeries
     @JsonKey(name: '_numberOfSeries')
+    @HiveField(24)
         Element? numberOfSeriesElement,
 
     /// [numberOfInstances] Number of SOP Instances in Study. This value given
     /// may be larger than the number of instance elements this resource contains
     /// due to resource availability, security, or other factors. This element
     ///  should be present if any instance elements are present.
-    UnsignedInt? numberOfInstances,
+    @HiveField(25)
+        UnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
     @JsonKey(name: '_numberOfInstances')
+    @HiveField(26)
         Element? numberOfInstancesElement,
 
     /// [procedureReference] The procedure which this ImagingStudy was part of.
-    Reference? procedureReference,
+    @HiveField(27)
+        Reference? procedureReference,
 
     /// [procedureCode] The code for the performed procedure type.
-    List<CodeableConcept>? procedureCode,
+    @HiveField(28)
+        List<CodeableConcept>? procedureCode,
 
     /// [location] The principal physical location where the ImagingStudy was
     ///  performed.
-    Reference? location,
+    @HiveField(29)
+        Reference? location,
 
     /// [reasonCode] Description of clinical condition indicating why the
     ///  ImagingStudy was requested.
-    List<CodeableConcept>? reasonCode,
+    @HiveField(30)
+        List<CodeableConcept>? reasonCode,
 
     /// [reasonReference] Indicates another resource whose existence justifies
     ///  this Study.
-    List<Reference>? reasonReference,
+    @HiveField(31)
+        List<Reference>? reasonReference,
 
     /// [note] Per the recommended DICOM mapping, this element is derived from
     /// the Study Description attribute (0008,1030). Observations or findings
     /// about the imaging study should be recorded in another resource, e.g.
     ///  Observation, and not in this element.
-    List<Annotation>? note,
+    @HiveField(32)
+        List<Annotation>? note,
 
     /// [description] The Imaging Manager description of the study.
     /// Institution-generated description or classification of the Study
     ///  (component) performed.
-    String? description,
+    @HiveField(33)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(34)
         Element? descriptionElement,
 
     /// [series] Each study has one or more series of images or other content.
-    List<ImagingStudySeries>? series,
+    @HiveField(35)
+        List<ImagingStudySeries>? series,
   }) = _ImagingStudy;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1493,7 +1593,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 
 /// [Media] A photo, video, or audio recording acquired or used in
 @freezed
-class Media with Resource, _$Media {
+class Media extends HiveObject with Resource, _$Media {
   /// [Media] A photo, video, or audio recording acquired or used in
   Media._();
 
@@ -1634,37 +1734,45 @@ class Media with Resource, _$Media {
   ///
   /// [note] Comments made about the media by the performer, subject or other
   ///  participants.
+  @HiveType(typeId: 188)
   factory Media({
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
 
-        /// [resourceType] This is a Media resource
+    /// [resourceType] This is a Media resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1673,13 +1781,15 @@ class Media with Resource, _$Media {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1688,6 +1798,7 @@ class Media with Resource, _$Media {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1703,100 +1814,126 @@ class Media with Resource, _$Media {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers associated with the image - these may include
     /// identifiers for the image itself, identifiers for the context of its
     /// collection (e.g. series ids) and context ids such as accession numbers or
     ///  other workflow identifiers.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [basedOn] A procedure that is fulfilled in whole or in part by the
     ///  creation of this media.
-    List<Reference>? basedOn,
+    @HiveField(12)
+        List<Reference>? basedOn,
 
     /// [partOf] A larger event of which this particular event is a component or
     ///  step.
-    List<Reference>? partOf,
+    @HiveField(13)
+        List<Reference>? partOf,
 
     /// [status] The current state of the {{title}}.
-    Code? status,
+    @HiveField(14)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(15)
         Element? statusElement,
 
     /// [type] A code that classifies whether the media is an image, video or
     ///  audio recording or some other media category.
-    CodeableConcept? type,
+    @HiveField(16)
+        CodeableConcept? type,
 
     /// [modality] Details of the type of the media - usually, how it was
     /// acquired (what type of device). If images sourced from a DICOM system, are
     ///  wrapped in a Media resource, then this is the modality.
-    CodeableConcept? modality,
+    @HiveField(17)
+        CodeableConcept? modality,
 
     /// [view] The name of the imaging view e.g. Lateral or Antero-posterior
     ///  (AP).
-    CodeableConcept? view,
+    @HiveField(18)
+        CodeableConcept? view,
 
     /// [subject] Who/What this Media is a record of.
-    Reference? subject,
+    @HiveField(19)
+        Reference? subject,
 
     /// [encounter] The encounter that establishes the context for this media.
-    Reference? encounter,
+    @HiveField(20)
+        Reference? encounter,
 
     /// [createdDateTime] The date and time(s) at which the media was collected.
-    FhirDateTime? createdDateTime,
+    @HiveField(21)
+        FhirDateTime? createdDateTime,
 
     /// [createdDateTimeElement] Extensions for createdDateTime
     @JsonKey(name: '_createdDateTime')
+    @HiveField(22)
         Element? createdDateTimeElement,
 
     /// [createdPeriod] The date and time(s) at which the media was collected.
-    Period? createdPeriod,
+    @HiveField(23)
+        Period? createdPeriod,
 
     /// [issued] The date and time this version of the media was made available
     ///  to providers, typically after having been reviewed.
-    Instant? issued,
+    @HiveField(24)
+        Instant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
+    @HiveField(25)
         Element? issuedElement,
 
     /// [operator] The person who administered the collection of the image.
     @JsonKey(name: 'operator')
+    @HiveField(26)
         Reference? operator_,
 
     /// [reasonCode] Describes why the event occurred in coded or textual form.
-    List<CodeableConcept>? reasonCode,
+    @HiveField(27)
+        List<CodeableConcept>? reasonCode,
 
     /// [bodySite] Indicates the site on the subject's body where the observation
     ///  was made (i.e. the target site).
-    CodeableConcept? bodySite,
+    @HiveField(28)
+        CodeableConcept? bodySite,
 
     /// [deviceName] The name of the device / manufacturer of the device  that
     ///  was used to make the recording.
-    String? deviceName,
+    @HiveField(29)
+        String? deviceName,
 
     /// [deviceNameElement] Extensions for deviceName
     @JsonKey(name: '_deviceName')
+    @HiveField(30)
         Element? deviceNameElement,
 
     /// [device] The device used to collect the media.
-    Reference? device,
+    @HiveField(31)
+        Reference? device,
 
     /// [height] Height of the image in pixels (photo/video).
-    PositiveInt? height,
+    @HiveField(32)
+        PositiveInt? height,
 
     /// [heightElement] Extensions for height
     @JsonKey(name: '_height')
+    @HiveField(33)
         Element? heightElement,
 
     /// [width] Width of the image in pixels (photo/video).
-    PositiveInt? width,
+    @HiveField(34)
+        PositiveInt? width,
 
     /// [widthElement] Extensions for width
     @JsonKey(name: '_width')
+    @HiveField(35)
         Element? widthElement,
 
     /// [frames] The number of frames in a photo. This is used with a multi-page
@@ -1804,27 +1941,33 @@ class Media with Resource, _$Media {
     /// single image, or an animated gif. If there is more than one frame, this
     /// SHALL have a value in order to alert interface software that a multi-frame
     ///  capable rendering widget is required.
-    PositiveInt? frames,
+    @HiveField(36)
+        PositiveInt? frames,
 
     /// [framesElement] Extensions for frames
     @JsonKey(name: '_frames')
+    @HiveField(37)
         Element? framesElement,
 
     /// [duration] The duration of the recording in seconds - for audio and
     ///  video.
-    Decimal? duration,
+    @HiveField(38)
+        Decimal? duration,
 
     /// [durationElement] Extensions for duration
     @JsonKey(name: '_duration')
+    @HiveField(39)
         Element? durationElement,
 
     /// [content] The actual content of the media - inline or by direct reference
     ///  to the media source file.
-    required Attachment content,
+    @HiveField(40)
+        required Attachment content,
 
     /// [note] Comments made about the media by the performer, subject or other
     ///  participants.
-    List<Annotation>? note,
+    @HiveField(41)
+        List<Annotation>? note,
   }) = _Media;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1855,7 +1998,7 @@ class Media with Resource, _$Media {
 
 /// [MolecularSequence] Raw data describing a biological sequence.
 @freezed
-class MolecularSequence with Resource, _$MolecularSequence {
+class MolecularSequence extends HiveObject with Resource, _$MolecularSequence {
   /// [MolecularSequence] Raw data describing a biological sequence.
   MolecularSequence._();
 
@@ -1972,37 +2115,45 @@ class MolecularSequence with Resource, _$MolecularSequence {
   ///  variant.
   ///
   /// [structureVariant] Information about chromosome structure variation.
+  @HiveType(typeId: 189)
   factory MolecularSequence({
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
 
-        /// [resourceType] This is a MolecularSequence resource
+    /// [resourceType] This is a MolecularSequence resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2011,13 +2162,15 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2026,6 +2179,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2041,48 +2195,60 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier for this particular sequence instance.
     ///  This is a FHIR-defined id.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [type] Amino Acid Sequence/ DNA Sequence / RNA Sequence.
-    Code? type,
+    @HiveField(12)
+        Code? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(13)
         Element? typeElement,
 
     /// [coordinateSystem] Whether the sequence is numbered starting at 0
     /// (0-based numbering or coordinates, inclusive start, exclusive end) or
     ///  starting at 1 (1-based numbering, inclusive start and inclusive end).
-    Integer? coordinateSystem,
+    @HiveField(14)
+        Integer? coordinateSystem,
 
     /// [coordinateSystemElement] Extensions for coordinateSystem
     @JsonKey(name: '_coordinateSystem')
+    @HiveField(15)
         Element? coordinateSystemElement,
 
     /// [patient] The patient whose sequencing results are described by this
     ///  resource.
-    Reference? patient,
+    @HiveField(16)
+        Reference? patient,
 
     /// [specimen] Specimen used for sequencing.
-    Reference? specimen,
+    @HiveField(17)
+        Reference? specimen,
 
     /// [device] The method for sequencing, for example, chip information.
-    Reference? device,
+    @HiveField(18)
+        Reference? device,
 
     /// [performer] The organization or lab that should be responsible for this
     ///  result.
-    Reference? performer,
+    @HiveField(19)
+        Reference? performer,
 
     /// [quantity] The number of copies of the sequence of interest. (RNASeq).
-    Quantity? quantity,
+    @HiveField(20)
+        Quantity? quantity,
 
     /// [referenceSeq] A sequence that is used as a reference to describe
     ///  variants that are present in a sequence analyzed.
-    MolecularSequenceReferenceSeq? referenceSeq,
+    @HiveField(21)
+        MolecularSequenceReferenceSeq? referenceSeq,
 
     /// [variant] The definition of variant here originates from Sequence
     /// ontology
@@ -2090,41 +2256,50 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// element can represent amino acid or nucleic sequence change(including
     /// insertion,deletion,SNP,etc.)  It can represent some complex mutation or
     ///  segment variation with the assist of CIGAR string.
-    List<MolecularSequenceVariant>? variant,
+    @HiveField(22)
+        List<MolecularSequenceVariant>? variant,
 
     /// [observedSeq] Sequence that was observed. It is the result marked by
     /// referenceSeq along with variant records on referenceSeq. This shall start
     ///  from referenceSeq.windowStart and end by referenceSeq.windowEnd.
-    String? observedSeq,
+    @HiveField(23)
+        String? observedSeq,
 
     /// [observedSeqElement] Extensions for observedSeq
     @JsonKey(name: '_observedSeq')
+    @HiveField(24)
         Element? observedSeqElement,
 
     /// [quality] An experimental feature attribute that defines the quality of
     /// the feature in a quantitative way, such as a phred quality score
     /// ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
-    List<MolecularSequenceQuality>? quality,
+    @HiveField(25)
+        List<MolecularSequenceQuality>? quality,
 
     /// [readCoverage] Coverage (read depth or depth) is the average number of
     ///  reads representing a given nucleotide in the reconstructed sequence.
-    Integer? readCoverage,
+    @HiveField(26)
+        Integer? readCoverage,
 
     /// [readCoverageElement] Extensions for readCoverage
     @JsonKey(name: '_readCoverage')
+    @HiveField(27)
         Element? readCoverageElement,
 
     /// [repository] Configurations of the external repository. The repository
     /// shall store target's observedSeq or records related with target's
     ///  observedSeq.
-    List<MolecularSequenceRepository>? repository,
+    @HiveField(28)
+        List<MolecularSequenceRepository>? repository,
 
     /// [pointer] Pointer to next atomic sequence which at most contains one
     ///  variant.
-    List<Reference>? pointer,
+    @HiveField(29)
+        List<Reference>? pointer,
 
     /// [structureVariant] Information about chromosome structure variation.
-    List<MolecularSequenceStructureVariant>? structureVariant,
+    @HiveField(30)
+        List<MolecularSequenceStructureVariant>? structureVariant,
   }) = _MolecularSequence;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3514,7 +3689,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
 
 /// [Observation] Measurements and simple assertions made about a patient,
 @freezed
-class Observation with Resource, _$Observation {
+class Observation extends HiveObject with Resource, _$Observation {
   /// [Observation] Measurements and simple assertions made about a patient,
   Observation._();
 
@@ -3729,37 +3904,45 @@ class Observation with Resource, _$Observation {
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
+  @HiveType(typeId: 190)
   factory Observation({
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
 
-        /// [resourceType] This is a Observation resource
+    /// [resourceType] This is a Observation resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3768,13 +3951,15 @@ class Observation with Resource, _$Observation {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3783,6 +3968,7 @@ class Observation with Resource, _$Observation {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3798,41 +3984,50 @@ class Observation with Resource, _$Observation {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this observation.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
     /// by this event.  For example, a MedicationRequest may require a patient to
     ///  have laboratory test performed before  it is dispensed.
-    List<Reference>? basedOn,
+    @HiveField(12)
+        List<Reference>? basedOn,
 
     /// [partOf] A larger event of which this particular Observation is a
     ///  component or step.  For example,  an observation as part of a procedure.
-    List<Reference>? partOf,
+    @HiveField(13)
+        List<Reference>? partOf,
 
     /// [status] The status of the result value.
-    Code? status,
+    @HiveField(14)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(15)
         Element? statusElement,
 
     /// [category] A code that classifies the general type of observation being
     ///  made.
-    List<CodeableConcept>? category,
+    @HiveField(16)
+        List<CodeableConcept>? category,
 
     /// [code] Describes what was observed. Sometimes this is called the
     ///  observation "name".
-    required CodeableConcept code,
+    @HiveField(17)
+        required CodeableConcept code,
 
     /// [subject] The patient, or group of patients, location, or device this
     /// observation is about and into whose record the observation is placed. If
     /// the actual focus of the observation is different from the subject (or a
     /// sample of, part, or region of the subject), the `focus` element or the
     ///  `code` itself specifies the actual focus of the observation.
-    Reference? subject,
+    @HiveField(18)
+        Reference? subject,
 
     /// [focus] The actual focus of an observation when it is not the patient of
     /// record representing something or someone associated with the patient such
@@ -3844,11 +4039,13 @@ class Observation with Resource, _$Observation {
     /// whether the mother is trained to change her child's tracheostomy tube. In
     /// this example, the child is the patient of record and the mother is the
     ///  focus.
-    List<Reference>? focus,
+    @HiveField(19)
+        List<Reference>? focus,
 
     /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
     ///  interaction) during which this observation is made.
-    Reference? encounter,
+    @HiveField(20)
+        Reference? encounter,
 
     /// [effectiveDateTime] The time or time-period the observed value is
     /// asserted as being true. For biological subjects - e.g. human patients -
@@ -3856,10 +4053,12 @@ class Observation with Resource, _$Observation {
     /// usually either the time of the procedure or of specimen collection, but
     /// very often the source of the date/time is not known, only the date/time
     ///  itself.
-    FhirDateTime? effectiveDateTime,
+    @HiveField(21)
+        FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
     @JsonKey(name: '_effectiveDateTime')
+    @HiveField(22)
         Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The time or time-period the observed value is asserted
@@ -3867,149 +4066,183 @@ class Observation with Resource, _$Observation {
     /// usually called the "physiologically relevant time". This is usually either
     /// the time of the procedure or of specimen collection, but very often the
     ///  source of the date/time is not known, only the date/time itself.
-    Period? effectivePeriod,
+    @HiveField(23)
+        Period? effectivePeriod,
 
     /// [effectiveTiming] The time or time-period the observed value is asserted
     /// as being true. For biological subjects - e.g. human patients - this is
     /// usually called the "physiologically relevant time". This is usually either
     /// the time of the procedure or of specimen collection, but very often the
     ///  source of the date/time is not known, only the date/time itself.
-    Timing? effectiveTiming,
+    @HiveField(24)
+        Timing? effectiveTiming,
 
     /// [effectiveInstant] The time or time-period the observed value is asserted
     /// as being true. For biological subjects - e.g. human patients - this is
     /// usually called the "physiologically relevant time". This is usually either
     /// the time of the procedure or of specimen collection, but very often the
     ///  source of the date/time is not known, only the date/time itself.
-    Instant? effectiveInstant,
+    @HiveField(25)
+        Instant? effectiveInstant,
 
     /// [effectiveInstantElement] Extensions for effectiveInstant
     @JsonKey(name: '_effectiveInstant')
+    @HiveField(26)
         Element? effectiveInstantElement,
 
     /// [issued] The date and time this version of the observation was made
     /// available to providers, typically after the results have been reviewed and
     ///  verified.
-    Instant? issued,
+    @HiveField(27)
+        Instant? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
+    @HiveField(28)
         Element? issuedElement,
 
     /// [performer] Who was responsible for asserting the observed value as
     ///  "true".
-    List<Reference>? performer,
+    @HiveField(29)
+        List<Reference>? performer,
 
     /// [valueQuantity] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Quantity? valueQuantity,
+    @HiveField(30)
+        Quantity? valueQuantity,
 
     /// [valueCodeableConcept] The information determined as a result of making
     ///  the observation, if the information has a simple value.
-    CodeableConcept? valueCodeableConcept,
+    @HiveField(31)
+        CodeableConcept? valueCodeableConcept,
 
     /// [valueString] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    String? valueString,
+    @HiveField(32)
+        String? valueString,
 
     /// [valueStringElement] Extensions for valueString
     @JsonKey(name: '_valueString')
+    @HiveField(33)
         Element? valueStringElement,
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Boolean? valueBoolean,
+    @HiveField(34)
+        Boolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean')
+    @HiveField(35)
         Element? valueBooleanElement,
 
     /// [valueInteger] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Integer? valueInteger,
+    @HiveField(36)
+        Integer? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
     @JsonKey(name: '_valueInteger')
+    @HiveField(37)
         Element? valueIntegerElement,
 
     /// [valueRange] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Range? valueRange,
+    @HiveField(38)
+        Range? valueRange,
 
     /// [valueRatio] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Ratio? valueRatio,
+    @HiveField(39)
+        Ratio? valueRatio,
 
     /// [valueSampledData] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    SampledData? valueSampledData,
+    @HiveField(40)
+        SampledData? valueSampledData,
 
     /// [valueTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Time? valueTime,
+    @HiveField(41)
+        Time? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
     @JsonKey(name: '_valueTime')
+    @HiveField(42)
         Element? valueTimeElement,
 
     /// [valueDateTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    FhirDateTime? valueDateTime,
+    @HiveField(43)
+        FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
     @JsonKey(name: '_valueDateTime')
+    @HiveField(44)
         Element? valueDateTimeElement,
 
     /// [valuePeriod] The information determined as a result of making the
     ///  observation, if the information has a simple value.
-    Period? valuePeriod,
+    @HiveField(45)
+        Period? valuePeriod,
 
     /// [dataAbsentReason] Provides a reason why the expected value in the
     ///  element Observation.value[x] is missing.
-    CodeableConcept? dataAbsentReason,
+    @HiveField(46)
+        CodeableConcept? dataAbsentReason,
 
     /// [interpretation] A categorical assessment of an observation value.  For
     ///  example, high, low, normal.
-    List<CodeableConcept>? interpretation,
+    @HiveField(47)
+        List<CodeableConcept>? interpretation,
 
     /// [note] Comments about the observation or the results.
-    List<Annotation>? note,
+    @HiveField(48)
+        List<Annotation>? note,
 
     /// [bodySite] Indicates the site on the subject's body where the observation
     ///  was made (i.e. the target site).
-    CodeableConcept? bodySite,
+    @HiveField(49)
+        CodeableConcept? bodySite,
 
     /// [method] Indicates the mechanism used to perform the observation.
-    CodeableConcept? method,
+    @HiveField(50)
+        CodeableConcept? method,
 
     /// [specimen] The specimen that was used when this observation was made.
-    Reference? specimen,
+    @HiveField(51)
+        Reference? specimen,
 
     /// [device] The device used to generate the observation data.
-    Reference? device,
+    @HiveField(52)
+        Reference? device,
 
     /// [referenceRange] Guidance on how to interpret the value by comparison to
     /// a normal or recommended range.  Multiple reference ranges are interpreted
     /// as an "OR".   In other words, to represent two distinct target
     ///  populations, two `referenceRange` elements would be used.
-    List<ObservationReferenceRange>? referenceRange,
+    @HiveField(53)
+        List<ObservationReferenceRange>? referenceRange,
 
     /// [hasMember] This observation is a group observation (e.g. a battery, a
     /// panel of tests, a set of vital sign measurements) that includes the target
     ///  as a member of the group.
-    List<Reference>? hasMember,
+    @HiveField(54)
+        List<Reference>? hasMember,
 
     /// [derivedFrom] The target resource that represents a measurement from
     /// which this observation value is derived. For example, a calculated anion
     ///  gap or a fetal measurement based on an ultrasound image.
-    List<Reference>? derivedFrom,
+    @HiveField(55)
+        List<Reference>? derivedFrom,
 
     /// [component] Some observations have multiple component observations.
     /// These component observations are expressed as separate code value pairs
     /// that share the same attributes.  Examples include systolic and diastolic
     /// component observations for blood pressure measurement and multiple
     ///  component observations for genetics observations.
-    List<ObservationComponent>? component,
+    @HiveField(56)
+        List<ObservationComponent>? component,
   }) = _Observation;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4423,7 +4656,8 @@ class ObservationComponent with _$ObservationComponent {
 
 /// [QuestionnaireResponse] A structured set of questions and their answers.
 @freezed
-class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
+class QuestionnaireResponse extends HiveObject
+    with Resource, _$QuestionnaireResponse {
   /// [QuestionnaireResponse] A structured set of questions and their answers.
   QuestionnaireResponse._();
 
@@ -4525,37 +4759,45 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   ///
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
+  @HiveType(typeId: 191)
   factory QuestionnaireResponse({
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
 
-        /// [resourceType] This is a QuestionnaireResponse resource
+    /// [resourceType] This is a QuestionnaireResponse resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -4564,13 +4806,15 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -4579,6 +4823,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4594,66 +4839,81 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A business identifier assigned to a particular completed (or
     ///  partially completed) questionnaire.
-    Identifier? identifier,
+    @HiveField(11)
+        Identifier? identifier,
 
     /// [basedOn] The order, proposal or plan that is fulfilled in whole or in
     /// part by this QuestionnaireResponse.  For example, a ServiceRequest seeking
     /// an intake assessment or a decision support recommendation to assess for
     ///  post-partum depression.
-    List<Reference>? basedOn,
+    @HiveField(12)
+        List<Reference>? basedOn,
 
     /// [partOf] A procedure or observation that this questionnaire was performed
     /// as part of the execution of.  For example, the surgery a checklist was
     ///  executed as part of.
-    List<Reference>? partOf,
+    @HiveField(13)
+        List<Reference>? partOf,
 
     /// [questionnaire] The Questionnaire that defines and organizes the
     ///  questions for which answers are being provided.
-    Canonical? questionnaire,
+    @HiveField(14)
+        Canonical? questionnaire,
 
     /// [questionnaireElement] Extensions for [questionnaire].
     @JsonKey(name: '_questionnaire')
+    @HiveField(15)
         Element? questionnaireElement,
 
     /// [status] The position of the questionnaire response within its overall
     ///  lifecycle.
-    Code? status,
+    @HiveField(16)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(17)
         Element? statusElement,
 
     /// [subject] The subject of the questionnaire response.  This could be a
     /// patient, organization, practitioner, device, etc.  This is who/what the
     ///  answers apply to, but is not necessarily the source of information.
-    Reference? subject,
+    @HiveField(18)
+        Reference? subject,
 
     /// [encounter] The Encounter during which this questionnaire response was
     ///  created or to which the creation of this record is tightly associated.
-    Reference? encounter,
+    @HiveField(19)
+        Reference? encounter,
 
     /// [authored] The date and/or time that this set of answers were last
     ///  changed.
-    FhirDateTime? authored,
+    @HiveField(20)
+        FhirDateTime? authored,
 
     /// [authoredElement] Extensions for authored
     @JsonKey(name: '_authored')
+    @HiveField(21)
         Element? authoredElement,
 
     /// [author] Person who received the answers to the questions in the
     ///  QuestionnaireResponse and recorded them in the system.
-    Reference? author,
+    @HiveField(22)
+        Reference? author,
 
     /// [source] The person who answered the questions about the subject.
-    Reference? source,
+    @HiveField(23)
+        Reference? source,
 
     /// [item] A group or question item from the original questionnaire for which
     ///  answers are provided.
-    List<QuestionnaireResponseItem>? item,
+    @HiveField(24)
+        List<QuestionnaireResponseItem>? item,
   }) = _QuestionnaireResponse;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5051,7 +5311,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
 /// [Specimen] A sample to be used for analysis.
 @freezed
-class Specimen with Resource, _$Specimen {
+class Specimen extends HiveObject with Resource, _$Specimen {
   /// [Specimen] A sample to be used for analysis.
   Specimen._();
 
@@ -5150,37 +5410,45 @@ class Specimen with Resource, _$Specimen {
   /// [note] To communicate any details or issues about the specimen or during
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
+  @HiveType(typeId: 192)
   factory Specimen({
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
 
-        /// [resourceType] This is a Specimen resource
+    /// [resourceType] This is a Specimen resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -5189,13 +5457,15 @@ class Specimen with Resource, _$Specimen {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -5204,6 +5474,7 @@ class Specimen with Resource, _$Specimen {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5219,65 +5490,83 @@ class Specimen with Resource, _$Specimen {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Id for specimen.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [accessionIdentifier] The identifier assigned by the lab when
     /// accessioning specimen(s). This is not necessarily the same as the specimen
     ///  identifier, depending on local lab procedures.
-    Identifier? accessionIdentifier,
+    @HiveField(12)
+        Identifier? accessionIdentifier,
 
     /// [status] The availability of the specimen.
-    Code? status,
+    @HiveField(13)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(14)
         Element? statusElement,
 
     /// [type] The kind of material that forms the specimen.
-    CodeableConcept? type,
+    @HiveField(15)
+        CodeableConcept? type,
 
     /// [subject] Where the specimen came from. This may be from patient(s), from
     /// a location (e.g., the source of an environmental sample), or a sampling of
     ///  a substance or a device.
-    Reference? subject,
+    @HiveField(16)
+        Reference? subject,
 
     /// [receivedTime] Time when specimen was received for processing or testing.
-    FhirDateTime? receivedTime,
+    @HiveField(17)
+        FhirDateTime? receivedTime,
 
     /// [receivedTimeElement] Extensions for receivedTime
     @JsonKey(name: '_receivedTime')
+    @HiveField(18)
         Element? receivedTimeElement,
 
     /// [parent] Reference to the parent (source) specimen which is used when the
     ///  specimen was either derived from or a component of another specimen.
-    List<Reference>? parent,
+    @HiveField(19)
+        List<Reference>? parent,
 
     /// [request] Details concerning a service request that required a specimen
     ///  to be collected.
-    List<Reference>? request,
+    @HiveField(20)
+        List<Reference>? request,
 
     /// [collection] Details concerning the specimen collection.
-    SpecimenCollection? collection,
+    @HiveField(21)
+        SpecimenCollection? collection,
 
     /// [processing] Details concerning processing and processing steps for the
     ///  specimen.
-    List<SpecimenProcessing>? processing,
+    @HiveField(22)
+        List<SpecimenProcessing>? processing,
 
     /// [container] The container holding the specimen.  The recursive nature of
     ///  containers; i.e. blood in tube in tray in rack is not addressed here.
-    List<SpecimenContainer>? container,
+    @HiveField(23)
+        List<SpecimenContainer>? container,
 
     /// [condition] A mode or state of being that describes the nature of the
     ///  specimen.
-    List<CodeableConcept>? condition,
+    @HiveField(24)
+        List<CodeableConcept>? condition,
 
     /// [note] To communicate any details or issues about the specimen or during
+    @HiveField(25)
+
     /// the specimen collection. (for example: broken vial, sent with patient,
     ///  frozen).
-    List<Annotation>? note,
+    @HiveField(26)
+        List<Annotation>? note,
   }) = _Specimen;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

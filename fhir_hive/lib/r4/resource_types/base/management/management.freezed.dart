@@ -21,32 +21,39 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Encounter {
   @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$Encounter {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$Encounter {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,23 +95,28 @@ mixin _$Encounter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier(s) by which this encounter is known.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusHistory] The status history permits the encounter resource to
   /// contain the status history without needing to read through the historical
   ///  versions of the resource, or even have the server store them.
+  @HiveField(14)
   List<EncounterStatusHistory>? get statusHistory =>
       throw _privateConstructorUsedError;
 
@@ -109,6 +124,7 @@ mixin _$Encounter {
   /// ambulatory (outpatient), inpatient, emergency, home health or others due
   ///  to local variations.
   @JsonKey(name: 'class')
+  @HiveField(15)
   Coding get class_ => throw _privateConstructorUsedError;
 
   /// [classHistory] The class history permits the tracking of the encounters
@@ -118,72 +134,85 @@ mixin _$Encounter {
   /// restarting a new encounter ensures that any lab/diagnostic results can
   /// more easily follow the patient and not require re-processing and not get
   ///  lost or cancelled during a kind of discharge from emergency to inpatient.
+  @HiveField(16)
   List<EncounterClassHistory>? get classHistory =>
       throw _privateConstructorUsedError;
 
   /// [type] Specific type of encounter (e.g. e-mail consultation, surgical
   ///  day-care, skilled nursing, rehabilitation).
+  @HiveField(17)
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [serviceType] Broad categorization of the service that is to be provided
   ///  (e.g. cardiology).
+  @HiveField(18)
   CodeableConcept? get serviceType => throw _privateConstructorUsedError;
 
   /// [priority] Indicates the urgency of the encounter.
+  @HiveField(19)
   CodeableConcept? get priority => throw _privateConstructorUsedError;
 
   /// [subject] The patient or group present at the encounter.
+  @HiveField(20)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [episodeOfCare] Where a specific encounter should be classified as a part
   /// of a specific episode(s) of care this field should be used. This
   /// association can facilitate grouping of related encounters together for a
-  /// specific purpose, such as government reporting, issue tracking,
-  /// association via a common problem.  The association is recorded on the
-  /// encounter as these are typically created after the episode of care and
-  /// grouped on entry rather than editing the episode of care to append another
-  ///  encounter to it (the episode of care could span years).
+  @HiveField(21)
+  @HiveField(22)
   List<Reference>? get episodeOfCare => throw _privateConstructorUsedError;
 
   /// [basedOn] The request this encounter satisfies (e.g. incoming referral or
   ///  procedure request).
+  @HiveField(23)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [participant] The list of people responsible for providing the service.
+  @HiveField(24)
   List<EncounterParticipant>? get participant =>
       throw _privateConstructorUsedError;
 
   /// [appointment] The appointment that scheduled this encounter.
+  @HiveField(25)
   List<Reference>? get appointment => throw _privateConstructorUsedError;
 
   /// [period] The start and end time of the encounter.
+  @HiveField(26)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [length] Quantity of time the encounter lasted. This excludes the time
   ///  during leaves of absence.
+  @HiveField(27)
   FhirDuration? get length => throw _privateConstructorUsedError;
 
   /// [reasonCode] Reason the encounter takes place, expressed as a code. For
   ///  admissions, this can be used for a coded admission diagnosis.
+  @HiveField(28)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Reason the encounter takes place, expressed as a code.
   ///  For admissions, this can be used for a coded admission diagnosis.
+  @HiveField(29)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [diagnosis] The list of diagnosis relevant to this encounter.
+  @HiveField(30)
   List<EncounterDiagnosis>? get diagnosis => throw _privateConstructorUsedError;
 
   /// [account] The set of accounts that may be used for billing for this
   ///  Encounter.
+  @HiveField(31)
   List<Reference>? get account => throw _privateConstructorUsedError;
 
   /// [hospitalization] Details about the admission to a healthcare service.
+  @HiveField(32)
   EncounterHospitalization? get hospitalization =>
       throw _privateConstructorUsedError;
 
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
+  @HiveField(33)
   List<EncounterLocation>? get location => throw _privateConstructorUsedError;
 
   /// [serviceProvider] The organization that is primarily responsible for this
@@ -192,10 +221,12 @@ mixin _$Encounter {
   /// performing the services was from an external organization (which may be
   /// billed seperately) for an external consultation.  Refer to the example
   ///  bundle showing an abbreviated set of Encounters for a colonoscopy.
+  @HiveField(34)
   Reference? get serviceProvider => throw _privateConstructorUsedError;
 
   /// [partOf] Another Encounter of which this encounter is a part of
   ///  (administratively or in time).
+  @HiveField(35)
   Reference? get partOf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -211,46 +242,82 @@ abstract class $EncounterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      @HiveField(14)
+          List<EncounterStatusHistory>? statusHistory,
       @JsonKey(name: 'class')
+      @HiveField(15)
           Coding class_,
-      List<EncounterClassHistory>? classHistory,
-      List<CodeableConcept>? type,
-      CodeableConcept? serviceType,
-      CodeableConcept? priority,
-      Reference? subject,
-      List<Reference>? episodeOfCare,
-      List<Reference>? basedOn,
-      List<EncounterParticipant>? participant,
-      List<Reference>? appointment,
-      Period? period,
-      FhirDuration? length,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<EncounterDiagnosis>? diagnosis,
-      List<Reference>? account,
-      EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
-      Reference? serviceProvider,
-      Reference? partOf});
+      @HiveField(16)
+          List<EncounterClassHistory>? classHistory,
+      @HiveField(17)
+          List<CodeableConcept>? type,
+      @HiveField(18)
+          CodeableConcept? serviceType,
+      @HiveField(19)
+          CodeableConcept? priority,
+      @HiveField(20)
+          Reference? subject,
+      @HiveField(21)
+      @HiveField(22)
+          List<Reference>? episodeOfCare,
+      @HiveField(23)
+          List<Reference>? basedOn,
+      @HiveField(24)
+          List<EncounterParticipant>? participant,
+      @HiveField(25)
+          List<Reference>? appointment,
+      @HiveField(26)
+          Period? period,
+      @HiveField(27)
+          FhirDuration? length,
+      @HiveField(28)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(29)
+          List<Reference>? reasonReference,
+      @HiveField(30)
+          List<EncounterDiagnosis>? diagnosis,
+      @HiveField(31)
+          List<Reference>? account,
+      @HiveField(32)
+          EncounterHospitalization? hospitalization,
+      @HiveField(33)
+          List<EncounterLocation>? location,
+      @HiveField(34)
+          Reference? serviceProvider,
+      @HiveField(35)
+          Reference? partOf});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -636,46 +703,82 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      @HiveField(14)
+          List<EncounterStatusHistory>? statusHistory,
       @JsonKey(name: 'class')
+      @HiveField(15)
           Coding class_,
-      List<EncounterClassHistory>? classHistory,
-      List<CodeableConcept>? type,
-      CodeableConcept? serviceType,
-      CodeableConcept? priority,
-      Reference? subject,
-      List<Reference>? episodeOfCare,
-      List<Reference>? basedOn,
-      List<EncounterParticipant>? participant,
-      List<Reference>? appointment,
-      Period? period,
-      FhirDuration? length,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<EncounterDiagnosis>? diagnosis,
-      List<Reference>? account,
-      EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
-      Reference? serviceProvider,
-      Reference? partOf});
+      @HiveField(16)
+          List<EncounterClassHistory>? classHistory,
+      @HiveField(17)
+          List<CodeableConcept>? type,
+      @HiveField(18)
+          CodeableConcept? serviceType,
+      @HiveField(19)
+          CodeableConcept? priority,
+      @HiveField(20)
+          Reference? subject,
+      @HiveField(21)
+      @HiveField(22)
+          List<Reference>? episodeOfCare,
+      @HiveField(23)
+          List<Reference>? basedOn,
+      @HiveField(24)
+          List<EncounterParticipant>? participant,
+      @HiveField(25)
+          List<Reference>? appointment,
+      @HiveField(26)
+          Period? period,
+      @HiveField(27)
+          FhirDuration? length,
+      @HiveField(28)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(29)
+          List<Reference>? reasonReference,
+      @HiveField(30)
+          List<EncounterDiagnosis>? diagnosis,
+      @HiveField(31)
+          List<Reference>? account,
+      @HiveField(32)
+          EncounterHospitalization? hospitalization,
+      @HiveField(33)
+          List<EncounterLocation>? location,
+      @HiveField(34)
+          Reference? serviceProvider,
+      @HiveField(35)
+          Reference? partOf});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -901,49 +1004,86 @@ class __$$_EncounterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 142)
 class _$_Encounter extends _Encounter {
   _$_Encounter(
       {@JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Encounter,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      final List<EncounterStatusHistory>? statusHistory,
+      @HiveField(14)
+          final List<EncounterStatusHistory>? statusHistory,
       @JsonKey(name: 'class')
+      @HiveField(15)
           required this.class_,
-      final List<EncounterClassHistory>? classHistory,
-      final List<CodeableConcept>? type,
-      this.serviceType,
-      this.priority,
-      this.subject,
-      final List<Reference>? episodeOfCare,
-      final List<Reference>? basedOn,
-      final List<EncounterParticipant>? participant,
-      final List<Reference>? appointment,
-      this.period,
-      this.length,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<EncounterDiagnosis>? diagnosis,
-      final List<Reference>? account,
-      this.hospitalization,
-      final List<EncounterLocation>? location,
-      this.serviceProvider,
-      this.partOf})
+      @HiveField(16)
+          final List<EncounterClassHistory>? classHistory,
+      @HiveField(17)
+          final List<CodeableConcept>? type,
+      @HiveField(18)
+          this.serviceType,
+      @HiveField(19)
+          this.priority,
+      @HiveField(20)
+          this.subject,
+      @HiveField(21)
+      @HiveField(22)
+          final List<Reference>? episodeOfCare,
+      @HiveField(23)
+          final List<Reference>? basedOn,
+      @HiveField(24)
+          final List<EncounterParticipant>? participant,
+      @HiveField(25)
+          final List<Reference>? appointment,
+      @HiveField(26)
+          this.period,
+      @HiveField(27)
+          this.length,
+      @HiveField(28)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(29)
+          final List<Reference>? reasonReference,
+      @HiveField(30)
+          final List<EncounterDiagnosis>? diagnosis,
+      @HiveField(31)
+          final List<Reference>? account,
+      @HiveField(32)
+          this.hospitalization,
+      @HiveField(33)
+          final List<EncounterLocation>? location,
+      @HiveField(34)
+          this.serviceProvider,
+      @HiveField(35)
+          this.partOf})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -967,17 +1107,20 @@ class _$_Encounter extends _Encounter {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -985,20 +1128,24 @@ class _$_Encounter extends _Encounter {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1008,6 +1155,7 @@ class _$_Encounter extends _Encounter {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1021,6 +1169,7 @@ class _$_Encounter extends _Encounter {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1045,6 +1194,7 @@ class _$_Encounter extends _Encounter {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1082,6 +1232,7 @@ class _$_Encounter extends _Encounter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1096,6 +1247,7 @@ class _$_Encounter extends _Encounter {
 
   /// [identifier] Identifier(s) by which this encounter is known.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1107,11 +1259,13 @@ class _$_Encounter extends _Encounter {
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [statusHistory] The status history permits the encounter resource to
@@ -1123,6 +1277,7 @@ class _$_Encounter extends _Encounter {
   /// contain the status history without needing to read through the historical
   ///  versions of the resource, or even have the server store them.
   @override
+  @HiveField(14)
   List<EncounterStatusHistory>? get statusHistory {
     final value = _statusHistory;
     if (value == null) return null;
@@ -1136,6 +1291,7 @@ class _$_Encounter extends _Encounter {
   ///  to local variations.
   @override
   @JsonKey(name: 'class')
+  @HiveField(15)
   final Coding class_;
 
   /// [classHistory] The class history permits the tracking of the encounters
@@ -1155,6 +1311,7 @@ class _$_Encounter extends _Encounter {
   /// more easily follow the patient and not require re-processing and not get
   ///  lost or cancelled during a kind of discharge from emergency to inpatient.
   @override
+  @HiveField(16)
   List<EncounterClassHistory>? get classHistory {
     final value = _classHistory;
     if (value == null) return null;
@@ -1170,6 +1327,7 @@ class _$_Encounter extends _Encounter {
   /// [type] Specific type of encounter (e.g. e-mail consultation, surgical
   ///  day-care, skilled nursing, rehabilitation).
   @override
+  @HiveField(17)
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
@@ -1181,35 +1339,30 @@ class _$_Encounter extends _Encounter {
   /// [serviceType] Broad categorization of the service that is to be provided
   ///  (e.g. cardiology).
   @override
+  @HiveField(18)
   final CodeableConcept? serviceType;
 
   /// [priority] Indicates the urgency of the encounter.
   @override
+  @HiveField(19)
   final CodeableConcept? priority;
 
   /// [subject] The patient or group present at the encounter.
   @override
+  @HiveField(20)
   final Reference? subject;
 
   /// [episodeOfCare] Where a specific encounter should be classified as a part
   /// of a specific episode(s) of care this field should be used. This
   /// association can facilitate grouping of related encounters together for a
-  /// specific purpose, such as government reporting, issue tracking,
-  /// association via a common problem.  The association is recorded on the
-  /// encounter as these are typically created after the episode of care and
-  /// grouped on entry rather than editing the episode of care to append another
-  ///  encounter to it (the episode of care could span years).
   final List<Reference>? _episodeOfCare;
 
   /// [episodeOfCare] Where a specific encounter should be classified as a part
   /// of a specific episode(s) of care this field should be used. This
   /// association can facilitate grouping of related encounters together for a
-  /// specific purpose, such as government reporting, issue tracking,
-  /// association via a common problem.  The association is recorded on the
-  /// encounter as these are typically created after the episode of care and
-  /// grouped on entry rather than editing the episode of care to append another
-  ///  encounter to it (the episode of care could span years).
   @override
+  @HiveField(21)
+  @HiveField(22)
   List<Reference>? get episodeOfCare {
     final value = _episodeOfCare;
     if (value == null) return null;
@@ -1225,6 +1378,7 @@ class _$_Encounter extends _Encounter {
   /// [basedOn] The request this encounter satisfies (e.g. incoming referral or
   ///  procedure request).
   @override
+  @HiveField(23)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -1238,6 +1392,7 @@ class _$_Encounter extends _Encounter {
 
   /// [participant] The list of people responsible for providing the service.
   @override
+  @HiveField(24)
   List<EncounterParticipant>? get participant {
     final value = _participant;
     if (value == null) return null;
@@ -1251,6 +1406,7 @@ class _$_Encounter extends _Encounter {
 
   /// [appointment] The appointment that scheduled this encounter.
   @override
+  @HiveField(25)
   List<Reference>? get appointment {
     final value = _appointment;
     if (value == null) return null;
@@ -1261,11 +1417,13 @@ class _$_Encounter extends _Encounter {
 
   /// [period] The start and end time of the encounter.
   @override
+  @HiveField(26)
   final Period? period;
 
   /// [length] Quantity of time the encounter lasted. This excludes the time
   ///  during leaves of absence.
   @override
+  @HiveField(27)
   final FhirDuration? length;
 
   /// [reasonCode] Reason the encounter takes place, expressed as a code. For
@@ -1275,6 +1433,7 @@ class _$_Encounter extends _Encounter {
   /// [reasonCode] Reason the encounter takes place, expressed as a code. For
   ///  admissions, this can be used for a coded admission diagnosis.
   @override
+  @HiveField(28)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -1290,6 +1449,7 @@ class _$_Encounter extends _Encounter {
   /// [reasonReference] Reason the encounter takes place, expressed as a code.
   ///  For admissions, this can be used for a coded admission diagnosis.
   @override
+  @HiveField(29)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -1303,6 +1463,7 @@ class _$_Encounter extends _Encounter {
 
   /// [diagnosis] The list of diagnosis relevant to this encounter.
   @override
+  @HiveField(30)
   List<EncounterDiagnosis>? get diagnosis {
     final value = _diagnosis;
     if (value == null) return null;
@@ -1318,6 +1479,7 @@ class _$_Encounter extends _Encounter {
   /// [account] The set of accounts that may be used for billing for this
   ///  Encounter.
   @override
+  @HiveField(31)
   List<Reference>? get account {
     final value = _account;
     if (value == null) return null;
@@ -1328,6 +1490,7 @@ class _$_Encounter extends _Encounter {
 
   /// [hospitalization] Details about the admission to a healthcare service.
   @override
+  @HiveField(32)
   final EncounterHospitalization? hospitalization;
 
   /// [location] List of locations where  the patient has been during this
@@ -1337,6 +1500,7 @@ class _$_Encounter extends _Encounter {
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
   @override
+  @HiveField(33)
   List<EncounterLocation>? get location {
     final value = _location;
     if (value == null) return null;
@@ -1352,11 +1516,13 @@ class _$_Encounter extends _Encounter {
   /// billed seperately) for an external consultation.  Refer to the example
   ///  bundle showing an abbreviated set of Encounters for a colonoscopy.
   @override
+  @HiveField(34)
   final Reference? serviceProvider;
 
   /// [partOf] Another Encounter of which this encounter is a part of
   ///  (administratively or in time).
   @override
+  @HiveField(35)
   final Reference? partOf;
 
   @override
@@ -1486,46 +1652,82 @@ class _$_Encounter extends _Encounter {
 abstract class _Encounter extends Encounter {
   factory _Encounter(
       {@JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      final List<EncounterStatusHistory>? statusHistory,
+      @HiveField(14)
+          final List<EncounterStatusHistory>? statusHistory,
       @JsonKey(name: 'class')
+      @HiveField(15)
           required final Coding class_,
-      final List<EncounterClassHistory>? classHistory,
-      final List<CodeableConcept>? type,
-      final CodeableConcept? serviceType,
-      final CodeableConcept? priority,
-      final Reference? subject,
-      final List<Reference>? episodeOfCare,
-      final List<Reference>? basedOn,
-      final List<EncounterParticipant>? participant,
-      final List<Reference>? appointment,
-      final Period? period,
-      final FhirDuration? length,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<EncounterDiagnosis>? diagnosis,
-      final List<Reference>? account,
-      final EncounterHospitalization? hospitalization,
-      final List<EncounterLocation>? location,
-      final Reference? serviceProvider,
-      final Reference? partOf}) = _$_Encounter;
+      @HiveField(16)
+          final List<EncounterClassHistory>? classHistory,
+      @HiveField(17)
+          final List<CodeableConcept>? type,
+      @HiveField(18)
+          final CodeableConcept? serviceType,
+      @HiveField(19)
+          final CodeableConcept? priority,
+      @HiveField(20)
+          final Reference? subject,
+      @HiveField(21)
+      @HiveField(22)
+          final List<Reference>? episodeOfCare,
+      @HiveField(23)
+          final List<Reference>? basedOn,
+      @HiveField(24)
+          final List<EncounterParticipant>? participant,
+      @HiveField(25)
+          final List<Reference>? appointment,
+      @HiveField(26)
+          final Period? period,
+      @HiveField(27)
+          final FhirDuration? length,
+      @HiveField(28)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(29)
+          final List<Reference>? reasonReference,
+      @HiveField(30)
+          final List<EncounterDiagnosis>? diagnosis,
+      @HiveField(31)
+          final List<Reference>? account,
+      @HiveField(32)
+          final EncounterHospitalization? hospitalization,
+      @HiveField(33)
+          final List<EncounterLocation>? location,
+      @HiveField(34)
+          final Reference? serviceProvider,
+      @HiveField(35)
+          final Reference? partOf}) = _$_Encounter;
   _Encounter._() : super._();
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
@@ -1533,17 +1735,20 @@ abstract class _Encounter extends Encounter {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1551,20 +1756,24 @@ abstract class _Encounter extends Encounter {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1574,6 +1783,7 @@ abstract class _Encounter extends Encounter {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1581,6 +1791,7 @@ abstract class _Encounter extends Encounter {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1591,6 +1802,7 @@ abstract class _Encounter extends Encounter {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1607,26 +1819,31 @@ abstract class _Encounter extends Encounter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier(s) by which this encounter is known.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [statusHistory] The status history permits the encounter resource to
   /// contain the status history without needing to read through the historical
   ///  versions of the resource, or even have the server store them.
+  @HiveField(14)
   List<EncounterStatusHistory>? get statusHistory;
   @override
 
@@ -1634,6 +1851,7 @@ abstract class _Encounter extends Encounter {
   /// ambulatory (outpatient), inpatient, emergency, home health or others due
   ///  to local variations.
   @JsonKey(name: 'class')
+  @HiveField(15)
   Coding get class_;
   @override
 
@@ -1644,85 +1862,98 @@ abstract class _Encounter extends Encounter {
   /// restarting a new encounter ensures that any lab/diagnostic results can
   /// more easily follow the patient and not require re-processing and not get
   ///  lost or cancelled during a kind of discharge from emergency to inpatient.
+  @HiveField(16)
   List<EncounterClassHistory>? get classHistory;
   @override
 
   /// [type] Specific type of encounter (e.g. e-mail consultation, surgical
   ///  day-care, skilled nursing, rehabilitation).
+  @HiveField(17)
   List<CodeableConcept>? get type;
   @override
 
   /// [serviceType] Broad categorization of the service that is to be provided
   ///  (e.g. cardiology).
+  @HiveField(18)
   CodeableConcept? get serviceType;
   @override
 
   /// [priority] Indicates the urgency of the encounter.
+  @HiveField(19)
   CodeableConcept? get priority;
   @override
 
   /// [subject] The patient or group present at the encounter.
+  @HiveField(20)
   Reference? get subject;
   @override
 
   /// [episodeOfCare] Where a specific encounter should be classified as a part
   /// of a specific episode(s) of care this field should be used. This
   /// association can facilitate grouping of related encounters together for a
-  /// specific purpose, such as government reporting, issue tracking,
-  /// association via a common problem.  The association is recorded on the
-  /// encounter as these are typically created after the episode of care and
-  /// grouped on entry rather than editing the episode of care to append another
-  ///  encounter to it (the episode of care could span years).
+  @HiveField(21)
+  @HiveField(22)
   List<Reference>? get episodeOfCare;
   @override
 
   /// [basedOn] The request this encounter satisfies (e.g. incoming referral or
   ///  procedure request).
+  @HiveField(23)
   List<Reference>? get basedOn;
   @override
 
   /// [participant] The list of people responsible for providing the service.
+  @HiveField(24)
   List<EncounterParticipant>? get participant;
   @override
 
   /// [appointment] The appointment that scheduled this encounter.
+  @HiveField(25)
   List<Reference>? get appointment;
   @override
 
   /// [period] The start and end time of the encounter.
+  @HiveField(26)
   Period? get period;
   @override
 
   /// [length] Quantity of time the encounter lasted. This excludes the time
   ///  during leaves of absence.
+  @HiveField(27)
   FhirDuration? get length;
   @override
 
   /// [reasonCode] Reason the encounter takes place, expressed as a code. For
   ///  admissions, this can be used for a coded admission diagnosis.
+  @HiveField(28)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Reason the encounter takes place, expressed as a code.
   ///  For admissions, this can be used for a coded admission diagnosis.
+  @HiveField(29)
   List<Reference>? get reasonReference;
   @override
 
   /// [diagnosis] The list of diagnosis relevant to this encounter.
+  @HiveField(30)
   List<EncounterDiagnosis>? get diagnosis;
   @override
 
   /// [account] The set of accounts that may be used for billing for this
   ///  Encounter.
+  @HiveField(31)
   List<Reference>? get account;
   @override
 
   /// [hospitalization] Details about the admission to a healthcare service.
+  @HiveField(32)
   EncounterHospitalization? get hospitalization;
   @override
 
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
+  @HiveField(33)
   List<EncounterLocation>? get location;
   @override
 
@@ -1732,11 +1963,13 @@ abstract class _Encounter extends Encounter {
   /// performing the services was from an external organization (which may be
   /// billed seperately) for an external consultation.  Refer to the example
   ///  bundle showing an abbreviated set of Encounters for a colonoscopy.
+  @HiveField(34)
   Reference? get serviceProvider;
   @override
 
   /// [partOf] Another Encounter of which this encounter is a part of
   ///  (administratively or in time).
+  @HiveField(35)
   Reference? get partOf;
   @override
   @JsonKey(ignore: true)
@@ -4160,6 +4393,7 @@ EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
 mixin _$EncounterLocation {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4168,6 +4402,7 @@ mixin _$EncounterLocation {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -4184,28 +4419,34 @@ mixin _$EncounterLocation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [location] The location where the encounter takes place.
+  @HiveField(3)
   Reference get location => throw _privateConstructorUsedError;
 
   /// [status] The status of the participants' presence at the specified
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
+  @HiveField(4)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
+  @HiveField(5)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [physicalType] This will be used to specify the required levels
   /// (bed/ward/room/etc.) desired to be recorded to simplify either messaging
   ///  or query.
+  @HiveField(6)
   CodeableConcept? get physicalType => throw _privateConstructorUsedError;
 
   /// [period] Time period during which the patient was present at the
   ///  location.
+  @HiveField(7)
   Period? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4221,14 +4462,14 @@ abstract class $EncounterLocationCopyWith<$Res> {
       _$EncounterLocationCopyWithImpl<$Res, EncounterLocation>;
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference location,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? physicalType,
-      Period? period});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) Reference location,
+      @HiveField(4) Code? status,
+      @HiveField(5) @JsonKey(name: '_status') Element? statusElement,
+      @HiveField(6) CodeableConcept? physicalType,
+      @HiveField(7) Period? period});
 
   $ReferenceCopyWith<$Res> get location;
   $ElementCopyWith<$Res>? get statusElement;
@@ -4348,14 +4589,14 @@ abstract class _$$_EncounterLocationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Reference location,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      CodeableConcept? physicalType,
-      Period? period});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) Reference location,
+      @HiveField(4) Code? status,
+      @HiveField(5) @JsonKey(name: '_status') Element? statusElement,
+      @HiveField(6) CodeableConcept? physicalType,
+      @HiveField(7) Period? period});
 
   @override
   $ReferenceCopyWith<$Res> get location;
@@ -4426,16 +4667,27 @@ class __$$_EncounterLocationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 143)
 class _$_EncounterLocation extends _EncounterLocation {
   _$_EncounterLocation(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required this.location,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      this.physicalType,
-      this.period})
+      {@HiveField(0)
+          this.id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          required this.location,
+      @HiveField(4)
+          this.status,
+      @HiveField(5)
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @HiveField(6)
+          this.physicalType,
+      @HiveField(7)
+          this.period})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -4446,6 +4698,7 @@ class _$_EncounterLocation extends _EncounterLocation {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
+  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4463,6 +4716,7 @@ class _$_EncounterLocation extends _EncounterLocation {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -4501,6 +4755,7 @@ class _$_EncounterLocation extends _EncounterLocation {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4512,16 +4767,19 @@ class _$_EncounterLocation extends _EncounterLocation {
 
   /// [location] The location where the encounter takes place.
   @override
+  @HiveField(3)
   final Reference location;
 
   /// [status] The status of the participants' presence at the specified
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
   @override
+  @HiveField(4)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
+  @HiveField(5)
   @JsonKey(name: '_status')
   final Element? statusElement;
 
@@ -4529,11 +4787,13 @@ class _$_EncounterLocation extends _EncounterLocation {
   /// (bed/ward/room/etc.) desired to be recorded to simplify either messaging
   ///  or query.
   @override
+  @HiveField(6)
   final CodeableConcept? physicalType;
 
   /// [period] Time period during which the patient was present at the
   ///  location.
   @override
+  @HiveField(7)
   final Period? period;
 
   @override
@@ -4591,14 +4851,24 @@ class _$_EncounterLocation extends _EncounterLocation {
 
 abstract class _EncounterLocation extends EncounterLocation {
   factory _EncounterLocation(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final Reference location,
-      final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final CodeableConcept? physicalType,
-      final Period? period}) = _$_EncounterLocation;
+      {@HiveField(0)
+          final String? id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          required final Reference location,
+      @HiveField(4)
+          final Code? status,
+      @HiveField(5)
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      @HiveField(6)
+          final CodeableConcept? physicalType,
+      @HiveField(7)
+          final Period? period}) = _$_EncounterLocation;
   _EncounterLocation._() : super._();
 
   factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
@@ -4608,6 +4878,7 @@ abstract class _EncounterLocation extends EncounterLocation {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
+  @HiveField(0)
   String? get id;
   @override
 
@@ -4617,6 +4888,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -4634,20 +4906,24 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [location] The location where the encounter takes place.
+  @HiveField(3)
   Reference get location;
   @override
 
   /// [status] The status of the participants' presence at the specified
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
+  @HiveField(4)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
+  @HiveField(5)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
@@ -4655,11 +4931,13 @@ abstract class _EncounterLocation extends EncounterLocation {
   /// [physicalType] This will be used to specify the required levels
   /// (bed/ward/room/etc.) desired to be recorded to simplify either messaging
   ///  or query.
+  @HiveField(6)
   CodeableConcept? get physicalType;
   @override
 
   /// [period] Time period during which the patient was present at the
   ///  location.
+  @HiveField(7)
   Period? get period;
   @override
   @JsonKey(ignore: true)
@@ -4674,32 +4952,39 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EpisodeOfCare {
   @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4708,12 +4993,14 @@ mixin _$EpisodeOfCare {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4723,6 +5010,7 @@ mixin _$EpisodeOfCare {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -4738,59 +5026,73 @@ mixin _$EpisodeOfCare {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] The EpisodeOfCare may be known by different identifiers for
   /// different contexts of use, such as when an external agency is tracking the
   ///  Episode for funding purposes.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusHistory] The history of statuses that the EpisodeOfCare has been
   ///  through (without requiring processing the history of the resource).
+  @HiveField(14)
   List<EpisodeOfCareStatusHistory>? get statusHistory =>
       throw _privateConstructorUsedError;
 
   /// [type] A classification of the type of episode of care; e.g. specialist
   ///  referral, disease management, type of funded care.
+  @HiveField(15)
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [diagnosis] The list of diagnosis relevant to this episode of care.
+  @HiveField(16)
   List<EpisodeOfCareDiagnosis>? get diagnosis =>
       throw _privateConstructorUsedError;
 
   /// [patient] The patient who is the focus of this episode of care.
+  @HiveField(17)
   Reference get patient => throw _privateConstructorUsedError;
 
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for the specified duration.
+  @HiveField(18)
   Reference? get managingOrganization => throw _privateConstructorUsedError;
 
   /// [period] The interval during which the managing organization assumes the
   ///  defined responsibility.
+  @HiveField(19)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [referralRequest] Referral Request(s) that are fulfilled by this
   ///  EpisodeOfCare, incoming referrals.
+  @HiveField(20)
   List<Reference>? get referralRequest => throw _privateConstructorUsedError;
 
   /// [careManager] The practitioner that is the care manager/care coordinator
   ///  for this patient.
+  @HiveField(21)
   Reference? get careManager => throw _privateConstructorUsedError;
 
   /// [team] The list of practitioners that may be facilitating this episode of
   ///  care for specific purposes.
+  @HiveField(22)
   List<Reference>? get team => throw _privateConstructorUsedError;
 
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
+  @HiveField(23)
   List<Reference>? get account => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4807,34 +5109,58 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<EpisodeOfCareDiagnosis>? diagnosis,
-      Reference patient,
-      Reference? managingOrganization,
-      Period? period,
-      List<Reference>? referralRequest,
-      Reference? careManager,
-      List<Reference>? team,
-      List<Reference>? account});
+      @HiveField(14)
+          List<EpisodeOfCareStatusHistory>? statusHistory,
+      @HiveField(15)
+          List<CodeableConcept>? type,
+      @HiveField(16)
+          List<EpisodeOfCareDiagnosis>? diagnosis,
+      @HiveField(17)
+          Reference patient,
+      @HiveField(18)
+          Reference? managingOrganization,
+      @HiveField(19)
+          Period? period,
+      @HiveField(20)
+          List<Reference>? referralRequest,
+      @HiveField(21)
+          Reference? careManager,
+      @HiveField(22)
+          List<Reference>? team,
+      @HiveField(23)
+          List<Reference>? account});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -5100,34 +5426,58 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<EpisodeOfCareDiagnosis>? diagnosis,
-      Reference patient,
-      Reference? managingOrganization,
-      Period? period,
-      List<Reference>? referralRequest,
-      Reference? careManager,
-      List<Reference>? team,
-      List<Reference>? account});
+      @HiveField(14)
+          List<EpisodeOfCareStatusHistory>? statusHistory,
+      @HiveField(15)
+          List<CodeableConcept>? type,
+      @HiveField(16)
+          List<EpisodeOfCareDiagnosis>? diagnosis,
+      @HiveField(17)
+          Reference patient,
+      @HiveField(18)
+          Reference? managingOrganization,
+      @HiveField(19)
+          Period? period,
+      @HiveField(20)
+          List<Reference>? referralRequest,
+      @HiveField(21)
+          Reference? careManager,
+      @HiveField(22)
+          List<Reference>? team,
+      @HiveField(23)
+          List<Reference>? account});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -5288,37 +5638,62 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 144)
 class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
       {@JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+      @HiveField(0)
           this.resourceType = R4ResourceType.EpisodeOfCare,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      final List<EpisodeOfCareStatusHistory>? statusHistory,
-      final List<CodeableConcept>? type,
-      final List<EpisodeOfCareDiagnosis>? diagnosis,
-      required this.patient,
-      this.managingOrganization,
-      this.period,
-      final List<Reference>? referralRequest,
-      this.careManager,
-      final List<Reference>? team,
-      final List<Reference>? account})
+      @HiveField(14)
+          final List<EpisodeOfCareStatusHistory>? statusHistory,
+      @HiveField(15)
+          final List<CodeableConcept>? type,
+      @HiveField(16)
+          final List<EpisodeOfCareDiagnosis>? diagnosis,
+      @HiveField(17)
+          required this.patient,
+      @HiveField(18)
+          this.managingOrganization,
+      @HiveField(19)
+          this.period,
+      @HiveField(20)
+          final List<Reference>? referralRequest,
+      @HiveField(21)
+          this.careManager,
+      @HiveField(22)
+          final List<Reference>? team,
+      @HiveField(23)
+          final List<Reference>? account})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5336,17 +5711,20 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5354,20 +5732,24 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -5377,6 +5759,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -5390,6 +5773,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -5414,6 +5798,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -5451,6 +5836,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5469,6 +5855,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// different contexts of use, such as when an external agency is tracking the
   ///  Episode for funding purposes.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -5479,11 +5866,13 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [statusHistory] The history of statuses that the EpisodeOfCare has been
@@ -5493,6 +5882,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [statusHistory] The history of statuses that the EpisodeOfCare has been
   ///  through (without requiring processing the history of the resource).
   @override
+  @HiveField(14)
   List<EpisodeOfCareStatusHistory>? get statusHistory {
     final value = _statusHistory;
     if (value == null) return null;
@@ -5508,6 +5898,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [type] A classification of the type of episode of care; e.g. specialist
   ///  referral, disease management, type of funded care.
   @override
+  @HiveField(15)
   List<CodeableConcept>? get type {
     final value = _type;
     if (value == null) return null;
@@ -5521,6 +5912,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   /// [diagnosis] The list of diagnosis relevant to this episode of care.
   @override
+  @HiveField(16)
   List<EpisodeOfCareDiagnosis>? get diagnosis {
     final value = _diagnosis;
     if (value == null) return null;
@@ -5531,16 +5923,19 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   /// [patient] The patient who is the focus of this episode of care.
   @override
+  @HiveField(17)
   final Reference patient;
 
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for the specified duration.
   @override
+  @HiveField(18)
   final Reference? managingOrganization;
 
   /// [period] The interval during which the managing organization assumes the
   ///  defined responsibility.
   @override
+  @HiveField(19)
   final Period? period;
 
   /// [referralRequest] Referral Request(s) that are fulfilled by this
@@ -5550,6 +5945,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [referralRequest] Referral Request(s) that are fulfilled by this
   ///  EpisodeOfCare, incoming referrals.
   @override
+  @HiveField(20)
   List<Reference>? get referralRequest {
     final value = _referralRequest;
     if (value == null) return null;
@@ -5561,6 +5957,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [careManager] The practitioner that is the care manager/care coordinator
   ///  for this patient.
   @override
+  @HiveField(21)
   final Reference? careManager;
 
   /// [team] The list of practitioners that may be facilitating this episode of
@@ -5570,6 +5967,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [team] The list of practitioners that may be facilitating this episode of
   ///  care for specific purposes.
   @override
+  @HiveField(22)
   List<Reference>? get team {
     final value = _team;
     if (value == null) return null;
@@ -5585,6 +5983,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
   @override
+  @HiveField(23)
   List<Reference>? get account {
     final value = _account;
     if (value == null) return null;
@@ -5691,34 +6090,58 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 abstract class _EpisodeOfCare extends EpisodeOfCare {
   factory _EpisodeOfCare(
       {@JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      final List<EpisodeOfCareStatusHistory>? statusHistory,
-      final List<CodeableConcept>? type,
-      final List<EpisodeOfCareDiagnosis>? diagnosis,
-      required final Reference patient,
-      final Reference? managingOrganization,
-      final Period? period,
-      final List<Reference>? referralRequest,
-      final Reference? careManager,
-      final List<Reference>? team,
-      final List<Reference>? account}) = _$_EpisodeOfCare;
+      @HiveField(14)
+          final List<EpisodeOfCareStatusHistory>? statusHistory,
+      @HiveField(15)
+          final List<CodeableConcept>? type,
+      @HiveField(16)
+          final List<EpisodeOfCareDiagnosis>? diagnosis,
+      @HiveField(17)
+          required final Reference patient,
+      @HiveField(18)
+          final Reference? managingOrganization,
+      @HiveField(19)
+          final Period? period,
+      @HiveField(20)
+          final List<Reference>? referralRequest,
+      @HiveField(21)
+          final Reference? careManager,
+      @HiveField(22)
+          final List<Reference>? team,
+      @HiveField(23)
+          final List<Reference>? account}) = _$_EpisodeOfCare;
   _EpisodeOfCare._() : super._();
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
@@ -5726,17 +6149,20 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -5744,20 +6170,24 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -5767,6 +6197,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -5774,6 +6205,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -5784,6 +6216,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -5800,69 +6233,83 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] The EpisodeOfCare may be known by different identifiers for
   /// different contexts of use, such as when an external agency is tracking the
   ///  Episode for funding purposes.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] planned | waitlist | active | onhold | finished | cancelled.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [statusHistory] The history of statuses that the EpisodeOfCare has been
   ///  through (without requiring processing the history of the resource).
+  @HiveField(14)
   List<EpisodeOfCareStatusHistory>? get statusHistory;
   @override
 
   /// [type] A classification of the type of episode of care; e.g. specialist
   ///  referral, disease management, type of funded care.
+  @HiveField(15)
   List<CodeableConcept>? get type;
   @override
 
   /// [diagnosis] The list of diagnosis relevant to this episode of care.
+  @HiveField(16)
   List<EpisodeOfCareDiagnosis>? get diagnosis;
   @override
 
   /// [patient] The patient who is the focus of this episode of care.
+  @HiveField(17)
   Reference get patient;
   @override
 
   /// [managingOrganization] The organization that has assumed the specific
   ///  responsibilities for the specified duration.
+  @HiveField(18)
   Reference? get managingOrganization;
   @override
 
   /// [period] The interval during which the managing organization assumes the
   ///  defined responsibility.
+  @HiveField(19)
   Period? get period;
   @override
 
   /// [referralRequest] Referral Request(s) that are fulfilled by this
   ///  EpisodeOfCare, incoming referrals.
+  @HiveField(20)
   List<Reference>? get referralRequest;
   @override
 
   /// [careManager] The practitioner that is the care manager/care coordinator
   ///  for this patient.
+  @HiveField(21)
   Reference? get careManager;
   @override
 
   /// [team] The list of practitioners that may be facilitating this episode of
   ///  care for specific purposes.
+  @HiveField(22)
   List<Reference>? get team;
   @override
 
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
+  @HiveField(23)
   List<Reference>? get account;
   @override
   @JsonKey(ignore: true)
@@ -6767,32 +7214,39 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Flag {
   @JsonKey(unknownEnumValue: R4ResourceType.Flag)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6801,12 +7255,14 @@ mixin _$Flag {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6816,6 +7272,7 @@ mixin _$Flag {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -6831,43 +7288,53 @@ mixin _$Flag {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifiers assigned to this flag by the performer
   /// or other systems which remain constant as the resource is updated and
   ///  propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Supports basic workflow.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [category] Allows a flag to be divided into different categories like
   /// clinical, administrative etc. Intended to be used as a means of filtering
   ///  which flags are displayed to particular user or in a given context.
+  @HiveField(14)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [code] The coded value or textual component of the flag to display to the
   ///  user.
+  @HiveField(15)
   CodeableConcept get code => throw _privateConstructorUsedError;
 
   /// [subject] The patient, location, group, organization, or practitioner
   ///  etc. this is about record this flag is associated with.
+  @HiveField(16)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [period] The period of time from the activation of the flag to
   /// inactivation of the flag. If the flag is active, the end of the period
   ///  should be unspecified.
+  @HiveField(17)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [encounter] This alert is only relevant during the encounter.
+  @HiveField(18)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [author] The person, organization or device that created the flag.
+  @HiveField(19)
   Reference? get author => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6882,30 +7349,50 @@ abstract class $FlagCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Flag)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept code,
-      Reference subject,
-      Period? period,
-      Reference? encounter,
-      Reference? author});
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept code,
+      @HiveField(16)
+          Reference subject,
+      @HiveField(17)
+          Period? period,
+      @HiveField(18)
+          Reference? encounter,
+      @HiveField(19)
+          Reference? author});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7158,30 +7645,50 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Flag)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept code,
-      Reference subject,
-      Period? period,
-      Reference? encounter,
-      Reference? author});
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept code,
+      @HiveField(16)
+          Reference subject,
+      @HiveField(17)
+          Period? period,
+      @HiveField(18)
+          Reference? encounter,
+      @HiveField(19)
+          Reference? author});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7322,33 +7829,54 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 145)
 class _$_Flag extends _Flag {
   _$_Flag(
       {@JsonKey(unknownEnumValue: R4ResourceType.Flag)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Flag,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      final List<CodeableConcept>? category,
-      required this.code,
-      required this.subject,
-      this.period,
-      this.encounter,
-      this.author})
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          required this.code,
+      @HiveField(16)
+          required this.subject,
+      @HiveField(17)
+          this.period,
+      @HiveField(18)
+          this.encounter,
+      @HiveField(19)
+          this.author})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -7360,17 +7888,20 @@ class _$_Flag extends _Flag {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Flag)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -7378,20 +7909,24 @@ class _$_Flag extends _Flag {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7401,6 +7936,7 @@ class _$_Flag extends _Flag {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -7414,6 +7950,7 @@ class _$_Flag extends _Flag {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -7438,6 +7975,7 @@ class _$_Flag extends _Flag {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -7475,6 +8013,7 @@ class _$_Flag extends _Flag {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -7493,6 +8032,7 @@ class _$_Flag extends _Flag {
   /// or other systems which remain constant as the resource is updated and
   ///  propagates from server to server.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -7503,11 +8043,13 @@ class _$_Flag extends _Flag {
 
   /// [status] Supports basic workflow.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [category] Allows a flag to be divided into different categories like
@@ -7519,6 +8061,7 @@ class _$_Flag extends _Flag {
   /// clinical, administrative etc. Intended to be used as a means of filtering
   ///  which flags are displayed to particular user or in a given context.
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -7530,25 +8073,30 @@ class _$_Flag extends _Flag {
   /// [code] The coded value or textual component of the flag to display to the
   ///  user.
   @override
+  @HiveField(15)
   final CodeableConcept code;
 
   /// [subject] The patient, location, group, organization, or practitioner
   ///  etc. this is about record this flag is associated with.
   @override
+  @HiveField(16)
   final Reference subject;
 
   /// [period] The period of time from the activation of the flag to
   /// inactivation of the flag. If the flag is active, the end of the period
   ///  should be unspecified.
   @override
+  @HiveField(17)
   final Period? period;
 
   /// [encounter] This alert is only relevant during the encounter.
   @override
+  @HiveField(18)
   final Reference? encounter;
 
   /// [author] The person, organization or device that created the flag.
   @override
+  @HiveField(19)
   final Reference? author;
 
   @override
@@ -7637,47 +8185,70 @@ class _$_Flag extends _Flag {
 abstract class _Flag extends Flag {
   factory _Flag(
       {@JsonKey(unknownEnumValue: R4ResourceType.Flag)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      final List<CodeableConcept>? category,
-      required final CodeableConcept code,
-      required final Reference subject,
-      final Period? period,
-      final Reference? encounter,
-      final Reference? author}) = _$_Flag;
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          required final CodeableConcept code,
+      @HiveField(16)
+          required final Reference subject,
+      @HiveField(17)
+          final Period? period,
+      @HiveField(18)
+          final Reference? encounter,
+      @HiveField(19)
+          final Reference? author}) = _$_Flag;
   _Flag._() : super._();
 
   factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Flag)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -7685,20 +8256,24 @@ abstract class _Flag extends Flag {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -7708,6 +8283,7 @@ abstract class _Flag extends Flag {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -7715,6 +8291,7 @@ abstract class _Flag extends Flag {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -7725,6 +8302,7 @@ abstract class _Flag extends Flag {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -7741,51 +8319,61 @@ abstract class _Flag extends Flag {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifiers assigned to this flag by the performer
   /// or other systems which remain constant as the resource is updated and
   ///  propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Supports basic workflow.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [category] Allows a flag to be divided into different categories like
   /// clinical, administrative etc. Intended to be used as a means of filtering
   ///  which flags are displayed to particular user or in a given context.
+  @HiveField(14)
   List<CodeableConcept>? get category;
   @override
 
   /// [code] The coded value or textual component of the flag to display to the
   ///  user.
+  @HiveField(15)
   CodeableConcept get code;
   @override
 
   /// [subject] The patient, location, group, organization, or practitioner
   ///  etc. this is about record this flag is associated with.
+  @HiveField(16)
   Reference get subject;
   @override
 
   /// [period] The period of time from the activation of the flag to
   /// inactivation of the flag. If the flag is active, the end of the period
   ///  should be unspecified.
+  @HiveField(17)
   Period? get period;
   @override
 
   /// [encounter] This alert is only relevant during the encounter.
+  @HiveField(18)
   Reference? get encounter;
   @override
 
   /// [author] The person, organization or device that created the flag.
+  @HiveField(19)
   Reference? get author;
   @override
   @JsonKey(ignore: true)
@@ -7799,32 +8387,39 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Library {
   @JsonKey(unknownEnumValue: R4ResourceType.Library)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7833,12 +8428,14 @@ mixin _$Library {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -7848,6 +8445,7 @@ mixin _$Library {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -7863,6 +8461,7 @@ mixin _$Library {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -7873,17 +8472,17 @@ mixin _$Library {
   /// library is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the library is stored
   ///  on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this library
-  /// when it is represented in other formats, or referenced in a specification,
-  /// model, design or an instance. e.g. CMS or NQF identifiers for a measure
-  /// artifact. Note that at least one identifier is required for
-  ///  non-experimental active artifacts.
+  @HiveField(13)
+  @HiveField(14)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -7897,94 +8496,116 @@ mixin _$Library {
   /// information on versioning knowledge assets, refer to the Decision Support
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
+  @HiveField(15)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the library. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
+  @HiveField(17)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the library.
+  @HiveField(19)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [subtitle] An explanatory or alternate title for the library giving
   ///  additional information about its content.
+  @HiveField(21)
   String? get subtitle => throw _privateConstructorUsedError;
 
   /// [subtitleElement] Extensions for subtitle
   @JsonKey(name: '_subtitle')
+  @HiveField(22)
   Element? get subtitleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
+  @HiveField(23)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(24)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this library is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
+  @HiveField(25)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [type] Identifies the type of library such as a Logic Library, Model
   ///  Definition, Asset Collection, or Module Definition.
+  @HiveField(27)
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [subjectCodeableConcept] A code or group definition that describes the
   ///  intended subject of the contents of the library.
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the contents of the library.
+  @HiveField(29)
   Reference? get subjectReference => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the library was published.
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the library changes.
+  @HiveField(30)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(31)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  library.
+  @HiveField(32)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(33)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(34)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
+  @HiveField(35)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(36)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -7992,92 +8613,111 @@ mixin _$Library {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate library instances.
+  @HiveField(37)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the library is
   ///  intended to be used.
+  @HiveField(38)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
+  @HiveField(39)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(40)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [usage] A detailed description of how the library is used from a clinical
   ///  perspective.
+  @HiveField(41)
   String? get usage => throw _privateConstructorUsedError;
 
   /// [usageElement] Extensions for usage
   @JsonKey(name: '_usage')
+  @HiveField(42)
   Element? get usageElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the library and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the library.
+  @HiveField(43)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(44)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
+  @HiveField(45)
   Date? get approvalDate => throw _privateConstructorUsedError;
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
+  @HiveField(46)
   Element? get approvalDateElement => throw _privateConstructorUsedError;
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
+  @HiveField(47)
   Date? get lastReviewDate => throw _privateConstructorUsedError;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
+  @HiveField(48)
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
 
   /// [effectivePeriod] The period during which the library content was or is
   ///  planned to be in active use.
+  @HiveField(49)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
 
   /// [topic] Descriptive topics related to the content of the library. Topics
   /// provide a high-level categorization of the library that can be useful for
   ///  filtering and searching.
+  @HiveField(50)
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
 
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
+  @HiveField(51)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
 
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
+  @HiveField(52)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
 
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
+  @HiveField(53)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
 
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
+  @HiveField(54)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-
-  /// [relatedArtifact] Related artifacts such as additional documentation,
-  ///  justification, or bibliographic references.
+  @HiveField(55)
+  @HiveField(56)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
 
   /// [parameter] The parameter element defines parameters used by the library.
+  @HiveField(57)
   List<ParameterDefinition>? get parameter =>
       throw _privateConstructorUsedError;
 
   /// [dataRequirement] Describes a set of data that must be provided in order
   /// to be able to successfully perform the computations defined by the
   ///  library.
+  @HiveField(58)
   List<DataRequirement>? get dataRequirement =>
       throw _privateConstructorUsedError;
 
@@ -8085,6 +8725,7 @@ mixin _$Library {
   /// a reference to a url, or may be directly embedded as a base-64 string.
   /// Either way, the contentType of the attachment determines how to interpret
   ///  the content.
+  @HiveField(59)
   List<Attachment>? get content => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8099,82 +8740,142 @@ abstract class $LibraryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Library)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+          List<Identifier>? identifier,
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      String? subtitle,
+      @HiveField(21)
+          String? subtitle,
       @JsonKey(name: '_subtitle')
+      @HiveField(22)
           Element? subtitleElement,
-      Code? status,
+      @HiveField(23)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(24)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(25)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           Element? experimentalElement,
-      CodeableConcept type,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(27)
+          CodeableConcept type,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(31)
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(33)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(36)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(37)
+          List<UsageContext>? useContext,
+      @HiveField(38)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(39)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(40)
           Element? purposeElement,
-      String? usage,
+      @HiveField(41)
+          String? usage,
       @JsonKey(name: '_usage')
+      @HiveField(42)
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(43)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(44)
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(45)
+          Date? approvalDate,
       @JsonKey(name: '_approvalDate')
+      @HiveField(46)
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(47)
+          Date? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
+      @HiveField(48)
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      List<ParameterDefinition>? parameter,
-      List<DataRequirement>? dataRequirement,
-      List<Attachment>? content});
+      @HiveField(49)
+          Period? effectivePeriod,
+      @HiveField(50)
+          List<CodeableConcept>? topic,
+      @HiveField(51)
+          List<ContactDetail>? author,
+      @HiveField(52)
+          List<ContactDetail>? editor,
+      @HiveField(53)
+          List<ContactDetail>? reviewer,
+      @HiveField(54)
+          List<ContactDetail>? endorser,
+      @HiveField(55)
+      @HiveField(56)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(57)
+          List<ParameterDefinition>? parameter,
+      @HiveField(58)
+          List<DataRequirement>? dataRequirement,
+      @HiveField(59)
+          List<Attachment>? content});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8792,82 +9493,142 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Library)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+          List<Identifier>? identifier,
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      String? subtitle,
+      @HiveField(21)
+          String? subtitle,
       @JsonKey(name: '_subtitle')
+      @HiveField(22)
           Element? subtitleElement,
-      Code? status,
+      @HiveField(23)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(24)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(25)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           Element? experimentalElement,
-      CodeableConcept type,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(27)
+          CodeableConcept type,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(31)
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(33)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(36)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(37)
+          List<UsageContext>? useContext,
+      @HiveField(38)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(39)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(40)
           Element? purposeElement,
-      String? usage,
+      @HiveField(41)
+          String? usage,
       @JsonKey(name: '_usage')
+      @HiveField(42)
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(43)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(44)
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(45)
+          Date? approvalDate,
       @JsonKey(name: '_approvalDate')
+      @HiveField(46)
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(47)
+          Date? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
+      @HiveField(48)
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      List<ParameterDefinition>? parameter,
-      List<DataRequirement>? dataRequirement,
-      List<Attachment>? content});
+      @HiveField(49)
+          Period? effectivePeriod,
+      @HiveField(50)
+          List<CodeableConcept>? topic,
+      @HiveField(51)
+          List<ContactDetail>? author,
+      @HiveField(52)
+          List<ContactDetail>? editor,
+      @HiveField(53)
+          List<ContactDetail>? reviewer,
+      @HiveField(54)
+          List<ContactDetail>? endorser,
+      @HiveField(55)
+      @HiveField(56)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(57)
+          List<ParameterDefinition>? parameter,
+      @HiveField(58)
+          List<DataRequirement>? dataRequirement,
+      @HiveField(59)
+          List<Attachment>? content});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -9225,85 +9986,146 @@ class __$$_LibraryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 146)
 class _$_Library extends _Library {
   _$_Library(
       {@JsonKey(unknownEnumValue: R4ResourceType.Library)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Library,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+      @HiveField(14)
+          final List<Identifier>? identifier,
+      @HiveField(15)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           this.versionElement,
-      this.name,
+      @HiveField(17)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           this.nameElement,
-      this.title,
+      @HiveField(19)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           this.titleElement,
-      this.subtitle,
+      @HiveField(21)
+          this.subtitle,
       @JsonKey(name: '_subtitle')
+      @HiveField(22)
           this.subtitleElement,
-      this.status,
+      @HiveField(23)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(24)
           this.statusElement,
-      this.experimental,
+      @HiveField(25)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           this.experimentalElement,
-      required this.type,
-      this.subjectCodeableConcept,
-      this.subjectReference,
-      this.date,
+      @HiveField(27)
+          required this.type,
+      @HiveField(28)
+          this.subjectCodeableConcept,
+      @HiveField(29)
+          this.subjectReference,
+      @HiveField(30)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(31)
           this.dateElement,
-      this.publisher,
+      @HiveField(32)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(33)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(36)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(37)
+          final List<UsageContext>? useContext,
+      @HiveField(38)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(39)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(40)
           this.purposeElement,
-      this.usage,
+      @HiveField(41)
+          this.usage,
       @JsonKey(name: '_usage')
+      @HiveField(42)
           this.usageElement,
-      this.copyright,
+      @HiveField(43)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(44)
           this.copyrightElement,
-      this.approvalDate,
+      @HiveField(45)
+          this.approvalDate,
       @JsonKey(name: '_approvalDate')
+      @HiveField(46)
           this.approvalDateElement,
-      this.lastReviewDate,
+      @HiveField(47)
+          this.lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
+      @HiveField(48)
           this.lastReviewDateElement,
-      this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      final List<ParameterDefinition>? parameter,
-      final List<DataRequirement>? dataRequirement,
-      final List<Attachment>? content})
+      @HiveField(49)
+          this.effectivePeriod,
+      @HiveField(50)
+          final List<CodeableConcept>? topic,
+      @HiveField(51)
+          final List<ContactDetail>? author,
+      @HiveField(52)
+          final List<ContactDetail>? editor,
+      @HiveField(53)
+          final List<ContactDetail>? reviewer,
+      @HiveField(54)
+          final List<ContactDetail>? endorser,
+      @HiveField(55)
+      @HiveField(56)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(57)
+          final List<ParameterDefinition>? parameter,
+      @HiveField(58)
+          final List<DataRequirement>? dataRequirement,
+      @HiveField(59)
+          final List<Attachment>? content})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9327,17 +10149,20 @@ class _$_Library extends _Library {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Library)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -9345,20 +10170,24 @@ class _$_Library extends _Library {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -9368,6 +10197,7 @@ class _$_Library extends _Library {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -9381,6 +10211,7 @@ class _$_Library extends _Library {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -9405,6 +10236,7 @@ class _$_Library extends _Library {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -9442,6 +10274,7 @@ class _$_Library extends _Library {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -9459,26 +10292,22 @@ class _$_Library extends _Library {
   /// canonical reference. It SHALL remain the same when the library is stored
   ///  on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this library
-  /// when it is represented in other formats, or referenced in a specification,
-  /// model, design or an instance. e.g. CMS or NQF identifiers for a measure
-  /// artifact. Note that at least one identifier is required for
-  ///  non-experimental active artifacts.
   final List<Identifier>? _identifier;
 
   /// [identifier] A formal identifier that is used to identify this library
-  /// when it is represented in other formats, or referenced in a specification,
-  /// model, design or an instance. e.g. CMS or NQF identifiers for a measure
-  /// artifact. Note that at least one identifier is required for
-  ///  non-experimental active artifacts.
   @override
+  @HiveField(13)
+  @HiveField(14)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -9499,77 +10328,92 @@ class _$_Library extends _Library {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   @override
+  @HiveField(15)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(16)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the library. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   @override
+  @HiveField(17)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(18)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the library.
   @override
+  @HiveField(19)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(20)
   final Element? titleElement;
 
   /// [subtitle] An explanatory or alternate title for the library giving
   ///  additional information about its content.
   @override
+  @HiveField(21)
   final String? subtitle;
 
   /// [subtitleElement] Extensions for subtitle
   @override
   @JsonKey(name: '_subtitle')
+  @HiveField(22)
   final Element? subtitleElement;
 
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
   @override
+  @HiveField(23)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(24)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this library is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
   @override
+  @HiveField(25)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   final Element? experimentalElement;
 
   /// [type] Identifies the type of library such as a Logic Library, Model
   ///  Definition, Asset Collection, or Module Definition.
   @override
+  @HiveField(27)
   final CodeableConcept type;
 
   /// [subjectCodeableConcept] A code or group definition that describes the
   ///  intended subject of the contents of the library.
   @override
+  @HiveField(28)
   final CodeableConcept? subjectCodeableConcept;
 
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the contents of the library.
   @override
+  @HiveField(29)
   final Reference? subjectReference;
 
   /// [date] The date  (and optionally time) when the library was published.
@@ -9577,21 +10421,25 @@ class _$_Library extends _Library {
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the library changes.
   @override
+  @HiveField(30)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(31)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  library.
   @override
+  @HiveField(32)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(33)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -9601,6 +10449,7 @@ class _$_Library extends _Library {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -9612,11 +10461,13 @@ class _$_Library extends _Library {
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
   @override
+  @HiveField(35)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(36)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -9632,6 +10483,7 @@ class _$_Library extends _Library {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate library instances.
   @override
+  @HiveField(37)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -9647,6 +10499,7 @@ class _$_Library extends _Library {
   /// [jurisdiction] A legal or geographic region in which the library is
   ///  intended to be used.
   @override
+  @HiveField(38)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -9658,59 +10511,70 @@ class _$_Library extends _Library {
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
   @override
+  @HiveField(39)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(40)
   final Element? purposeElement;
 
   /// [usage] A detailed description of how the library is used from a clinical
   ///  perspective.
   @override
+  @HiveField(41)
   final String? usage;
 
   /// [usageElement] Extensions for usage
   @override
   @JsonKey(name: '_usage')
+  @HiveField(42)
   final Element? usageElement;
 
   /// [copyright] A copyright statement relating to the library and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the library.
   @override
+  @HiveField(43)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(44)
   final Element? copyrightElement;
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   @override
+  @HiveField(45)
   final Date? approvalDate;
 
   /// [approvalDateElement] Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
+  @HiveField(46)
   final Element? approvalDateElement;
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   @override
+  @HiveField(47)
   final Date? lastReviewDate;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
+  @HiveField(48)
   final Element? lastReviewDateElement;
 
   /// [effectivePeriod] The period during which the library content was or is
   ///  planned to be in active use.
   @override
+  @HiveField(49)
   final Period? effectivePeriod;
 
   /// [topic] Descriptive topics related to the content of the library. Topics
@@ -9722,6 +10586,7 @@ class _$_Library extends _Library {
   /// provide a high-level categorization of the library that can be useful for
   ///  filtering and searching.
   @override
+  @HiveField(50)
   List<CodeableConcept>? get topic {
     final value = _topic;
     if (value == null) return null;
@@ -9737,6 +10602,7 @@ class _$_Library extends _Library {
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
   @override
+  @HiveField(51)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -9752,6 +10618,7 @@ class _$_Library extends _Library {
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
   @override
+  @HiveField(52)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -9767,6 +10634,7 @@ class _$_Library extends _Library {
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
   @override
+  @HiveField(53)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -9782,6 +10650,7 @@ class _$_Library extends _Library {
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
   @override
+  @HiveField(54)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -9790,13 +10659,10 @@ class _$_Library extends _Library {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [relatedArtifact] Related artifacts such as additional documentation,
-  ///  justification, or bibliographic references.
   final List<RelatedArtifact>? _relatedArtifact;
-
-  /// [relatedArtifact] Related artifacts such as additional documentation,
-  ///  justification, or bibliographic references.
   @override
+  @HiveField(55)
+  @HiveField(56)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -9810,6 +10676,7 @@ class _$_Library extends _Library {
 
   /// [parameter] The parameter element defines parameters used by the library.
   @override
+  @HiveField(57)
   List<ParameterDefinition>? get parameter {
     final value = _parameter;
     if (value == null) return null;
@@ -9827,6 +10694,7 @@ class _$_Library extends _Library {
   /// to be able to successfully perform the computations defined by the
   ///  library.
   @override
+  @HiveField(58)
   List<DataRequirement>? get dataRequirement {
     final value = _dataRequirement;
     if (value == null) return null;
@@ -9846,6 +10714,7 @@ class _$_Library extends _Library {
   /// Either way, the contentType of the attachment determines how to interpret
   ///  the content.
   @override
+  @HiveField(59)
   List<Attachment>? get content {
     final value = _content;
     if (value == null) return null;
@@ -10044,99 +10913,162 @@ class _$_Library extends _Library {
 abstract class _Library extends Library {
   factory _Library(
       {@JsonKey(unknownEnumValue: R4ResourceType.Library)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+      @HiveField(14)
+          final List<Identifier>? identifier,
+      @HiveField(15)
+          final String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           final Element? versionElement,
-      final String? name,
+      @HiveField(17)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           final Element? nameElement,
-      final String? title,
+      @HiveField(19)
+          final String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           final Element? titleElement,
-      final String? subtitle,
+      @HiveField(21)
+          final String? subtitle,
       @JsonKey(name: '_subtitle')
+      @HiveField(22)
           final Element? subtitleElement,
-      final Code? status,
+      @HiveField(23)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(24)
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(25)
+          final Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           final Element? experimentalElement,
-      required final CodeableConcept type,
-      final CodeableConcept? subjectCodeableConcept,
-      final Reference? subjectReference,
-      final FhirDateTime? date,
+      @HiveField(27)
+          required final CodeableConcept type,
+      @HiveField(28)
+          final CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          final Reference? subjectReference,
+      @HiveField(30)
+          final FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(31)
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(32)
+          final String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(33)
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          final Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(36)
           final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(37)
+          final List<UsageContext>? useContext,
+      @HiveField(38)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(39)
+          final Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(40)
           final Element? purposeElement,
-      final String? usage,
+      @HiveField(41)
+          final String? usage,
       @JsonKey(name: '_usage')
+      @HiveField(42)
           final Element? usageElement,
-      final Markdown? copyright,
+      @HiveField(43)
+          final Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(44)
           final Element? copyrightElement,
-      final Date? approvalDate,
+      @HiveField(45)
+          final Date? approvalDate,
       @JsonKey(name: '_approvalDate')
+      @HiveField(46)
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      @HiveField(47)
+          final Date? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
+      @HiveField(48)
           final Element? lastReviewDateElement,
-      final Period? effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      final List<ParameterDefinition>? parameter,
-      final List<DataRequirement>? dataRequirement,
-      final List<Attachment>? content}) = _$_Library;
+      @HiveField(49)
+          final Period? effectivePeriod,
+      @HiveField(50)
+          final List<CodeableConcept>? topic,
+      @HiveField(51)
+          final List<ContactDetail>? author,
+      @HiveField(52)
+          final List<ContactDetail>? editor,
+      @HiveField(53)
+          final List<ContactDetail>? reviewer,
+      @HiveField(54)
+          final List<ContactDetail>? endorser,
+      @HiveField(55)
+      @HiveField(56)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(57)
+          final List<ParameterDefinition>? parameter,
+      @HiveField(58)
+          final List<DataRequirement>? dataRequirement,
+      @HiveField(59)
+          final List<Attachment>? content}) = _$_Library;
   _Library._() : super._();
 
   factory _Library.fromJson(Map<String, dynamic> json) = _$_Library.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Library)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -10144,20 +11076,24 @@ abstract class _Library extends Library {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -10167,6 +11103,7 @@ abstract class _Library extends Library {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -10174,6 +11111,7 @@ abstract class _Library extends Library {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -10184,6 +11122,7 @@ abstract class _Library extends Library {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -10200,6 +11139,7 @@ abstract class _Library extends Library {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -10210,19 +11150,19 @@ abstract class _Library extends Library {
   /// library is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the library is stored
   ///  on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this library
-  /// when it is represented in other formats, or referenced in a specification,
-  /// model, design or an instance. e.g. CMS or NQF identifiers for a measure
-  /// artifact. Note that at least one identifier is required for
-  ///  non-experimental active artifacts.
+  @HiveField(13)
+  @HiveField(14)
   List<Identifier>? get identifier;
   @override
 
@@ -10237,77 +11177,92 @@ abstract class _Library extends Library {
   /// information on versioning knowledge assets, refer to the Decision Support
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
+  @HiveField(15)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the library. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
+  @HiveField(17)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the library.
+  @HiveField(19)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement;
   @override
 
   /// [subtitle] An explanatory or alternate title for the library giving
   ///  additional information about its content.
+  @HiveField(21)
   String? get subtitle;
   @override
 
   /// [subtitleElement] Extensions for subtitle
   @JsonKey(name: '_subtitle')
+  @HiveField(22)
   Element? get subtitleElement;
   @override
 
   /// [status] The status of this library. Enables tracking the life-cycle of
   ///  the content.
+  @HiveField(23)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(24)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this library is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
+  @HiveField(25)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   Element? get experimentalElement;
   @override
 
   /// [type] Identifies the type of library such as a Logic Library, Model
   ///  Definition, Asset Collection, or Module Definition.
+  @HiveField(27)
   CodeableConcept get type;
   @override
 
   /// [subjectCodeableConcept] A code or group definition that describes the
   ///  intended subject of the contents of the library.
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept;
   @override
 
   /// [subjectReference] A code or group definition that describes the intended
   ///  subject of the contents of the library.
+  @HiveField(29)
   Reference? get subjectReference;
   @override
 
@@ -10315,36 +11270,43 @@ abstract class _Library extends Library {
   /// The date must change when the business version changes and it must change
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the library changes.
+  @HiveField(30)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(31)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  library.
+  @HiveField(32)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(33)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(34)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
+  @HiveField(35)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(36)
   Element? get descriptionElement;
   @override
 
@@ -10353,110 +11315,129 @@ abstract class _Library extends Library {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate library instances.
+  @HiveField(37)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the library is
   ///  intended to be used.
+  @HiveField(38)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
+  @HiveField(39)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(40)
   Element? get purposeElement;
   @override
 
   /// [usage] A detailed description of how the library is used from a clinical
   ///  perspective.
+  @HiveField(41)
   String? get usage;
   @override
 
   /// [usageElement] Extensions for usage
   @JsonKey(name: '_usage')
+  @HiveField(42)
   Element? get usageElement;
   @override
 
   /// [copyright] A copyright statement relating to the library and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the library.
+  @HiveField(43)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(44)
   Element? get copyrightElement;
   @override
 
   /// [approvalDate] The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
+  @HiveField(45)
   Date? get approvalDate;
   @override
 
   /// [approvalDateElement] Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
+  @HiveField(46)
   Element? get approvalDateElement;
   @override
 
   /// [lastReviewDate] The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
+  @HiveField(47)
   Date? get lastReviewDate;
   @override
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
+  @HiveField(48)
   Element? get lastReviewDateElement;
   @override
 
   /// [effectivePeriod] The period during which the library content was or is
   ///  planned to be in active use.
+  @HiveField(49)
   Period? get effectivePeriod;
   @override
 
   /// [topic] Descriptive topics related to the content of the library. Topics
   /// provide a high-level categorization of the library that can be useful for
   ///  filtering and searching.
+  @HiveField(50)
   List<CodeableConcept>? get topic;
   @override
 
   /// [author] An individiual or organization primarily involved in the
   ///  creation and maintenance of the content.
+  @HiveField(51)
   List<ContactDetail>? get author;
   @override
 
   /// [editor] An individual or organization primarily responsible for internal
   ///  coherence of the content.
+  @HiveField(52)
   List<ContactDetail>? get editor;
   @override
 
   /// [reviewer] An individual or organization primarily responsible for review
   ///  of some aspect of the content.
+  @HiveField(53)
   List<ContactDetail>? get reviewer;
   @override
 
   /// [endorser] An individual or organization responsible for officially
   ///  endorsing the content for use in some setting.
+  @HiveField(54)
   List<ContactDetail>? get endorser;
   @override
-
-  /// [relatedArtifact] Related artifacts such as additional documentation,
-  ///  justification, or bibliographic references.
+  @HiveField(55)
+  @HiveField(56)
   List<RelatedArtifact>? get relatedArtifact;
   @override
 
   /// [parameter] The parameter element defines parameters used by the library.
+  @HiveField(57)
   List<ParameterDefinition>? get parameter;
   @override
 
   /// [dataRequirement] Describes a set of data that must be provided in order
   /// to be able to successfully perform the computations defined by the
   ///  library.
+  @HiveField(58)
   List<DataRequirement>? get dataRequirement;
   @override
 
@@ -10464,6 +11445,7 @@ abstract class _Library extends Library {
   /// a reference to a url, or may be directly embedded as a base-64 string.
   /// Either way, the contentType of the attachment determines how to interpret
   ///  the content.
+  @HiveField(59)
   List<Attachment>? get content;
   @override
   @JsonKey(ignore: true)

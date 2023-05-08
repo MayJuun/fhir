@@ -3,6 +3,618 @@
 part of 'entities1.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class EndpointAdapter extends TypeAdapter<_$_Endpoint> {
+  @override
+  final int typeId = 137;
+
+  @override
+  _$_Endpoint read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Endpoint(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      status: fields[12] as Code?,
+      statusElement: fields[13] as Element?,
+      connectionType: fields[14] as Coding,
+      name: fields[15] as String?,
+      nameElement: fields[16] as Element?,
+      managingOrganization: fields[17] as Reference?,
+      contact: (fields[18] as List?)?.cast<ContactPoint>(),
+      period: fields[19] as Period?,
+      payloadType: (fields[20] as List).cast<CodeableConcept>(),
+      payloadMimeType: (fields[21] as List?)?.cast<Code>(),
+      payloadMimeTypeElement: (fields[22] as List?)?.cast<Element?>(),
+      address: fields[23] as FhirUrl?,
+      addressElement: fields[24] as Element?,
+      header: (fields[25] as List?)?.cast<String>(),
+      headerElement: (fields[26] as List?)?.cast<Element?>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Endpoint obj) {
+    writer
+      ..writeByte(27)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.status)
+      ..writeByte(13)
+      ..write(obj.statusElement)
+      ..writeByte(14)
+      ..write(obj.connectionType)
+      ..writeByte(15)
+      ..write(obj.name)
+      ..writeByte(16)
+      ..write(obj.nameElement)
+      ..writeByte(17)
+      ..write(obj.managingOrganization)
+      ..writeByte(19)
+      ..write(obj.period)
+      ..writeByte(23)
+      ..write(obj.address)
+      ..writeByte(24)
+      ..write(obj.addressElement)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(18)
+      ..write(obj.contact)
+      ..writeByte(20)
+      ..write(obj.payloadType)
+      ..writeByte(21)
+      ..write(obj.payloadMimeType)
+      ..writeByte(22)
+      ..write(obj.payloadMimeTypeElement)
+      ..writeByte(25)
+      ..write(obj.header)
+      ..writeByte(26)
+      ..write(obj.headerElement);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is EndpointAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class HealthcareServiceAdapter extends TypeAdapter<_$_HealthcareService> {
+  @override
+  final int typeId = 138;
+
+  @override
+  _$_HealthcareService read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_HealthcareService(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      active: fields[12] as Boolean?,
+      activeElement: fields[13] as Element?,
+      providedBy: fields[14] as Reference?,
+      category: (fields[15] as List?)?.cast<CodeableConcept>(),
+      type: (fields[16] as List?)?.cast<CodeableConcept>(),
+      specialty: (fields[17] as List?)?.cast<CodeableConcept>(),
+      location: (fields[18] as List?)?.cast<Reference>(),
+      name: fields[19] as String?,
+      nameElement: fields[20] as Element?,
+      comment: fields[21] as String?,
+      commentElement: fields[22] as Element?,
+      extraDetails: fields[23] as Markdown?,
+      extraDetailsElement: fields[24] as Element?,
+      photo: fields[25] as Attachment?,
+      telecom: (fields[26] as List?)?.cast<ContactPoint>(),
+      coverageArea: (fields[27] as List?)?.cast<Reference>(),
+      serviceProvisionCode: (fields[28] as List?)?.cast<CodeableConcept>(),
+      eligibility: (fields[29] as List?)?.cast<HealthcareServiceEligibility>(),
+      program: (fields[30] as List?)?.cast<CodeableConcept>(),
+      characteristic: (fields[31] as List?)?.cast<CodeableConcept>(),
+      communication: (fields[32] as List?)?.cast<CodeableConcept>(),
+      referralMethod: (fields[33] as List?)?.cast<CodeableConcept>(),
+      appointmentRequired: fields[34] as Boolean?,
+      appointmentRequiredElement: fields[35] as Element?,
+      availableTime:
+          (fields[36] as List?)?.cast<HealthcareServiceAvailableTime>(),
+      notAvailable:
+          (fields[37] as List?)?.cast<HealthcareServiceNotAvailable>(),
+      availabilityExceptions: fields[38] as String?,
+      availabilityExceptionsElement: fields[40] as Element?,
+      endpoint: (fields[41] as List?)?.cast<Reference>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_HealthcareService obj) {
+    writer
+      ..writeByte(41)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.active)
+      ..writeByte(13)
+      ..write(obj.activeElement)
+      ..writeByte(14)
+      ..write(obj.providedBy)
+      ..writeByte(19)
+      ..write(obj.name)
+      ..writeByte(20)
+      ..write(obj.nameElement)
+      ..writeByte(21)
+      ..write(obj.comment)
+      ..writeByte(22)
+      ..write(obj.commentElement)
+      ..writeByte(23)
+      ..write(obj.extraDetails)
+      ..writeByte(24)
+      ..write(obj.extraDetailsElement)
+      ..writeByte(25)
+      ..write(obj.photo)
+      ..writeByte(34)
+      ..write(obj.appointmentRequired)
+      ..writeByte(35)
+      ..write(obj.appointmentRequiredElement)
+      ..writeByte(38)
+      ..write(obj.availabilityExceptions)
+      ..writeByte(40)
+      ..write(obj.availabilityExceptionsElement)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(15)
+      ..write(obj.category)
+      ..writeByte(16)
+      ..write(obj.type)
+      ..writeByte(17)
+      ..write(obj.specialty)
+      ..writeByte(18)
+      ..write(obj.location)
+      ..writeByte(26)
+      ..write(obj.telecom)
+      ..writeByte(27)
+      ..write(obj.coverageArea)
+      ..writeByte(28)
+      ..write(obj.serviceProvisionCode)
+      ..writeByte(29)
+      ..write(obj.eligibility)
+      ..writeByte(30)
+      ..write(obj.program)
+      ..writeByte(31)
+      ..write(obj.characteristic)
+      ..writeByte(32)
+      ..write(obj.communication)
+      ..writeByte(33)
+      ..write(obj.referralMethod)
+      ..writeByte(36)
+      ..write(obj.availableTime)
+      ..writeByte(37)
+      ..write(obj.notAvailable)
+      ..writeByte(41)
+      ..write(obj.endpoint);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is HealthcareServiceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class LocationAdapter extends TypeAdapter<_$_Location> {
+  @override
+  final int typeId = 139;
+
+  @override
+  _$_Location read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Location(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      status: fields[12] as Code?,
+      statusElement: fields[13] as Element?,
+      operationalStatus: fields[14] as Coding?,
+      name: fields[15] as String?,
+      nameElement: fields[16] as Element?,
+      alias: (fields[17] as List?)?.cast<String>(),
+      aliasElement: (fields[18] as List?)?.cast<Element?>(),
+      description: fields[19] as String?,
+      descriptionElement: fields[20] as Element?,
+      mode: fields[21] as Code?,
+      modeElement: fields[22] as Element?,
+      type: (fields[23] as List?)?.cast<CodeableConcept>(),
+      telecom: (fields[24] as List?)?.cast<ContactPoint>(),
+      address: fields[26] as Address?,
+      physicalType: fields[27] as CodeableConcept?,
+      position: fields[29] as LocationPosition?,
+      managingOrganization: fields[30] as Reference?,
+      partOf: fields[31] as Reference?,
+      hoursOfOperation: (fields[32] as List?)?.cast<LocationHoursOfOperation>(),
+      availabilityExceptions: fields[33] as String?,
+      availabilityExceptionsElement: fields[34] as Element?,
+      endpoint: (fields[35] as List?)?.cast<Reference>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Location obj) {
+    writer
+      ..writeByte(34)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.status)
+      ..writeByte(13)
+      ..write(obj.statusElement)
+      ..writeByte(14)
+      ..write(obj.operationalStatus)
+      ..writeByte(15)
+      ..write(obj.name)
+      ..writeByte(16)
+      ..write(obj.nameElement)
+      ..writeByte(19)
+      ..write(obj.description)
+      ..writeByte(20)
+      ..write(obj.descriptionElement)
+      ..writeByte(21)
+      ..write(obj.mode)
+      ..writeByte(22)
+      ..write(obj.modeElement)
+      ..writeByte(26)
+      ..write(obj.address)
+      ..writeByte(27)
+      ..write(obj.physicalType)
+      ..writeByte(29)
+      ..write(obj.position)
+      ..writeByte(30)
+      ..write(obj.managingOrganization)
+      ..writeByte(31)
+      ..write(obj.partOf)
+      ..writeByte(33)
+      ..write(obj.availabilityExceptions)
+      ..writeByte(34)
+      ..write(obj.availabilityExceptionsElement)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(17)
+      ..write(obj.alias)
+      ..writeByte(18)
+      ..write(obj.aliasElement)
+      ..writeByte(23)
+      ..write(obj.type)
+      ..writeByte(24)
+      ..write(obj.telecom)
+      ..writeByte(32)
+      ..write(obj.hoursOfOperation)
+      ..writeByte(35)
+      ..write(obj.endpoint);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LocationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class OrganizationAdapter extends TypeAdapter<_$_Organization> {
+  @override
+  final int typeId = 140;
+
+  @override
+  _$_Organization read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Organization(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      active: fields[12] as Boolean?,
+      activeElement: fields[13] as Element?,
+      type: (fields[14] as List?)?.cast<CodeableConcept>(),
+      name: fields[15] as String?,
+      nameElement: fields[16] as Element?,
+      alias: (fields[17] as List?)?.cast<String>(),
+      aliasElement: (fields[18] as List?)?.cast<Element?>(),
+      telecom: (fields[19] as List?)?.cast<ContactPoint>(),
+      address: (fields[20] as List?)?.cast<Address>(),
+      partOf: fields[21] as Reference?,
+      contact: (fields[22] as List?)?.cast<OrganizationContact>(),
+      endpoint: (fields[23] as List?)?.cast<Reference>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Organization obj) {
+    writer
+      ..writeByte(24)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.active)
+      ..writeByte(13)
+      ..write(obj.activeElement)
+      ..writeByte(15)
+      ..write(obj.name)
+      ..writeByte(16)
+      ..write(obj.nameElement)
+      ..writeByte(21)
+      ..write(obj.partOf)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(14)
+      ..write(obj.type)
+      ..writeByte(17)
+      ..write(obj.alias)
+      ..writeByte(18)
+      ..write(obj.aliasElement)
+      ..writeByte(19)
+      ..write(obj.telecom)
+      ..writeByte(20)
+      ..write(obj.address)
+      ..writeByte(22)
+      ..write(obj.contact)
+      ..writeByte(23)
+      ..write(obj.endpoint);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is OrganizationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class OrganizationAffiliationAdapter
+    extends TypeAdapter<_$_OrganizationAffiliation> {
+  @override
+  final int typeId = 141;
+
+  @override
+  _$_OrganizationAffiliation read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_OrganizationAffiliation(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      active: fields[12] as Boolean?,
+      activeElement: fields[13] as Element?,
+      period: fields[14] as Period?,
+      organization: fields[15] as Reference?,
+      participatingOrganization: fields[16] as Reference?,
+      network: (fields[17] as List?)?.cast<Reference>(),
+      code: (fields[18] as List?)?.cast<CodeableConcept>(),
+      specialty: (fields[19] as List?)?.cast<CodeableConcept>(),
+      location: (fields[20] as List?)?.cast<Reference>(),
+      healthcareService: (fields[21] as List?)?.cast<Reference>(),
+      telecom: (fields[22] as List?)?.cast<ContactPoint>(),
+      endpoint: (fields[23] as List?)?.cast<Reference>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_OrganizationAffiliation obj) {
+    writer
+      ..writeByte(24)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.active)
+      ..writeByte(13)
+      ..write(obj.activeElement)
+      ..writeByte(14)
+      ..write(obj.period)
+      ..writeByte(15)
+      ..write(obj.organization)
+      ..writeByte(16)
+      ..write(obj.participatingOrganization)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(17)
+      ..write(obj.network)
+      ..writeByte(18)
+      ..write(obj.code)
+      ..writeByte(19)
+      ..write(obj.specialty)
+      ..writeByte(20)
+      ..write(obj.location)
+      ..writeByte(21)
+      ..write(obj.healthcareService)
+      ..writeByte(22)
+      ..write(obj.telecom)
+      ..writeByte(23)
+      ..write(obj.endpoint);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is OrganizationAffiliationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

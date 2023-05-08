@@ -21,32 +21,39 @@ Communication _$CommunicationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Communication {
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$Communication {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$Communication {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,96 +95,108 @@ mixin _$Communication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifiers assigned to this communication by the
   /// performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
 
   /// [basedOn] An order, proposal or plan fulfilled in whole or in part by
   ///  this Communication.
+  @HiveField(17)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [partOf] Part of this action.
+  @HiveField(18)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [inResponseTo] Prior communication that this communication is in response
   ///  to.
+  @HiveField(19)
   List<Reference>? get inResponseTo => throw _privateConstructorUsedError;
 
   /// [status] The status of the transmission.
+  @HiveField(20)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  Communication.
+  @HiveField(22)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
-
-  /// [category] The type of message conveyed such as alert, notification,
-  ///  reminder, instruction, etc.
+  @HiveField(23)
+  @HiveField(24)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [priority] Characterizes how quickly the planned or in progress
-  /// communication must be addressed. Includes concepts such as stat, urgent,
-  ///  routine.
+  @HiveField(25)
+  @HiveField(26)
   Code? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(27)
   Element? get priorityElement => throw _privateConstructorUsedError;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
+  @HiveField(28)
+  @HiveField(29)
   List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
 
   /// [subject] The patient or group that was the focus of this communication.
+  @HiveField(30)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [topic] Description of the purpose/content, similar to a subject line in
   ///  an email.
+  @HiveField(31)
   CodeableConcept? get topic => throw _privateConstructorUsedError;
 
   /// [about] Other resources that pertain to this communication and to which
   ///  this communication should be associated.
+  @HiveField(32)
   List<Reference>? get about => throw _privateConstructorUsedError;
 
   /// [encounter] The Encounter during which this Communication was created or
   ///  to which the creation of this record is tightly associated.
+  @HiveField(33)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [sent] The time when this communication was sent.
+  @HiveField(34)
   FhirDateTime? get sent => throw _privateConstructorUsedError;
 
   /// [sentElement] Extensions for sent
   @JsonKey(name: '_sent')
+  @HiveField(35)
   Element? get sentElement => throw _privateConstructorUsedError;
 
   /// [received] The time when this communication arrived at the destination.
+  @HiveField(36)
   FhirDateTime? get received => throw _privateConstructorUsedError;
 
   /// [receivedElement] Extensions for received
   @JsonKey(name: '_received')
+  @HiveField(37)
   Element? get receivedElement => throw _privateConstructorUsedError;
 
   /// [recipient] The entity (e.g. person, organization, clinical information
@@ -184,25 +206,31 @@ mixin _$Communication {
   /// communications are intended where either receipts are not tracked (e.g. a
   /// mass mail-out) or a receipt is captured in aggregate (all emails confirmed
   ///  received by a particular time).
+  @HiveField(38)
   List<Reference>? get recipient => throw _privateConstructorUsedError;
 
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which was the source of the communication.
+  @HiveField(39)
   Reference? get sender => throw _privateConstructorUsedError;
 
   /// [reasonCode] The reason or justification for the communication.
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this communication.
+  @HiveField(41)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [payload] Text, attachment(s), or resource(s) that was communicated to
   ///  the recipient.
+  @HiveField(42)
   List<CommunicationPayload>? get payload => throw _privateConstructorUsedError;
 
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
+  @HiveField(43)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -219,53 +247,97 @@ abstract class $CommunicationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      List<Reference>? inResponseTo,
-      Code? status,
+      @HiveField(17)
+          List<Reference>? basedOn,
+      @HiveField(18)
+          List<Reference>? partOf,
+      @HiveField(19)
+          List<Reference>? inResponseTo,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      List<CodeableConcept>? category,
-      Code? priority,
+      @HiveField(22)
+          CodeableConcept? statusReason,
+      @HiveField(23)
+      @HiveField(24)
+          List<CodeableConcept>? category,
+      @HiveField(25)
+      @HiveField(26)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(27)
           Element? priorityElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      CodeableConcept? topic,
-      List<Reference>? about,
-      Reference? encounter,
-      FhirDateTime? sent,
+      @HiveField(28)
+      @HiveField(29)
+          List<CodeableConcept>? medium,
+      @HiveField(30)
+          Reference? subject,
+      @HiveField(31)
+          CodeableConcept? topic,
+      @HiveField(32)
+          List<Reference>? about,
+      @HiveField(33)
+          Reference? encounter,
+      @HiveField(34)
+          FhirDateTime? sent,
       @JsonKey(name: '_sent')
+      @HiveField(35)
           Element? sentElement,
-      FhirDateTime? received,
+      @HiveField(36)
+          FhirDateTime? received,
       @JsonKey(name: '_received')
+      @HiveField(37)
           Element? receivedElement,
-      List<Reference>? recipient,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CommunicationPayload>? payload,
-      List<Annotation>? note});
+      @HiveField(38)
+          List<Reference>? recipient,
+      @HiveField(39)
+          Reference? sender,
+      @HiveField(40)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          List<Reference>? reasonReference,
+      @HiveField(42)
+          List<CommunicationPayload>? payload,
+      @HiveField(43)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -662,53 +734,97 @@ abstract class _$$_CommunicationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      List<Reference>? inResponseTo,
-      Code? status,
+      @HiveField(17)
+          List<Reference>? basedOn,
+      @HiveField(18)
+          List<Reference>? partOf,
+      @HiveField(19)
+          List<Reference>? inResponseTo,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      List<CodeableConcept>? category,
-      Code? priority,
+      @HiveField(22)
+          CodeableConcept? statusReason,
+      @HiveField(23)
+      @HiveField(24)
+          List<CodeableConcept>? category,
+      @HiveField(25)
+      @HiveField(26)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(27)
           Element? priorityElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      CodeableConcept? topic,
-      List<Reference>? about,
-      Reference? encounter,
-      FhirDateTime? sent,
+      @HiveField(28)
+      @HiveField(29)
+          List<CodeableConcept>? medium,
+      @HiveField(30)
+          Reference? subject,
+      @HiveField(31)
+          CodeableConcept? topic,
+      @HiveField(32)
+          List<Reference>? about,
+      @HiveField(33)
+          Reference? encounter,
+      @HiveField(34)
+          FhirDateTime? sent,
       @JsonKey(name: '_sent')
+      @HiveField(35)
           Element? sentElement,
-      FhirDateTime? received,
+      @HiveField(36)
+          FhirDateTime? received,
       @JsonKey(name: '_received')
+      @HiveField(37)
           Element? receivedElement,
-      List<Reference>? recipient,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CommunicationPayload>? payload,
-      List<Annotation>? note});
+      @HiveField(38)
+          List<Reference>? recipient,
+      @HiveField(39)
+          Reference? sender,
+      @HiveField(40)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          List<Reference>? reasonReference,
+      @HiveField(42)
+          List<CommunicationPayload>? payload,
+      @HiveField(43)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -952,56 +1068,101 @@ class __$$_CommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 177)
 class _$_Communication extends _Communication {
   _$_Communication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Communication,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      final List<Reference>? inResponseTo,
-      this.status,
+      @HiveField(17)
+          final List<Reference>? basedOn,
+      @HiveField(18)
+          final List<Reference>? partOf,
+      @HiveField(19)
+          final List<Reference>? inResponseTo,
+      @HiveField(20)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           this.statusElement,
-      this.statusReason,
-      final List<CodeableConcept>? category,
-      this.priority,
+      @HiveField(22)
+          this.statusReason,
+      @HiveField(23)
+      @HiveField(24)
+          final List<CodeableConcept>? category,
+      @HiveField(25)
+      @HiveField(26)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(27)
           this.priorityElement,
-      final List<CodeableConcept>? medium,
-      this.subject,
-      this.topic,
-      final List<Reference>? about,
-      this.encounter,
-      this.sent,
+      @HiveField(28)
+      @HiveField(29)
+          final List<CodeableConcept>? medium,
+      @HiveField(30)
+          this.subject,
+      @HiveField(31)
+          this.topic,
+      @HiveField(32)
+          final List<Reference>? about,
+      @HiveField(33)
+          this.encounter,
+      @HiveField(34)
+          this.sent,
       @JsonKey(name: '_sent')
+      @HiveField(35)
           this.sentElement,
-      this.received,
+      @HiveField(36)
+          this.received,
       @JsonKey(name: '_received')
+      @HiveField(37)
           this.receivedElement,
-      final List<Reference>? recipient,
-      this.sender,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<CommunicationPayload>? payload,
-      final List<Annotation>? note})
+      @HiveField(38)
+          final List<Reference>? recipient,
+      @HiveField(39)
+          this.sender,
+      @HiveField(40)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          final List<Reference>? reasonReference,
+      @HiveField(42)
+          final List<CommunicationPayload>? payload,
+      @HiveField(43)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1027,17 +1188,20 @@ class _$_Communication extends _Communication {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1045,20 +1209,24 @@ class _$_Communication extends _Communication {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1068,6 +1236,7 @@ class _$_Communication extends _Communication {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1081,6 +1250,7 @@ class _$_Communication extends _Communication {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1105,6 +1275,7 @@ class _$_Communication extends _Communication {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1142,6 +1313,7 @@ class _$_Communication extends _Communication {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1160,6 +1332,7 @@ class _$_Communication extends _Communication {
   /// performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1168,15 +1341,10 @@ class _$_Communication extends _Communication {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
   final List<Canonical>? _instantiatesCanonical;
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
   @override
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
@@ -1186,15 +1354,10 @@ class _$_Communication extends _Communication {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
   final List<FhirUri>? _instantiatesUri;
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
   @override
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
@@ -1209,6 +1372,7 @@ class _$_Communication extends _Communication {
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @override
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
     if (value == null) return null;
@@ -1225,6 +1389,7 @@ class _$_Communication extends _Communication {
   /// [basedOn] An order, proposal or plan fulfilled in whole or in part by
   ///  this Communication.
   @override
+  @HiveField(17)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -1238,6 +1403,7 @@ class _$_Communication extends _Communication {
 
   /// [partOf] Part of this action.
   @override
+  @HiveField(18)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -1253,6 +1419,7 @@ class _$_Communication extends _Communication {
   /// [inResponseTo] Prior communication that this communication is in response
   ///  to.
   @override
+  @HiveField(19)
   List<Reference>? get inResponseTo {
     final value = _inResponseTo;
     if (value == null) return null;
@@ -1263,25 +1430,24 @@ class _$_Communication extends _Communication {
 
   /// [status] The status of the transmission.
   @override
+  @HiveField(20)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(21)
   final Element? statusElement;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  Communication.
   @override
+  @HiveField(22)
   final CodeableConcept? statusReason;
-
-  /// [category] The type of message conveyed such as alert, notification,
-  ///  reminder, instruction, etc.
   final List<CodeableConcept>? _category;
-
-  /// [category] The type of message conveyed such as alert, notification,
-  ///  reminder, instruction, etc.
   @override
+  @HiveField(23)
+  @HiveField(24)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -1291,23 +1457,20 @@ class _$_Communication extends _Communication {
   }
 
   /// [priority] Characterizes how quickly the planned or in progress
-  /// communication must be addressed. Includes concepts such as stat, urgent,
-  ///  routine.
   @override
+  @HiveField(25)
+  @HiveField(26)
   final Code? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(27)
   final Element? priorityElement;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
   final List<CodeableConcept>? _medium;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
   @override
+  @HiveField(28)
+  @HiveField(29)
   List<CodeableConcept>? get medium {
     final value = _medium;
     if (value == null) return null;
@@ -1318,11 +1481,13 @@ class _$_Communication extends _Communication {
 
   /// [subject] The patient or group that was the focus of this communication.
   @override
+  @HiveField(30)
   final Reference? subject;
 
   /// [topic] Description of the purpose/content, similar to a subject line in
   ///  an email.
   @override
+  @HiveField(31)
   final CodeableConcept? topic;
 
   /// [about] Other resources that pertain to this communication and to which
@@ -1332,6 +1497,7 @@ class _$_Communication extends _Communication {
   /// [about] Other resources that pertain to this communication and to which
   ///  this communication should be associated.
   @override
+  @HiveField(32)
   List<Reference>? get about {
     final value = _about;
     if (value == null) return null;
@@ -1343,24 +1509,29 @@ class _$_Communication extends _Communication {
   /// [encounter] The Encounter during which this Communication was created or
   ///  to which the creation of this record is tightly associated.
   @override
+  @HiveField(33)
   final Reference? encounter;
 
   /// [sent] The time when this communication was sent.
   @override
+  @HiveField(34)
   final FhirDateTime? sent;
 
   /// [sentElement] Extensions for sent
   @override
   @JsonKey(name: '_sent')
+  @HiveField(35)
   final Element? sentElement;
 
   /// [received] The time when this communication arrived at the destination.
   @override
+  @HiveField(36)
   final FhirDateTime? received;
 
   /// [receivedElement] Extensions for received
   @override
   @JsonKey(name: '_received')
+  @HiveField(37)
   final Element? receivedElement;
 
   /// [recipient] The entity (e.g. person, organization, clinical information
@@ -1380,6 +1551,7 @@ class _$_Communication extends _Communication {
   /// mass mail-out) or a receipt is captured in aggregate (all emails confirmed
   ///  received by a particular time).
   @override
+  @HiveField(38)
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
@@ -1391,6 +1563,7 @@ class _$_Communication extends _Communication {
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which was the source of the communication.
   @override
+  @HiveField(39)
   final Reference? sender;
 
   /// [reasonCode] The reason or justification for the communication.
@@ -1398,6 +1571,7 @@ class _$_Communication extends _Communication {
 
   /// [reasonCode] The reason or justification for the communication.
   @override
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -1413,6 +1587,7 @@ class _$_Communication extends _Communication {
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this communication.
   @override
+  @HiveField(41)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -1428,6 +1603,7 @@ class _$_Communication extends _Communication {
   /// [payload] Text, attachment(s), or resource(s) that was communicated to
   ///  the recipient.
   @override
+  @HiveField(42)
   List<CommunicationPayload>? get payload {
     final value = _payload;
     if (value == null) return null;
@@ -1443,6 +1619,7 @@ class _$_Communication extends _Communication {
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
   @override
+  @HiveField(43)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -1588,53 +1765,97 @@ class _$_Communication extends _Communication {
 abstract class _Communication extends Communication {
   factory _Communication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      final List<Reference>? inResponseTo,
-      final Code? status,
+      @HiveField(17)
+          final List<Reference>? basedOn,
+      @HiveField(18)
+          final List<Reference>? partOf,
+      @HiveField(19)
+          final List<Reference>? inResponseTo,
+      @HiveField(20)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           final Element? statusElement,
-      final CodeableConcept? statusReason,
-      final List<CodeableConcept>? category,
-      final Code? priority,
+      @HiveField(22)
+          final CodeableConcept? statusReason,
+      @HiveField(23)
+      @HiveField(24)
+          final List<CodeableConcept>? category,
+      @HiveField(25)
+      @HiveField(26)
+          final Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(27)
           final Element? priorityElement,
-      final List<CodeableConcept>? medium,
-      final Reference? subject,
-      final CodeableConcept? topic,
-      final List<Reference>? about,
-      final Reference? encounter,
-      final FhirDateTime? sent,
+      @HiveField(28)
+      @HiveField(29)
+          final List<CodeableConcept>? medium,
+      @HiveField(30)
+          final Reference? subject,
+      @HiveField(31)
+          final CodeableConcept? topic,
+      @HiveField(32)
+          final List<Reference>? about,
+      @HiveField(33)
+          final Reference? encounter,
+      @HiveField(34)
+          final FhirDateTime? sent,
       @JsonKey(name: '_sent')
+      @HiveField(35)
           final Element? sentElement,
-      final FhirDateTime? received,
+      @HiveField(36)
+          final FhirDateTime? received,
       @JsonKey(name: '_received')
+      @HiveField(37)
           final Element? receivedElement,
-      final List<Reference>? recipient,
-      final Reference? sender,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<CommunicationPayload>? payload,
-      final List<Annotation>? note}) = _$_Communication;
+      @HiveField(38)
+          final List<Reference>? recipient,
+      @HiveField(39)
+          final Reference? sender,
+      @HiveField(40)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          final List<Reference>? reasonReference,
+      @HiveField(42)
+          final List<CommunicationPayload>? payload,
+      @HiveField(43)
+          final List<Annotation>? note}) = _$_Communication;
   _Communication._() : super._();
 
   factory _Communication.fromJson(Map<String, dynamic> json) =
@@ -1642,17 +1863,20 @@ abstract class _Communication extends Communication {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Communication)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1660,20 +1884,24 @@ abstract class _Communication extends Communication {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1683,6 +1911,7 @@ abstract class _Communication extends Communication {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1690,6 +1919,7 @@ abstract class _Communication extends Communication {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1700,6 +1930,7 @@ abstract class _Communication extends Communication {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1716,115 +1947,127 @@ abstract class _Communication extends Communication {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifiers assigned to this communication by the
   /// performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical;
   @override
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Communication.
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri;
   @override
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement;
   @override
 
   /// [basedOn] An order, proposal or plan fulfilled in whole or in part by
   ///  this Communication.
+  @HiveField(17)
   List<Reference>? get basedOn;
   @override
 
   /// [partOf] Part of this action.
+  @HiveField(18)
   List<Reference>? get partOf;
   @override
 
   /// [inResponseTo] Prior communication that this communication is in response
   ///  to.
+  @HiveField(19)
   List<Reference>? get inResponseTo;
   @override
 
   /// [status] The status of the transmission.
+  @HiveField(20)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement;
   @override
 
   /// [statusReason] Captures the reason for the current state of the
   ///  Communication.
+  @HiveField(22)
   CodeableConcept? get statusReason;
   @override
-
-  /// [category] The type of message conveyed such as alert, notification,
-  ///  reminder, instruction, etc.
+  @HiveField(23)
+  @HiveField(24)
   List<CodeableConcept>? get category;
   @override
 
   /// [priority] Characterizes how quickly the planned or in progress
-  /// communication must be addressed. Includes concepts such as stat, urgent,
-  ///  routine.
+  @HiveField(25)
+  @HiveField(26)
   Code? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(27)
   Element? get priorityElement;
   @override
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
+  @HiveField(28)
+  @HiveField(29)
   List<CodeableConcept>? get medium;
   @override
 
   /// [subject] The patient or group that was the focus of this communication.
+  @HiveField(30)
   Reference? get subject;
   @override
 
   /// [topic] Description of the purpose/content, similar to a subject line in
   ///  an email.
+  @HiveField(31)
   CodeableConcept? get topic;
   @override
 
   /// [about] Other resources that pertain to this communication and to which
   ///  this communication should be associated.
+  @HiveField(32)
   List<Reference>? get about;
   @override
 
   /// [encounter] The Encounter during which this Communication was created or
   ///  to which the creation of this record is tightly associated.
+  @HiveField(33)
   Reference? get encounter;
   @override
 
   /// [sent] The time when this communication was sent.
+  @HiveField(34)
   FhirDateTime? get sent;
   @override
 
   /// [sentElement] Extensions for sent
   @JsonKey(name: '_sent')
+  @HiveField(35)
   Element? get sentElement;
   @override
 
   /// [received] The time when this communication arrived at the destination.
+  @HiveField(36)
   FhirDateTime? get received;
   @override
 
   /// [receivedElement] Extensions for received
   @JsonKey(name: '_received')
+  @HiveField(37)
   Element? get receivedElement;
   @override
 
@@ -1835,30 +2078,36 @@ abstract class _Communication extends Communication {
   /// communications are intended where either receipts are not tracked (e.g. a
   /// mass mail-out) or a receipt is captured in aggregate (all emails confirmed
   ///  received by a particular time).
+  @HiveField(38)
   List<Reference>? get recipient;
   @override
 
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which was the source of the communication.
+  @HiveField(39)
   Reference? get sender;
   @override
 
   /// [reasonCode] The reason or justification for the communication.
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this communication.
+  @HiveField(41)
   List<Reference>? get reasonReference;
   @override
 
   /// [payload] Text, attachment(s), or resource(s) that was communicated to
   ///  the recipient.
+  @HiveField(42)
   List<CommunicationPayload>? get payload;
   @override
 
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
+  @HiveField(43)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -2346,32 +2595,39 @@ CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommunicationRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -2380,12 +2636,14 @@ mixin _$CommunicationRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2395,6 +2653,7 @@ mixin _$CommunicationRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -2410,120 +2669,143 @@ mixin _$CommunicationRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifiers assigned to this communication request
   /// by the performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [basedOn] A plan or proposal that is fulfilled in whole or in part by
   ///  this request.
+  @HiveField(12)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [replaces] Completed or terminated request(s) whose function is taken by
   ///  this new request.
+  @HiveField(13)
   List<Reference>? get replaces => throw _privateConstructorUsedError;
 
   /// [groupIdentifier] A shared identifier common to all requests that were
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition, prescription or similar form.
+  @HiveField(14)
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the proposal or order.
+  @HiveField(15)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  CommunicationRequest.
+  @HiveField(17)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
-
-  /// [category] The type of message to be sent such as alert, notification,
-  ///  reminder, instruction, etc.
+  @HiveField(18)
+  @HiveField(19)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
+  @HiveField(20)
   Code? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(21)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
+  @HiveField(22)
   Boolean? get doNotPerform => throw _privateConstructorUsedError;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
+  @HiveField(23)
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
+  @HiveField(24)
+  @HiveField(25)
   List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
 
   /// [subject] The patient or group that is the focus of this communication
   ///  request.
+  @HiveField(26)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [about] Other resources that pertain to this communication request and to
   ///  which this communication request should be associated.
+  @HiveField(27)
   List<Reference>? get about => throw _privateConstructorUsedError;
 
   /// [encounter] The Encounter during which this CommunicationRequest was
   ///  created or to which the creation of this record is tightly associated.
+  @HiveField(28)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [payload] Text, attachment(s), or resource(s) to be communicated to the
   ///  recipient.
+  @HiveField(29)
   List<CommunicationRequestPayload>? get payload =>
       throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] The time when this communication is to occur.
+  @HiveField(30)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(31)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [occurrencePeriod] The time when this communication is to occur.
+  @HiveField(32)
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
 
   /// [authoredOn] For draft requests, indicates the date of initial creation.
   ///  For requests with other statuses, indicates the date of activation.
+  @HiveField(33)
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(34)
   Element? get authoredOnElement => throw _privateConstructorUsedError;
 
   /// [requester] The device, individual, or organization who initiated the
   ///  request and has responsibility for its activation.
+  @HiveField(35)
   Reference? get requester => throw _privateConstructorUsedError;
 
   /// [recipient] The entity (e.g. person, organization, clinical information
   /// system, device, group, or care team) which is the intended target of the
   ///  communication.
+  @HiveField(36)
   List<Reference>? get recipient => throw _privateConstructorUsedError;
 
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which is to be the source of the communication.
+  @HiveField(37)
   Reference? get sender => throw _privateConstructorUsedError;
 
   /// [reasonCode] Describes why the request is being made in coded or textual
   ///  form.
+  @HiveField(38)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this request.
+  @HiveField(39)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
-
-  /// [note] Comments made about the request by the requester, sender,
-  ///  recipient, subject or other participants.
+  @HiveField(40)
+  @HiveField(41)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2540,53 +2822,95 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? replaces,
-      Identifier? groupIdentifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          List<Reference>? replaces,
+      @HiveField(14)
+          Identifier? groupIdentifier,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      List<CodeableConcept>? category,
-      Code? priority,
+      @HiveField(17)
+          CodeableConcept? statusReason,
+      @HiveField(18)
+      @HiveField(19)
+          List<CodeableConcept>? category,
+      @HiveField(20)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(21)
           Element? priorityElement,
-      Boolean? doNotPerform,
+      @HiveField(22)
+          Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
+      @HiveField(23)
           Element? doNotPerformElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? about,
-      Reference? encounter,
-      List<CommunicationRequestPayload>? payload,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(24)
+      @HiveField(25)
+          List<CodeableConcept>? medium,
+      @HiveField(26)
+          Reference? subject,
+      @HiveField(27)
+          List<Reference>? about,
+      @HiveField(28)
+          Reference? encounter,
+      @HiveField(29)
+          List<CommunicationRequestPayload>? payload,
+      @HiveField(30)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(31)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      FhirDateTime? authoredOn,
+      @HiveField(32)
+          Period? occurrencePeriod,
+      @HiveField(33)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(34)
           Element? authoredOnElement,
-      Reference? requester,
-      List<Reference>? recipient,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note});
+      @HiveField(35)
+          Reference? requester,
+      @HiveField(36)
+          List<Reference>? recipient,
+      @HiveField(37)
+          Reference? sender,
+      @HiveField(38)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(39)
+          List<Reference>? reasonReference,
+      @HiveField(40)
+      @HiveField(41)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3023,53 +3347,95 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? replaces,
-      Identifier? groupIdentifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          List<Reference>? replaces,
+      @HiveField(14)
+          Identifier? groupIdentifier,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      List<CodeableConcept>? category,
-      Code? priority,
+      @HiveField(17)
+          CodeableConcept? statusReason,
+      @HiveField(18)
+      @HiveField(19)
+          List<CodeableConcept>? category,
+      @HiveField(20)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(21)
           Element? priorityElement,
-      Boolean? doNotPerform,
+      @HiveField(22)
+          Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
+      @HiveField(23)
           Element? doNotPerformElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? about,
-      Reference? encounter,
-      List<CommunicationRequestPayload>? payload,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(24)
+      @HiveField(25)
+          List<CodeableConcept>? medium,
+      @HiveField(26)
+          Reference? subject,
+      @HiveField(27)
+          List<Reference>? about,
+      @HiveField(28)
+          Reference? encounter,
+      @HiveField(29)
+          List<CommunicationRequestPayload>? payload,
+      @HiveField(30)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(31)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      FhirDateTime? authoredOn,
+      @HiveField(32)
+          Period? occurrencePeriod,
+      @HiveField(33)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(34)
           Element? authoredOnElement,
-      Reference? requester,
-      List<Reference>? recipient,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note});
+      @HiveField(35)
+          Reference? requester,
+      @HiveField(36)
+          List<Reference>? recipient,
+      @HiveField(37)
+          Reference? sender,
+      @HiveField(38)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(39)
+          List<Reference>? reasonReference,
+      @HiveField(40)
+      @HiveField(41)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3319,56 +3685,99 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 178)
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+      @HiveField(0)
           this.resourceType = R4ResourceType.CommunicationRequest,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? replaces,
-      this.groupIdentifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          final List<Reference>? replaces,
+      @HiveField(14)
+          this.groupIdentifier,
+      @HiveField(15)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           this.statusElement,
-      this.statusReason,
-      final List<CodeableConcept>? category,
-      this.priority,
+      @HiveField(17)
+          this.statusReason,
+      @HiveField(18)
+      @HiveField(19)
+          final List<CodeableConcept>? category,
+      @HiveField(20)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(21)
           this.priorityElement,
-      this.doNotPerform,
+      @HiveField(22)
+          this.doNotPerform,
       @JsonKey(name: '_doNotPerform')
+      @HiveField(23)
           this.doNotPerformElement,
-      final List<CodeableConcept>? medium,
-      this.subject,
-      final List<Reference>? about,
-      this.encounter,
-      final List<CommunicationRequestPayload>? payload,
-      this.occurrenceDateTime,
+      @HiveField(24)
+      @HiveField(25)
+          final List<CodeableConcept>? medium,
+      @HiveField(26)
+          this.subject,
+      @HiveField(27)
+          final List<Reference>? about,
+      @HiveField(28)
+          this.encounter,
+      @HiveField(29)
+          final List<CommunicationRequestPayload>? payload,
+      @HiveField(30)
+          this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(31)
           this.occurrenceDateTimeElement,
-      this.occurrencePeriod,
-      this.authoredOn,
+      @HiveField(32)
+          this.occurrencePeriod,
+      @HiveField(33)
+          this.authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(34)
           this.authoredOnElement,
-      this.requester,
-      final List<Reference>? recipient,
-      this.sender,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note})
+      @HiveField(35)
+          this.requester,
+      @HiveField(36)
+          final List<Reference>? recipient,
+      @HiveField(37)
+          this.sender,
+      @HiveField(38)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(39)
+          final List<Reference>? reasonReference,
+      @HiveField(40)
+      @HiveField(41)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -3390,17 +3799,20 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -3408,20 +3820,24 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -3431,6 +3847,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -3444,6 +3861,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -3468,6 +3886,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -3505,6 +3924,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3523,6 +3943,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// by the performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -3538,6 +3959,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [basedOn] A plan or proposal that is fulfilled in whole or in part by
   ///  this request.
   @override
+  @HiveField(12)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -3553,6 +3975,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [replaces] Completed or terminated request(s) whose function is taken by
   ///  this new request.
   @override
+  @HiveField(13)
   List<Reference>? get replaces {
     final value = _replaces;
     if (value == null) return null;
@@ -3565,29 +3988,29 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition, prescription or similar form.
   @override
+  @HiveField(14)
   final Identifier? groupIdentifier;
 
   /// [status] The status of the proposal or order.
   @override
+  @HiveField(15)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(16)
   final Element? statusElement;
 
   /// [statusReason] Captures the reason for the current state of the
   ///  CommunicationRequest.
   @override
+  @HiveField(17)
   final CodeableConcept? statusReason;
-
-  /// [category] The type of message to be sent such as alert, notification,
-  ///  reminder, instruction, etc.
   final List<CodeableConcept>? _category;
-
-  /// [category] The type of message to be sent such as alert, notification,
-  ///  reminder, instruction, etc.
   @override
+  @HiveField(18)
+  @HiveField(19)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -3599,30 +4022,30 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
   @override
+  @HiveField(20)
   final Code? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(21)
   final Element? priorityElement;
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
   @override
+  @HiveField(22)
   final Boolean? doNotPerform;
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @override
   @JsonKey(name: '_doNotPerform')
+  @HiveField(23)
   final Element? doNotPerformElement;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
   final List<CodeableConcept>? _medium;
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
   @override
+  @HiveField(24)
+  @HiveField(25)
   List<CodeableConcept>? get medium {
     final value = _medium;
     if (value == null) return null;
@@ -3634,6 +4057,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [subject] The patient or group that is the focus of this communication
   ///  request.
   @override
+  @HiveField(26)
   final Reference? subject;
 
   /// [about] Other resources that pertain to this communication request and to
@@ -3643,6 +4067,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [about] Other resources that pertain to this communication request and to
   ///  which this communication request should be associated.
   @override
+  @HiveField(27)
   List<Reference>? get about {
     final value = _about;
     if (value == null) return null;
@@ -3654,6 +4079,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [encounter] The Encounter during which this CommunicationRequest was
   ///  created or to which the creation of this record is tightly associated.
   @override
+  @HiveField(28)
   final Reference? encounter;
 
   /// [payload] Text, attachment(s), or resource(s) to be communicated to the
@@ -3663,6 +4089,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [payload] Text, attachment(s), or resource(s) to be communicated to the
   ///  recipient.
   @override
+  @HiveField(29)
   List<CommunicationRequestPayload>? get payload {
     final value = _payload;
     if (value == null) return null;
@@ -3673,30 +4100,36 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   /// [occurrenceDateTime] The time when this communication is to occur.
   @override
+  @HiveField(30)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(31)
   final Element? occurrenceDateTimeElement;
 
   /// [occurrencePeriod] The time when this communication is to occur.
   @override
+  @HiveField(32)
   final Period? occurrencePeriod;
 
   /// [authoredOn] For draft requests, indicates the date of initial creation.
   ///  For requests with other statuses, indicates the date of activation.
   @override
+  @HiveField(33)
   final FhirDateTime? authoredOn;
 
   /// [authoredOnElement] Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
+  @HiveField(34)
   final Element? authoredOnElement;
 
   /// [requester] The device, individual, or organization who initiated the
   ///  request and has responsibility for its activation.
   @override
+  @HiveField(35)
   final Reference? requester;
 
   /// [recipient] The entity (e.g. person, organization, clinical information
@@ -3708,6 +4141,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// system, device, group, or care team) which is the intended target of the
   ///  communication.
   @override
+  @HiveField(36)
   List<Reference>? get recipient {
     final value = _recipient;
     if (value == null) return null;
@@ -3719,6 +4153,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which is to be the source of the communication.
   @override
+  @HiveField(37)
   final Reference? sender;
 
   /// [reasonCode] Describes why the request is being made in coded or textual
@@ -3728,6 +4163,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [reasonCode] Describes why the request is being made in coded or textual
   ///  form.
   @override
+  @HiveField(38)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -3743,6 +4179,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this request.
   @override
+  @HiveField(39)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -3751,13 +4188,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [note] Comments made about the request by the requester, sender,
-  ///  recipient, subject or other participants.
   final List<Annotation>? _note;
-
-  /// [note] Comments made about the request by the requester, sender,
-  ///  recipient, subject or other participants.
   @override
+  @HiveField(40)
+  @HiveField(41)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -3907,53 +4341,95 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? replaces,
-      final Identifier? groupIdentifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          final List<Reference>? replaces,
+      @HiveField(14)
+          final Identifier? groupIdentifier,
+      @HiveField(15)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           final Element? statusElement,
-      final CodeableConcept? statusReason,
-      final List<CodeableConcept>? category,
-      final Code? priority,
+      @HiveField(17)
+          final CodeableConcept? statusReason,
+      @HiveField(18)
+      @HiveField(19)
+          final List<CodeableConcept>? category,
+      @HiveField(20)
+          final Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(21)
           final Element? priorityElement,
-      final Boolean? doNotPerform,
+      @HiveField(22)
+          final Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
+      @HiveField(23)
           final Element? doNotPerformElement,
-      final List<CodeableConcept>? medium,
-      final Reference? subject,
-      final List<Reference>? about,
-      final Reference? encounter,
-      final List<CommunicationRequestPayload>? payload,
-      final FhirDateTime? occurrenceDateTime,
+      @HiveField(24)
+      @HiveField(25)
+          final List<CodeableConcept>? medium,
+      @HiveField(26)
+          final Reference? subject,
+      @HiveField(27)
+          final List<Reference>? about,
+      @HiveField(28)
+          final Reference? encounter,
+      @HiveField(29)
+          final List<CommunicationRequestPayload>? payload,
+      @HiveField(30)
+          final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(31)
           final Element? occurrenceDateTimeElement,
-      final Period? occurrencePeriod,
-      final FhirDateTime? authoredOn,
+      @HiveField(32)
+          final Period? occurrencePeriod,
+      @HiveField(33)
+          final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(34)
           final Element? authoredOnElement,
-      final Reference? requester,
-      final List<Reference>? recipient,
-      final Reference? sender,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note}) = _$_CommunicationRequest;
+      @HiveField(35)
+          final Reference? requester,
+      @HiveField(36)
+          final List<Reference>? recipient,
+      @HiveField(37)
+          final Reference? sender,
+      @HiveField(38)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(39)
+          final List<Reference>? reasonReference,
+      @HiveField(40)
+      @HiveField(41)
+          final List<Annotation>? note}) = _$_CommunicationRequest;
   _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
@@ -3961,17 +4437,20 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -3979,20 +4458,24 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -4002,6 +4485,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -4009,6 +4493,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -4019,6 +4504,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -4035,146 +4521,169 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifiers assigned to this communication request
   /// by the performer or other systems which remain constant as the resource is
   ///  updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [basedOn] A plan or proposal that is fulfilled in whole or in part by
   ///  this request.
+  @HiveField(12)
   List<Reference>? get basedOn;
   @override
 
   /// [replaces] Completed or terminated request(s) whose function is taken by
   ///  this new request.
+  @HiveField(13)
   List<Reference>? get replaces;
   @override
 
   /// [groupIdentifier] A shared identifier common to all requests that were
   /// authorized more or less simultaneously by a single author, representing
   ///  the identifier of the requisition, prescription or similar form.
+  @HiveField(14)
   Identifier? get groupIdentifier;
   @override
 
   /// [status] The status of the proposal or order.
+  @HiveField(15)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement;
   @override
 
   /// [statusReason] Captures the reason for the current state of the
   ///  CommunicationRequest.
+  @HiveField(17)
   CodeableConcept? get statusReason;
   @override
-
-  /// [category] The type of message to be sent such as alert, notification,
-  ///  reminder, instruction, etc.
+  @HiveField(18)
+  @HiveField(19)
   List<CodeableConcept>? get category;
   @override
 
   /// [priority] Characterizes how quickly the proposed act must be initiated.
   ///  Includes concepts such as stat, urgent, routine.
+  @HiveField(20)
   Code? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(21)
   Element? get priorityElement;
   @override
 
   /// [doNotPerform] If true indicates that the CommunicationRequest is asking
   ///  for the specified action to *not* occur.
+  @HiveField(22)
   Boolean? get doNotPerform;
   @override
 
   /// [doNotPerformElement] Extensions for doNotPerform
   @JsonKey(name: '_doNotPerform')
+  @HiveField(23)
   Element? get doNotPerformElement;
   @override
-
-  /// [medium] A channel that was used for this communication (e.g. email,
-  ///  fax).
+  @HiveField(24)
+  @HiveField(25)
   List<CodeableConcept>? get medium;
   @override
 
   /// [subject] The patient or group that is the focus of this communication
   ///  request.
+  @HiveField(26)
   Reference? get subject;
   @override
 
   /// [about] Other resources that pertain to this communication request and to
   ///  which this communication request should be associated.
+  @HiveField(27)
   List<Reference>? get about;
   @override
 
   /// [encounter] The Encounter during which this CommunicationRequest was
   ///  created or to which the creation of this record is tightly associated.
+  @HiveField(28)
   Reference? get encounter;
   @override
 
   /// [payload] Text, attachment(s), or resource(s) to be communicated to the
   ///  recipient.
+  @HiveField(29)
   List<CommunicationRequestPayload>? get payload;
   @override
 
   /// [occurrenceDateTime] The time when this communication is to occur.
+  @HiveField(30)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(31)
   Element? get occurrenceDateTimeElement;
   @override
 
   /// [occurrencePeriod] The time when this communication is to occur.
+  @HiveField(32)
   Period? get occurrencePeriod;
   @override
 
   /// [authoredOn] For draft requests, indicates the date of initial creation.
   ///  For requests with other statuses, indicates the date of activation.
+  @HiveField(33)
   FhirDateTime? get authoredOn;
   @override
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(34)
   Element? get authoredOnElement;
   @override
 
   /// [requester] The device, individual, or organization who initiated the
   ///  request and has responsibility for its activation.
+  @HiveField(35)
   Reference? get requester;
   @override
 
   /// [recipient] The entity (e.g. person, organization, clinical information
   /// system, device, group, or care team) which is the intended target of the
   ///  communication.
+  @HiveField(36)
   List<Reference>? get recipient;
   @override
 
   /// [sender] The entity (e.g. person, organization, clinical information
   ///  system, or device) which is to be the source of the communication.
+  @HiveField(37)
   Reference? get sender;
   @override
 
   /// [reasonCode] Describes why the request is being made in coded or textual
   ///  form.
+  @HiveField(38)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this request.
+  @HiveField(39)
   List<Reference>? get reasonReference;
   @override
-
-  /// [note] Comments made about the request by the requester, sender,
-  ///  recipient, subject or other participants.
+  @HiveField(40)
+  @HiveField(41)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -4669,32 +5178,39 @@ DeviceRequest _$DeviceRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DeviceRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4703,12 +5219,14 @@ mixin _$DeviceRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4718,6 +5236,7 @@ mixin _$DeviceRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -4733,144 +5252,172 @@ mixin _$DeviceRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifiers assigned to this order by the orderer or by the
   ///  receiver.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
 
   /// [basedOn] Plan/proposal/order fulfilled by this request.
+  @HiveField(17)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [priorRequest] The request takes the place of the referenced completed or
   ///  terminated request(s).
+  @HiveField(18)
   List<Reference>? get priorRequest => throw _privateConstructorUsedError;
 
   /// [groupIdentifier] Composite request this is part of.
+  @HiveField(19)
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [status] The status of the request.
+  @HiveField(20)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
+  @HiveField(22)
   Code? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
+  @HiveField(23)
   Element? get intentElement => throw _privateConstructorUsedError;
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
+  @HiveField(24)
   Code? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(25)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [codeReference] The details of the device to be used.
+  @HiveField(26)
   Reference? get codeReference => throw _privateConstructorUsedError;
 
   /// [codeCodeableConcept] The details of the device to be used.
+  @HiveField(27)
   CodeableConcept? get codeCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  prism value for lenses.
+  @HiveField(28)
   List<DeviceRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
 
   /// [subject] The patient who will use the device.
+  @HiveField(29)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [encounter] An encounter that provides additional context in which this
   ///  request is made.
+  @HiveField(30)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] The timing schedule for the use of the device. The
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(31)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(32)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [occurrencePeriod] The timing schedule for the use of the device. The
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(33)
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
 
   /// [occurrenceTiming] The timing schedule for the use of the device. The
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(34)
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
 
   /// [authoredOn] When the request transitioned to being actionable.
+  @HiveField(35)
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(36)
   Element? get authoredOnElement => throw _privateConstructorUsedError;
 
   /// [requester] The individual who initiated the request and has
   ///  responsibility for its activation.
+  @HiveField(37)
   Reference? get requester => throw _privateConstructorUsedError;
 
   /// [performerType] Desired type of performer for doing the diagnostic
   ///  testing.
+  @HiveField(38)
   CodeableConcept? get performerType => throw _privateConstructorUsedError;
 
   /// [performer] The desired performer for doing the diagnostic testing.
+  @HiveField(39)
   Reference? get performer => throw _privateConstructorUsedError;
 
   /// [reasonCode] Reason or justification for the use of this device.
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Reason or justification for the use of this device.
+  @HiveField(41)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
+  @HiveField(42)
   List<Reference>? get insurance => throw _privateConstructorUsedError;
 
   /// [supportingInfo] Additional clinical information about the patient that
   /// may influence the request fulfilment.  For example, this may include where
   ///  on the subject's body the device will be used (i.e. the target site).
+  @HiveField(43)
   List<Reference>? get supportingInfo => throw _privateConstructorUsedError;
 
   /// [note] Details about this request that were not represented at all or
   /// sufficiently in one of the attributes provided in a class. These may
   /// include for example a comment, an instruction, or a note associated with
   ///  the statement.
+  @HiveField(44)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [relevantHistory] Key events in the history of the request.
+  @HiveField(45)
   List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4887,59 +5434,105 @@ abstract class $DeviceRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? priorRequest,
-      Identifier? groupIdentifier,
-      Code? status,
+      @HiveField(17)
+          List<Reference>? basedOn,
+      @HiveField(18)
+          List<Reference>? priorRequest,
+      @HiveField(19)
+          Identifier? groupIdentifier,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Code? intent,
+      @HiveField(22)
+          Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(23)
           Element? intentElement,
-      Code? priority,
+      @HiveField(24)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(25)
           Element? priorityElement,
-      Reference? codeReference,
-      CodeableConcept? codeCodeableConcept,
-      List<DeviceRequestParameter>? parameter,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(26)
+          Reference? codeReference,
+      @HiveField(27)
+          CodeableConcept? codeCodeableConcept,
+      @HiveField(28)
+          List<DeviceRequestParameter>? parameter,
+      @HiveField(29)
+          Reference subject,
+      @HiveField(30)
+          Reference? encounter,
+      @HiveField(31)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(32)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      FhirDateTime? authoredOn,
+      @HiveField(33)
+          Period? occurrencePeriod,
+      @HiveField(34)
+          Timing? occurrenceTiming,
+      @HiveField(35)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(36)
           Element? authoredOnElement,
-      Reference? requester,
-      CodeableConcept? performerType,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Reference>? insurance,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory});
+      @HiveField(37)
+          Reference? requester,
+      @HiveField(38)
+          CodeableConcept? performerType,
+      @HiveField(39)
+          Reference? performer,
+      @HiveField(40)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          List<Reference>? reasonReference,
+      @HiveField(42)
+          List<Reference>? insurance,
+      @HiveField(43)
+          List<Reference>? supportingInfo,
+      @HiveField(44)
+          List<Annotation>? note,
+      @HiveField(45)
+          List<Reference>? relevantHistory});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -5435,59 +6028,105 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? priorRequest,
-      Identifier? groupIdentifier,
-      Code? status,
+      @HiveField(17)
+          List<Reference>? basedOn,
+      @HiveField(18)
+          List<Reference>? priorRequest,
+      @HiveField(19)
+          Identifier? groupIdentifier,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Code? intent,
+      @HiveField(22)
+          Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(23)
           Element? intentElement,
-      Code? priority,
+      @HiveField(24)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(25)
           Element? priorityElement,
-      Reference? codeReference,
-      CodeableConcept? codeCodeableConcept,
-      List<DeviceRequestParameter>? parameter,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(26)
+          Reference? codeReference,
+      @HiveField(27)
+          CodeableConcept? codeCodeableConcept,
+      @HiveField(28)
+          List<DeviceRequestParameter>? parameter,
+      @HiveField(29)
+          Reference subject,
+      @HiveField(30)
+          Reference? encounter,
+      @HiveField(31)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(32)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      FhirDateTime? authoredOn,
+      @HiveField(33)
+          Period? occurrencePeriod,
+      @HiveField(34)
+          Timing? occurrenceTiming,
+      @HiveField(35)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(36)
           Element? authoredOnElement,
-      Reference? requester,
-      CodeableConcept? performerType,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Reference>? insurance,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory});
+      @HiveField(37)
+          Reference? requester,
+      @HiveField(38)
+          CodeableConcept? performerType,
+      @HiveField(39)
+          Reference? performer,
+      @HiveField(40)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          List<Reference>? reasonReference,
+      @HiveField(42)
+          List<Reference>? insurance,
+      @HiveField(43)
+          List<Reference>? supportingInfo,
+      @HiveField(44)
+          List<Annotation>? note,
+      @HiveField(45)
+          List<Reference>? relevantHistory});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -5768,62 +6407,109 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 179)
 class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+      @HiveField(0)
           this.resourceType = R4ResourceType.DeviceRequest,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? priorRequest,
-      this.groupIdentifier,
-      this.status,
+      @HiveField(17)
+          final List<Reference>? basedOn,
+      @HiveField(18)
+          final List<Reference>? priorRequest,
+      @HiveField(19)
+          this.groupIdentifier,
+      @HiveField(20)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           this.statusElement,
-      this.intent,
+      @HiveField(22)
+          this.intent,
       @JsonKey(name: '_intent')
+      @HiveField(23)
           this.intentElement,
-      this.priority,
+      @HiveField(24)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(25)
           this.priorityElement,
-      this.codeReference,
-      this.codeCodeableConcept,
-      final List<DeviceRequestParameter>? parameter,
-      required this.subject,
-      this.encounter,
-      this.occurrenceDateTime,
+      @HiveField(26)
+          this.codeReference,
+      @HiveField(27)
+          this.codeCodeableConcept,
+      @HiveField(28)
+          final List<DeviceRequestParameter>? parameter,
+      @HiveField(29)
+          required this.subject,
+      @HiveField(30)
+          this.encounter,
+      @HiveField(31)
+          this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(32)
           this.occurrenceDateTimeElement,
-      this.occurrencePeriod,
-      this.occurrenceTiming,
-      this.authoredOn,
+      @HiveField(33)
+          this.occurrencePeriod,
+      @HiveField(34)
+          this.occurrenceTiming,
+      @HiveField(35)
+          this.authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(36)
           this.authoredOnElement,
-      this.requester,
-      this.performerType,
-      this.performer,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Reference>? insurance,
-      final List<Reference>? supportingInfo,
-      final List<Annotation>? note,
-      final List<Reference>? relevantHistory})
+      @HiveField(37)
+          this.requester,
+      @HiveField(38)
+          this.performerType,
+      @HiveField(39)
+          this.performer,
+      @HiveField(40)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          final List<Reference>? reasonReference,
+      @HiveField(42)
+          final List<Reference>? insurance,
+      @HiveField(43)
+          final List<Reference>? supportingInfo,
+      @HiveField(44)
+          final List<Annotation>? note,
+      @HiveField(45)
+          final List<Reference>? relevantHistory})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5847,17 +6533,20 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5865,20 +6554,24 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -5888,6 +6581,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -5901,6 +6595,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -5925,6 +6620,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -5962,6 +6658,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5978,6 +6675,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [identifier] Identifiers assigned to this order by the orderer or by the
   ///  receiver.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -5986,15 +6684,10 @@ class _$_DeviceRequest extends _DeviceRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
   final List<Canonical>? _instantiatesCanonical;
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
   @override
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
@@ -6004,15 +6697,10 @@ class _$_DeviceRequest extends _DeviceRequest {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
   final List<FhirUri>? _instantiatesUri;
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
   @override
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
@@ -6027,6 +6715,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @override
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
     if (value == null) return null;
@@ -6041,6 +6730,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [basedOn] Plan/proposal/order fulfilled by this request.
   @override
+  @HiveField(17)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -6056,6 +6746,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [priorRequest] The request takes the place of the referenced completed or
   ///  terminated request(s).
   @override
+  @HiveField(18)
   List<Reference>? get priorRequest {
     final value = _priorRequest;
     if (value == null) return null;
@@ -6066,43 +6757,52 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [groupIdentifier] Composite request this is part of.
   @override
+  @HiveField(19)
   final Identifier? groupIdentifier;
 
   /// [status] The status of the request.
   @override
+  @HiveField(20)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(21)
   final Element? statusElement;
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
   @override
+  @HiveField(22)
   final Code? intent;
 
   /// [intentElement] Extensions for intent
   @override
   @JsonKey(name: '_intent')
+  @HiveField(23)
   final Element? intentElement;
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
   @override
+  @HiveField(24)
   final Code? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(25)
   final Element? priorityElement;
 
   /// [codeReference] The details of the device to be used.
   @override
+  @HiveField(26)
   final Reference? codeReference;
 
   /// [codeCodeableConcept] The details of the device to be used.
   @override
+  @HiveField(27)
   final CodeableConcept? codeCodeableConcept;
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
@@ -6112,6 +6812,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  prism value for lenses.
   @override
+  @HiveField(28)
   List<DeviceRequestParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
@@ -6122,11 +6823,13 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [subject] The patient who will use the device.
   @override
+  @HiveField(29)
   final Reference subject;
 
   /// [encounter] An encounter that provides additional context in which this
   ///  request is made.
   @override
+  @HiveField(30)
   final Reference? encounter;
 
   /// [occurrenceDateTime] The timing schedule for the use of the device. The
@@ -6134,11 +6837,13 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
   @override
+  @HiveField(31)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(32)
   final Element? occurrenceDateTimeElement;
 
   /// [occurrencePeriod] The timing schedule for the use of the device. The
@@ -6146,6 +6851,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
   @override
+  @HiveField(33)
   final Period? occurrencePeriod;
 
   /// [occurrenceTiming] The timing schedule for the use of the device. The
@@ -6153,29 +6859,35 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
   @override
+  @HiveField(34)
   final Timing? occurrenceTiming;
 
   /// [authoredOn] When the request transitioned to being actionable.
   @override
+  @HiveField(35)
   final FhirDateTime? authoredOn;
 
   /// [authoredOnElement] Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
+  @HiveField(36)
   final Element? authoredOnElement;
 
   /// [requester] The individual who initiated the request and has
   ///  responsibility for its activation.
   @override
+  @HiveField(37)
   final Reference? requester;
 
   /// [performerType] Desired type of performer for doing the diagnostic
   ///  testing.
   @override
+  @HiveField(38)
   final CodeableConcept? performerType;
 
   /// [performer] The desired performer for doing the diagnostic testing.
   @override
+  @HiveField(39)
   final Reference? performer;
 
   /// [reasonCode] Reason or justification for the use of this device.
@@ -6183,6 +6895,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [reasonCode] Reason or justification for the use of this device.
   @override
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -6196,6 +6909,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [reasonReference] Reason or justification for the use of this device.
   @override
+  @HiveField(41)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -6213,6 +6927,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
   @override
+  @HiveField(42)
   List<Reference>? get insurance {
     final value = _insurance;
     if (value == null) return null;
@@ -6230,6 +6945,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// may influence the request fulfilment.  For example, this may include where
   ///  on the subject's body the device will be used (i.e. the target site).
   @override
+  @HiveField(43)
   List<Reference>? get supportingInfo {
     final value = _supportingInfo;
     if (value == null) return null;
@@ -6249,6 +6965,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   /// include for example a comment, an instruction, or a note associated with
   ///  the statement.
   @override
+  @HiveField(44)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -6262,6 +6979,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   /// [relevantHistory] Key events in the history of the request.
   @override
+  @HiveField(45)
   List<Reference>? get relevantHistory {
     final value = _relevantHistory;
     if (value == null) return null;
@@ -6430,59 +7148,105 @@ class _$_DeviceRequest extends _DeviceRequest {
 abstract class _DeviceRequest extends DeviceRequest {
   factory _DeviceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(14)
+      @HiveField(15)
+          final List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(16)
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? priorRequest,
-      final Identifier? groupIdentifier,
-      final Code? status,
+      @HiveField(17)
+          final List<Reference>? basedOn,
+      @HiveField(18)
+          final List<Reference>? priorRequest,
+      @HiveField(19)
+          final Identifier? groupIdentifier,
+      @HiveField(20)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           final Element? statusElement,
-      final Code? intent,
+      @HiveField(22)
+          final Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(23)
           final Element? intentElement,
-      final Code? priority,
+      @HiveField(24)
+          final Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(25)
           final Element? priorityElement,
-      final Reference? codeReference,
-      final CodeableConcept? codeCodeableConcept,
-      final List<DeviceRequestParameter>? parameter,
-      required final Reference subject,
-      final Reference? encounter,
-      final FhirDateTime? occurrenceDateTime,
+      @HiveField(26)
+          final Reference? codeReference,
+      @HiveField(27)
+          final CodeableConcept? codeCodeableConcept,
+      @HiveField(28)
+          final List<DeviceRequestParameter>? parameter,
+      @HiveField(29)
+          required final Reference subject,
+      @HiveField(30)
+          final Reference? encounter,
+      @HiveField(31)
+          final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(32)
           final Element? occurrenceDateTimeElement,
-      final Period? occurrencePeriod,
-      final Timing? occurrenceTiming,
-      final FhirDateTime? authoredOn,
+      @HiveField(33)
+          final Period? occurrencePeriod,
+      @HiveField(34)
+          final Timing? occurrenceTiming,
+      @HiveField(35)
+          final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(36)
           final Element? authoredOnElement,
-      final Reference? requester,
-      final CodeableConcept? performerType,
-      final Reference? performer,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Reference>? insurance,
-      final List<Reference>? supportingInfo,
-      final List<Annotation>? note,
-      final List<Reference>? relevantHistory}) = _$_DeviceRequest;
+      @HiveField(37)
+          final Reference? requester,
+      @HiveField(38)
+          final CodeableConcept? performerType,
+      @HiveField(39)
+          final Reference? performer,
+      @HiveField(40)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(41)
+          final List<Reference>? reasonReference,
+      @HiveField(42)
+          final List<Reference>? insurance,
+      @HiveField(43)
+          final List<Reference>? supportingInfo,
+      @HiveField(44)
+          final List<Annotation>? note,
+      @HiveField(45)
+          final List<Reference>? relevantHistory}) = _$_DeviceRequest;
   _DeviceRequest._() : super._();
 
   factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
@@ -6490,17 +7254,20 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -6508,20 +7275,24 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -6531,6 +7302,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -6538,6 +7310,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -6548,6 +7321,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -6564,92 +7338,105 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifiers assigned to this order by the orderer or by the
   ///  receiver.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
-
-  /// [instantiatesCanonical] The URL pointing to a FHIR-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
+  @HiveField(12)
+  @HiveField(13)
   List<Canonical>? get instantiatesCanonical;
   @override
-
-  /// [instantiatesUri] The URL pointing to an externally maintained protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this DeviceRequest.
+  @HiveField(14)
+  @HiveField(15)
   List<FhirUri>? get instantiatesUri;
   @override
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(16)
   List<Element?>? get instantiatesUriElement;
   @override
 
   /// [basedOn] Plan/proposal/order fulfilled by this request.
+  @HiveField(17)
   List<Reference>? get basedOn;
   @override
 
   /// [priorRequest] The request takes the place of the referenced completed or
   ///  terminated request(s).
+  @HiveField(18)
   List<Reference>? get priorRequest;
   @override
 
   /// [groupIdentifier] Composite request this is part of.
+  @HiveField(19)
   Identifier? get groupIdentifier;
   @override
 
   /// [status] The status of the request.
+  @HiveField(20)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement;
   @override
 
   /// [intent] Whether the request is a proposal, plan, an original order or a
   ///  reflex order.
+  @HiveField(22)
   Code? get intent;
   @override
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
+  @HiveField(23)
   Element? get intentElement;
   @override
 
   /// [priority] Indicates how quickly the {{title}} should be addressed with
   ///  respect to other requests.
+  @HiveField(24)
   Code? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(25)
   Element? get priorityElement;
   @override
 
   /// [codeReference] The details of the device to be used.
+  @HiveField(26)
   Reference? get codeReference;
   @override
 
   /// [codeCodeableConcept] The details of the device to be used.
+  @HiveField(27)
   CodeableConcept? get codeCodeableConcept;
   @override
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  prism value for lenses.
+  @HiveField(28)
   List<DeviceRequestParameter>? get parameter;
   @override
 
   /// [subject] The patient who will use the device.
+  @HiveField(29)
   Reference get subject;
   @override
 
   /// [encounter] An encounter that provides additional context in which this
   ///  request is made.
+  @HiveField(30)
   Reference? get encounter;
   @override
 
@@ -6657,11 +7444,13 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(31)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(32)
   Element? get occurrenceDateTimeElement;
   @override
 
@@ -6669,6 +7458,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(33)
   Period? get occurrencePeriod;
   @override
 
@@ -6676,49 +7466,59 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// Schedule data type allows many different expressions, for example. "Every
   /// 8 hours"; "Three times a day"; "1/2 an hour before breakfast for 10 days
   ///  from 23-Dec 2011:"; "15 Oct 2013, 17 Oct 2013 and 1 Nov 2013".
+  @HiveField(34)
   Timing? get occurrenceTiming;
   @override
 
   /// [authoredOn] When the request transitioned to being actionable.
+  @HiveField(35)
   FhirDateTime? get authoredOn;
   @override
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(36)
   Element? get authoredOnElement;
   @override
 
   /// [requester] The individual who initiated the request and has
   ///  responsibility for its activation.
+  @HiveField(37)
   Reference? get requester;
   @override
 
   /// [performerType] Desired type of performer for doing the diagnostic
   ///  testing.
+  @HiveField(38)
   CodeableConcept? get performerType;
   @override
 
   /// [performer] The desired performer for doing the diagnostic testing.
+  @HiveField(39)
   Reference? get performer;
   @override
 
   /// [reasonCode] Reason or justification for the use of this device.
+  @HiveField(40)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Reason or justification for the use of this device.
+  @HiveField(41)
   List<Reference>? get reasonReference;
   @override
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   /// and/or pre-determinations that may be required for delivering the
   ///  requested service.
+  @HiveField(42)
   List<Reference>? get insurance;
   @override
 
   /// [supportingInfo] Additional clinical information about the patient that
   /// may influence the request fulfilment.  For example, this may include where
   ///  on the subject's body the device will be used (i.e. the target site).
+  @HiveField(43)
   List<Reference>? get supportingInfo;
   @override
 
@@ -6726,10 +7526,12 @@ abstract class _DeviceRequest extends DeviceRequest {
   /// sufficiently in one of the attributes provided in a class. These may
   /// include for example a comment, an instruction, or a note associated with
   ///  the statement.
+  @HiveField(44)
   List<Annotation>? get note;
   @override
 
   /// [relevantHistory] Key events in the history of the request.
+  @HiveField(45)
   List<Reference>? get relevantHistory;
   @override
   @JsonKey(ignore: true)
@@ -7298,32 +8100,39 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DeviceUseStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7332,12 +8141,14 @@ mixin _$DeviceUseStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -7347,6 +8158,7 @@ mixin _$DeviceUseStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -7362,74 +8174,93 @@ mixin _$DeviceUseStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] An external identifier for this statement such as an IRI.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this DeviceUseStatement.
+  @HiveField(12)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
+  @HiveField(13)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(14)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [subject] The patient who used the device.
+  @HiveField(15)
   Reference get subject => throw _privateConstructorUsedError;
 
   /// [derivedFrom] Allows linking the DeviceUseStatement to the underlying
   /// Request, or to other information that supports or is used to derive the
   ///  DeviceUseStatement.
+  @HiveField(16)
   List<Reference>? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [timingTiming] How often the device was used.
+  @HiveField(17)
   Timing? get timingTiming => throw _privateConstructorUsedError;
 
   /// [timingPeriod] How often the device was used.
+  @HiveField(18)
   Period? get timingPeriod => throw _privateConstructorUsedError;
 
   /// [timingDateTime] How often the device was used.
+  @HiveField(19)
   FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @JsonKey(name: '_timingDateTime')
+  @HiveField(20)
   Element? get timingDateTimeElement => throw _privateConstructorUsedError;
 
   /// [recordedOn] The time at which the statement was made/recorded.
+  @HiveField(21)
   FhirDateTime? get recordedOn => throw _privateConstructorUsedError;
 
   /// [recordedOnElement] Extensions for recordedOn
   @JsonKey(name: '_recordedOn')
+  @HiveField(22)
   Element? get recordedOnElement => throw _privateConstructorUsedError;
 
   /// [source] Who reported the device was being used by the patient.
+  @HiveField(23)
   Reference? get source => throw _privateConstructorUsedError;
 
   /// [device] The details of the device used.
+  @HiveField(24)
   Reference get device => throw _privateConstructorUsedError;
 
   /// [reasonCode] Reason or justification for the use of the device.
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this DeviceUseStatement.
+  @HiveField(26)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [bodySite] Indicates the anotomic location on the subject's body where
   ///  the device was used ( i.e. the target).
+  @HiveField(27)
   CodeableConcept? get bodySite => throw _privateConstructorUsedError;
 
   /// [note] Details about the device statement that were not represented at
   /// all or sufficiently in one of the attributes provided in a class. These
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
+  @HiveField(28)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7446,41 +8277,70 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(14)
           Element? statusElement,
-      Reference subject,
-      List<Reference>? derivedFrom,
-      Timing? timingTiming,
-      Period? timingPeriod,
-      FhirDateTime? timingDateTime,
+      @HiveField(15)
+          Reference subject,
+      @HiveField(16)
+          List<Reference>? derivedFrom,
+      @HiveField(17)
+          Timing? timingTiming,
+      @HiveField(18)
+          Period? timingPeriod,
+      @HiveField(19)
+          FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
+      @HiveField(20)
           Element? timingDateTimeElement,
-      FhirDateTime? recordedOn,
+      @HiveField(21)
+          FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
+      @HiveField(22)
           Element? recordedOnElement,
-      Reference? source,
-      Reference device,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      CodeableConcept? bodySite,
-      List<Annotation>? note});
+      @HiveField(23)
+          Reference? source,
+      @HiveField(24)
+          Reference device,
+      @HiveField(25)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          List<Reference>? reasonReference,
+      @HiveField(27)
+          CodeableConcept? bodySite,
+      @HiveField(28)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7819,41 +8679,70 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(14)
           Element? statusElement,
-      Reference subject,
-      List<Reference>? derivedFrom,
-      Timing? timingTiming,
-      Period? timingPeriod,
-      FhirDateTime? timingDateTime,
+      @HiveField(15)
+          Reference subject,
+      @HiveField(16)
+          List<Reference>? derivedFrom,
+      @HiveField(17)
+          Timing? timingTiming,
+      @HiveField(18)
+          Period? timingPeriod,
+      @HiveField(19)
+          FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
+      @HiveField(20)
           Element? timingDateTimeElement,
-      FhirDateTime? recordedOn,
+      @HiveField(21)
+          FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
+      @HiveField(22)
           Element? recordedOnElement,
-      Reference? source,
-      Reference device,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      CodeableConcept? bodySite,
-      List<Annotation>? note});
+      @HiveField(23)
+          Reference? source,
+      @HiveField(24)
+          Reference device,
+      @HiveField(25)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          List<Reference>? reasonReference,
+      @HiveField(27)
+          CodeableConcept? bodySite,
+      @HiveField(28)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8047,44 +8936,74 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 180)
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+      @HiveField(0)
           this.resourceType = R4ResourceType.DeviceUseStatement,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(14)
           this.statusElement,
-      required this.subject,
-      final List<Reference>? derivedFrom,
-      this.timingTiming,
-      this.timingPeriod,
-      this.timingDateTime,
+      @HiveField(15)
+          required this.subject,
+      @HiveField(16)
+          final List<Reference>? derivedFrom,
+      @HiveField(17)
+          this.timingTiming,
+      @HiveField(18)
+          this.timingPeriod,
+      @HiveField(19)
+          this.timingDateTime,
       @JsonKey(name: '_timingDateTime')
+      @HiveField(20)
           this.timingDateTimeElement,
-      this.recordedOn,
+      @HiveField(21)
+          this.recordedOn,
       @JsonKey(name: '_recordedOn')
+      @HiveField(22)
           this.recordedOnElement,
-      this.source,
-      required this.device,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      this.bodySite,
-      final List<Annotation>? note})
+      @HiveField(23)
+          this.source,
+      @HiveField(24)
+          required this.device,
+      @HiveField(25)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          final List<Reference>? reasonReference,
+      @HiveField(27)
+          this.bodySite,
+      @HiveField(28)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8101,17 +9020,20 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -8119,20 +9041,24 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8142,6 +9068,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -8155,6 +9082,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -8179,6 +9107,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -8216,6 +9145,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -8230,6 +9160,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   /// [identifier] An external identifier for this statement such as an IRI.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -8245,6 +9176,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this DeviceUseStatement.
   @override
+  @HiveField(12)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -8257,15 +9189,18 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
   @override
+  @HiveField(13)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(14)
   final Element? statusElement;
 
   /// [subject] The patient who used the device.
   @override
+  @HiveField(15)
   final Reference subject;
 
   /// [derivedFrom] Allows linking the DeviceUseStatement to the underlying
@@ -8277,6 +9212,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// Request, or to other information that supports or is used to derive the
   ///  DeviceUseStatement.
   @override
+  @HiveField(16)
   List<Reference>? get derivedFrom {
     final value = _derivedFrom;
     if (value == null) return null;
@@ -8287,36 +9223,44 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   /// [timingTiming] How often the device was used.
   @override
+  @HiveField(17)
   final Timing? timingTiming;
 
   /// [timingPeriod] How often the device was used.
   @override
+  @HiveField(18)
   final Period? timingPeriod;
 
   /// [timingDateTime] How often the device was used.
   @override
+  @HiveField(19)
   final FhirDateTime? timingDateTime;
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @override
   @JsonKey(name: '_timingDateTime')
+  @HiveField(20)
   final Element? timingDateTimeElement;
 
   /// [recordedOn] The time at which the statement was made/recorded.
   @override
+  @HiveField(21)
   final FhirDateTime? recordedOn;
 
   /// [recordedOnElement] Extensions for recordedOn
   @override
   @JsonKey(name: '_recordedOn')
+  @HiveField(22)
   final Element? recordedOnElement;
 
   /// [source] Who reported the device was being used by the patient.
   @override
+  @HiveField(23)
   final Reference? source;
 
   /// [device] The details of the device used.
   @override
+  @HiveField(24)
   final Reference device;
 
   /// [reasonCode] Reason or justification for the use of the device.
@@ -8324,6 +9268,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   /// [reasonCode] Reason or justification for the use of the device.
   @override
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -8339,6 +9284,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this DeviceUseStatement.
   @override
+  @HiveField(26)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -8350,6 +9296,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// [bodySite] Indicates the anotomic location on the subject's body where
   ///  the device was used ( i.e. the target).
   @override
+  @HiveField(27)
   final CodeableConcept? bodySite;
 
   /// [note] Details about the device statement that were not represented at
@@ -8363,6 +9310,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
   @override
+  @HiveField(28)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -8485,41 +9433,70 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 abstract class _DeviceUseStatement extends DeviceUseStatement {
   factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(14)
           final Element? statusElement,
-      required final Reference subject,
-      final List<Reference>? derivedFrom,
-      final Timing? timingTiming,
-      final Period? timingPeriod,
-      final FhirDateTime? timingDateTime,
+      @HiveField(15)
+          required final Reference subject,
+      @HiveField(16)
+          final List<Reference>? derivedFrom,
+      @HiveField(17)
+          final Timing? timingTiming,
+      @HiveField(18)
+          final Period? timingPeriod,
+      @HiveField(19)
+          final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
+      @HiveField(20)
           final Element? timingDateTimeElement,
-      final FhirDateTime? recordedOn,
+      @HiveField(21)
+          final FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
+      @HiveField(22)
           final Element? recordedOnElement,
-      final Reference? source,
-      required final Reference device,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final CodeableConcept? bodySite,
-      final List<Annotation>? note}) = _$_DeviceUseStatement;
+      @HiveField(23)
+          final Reference? source,
+      @HiveField(24)
+          required final Reference device,
+      @HiveField(25)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          final List<Reference>? reasonReference,
+      @HiveField(27)
+          final CodeableConcept? bodySite,
+      @HiveField(28)
+          final List<Annotation>? note}) = _$_DeviceUseStatement;
   _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
@@ -8527,17 +9504,20 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -8545,20 +9525,24 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -8568,6 +9552,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -8575,6 +9560,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -8585,6 +9571,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -8601,84 +9588,102 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] An external identifier for this statement such as an IRI.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this DeviceUseStatement.
+  @HiveField(12)
   List<Reference>? get basedOn;
   @override
 
   /// [status] A code representing the patient or other source's judgment about
   /// the state of the device used that this statement is about.  Generally this
   ///  will be active or completed.
+  @HiveField(13)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(14)
   Element? get statusElement;
   @override
 
   /// [subject] The patient who used the device.
+  @HiveField(15)
   Reference get subject;
   @override
 
   /// [derivedFrom] Allows linking the DeviceUseStatement to the underlying
   /// Request, or to other information that supports or is used to derive the
   ///  DeviceUseStatement.
+  @HiveField(16)
   List<Reference>? get derivedFrom;
   @override
 
   /// [timingTiming] How often the device was used.
+  @HiveField(17)
   Timing? get timingTiming;
   @override
 
   /// [timingPeriod] How often the device was used.
+  @HiveField(18)
   Period? get timingPeriod;
   @override
 
   /// [timingDateTime] How often the device was used.
+  @HiveField(19)
   FhirDateTime? get timingDateTime;
   @override
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @JsonKey(name: '_timingDateTime')
+  @HiveField(20)
   Element? get timingDateTimeElement;
   @override
 
   /// [recordedOn] The time at which the statement was made/recorded.
+  @HiveField(21)
   FhirDateTime? get recordedOn;
   @override
 
   /// [recordedOnElement] Extensions for recordedOn
   @JsonKey(name: '_recordedOn')
+  @HiveField(22)
   Element? get recordedOnElement;
   @override
 
   /// [source] Who reported the device was being used by the patient.
+  @HiveField(23)
   Reference? get source;
   @override
 
   /// [device] The details of the device used.
+  @HiveField(24)
   Reference get device;
   @override
 
   /// [reasonCode] Reason or justification for the use of the device.
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] Indicates another resource whose existence justifies
   ///  this DeviceUseStatement.
+  @HiveField(26)
   List<Reference>? get reasonReference;
   @override
 
   /// [bodySite] Indicates the anotomic location on the subject's body where
   ///  the device was used ( i.e. the target).
+  @HiveField(27)
   CodeableConcept? get bodySite;
   @override
 
@@ -8686,6 +9691,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   /// all or sufficiently in one of the attributes provided in a class. These
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
+  @HiveField(28)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -8700,32 +9706,39 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GuidanceResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8734,12 +9747,14 @@ mixin _$GuidanceResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -8749,6 +9764,7 @@ mixin _$GuidanceResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -8764,6 +9780,7 @@ mixin _$GuidanceResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -8771,30 +9788,37 @@ mixin _$GuidanceResponse {
   /// response. If an identifier was given as part of the request, it will be
   /// reproduced here to enable the requester to more easily identify the
   ///  response in a multi-request scenario.
+  @HiveField(11)
   Identifier? get requestIdentifier => throw _privateConstructorUsedError;
 
   /// [identifier] Allows a service to provide  unique, business identifiers
   ///  for the response.
+  @HiveField(12)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [moduleUri] An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
+  @HiveField(13)
   FhirUri? get moduleUri => throw _privateConstructorUsedError;
 
   /// [moduleUriElement] Extensions for moduleUri
   @JsonKey(name: '_moduleUri')
+  @HiveField(14)
   Element? get moduleUriElement => throw _privateConstructorUsedError;
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
+  @HiveField(15)
   Canonical? get moduleCanonical => throw _privateConstructorUsedError;
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @JsonKey(name: '_moduleCanonical')
+  @HiveField(16)
   Element? get moduleCanonicalElement => throw _privateConstructorUsedError;
 
   /// [moduleCodeableConcept] An identifier, CodeableConcept or canonical
   ///  reference to the guidance that was requested.
+  @HiveField(17)
   CodeableConcept? get moduleCodeableConcept =>
       throw _privateConstructorUsedError;
 
@@ -8807,48 +9831,59 @@ mixin _$GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
+  @HiveField(18)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [subject] The patient for which the request was processed.
+  @HiveField(20)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [encounter] The encounter during which this response was created or to
   ///  which the creation of this record is tightly associated.
+  @HiveField(21)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] Indicates when the guidance response was processed.
+  @HiveField(22)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(23)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [performer] Provides a reference to the device that performed the
   ///  guidance.
+  @HiveField(24)
   Reference? get performer => throw _privateConstructorUsedError;
 
   /// [reasonCode] Describes the reason for the guidance response in coded or
   ///  textual form.
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Indicates the reason the request was initiated. This is
   /// typically provided as a parameter to the evaluation and echoed by the
   /// service, although for some use cases, such as subscription- or event-based
   ///  scenarios, it may provide an indication of the cause for the response.
+  @HiveField(26)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [note] Provides a mechanism to communicate additional information about
   ///  the response.
+  @HiveField(27)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [evaluationMessage] Messages resulting from the evaluation of the
   /// artifact or artifacts. As part of evaluating the request, the engine may
   /// produce informational or warning messages. These messages will be provided
   ///  by this element.
+  @HiveField(28)
   List<Reference>? get evaluationMessage => throw _privateConstructorUsedError;
 
   /// [outputParameters] The output parameters of the evaluation, if any. Many
@@ -8857,9 +9892,11 @@ mixin _$GuidanceResponse {
   /// result. However, modules may define specific outputs that would be
   /// returned as the result of the evaluation, and these would be returned in
   ///  this element.
+  @HiveField(29)
   Reference? get outputParameters => throw _privateConstructorUsedError;
 
   /// [result] The actions, if any, produced by the evaluation of the artifact.
+  @HiveField(30)
   Reference? get result => throw _privateConstructorUsedError;
 
   /// [dataRequirement] If the evaluation could not be completed due to lack of
@@ -8867,6 +9904,7 @@ mixin _$GuidanceResponse {
   /// accurate response, this element will a description of the data required in
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
+  @HiveField(31)
   List<DataRequirement>? get dataRequirement =>
       throw _privateConstructorUsedError;
 
@@ -8884,45 +9922,77 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? requestIdentifier,
-      List<Identifier>? identifier,
-      FhirUri? moduleUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Identifier? requestIdentifier,
+      @HiveField(12)
+          List<Identifier>? identifier,
+      @HiveField(13)
+          FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
+      @HiveField(14)
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      @HiveField(15)
+          Canonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
+      @HiveField(16)
           Element? moduleCanonicalElement,
-      CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      @HiveField(17)
+          CodeableConcept? moduleCodeableConcept,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(20)
+          Reference? subject,
+      @HiveField(21)
+          Reference? encounter,
+      @HiveField(22)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(23)
           Element? occurrenceDateTimeElement,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
-      Reference? outputParameters,
-      Reference? result,
-      List<DataRequirement>? dataRequirement});
+      @HiveField(24)
+          Reference? performer,
+      @HiveField(25)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          List<Reference>? reasonReference,
+      @HiveField(27)
+          List<Annotation>? note,
+      @HiveField(28)
+          List<Reference>? evaluationMessage,
+      @HiveField(29)
+          Reference? outputParameters,
+      @HiveField(30)
+          Reference? result,
+      @HiveField(31)
+          List<DataRequirement>? dataRequirement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -9311,45 +10381,77 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? requestIdentifier,
-      List<Identifier>? identifier,
-      FhirUri? moduleUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Identifier? requestIdentifier,
+      @HiveField(12)
+          List<Identifier>? identifier,
+      @HiveField(13)
+          FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
+      @HiveField(14)
           Element? moduleUriElement,
-      Canonical? moduleCanonical,
+      @HiveField(15)
+          Canonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
+      @HiveField(16)
           Element? moduleCanonicalElement,
-      CodeableConcept? moduleCodeableConcept,
-      Code? status,
+      @HiveField(17)
+          CodeableConcept? moduleCodeableConcept,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(20)
+          Reference? subject,
+      @HiveField(21)
+          Reference? encounter,
+      @HiveField(22)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(23)
           Element? occurrenceDateTimeElement,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
-      Reference? outputParameters,
-      Reference? result,
-      List<DataRequirement>? dataRequirement});
+      @HiveField(24)
+          Reference? performer,
+      @HiveField(25)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          List<Reference>? reasonReference,
+      @HiveField(27)
+          List<Annotation>? note,
+      @HiveField(28)
+          List<Reference>? evaluationMessage,
+      @HiveField(29)
+          Reference? outputParameters,
+      @HiveField(30)
+          Reference? result,
+      @HiveField(31)
+          List<DataRequirement>? dataRequirement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -9562,48 +10664,81 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 181)
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+      @HiveField(0)
           this.resourceType = R4ResourceType.GuidanceResponse,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.requestIdentifier,
-      final List<Identifier>? identifier,
-      this.moduleUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.requestIdentifier,
+      @HiveField(12)
+          final List<Identifier>? identifier,
+      @HiveField(13)
+          this.moduleUri,
       @JsonKey(name: '_moduleUri')
+      @HiveField(14)
           this.moduleUriElement,
-      this.moduleCanonical,
+      @HiveField(15)
+          this.moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
+      @HiveField(16)
           this.moduleCanonicalElement,
-      this.moduleCodeableConcept,
-      this.status,
+      @HiveField(17)
+          this.moduleCodeableConcept,
+      @HiveField(18)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           this.statusElement,
-      this.subject,
-      this.encounter,
-      this.occurrenceDateTime,
+      @HiveField(20)
+          this.subject,
+      @HiveField(21)
+          this.encounter,
+      @HiveField(22)
+          this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(23)
           this.occurrenceDateTimeElement,
-      this.performer,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note,
-      final List<Reference>? evaluationMessage,
-      this.outputParameters,
-      this.result,
-      final List<DataRequirement>? dataRequirement})
+      @HiveField(24)
+          this.performer,
+      @HiveField(25)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          final List<Reference>? reasonReference,
+      @HiveField(27)
+          final List<Annotation>? note,
+      @HiveField(28)
+          final List<Reference>? evaluationMessage,
+      @HiveField(29)
+          this.outputParameters,
+      @HiveField(30)
+          this.result,
+      @HiveField(31)
+          final List<DataRequirement>? dataRequirement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9620,17 +10755,20 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -9638,20 +10776,24 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -9661,6 +10803,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -9674,6 +10817,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -9698,6 +10842,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -9735,6 +10880,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -9749,6 +10895,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// reproduced here to enable the requester to more easily identify the
   ///  response in a multi-request scenario.
   @override
+  @HiveField(11)
   final Identifier? requestIdentifier;
 
   /// [identifier] Allows a service to provide  unique, business identifiers
@@ -9758,6 +10905,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// [identifier] Allows a service to provide  unique, business identifiers
   ///  for the response.
   @override
+  @HiveField(12)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -9769,26 +10917,31 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// [moduleUri] An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
   @override
+  @HiveField(13)
   final FhirUri? moduleUri;
 
   /// [moduleUriElement] Extensions for moduleUri
   @override
   @JsonKey(name: '_moduleUri')
+  @HiveField(14)
   final Element? moduleUriElement;
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
   @override
+  @HiveField(15)
   final Canonical? moduleCanonical;
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @override
   @JsonKey(name: '_moduleCanonical')
+  @HiveField(16)
   final Element? moduleCanonicalElement;
 
   /// [moduleCodeableConcept] An identifier, CodeableConcept or canonical
   ///  reference to the guidance that was requested.
   @override
+  @HiveField(17)
   final CodeableConcept? moduleCodeableConcept;
 
   /// [status] The status of the response. If the evaluation is completed
@@ -9801,34 +10954,41 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
   @override
+  @HiveField(18)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(19)
   final Element? statusElement;
 
   /// [subject] The patient for which the request was processed.
   @override
+  @HiveField(20)
   final Reference? subject;
 
   /// [encounter] The encounter during which this response was created or to
   ///  which the creation of this record is tightly associated.
   @override
+  @HiveField(21)
   final Reference? encounter;
 
   /// [occurrenceDateTime] Indicates when the guidance response was processed.
   @override
+  @HiveField(22)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(23)
   final Element? occurrenceDateTimeElement;
 
   /// [performer] Provides a reference to the device that performed the
   ///  guidance.
   @override
+  @HiveField(24)
   final Reference? performer;
 
   /// [reasonCode] Describes the reason for the guidance response in coded or
@@ -9838,6 +10998,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// [reasonCode] Describes the reason for the guidance response in coded or
   ///  textual form.
   @override
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -9857,6 +11018,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// service, although for some use cases, such as subscription- or event-based
   ///  scenarios, it may provide an indication of the cause for the response.
   @override
+  @HiveField(26)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -9872,6 +11034,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// [note] Provides a mechanism to communicate additional information about
   ///  the response.
   @override
+  @HiveField(27)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -9891,6 +11054,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// produce informational or warning messages. These messages will be provided
   ///  by this element.
   @override
+  @HiveField(28)
   List<Reference>? get evaluationMessage {
     final value = _evaluationMessage;
     if (value == null) return null;
@@ -9907,10 +11071,12 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// returned as the result of the evaluation, and these would be returned in
   ///  this element.
   @override
+  @HiveField(29)
   final Reference? outputParameters;
 
   /// [result] The actions, if any, produced by the evaluation of the artifact.
   @override
+  @HiveField(30)
   final Reference? result;
 
   /// [dataRequirement] If the evaluation could not be completed due to lack of
@@ -9926,6 +11092,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
   @override
+  @HiveField(31)
   List<DataRequirement>? get dataRequirement {
     final value = _dataRequirement;
     if (value == null) return null;
@@ -10059,45 +11226,77 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Identifier? requestIdentifier,
-      final List<Identifier>? identifier,
-      final FhirUri? moduleUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final Identifier? requestIdentifier,
+      @HiveField(12)
+          final List<Identifier>? identifier,
+      @HiveField(13)
+          final FhirUri? moduleUri,
       @JsonKey(name: '_moduleUri')
+      @HiveField(14)
           final Element? moduleUriElement,
-      final Canonical? moduleCanonical,
+      @HiveField(15)
+          final Canonical? moduleCanonical,
       @JsonKey(name: '_moduleCanonical')
+      @HiveField(16)
           final Element? moduleCanonicalElement,
-      final CodeableConcept? moduleCodeableConcept,
-      final Code? status,
+      @HiveField(17)
+          final CodeableConcept? moduleCodeableConcept,
+      @HiveField(18)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           final Element? statusElement,
-      final Reference? subject,
-      final Reference? encounter,
-      final FhirDateTime? occurrenceDateTime,
+      @HiveField(20)
+          final Reference? subject,
+      @HiveField(21)
+          final Reference? encounter,
+      @HiveField(22)
+          final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(23)
           final Element? occurrenceDateTimeElement,
-      final Reference? performer,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note,
-      final List<Reference>? evaluationMessage,
-      final Reference? outputParameters,
-      final Reference? result,
-      final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
+      @HiveField(24)
+          final Reference? performer,
+      @HiveField(25)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(26)
+          final List<Reference>? reasonReference,
+      @HiveField(27)
+          final List<Annotation>? note,
+      @HiveField(28)
+          final List<Reference>? evaluationMessage,
+      @HiveField(29)
+          final Reference? outputParameters,
+      @HiveField(30)
+          final Reference? result,
+      @HiveField(31)
+          final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
   _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
@@ -10105,17 +11304,20 @@ abstract class _GuidanceResponse extends GuidanceResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -10123,20 +11325,24 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -10146,6 +11352,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -10153,6 +11360,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -10163,6 +11371,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -10179,6 +11388,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -10186,36 +11396,43 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// response. If an identifier was given as part of the request, it will be
   /// reproduced here to enable the requester to more easily identify the
   ///  response in a multi-request scenario.
+  @HiveField(11)
   Identifier? get requestIdentifier;
   @override
 
   /// [identifier] Allows a service to provide  unique, business identifiers
   ///  for the response.
+  @HiveField(12)
   List<Identifier>? get identifier;
   @override
 
   /// [moduleUri] An identifier, CodeableConcept or canonical reference to the
   ///  guidance that was requested.
+  @HiveField(13)
   FhirUri? get moduleUri;
   @override
 
   /// [moduleUriElement] Extensions for moduleUri
   @JsonKey(name: '_moduleUri')
+  @HiveField(14)
   Element? get moduleUriElement;
   @override
 
   /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
   ///  to the guidance that was requested.
+  @HiveField(15)
   Canonical? get moduleCanonical;
   @override
 
   /// [moduleCanonicalElement] Extensions for moduleCanonical
   @JsonKey(name: '_moduleCanonical')
+  @HiveField(16)
   Element? get moduleCanonicalElement;
   @override
 
   /// [moduleCodeableConcept] An identifier, CodeableConcept or canonical
   ///  reference to the guidance that was requested.
+  @HiveField(17)
   CodeableConcept? get moduleCodeableConcept;
   @override
 
@@ -10228,39 +11445,47 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// accurate response could be provided if more data was available, the status
   /// will be data-requested, and the response will contain a description of the
   ///  additional requested information.
+  @HiveField(18)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement;
   @override
 
   /// [subject] The patient for which the request was processed.
+  @HiveField(20)
   Reference? get subject;
   @override
 
   /// [encounter] The encounter during which this response was created or to
   ///  which the creation of this record is tightly associated.
+  @HiveField(21)
   Reference? get encounter;
   @override
 
   /// [occurrenceDateTime] Indicates when the guidance response was processed.
+  @HiveField(22)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(23)
   Element? get occurrenceDateTimeElement;
   @override
 
   /// [performer] Provides a reference to the device that performed the
   ///  guidance.
+  @HiveField(24)
   Reference? get performer;
   @override
 
   /// [reasonCode] Describes the reason for the guidance response in coded or
   ///  textual form.
+  @HiveField(25)
   List<CodeableConcept>? get reasonCode;
   @override
 
@@ -10268,11 +11493,13 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// typically provided as a parameter to the evaluation and echoed by the
   /// service, although for some use cases, such as subscription- or event-based
   ///  scenarios, it may provide an indication of the cause for the response.
+  @HiveField(26)
   List<Reference>? get reasonReference;
   @override
 
   /// [note] Provides a mechanism to communicate additional information about
   ///  the response.
+  @HiveField(27)
   List<Annotation>? get note;
   @override
 
@@ -10280,6 +11507,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// artifact or artifacts. As part of evaluating the request, the engine may
   /// produce informational or warning messages. These messages will be provided
   ///  by this element.
+  @HiveField(28)
   List<Reference>? get evaluationMessage;
   @override
 
@@ -10289,10 +11517,12 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// result. However, modules may define specific outputs that would be
   /// returned as the result of the evaluation, and these would be returned in
   ///  this element.
+  @HiveField(29)
   Reference? get outputParameters;
   @override
 
   /// [result] The actions, if any, produced by the evaluation of the artifact.
+  @HiveField(30)
   Reference? get result;
   @override
 
@@ -10301,6 +11531,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   /// accurate response, this element will a description of the data required in
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
+  @HiveField(31)
   List<DataRequirement>? get dataRequirement;
   @override
   @JsonKey(ignore: true)
@@ -10315,32 +11546,39 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SupplyDelivery {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10349,12 +11587,14 @@ mixin _$SupplyDelivery {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10364,6 +11604,7 @@ mixin _$SupplyDelivery {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -10379,63 +11620,76 @@ mixin _$SupplyDelivery {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for the supply delivery event that is used to
   ///  identify it across multiple disparate systems.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
+  @HiveField(12)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
+  @HiveField(13)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the dispense event.
+  @HiveField(14)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(15)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [patient] A link to a resource representing the person whom the delivered
   ///  item is for.
+  @HiveField(16)
   Reference? get patient => throw _privateConstructorUsedError;
 
   /// [type] Indicates the type of dispensing event that is performed. Examples
-  /// include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
-  ///  Samples, etc.
+  @HiveField(17)
+  @HiveField(18)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [suppliedItem] The item that is being delivered or has been supplied.
+  @HiveField(19)
   SupplyDeliverySuppliedItem? get suppliedItem =>
       throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] The date or time(s) the activity occurred.
+  @HiveField(20)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(21)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [occurrencePeriod] The date or time(s) the activity occurred.
+  @HiveField(22)
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
 
   /// [occurrenceTiming] The date or time(s) the activity occurred.
+  @HiveField(23)
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
-
-  /// [supplier] The individual responsible for dispensing the medication,
-  ///  supplier or device.
+  @HiveField(24)
+  @HiveField(25)
   Reference? get supplier => throw _privateConstructorUsedError;
 
   /// [destination] Identification of the facility/location where the Supply
   ///  was shipped to, as part of the dispense event.
+  @HiveField(26)
   Reference? get destination => throw _privateConstructorUsedError;
 
   /// [receiver] Identifies the person who picked up the Supply.
+  @HiveField(27)
   List<Reference>? get receiver => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10452,37 +11706,65 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          List<Reference>? partOf,
+      @HiveField(14)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           Element? statusElement,
-      Reference? patient,
-      CodeableConcept? type,
-      SupplyDeliverySuppliedItem? suppliedItem,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(16)
+          Reference? patient,
+      @HiveField(17)
+      @HiveField(18)
+          CodeableConcept? type,
+      @HiveField(19)
+          SupplyDeliverySuppliedItem? suppliedItem,
+      @HiveField(20)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(21)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      Reference? supplier,
-      Reference? destination,
-      List<Reference>? receiver});
+      @HiveField(22)
+          Period? occurrencePeriod,
+      @HiveField(23)
+          Timing? occurrenceTiming,
+      @HiveField(24)
+      @HiveField(25)
+          Reference? supplier,
+      @HiveField(26)
+          Reference? destination,
+      @HiveField(27)
+          List<Reference>? receiver});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10815,37 +12097,65 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Reference>? basedOn,
+      @HiveField(13)
+          List<Reference>? partOf,
+      @HiveField(14)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           Element? statusElement,
-      Reference? patient,
-      CodeableConcept? type,
-      SupplyDeliverySuppliedItem? suppliedItem,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(16)
+          Reference? patient,
+      @HiveField(17)
+      @HiveField(18)
+          CodeableConcept? type,
+      @HiveField(19)
+          SupplyDeliverySuppliedItem? suppliedItem,
+      @HiveField(20)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(21)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      Reference? supplier,
-      Reference? destination,
-      List<Reference>? receiver});
+      @HiveField(22)
+          Period? occurrencePeriod,
+      @HiveField(23)
+          Timing? occurrenceTiming,
+      @HiveField(24)
+      @HiveField(25)
+          Reference? supplier,
+      @HiveField(26)
+          Reference? destination,
+      @HiveField(27)
+          List<Reference>? receiver});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -11024,40 +12334,69 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 182)
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+      @HiveField(0)
           this.resourceType = R4ResourceType.SupplyDelivery,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          final List<Reference>? partOf,
+      @HiveField(14)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           this.statusElement,
-      this.patient,
-      this.type,
-      this.suppliedItem,
-      this.occurrenceDateTime,
+      @HiveField(16)
+          this.patient,
+      @HiveField(17)
+      @HiveField(18)
+          this.type,
+      @HiveField(19)
+          this.suppliedItem,
+      @HiveField(20)
+          this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(21)
           this.occurrenceDateTimeElement,
-      this.occurrencePeriod,
-      this.occurrenceTiming,
-      this.supplier,
-      this.destination,
-      final List<Reference>? receiver})
+      @HiveField(22)
+          this.occurrencePeriod,
+      @HiveField(23)
+          this.occurrenceTiming,
+      @HiveField(24)
+      @HiveField(25)
+          this.supplier,
+      @HiveField(26)
+          this.destination,
+      @HiveField(27)
+          final List<Reference>? receiver})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11072,17 +12411,20 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11090,20 +12432,24 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -11113,6 +12459,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -11126,6 +12473,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -11150,6 +12498,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -11187,6 +12536,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -11203,6 +12553,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// [identifier] Identifier for the supply delivery event that is used to
   ///  identify it across multiple disparate systems.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -11218,6 +12569,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
   @override
+  @HiveField(12)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -11233,6 +12585,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
   @override
+  @HiveField(13)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -11243,53 +12596,61 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   /// [status] A code specifying the state of the dispense event.
   @override
+  @HiveField(14)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(15)
   final Element? statusElement;
 
   /// [patient] A link to a resource representing the person whom the delivered
   ///  item is for.
   @override
+  @HiveField(16)
   final Reference? patient;
 
   /// [type] Indicates the type of dispensing event that is performed. Examples
-  /// include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
-  ///  Samples, etc.
   @override
+  @HiveField(17)
+  @HiveField(18)
   final CodeableConcept? type;
 
   /// [suppliedItem] The item that is being delivered or has been supplied.
   @override
+  @HiveField(19)
   final SupplyDeliverySuppliedItem? suppliedItem;
 
   /// [occurrenceDateTime] The date or time(s) the activity occurred.
   @override
+  @HiveField(20)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(21)
   final Element? occurrenceDateTimeElement;
 
   /// [occurrencePeriod] The date or time(s) the activity occurred.
   @override
+  @HiveField(22)
   final Period? occurrencePeriod;
 
   /// [occurrenceTiming] The date or time(s) the activity occurred.
   @override
+  @HiveField(23)
   final Timing? occurrenceTiming;
-
-  /// [supplier] The individual responsible for dispensing the medication,
-  ///  supplier or device.
   @override
+  @HiveField(24)
+  @HiveField(25)
   final Reference? supplier;
 
   /// [destination] Identification of the facility/location where the Supply
   ///  was shipped to, as part of the dispense event.
   @override
+  @HiveField(26)
   final Reference? destination;
 
   /// [receiver] Identifies the person who picked up the Supply.
@@ -11297,6 +12658,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 
   /// [receiver] Identifies the person who picked up the Supply.
   @override
+  @HiveField(27)
   List<Reference>? get receiver {
     final value = _receiver;
     if (value == null) return null;
@@ -11410,37 +12772,65 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 abstract class _SupplyDelivery extends SupplyDelivery {
   factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Reference>? basedOn,
+      @HiveField(13)
+          final List<Reference>? partOf,
+      @HiveField(14)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           final Element? statusElement,
-      final Reference? patient,
-      final CodeableConcept? type,
-      final SupplyDeliverySuppliedItem? suppliedItem,
-      final FhirDateTime? occurrenceDateTime,
+      @HiveField(16)
+          final Reference? patient,
+      @HiveField(17)
+      @HiveField(18)
+          final CodeableConcept? type,
+      @HiveField(19)
+          final SupplyDeliverySuppliedItem? suppliedItem,
+      @HiveField(20)
+          final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(21)
           final Element? occurrenceDateTimeElement,
-      final Period? occurrencePeriod,
-      final Timing? occurrenceTiming,
-      final Reference? supplier,
-      final Reference? destination,
-      final List<Reference>? receiver}) = _$_SupplyDelivery;
+      @HiveField(22)
+          final Period? occurrencePeriod,
+      @HiveField(23)
+          final Timing? occurrenceTiming,
+      @HiveField(24)
+      @HiveField(25)
+          final Reference? supplier,
+      @HiveField(26)
+          final Reference? destination,
+      @HiveField(27)
+          final List<Reference>? receiver}) = _$_SupplyDelivery;
   _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
@@ -11448,17 +12838,20 @@ abstract class _SupplyDelivery extends SupplyDelivery {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -11466,20 +12859,24 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -11489,6 +12886,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -11496,6 +12894,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -11506,6 +12905,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -11522,76 +12922,89 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for the supply delivery event that is used to
   ///  identify it across multiple disparate systems.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [basedOn] A plan, proposal or order that is fulfilled in whole or in part
   ///  by this event.
+  @HiveField(12)
   List<Reference>? get basedOn;
   @override
 
   /// [partOf] A larger event of which this particular event is a component or
   ///  step.
+  @HiveField(13)
   List<Reference>? get partOf;
   @override
 
   /// [status] A code specifying the state of the dispense event.
+  @HiveField(14)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(15)
   Element? get statusElement;
   @override
 
   /// [patient] A link to a resource representing the person whom the delivered
   ///  item is for.
+  @HiveField(16)
   Reference? get patient;
   @override
 
   /// [type] Indicates the type of dispensing event that is performed. Examples
-  /// include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill,
-  ///  Samples, etc.
+  @HiveField(17)
+  @HiveField(18)
   CodeableConcept? get type;
   @override
 
   /// [suppliedItem] The item that is being delivered or has been supplied.
+  @HiveField(19)
   SupplyDeliverySuppliedItem? get suppliedItem;
   @override
 
   /// [occurrenceDateTime] The date or time(s) the activity occurred.
+  @HiveField(20)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(21)
   Element? get occurrenceDateTimeElement;
   @override
 
   /// [occurrencePeriod] The date or time(s) the activity occurred.
+  @HiveField(22)
   Period? get occurrencePeriod;
   @override
 
   /// [occurrenceTiming] The date or time(s) the activity occurred.
+  @HiveField(23)
   Timing? get occurrenceTiming;
   @override
-
-  /// [supplier] The individual responsible for dispensing the medication,
-  ///  supplier or device.
+  @HiveField(24)
+  @HiveField(25)
   Reference? get supplier;
   @override
 
   /// [destination] Identification of the facility/location where the Supply
   ///  was shipped to, as part of the dispense event.
+  @HiveField(26)
   Reference? get destination;
   @override
 
   /// [receiver] Identifies the person who picked up the Supply.
+  @HiveField(27)
   List<Reference>? get receiver;
   @override
   @JsonKey(ignore: true)
@@ -12060,32 +13473,39 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SupplyRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -12094,12 +13514,14 @@ mixin _$SupplyRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -12109,6 +13531,7 @@ mixin _$SupplyRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -12124,88 +13547,111 @@ mixin _$SupplyRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Business identifiers assigned to this SupplyRequest by the
   /// author and/or other systems. These identifiers remain constant as the
   ///  resource is updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Status of the supply request.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [category] Category of supply, e.g.  central, non-stock, etc. This is
   ///  used to support work flows associated with the supply process.
+  @HiveField(14)
   CodeableConcept? get category => throw _privateConstructorUsedError;
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
+  @HiveField(15)
   Code? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(16)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [itemCodeableConcept] The item that is requested to be supplied. This is
   /// either a link to a resource representing the details of the item or a code
   ///  that identifies the item from a known list.
+  @HiveField(17)
   CodeableConcept? get itemCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [itemReference] The item that is requested to be supplied. This is either
   /// a link to a resource representing the details of the item or a code that
   ///  identifies the item from a known list.
+  @HiveField(18)
   Reference? get itemReference => throw _privateConstructorUsedError;
 
   /// [quantity] The amount that is being ordered of the indicated item.
+  @HiveField(19)
   Quantity get quantity => throw _privateConstructorUsedError;
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  size of the indicated item.
+  @HiveField(20)
   List<SupplyRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
 
   /// [occurrenceDateTime] When the request should be fulfilled.
+  @HiveField(21)
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(22)
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
 
   /// [occurrencePeriod] When the request should be fulfilled.
+  @HiveField(23)
   Period? get occurrencePeriod => throw _privateConstructorUsedError;
 
   /// [occurrenceTiming] When the request should be fulfilled.
+  @HiveField(24)
   Timing? get occurrenceTiming => throw _privateConstructorUsedError;
 
   /// [authoredOn] When the request was made.
+  @HiveField(25)
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(26)
   Element? get authoredOnElement => throw _privateConstructorUsedError;
 
   /// [requester] The device, practitioner, etc. who initiated the request.
+  @HiveField(27)
   Reference? get requester => throw _privateConstructorUsedError;
 
   /// [supplier] Who is intended to fulfill the request.
+  @HiveField(28)
   List<Reference>? get supplier => throw _privateConstructorUsedError;
 
   /// [reasonCode] The reason why the supply item was requested.
+  @HiveField(29)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] The reason why the supply item was requested.
+  @HiveField(30)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [deliverFrom] Where the supply is expected to come from.
+  @HiveField(31)
   Reference? get deliverFrom => throw _privateConstructorUsedError;
 
   /// [deliverTo] Where the supply is destined to go.
+  @HiveField(32)
   Reference? get deliverTo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12222,46 +13668,79 @@ abstract class $SupplyRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept? category,
-      Code? priority,
+      @HiveField(14)
+          CodeableConcept? category,
+      @HiveField(15)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(16)
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
-      Quantity quantity,
-      List<SupplyRequestParameter>? parameter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(17)
+          CodeableConcept? itemCodeableConcept,
+      @HiveField(18)
+          Reference? itemReference,
+      @HiveField(19)
+          Quantity quantity,
+      @HiveField(20)
+          List<SupplyRequestParameter>? parameter,
+      @HiveField(21)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(22)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      FhirDateTime? authoredOn,
+      @HiveField(23)
+          Period? occurrencePeriod,
+      @HiveField(24)
+          Timing? occurrenceTiming,
+      @HiveField(25)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(26)
           Element? authoredOnElement,
-      Reference? requester,
-      List<Reference>? supplier,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      Reference? deliverFrom,
-      Reference? deliverTo});
+      @HiveField(27)
+          Reference? requester,
+      @HiveField(28)
+          List<Reference>? supplier,
+      @HiveField(29)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(30)
+          List<Reference>? reasonReference,
+      @HiveField(31)
+          Reference? deliverFrom,
+      @HiveField(32)
+          Reference? deliverTo});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12676,46 +14155,79 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept? category,
-      Code? priority,
+      @HiveField(14)
+          CodeableConcept? category,
+      @HiveField(15)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(16)
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
-      Quantity quantity,
-      List<SupplyRequestParameter>? parameter,
-      FhirDateTime? occurrenceDateTime,
+      @HiveField(17)
+          CodeableConcept? itemCodeableConcept,
+      @HiveField(18)
+          Reference? itemReference,
+      @HiveField(19)
+          Quantity quantity,
+      @HiveField(20)
+          List<SupplyRequestParameter>? parameter,
+      @HiveField(21)
+          FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(22)
           Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      FhirDateTime? authoredOn,
+      @HiveField(23)
+          Period? occurrencePeriod,
+      @HiveField(24)
+          Timing? occurrenceTiming,
+      @HiveField(25)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(26)
           Element? authoredOnElement,
-      Reference? requester,
-      List<Reference>? supplier,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      Reference? deliverFrom,
-      Reference? deliverTo});
+      @HiveField(27)
+          Reference? requester,
+      @HiveField(28)
+          List<Reference>? supplier,
+      @HiveField(29)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(30)
+          List<Reference>? reasonReference,
+      @HiveField(31)
+          Reference? deliverFrom,
+      @HiveField(32)
+          Reference? deliverTo});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -12937,49 +14449,83 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 183)
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+      @HiveField(0)
           this.resourceType = R4ResourceType.SupplyRequest,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      this.category,
-      this.priority,
+      @HiveField(14)
+          this.category,
+      @HiveField(15)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(16)
           this.priorityElement,
-      this.itemCodeableConcept,
-      this.itemReference,
-      required this.quantity,
-      final List<SupplyRequestParameter>? parameter,
-      this.occurrenceDateTime,
+      @HiveField(17)
+          this.itemCodeableConcept,
+      @HiveField(18)
+          this.itemReference,
+      @HiveField(19)
+          required this.quantity,
+      @HiveField(20)
+          final List<SupplyRequestParameter>? parameter,
+      @HiveField(21)
+          this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(22)
           this.occurrenceDateTimeElement,
-      this.occurrencePeriod,
-      this.occurrenceTiming,
-      this.authoredOn,
+      @HiveField(23)
+          this.occurrencePeriod,
+      @HiveField(24)
+          this.occurrenceTiming,
+      @HiveField(25)
+          this.authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(26)
           this.authoredOnElement,
-      this.requester,
-      final List<Reference>? supplier,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      this.deliverFrom,
-      this.deliverTo})
+      @HiveField(27)
+          this.requester,
+      @HiveField(28)
+          final List<Reference>? supplier,
+      @HiveField(29)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(30)
+          final List<Reference>? reasonReference,
+      @HiveField(31)
+          this.deliverFrom,
+      @HiveField(32)
+          this.deliverTo})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -12995,17 +14541,20 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -13013,20 +14562,24 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -13036,6 +14589,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -13049,6 +14603,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13073,6 +14628,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -13110,6 +14666,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13128,6 +14685,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// author and/or other systems. These identifiers remain constant as the
   ///  resource is updated and propagates from server to server.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13138,42 +14696,50 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [status] Status of the supply request.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [category] Category of supply, e.g.  central, non-stock, etc. This is
   ///  used to support work flows associated with the supply process.
   @override
+  @HiveField(14)
   final CodeableConcept? category;
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
   @override
+  @HiveField(15)
   final Code? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(16)
   final Element? priorityElement;
 
   /// [itemCodeableConcept] The item that is requested to be supplied. This is
   /// either a link to a resource representing the details of the item or a code
   ///  that identifies the item from a known list.
   @override
+  @HiveField(17)
   final CodeableConcept? itemCodeableConcept;
 
   /// [itemReference] The item that is requested to be supplied. This is either
   /// a link to a resource representing the details of the item or a code that
   ///  identifies the item from a known list.
   @override
+  @HiveField(18)
   final Reference? itemReference;
 
   /// [quantity] The amount that is being ordered of the indicated item.
   @override
+  @HiveField(19)
   final Quantity quantity;
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
@@ -13183,6 +14749,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  size of the indicated item.
   @override
+  @HiveField(20)
   List<SupplyRequestParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
@@ -13193,32 +14760,39 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [occurrenceDateTime] When the request should be fulfilled.
   @override
+  @HiveField(21)
   final FhirDateTime? occurrenceDateTime;
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @override
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(22)
   final Element? occurrenceDateTimeElement;
 
   /// [occurrencePeriod] When the request should be fulfilled.
   @override
+  @HiveField(23)
   final Period? occurrencePeriod;
 
   /// [occurrenceTiming] When the request should be fulfilled.
   @override
+  @HiveField(24)
   final Timing? occurrenceTiming;
 
   /// [authoredOn] When the request was made.
   @override
+  @HiveField(25)
   final FhirDateTime? authoredOn;
 
   /// [authoredOnElement] Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
+  @HiveField(26)
   final Element? authoredOnElement;
 
   /// [requester] The device, practitioner, etc. who initiated the request.
   @override
+  @HiveField(27)
   final Reference? requester;
 
   /// [supplier] Who is intended to fulfill the request.
@@ -13226,6 +14800,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [supplier] Who is intended to fulfill the request.
   @override
+  @HiveField(28)
   List<Reference>? get supplier {
     final value = _supplier;
     if (value == null) return null;
@@ -13239,6 +14814,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [reasonCode] The reason why the supply item was requested.
   @override
+  @HiveField(29)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -13252,6 +14828,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [reasonReference] The reason why the supply item was requested.
   @override
+  @HiveField(30)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -13262,10 +14839,12 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   /// [deliverFrom] Where the supply is expected to come from.
   @override
+  @HiveField(31)
   final Reference? deliverFrom;
 
   /// [deliverTo] Where the supply is destined to go.
   @override
+  @HiveField(32)
   final Reference? deliverTo;
 
   @override
@@ -13398,46 +14977,79 @@ class _$_SupplyRequest extends _SupplyRequest {
 abstract class _SupplyRequest extends SupplyRequest {
   factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      final CodeableConcept? category,
-      final Code? priority,
+      @HiveField(14)
+          final CodeableConcept? category,
+      @HiveField(15)
+          final Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(16)
           final Element? priorityElement,
-      final CodeableConcept? itemCodeableConcept,
-      final Reference? itemReference,
-      required final Quantity quantity,
-      final List<SupplyRequestParameter>? parameter,
-      final FhirDateTime? occurrenceDateTime,
+      @HiveField(17)
+          final CodeableConcept? itemCodeableConcept,
+      @HiveField(18)
+          final Reference? itemReference,
+      @HiveField(19)
+          required final Quantity quantity,
+      @HiveField(20)
+          final List<SupplyRequestParameter>? parameter,
+      @HiveField(21)
+          final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
+      @HiveField(22)
           final Element? occurrenceDateTimeElement,
-      final Period? occurrencePeriod,
-      final Timing? occurrenceTiming,
-      final FhirDateTime? authoredOn,
+      @HiveField(23)
+          final Period? occurrencePeriod,
+      @HiveField(24)
+          final Timing? occurrenceTiming,
+      @HiveField(25)
+          final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(26)
           final Element? authoredOnElement,
-      final Reference? requester,
-      final List<Reference>? supplier,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final Reference? deliverFrom,
-      final Reference? deliverTo}) = _$_SupplyRequest;
+      @HiveField(27)
+          final Reference? requester,
+      @HiveField(28)
+          final List<Reference>? supplier,
+      @HiveField(29)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(30)
+          final List<Reference>? reasonReference,
+      @HiveField(31)
+          final Reference? deliverFrom,
+      @HiveField(32)
+          final Reference? deliverTo}) = _$_SupplyRequest;
   _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
@@ -13445,17 +15057,20 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -13463,20 +15078,24 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -13486,6 +15105,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -13493,6 +15113,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -13503,6 +15124,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -13519,107 +15141,130 @@ abstract class _SupplyRequest extends SupplyRequest {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Business identifiers assigned to this SupplyRequest by the
   /// author and/or other systems. These identifiers remain constant as the
   ///  resource is updated and propagates from server to server.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Status of the supply request.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [category] Category of supply, e.g.  central, non-stock, etc. This is
   ///  used to support work flows associated with the supply process.
+  @HiveField(14)
   CodeableConcept? get category;
   @override
 
   /// [priority] Indicates how quickly this SupplyRequest should be addressed
   ///  with respect to other requests.
+  @HiveField(15)
   Code? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(16)
   Element? get priorityElement;
   @override
 
   /// [itemCodeableConcept] The item that is requested to be supplied. This is
   /// either a link to a resource representing the details of the item or a code
   ///  that identifies the item from a known list.
+  @HiveField(17)
   CodeableConcept? get itemCodeableConcept;
   @override
 
   /// [itemReference] The item that is requested to be supplied. This is either
   /// a link to a resource representing the details of the item or a code that
   ///  identifies the item from a known list.
+  @HiveField(18)
   Reference? get itemReference;
   @override
 
   /// [quantity] The amount that is being ordered of the indicated item.
+  @HiveField(19)
   Quantity get quantity;
   @override
 
   /// [parameter] Specific parameters for the ordered item.  For example, the
   ///  size of the indicated item.
+  @HiveField(20)
   List<SupplyRequestParameter>? get parameter;
   @override
 
   /// [occurrenceDateTime] When the request should be fulfilled.
+  @HiveField(21)
   FhirDateTime? get occurrenceDateTime;
   @override
 
   /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
   @JsonKey(name: '_occurrenceDateTime')
+  @HiveField(22)
   Element? get occurrenceDateTimeElement;
   @override
 
   /// [occurrencePeriod] When the request should be fulfilled.
+  @HiveField(23)
   Period? get occurrencePeriod;
   @override
 
   /// [occurrenceTiming] When the request should be fulfilled.
+  @HiveField(24)
   Timing? get occurrenceTiming;
   @override
 
   /// [authoredOn] When the request was made.
+  @HiveField(25)
   FhirDateTime? get authoredOn;
   @override
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(26)
   Element? get authoredOnElement;
   @override
 
   /// [requester] The device, practitioner, etc. who initiated the request.
+  @HiveField(27)
   Reference? get requester;
   @override
 
   /// [supplier] Who is intended to fulfill the request.
+  @HiveField(28)
   List<Reference>? get supplier;
   @override
 
   /// [reasonCode] The reason why the supply item was requested.
+  @HiveField(29)
   List<CodeableConcept>? get reasonCode;
   @override
 
   /// [reasonReference] The reason why the supply item was requested.
+  @HiveField(30)
   List<Reference>? get reasonReference;
   @override
 
   /// [deliverFrom] Where the supply is expected to come from.
+  @HiveField(31)
   Reference? get deliverFrom;
   @override
 
   /// [deliverTo] Where the supply is destined to go.
+  @HiveField(32)
   Reference? get deliverTo;
   @override
   @JsonKey(ignore: true)

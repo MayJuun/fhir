@@ -22,32 +22,39 @@ BiologicallyDerivedProduct _$BiologicallyDerivedProductFromJson(
 /// @nodoc
 mixin _$BiologicallyDerivedProduct {
   @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -56,12 +63,14 @@ mixin _$BiologicallyDerivedProduct {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -71,6 +80,7 @@ mixin _$BiologicallyDerivedProduct {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -86,6 +96,7 @@ mixin _$BiologicallyDerivedProduct {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -94,46 +105,58 @@ mixin _$BiologicallyDerivedProduct {
   /// used to refer to it when a direct URL reference to the resource itself is
   /// not appropriate (e.g. in CDA documents, or in written / printed
   ///  documentation).
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [productCategory] Broad category of this product.
+  @HiveField(12)
   Code? get productCategory => throw _privateConstructorUsedError;
 
   /// [productCategoryElement] Extensions for productCategory
   @JsonKey(name: '_productCategory')
+  @HiveField(13)
   Element? get productCategoryElement => throw _privateConstructorUsedError;
 
   /// [productCode] A code that identifies the kind of this biologically
   ///  derived product (SNOMED Ctcode).
+  @HiveField(14)
   CodeableConcept? get productCode => throw _privateConstructorUsedError;
 
   /// [status] Whether the product is currently available.
+  @HiveField(15)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [request] Procedure request to obtain this biologically derived product.
+  @HiveField(17)
   List<Reference>? get request => throw _privateConstructorUsedError;
 
   /// [quantity] Number of discrete units within this product.
+  @HiveField(18)
   Integer? get quantity => throw _privateConstructorUsedError;
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
+  @HiveField(19)
   Element? get quantityElement => throw _privateConstructorUsedError;
 
   /// [parent] Parent product (if any).
+  @HiveField(20)
   List<Reference>? get parent => throw _privateConstructorUsedError;
 
   /// [collection] How this product was collected.
+  @HiveField(21)
   BiologicallyDerivedProductCollection? get collection =>
       throw _privateConstructorUsedError;
 
   /// [processing] Any processing of the product during collection that does
   /// not change the fundamental nature of the product. For example adding
   ///  anti-coagulants during the collection of Peripheral Blood Stem Cells.
+  @HiveField(22)
   List<BiologicallyDerivedProductProcessing>? get processing =>
       throw _privateConstructorUsedError;
 
@@ -141,10 +164,12 @@ mixin _$BiologicallyDerivedProduct {
   /// intended to alter the product.  For example a buffy-coat enrichment or CD8
   /// reduction of Peripheral Blood Stem Cells to make it more suitable for
   ///  infusion.
+  @HiveField(23)
   BiologicallyDerivedProductManipulation? get manipulation =>
       throw _privateConstructorUsedError;
 
   /// [storage] Product storage.
+  @HiveField(24)
   List<BiologicallyDerivedProductStorage>? get storage =>
       throw _privateConstructorUsedError;
 
@@ -163,37 +188,62 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? productCategory,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? productCategory,
       @JsonKey(name: '_productCategory')
+      @HiveField(13)
           Element? productCategoryElement,
-      CodeableConcept? productCode,
-      Code? status,
+      @HiveField(14)
+          CodeableConcept? productCode,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      List<Reference>? request,
-      Integer? quantity,
+      @HiveField(17)
+          List<Reference>? request,
+      @HiveField(18)
+          Integer? quantity,
       @JsonKey(name: '_quantity')
+      @HiveField(19)
           Element? quantityElement,
-      List<Reference>? parent,
-      BiologicallyDerivedProductCollection? collection,
-      List<BiologicallyDerivedProductProcessing>? processing,
-      BiologicallyDerivedProductManipulation? manipulation,
-      List<BiologicallyDerivedProductStorage>? storage});
+      @HiveField(20)
+          List<Reference>? parent,
+      @HiveField(21)
+          BiologicallyDerivedProductCollection? collection,
+      @HiveField(22)
+          List<BiologicallyDerivedProductProcessing>? processing,
+      @HiveField(23)
+          BiologicallyDerivedProductManipulation? manipulation,
+      @HiveField(24)
+          List<BiologicallyDerivedProductStorage>? storage});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -485,37 +535,62 @@ abstract class _$$_BiologicallyDerivedProductCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? productCategory,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? productCategory,
       @JsonKey(name: '_productCategory')
+      @HiveField(13)
           Element? productCategoryElement,
-      CodeableConcept? productCode,
-      Code? status,
+      @HiveField(14)
+          CodeableConcept? productCode,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      List<Reference>? request,
-      Integer? quantity,
+      @HiveField(17)
+          List<Reference>? request,
+      @HiveField(18)
+          Integer? quantity,
       @JsonKey(name: '_quantity')
+      @HiveField(19)
           Element? quantityElement,
-      List<Reference>? parent,
-      BiologicallyDerivedProductCollection? collection,
-      List<BiologicallyDerivedProductProcessing>? processing,
-      BiologicallyDerivedProductManipulation? manipulation,
-      List<BiologicallyDerivedProductStorage>? storage});
+      @HiveField(20)
+          List<Reference>? parent,
+      @HiveField(21)
+          BiologicallyDerivedProductCollection? collection,
+      @HiveField(22)
+          List<BiologicallyDerivedProductProcessing>? processing,
+      @HiveField(23)
+          BiologicallyDerivedProductManipulation? manipulation,
+      @HiveField(24)
+          List<BiologicallyDerivedProductStorage>? storage});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -685,40 +760,66 @@ class __$$_BiologicallyDerivedProductCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 147)
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
       {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+      @HiveField(0)
           this.resourceType = R4ResourceType.BiologicallyDerivedProduct,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.productCategory,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.productCategory,
       @JsonKey(name: '_productCategory')
+      @HiveField(13)
           this.productCategoryElement,
-      this.productCode,
-      this.status,
+      @HiveField(14)
+          this.productCode,
+      @HiveField(15)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           this.statusElement,
-      final List<Reference>? request,
-      this.quantity,
+      @HiveField(17)
+          final List<Reference>? request,
+      @HiveField(18)
+          this.quantity,
       @JsonKey(name: '_quantity')
+      @HiveField(19)
           this.quantityElement,
-      final List<Reference>? parent,
-      this.collection,
-      final List<BiologicallyDerivedProductProcessing>? processing,
-      this.manipulation,
-      final List<BiologicallyDerivedProductStorage>? storage})
+      @HiveField(20)
+          final List<Reference>? parent,
+      @HiveField(21)
+          this.collection,
+      @HiveField(22)
+          final List<BiologicallyDerivedProductProcessing>? processing,
+      @HiveField(23)
+          this.manipulation,
+      @HiveField(24)
+          final List<BiologicallyDerivedProductStorage>? storage})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -734,17 +835,20 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -752,20 +856,24 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -775,6 +883,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -788,6 +897,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -812,6 +922,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -849,6 +960,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -871,6 +983,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// not appropriate (e.g. in CDA documents, or in written / printed
   ///  documentation).
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -881,25 +994,30 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [productCategory] Broad category of this product.
   @override
+  @HiveField(12)
   final Code? productCategory;
 
   /// [productCategoryElement] Extensions for productCategory
   @override
   @JsonKey(name: '_productCategory')
+  @HiveField(13)
   final Element? productCategoryElement;
 
   /// [productCode] A code that identifies the kind of this biologically
   ///  derived product (SNOMED Ctcode).
   @override
+  @HiveField(14)
   final CodeableConcept? productCode;
 
   /// [status] Whether the product is currently available.
   @override
+  @HiveField(15)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(16)
   final Element? statusElement;
 
   /// [request] Procedure request to obtain this biologically derived product.
@@ -907,6 +1025,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [request] Procedure request to obtain this biologically derived product.
   @override
+  @HiveField(17)
   List<Reference>? get request {
     final value = _request;
     if (value == null) return null;
@@ -917,11 +1036,13 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [quantity] Number of discrete units within this product.
   @override
+  @HiveField(18)
   final Integer? quantity;
 
   /// [quantityElement] Extensions for quantity
   @override
   @JsonKey(name: '_quantity')
+  @HiveField(19)
   final Element? quantityElement;
 
   /// [parent] Parent product (if any).
@@ -929,6 +1050,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [parent] Parent product (if any).
   @override
+  @HiveField(20)
   List<Reference>? get parent {
     final value = _parent;
     if (value == null) return null;
@@ -939,6 +1061,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [collection] How this product was collected.
   @override
+  @HiveField(21)
   final BiologicallyDerivedProductCollection? collection;
 
   /// [processing] Any processing of the product during collection that does
@@ -950,6 +1073,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// not change the fundamental nature of the product. For example adding
   ///  anti-coagulants during the collection of Peripheral Blood Stem Cells.
   @override
+  @HiveField(22)
   List<BiologicallyDerivedProductProcessing>? get processing {
     final value = _processing;
     if (value == null) return null;
@@ -963,6 +1087,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   /// reduction of Peripheral Blood Stem Cells to make it more suitable for
   ///  infusion.
   @override
+  @HiveField(23)
   final BiologicallyDerivedProductManipulation? manipulation;
 
   /// [storage] Product storage.
@@ -970,6 +1095,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   /// [storage] Product storage.
   @override
+  @HiveField(24)
   List<BiologicallyDerivedProductStorage>? get storage {
     final value = _storage;
     if (value == null) return null;
@@ -1082,37 +1208,62 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   factory _BiologicallyDerivedProduct(
           {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          final Code? productCategory,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final List<Identifier>? identifier,
+          @HiveField(12)
+              final Code? productCategory,
           @JsonKey(name: '_productCategory')
+          @HiveField(13)
               final Element? productCategoryElement,
-          final CodeableConcept? productCode,
-          final Code? status,
+          @HiveField(14)
+              final CodeableConcept? productCode,
+          @HiveField(15)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(16)
               final Element? statusElement,
-          final List<Reference>? request,
-          final Integer? quantity,
+          @HiveField(17)
+              final List<Reference>? request,
+          @HiveField(18)
+              final Integer? quantity,
           @JsonKey(name: '_quantity')
+          @HiveField(19)
               final Element? quantityElement,
-          final List<Reference>? parent,
-          final BiologicallyDerivedProductCollection? collection,
-          final List<BiologicallyDerivedProductProcessing>? processing,
-          final BiologicallyDerivedProductManipulation? manipulation,
-          final List<BiologicallyDerivedProductStorage>? storage}) =
+          @HiveField(20)
+              final List<Reference>? parent,
+          @HiveField(21)
+              final BiologicallyDerivedProductCollection? collection,
+          @HiveField(22)
+              final List<BiologicallyDerivedProductProcessing>? processing,
+          @HiveField(23)
+              final BiologicallyDerivedProductManipulation? manipulation,
+          @HiveField(24)
+              final List<BiologicallyDerivedProductStorage>? storage}) =
       _$_BiologicallyDerivedProduct;
   _BiologicallyDerivedProduct._() : super._();
 
@@ -1121,17 +1272,20 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1139,20 +1293,24 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1162,6 +1320,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1169,6 +1328,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1179,6 +1339,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1195,6 +1356,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -1203,56 +1365,68 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// used to refer to it when a direct URL reference to the resource itself is
   /// not appropriate (e.g. in CDA documents, or in written / printed
   ///  documentation).
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [productCategory] Broad category of this product.
+  @HiveField(12)
   Code? get productCategory;
   @override
 
   /// [productCategoryElement] Extensions for productCategory
   @JsonKey(name: '_productCategory')
+  @HiveField(13)
   Element? get productCategoryElement;
   @override
 
   /// [productCode] A code that identifies the kind of this biologically
   ///  derived product (SNOMED Ctcode).
+  @HiveField(14)
   CodeableConcept? get productCode;
   @override
 
   /// [status] Whether the product is currently available.
+  @HiveField(15)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement;
   @override
 
   /// [request] Procedure request to obtain this biologically derived product.
+  @HiveField(17)
   List<Reference>? get request;
   @override
 
   /// [quantity] Number of discrete units within this product.
+  @HiveField(18)
   Integer? get quantity;
   @override
 
   /// [quantityElement] Extensions for quantity
   @JsonKey(name: '_quantity')
+  @HiveField(19)
   Element? get quantityElement;
   @override
 
   /// [parent] Parent product (if any).
+  @HiveField(20)
   List<Reference>? get parent;
   @override
 
   /// [collection] How this product was collected.
+  @HiveField(21)
   BiologicallyDerivedProductCollection? get collection;
   @override
 
   /// [processing] Any processing of the product during collection that does
   /// not change the fundamental nature of the product. For example adding
   ///  anti-coagulants during the collection of Peripheral Blood Stem Cells.
+  @HiveField(22)
   List<BiologicallyDerivedProductProcessing>? get processing;
   @override
 
@@ -1260,10 +1434,12 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   /// intended to alter the product.  For example a buffy-coat enrichment or CD8
   /// reduction of Peripheral Blood Stem Cells to make it more suitable for
   ///  infusion.
+  @HiveField(23)
   BiologicallyDerivedProductManipulation? get manipulation;
   @override
 
   /// [storage] Product storage.
+  @HiveField(24)
   List<BiologicallyDerivedProductStorage>? get storage;
   @override
   @JsonKey(ignore: true)
@@ -3486,32 +3662,39 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Device {
   @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -3520,12 +3703,14 @@ mixin _$Device {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3535,6 +3720,7 @@ mixin _$Device {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -3550,76 +3736,95 @@ mixin _$Device {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Unique instance identifiers assigned to a device by
   ///  manufacturers other organizations or owners.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [definition] The reference to the definition for the device.
+  @HiveField(12)
   Reference? get definition => throw _privateConstructorUsedError;
 
   /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
   /// package.  Note that the Device may include multiple udiCarriers as it
   /// either may include just the udiCarrier for the jurisdiction it is sold, or
   ///  for multiple jurisdictions it could have been sold.
+  @HiveField(13)
   List<DeviceUdiCarrier>? get udiCarrier => throw _privateConstructorUsedError;
 
   /// [status] Status of the Device availability.
+  @HiveField(14)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(15)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] Reason for the dtatus of the Device availability.
+  @HiveField(16)
   List<CodeableConcept>? get statusReason => throw _privateConstructorUsedError;
 
   /// [distinctIdentifier] The distinct identification string as required by
   /// regulation for a human cell, tissue, or cellular and tissue-based
   ///  product.
+  @HiveField(17)
   String? get distinctIdentifier => throw _privateConstructorUsedError;
 
   /// [distinctIdentifierElement] Extensions for distinctIdentifier
   @JsonKey(name: '_distinctIdentifier')
+  @HiveField(18)
   Element? get distinctIdentifierElement => throw _privateConstructorUsedError;
 
   /// [manufacturer] A name of the manufacturer.
+  @HiveField(19)
   String? get manufacturer => throw _privateConstructorUsedError;
 
   /// [manufacturerElement] Extensions for manufacturer
   @JsonKey(name: '_manufacturer')
+  @HiveField(20)
   Element? get manufacturerElement => throw _privateConstructorUsedError;
 
   /// [manufactureDate] The date and time when the device was manufactured.
+  @HiveField(21)
   FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
 
   /// [manufactureDateElement] Extensions for manufactureDate
   @JsonKey(name: '_manufactureDate')
+  @HiveField(22)
   Element? get manufactureDateElement => throw _privateConstructorUsedError;
 
   /// [expirationDate] The date and time beyond which this device is no longer
   ///  valid or should not be used (if applicable).
+  @HiveField(23)
   FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
 
   /// [expirationDateElement] Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
+  @HiveField(24)
   Element? get expirationDateElement => throw _privateConstructorUsedError;
 
   /// [lotNumber] Lot number assigned by the manufacturer.
+  @HiveField(25)
   String? get lotNumber => throw _privateConstructorUsedError;
 
   /// [lotNumberElement] Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
+  @HiveField(26)
   Element? get lotNumberElement => throw _privateConstructorUsedError;
 
   /// [serialNumber] The serial number assigned by the organization when the
   ///  device was manufactured.
+  @HiveField(27)
   String? get serialNumber => throw _privateConstructorUsedError;
 
   /// [serialNumberElement] Extensions for serialNumber
   @JsonKey(name: '_serialNumber')
+  @HiveField(28)
   Element? get serialNumberElement => throw _privateConstructorUsedError;
 
   /// [deviceName] This represents the manufacturer's name of the device as
@@ -3627,69 +3832,87 @@ mixin _$Device {
   /// Device.  This typically would be used when a person provides the name(s)
   /// or when the device represents one of the names available from
   ///  DeviceDefinition.
+  @HiveField(29)
   List<DeviceDeviceName>? get deviceName => throw _privateConstructorUsedError;
 
   /// [modelNumber] The model number for the device.
+  @HiveField(30)
   String? get modelNumber => throw _privateConstructorUsedError;
 
   /// [modelNumberElement] Extensions for modelNumber
   @JsonKey(name: '_modelNumber')
+  @HiveField(31)
   Element? get modelNumberElement => throw _privateConstructorUsedError;
 
   /// [partNumber] The part number of the device.
+  @HiveField(32)
   String? get partNumber => throw _privateConstructorUsedError;
 
   /// [partNumberElement] Extensions for partNumber
   @JsonKey(name: '_partNumber')
+  @HiveField(33)
   Element? get partNumberElement => throw _privateConstructorUsedError;
 
   /// [type] The kind or type of device.
+  @HiveField(34)
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [specialization] The capabilities supported on a  device, the standards
   /// to which the device conforms for a particular purpose, and used for the
   ///  communication.
+  @HiveField(35)
   List<DeviceSpecialization>? get specialization =>
       throw _privateConstructorUsedError;
 
   /// [version] The actual design of the device or software version running on
   ///  the device.
+  @HiveField(36)
   List<DeviceVersion>? get version => throw _privateConstructorUsedError;
 
   /// [property] The actual configuration settings of a device as it actually
   ///  operates, e.g., regulation status, time properties.
+  @HiveField(37)
   List<DeviceProperty>? get property => throw _privateConstructorUsedError;
 
   /// [patient] Patient information, If the device is affixed to a person.
+  @HiveField(38)
   Reference? get patient => throw _privateConstructorUsedError;
 
   /// [owner] An organization that is responsible for the provision and ongoing
   ///  maintenance of the device.
+  @HiveField(39)
   Reference? get owner => throw _privateConstructorUsedError;
 
   /// [contact] Contact details for an organization or a particular human that
   ///  is responsible for the device.
+  @HiveField(40)
   List<ContactPoint>? get contact => throw _privateConstructorUsedError;
 
   /// [location] The place where the device can be found.
+  @HiveField(41)
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [url] A network address on which the device may be contacted directly.
+  @HiveField(42)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(43)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [note] Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
+  @HiveField(44)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [safety] Provides additional safety characteristics about a medical
   ///  device.  For example devices containing latex.
+  @HiveField(45)
   List<CodeableConcept>? get safety => throw _privateConstructorUsedError;
 
   /// [parent] The parent device.
+  @HiveField(46)
   Reference? get parent => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3704,66 +3927,113 @@ abstract class $DeviceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Reference? definition,
+      @HiveField(13)
+          List<DeviceUdiCarrier>? udiCarrier,
+      @HiveField(14)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      String? distinctIdentifier,
+      @HiveField(16)
+          List<CodeableConcept>? statusReason,
+      @HiveField(17)
+          String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
+      @HiveField(18)
           Element? distinctIdentifierElement,
-      String? manufacturer,
+      @HiveField(19)
+          String? manufacturer,
       @JsonKey(name: '_manufacturer')
+      @HiveField(20)
           Element? manufacturerElement,
-      FhirDateTime? manufactureDate,
+      @HiveField(21)
+          FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate')
+      @HiveField(22)
           Element? manufactureDateElement,
-      FhirDateTime? expirationDate,
+      @HiveField(23)
+          FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate')
+      @HiveField(24)
           Element? expirationDateElement,
-      String? lotNumber,
+      @HiveField(25)
+          String? lotNumber,
       @JsonKey(name: '_lotNumber')
+      @HiveField(26)
           Element? lotNumberElement,
-      String? serialNumber,
+      @HiveField(27)
+          String? serialNumber,
       @JsonKey(name: '_serialNumber')
+      @HiveField(28)
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
-      String? modelNumber,
+      @HiveField(29)
+          List<DeviceDeviceName>? deviceName,
+      @HiveField(30)
+          String? modelNumber,
       @JsonKey(name: '_modelNumber')
+      @HiveField(31)
           Element? modelNumberElement,
-      String? partNumber,
+      @HiveField(32)
+          String? partNumber,
       @JsonKey(name: '_partNumber')
+      @HiveField(33)
           Element? partNumberElement,
-      CodeableConcept? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
-      Reference? patient,
-      Reference? owner,
-      List<ContactPoint>? contact,
-      Reference? location,
-      FhirUri? url,
+      @HiveField(34)
+          CodeableConcept? type,
+      @HiveField(35)
+          List<DeviceSpecialization>? specialization,
+      @HiveField(36)
+          List<DeviceVersion>? version,
+      @HiveField(37)
+          List<DeviceProperty>? property,
+      @HiveField(38)
+          Reference? patient,
+      @HiveField(39)
+          Reference? owner,
+      @HiveField(40)
+          List<ContactPoint>? contact,
+      @HiveField(41)
+          Reference? location,
+      @HiveField(42)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(43)
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
-      Reference? parent});
+      @HiveField(44)
+          List<Annotation>? note,
+      @HiveField(45)
+          List<CodeableConcept>? safety,
+      @HiveField(46)
+          Reference? parent});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4289,66 +4559,113 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Reference? definition,
+      @HiveField(13)
+          List<DeviceUdiCarrier>? udiCarrier,
+      @HiveField(14)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
-      String? distinctIdentifier,
+      @HiveField(16)
+          List<CodeableConcept>? statusReason,
+      @HiveField(17)
+          String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
+      @HiveField(18)
           Element? distinctIdentifierElement,
-      String? manufacturer,
+      @HiveField(19)
+          String? manufacturer,
       @JsonKey(name: '_manufacturer')
+      @HiveField(20)
           Element? manufacturerElement,
-      FhirDateTime? manufactureDate,
+      @HiveField(21)
+          FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate')
+      @HiveField(22)
           Element? manufactureDateElement,
-      FhirDateTime? expirationDate,
+      @HiveField(23)
+          FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate')
+      @HiveField(24)
           Element? expirationDateElement,
-      String? lotNumber,
+      @HiveField(25)
+          String? lotNumber,
       @JsonKey(name: '_lotNumber')
+      @HiveField(26)
           Element? lotNumberElement,
-      String? serialNumber,
+      @HiveField(27)
+          String? serialNumber,
       @JsonKey(name: '_serialNumber')
+      @HiveField(28)
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
-      String? modelNumber,
+      @HiveField(29)
+          List<DeviceDeviceName>? deviceName,
+      @HiveField(30)
+          String? modelNumber,
       @JsonKey(name: '_modelNumber')
+      @HiveField(31)
           Element? modelNumberElement,
-      String? partNumber,
+      @HiveField(32)
+          String? partNumber,
       @JsonKey(name: '_partNumber')
+      @HiveField(33)
           Element? partNumberElement,
-      CodeableConcept? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
-      Reference? patient,
-      Reference? owner,
-      List<ContactPoint>? contact,
-      Reference? location,
-      FhirUri? url,
+      @HiveField(34)
+          CodeableConcept? type,
+      @HiveField(35)
+          List<DeviceSpecialization>? specialization,
+      @HiveField(36)
+          List<DeviceVersion>? version,
+      @HiveField(37)
+          List<DeviceProperty>? property,
+      @HiveField(38)
+          Reference? patient,
+      @HiveField(39)
+          Reference? owner,
+      @HiveField(40)
+          List<ContactPoint>? contact,
+      @HiveField(41)
+          Reference? location,
+      @HiveField(42)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(43)
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
-      Reference? parent});
+      @HiveField(44)
+          List<Annotation>? note,
+      @HiveField(45)
+          List<CodeableConcept>? safety,
+      @HiveField(46)
+          Reference? parent});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4645,69 +4962,117 @@ class __$$_DeviceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 148)
 class _$_Device extends _Device {
   _$_Device(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Device,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.definition,
-      final List<DeviceUdiCarrier>? udiCarrier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.definition,
+      @HiveField(13)
+          final List<DeviceUdiCarrier>? udiCarrier,
+      @HiveField(14)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           this.statusElement,
-      final List<CodeableConcept>? statusReason,
-      this.distinctIdentifier,
+      @HiveField(16)
+          final List<CodeableConcept>? statusReason,
+      @HiveField(17)
+          this.distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
+      @HiveField(18)
           this.distinctIdentifierElement,
-      this.manufacturer,
+      @HiveField(19)
+          this.manufacturer,
       @JsonKey(name: '_manufacturer')
+      @HiveField(20)
           this.manufacturerElement,
-      this.manufactureDate,
+      @HiveField(21)
+          this.manufactureDate,
       @JsonKey(name: '_manufactureDate')
+      @HiveField(22)
           this.manufactureDateElement,
-      this.expirationDate,
+      @HiveField(23)
+          this.expirationDate,
       @JsonKey(name: '_expirationDate')
+      @HiveField(24)
           this.expirationDateElement,
-      this.lotNumber,
+      @HiveField(25)
+          this.lotNumber,
       @JsonKey(name: '_lotNumber')
+      @HiveField(26)
           this.lotNumberElement,
-      this.serialNumber,
+      @HiveField(27)
+          this.serialNumber,
       @JsonKey(name: '_serialNumber')
+      @HiveField(28)
           this.serialNumberElement,
-      final List<DeviceDeviceName>? deviceName,
-      this.modelNumber,
+      @HiveField(29)
+          final List<DeviceDeviceName>? deviceName,
+      @HiveField(30)
+          this.modelNumber,
       @JsonKey(name: '_modelNumber')
+      @HiveField(31)
           this.modelNumberElement,
-      this.partNumber,
+      @HiveField(32)
+          this.partNumber,
       @JsonKey(name: '_partNumber')
+      @HiveField(33)
           this.partNumberElement,
-      this.type,
-      final List<DeviceSpecialization>? specialization,
-      final List<DeviceVersion>? version,
-      final List<DeviceProperty>? property,
-      this.patient,
-      this.owner,
-      final List<ContactPoint>? contact,
-      this.location,
-      this.url,
+      @HiveField(34)
+          this.type,
+      @HiveField(35)
+          final List<DeviceSpecialization>? specialization,
+      @HiveField(36)
+          final List<DeviceVersion>? version,
+      @HiveField(37)
+          final List<DeviceProperty>? property,
+      @HiveField(38)
+          this.patient,
+      @HiveField(39)
+          this.owner,
+      @HiveField(40)
+          final List<ContactPoint>? contact,
+      @HiveField(41)
+          this.location,
+      @HiveField(42)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(43)
           this.urlElement,
-      final List<Annotation>? note,
-      final List<CodeableConcept>? safety,
-      this.parent})
+      @HiveField(44)
+          final List<Annotation>? note,
+      @HiveField(45)
+          final List<CodeableConcept>? safety,
+      @HiveField(46)
+          this.parent})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4728,17 +5093,20 @@ class _$_Device extends _Device {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -4746,20 +5114,24 @@ class _$_Device extends _Device {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4769,6 +5141,7 @@ class _$_Device extends _Device {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -4782,6 +5155,7 @@ class _$_Device extends _Device {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -4806,6 +5180,7 @@ class _$_Device extends _Device {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -4843,6 +5218,7 @@ class _$_Device extends _Device {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4859,6 +5235,7 @@ class _$_Device extends _Device {
   /// [identifier] Unique instance identifiers assigned to a device by
   ///  manufacturers other organizations or owners.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -4869,6 +5246,7 @@ class _$_Device extends _Device {
 
   /// [definition] The reference to the definition for the device.
   @override
+  @HiveField(12)
   final Reference? definition;
 
   /// [udiCarrier] Unique device identifier (UDI) assigned to device label or
@@ -4882,6 +5260,7 @@ class _$_Device extends _Device {
   /// either may include just the udiCarrier for the jurisdiction it is sold, or
   ///  for multiple jurisdictions it could have been sold.
   @override
+  @HiveField(13)
   List<DeviceUdiCarrier>? get udiCarrier {
     final value = _udiCarrier;
     if (value == null) return null;
@@ -4892,11 +5271,13 @@ class _$_Device extends _Device {
 
   /// [status] Status of the Device availability.
   @override
+  @HiveField(14)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(15)
   final Element? statusElement;
 
   /// [statusReason] Reason for the dtatus of the Device availability.
@@ -4904,6 +5285,7 @@ class _$_Device extends _Device {
 
   /// [statusReason] Reason for the dtatus of the Device availability.
   @override
+  @HiveField(16)
   List<CodeableConcept>? get statusReason {
     final value = _statusReason;
     if (value == null) return null;
@@ -4916,58 +5298,70 @@ class _$_Device extends _Device {
   /// regulation for a human cell, tissue, or cellular and tissue-based
   ///  product.
   @override
+  @HiveField(17)
   final String? distinctIdentifier;
 
   /// [distinctIdentifierElement] Extensions for distinctIdentifier
   @override
   @JsonKey(name: '_distinctIdentifier')
+  @HiveField(18)
   final Element? distinctIdentifierElement;
 
   /// [manufacturer] A name of the manufacturer.
   @override
+  @HiveField(19)
   final String? manufacturer;
 
   /// [manufacturerElement] Extensions for manufacturer
   @override
   @JsonKey(name: '_manufacturer')
+  @HiveField(20)
   final Element? manufacturerElement;
 
   /// [manufactureDate] The date and time when the device was manufactured.
   @override
+  @HiveField(21)
   final FhirDateTime? manufactureDate;
 
   /// [manufactureDateElement] Extensions for manufactureDate
   @override
   @JsonKey(name: '_manufactureDate')
+  @HiveField(22)
   final Element? manufactureDateElement;
 
   /// [expirationDate] The date and time beyond which this device is no longer
   ///  valid or should not be used (if applicable).
   @override
+  @HiveField(23)
   final FhirDateTime? expirationDate;
 
   /// [expirationDateElement] Extensions for expirationDate
   @override
   @JsonKey(name: '_expirationDate')
+  @HiveField(24)
   final Element? expirationDateElement;
 
   /// [lotNumber] Lot number assigned by the manufacturer.
   @override
+  @HiveField(25)
   final String? lotNumber;
 
   /// [lotNumberElement] Extensions for lotNumber
   @override
   @JsonKey(name: '_lotNumber')
+  @HiveField(26)
   final Element? lotNumberElement;
 
   /// [serialNumber] The serial number assigned by the organization when the
   ///  device was manufactured.
   @override
+  @HiveField(27)
   final String? serialNumber;
 
   /// [serialNumberElement] Extensions for serialNumber
   @override
   @JsonKey(name: '_serialNumber')
+  @HiveField(28)
   final Element? serialNumberElement;
 
   /// [deviceName] This represents the manufacturer's name of the device as
@@ -4983,6 +5377,7 @@ class _$_Device extends _Device {
   /// or when the device represents one of the names available from
   ///  DeviceDefinition.
   @override
+  @HiveField(29)
   List<DeviceDeviceName>? get deviceName {
     final value = _deviceName;
     if (value == null) return null;
@@ -4993,24 +5388,29 @@ class _$_Device extends _Device {
 
   /// [modelNumber] The model number for the device.
   @override
+  @HiveField(30)
   final String? modelNumber;
 
   /// [modelNumberElement] Extensions for modelNumber
   @override
   @JsonKey(name: '_modelNumber')
+  @HiveField(31)
   final Element? modelNumberElement;
 
   /// [partNumber] The part number of the device.
   @override
+  @HiveField(32)
   final String? partNumber;
 
   /// [partNumberElement] Extensions for partNumber
   @override
   @JsonKey(name: '_partNumber')
+  @HiveField(33)
   final Element? partNumberElement;
 
   /// [type] The kind or type of device.
   @override
+  @HiveField(34)
   final CodeableConcept? type;
 
   /// [specialization] The capabilities supported on a  device, the standards
@@ -5022,6 +5422,7 @@ class _$_Device extends _Device {
   /// to which the device conforms for a particular purpose, and used for the
   ///  communication.
   @override
+  @HiveField(35)
   List<DeviceSpecialization>? get specialization {
     final value = _specialization;
     if (value == null) return null;
@@ -5037,6 +5438,7 @@ class _$_Device extends _Device {
   /// [version] The actual design of the device or software version running on
   ///  the device.
   @override
+  @HiveField(36)
   List<DeviceVersion>? get version {
     final value = _version;
     if (value == null) return null;
@@ -5052,6 +5454,7 @@ class _$_Device extends _Device {
   /// [property] The actual configuration settings of a device as it actually
   ///  operates, e.g., regulation status, time properties.
   @override
+  @HiveField(37)
   List<DeviceProperty>? get property {
     final value = _property;
     if (value == null) return null;
@@ -5062,11 +5465,13 @@ class _$_Device extends _Device {
 
   /// [patient] Patient information, If the device is affixed to a person.
   @override
+  @HiveField(38)
   final Reference? patient;
 
   /// [owner] An organization that is responsible for the provision and ongoing
   ///  maintenance of the device.
   @override
+  @HiveField(39)
   final Reference? owner;
 
   /// [contact] Contact details for an organization or a particular human that
@@ -5076,6 +5481,7 @@ class _$_Device extends _Device {
   /// [contact] Contact details for an organization or a particular human that
   ///  is responsible for the device.
   @override
+  @HiveField(40)
   List<ContactPoint>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -5086,15 +5492,18 @@ class _$_Device extends _Device {
 
   /// [location] The place where the device can be found.
   @override
+  @HiveField(41)
   final Reference? location;
 
   /// [url] A network address on which the device may be contacted directly.
   @override
+  @HiveField(42)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(43)
   final Element? urlElement;
 
   /// [note] Descriptive information, usage information or implantation
@@ -5104,6 +5513,7 @@ class _$_Device extends _Device {
   /// [note] Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
   @override
+  @HiveField(44)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -5119,6 +5529,7 @@ class _$_Device extends _Device {
   /// [safety] Provides additional safety characteristics about a medical
   ///  device.  For example devices containing latex.
   @override
+  @HiveField(45)
   List<CodeableConcept>? get safety {
     final value = _safety;
     if (value == null) return null;
@@ -5129,6 +5540,7 @@ class _$_Device extends _Device {
 
   /// [parent] The parent device.
   @override
+  @HiveField(46)
   final Reference? parent;
 
   @override
@@ -5294,83 +5706,133 @@ class _$_Device extends _Device {
 abstract class _Device extends Device {
   factory _Device(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Reference? definition,
-      final List<DeviceUdiCarrier>? udiCarrier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Reference? definition,
+      @HiveField(13)
+          final List<DeviceUdiCarrier>? udiCarrier,
+      @HiveField(14)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(15)
           final Element? statusElement,
-      final List<CodeableConcept>? statusReason,
-      final String? distinctIdentifier,
+      @HiveField(16)
+          final List<CodeableConcept>? statusReason,
+      @HiveField(17)
+          final String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
+      @HiveField(18)
           final Element? distinctIdentifierElement,
-      final String? manufacturer,
+      @HiveField(19)
+          final String? manufacturer,
       @JsonKey(name: '_manufacturer')
+      @HiveField(20)
           final Element? manufacturerElement,
-      final FhirDateTime? manufactureDate,
+      @HiveField(21)
+          final FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate')
+      @HiveField(22)
           final Element? manufactureDateElement,
-      final FhirDateTime? expirationDate,
+      @HiveField(23)
+          final FhirDateTime? expirationDate,
       @JsonKey(name: '_expirationDate')
+      @HiveField(24)
           final Element? expirationDateElement,
-      final String? lotNumber,
+      @HiveField(25)
+          final String? lotNumber,
       @JsonKey(name: '_lotNumber')
+      @HiveField(26)
           final Element? lotNumberElement,
-      final String? serialNumber,
+      @HiveField(27)
+          final String? serialNumber,
       @JsonKey(name: '_serialNumber')
+      @HiveField(28)
           final Element? serialNumberElement,
-      final List<DeviceDeviceName>? deviceName,
-      final String? modelNumber,
+      @HiveField(29)
+          final List<DeviceDeviceName>? deviceName,
+      @HiveField(30)
+          final String? modelNumber,
       @JsonKey(name: '_modelNumber')
+      @HiveField(31)
           final Element? modelNumberElement,
-      final String? partNumber,
+      @HiveField(32)
+          final String? partNumber,
       @JsonKey(name: '_partNumber')
+      @HiveField(33)
           final Element? partNumberElement,
-      final CodeableConcept? type,
-      final List<DeviceSpecialization>? specialization,
-      final List<DeviceVersion>? version,
-      final List<DeviceProperty>? property,
-      final Reference? patient,
-      final Reference? owner,
-      final List<ContactPoint>? contact,
-      final Reference? location,
-      final FhirUri? url,
+      @HiveField(34)
+          final CodeableConcept? type,
+      @HiveField(35)
+          final List<DeviceSpecialization>? specialization,
+      @HiveField(36)
+          final List<DeviceVersion>? version,
+      @HiveField(37)
+          final List<DeviceProperty>? property,
+      @HiveField(38)
+          final Reference? patient,
+      @HiveField(39)
+          final Reference? owner,
+      @HiveField(40)
+          final List<ContactPoint>? contact,
+      @HiveField(41)
+          final Reference? location,
+      @HiveField(42)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(43)
           final Element? urlElement,
-      final List<Annotation>? note,
-      final List<CodeableConcept>? safety,
-      final Reference? parent}) = _$_Device;
+      @HiveField(44)
+          final List<Annotation>? note,
+      @HiveField(45)
+          final List<CodeableConcept>? safety,
+      @HiveField(46)
+          final Reference? parent}) = _$_Device;
   _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -5378,20 +5840,24 @@ abstract class _Device extends Device {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -5401,6 +5867,7 @@ abstract class _Device extends Device {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -5408,6 +5875,7 @@ abstract class _Device extends Device {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -5418,6 +5886,7 @@ abstract class _Device extends Device {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -5434,15 +5903,18 @@ abstract class _Device extends Device {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Unique instance identifiers assigned to a device by
   ///  manufacturers other organizations or owners.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [definition] The reference to the definition for the device.
+  @HiveField(12)
   Reference? get definition;
   @override
 
@@ -5450,77 +5922,93 @@ abstract class _Device extends Device {
   /// package.  Note that the Device may include multiple udiCarriers as it
   /// either may include just the udiCarrier for the jurisdiction it is sold, or
   ///  for multiple jurisdictions it could have been sold.
+  @HiveField(13)
   List<DeviceUdiCarrier>? get udiCarrier;
   @override
 
   /// [status] Status of the Device availability.
+  @HiveField(14)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(15)
   Element? get statusElement;
   @override
 
   /// [statusReason] Reason for the dtatus of the Device availability.
+  @HiveField(16)
   List<CodeableConcept>? get statusReason;
   @override
 
   /// [distinctIdentifier] The distinct identification string as required by
   /// regulation for a human cell, tissue, or cellular and tissue-based
   ///  product.
+  @HiveField(17)
   String? get distinctIdentifier;
   @override
 
   /// [distinctIdentifierElement] Extensions for distinctIdentifier
   @JsonKey(name: '_distinctIdentifier')
+  @HiveField(18)
   Element? get distinctIdentifierElement;
   @override
 
   /// [manufacturer] A name of the manufacturer.
+  @HiveField(19)
   String? get manufacturer;
   @override
 
   /// [manufacturerElement] Extensions for manufacturer
   @JsonKey(name: '_manufacturer')
+  @HiveField(20)
   Element? get manufacturerElement;
   @override
 
   /// [manufactureDate] The date and time when the device was manufactured.
+  @HiveField(21)
   FhirDateTime? get manufactureDate;
   @override
 
   /// [manufactureDateElement] Extensions for manufactureDate
   @JsonKey(name: '_manufactureDate')
+  @HiveField(22)
   Element? get manufactureDateElement;
   @override
 
   /// [expirationDate] The date and time beyond which this device is no longer
   ///  valid or should not be used (if applicable).
+  @HiveField(23)
   FhirDateTime? get expirationDate;
   @override
 
   /// [expirationDateElement] Extensions for expirationDate
   @JsonKey(name: '_expirationDate')
+  @HiveField(24)
   Element? get expirationDateElement;
   @override
 
   /// [lotNumber] Lot number assigned by the manufacturer.
+  @HiveField(25)
   String? get lotNumber;
   @override
 
   /// [lotNumberElement] Extensions for lotNumber
   @JsonKey(name: '_lotNumber')
+  @HiveField(26)
   Element? get lotNumberElement;
   @override
 
   /// [serialNumber] The serial number assigned by the organization when the
   ///  device was manufactured.
+  @HiveField(27)
   String? get serialNumber;
   @override
 
   /// [serialNumberElement] Extensions for serialNumber
   @JsonKey(name: '_serialNumber')
+  @HiveField(28)
   Element? get serialNumberElement;
   @override
 
@@ -5529,85 +6017,103 @@ abstract class _Device extends Device {
   /// Device.  This typically would be used when a person provides the name(s)
   /// or when the device represents one of the names available from
   ///  DeviceDefinition.
+  @HiveField(29)
   List<DeviceDeviceName>? get deviceName;
   @override
 
   /// [modelNumber] The model number for the device.
+  @HiveField(30)
   String? get modelNumber;
   @override
 
   /// [modelNumberElement] Extensions for modelNumber
   @JsonKey(name: '_modelNumber')
+  @HiveField(31)
   Element? get modelNumberElement;
   @override
 
   /// [partNumber] The part number of the device.
+  @HiveField(32)
   String? get partNumber;
   @override
 
   /// [partNumberElement] Extensions for partNumber
   @JsonKey(name: '_partNumber')
+  @HiveField(33)
   Element? get partNumberElement;
   @override
 
   /// [type] The kind or type of device.
+  @HiveField(34)
   CodeableConcept? get type;
   @override
 
   /// [specialization] The capabilities supported on a  device, the standards
   /// to which the device conforms for a particular purpose, and used for the
   ///  communication.
+  @HiveField(35)
   List<DeviceSpecialization>? get specialization;
   @override
 
   /// [version] The actual design of the device or software version running on
   ///  the device.
+  @HiveField(36)
   List<DeviceVersion>? get version;
   @override
 
   /// [property] The actual configuration settings of a device as it actually
   ///  operates, e.g., regulation status, time properties.
+  @HiveField(37)
   List<DeviceProperty>? get property;
   @override
 
   /// [patient] Patient information, If the device is affixed to a person.
+  @HiveField(38)
   Reference? get patient;
   @override
 
   /// [owner] An organization that is responsible for the provision and ongoing
   ///  maintenance of the device.
+  @HiveField(39)
   Reference? get owner;
   @override
 
   /// [contact] Contact details for an organization or a particular human that
   ///  is responsible for the device.
+  @HiveField(40)
   List<ContactPoint>? get contact;
   @override
 
   /// [location] The place where the device can be found.
+  @HiveField(41)
   Reference? get location;
   @override
 
   /// [url] A network address on which the device may be contacted directly.
+  @HiveField(42)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(43)
   Element? get urlElement;
   @override
 
   /// [note] Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
+  @HiveField(44)
   List<Annotation>? get note;
   @override
 
   /// [safety] Provides additional safety characteristics about a medical
   ///  device.  For example devices containing latex.
+  @HiveField(45)
   List<CodeableConcept>? get safety;
   @override
 
   /// [parent] The parent device.
+  @HiveField(46)
   Reference? get parent;
   @override
   @JsonKey(ignore: true)
@@ -8192,32 +8698,39 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DeviceMetric {
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8226,12 +8739,14 @@ mixin _$DeviceMetric {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -8241,6 +8756,7 @@ mixin _$DeviceMetric {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -8256,25 +8772,30 @@ mixin _$DeviceMetric {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Unique instance identifiers assigned to a device by the
   /// device or gateway software, manufacturers, other organizations or owners.
   ///  For example: handle ID.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
   ///  Setting, etc.
+  @HiveField(12)
   CodeableConcept get type => throw _privateConstructorUsedError;
 
   /// [unit] Describes the unit that an observed value determined for this
   ///  metric will have. For example: Percent, Seconds, etc.
+  @HiveField(13)
   CodeableConcept? get unit => throw _privateConstructorUsedError;
 
   /// [source] Describes the link to the  Device that this DeviceMetric belongs
   /// to and that contains administrative device information such as
   ///  manufacturer, serial number, etc.
+  @HiveField(14)
   Reference? get source => throw _privateConstructorUsedError;
 
   /// [parent] Describes the link to the  Device that this DeviceMetric belongs
@@ -8283,33 +8804,39 @@ mixin _$DeviceMetric {
   /// Device that represents a Channel. This reference can be used by a client
   /// application to distinguish DeviceMetrics that have the same type, but
   ///  should be interpreted based on their containment location.
+  @HiveField(15)
   Reference? get parent => throw _privateConstructorUsedError;
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
+  @HiveField(16)
   Code? get operationalStatus => throw _privateConstructorUsedError;
 
   /// [operationalStatusElement] Extensions for operationalStatus
   @JsonKey(name: '_operationalStatus')
+  @HiveField(17)
   Element? get operationalStatusElement => throw _privateConstructorUsedError;
 
   /// [color] Describes the color representation for the metric. This is often
   /// used to aid clinicians to track and identify parameter types by color. In
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
-  /// example; the parameters are displayed in different characteristic colors,
-  ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
+  @HiveField(18)
+  @HiveField(19)
   Code? get color => throw _privateConstructorUsedError;
 
   /// [colorElement] Extensions for color
   @JsonKey(name: '_color')
+  @HiveField(20)
   Element? get colorElement => throw _privateConstructorUsedError;
 
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
+  @HiveField(21)
   Code? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
+  @HiveField(22)
   Element? get categoryElement => throw _privateConstructorUsedError;
 
   /// [measurementPeriod] Describes the measurement repetition time. This is
@@ -8321,10 +8848,12 @@ mixin _$DeviceMetric {
   /// be different than the measurement repetition time, if the device does not
   /// update the published observed value with the same frequency as it was
   ///  measured.
+  @HiveField(23)
   Timing? get measurementPeriod => throw _privateConstructorUsedError;
 
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
+  @HiveField(24)
   List<DeviceMetricCalibration>? get calibration =>
       throw _privateConstructorUsedError;
 
@@ -8342,36 +8871,61 @@ abstract class $DeviceMetricCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept type,
-      CodeableConcept? unit,
-      Reference? source,
-      Reference? parent,
-      Code? operationalStatus,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept type,
+      @HiveField(13)
+          CodeableConcept? unit,
+      @HiveField(14)
+          Reference? source,
+      @HiveField(15)
+          Reference? parent,
+      @HiveField(16)
+          Code? operationalStatus,
       @JsonKey(name: '_operationalStatus')
+      @HiveField(17)
           Element? operationalStatusElement,
-      Code? color,
+      @HiveField(18)
+      @HiveField(19)
+          Code? color,
       @JsonKey(name: '_color')
+      @HiveField(20)
           Element? colorElement,
-      Code? category,
+      @HiveField(21)
+          Code? category,
       @JsonKey(name: '_category')
+      @HiveField(22)
           Element? categoryElement,
-      Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      @HiveField(23)
+          Timing? measurementPeriod,
+      @HiveField(24)
+          List<DeviceMetricCalibration>? calibration});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8676,36 +9230,61 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept type,
-      CodeableConcept? unit,
-      Reference? source,
-      Reference? parent,
-      Code? operationalStatus,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept type,
+      @HiveField(13)
+          CodeableConcept? unit,
+      @HiveField(14)
+          Reference? source,
+      @HiveField(15)
+          Reference? parent,
+      @HiveField(16)
+          Code? operationalStatus,
       @JsonKey(name: '_operationalStatus')
+      @HiveField(17)
           Element? operationalStatusElement,
-      Code? color,
+      @HiveField(18)
+      @HiveField(19)
+          Code? color,
       @JsonKey(name: '_color')
+      @HiveField(20)
           Element? colorElement,
-      Code? category,
+      @HiveField(21)
+          Code? category,
       @JsonKey(name: '_category')
+      @HiveField(22)
           Element? categoryElement,
-      Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      @HiveField(23)
+          Timing? measurementPeriod,
+      @HiveField(24)
+          List<DeviceMetricCalibration>? calibration});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8872,39 +9451,65 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 149)
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+      @HiveField(0)
           this.resourceType = R4ResourceType.DeviceMetric,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      required this.type,
-      this.unit,
-      this.source,
-      this.parent,
-      this.operationalStatus,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          required this.type,
+      @HiveField(13)
+          this.unit,
+      @HiveField(14)
+          this.source,
+      @HiveField(15)
+          this.parent,
+      @HiveField(16)
+          this.operationalStatus,
       @JsonKey(name: '_operationalStatus')
+      @HiveField(17)
           this.operationalStatusElement,
-      this.color,
+      @HiveField(18)
+      @HiveField(19)
+          this.color,
       @JsonKey(name: '_color')
+      @HiveField(20)
           this.colorElement,
-      this.category,
+      @HiveField(21)
+          this.category,
       @JsonKey(name: '_category')
+      @HiveField(22)
           this.categoryElement,
-      this.measurementPeriod,
-      final List<DeviceMetricCalibration>? calibration})
+      @HiveField(23)
+          this.measurementPeriod,
+      @HiveField(24)
+          final List<DeviceMetricCalibration>? calibration})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8917,17 +9522,20 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -8935,20 +9543,24 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8958,6 +9570,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -8971,6 +9584,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -8995,6 +9609,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -9032,6 +9647,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -9050,6 +9666,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// device or gateway software, manufacturers, other organizations or owners.
   ///  For example: handle ID.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -9061,17 +9678,20 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
   ///  Setting, etc.
   @override
+  @HiveField(12)
   final CodeableConcept type;
 
   /// [unit] Describes the unit that an observed value determined for this
   ///  metric will have. For example: Percent, Seconds, etc.
   @override
+  @HiveField(13)
   final CodeableConcept? unit;
 
   /// [source] Describes the link to the  Device that this DeviceMetric belongs
   /// to and that contains administrative device information such as
   ///  manufacturer, serial number, etc.
   @override
+  @HiveField(14)
   final Reference? source;
 
   /// [parent] Describes the link to the  Device that this DeviceMetric belongs
@@ -9081,39 +9701,45 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// application to distinguish DeviceMetrics that have the same type, but
   ///  should be interpreted based on their containment location.
   @override
+  @HiveField(15)
   final Reference? parent;
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   @override
+  @HiveField(16)
   final Code? operationalStatus;
 
   /// [operationalStatusElement] Extensions for operationalStatus
   @override
   @JsonKey(name: '_operationalStatus')
+  @HiveField(17)
   final Element? operationalStatusElement;
 
   /// [color] Describes the color representation for the metric. This is often
   /// used to aid clinicians to track and identify parameter types by color. In
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
-  /// example; the parameters are displayed in different characteristic colors,
-  ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
   @override
+  @HiveField(18)
+  @HiveField(19)
   final Code? color;
 
   /// [colorElement] Extensions for color
   @override
   @JsonKey(name: '_color')
+  @HiveField(20)
   final Element? colorElement;
 
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   @override
+  @HiveField(21)
   final Code? category;
 
   /// [categoryElement] Extensions for category
   @override
   @JsonKey(name: '_category')
+  @HiveField(22)
   final Element? categoryElement;
 
   /// [measurementPeriod] Describes the measurement repetition time. This is
@@ -9126,6 +9752,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// update the published observed value with the same frequency as it was
   ///  measured.
   @override
+  @HiveField(23)
   final Timing? measurementPeriod;
 
   /// [calibration] Describes the calibrations that have been performed or that
@@ -9135,6 +9762,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
   @override
+  @HiveField(24)
   List<DeviceMetricCalibration>? get calibration {
     final value = _calibration;
     if (value == null) return null;
@@ -9243,36 +9871,61 @@ class _$_DeviceMetric extends _DeviceMetric {
 abstract class _DeviceMetric extends DeviceMetric {
   factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      required final CodeableConcept type,
-      final CodeableConcept? unit,
-      final Reference? source,
-      final Reference? parent,
-      final Code? operationalStatus,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          required final CodeableConcept type,
+      @HiveField(13)
+          final CodeableConcept? unit,
+      @HiveField(14)
+          final Reference? source,
+      @HiveField(15)
+          final Reference? parent,
+      @HiveField(16)
+          final Code? operationalStatus,
       @JsonKey(name: '_operationalStatus')
+      @HiveField(17)
           final Element? operationalStatusElement,
-      final Code? color,
+      @HiveField(18)
+      @HiveField(19)
+          final Code? color,
       @JsonKey(name: '_color')
+      @HiveField(20)
           final Element? colorElement,
-      final Code? category,
+      @HiveField(21)
+          final Code? category,
       @JsonKey(name: '_category')
+      @HiveField(22)
           final Element? categoryElement,
-      final Timing? measurementPeriod,
-      final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
+      @HiveField(23)
+          final Timing? measurementPeriod,
+      @HiveField(24)
+          final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
   _DeviceMetric._() : super._();
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
@@ -9280,17 +9933,20 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -9298,20 +9954,24 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -9321,6 +9981,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -9328,6 +9989,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -9338,6 +10000,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -9354,28 +10017,33 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Unique instance identifiers assigned to a device by the
   /// device or gateway software, manufacturers, other organizations or owners.
   ///  For example: handle ID.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [type] Describes the type of the metric. For example: Heart Rate, PEEP
   ///  Setting, etc.
+  @HiveField(12)
   CodeableConcept get type;
   @override
 
   /// [unit] Describes the unit that an observed value determined for this
   ///  metric will have. For example: Percent, Seconds, etc.
+  @HiveField(13)
   CodeableConcept? get unit;
   @override
 
   /// [source] Describes the link to the  Device that this DeviceMetric belongs
   /// to and that contains administrative device information such as
   ///  manufacturer, serial number, etc.
+  @HiveField(14)
   Reference? get source;
   @override
 
@@ -9385,39 +10053,45 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// Device that represents a Channel. This reference can be used by a client
   /// application to distinguish DeviceMetrics that have the same type, but
   ///  should be interpreted based on their containment location.
+  @HiveField(15)
   Reference? get parent;
   @override
 
   /// [operationalStatus] Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
+  @HiveField(16)
   Code? get operationalStatus;
   @override
 
   /// [operationalStatusElement] Extensions for operationalStatus
   @JsonKey(name: '_operationalStatus')
+  @HiveField(17)
   Element? get operationalStatusElement;
   @override
 
   /// [color] Describes the color representation for the metric. This is often
   /// used to aid clinicians to track and identify parameter types by color. In
   /// practice, consider a Patient Monitor that has ECG/HR and Pleth for
-  /// example; the parameters are displayed in different characteristic colors,
-  ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
+  @HiveField(18)
+  @HiveField(19)
   Code? get color;
   @override
 
   /// [colorElement] Extensions for color
   @JsonKey(name: '_color')
+  @HiveField(20)
   Element? get colorElement;
   @override
 
   /// [category] Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
+  @HiveField(21)
   Code? get category;
   @override
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
+  @HiveField(22)
   Element? get categoryElement;
   @override
 
@@ -9430,11 +10104,13 @@ abstract class _DeviceMetric extends DeviceMetric {
   /// be different than the measurement repetition time, if the device does not
   /// update the published observed value with the same frequency as it was
   ///  measured.
+  @HiveField(23)
   Timing? get measurementPeriod;
   @override
 
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
+  @HiveField(24)
   List<DeviceMetricCalibration>? get calibration;
   @override
   @JsonKey(ignore: true)
@@ -9976,72 +10652,94 @@ NutritionProduct _$NutritionProductFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NutritionProduct {
   /// [resourceType] This is a NutritionProduct resource;
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] (_language): Extensions for language;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
 
   /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
+  @HiveField(14)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
+  @HiveField(15)
   List<Reference>? get manufacturer => throw _privateConstructorUsedError;
 
   /// [nutrient] The product's nutritional information expressed by the nutrients.;
+  @HiveField(16)
   List<NutritionProductNutrient>? get nutrient =>
       throw _privateConstructorUsedError;
 
   /// [ingredient] Ingredients contained in this product.;
+  @HiveField(17)
   List<NutritionProductIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
 
   /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
+  @HiveField(18)
   List<CodeableReference>? get knownAllergen =>
       throw _privateConstructorUsedError;
+  @HiveField(19)
   List<NutritionProductCharacteristic>? get productCharacteristic =>
       throw _privateConstructorUsedError;
 
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
+  @HiveField(20)
   List<NutritionProductInstance>? get instance =>
       throw _privateConstructorUsedError;
 
   /// [note] Comments made about the product.;
+  @HiveField(21)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10057,28 +10755,54 @@ abstract class $NutritionProductCopyWith<$Res> {
       _$NutritionProductCopyWithImpl<$Res, NutritionProduct>;
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductCharacteristic>? productCharacteristic,
-      List<NutritionProductInstance>? instance,
-      List<Annotation>? note});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Code? status,
+      @HiveField(12)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(13)
+          List<CodeableConcept>? category,
+      @HiveField(14)
+          CodeableConcept? code,
+      @HiveField(15)
+          List<Reference>? manufacturer,
+      @HiveField(16)
+          List<NutritionProductNutrient>? nutrient,
+      @HiveField(17)
+          List<NutritionProductIngredient>? ingredient,
+      @HiveField(18)
+          List<CodeableReference>? knownAllergen,
+      @HiveField(19)
+          List<NutritionProductCharacteristic>? productCharacteristic,
+      @HiveField(20)
+          List<NutritionProductInstance>? instance,
+      @HiveField(21)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10298,28 +11022,54 @@ abstract class _$$_NutritionProductCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductCharacteristic>? productCharacteristic,
-      List<NutritionProductInstance>? instance,
-      List<Annotation>? note});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Code? status,
+      @HiveField(12)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(13)
+          List<CodeableConcept>? category,
+      @HiveField(14)
+          CodeableConcept? code,
+      @HiveField(15)
+          List<Reference>? manufacturer,
+      @HiveField(16)
+          List<NutritionProductNutrient>? nutrient,
+      @HiveField(17)
+          List<NutritionProductIngredient>? ingredient,
+      @HiveField(18)
+          List<CodeableReference>? knownAllergen,
+      @HiveField(19)
+          List<NutritionProductCharacteristic>? productCharacteristic,
+      @HiveField(20)
+          List<NutritionProductInstance>? instance,
+      @HiveField(21)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -10464,30 +11214,57 @@ class __$$_NutritionProductCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 150)
 class _$_NutritionProduct extends _NutritionProduct {
   _$_NutritionProduct(
-      {this.resourceType = R4ResourceType.NutritionProduct,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.language,
-      @JsonKey(name: '_language') this.languageElement,
-      this.text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      final List<CodeableConcept>? category,
-      this.code,
-      final List<Reference>? manufacturer,
-      final List<NutritionProductNutrient>? nutrient,
-      final List<NutritionProductIngredient>? ingredient,
-      final List<CodeableReference>? knownAllergen,
-      final List<NutritionProductCharacteristic>? productCharacteristic,
-      final List<NutritionProductInstance>? instance,
-      final List<Annotation>? note})
+      {@HiveField(0)
+          this.resourceType = R4ResourceType.NutritionProduct,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.status,
+      @HiveField(12)
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @HiveField(13)
+          final List<CodeableConcept>? category,
+      @HiveField(14)
+          this.code,
+      @HiveField(15)
+          final List<Reference>? manufacturer,
+      @HiveField(16)
+          final List<NutritionProductNutrient>? nutrient,
+      @HiveField(17)
+          final List<NutritionProductIngredient>? ingredient,
+      @HiveField(18)
+          final List<CodeableReference>? knownAllergen,
+      @HiveField(19)
+          final List<NutritionProductCharacteristic>? productCharacteristic,
+      @HiveField(20)
+          final List<NutritionProductInstance>? instance,
+      @HiveField(21)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -10507,36 +11284,44 @@ class _$_NutritionProduct extends _NutritionProduct {
   /// [resourceType] This is a NutritionProduct resource;
   @override
   @JsonKey()
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.;
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] (_language): Extensions for language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
@@ -10544,6 +11329,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -10557,6 +11343,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -10573,6 +11360,7 @@ class _$_NutritionProduct extends _NutritionProduct {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10583,12 +11371,15 @@ class _$_NutritionProduct extends _NutritionProduct {
   }
 
   @override
+  @HiveField(11)
   final Code? status;
   @override
+  @HiveField(12)
   @JsonKey(name: '_status')
   final Element? statusElement;
   final List<CodeableConcept>? _category;
   @override
+  @HiveField(13)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -10599,6 +11390,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
   @override
+  @HiveField(14)
   final CodeableConcept? code;
 
   /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
@@ -10606,6 +11398,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
   @override
+  @HiveField(15)
   List<Reference>? get manufacturer {
     final value = _manufacturer;
     if (value == null) return null;
@@ -10619,6 +11412,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [nutrient] The product's nutritional information expressed by the nutrients.;
   @override
+  @HiveField(16)
   List<NutritionProductNutrient>? get nutrient {
     final value = _nutrient;
     if (value == null) return null;
@@ -10632,6 +11426,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [ingredient] Ingredients contained in this product.;
   @override
+  @HiveField(17)
   List<NutritionProductIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -10645,6 +11440,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
   @override
+  @HiveField(18)
   List<CodeableReference>? get knownAllergen {
     final value = _knownAllergen;
     if (value == null) return null;
@@ -10655,6 +11451,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   final List<NutritionProductCharacteristic>? _productCharacteristic;
   @override
+  @HiveField(19)
   List<NutritionProductCharacteristic>? get productCharacteristic {
     final value = _productCharacteristic;
     if (value == null) return null;
@@ -10669,6 +11466,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   @override
+  @HiveField(20)
   List<NutritionProductInstance>? get instance {
     final value = _instance;
     if (value == null) return null;
@@ -10682,6 +11480,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   /// [note] Comments made about the product.;
   @override
+  @HiveField(21)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -10781,28 +11580,54 @@ class _$_NutritionProduct extends _NutritionProduct {
 
 abstract class _NutritionProduct extends NutritionProduct {
   factory _NutritionProduct(
-      {final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-      final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final List<CodeableConcept>? category,
-      final CodeableConcept? code,
-      final List<Reference>? manufacturer,
-      final List<NutritionProductNutrient>? nutrient,
-      final List<NutritionProductIngredient>? ingredient,
-      final List<CodeableReference>? knownAllergen,
-      final List<NutritionProductCharacteristic>? productCharacteristic,
-      final List<NutritionProductInstance>? instance,
-      final List<Annotation>? note}) = _$_NutritionProduct;
+      {@HiveField(0)
+          final R4ResourceType resourceType,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final Code? status,
+      @HiveField(12)
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      @HiveField(13)
+          final List<CodeableConcept>? category,
+      @HiveField(14)
+          final CodeableConcept? code,
+      @HiveField(15)
+          final List<Reference>? manufacturer,
+      @HiveField(16)
+          final List<NutritionProductNutrient>? nutrient,
+      @HiveField(17)
+          final List<NutritionProductIngredient>? ingredient,
+      @HiveField(18)
+          final List<CodeableReference>? knownAllergen,
+      @HiveField(19)
+          final List<NutritionProductCharacteristic>? productCharacteristic,
+      @HiveField(20)
+          final List<NutritionProductInstance>? instance,
+      @HiveField(21)
+          final List<Annotation>? note}) = _$_NutritionProduct;
   _NutritionProduct._() : super._();
 
   factory _NutritionProduct.fromJson(Map<String, dynamic> json) =
@@ -10811,87 +11636,109 @@ abstract class _NutritionProduct extends NutritionProduct {
   @override
 
   /// [resourceType] This is a NutritionProduct resource;
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  @HiveField(2)
   Meta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.;
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] (_language): Extensions for language;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
 
   /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  @HiveField(7)
   Narrative? get text;
   @override
 
   /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   Code? get status;
   @override
+  @HiveField(12)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(13)
   List<CodeableConcept>? get category;
   @override
 
   /// [code] The code assigned to the product, for example a USDA NDB number, a USDA FDC ID number, or a Langual code.;
+  @HiveField(14)
   CodeableConcept? get code;
   @override
 
   /// [manufacturer] The organisation (manufacturer, representative or legal authorisation holder) that is responsible for the device.;
+  @HiveField(15)
   List<Reference>? get manufacturer;
   @override
 
   /// [nutrient] The product's nutritional information expressed by the nutrients.;
+  @HiveField(16)
   List<NutritionProductNutrient>? get nutrient;
   @override
 
   /// [ingredient] Ingredients contained in this product.;
+  @HiveField(17)
   List<NutritionProductIngredient>? get ingredient;
   @override
 
   /// [knownAllergen] Allergens that are known or suspected to be a part of this nutrition product.;
+  @HiveField(18)
   List<CodeableReference>? get knownAllergen;
   @override
+  @HiveField(19)
   List<NutritionProductCharacteristic>? get productCharacteristic;
   @override
 
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
+  @HiveField(20)
   List<NutritionProductInstance>? get instance;
   @override
 
   /// [note] Comments made about the product.;
+  @HiveField(21)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -11226,21 +12073,26 @@ NutritionProductIngredient _$NutritionProductIngredientFromJson(
 /// @nodoc
 mixin _$NutritionProductIngredient {
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [item] The ingredient contained in the product.;
+  @HiveField(3)
   CodeableReference get item => throw _privateConstructorUsedError;
 
   /// [amount] The amount of ingredient that is in the product.;
+  @HiveField(4)
   List<Ratio>? get amount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11257,11 +12109,11 @@ abstract class $NutritionProductIngredientCopyWith<$Res> {
           NutritionProductIngredient>;
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference item,
-      List<Ratio>? amount});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) CodeableReference item,
+      @HiveField(4) List<Ratio>? amount});
 
   $CodeableReferenceCopyWith<$Res> get item;
 }
@@ -11329,11 +12181,11 @@ abstract class _$$_NutritionProductIngredientCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableReference item,
-      List<Ratio>? amount});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) CodeableReference item,
+      @HiveField(4) List<Ratio>? amount});
 
   @override
   $CodeableReferenceCopyWith<$Res> get item;
@@ -11385,13 +12237,20 @@ class __$$_NutritionProductIngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 151)
 class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   _$_NutritionProductIngredient(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required this.item,
-      final List<Ratio>? amount})
+      {@HiveField(0)
+          this.id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          required this.item,
+      @HiveField(4)
+          final List<Ratio>? amount})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _amount = amount,
@@ -11402,6 +12261,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
+  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
@@ -11409,6 +12269,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
   @override
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -11425,6 +12286,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
   @override
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -11436,6 +12298,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   /// [item] The ingredient contained in the product.;
   @override
+  @HiveField(3)
   final CodeableReference item;
 
   /// [amount] The amount of ingredient that is in the product.;
@@ -11443,6 +12306,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   /// [amount] The amount of ingredient that is in the product.;
   @override
+  @HiveField(4)
   List<Ratio>? get amount {
     final value = _amount;
     if (value == null) return null;
@@ -11497,11 +12361,17 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
 abstract class _NutritionProductIngredient extends NutritionProductIngredient {
   factory _NutritionProductIngredient(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final CodeableReference item,
-      final List<Ratio>? amount}) = _$_NutritionProductIngredient;
+      {@HiveField(0)
+          final String? id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          required final CodeableReference item,
+      @HiveField(4)
+          final List<Ratio>? amount}) = _$_NutritionProductIngredient;
   _NutritionProductIngredient._() : super._();
 
   factory _NutritionProductIngredient.fromJson(Map<String, dynamic> json) =
@@ -11510,24 +12380,29 @@ abstract class _NutritionProductIngredient extends NutritionProductIngredient {
   @override
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  @HiveField(0)
   String? get id;
   @override
 
   /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [item] The ingredient contained in the product.;
+  @HiveField(3)
   CodeableReference get item;
   @override
 
   /// [amount] The amount of ingredient that is in the product.;
+  @HiveField(4)
   List<Ratio>? get amount;
   @override
   @JsonKey(ignore: true)
@@ -12749,37 +13624,57 @@ Substance _$SubstanceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Substance {
   @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The current state of the product.;
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] (_status): Extensions for status;
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
+  @HiveField(14)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  @HiveField(15)
   CodeableConcept get code => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get description => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   List<SubstanceInstance>? get instance => throw _privateConstructorUsedError;
+  @HiveField(19)
   List<SubstanceIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
 
@@ -12796,31 +13691,51 @@ abstract class $SubstanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept code,
-      String? description,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept code,
+      @HiveField(16)
+          String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient});
+      @HiveField(18)
+          List<SubstanceInstance>? instance,
+      @HiveField(19)
+          List<SubstanceIngredient>? ingredient});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -13039,31 +13954,51 @@ abstract class _$$_SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
-      CodeableConcept code,
-      String? description,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept code,
+      @HiveField(16)
+          String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient});
+      @HiveField(18)
+          List<SubstanceInstance>? instance,
+      @HiveField(19)
+          List<SubstanceIngredient>? ingredient});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -13200,34 +14135,55 @@ class __$$_SubstanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 152)
 class _$_Substance extends _Substance {
   _$_Substance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Substance,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CodeableConcept>? category,
-      required this.code,
-      this.description,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          required this.code,
+      @HiveField(16)
+          this.description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<SubstanceInstance>? instance,
-      final List<SubstanceIngredient>? ingredient})
+      @HiveField(18)
+          final List<SubstanceInstance>? instance,
+      @HiveField(19)
+          final List<SubstanceIngredient>? ingredient})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13242,25 +14198,34 @@ class _$_Substance extends _Substance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13271,6 +14236,7 @@ class _$_Substance extends _Substance {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -13282,6 +14248,7 @@ class _$_Substance extends _Substance {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13293,6 +14260,7 @@ class _$_Substance extends _Substance {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13303,10 +14271,12 @@ class _$_Substance extends _Substance {
 
   /// [status] The current state of the product.;
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] (_status): Extensions for status;
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   final Element? statusElement;
 
@@ -13315,6 +14285,7 @@ class _$_Substance extends _Substance {
 
   /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -13324,14 +14295,18 @@ class _$_Substance extends _Substance {
   }
 
   @override
+  @HiveField(15)
   final CodeableConcept code;
   @override
+  @HiveField(16)
   final String? description;
   @override
+  @HiveField(17)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   final List<SubstanceInstance>? _instance;
   @override
+  @HiveField(18)
   List<SubstanceInstance>? get instance {
     final value = _instance;
     if (value == null) return null;
@@ -13342,6 +14317,7 @@ class _$_Substance extends _Substance {
 
   final List<SubstanceIngredient>? _ingredient;
   @override
+  @HiveField(19)
   List<SubstanceIngredient>? get ingredient {
     final value = _ingredient;
     if (value == null) return null;
@@ -13438,31 +14414,51 @@ class _$_Substance extends _Substance {
 abstract class _Substance extends Substance {
   factory _Substance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final List<CodeableConcept>? category,
-      required final CodeableConcept code,
-      final String? description,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          required final CodeableConcept code,
+      @HiveField(16)
+          final String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final List<SubstanceInstance>? instance,
-      final List<SubstanceIngredient>? ingredient}) = _$_Substance;
+      @HiveField(18)
+          final List<SubstanceInstance>? instance,
+      @HiveField(19)
+          final List<SubstanceIngredient>? ingredient}) = _$_Substance;
   _Substance._() : super._();
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
@@ -13470,55 +14466,75 @@ abstract class _Substance extends Substance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The current state of the product.;
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] (_status): Extensions for status;
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
 
   /// [category] Nutrition products can have different classifications - according to its nutritional properties, preparation methods, etc.;
+  @HiveField(14)
   List<CodeableConcept>? get category;
   @override
+  @HiveField(15)
   CodeableConcept get code;
   @override
+  @HiveField(16)
   String? get description;
   @override
+  @HiveField(17)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(18)
   List<SubstanceInstance>? get instance;
   @override
+  @HiveField(19)
   List<SubstanceIngredient>? get ingredient;
   @override
   @JsonKey(ignore: true)
@@ -13881,14 +14897,20 @@ SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubstanceIngredient {
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(3)
   Ratio? get quantity => throw _privateConstructorUsedError;
+  @HiveField(4)
   CodeableConcept? get substanceCodeableConcept =>
       throw _privateConstructorUsedError;
+  @HiveField(5)
   Reference? get substanceReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -13904,12 +14926,12 @@ abstract class $SubstanceIngredientCopyWith<$Res> {
       _$SubstanceIngredientCopyWithImpl<$Res, SubstanceIngredient>;
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Ratio? quantity,
-      CodeableConcept? substanceCodeableConcept,
-      Reference? substanceReference});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) Ratio? quantity,
+      @HiveField(4) CodeableConcept? substanceCodeableConcept,
+      @HiveField(5) Reference? substanceReference});
 
   $RatioCopyWith<$Res>? get quantity;
   $CodeableConceptCopyWith<$Res>? get substanceCodeableConcept;
@@ -14011,12 +15033,12 @@ abstract class _$$_SubstanceIngredientCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Ratio? quantity,
-      CodeableConcept? substanceCodeableConcept,
-      Reference? substanceReference});
+      {@HiveField(0) String? id,
+      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @HiveField(2) List<FhirExtension>? modifierExtension,
+      @HiveField(3) Ratio? quantity,
+      @HiveField(4) CodeableConcept? substanceCodeableConcept,
+      @HiveField(5) Reference? substanceReference});
 
   @override
   $RatioCopyWith<$Res>? get quantity;
@@ -14075,14 +15097,22 @@ class __$$_SubstanceIngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 153)
 class _$_SubstanceIngredient extends _SubstanceIngredient {
   _$_SubstanceIngredient(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.quantity,
-      this.substanceCodeableConcept,
-      this.substanceReference})
+      {@HiveField(0)
+          this.id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          this.quantity,
+      @HiveField(4)
+          this.substanceCodeableConcept,
+      @HiveField(5)
+          this.substanceReference})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -14091,9 +15121,11 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       _$$_SubstanceIngredientFromJson(json);
 
   @override
+  @HiveField(0)
   final String? id;
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -14105,6 +15137,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -14115,10 +15148,13 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
   }
 
   @override
+  @HiveField(3)
   final Ratio? quantity;
   @override
+  @HiveField(4)
   final CodeableConcept? substanceCodeableConcept;
   @override
+  @HiveField(5)
   final Reference? substanceReference;
 
   @override
@@ -14173,29 +15209,42 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
 abstract class _SubstanceIngredient extends SubstanceIngredient {
   factory _SubstanceIngredient(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Ratio? quantity,
-      final CodeableConcept? substanceCodeableConcept,
-      final Reference? substanceReference}) = _$_SubstanceIngredient;
+      {@HiveField(0)
+          final String? id,
+      @HiveField(1)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(2)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(3)
+          final Ratio? quantity,
+      @HiveField(4)
+          final CodeableConcept? substanceCodeableConcept,
+      @HiveField(5)
+          final Reference? substanceReference}) = _$_SubstanceIngredient;
   _SubstanceIngredient._() : super._();
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;
 
   @override
+  @HiveField(0)
   String? get id;
   @override
+  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(3)
   Ratio? get quantity;
   @override
+  @HiveField(4)
   CodeableConcept? get substanceCodeableConcept;
   @override
+  @HiveField(5)
   Reference? get substanceReference;
   @override
   @JsonKey(ignore: true)
