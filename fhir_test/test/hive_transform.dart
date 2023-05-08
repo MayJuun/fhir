@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import '../r4.dart';
+import '../../fhir_hive/lib/r4/r4.dart';
 
 Future<void> main() async {
   final dir = Directory('.');
@@ -23,7 +23,7 @@ Future<void> main() async {
         if (!hive) {
           if (line.contains('factory') &&
               line.contains('({') &&
-              ResourceUtils.resourceTypeFromStringMap.keys
+              resourceTypeFromStringMap.keys
                       .toList()
                       .indexWhere((element) => line.contains('$element({')) !=
                   -1) {

@@ -2467,9 +2467,9 @@ class Library extends HiveObject with Resource, _$Library {
 
 /// [List] A list is a curated collection of resources.
 @freezed
-class List_ extends HiveObject with Resource, _$List_ {
+class FhirList extends HiveObject with Resource, _$FhirList {
   /// [List] A list is a curated collection of resources.
-  List_._();
+  FhirList._();
 
   /// [List] A list is a curated collection of resources.
   ///
@@ -2567,36 +2567,44 @@ class List_ extends HiveObject with Resource, _$List_ {
   /// [entry] Entries in this list.
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
-  factory List_({
-    @Default(R4ResourceType.List_)
-    @JsonKey(unknownEnumValue: R4ResourceType.List_)
+  @HiveType(typeId: 226)
+  factory FhirList({
+    @Default(R4ResourceType.FhirList)
+    @JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+    @HiveField(0)
 
         /// [resourceType] This is a List resource
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
+    @HiveField(4)
     @JsonKey(name: '_implicitRules')
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
+    @HiveField(6)
     @JsonKey(name: '_language')
         Element? languageElement,
 
@@ -2606,13 +2614,15 @@ class List_ extends HiveObject with Resource, _$List_ {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2620,6 +2630,7 @@ class List_ extends HiveObject with Resource, _$List_ {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
+    @HiveField(9)
     @JsonKey(name: 'extension')
         List<FhirExtension>? extension_,
 
@@ -2636,16 +2647,20 @@ class List_ extends HiveObject with Resource, _$List_ {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for the List assigned for business purposes
     ///  outside the context of FHIR.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] Indicates the current state of this list.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
+    @HiveField(13)
     @JsonKey(name: '_status')
         Element? statusElement,
 
@@ -2653,74 +2668,90 @@ class List_ extends HiveObject with Resource, _$List_ {
     /// suitable for being maintained on an ongoing basis, or if it represents a
     /// snapshot of a list of items from another source, or whether it is a
     ///  prepared list where items may be marked as added, modified or deleted.
-    Code? mode,
+    @HiveField(14)
+        Code? mode,
 
     /// [modeElement] Extensions for mode
+    @HiveField(15)
     @JsonKey(name: '_mode')
         Element? modeElement,
 
     /// [title] A label for the list assigned by the author.
-    String? title,
+    @HiveField(16)
+        String? title,
 
     /// [titleElement] Extensions for title
+    @HiveField(17)
     @JsonKey(name: '_title')
         Element? titleElement,
 
     /// [code] This code defines the purpose of the list - why it was created.
-    CodeableConcept? code,
+    @HiveField(18)
+        CodeableConcept? code,
 
     /// [subject] The common subject (or patient) of the resources that are in
     ///  the list if there is one.
-    Reference? subject,
+    @HiveField(19)
+        Reference? subject,
 
     /// [encounter] The encounter that is the context in which this list was
     ///  created.
-    Reference? encounter,
+    @HiveField(20)
+        Reference? encounter,
 
     /// [date] The date that the list was prepared.
-    FhirDateTime? date,
+    @HiveField(21)
+        FhirDateTime? date,
 
     /// [dateElement] Extensions for date
+    @HiveField(22)
     @JsonKey(name: '_date')
         Element? dateElement,
 
     /// [source] The entity responsible for deciding what the contents of the
     /// list were. Where the list was created by a human, this is the same as the
     ///  author of the list.
-    Reference? source,
+    @HiveField(23)
+        Reference? source,
 
     /// [orderedBy] What order applies to the items in the list.
-    CodeableConcept? orderedBy,
+    @HiveField(24)
+        CodeableConcept? orderedBy,
 
     /// [note] Comments that apply to the overall list.
-    List<Annotation>? note,
+    @HiveField(25)
+        List<Annotation>? note,
 
     /// [entry] Entries in this list.
-    List<ListEntry>? entry,
+    @HiveField(26)
+        List<ListEntry>? entry,
 
     /// [emptyReason] If the list is empty, why the list is empty.
-    CodeableConcept? emptyReason,
-  }) = _List_;
+    @HiveField(27)
+        CodeableConcept? emptyReason,
+  }) = _FhirList;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory List_.fromYaml(dynamic yaml) => yaml is String
-      ? List_.fromJson(
+  factory FhirList.fromYaml(dynamic yaml) => yaml is String
+      ? FhirList.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? List_.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirList.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'List_ cannot be constructed from input provided,'
+              'FhirList cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
+  factory FhirList.fromJson(Map<String, dynamic> json) =>
+      _$FhirListFromJson(json);
 
-  /// Acts like a constructor, returns a [List_], accepts a
+  /// Acts like a constructor, returns a [FhirList], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory List_.fromJsonString(String source) {
+  factory FhirList.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$List_FromJson(json);
+      return _$FhirListFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

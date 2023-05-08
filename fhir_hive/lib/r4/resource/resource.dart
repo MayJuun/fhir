@@ -119,8 +119,7 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// produce a string of the [resourceType]
-  String? get resourceTypeString =>
-      ResourceUtils.resourceTypeToStringMap[resourceType];
+  String? get resourceTypeString => resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference get thisReference => Reference(

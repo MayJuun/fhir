@@ -596,6 +596,121 @@ class LibraryAdapter extends TypeAdapter<_$_Library> {
           typeId == other.typeId;
 }
 
+class FhirListAdapter extends TypeAdapter<_$_FhirList> {
+  @override
+  final int typeId = 226;
+
+  @override
+  _$_FhirList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_FhirList(
+      resourceType: fields[0] as R4ResourceType,
+      id: fields[1] as String?,
+      meta: fields[2] as Meta?,
+      implicitRules: fields[3] as FhirUri?,
+      implicitRulesElement: fields[4] as Element?,
+      language: fields[5] as Code?,
+      languageElement: fields[6] as Element?,
+      text: fields[7] as Narrative?,
+      contained: (fields[8] as List?)?.cast<Resource>(),
+      extension_: (fields[9] as List?)?.cast<FhirExtension>(),
+      modifierExtension: (fields[10] as List?)?.cast<FhirExtension>(),
+      identifier: (fields[11] as List?)?.cast<Identifier>(),
+      status: fields[12] as Code?,
+      statusElement: fields[13] as Element?,
+      mode: fields[14] as Code?,
+      modeElement: fields[15] as Element?,
+      title: fields[16] as String?,
+      titleElement: fields[17] as Element?,
+      code: fields[18] as CodeableConcept?,
+      subject: fields[19] as Reference?,
+      encounter: fields[20] as Reference?,
+      date: fields[21] as FhirDateTime?,
+      dateElement: fields[22] as Element?,
+      source: fields[23] as Reference?,
+      orderedBy: fields[24] as CodeableConcept?,
+      note: (fields[25] as List?)?.cast<Annotation>(),
+      entry: (fields[26] as List?)?.cast<ListEntry>(),
+      emptyReason: fields[27] as CodeableConcept?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_FhirList obj) {
+    writer
+      ..writeByte(28)
+      ..writeByte(0)
+      ..write(obj.resourceType)
+      ..writeByte(1)
+      ..write(obj.id)
+      ..writeByte(2)
+      ..write(obj.meta)
+      ..writeByte(3)
+      ..write(obj.implicitRules)
+      ..writeByte(4)
+      ..write(obj.implicitRulesElement)
+      ..writeByte(5)
+      ..write(obj.language)
+      ..writeByte(6)
+      ..write(obj.languageElement)
+      ..writeByte(7)
+      ..write(obj.text)
+      ..writeByte(12)
+      ..write(obj.status)
+      ..writeByte(13)
+      ..write(obj.statusElement)
+      ..writeByte(14)
+      ..write(obj.mode)
+      ..writeByte(15)
+      ..write(obj.modeElement)
+      ..writeByte(16)
+      ..write(obj.title)
+      ..writeByte(17)
+      ..write(obj.titleElement)
+      ..writeByte(18)
+      ..write(obj.code)
+      ..writeByte(19)
+      ..write(obj.subject)
+      ..writeByte(20)
+      ..write(obj.encounter)
+      ..writeByte(21)
+      ..write(obj.date)
+      ..writeByte(22)
+      ..write(obj.dateElement)
+      ..writeByte(23)
+      ..write(obj.source)
+      ..writeByte(24)
+      ..write(obj.orderedBy)
+      ..writeByte(27)
+      ..write(obj.emptyReason)
+      ..writeByte(8)
+      ..write(obj.contained)
+      ..writeByte(9)
+      ..write(obj.extension_)
+      ..writeByte(10)
+      ..write(obj.modifierExtension)
+      ..writeByte(11)
+      ..write(obj.identifier)
+      ..writeByte(25)
+      ..write(obj.note)
+      ..writeByte(26)
+      ..write(obj.entry);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is FhirListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
@@ -841,7 +956,7 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Invoice: 'Invoice',
   R4ResourceType.Library: 'Library',
   R4ResourceType.Linkage: 'Linkage',
-  R4ResourceType.List_: 'List',
+  R4ResourceType.FhirList: 'List',
   R4ResourceType.Location: 'Location',
   R4ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R4ResourceType.Measure: 'Measure',
@@ -1713,11 +1828,11 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   return val;
 }
 
-_$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
+_$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.List_) ??
-          R4ResourceType.List_,
+              unknownValue: R4ResourceType.FhirList) ??
+          R4ResourceType.FhirList,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1791,7 +1906,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
               json['emptyReason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
+Map<String, dynamic> _$$_FhirListToJson(_$_FhirList instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };

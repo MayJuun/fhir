@@ -11453,38 +11453,45 @@ abstract class _Library extends Library {
       throw _privateConstructorUsedError;
 }
 
-List_ _$List_FromJson(Map<String, dynamic> json) {
-  return _List_.fromJson(json);
+FhirList _$FhirListFromJson(Map<String, dynamic> json) {
+  return _FhirList.fromJson(json);
 }
 
 /// @nodoc
-mixin _$List_ {
-  @JsonKey(unknownEnumValue: R4ResourceType.List_)
+mixin _$FhirList {
+  @JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
@@ -11494,12 +11501,14 @@ mixin _$List_ {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -11508,6 +11517,7 @@ mixin _$List_ {
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -11524,17 +11534,21 @@ mixin _$List_ {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for the List assigned for business purposes
   ///  outside the context of FHIR.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of this list.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
@@ -11542,101 +11556,144 @@ mixin _$List_ {
   /// suitable for being maintained on an ongoing basis, or if it represents a
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
+  @HiveField(14)
   Code? get mode => throw _privateConstructorUsedError;
 
   /// [modeElement] Extensions for mode
+  @HiveField(15)
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
 
   /// [title] A label for the list assigned by the author.
+  @HiveField(16)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
+  @HiveField(17)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [code] This code defines the purpose of the list - why it was created.
+  @HiveField(18)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [subject] The common subject (or patient) of the resources that are in
   ///  the list if there is one.
+  @HiveField(19)
   Reference? get subject => throw _privateConstructorUsedError;
 
   /// [encounter] The encounter that is the context in which this list was
   ///  created.
+  @HiveField(20)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [date] The date that the list was prepared.
+  @HiveField(21)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
+  @HiveField(22)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [source] The entity responsible for deciding what the contents of the
   /// list were. Where the list was created by a human, this is the same as the
   ///  author of the list.
+  @HiveField(23)
   Reference? get source => throw _privateConstructorUsedError;
 
   /// [orderedBy] What order applies to the items in the list.
+  @HiveField(24)
   CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
 
   /// [note] Comments that apply to the overall list.
+  @HiveField(25)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [entry] Entries in this list.
+  @HiveField(26)
   List<ListEntry>? get entry => throw _privateConstructorUsedError;
 
   /// [emptyReason] If the list is empty, why the list is empty.
+  @HiveField(27)
   CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $List_CopyWith<List_> get copyWith => throw _privateConstructorUsedError;
+  $FhirListCopyWith<FhirList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $List_CopyWith<$Res> {
-  factory $List_CopyWith(List_ value, $Res Function(List_) then) =
-      _$List_CopyWithImpl<$Res, List_>;
+abstract class $FhirListCopyWith<$Res> {
+  factory $FhirListCopyWith(FhirList value, $Res Function(FhirList) then) =
+      _$FhirListCopyWithImpl<$Res, FhirList>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.List_)
+      {@JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? mode,
+      @HiveField(14)
+          Code? mode,
+      @HiveField(15)
       @JsonKey(name: '_mode')
           Element? modeElement,
-      String? title,
+      @HiveField(16)
+          String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           Element? titleElement,
-      CodeableConcept? code,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? date,
+      @HiveField(18)
+          CodeableConcept? code,
+      @HiveField(19)
+          Reference? subject,
+      @HiveField(20)
+          Reference? encounter,
+      @HiveField(21)
+          FhirDateTime? date,
+      @HiveField(22)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Reference? source,
-      CodeableConcept? orderedBy,
-      List<Annotation>? note,
-      List<ListEntry>? entry,
-      CodeableConcept? emptyReason});
+      @HiveField(23)
+          Reference? source,
+      @HiveField(24)
+          CodeableConcept? orderedBy,
+      @HiveField(25)
+          List<Annotation>? note,
+      @HiveField(26)
+          List<ListEntry>? entry,
+      @HiveField(27)
+          CodeableConcept? emptyReason});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -11655,9 +11712,9 @@ abstract class $List_CopyWith<$Res> {
 }
 
 /// @nodoc
-class _$List_CopyWithImpl<$Res, $Val extends List_>
-    implements $List_CopyWith<$Res> {
-  _$List_CopyWithImpl(this._value, this._then);
+class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
+    implements $FhirListCopyWith<$Res> {
+  _$FhirListCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -11982,48 +12039,77 @@ class _$List_CopyWithImpl<$Res, $Val extends List_>
 }
 
 /// @nodoc
-abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
-  factory _$$_List_CopyWith(_$_List_ value, $Res Function(_$_List_) then) =
-      __$$_List_CopyWithImpl<$Res>;
+abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
+  factory _$$_FhirListCopyWith(
+          _$_FhirList value, $Res Function(_$_FhirList) then) =
+      __$$_FhirListCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.List_)
+      {@JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? mode,
+      @HiveField(14)
+          Code? mode,
+      @HiveField(15)
       @JsonKey(name: '_mode')
           Element? modeElement,
-      String? title,
+      @HiveField(16)
+          String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           Element? titleElement,
-      CodeableConcept? code,
-      Reference? subject,
-      Reference? encounter,
-      FhirDateTime? date,
+      @HiveField(18)
+          CodeableConcept? code,
+      @HiveField(19)
+          Reference? subject,
+      @HiveField(20)
+          Reference? encounter,
+      @HiveField(21)
+          FhirDateTime? date,
+      @HiveField(22)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Reference? source,
-      CodeableConcept? orderedBy,
-      List<Annotation>? note,
-      List<ListEntry>? entry,
-      CodeableConcept? emptyReason});
+      @HiveField(23)
+          Reference? source,
+      @HiveField(24)
+          CodeableConcept? orderedBy,
+      @HiveField(25)
+          List<Annotation>? note,
+      @HiveField(26)
+          List<ListEntry>? entry,
+      @HiveField(27)
+          CodeableConcept? emptyReason});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -12056,9 +12142,11 @@ abstract class _$$_List_CopyWith<$Res> implements $List_CopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
-    implements _$$_List_CopyWith<$Res> {
-  __$$_List_CopyWithImpl(_$_List_ _value, $Res Function(_$_List_) _then)
+class __$$_FhirListCopyWithImpl<$Res>
+    extends _$FhirListCopyWithImpl<$Res, _$_FhirList>
+    implements _$$_FhirListCopyWith<$Res> {
+  __$$_FhirListCopyWithImpl(
+      _$_FhirList _value, $Res Function(_$_FhirList) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -12093,7 +12181,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
     Object? entry = freezed,
     Object? emptyReason = freezed,
   }) {
-    return _then(_$_List_(
+    return _then(_$_FhirList(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -12212,44 +12300,73 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
 
 /// @nodoc
 @JsonSerializable()
-class _$_List_ extends _List_ {
-  _$_List_(
-      {@JsonKey(unknownEnumValue: R4ResourceType.List_)
-          this.resourceType = R4ResourceType.List_,
-      this.id,
-      this.meta,
-      this.implicitRules,
+@HiveType(typeId: 226)
+class _$_FhirList extends _FhirList {
+  _$_FhirList(
+      {@JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+      @HiveField(0)
+          this.resourceType = R4ResourceType.FhirList,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.mode,
+      @HiveField(14)
+          this.mode,
+      @HiveField(15)
       @JsonKey(name: '_mode')
           this.modeElement,
-      this.title,
+      @HiveField(16)
+          this.title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           this.titleElement,
-      this.code,
-      this.subject,
-      this.encounter,
-      this.date,
+      @HiveField(18)
+          this.code,
+      @HiveField(19)
+          this.subject,
+      @HiveField(20)
+          this.encounter,
+      @HiveField(21)
+          this.date,
+      @HiveField(22)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.source,
-      this.orderedBy,
-      final List<Annotation>? note,
-      final List<ListEntry>? entry,
-      this.emptyReason})
+      @HiveField(23)
+          this.source,
+      @HiveField(24)
+          this.orderedBy,
+      @HiveField(25)
+          final List<Annotation>? note,
+      @HiveField(26)
+          final List<ListEntry>? entry,
+      @HiveField(27)
+          this.emptyReason})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -12258,22 +12375,25 @@ class _$_List_ extends _List_ {
         _entry = entry,
         super._();
 
-  factory _$_List_.fromJson(Map<String, dynamic> json) =>
-      _$$_List_FromJson(json);
+  factory _$_FhirList.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirListFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.List_)
+  @JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -12281,19 +12401,23 @@ class _$_List_ extends _List_ {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
 
@@ -12304,6 +12428,7 @@ class _$_List_ extends _List_ {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -12317,6 +12442,7 @@ class _$_List_ extends _List_ {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -12340,6 +12466,7 @@ class _$_List_ extends _List_ {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -12378,6 +12505,7 @@ class _$_List_ extends _List_ {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -12394,6 +12522,7 @@ class _$_List_ extends _List_ {
   /// [identifier] Identifier for the List assigned for business purposes
   ///  outside the context of FHIR.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -12404,10 +12533,12 @@ class _$_List_ extends _List_ {
 
   /// [status] Indicates the current state of this list.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   final Element? statusElement;
 
@@ -12416,42 +12547,51 @@ class _$_List_ extends _List_ {
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
   @override
+  @HiveField(14)
   final Code? mode;
 
   /// [modeElement] Extensions for mode
   @override
+  @HiveField(15)
   @JsonKey(name: '_mode')
   final Element? modeElement;
 
   /// [title] A label for the list assigned by the author.
   @override
+  @HiveField(16)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
+  @HiveField(17)
   @JsonKey(name: '_title')
   final Element? titleElement;
 
   /// [code] This code defines the purpose of the list - why it was created.
   @override
+  @HiveField(18)
   final CodeableConcept? code;
 
   /// [subject] The common subject (or patient) of the resources that are in
   ///  the list if there is one.
   @override
+  @HiveField(19)
   final Reference? subject;
 
   /// [encounter] The encounter that is the context in which this list was
   ///  created.
   @override
+  @HiveField(20)
   final Reference? encounter;
 
   /// [date] The date that the list was prepared.
   @override
+  @HiveField(21)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
+  @HiveField(22)
   @JsonKey(name: '_date')
   final Element? dateElement;
 
@@ -12459,10 +12599,12 @@ class _$_List_ extends _List_ {
   /// list were. Where the list was created by a human, this is the same as the
   ///  author of the list.
   @override
+  @HiveField(23)
   final Reference? source;
 
   /// [orderedBy] What order applies to the items in the list.
   @override
+  @HiveField(24)
   final CodeableConcept? orderedBy;
 
   /// [note] Comments that apply to the overall list.
@@ -12470,6 +12612,7 @@ class _$_List_ extends _List_ {
 
   /// [note] Comments that apply to the overall list.
   @override
+  @HiveField(25)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -12483,6 +12626,7 @@ class _$_List_ extends _List_ {
 
   /// [entry] Entries in this list.
   @override
+  @HiveField(26)
   List<ListEntry>? get entry {
     final value = _entry;
     if (value == null) return null;
@@ -12493,18 +12637,19 @@ class _$_List_ extends _List_ {
 
   /// [emptyReason] If the list is empty, why the list is empty.
   @override
+  @HiveField(27)
   final CodeableConcept? emptyReason;
 
   @override
   String toString() {
-    return 'List_(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, mode: $mode, modeElement: $modeElement, title: $title, titleElement: $titleElement, code: $code, subject: $subject, encounter: $encounter, date: $date, dateElement: $dateElement, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
+    return 'FhirList(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, mode: $mode, modeElement: $modeElement, title: $title, titleElement: $titleElement, code: $code, subject: $subject, encounter: $encounter, date: $date, dateElement: $dateElement, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_List_ &&
+            other is _$_FhirList &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -12588,72 +12733,103 @@ class _$_List_ extends _List_ {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_List_CopyWith<_$_List_> get copyWith =>
-      __$$_List_CopyWithImpl<_$_List_>(this, _$identity);
+  _$$_FhirListCopyWith<_$_FhirList> get copyWith =>
+      __$$_FhirListCopyWithImpl<_$_FhirList>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_List_ToJson(
+    return _$$_FhirListToJson(
       this,
     );
   }
 }
 
-abstract class _List_ extends List_ {
-  factory _List_(
-      {@JsonKey(unknownEnumValue: R4ResourceType.List_)
+abstract class _FhirList extends FhirList {
+  factory _FhirList(
+      {@JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Code? mode,
+      @HiveField(14)
+          final Code? mode,
+      @HiveField(15)
       @JsonKey(name: '_mode')
           final Element? modeElement,
-      final String? title,
+      @HiveField(16)
+          final String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final CodeableConcept? code,
-      final Reference? subject,
-      final Reference? encounter,
-      final FhirDateTime? date,
+      @HiveField(18)
+          final CodeableConcept? code,
+      @HiveField(19)
+          final Reference? subject,
+      @HiveField(20)
+          final Reference? encounter,
+      @HiveField(21)
+          final FhirDateTime? date,
+      @HiveField(22)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final Reference? source,
-      final CodeableConcept? orderedBy,
-      final List<Annotation>? note,
-      final List<ListEntry>? entry,
-      final CodeableConcept? emptyReason}) = _$_List_;
-  _List_._() : super._();
+      @HiveField(23)
+          final Reference? source,
+      @HiveField(24)
+          final CodeableConcept? orderedBy,
+      @HiveField(25)
+          final List<Annotation>? note,
+      @HiveField(26)
+          final List<ListEntry>? entry,
+      @HiveField(27)
+          final CodeableConcept? emptyReason}) = _$_FhirList;
+  _FhirList._() : super._();
 
-  factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
+  factory _FhirList.fromJson(Map<String, dynamic> json) = _$_FhirList.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.List_)
+  @JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -12661,19 +12837,23 @@ abstract class _List_ extends List_ {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
@@ -12684,6 +12864,7 @@ abstract class _List_ extends List_ {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -12691,6 +12872,7 @@ abstract class _List_ extends List_ {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -12700,6 +12882,7 @@ abstract class _List_ extends List_ {
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -12717,19 +12900,23 @@ abstract class _List_ extends List_ {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for the List assigned for business purposes
   ///  outside the context of FHIR.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Indicates the current state of this list.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
@@ -12738,42 +12925,51 @@ abstract class _List_ extends List_ {
   /// suitable for being maintained on an ongoing basis, or if it represents a
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
+  @HiveField(14)
   Code? get mode;
   @override
 
   /// [modeElement] Extensions for mode
+  @HiveField(15)
   @JsonKey(name: '_mode')
   Element? get modeElement;
   @override
 
   /// [title] A label for the list assigned by the author.
+  @HiveField(16)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
+  @HiveField(17)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
 
   /// [code] This code defines the purpose of the list - why it was created.
+  @HiveField(18)
   CodeableConcept? get code;
   @override
 
   /// [subject] The common subject (or patient) of the resources that are in
   ///  the list if there is one.
+  @HiveField(19)
   Reference? get subject;
   @override
 
   /// [encounter] The encounter that is the context in which this list was
   ///  created.
+  @HiveField(20)
   Reference? get encounter;
   @override
 
   /// [date] The date that the list was prepared.
+  @HiveField(21)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
+  @HiveField(22)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
@@ -12781,26 +12977,31 @@ abstract class _List_ extends List_ {
   /// [source] The entity responsible for deciding what the contents of the
   /// list were. Where the list was created by a human, this is the same as the
   ///  author of the list.
+  @HiveField(23)
   Reference? get source;
   @override
 
   /// [orderedBy] What order applies to the items in the list.
+  @HiveField(24)
   CodeableConcept? get orderedBy;
   @override
 
   /// [note] Comments that apply to the overall list.
+  @HiveField(25)
   List<Annotation>? get note;
   @override
 
   /// [entry] Entries in this list.
+  @HiveField(26)
   List<ListEntry>? get entry;
   @override
 
   /// [emptyReason] If the list is empty, why the list is empty.
+  @HiveField(27)
   CodeableConcept? get emptyReason;
   @override
   @JsonKey(ignore: true)
-  _$$_List_CopyWith<_$_List_> get copyWith =>
+  _$$_FhirListCopyWith<_$_FhirList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

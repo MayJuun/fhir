@@ -246,8 +246,8 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R4ResourceType.Linkage:
       return (resource as Linkage)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
-    case R4ResourceType.List_:
-      return (resource as List_)
+    case R4ResourceType.FhirList:
+      return (resource as FhirList)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R4ResourceType.Location:
       return (resource as Location)
