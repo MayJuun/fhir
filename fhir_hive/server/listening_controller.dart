@@ -13,8 +13,13 @@ class ListeningController {
       final requestString = await request.readAsString();
       final resource =
           Resource.fromJson(jsonDecode(requestString) as Map<String, dynamic>);
-      await FhirHiveDao().save(null, resource);
-      return Response.ok('Received ${resource.path}');
+      final newResource = await FhirHiveDao().save(null, resource);
+      return Response.ok('Received ${newResource.path}');
+    });
+
+    router.post('/all', (Request request) async {
+      final resources = await FhirHiveDao().getAll(null);
+      return Response.ok('Received ${resources.map((e) => e.path).toList()}');
     });
 
     ///You can catch all verbs and use a URL-parameter with a regular expression
