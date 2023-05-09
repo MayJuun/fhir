@@ -37,7 +37,7 @@ abstract class $ElementCopyWith<$Res> {
       _$ElementCopyWithImpl<$Res, Element>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
@@ -63,7 +63,7 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,7 @@ abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
@@ -107,7 +107,7 @@ class __$$_ElementCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable

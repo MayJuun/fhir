@@ -13,10 +13,10 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ExplanationOfBenefit) ??
           Dstu2ResourceType.ExplanationOfBenefit,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -24,7 +24,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),

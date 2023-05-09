@@ -12,10 +12,10 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Appointment) ??
           Dstu2ResourceType.Appointment,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -23,7 +23,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -55,7 +55,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
       priority: json['priority'] == null
           ? null
-          : UnsignedInt.fromJson(json['priority']),
+          : FhirUnsignedInt.fromJson(json['priority']),
       priorityElement: json['_priority'] == null
           ? null
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -63,17 +63,17 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      start: json['start'] == null ? null : Instant.fromJson(json['start']),
+      start: json['start'] == null ? null : FhirInstant.fromJson(json['start']),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : Instant.fromJson(json['end']),
+      end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
       minutesDuration: json['minutesDuration'] == null
           ? null
-          : PositiveInt.fromJson(json['minutesDuration']),
+          : FhirPositiveInt.fromJson(json['minutesDuration']),
       minutesDurationElement: json['_minutesDuration'] == null
           ? null
           : Element.fromJson(json['_minutesDuration'] as Map<String, dynamic>),
@@ -249,7 +249,7 @@ const _$AppointmentStatusEnumMap = {
 _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
         Map<String, dynamic> json) =>
     _$_AppointmentParticipant(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -325,17 +325,18 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.AppointmentResponse) ??
         Dstu2ResourceType.AppointmentResponse,
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
+    id: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+        : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
+    language:
+        json['language'] == null ? null : FhirCode.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -356,11 +357,11 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
         .toList(),
     appointment:
         Reference.fromJson(json['appointment'] as Map<String, dynamic>),
-    start: json['start'] == null ? null : Instant.fromJson(json['start']),
+    start: json['start'] == null ? null : FhirInstant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end']),
+    end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -443,10 +444,10 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Schedule) ??
           Dstu2ResourceType.Schedule,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -454,7 +455,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -525,10 +526,10 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Slot) ??
           Dstu2ResourceType.Slot,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -536,7 +537,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -561,17 +562,17 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
       freeBusyType: $enumDecode(_$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
           unknownValue: SlotFreeBusyType.unknown),
-      start: Instant.fromJson(json['start']),
+      start: FhirInstant.fromJson(json['start']),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: Instant.fromJson(json['end']),
+      end: FhirInstant.fromJson(json['end']),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
       overbooked: json['overbooked'] == null
           ? null
-          : Boolean.fromJson(json['overbooked']),
+          : FhirBoolean.fromJson(json['overbooked']),
       overbookedElement: json['_overbooked'] == null
           ? null
           : Element.fromJson(json['_overbooked'] as Map<String, dynamic>),

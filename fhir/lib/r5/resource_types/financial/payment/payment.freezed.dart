@@ -159,7 +159,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       Money amount,
       CodeableConcept? paymentStatus});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -224,11 +224,11 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -300,7 +300,7 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
       paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -326,12 +326,12 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -537,7 +537,7 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
       CodeableConcept? paymentStatus});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -614,11 +614,11 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -690,7 +690,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
       paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -775,7 +775,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -892,7 +892,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   /// [paymentDate] The date when the above payment action occurred.
   @override
-  final Date? paymentDate;
+  final FhirDate? paymentDate;
 
   /// [paymentDateElement] ("_paymentDate") Extensions for paymentDate
   @override
@@ -1021,7 +1021,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1044,7 +1044,7 @@ abstract class _PaymentNotice extends PaymentNotice {
           final Element? createdElement,
       final Reference? provider,
       required final Reference payment,
-      final Date? paymentDate,
+      final FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           final Element? paymentDateElement,
       final Reference? payee,
@@ -1443,7 +1443,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       CodeableConcept? formCode,
       List<PaymentReconciliationProcessNote>? processNote});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -1549,11 +1549,11 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1657,7 +1657,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1689,7 +1689,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -1751,12 +1751,12 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2179,7 +2179,7 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
       List<PaymentReconciliationProcessNote>? processNote});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2311,11 +2311,11 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2419,7 +2419,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -2451,7 +2451,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -2607,7 +2607,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -2758,7 +2758,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   /// [date] The date of payment as indicated on the financial instrument.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] ("_date") Extensions for date
   @override
@@ -2793,7 +2793,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   /// [expirationDate] The year and month (YYYY-MM) when the instrument, typically card, expires.
   @override
-  final Date? expirationDate;
+  final FhirDate? expirationDate;
 
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   @override
@@ -3050,7 +3050,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -3083,7 +3083,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final String? disposition,
           @JsonKey(name: '_disposition')
               final Element? dispositionElement,
-          final Date? date,
+          final FhirDate? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final Reference? location,
@@ -3094,7 +3094,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           final String? accountNumber,
           @JsonKey(name: '_accountNumber')
               final Element? accountNumberElement,
-          final Date? expirationDate,
+          final FhirDate? expirationDate,
           @JsonKey(name: '_expirationDate')
               final Element? expirationDateElement,
           final String? processor,
@@ -3578,7 +3578,7 @@ class _$PaymentReconciliationAllocationCopyWithImpl<$Res,
       targetItemPositiveInt: freezed == targetItemPositiveInt
           ? _value.targetItemPositiveInt
           : targetItemPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       targetItemPositiveIntElement: freezed == targetItemPositiveIntElement
           ? _value.targetItemPositiveIntElement
           : targetItemPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3606,7 +3606,7 @@ class _$PaymentReconciliationAllocationCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3952,7 +3952,7 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
       targetItemPositiveInt: freezed == targetItemPositiveInt
           ? _value.targetItemPositiveInt
           : targetItemPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       targetItemPositiveIntElement: freezed == targetItemPositiveIntElement
           ? _value.targetItemPositiveIntElement
           : targetItemPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3980,7 +3980,7 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4131,7 +4131,7 @@ class _$_PaymentReconciliationAllocation
 
   /// [targetItemPositiveInt]  Identifies the claim line item, encounter or other sub-element being paid. Note payment may be partial, that is not match the then outstanding balance or amount incurred.
   @override
-  final PositiveInt? targetItemPositiveInt;
+  final FhirPositiveInt? targetItemPositiveInt;
 
   /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions for targetItemPositiveInt
   @override
@@ -4160,7 +4160,7 @@ class _$_PaymentReconciliationAllocation
 
   /// [date] The date from the response resource containing a commitment to pay.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] ("_date") Extensions for date
   @override
@@ -4286,7 +4286,7 @@ abstract class _PaymentReconciliationAllocation
       @JsonKey(name: '_targetItemString')
           final Element? targetItemStringElement,
       final Identifier? targetItemIdentifier,
-      final PositiveInt? targetItemPositiveInt,
+      final FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
           final Element? targetItemPositiveIntElement,
       final Reference? encounter,
@@ -4294,7 +4294,7 @@ abstract class _PaymentReconciliationAllocation
       final CodeableConcept? type,
       final Reference? submitter,
       final Reference? response,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final Reference? responsible,

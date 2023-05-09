@@ -1018,7 +1018,7 @@ class _$VirtualServiceDetailCopyWithImpl<$Res,
       maxParticipants: freezed == maxParticipants
           ? _value.maxParticipants
           : maxParticipants // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxParticipantsElement: freezed == maxParticipantsElement
           ? _value.maxParticipantsElement
           : maxParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -1237,7 +1237,7 @@ class __$$_VirtualServiceDetailCopyWithImpl<$Res>
       maxParticipants: freezed == maxParticipants
           ? _value.maxParticipants
           : maxParticipants // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxParticipantsElement: freezed == maxParticipantsElement
           ? _value.maxParticipantsElement
           : maxParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -1394,7 +1394,7 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
   /// [maxParticipants] Maximum number of participants supported by the
   ///  virtual service.
   @override
-  final PositiveInt? maxParticipants;
+  final FhirPositiveInt? maxParticipants;
 
   /// [maxParticipantsElement] ("_maxParticipants") Extensions for
   ///  maxParticipants
@@ -1506,7 +1506,7 @@ abstract class _VirtualServiceDetail extends VirtualServiceDetail {
       final List<FhirUrl>? additionalInfo,
       @JsonKey(name: '_additionalInfo')
           final List<Element>? additionalInfoElement,
-      final PositiveInt? maxParticipants,
+      final FhirPositiveInt? maxParticipants,
       @JsonKey(name: '_maxParticipants')
           final Element? maxParticipantsElement,
       final String? sessionKey,
@@ -2067,7 +2067,7 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
       availableStartTime: freezed == availableStartTime
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableStartTimeElement: freezed == availableStartTimeElement
           ? _value.availableStartTimeElement
           : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2075,7 +2075,7 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableEndTimeElement: freezed == availableEndTimeElement
           ? _value.availableEndTimeElement
           : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2207,7 +2207,7 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
       availableStartTime: freezed == availableStartTime
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableStartTimeElement: freezed == availableStartTimeElement
           ? _value.availableStartTimeElement
           : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2215,7 +2215,7 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       availableEndTimeElement: freezed == availableEndTimeElement
           ? _value.availableEndTimeElement
           : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2356,7 +2356,7 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
 
   /// [availableStartTime] Opening time of day (ignored if allDay = true).
   @override
-  final Time? availableStartTime;
+  final FhirTime? availableStartTime;
 
   /// [availableStartTimeElement] ("_availableStartTime") Extensions for
   ///  availableStartTime
@@ -2366,7 +2366,7 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
 
   /// [availableEndTime] Closing time of day (ignored if allDay = true).
   @override
-  final Time? availableEndTime;
+  final FhirTime? availableEndTime;
 
   /// [availableEndTimeElement] ("_availableEndTime") Extensions for
   ///  availableEndTime
@@ -2451,10 +2451,10 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
           final FhirBoolean? allDay,
           @JsonKey(name: '_allDay')
               final Element? allDayElement,
-          final Time? availableStartTime,
+          final FhirTime? availableStartTime,
           @JsonKey(name: '_availableStartTime')
               final Element? availableStartTimeElement,
-          final Time? availableEndTime,
+          final FhirTime? availableEndTime,
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_AvailabilityAvailableTime;
@@ -3088,7 +3088,7 @@ class _$MonetaryComponentCopyWithImpl<$Res, $Val extends MonetaryComponent>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -3221,7 +3221,7 @@ class __$$_MonetaryComponentCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -3299,7 +3299,7 @@ class _$_MonetaryComponent extends _MonetaryComponent {
 
   /// [factor] Factor used for calculating this component.
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
 
   /// [factorElement] ("_factor") Extensions for factor
   @override
@@ -3368,7 +3368,7 @@ abstract class _MonetaryComponent extends MonetaryComponent {
       final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? code,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Money? amount}) = _$_MonetaryComponent;
   _MonetaryComponent._() : super._();
@@ -4039,7 +4039,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       limitElement: freezed == limitElement
           ? _value.limitElement
           : limitElement // ignore: cast_nullable_to_non_nullable
@@ -4215,7 +4215,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       limitElement: freezed == limitElement
           ? _value.limitElement
           : limitElement // ignore: cast_nullable_to_non_nullable
@@ -4433,7 +4433,7 @@ class _$_DataRequirement extends _DataRequirement {
   /// [limit] Specifies a maximum number of results that are required (uses
   ///  the _count search parameter).
   @override
-  final PositiveInt? limit;
+  final FhirPositiveInt? limit;
 
   /// [limitElement] ("_limit") Extensions for limit
   @override
@@ -4538,7 +4538,7 @@ abstract class _DataRequirement extends DataRequirement {
       final List<DataRequirementCodeFilter>? codeFilter,
       final List<DataRequirementDateFilter>? dateFilter,
       final List<DataRequirementValueFilter>? valueFilter,
-      final PositiveInt? limit,
+      final FhirPositiveInt? limit,
       @JsonKey(name: '_limit') final Element? limitElement,
       final List<DataRequirementSort>? sort}) = _$_DataRequirement;
   _DataRequirement._() : super._();
@@ -7294,7 +7294,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -7497,7 +7497,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -7612,7 +7612,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   @override
-  final Integer? min;
+  final FhirInteger? min;
 
   /// [minElement] ("_min") Extensions for min
   @override
@@ -7731,7 +7731,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final FhirCode? use,
       @JsonKey(name: '_use') final Element? useElement,
-      final Integer? min,
+      final FhirInteger? min,
       @JsonKey(name: '_min') final Element? minElement,
       final String? max,
       @JsonKey(name: '_max') final Element? maxElement,
@@ -8028,7 +8028,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
@@ -8056,7 +8056,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       publicationDate: freezed == publicationDate
           ? _value.publicationDate
           : publicationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       publicationDateElement: freezed == publicationDateElement
           ? _value.publicationDateElement
           : publicationDateElement // ignore: cast_nullable_to_non_nullable
@@ -8277,7 +8277,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
@@ -8305,7 +8305,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       publicationDate: freezed == publicationDate
           ? _value.publicationDate
           : publicationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       publicationDateElement: freezed == publicationDateElement
           ? _value.publicationDateElement
           : publicationDateElement // ignore: cast_nullable_to_non_nullable
@@ -8419,7 +8419,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
   @override
-  final Markdown? citation;
+  final FhirMarkdown? citation;
 
   /// [citationElement] ("_citation") Extensions for citation
   @override
@@ -8455,7 +8455,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [publicationDate] The date of publication of the artifact being
   ///  referred to.
   @override
-  final Date? publicationDate;
+  final FhirDate? publicationDate;
 
   /// [publicationDateElement] ("_publicationDate") Extensions for
   ///  publicationDate
@@ -8560,7 +8560,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final String? display,
       @JsonKey(name: '_display')
           final Element? displayElement,
-      final Markdown? citation,
+      final FhirMarkdown? citation,
       @JsonKey(name: '_citation')
           final Element? citationElement,
       final Attachment? document,
@@ -8569,7 +8569,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus')
           final Element? publicationStatusElement,
-      final Date? publicationDate,
+      final FhirDate? publicationDate,
       @JsonKey(name: '_publicationDate')
           final Element? publicationDateElement}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
@@ -8870,7 +8870,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -9107,7 +9107,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -9231,7 +9231,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
   @override
-  final Date? timingDate;
+  final FhirDate? timingDate;
 
   /// [timingDateElement] ("_timingDate") Extensions for timingDate
   @override
@@ -9359,7 +9359,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       final FhirCanonical? subscriptionTopic,
       final Timing? timingTiming,
       final Reference? timingReference,
-      final Date? timingDate,
+      final FhirDate? timingDate,
       @JsonKey(name: '_timingDate') final Element? timingDateElement,
       final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
@@ -10048,7 +10048,7 @@ class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -10219,7 +10219,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable

@@ -276,7 +276,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
       List<Reference>? result});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -368,11 +368,11 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -504,7 +504,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       descriptionSummary: freezed == descriptionSummary
           ? _value.descriptionSummary
           : descriptionSummary // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionSummaryElement: freezed == descriptionSummaryElement
           ? _value.descriptionSummaryElement
           : descriptionSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -512,7 +512,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -570,12 +570,12 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -848,7 +848,7 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<Reference>? result});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -954,11 +954,11 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1090,7 +1090,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       descriptionSummary: freezed == descriptionSummary
           ? _value.descriptionSummary
           : descriptionSummary // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionSummaryElement: freezed == descriptionSummaryElement
           ? _value.descriptionSummaryElement
           : descriptionSummaryElement // ignore: cast_nullable_to_non_nullable
@@ -1098,7 +1098,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1263,7 +1263,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1525,7 +1525,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [descriptionSummary] A brief text for explaining the study.
   @override
-  final Markdown? descriptionSummary;
+  final FhirMarkdown? descriptionSummary;
 
   /// [descriptionSummaryElement] ("_descriptionSummary") Extensions for descriptionSummary
   @override
@@ -1534,7 +1534,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   /// [description] A detailed and human-readable narrative of the study. E.g., study abstract.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -1841,7 +1841,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1883,10 +1883,10 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<CodeableConcept>? condition,
       final List<CodeableConcept>? keyword,
       final List<CodeableConcept>? region,
-      final Markdown? descriptionSummary,
+      final FhirMarkdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
           final Element? descriptionSummaryElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final Period? period,
@@ -3668,7 +3668,7 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
       targetNumber: freezed == targetNumber
           ? _value.targetNumber
           : targetNumber // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       targetNumberElement: freezed == targetNumberElement
           ? _value.targetNumberElement
           : targetNumberElement // ignore: cast_nullable_to_non_nullable
@@ -3676,7 +3676,7 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
       actualNumber: freezed == actualNumber
           ? _value.actualNumber
           : actualNumber // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       actualNumberElement: freezed == actualNumberElement
           ? _value.actualNumberElement
           : actualNumberElement // ignore: cast_nullable_to_non_nullable
@@ -3809,7 +3809,7 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
       targetNumber: freezed == targetNumber
           ? _value.targetNumber
           : targetNumber // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       targetNumberElement: freezed == targetNumberElement
           ? _value.targetNumberElement
           : targetNumberElement // ignore: cast_nullable_to_non_nullable
@@ -3817,7 +3817,7 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
       actualNumber: freezed == actualNumber
           ? _value.actualNumber
           : actualNumber // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       actualNumberElement: freezed == actualNumberElement
           ? _value.actualNumberElement
           : actualNumberElement // ignore: cast_nullable_to_non_nullable
@@ -3921,7 +3921,7 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
 
   /// [targetNumber] Estimated total number of participants to be enrolled.
   @override
-  final UnsignedInt? targetNumber;
+  final FhirUnsignedInt? targetNumber;
 
   /// [targetNumberElement] ("_targetNumber") Extensions for targetNumber
   @override
@@ -3930,7 +3930,7 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
 
   /// [actualNumber] Actual total number of participants enrolled in study.
   @override
-  final UnsignedInt? actualNumber;
+  final FhirUnsignedInt? actualNumber;
 
   /// [actualNumberElement] ("_actualNumber") Extensions for actualNumber
   @override
@@ -4008,9 +4008,9 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final UnsignedInt? targetNumber,
+      final FhirUnsignedInt? targetNumber,
       @JsonKey(name: '_targetNumber') final Element? targetNumberElement,
-      final UnsignedInt? actualNumber,
+      final FhirUnsignedInt? actualNumber,
       @JsonKey(name: '_actualNumber') final Element? actualNumberElement,
       final Reference? eligibility,
       final Reference? actualGroup}) = _$_ResearchStudyRecruitment;
@@ -4233,7 +4233,7 @@ class _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -4387,7 +4387,7 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -4521,7 +4521,7 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
 
   /// [description] A succinct description of the path through the study that would be followed by a subject adhering to this comparisonGroup.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -4618,7 +4618,7 @@ abstract class _ResearchStudyComparisonGroup
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? type,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Reference>? intendedExposure,
       final Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
@@ -4827,7 +4827,7 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -4947,7 +4947,7 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -5055,7 +5055,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 
   /// [description] Free text description of the objective of the study.  This is what the study is trying to achieve rather than how it is going to achieve it (see ResearchStudy.description).
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -5123,7 +5123,7 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final CodeableConcept? type,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ResearchStudyObjective;
   _ResearchStudyObjective._() : super._();
@@ -5326,7 +5326,7 @@ class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -5454,7 +5454,7 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -5577,7 +5577,7 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
 
   /// [description] Description of the outcome.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -5653,7 +5653,7 @@ abstract class _ResearchStudyOutcomeMeasure
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final List<CodeableConcept>? type,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
   _ResearchStudyOutcomeMeasure._() : super._();
@@ -5857,7 +5857,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           Element? actualArmElement,
       Reference? consent});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5915,11 +5915,11 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6005,12 +6005,12 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6169,7 +6169,7 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
       Reference? consent});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6235,11 +6235,11 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6382,7 +6382,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -6616,7 +6616,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

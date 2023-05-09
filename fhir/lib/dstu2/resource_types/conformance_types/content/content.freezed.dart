@@ -84,7 +84,7 @@ mixin _$StructureDefinition {
   Element? get kindElement => throw _privateConstructorUsedError;
   FhirCode? get constrainedType => throw _privateConstructorUsedError;
   @JsonKey(name: 'abstract')
-  Boolean get abstract_ => throw _privateConstructorUsedError;
+  FhirBoolean get abstract_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_abstract')
   Element? get abstractElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -171,7 +171,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           Element? kindElement,
       FhirCode? constrainedType,
       @JsonKey(name: 'abstract')
-          Boolean abstract_,
+          FhirBoolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -181,7 +181,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       StructureDefinitionSnapshot? snapshot,
       StructureDefinitionDifferential? differential});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -273,11 +273,11 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -413,7 +413,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       fhirVersion: freezed == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -437,7 +437,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       abstract_: null == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -467,12 +467,12 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -766,7 +766,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
           Element? kindElement,
       FhirCode? constrainedType,
       @JsonKey(name: 'abstract')
-          Boolean abstract_,
+          FhirBoolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -777,7 +777,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       StructureDefinitionDifferential? differential});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -885,11 +885,11 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1025,7 +1025,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       fhirVersion: freezed == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -1049,7 +1049,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       abstract_: null == abstract_
           ? _value.abstract_
           : abstract_ // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       abstractElement: freezed == abstractElement
           ? _value.abstractElement
           : abstractElement // ignore: cast_nullable_to_non_nullable
@@ -1172,7 +1172,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1335,7 +1335,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   final FhirCode? constrainedType;
   @override
   @JsonKey(name: 'abstract')
-  final Boolean abstract_;
+  final FhirBoolean abstract_;
   @override
   @JsonKey(name: '_abstract')
   final Element? abstractElement;
@@ -1529,7 +1529,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1587,7 +1587,7 @@ abstract class _StructureDefinition extends StructureDefinition {
           final Element? kindElement,
       final FhirCode? constrainedType,
       @JsonKey(name: 'abstract')
-          required final Boolean abstract_,
+          required final FhirBoolean abstract_,
       @JsonKey(name: '_abstract')
           final Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -1705,7 +1705,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   FhirCode? get constrainedType;
   @override
   @JsonKey(name: 'abstract')
-  Boolean get abstract_;
+  FhirBoolean get abstract_;
   @override
   @JsonKey(name: '_abstract')
   Element? get abstractElement;
@@ -1755,7 +1755,7 @@ abstract class $StructureDefinitionContactCopyWith<$Res> {
           StructureDefinitionContact>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -1786,7 +1786,7 @@ class _$StructureDefinitionContactCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1817,7 +1817,7 @@ abstract class _$$_StructureDefinitionContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -1847,7 +1847,7 @@ class __$$_StructureDefinitionContactCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2008,7 +2008,7 @@ mixin _$StructureDefinitionMapping {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Id get identity => throw _privateConstructorUsedError;
+  FhirId get identity => throw _privateConstructorUsedError;
   @JsonKey(name: '_identity')
   Element? get identityElement => throw _privateConstructorUsedError;
   FhirUri? get uri => throw _privateConstructorUsedError;
@@ -2035,11 +2035,11 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
           StructureDefinitionMapping>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -2085,7 +2085,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2101,7 +2101,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res,
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -2192,11 +2192,11 @@ abstract class _$$_StructureDefinitionMappingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -2245,7 +2245,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2261,7 +2261,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -2354,7 +2354,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   }
 
   @override
-  final Id identity;
+  final FhirId identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -2445,7 +2445,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-          required final Id identity,
+          required final FhirId identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final FhirUri? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -2470,7 +2470,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Id get identity;
+  FhirId get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;
@@ -2524,7 +2524,7 @@ abstract class $StructureDefinitionSnapshotCopyWith<$Res> {
           StructureDefinitionSnapshot>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinition> element});
@@ -2553,7 +2553,7 @@ class _$StructureDefinitionSnapshotCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2580,7 +2580,7 @@ abstract class _$$_StructureDefinitionSnapshotCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinition> element});
@@ -2608,7 +2608,7 @@ class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2772,7 +2772,7 @@ abstract class $StructureDefinitionDifferentialCopyWith<$Res> {
           StructureDefinitionDifferential>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinition> element});
@@ -2801,7 +2801,7 @@ class _$StructureDefinitionDifferentialCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2828,7 +2828,7 @@ abstract class _$$_StructureDefinitionDifferentialCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinition> element});
@@ -2856,7 +2856,7 @@ class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3071,7 +3071,7 @@ abstract class $DataElementCopyWith<$Res> {
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
 }
 
@@ -3120,11 +3120,11 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3210,12 +3210,12 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3271,7 +3271,7 @@ abstract class _$$_DataElementCopyWith<$Res>
       List<ElementDefinition> element});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
 }
@@ -3319,11 +3319,11 @@ class __$$_DataElementCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3458,7 +3458,7 @@ class _$_DataElement extends _DataElement {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -3660,7 +3660,7 @@ abstract class _DataElement extends DataElement {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -3772,7 +3772,7 @@ abstract class $DataElementContactCopyWith<$Res> {
       _$DataElementContactCopyWithImpl<$Res, DataElementContact>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -3802,7 +3802,7 @@ class _$DataElementContactCopyWithImpl<$Res, $Val extends DataElementContact>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3832,7 +3832,7 @@ abstract class _$$_DataElementContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -3860,7 +3860,7 @@ class __$$_DataElementContactCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4020,7 +4020,7 @@ mixin _$DataElementMapping {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Id get identity => throw _privateConstructorUsedError;
+  FhirId get identity => throw _privateConstructorUsedError;
   @JsonKey(name: '_identity')
   Element? get identityElement => throw _privateConstructorUsedError;
   FhirUri? get uri => throw _privateConstructorUsedError;
@@ -4046,11 +4046,11 @@ abstract class $DataElementMappingCopyWith<$Res> {
       _$DataElementMappingCopyWithImpl<$Res, DataElementMapping>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -4095,7 +4095,7 @@ class _$DataElementMappingCopyWithImpl<$Res, $Val extends DataElementMapping>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4111,7 +4111,7 @@ class _$DataElementMappingCopyWithImpl<$Res, $Val extends DataElementMapping>
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -4201,11 +4201,11 @@ abstract class _$$_DataElementMappingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -4252,7 +4252,7 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4268,7 +4268,7 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -4361,7 +4361,7 @@ class _$_DataElementMapping extends _DataElementMapping {
   }
 
   @override
-  final Id identity;
+  final FhirId identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -4452,7 +4452,7 @@ abstract class _DataElementMapping extends DataElementMapping {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-          required final Id identity,
+          required final FhirId identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final FhirUri? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -4477,7 +4477,7 @@ abstract class _DataElementMapping extends DataElementMapping {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Id get identity;
+  FhirId get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;

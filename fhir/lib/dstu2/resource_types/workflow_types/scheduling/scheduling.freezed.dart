@@ -121,7 +121,7 @@ abstract class $AppointmentCopyWith<$Res> {
           Element? commentElement,
       List<AppointmentParticipant> participant});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -188,11 +188,11 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -248,7 +248,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -264,7 +264,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -272,7 +272,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -280,7 +280,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       minutesDuration: freezed == minutesDuration
           ? _value.minutesDuration
           : minutesDuration // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minutesDurationElement: freezed == minutesDurationElement
           ? _value.minutesDurationElement
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
@@ -306,12 +306,12 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -514,7 +514,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       List<AppointmentParticipant> participant});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -591,11 +591,11 @@ class __$$_AppointmentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -651,7 +651,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -667,7 +667,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -675,7 +675,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -683,7 +683,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       minutesDuration: freezed == minutesDuration
           ? _value.minutesDuration
           : minutesDuration // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minutesDurationElement: freezed == minutesDurationElement
           ? _value.minutesDurationElement
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
@@ -771,7 +771,7 @@ class _$_Appointment extends _Appointment {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -837,7 +837,7 @@ class _$_Appointment extends _Appointment {
   @override
   final CodeableConcept? reason;
   @override
-  final UnsignedInt? priority;
+  final FhirUnsignedInt? priority;
   @override
   @JsonKey(name: '_priority')
   final Element? priorityElement;
@@ -847,17 +847,17 @@ class _$_Appointment extends _Appointment {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Instant? start;
+  final FhirInstant? start;
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
   @override
-  final Instant? end;
+  final FhirInstant? end;
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
   @override
-  final PositiveInt? minutesDuration;
+  final FhirPositiveInt? minutesDuration;
   @override
   @JsonKey(name: '_minutesDuration')
   final Element? minutesDurationElement;
@@ -1001,7 +1001,7 @@ abstract class _Appointment extends Appointment {
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
               final Dstu2ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -1020,19 +1020,19 @@ abstract class _Appointment extends Appointment {
               final Element? statusElement,
           final CodeableConcept? type,
           final CodeableConcept? reason,
-          final UnsignedInt? priority,
+          final FhirUnsignedInt? priority,
           @JsonKey(name: '_priority')
               final Element? priorityElement,
           final String? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
-          final Instant? start,
+          final FhirInstant? start,
           @JsonKey(name: '_start')
               final Element? startElement,
-          final Instant? end,
+          final FhirInstant? end,
           @JsonKey(name: '_end')
               final Element? endElement,
-          final PositiveInt? minutesDuration,
+          final FhirPositiveInt? minutesDuration,
           @JsonKey(name: '_minutesDuration')
               final Element? minutesDurationElement,
           final List<Reference>? slot,
@@ -1160,7 +1160,7 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res, AppointmentParticipant>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1208,7 +1208,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1290,7 +1290,7 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1339,7 +1339,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1646,7 +1646,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -1703,11 +1703,11 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1751,7 +1751,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -1759,7 +1759,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -1793,12 +1793,12 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1951,7 +1951,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2015,11 +2015,11 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2063,7 +2063,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -2071,7 +2071,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -2156,7 +2156,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -2214,12 +2214,12 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   final Reference appointment;
   @override
-  final Instant? start;
+  final FhirInstant? start;
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
   @override
-  final Instant? end;
+  final FhirInstant? end;
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -2350,7 +2350,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2364,10 +2364,10 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required final Reference appointment,
-      final Instant? start,
+      final FhirInstant? start,
       @JsonKey(name: '_start')
           final Element? startElement,
-      final Instant? end,
+      final FhirInstant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
       final List<CodeableConcept>? participantType,
@@ -2512,7 +2512,7 @@ abstract class $ScheduleCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2560,11 +2560,11 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2626,12 +2626,12 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2737,7 +2737,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2789,11 +2789,11 @@ class __$$_ScheduleCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2896,7 +2896,7 @@ class _$_Schedule extends _Schedule {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -3052,7 +3052,7 @@ abstract class _Schedule extends Schedule {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3147,10 +3147,10 @@ mixin _$Slot {
   Reference get schedule => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   SlotFreeBusyType get freeBusyType => throw _privateConstructorUsedError;
-  Instant get start => throw _privateConstructorUsedError;
+  FhirInstant get start => throw _privateConstructorUsedError;
   @JsonKey(name: '_start')
   Element? get startElement => throw _privateConstructorUsedError;
-  Instant get end => throw _privateConstructorUsedError;
+  FhirInstant get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
   Element? get endElement => throw _privateConstructorUsedError;
   FhirBoolean? get overbooked => throw _privateConstructorUsedError;
@@ -3191,10 +3191,10 @@ abstract class $SlotCopyWith<$Res> {
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
           SlotFreeBusyType freeBusyType,
-      Instant start,
+      FhirInstant start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant end,
+      FhirInstant end,
       @JsonKey(name: '_end')
           Element? endElement,
       FhirBoolean? overbooked,
@@ -3204,7 +3204,7 @@ abstract class $SlotCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3261,11 +3261,11 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3317,7 +3317,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -3325,7 +3325,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -3351,12 +3351,12 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3493,10 +3493,10 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
           SlotFreeBusyType freeBusyType,
-      Instant start,
+      FhirInstant start,
       @JsonKey(name: '_start')
           Element? startElement,
-      Instant end,
+      FhirInstant end,
       @JsonKey(name: '_end')
           Element? endElement,
       FhirBoolean? overbooked,
@@ -3507,7 +3507,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3569,11 +3569,11 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3625,7 +3625,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -3633,7 +3633,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -3708,7 +3708,7 @@ class _$_Slot extends _Slot {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -3771,12 +3771,12 @@ class _$_Slot extends _Slot {
   @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   final SlotFreeBusyType freeBusyType;
   @override
-  final Instant start;
+  final FhirInstant start;
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
   @override
-  final Instant end;
+  final FhirInstant end;
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -3890,7 +3890,7 @@ abstract class _Slot extends Slot {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3907,10 +3907,10 @@ abstract class _Slot extends Slot {
       required final Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
           required final SlotFreeBusyType freeBusyType,
-      required final Instant start,
+      required final FhirInstant start,
       @JsonKey(name: '_start')
           final Element? startElement,
-      required final Instant end,
+      required final FhirInstant end,
       @JsonKey(name: '_end')
           final Element? endElement,
       final FhirBoolean? overbooked,
@@ -3959,12 +3959,12 @@ abstract class _Slot extends Slot {
   @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
   SlotFreeBusyType get freeBusyType;
   @override
-  Instant get start;
+  FhirInstant get start;
   @override
   @JsonKey(name: '_start')
   Element? get startElement;
   @override
-  Instant get end;
+  FhirInstant get end;
   @override
   @JsonKey(name: '_end')
   Element? get endElement;

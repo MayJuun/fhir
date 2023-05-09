@@ -12,10 +12,10 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Composition) ??
           Dstu2ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -23,7 +23,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -61,7 +61,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       confidentiality: json['confidentiality'] == null
           ? null
-          : Code.fromJson(json['confidentiality']),
+          : FhirCode.fromJson(json['confidentiality']),
       confidentialityElement: json['_confidentiality'] == null
           ? null
           : Element.fromJson(json['_confidentiality'] as Map<String, dynamic>),
@@ -240,7 +240,7 @@ const _$CompositionStatusEnumMap = {
 _$_CompositionAttester _$$_CompositionAttesterFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionAttester(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -295,7 +295,7 @@ const _$AttesterModeEnumMap = {
 
 _$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
     _$_CompositionEvent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -336,7 +336,7 @@ Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
 _$_CompositionSection _$$_CompositionSectionFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionSection(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -418,10 +418,10 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentManifest) ??
           Dstu2ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -429,7 +429,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -548,7 +548,7 @@ const _$DocumentManifestStatusEnumMap = {
 _$_DocumentManifestContent _$$_DocumentManifestContentFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentManifestContent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -586,7 +586,7 @@ Map<String, dynamic> _$$_DocumentManifestContentToJson(
 _$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentManifestRelated(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -627,10 +627,10 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentReference) ??
           Dstu2ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -638,7 +638,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -680,7 +680,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
       created: json['created'] == null
           ? null
           : FhirDateTime.fromJson(json['created']),
-      indexed: Instant.fromJson(json['indexed']),
+      indexed: FhirInstant.fromJson(json['indexed']),
       status: $enumDecode(_$DocumentReferenceStatusEnumMap, json['status'],
           unknownValue: DocumentReferenceStatus.unknown),
       statusElement: json['_status'] == null
@@ -774,7 +774,7 @@ const _$DocumentReferenceStatusEnumMap = {
 _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceRelatesTo(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -821,7 +821,7 @@ const _$RelatesToCodeEnumMap = {
 _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -858,7 +858,7 @@ Map<String, dynamic> _$$_DocumentReferenceContentToJson(
 _$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContext(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -920,7 +920,7 @@ Map<String, dynamic> _$$_DocumentReferenceContextToJson(
 _$_DocumentReferenceContextRelated _$$_DocumentReferenceContextRelatedFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContextRelated(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -960,10 +960,10 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.FhirList) ??
           Dstu2ResourceType.FhirList,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -971,7 +971,7 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1093,7 +1093,7 @@ const _$ListModeEnumMap = {
 };
 
 _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1106,8 +1106,9 @@ _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
       flag: json['flag'] == null
           ? null
           : CodeableConcept.fromJson(json['flag'] as Map<String, dynamic>),
-      deleted:
-          json['deleted'] == null ? null : Boolean.fromJson(json['deleted']),
+      deleted: json['deleted'] == null
+          ? null
+          : FhirBoolean.fromJson(json['deleted']),
       deletedElement: json['_deleted'] == null
           ? null
           : Element.fromJson(json['_deleted'] as Map<String, dynamic>),

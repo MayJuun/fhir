@@ -162,7 +162,7 @@ abstract class $CitationCopyWith<$Res> {
       List<CitationRelatesTo>? relatesTo,
       CitationCitedArtifact? citedArtifact});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -262,7 +262,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -370,7 +370,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -386,7 +386,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -394,7 +394,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -402,7 +402,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -410,7 +410,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -468,12 +468,12 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -758,7 +758,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       CitationCitedArtifact? citedArtifact});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -874,7 +874,7 @@ class __$$_CitationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -982,7 +982,7 @@ class __$$_CitationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -998,7 +998,7 @@ class __$$_CitationCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1006,7 +1006,7 @@ class __$$_CitationCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1014,7 +1014,7 @@ class __$$_CitationCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1022,7 +1022,7 @@ class __$$_CitationCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -1164,7 +1164,7 @@ class _$_Citation extends _Citation {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1270,7 +1270,7 @@ class _$_Citation extends _Citation {
   }
 
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -1295,22 +1295,22 @@ class _$_Citation extends _Citation {
   }
 
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -1601,7 +1601,7 @@ abstract class _Citation extends Citation {
   factory _Citation(
       {final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
@@ -1628,17 +1628,17 @@ abstract class _Citation extends Citation {
       final String? publisher,
       @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose') final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright') final Element? copyrightElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<ContactDetail>? author,
@@ -1864,7 +1864,7 @@ class _$CitationSummaryCopyWithImpl<$Res, $Val extends CitationSummary>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -1957,7 +1957,7 @@ class __$$_CitationSummaryCopyWithImpl<$Res>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -2010,7 +2010,7 @@ class _$_CitationSummary extends _CitationSummary {
   @override
   final CodeableConcept? style;
   @override
-  final Markdown? text;
+  final FhirMarkdown? text;
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -2067,7 +2067,7 @@ abstract class _CitationSummary extends CitationSummary {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? style,
-      final Markdown? text,
+      final FhirMarkdown? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_CitationSummary;
   _CitationSummary._() : super._();
 
@@ -4647,7 +4647,7 @@ class _$CitationTitleCopyWithImpl<$Res, $Val extends CitationTitle>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -4746,7 +4746,7 @@ class __$$_CitationTitleCopyWithImpl<$Res>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -4811,7 +4811,7 @@ class _$_CitationTitle extends _CitationTitle {
   @override
   final CodeableConcept? language;
   @override
-  final Markdown? text;
+  final FhirMarkdown? text;
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -4872,7 +4872,7 @@ abstract class _CitationTitle extends CitationTitle {
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       final CodeableConcept? language,
-      final Markdown? text,
+      final FhirMarkdown? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_CitationTitle;
   _CitationTitle._() : super._();
 
@@ -4997,7 +4997,7 @@ class _$CitationAbstractCopyWithImpl<$Res, $Val extends CitationAbstract>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -5005,7 +5005,7 @@ class _$CitationAbstractCopyWithImpl<$Res, $Val extends CitationAbstract>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -5136,7 +5136,7 @@ class __$$_CitationAbstractCopyWithImpl<$Res>
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textElement: freezed == textElement
           ? _value.textElement
           : textElement // ignore: cast_nullable_to_non_nullable
@@ -5144,7 +5144,7 @@ class __$$_CitationAbstractCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -5202,12 +5202,12 @@ class _$_CitationAbstract extends _CitationAbstract {
   @override
   final CodeableConcept? language;
   @override
-  final Markdown? text;
+  final FhirMarkdown? text;
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
@@ -5274,9 +5274,9 @@ abstract class _CitationAbstract extends CitationAbstract {
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
           final CodeableConcept? language,
-          final Markdown? text,
+          final FhirMarkdown? text,
           @JsonKey(name: '_text') final Element? textElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright') final Element? copyrightElement}) =
       _$_CitationAbstract;
   _CitationAbstract._() : super._();
@@ -6321,7 +6321,7 @@ class _$CitationPublicationFormCopyWithImpl<$Res,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -6624,7 +6624,7 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -6741,7 +6741,7 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
   @JsonKey(name: '_pageCount')
   final Element? pageCountElement;
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
@@ -6875,7 +6875,7 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
       final String? pageCount,
       @JsonKey(name: '_pageCount')
           final Element? pageCountElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement}) = _$_CitationPublicationForm;
   _CitationPublicationForm._() : super._();
@@ -7918,7 +7918,7 @@ class _$CitationDateOfPublicationCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8124,7 +8124,7 @@ class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -8224,7 +8224,7 @@ class _$_CitationDateOfPublication extends _CitationDateOfPublication {
   }
 
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -8329,7 +8329,7 @@ abstract class _CitationDateOfPublication extends CitationDateOfPublication {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Date? date,
+          final FhirDate? date,
           @JsonKey(name: '_date') final Element? dateElement,
           final String? year,
           @JsonKey(name: '_year') final Element? yearElement,
@@ -10043,7 +10043,7 @@ class _$CitationEntryCopyWithImpl<$Res, $Val extends CitationEntry>
       listOrder: freezed == listOrder
           ? _value.listOrder
           : listOrder // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       listOrderElement: freezed == listOrderElement
           ? _value.listOrderElement
           : listOrderElement // ignore: cast_nullable_to_non_nullable
@@ -10275,7 +10275,7 @@ class __$$_CitationEntryCopyWithImpl<$Res>
       listOrder: freezed == listOrder
           ? _value.listOrder
           : listOrder // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       listOrderElement: freezed == listOrderElement
           ? _value.listOrderElement
           : listOrderElement // ignore: cast_nullable_to_non_nullable
@@ -10426,7 +10426,7 @@ class _$_CitationEntry extends _CitationEntry {
   @JsonKey(name: '_correspondingContact')
   final Element? correspondingContactElement;
   @override
-  final PositiveInt? listOrder;
+  final FhirPositiveInt? listOrder;
   @override
   @JsonKey(name: '_listOrder')
   final Element? listOrderElement;
@@ -10540,7 +10540,7 @@ abstract class _CitationEntry extends CitationEntry {
       final FhirBoolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
           final Element? correspondingContactElement,
-      final PositiveInt? listOrder,
+      final FhirPositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
           final Element? listOrderElement}) = _$_CitationEntry;
   _CitationEntry._() : super._();
@@ -11380,7 +11380,7 @@ class _$CitationSummary1CopyWithImpl<$Res, $Val extends CitationSummary1>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -11513,7 +11513,7 @@ class __$$_CitationSummary1CopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -11572,7 +11572,7 @@ class _$_CitationSummary1 extends _CitationSummary1 {
   @override
   final CodeableConcept? source;
   @override
-  final Markdown? value;
+  final FhirMarkdown? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -11635,7 +11635,7 @@ abstract class _CitationSummary1 extends CitationSummary1 {
           final CodeableConcept? type,
           final CodeableConcept? style,
           final CodeableConcept? source,
-          final Markdown? value,
+          final FhirMarkdown? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_CitationSummary1;
   _CitationSummary1._() : super._();
@@ -11816,7 +11816,7 @@ abstract class $EvidenceCopyWith<$Res> {
       List<EvidenceStatistic>? statistic,
       List<EvidenceCertainty>? certainty});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11910,7 +11910,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11978,7 +11978,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       citAsMarkdown: freezed == citAsMarkdown
           ? _value.citAsMarkdown
           : citAsMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citeAsMarkdownElement: freezed == citeAsMarkdownElement
           ? _value.citeAsMarkdownElement
           : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -12006,7 +12006,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -12014,7 +12014,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -12054,7 +12054,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12062,7 +12062,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       assertion: freezed == assertion
           ? _value.assertion
           : assertion // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       assertionElement: freezed == assertionElement
           ? _value.assertionElement
           : assertionElement // ignore: cast_nullable_to_non_nullable
@@ -12096,12 +12096,12 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -12384,7 +12384,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<EvidenceCertainty>? certainty});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12493,7 +12493,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12561,7 +12561,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       citAsMarkdown: freezed == citAsMarkdown
           ? _value.citAsMarkdown
           : citAsMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citeAsMarkdownElement: freezed == citeAsMarkdownElement
           ? _value.citeAsMarkdownElement
           : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -12589,7 +12589,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -12597,7 +12597,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -12637,7 +12637,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12645,7 +12645,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       assertion: freezed == assertion
           ? _value.assertion
           : assertion // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       assertionElement: freezed == assertionElement
           ? _value.assertionElement
           : assertionElement // ignore: cast_nullable_to_non_nullable
@@ -12771,7 +12771,7 @@ class _$_Evidence extends _Evidence {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -12844,7 +12844,7 @@ class _$_Evidence extends _Evidence {
   @override
   final Reference? citeAsReference;
   @override
-  final Markdown? citAsMarkdown;
+  final FhirMarkdown? citAsMarkdown;
   @override
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
@@ -12869,12 +12869,12 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -12944,12 +12944,12 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Markdown? assertion;
+  final FhirMarkdown? assertion;
   @override
   @JsonKey(name: '_assertion')
   final Element? assertionElement;
@@ -13163,7 +13163,7 @@ abstract class _Evidence extends Evidence {
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -13186,7 +13186,7 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_title')
           final Element? titleElement,
       final Reference? citeAsReference,
-      final Markdown? citAsMarkdown,
+      final FhirMarkdown? citAsMarkdown,
       @JsonKey(name: '_citeAsMarkdown')
           final Element? citeAsMarkdownElement,
       final FhirCode? status,
@@ -13196,10 +13196,10 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_date')
           final Element? dateElement,
       final List<UsageContext>? useContext,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final String? publisher,
@@ -13211,10 +13211,10 @@ abstract class _Evidence extends Evidence {
       final List<ContactDetail>? reviewer,
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Markdown? assertion,
+      final FhirMarkdown? assertion,
       @JsonKey(name: '_assertion')
           final Element? assertionElement,
       final List<Annotation>? note,
@@ -13438,7 +13438,7 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -13596,7 +13596,7 @@ class __$$_EvidenceVariableDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -13672,7 +13672,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
   }
 
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -13760,7 +13760,7 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Annotation>? note,
       required final CodeableConcept variableRole,
@@ -13939,7 +13939,7 @@ class _$EvidenceStatisticCopyWithImpl<$Res, $Val extends EvidenceStatistic>
       numberOfEvents: freezed == numberOfEvents
           ? _value.numberOfEvents
           : numberOfEvents // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfEventsElement: freezed == numberOfEventsElement
           ? _value.numberOfEventsElement
           : numberOfEventsElement // ignore: cast_nullable_to_non_nullable
@@ -13947,7 +13947,7 @@ class _$EvidenceStatisticCopyWithImpl<$Res, $Val extends EvidenceStatistic>
       numberAffected: freezed == numberAffected
           ? _value.numberAffected
           : numberAffected // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberAffectedElement: freezed == numberAffectedElement
           ? _value.numberAffectedElement
           : numberAffectedElement // ignore: cast_nullable_to_non_nullable
@@ -14162,7 +14162,7 @@ class __$$_EvidenceStatisticCopyWithImpl<$Res>
       numberOfEvents: freezed == numberOfEvents
           ? _value.numberOfEvents
           : numberOfEvents // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfEventsElement: freezed == numberOfEventsElement
           ? _value.numberOfEventsElement
           : numberOfEventsElement // ignore: cast_nullable_to_non_nullable
@@ -14170,7 +14170,7 @@ class __$$_EvidenceStatisticCopyWithImpl<$Res>
       numberAffected: freezed == numberAffected
           ? _value.numberAffected
           : numberAffected // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberAffectedElement: freezed == numberAffectedElement
           ? _value.numberAffectedElement
           : numberAffectedElement // ignore: cast_nullable_to_non_nullable
@@ -14267,12 +14267,12 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
   @override
   final Quantity? quantity;
   @override
-  final UnsignedInt? numberOfEvents;
+  final FhirUnsignedInt? numberOfEvents;
   @override
   @JsonKey(name: '_numberOfEvents')
   final Element? numberOfEventsElement;
   @override
-  final UnsignedInt? numberAffected;
+  final FhirUnsignedInt? numberAffected;
   @override
   @JsonKey(name: '_numberAffected')
   final Element? numberAffectedElement;
@@ -14389,9 +14389,9 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
       final CodeableConcept? statisticType,
       final CodeableConcept? category,
       final Quantity? quantity,
-      final UnsignedInt? numberOfEvents,
+      final FhirUnsignedInt? numberOfEvents,
       @JsonKey(name: '_numberOfEvents') final Element? numberOfEventsElement,
-      final UnsignedInt? numberAffected,
+      final FhirUnsignedInt? numberAffected,
       @JsonKey(name: '_numberAffected') final Element? numberAffectedElement,
       final EvidenceSampleSize? sampleSize,
       final List<EvidenceAttributeEstimate>? attributeEstimate,
@@ -14562,7 +14562,7 @@ class _$EvidenceSampleSizeCopyWithImpl<$Res, $Val extends EvidenceSampleSize>
       numberOfStudies: freezed == numberOfStudies
           ? _value.numberOfStudies
           : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfStudiesElement: freezed == numberOfStudiesElement
           ? _value.numberOfStudiesElement
           : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
@@ -14570,7 +14570,7 @@ class _$EvidenceSampleSizeCopyWithImpl<$Res, $Val extends EvidenceSampleSize>
       numberOfParticipants: freezed == numberOfParticipants
           ? _value.numberOfParticipants
           : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfParticipantsElement: freezed == numberOfParticipantsElement
           ? _value.numberOfParticipantsElement
           : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -14578,7 +14578,7 @@ class _$EvidenceSampleSizeCopyWithImpl<$Res, $Val extends EvidenceSampleSize>
       knownDataCount: freezed == knownDataCount
           ? _value.knownDataCount
           : knownDataCount // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       knownDataCountElement: freezed == knownDataCountElement
           ? _value.knownDataCountElement
           : knownDataCountElement // ignore: cast_nullable_to_non_nullable
@@ -14724,7 +14724,7 @@ class __$$_EvidenceSampleSizeCopyWithImpl<$Res>
       numberOfStudies: freezed == numberOfStudies
           ? _value.numberOfStudies
           : numberOfStudies // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfStudiesElement: freezed == numberOfStudiesElement
           ? _value.numberOfStudiesElement
           : numberOfStudiesElement // ignore: cast_nullable_to_non_nullable
@@ -14732,7 +14732,7 @@ class __$$_EvidenceSampleSizeCopyWithImpl<$Res>
       numberOfParticipants: freezed == numberOfParticipants
           ? _value.numberOfParticipants
           : numberOfParticipants // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfParticipantsElement: freezed == numberOfParticipantsElement
           ? _value.numberOfParticipantsElement
           : numberOfParticipantsElement // ignore: cast_nullable_to_non_nullable
@@ -14740,7 +14740,7 @@ class __$$_EvidenceSampleSizeCopyWithImpl<$Res>
       knownDataCount: freezed == knownDataCount
           ? _value.knownDataCount
           : knownDataCount // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       knownDataCountElement: freezed == knownDataCountElement
           ? _value.knownDataCountElement
           : knownDataCountElement // ignore: cast_nullable_to_non_nullable
@@ -14813,17 +14813,17 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
   }
 
   @override
-  final UnsignedInt? numberOfStudies;
+  final FhirUnsignedInt? numberOfStudies;
   @override
   @JsonKey(name: '_numberOfStudies')
   final Element? numberOfStudiesElement;
   @override
-  final UnsignedInt? numberOfParticipants;
+  final FhirUnsignedInt? numberOfParticipants;
   @override
   @JsonKey(name: '_numberOfParticipants')
   final Element? numberOfParticipantsElement;
   @override
-  final UnsignedInt? knownDataCount;
+  final FhirUnsignedInt? knownDataCount;
   @override
   @JsonKey(name: '_knownDataCount')
   final Element? knownDataCountElement;
@@ -14906,13 +14906,13 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<Annotation>? note,
-      final UnsignedInt? numberOfStudies,
+      final FhirUnsignedInt? numberOfStudies,
       @JsonKey(name: '_numberOfStudies')
           final Element? numberOfStudiesElement,
-      final UnsignedInt? numberOfParticipants,
+      final FhirUnsignedInt? numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants')
           final Element? numberOfParticipantsElement,
-      final UnsignedInt? knownDataCount,
+      final FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           final Element? knownDataCountElement}) = _$_EvidenceSampleSize;
   _EvidenceSampleSize._() : super._();
@@ -15076,7 +15076,7 @@ class _$EvidenceAttributeEstimateCopyWithImpl<$Res,
       level: freezed == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       levelElement: freezed == levelElement
           ? _value.levelElement
           : levelElement // ignore: cast_nullable_to_non_nullable
@@ -15250,7 +15250,7 @@ class __$$_EvidenceAttributeEstimateCopyWithImpl<$Res>
       level: freezed == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       levelElement: freezed == levelElement
           ? _value.levelElement
           : levelElement // ignore: cast_nullable_to_non_nullable
@@ -15336,7 +15336,7 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
   @override
   final Quantity? quantity;
   @override
-  final Decimal? level;
+  final FhirDecimal? level;
   @override
   @JsonKey(name: '_level')
   final Element? levelElement;
@@ -15426,7 +15426,7 @@ abstract class _EvidenceAttributeEstimate extends EvidenceAttributeEstimate {
           final List<Annotation>? note,
           final CodeableConcept? type,
           final Quantity? quantity,
-          final Decimal? level,
+          final FhirDecimal? level,
           @JsonKey(name: '_level') final Element? levelElement,
           final Range? range,
           final List<EvidenceAttributeEstimate>? attributeEstimate}) =
@@ -16793,7 +16793,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       List<EvidenceReportRelatesTo>? relatesTo,
       List<EvidenceReportSection>? section});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -16866,7 +16866,7 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16934,7 +16934,7 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
       citeAsMarkdown: freezed == citeAsMarkdown
           ? _value.citeAsMarkdown
           : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citeAsMarkdownElement: freezed == citeAsMarkdownElement
           ? _value.citeAsMarkdownElement
           : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -16996,12 +16996,12 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -17168,7 +17168,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       List<EvidenceReportSection>? section});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -17249,7 +17249,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17317,7 +17317,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
       citeAsMarkdown: freezed == citeAsMarkdown
           ? _value.citeAsMarkdown
           : citeAsMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citeAsMarkdownElement: freezed == citeAsMarkdownElement
           ? _value.citeAsMarkdownElement
           : citeAsMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -17442,7 +17442,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -17531,7 +17531,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   @override
   final Reference? citeAsReference;
   @override
-  final Markdown? citeAsMarkdown;
+  final FhirMarkdown? citeAsMarkdown;
   @override
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
@@ -17758,7 +17758,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
       {final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
@@ -17775,7 +17775,7 @@ abstract class _EvidenceReport extends EvidenceReport {
       final List<Identifier>? identifier,
       final List<Identifier>? relatedIdentifier,
       final Reference? citeAsReference,
-      final Markdown? citeAsMarkdown,
+      final FhirMarkdown? citeAsMarkdown,
       @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
       final CodeableConcept? type,
       final List<Annotation>? note,
@@ -19898,7 +19898,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           Element? handlingElement,
       List<EvidenceVariableCategory>? category});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -19991,7 +19991,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -20095,7 +20095,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -20178,12 +20178,12 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -20459,7 +20459,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       List<EvidenceVariableCategory>? category});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -20566,7 +20566,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -20670,7 +20670,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -20846,7 +20846,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -20942,7 +20942,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -21231,7 +21231,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -21268,7 +21268,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       final FhirDateTime? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<Annotation>? note,
@@ -23032,7 +23032,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       Reference? exposureAlternative,
       Reference? outcome});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -23150,7 +23150,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -23282,7 +23282,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23306,7 +23306,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -23322,7 +23322,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -23330,7 +23330,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -23338,7 +23338,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -23396,12 +23396,12 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -23812,7 +23812,7 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
       Reference? outcome});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -23954,7 +23954,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -24086,7 +24086,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -24110,7 +24110,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -24126,7 +24126,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -24134,7 +24134,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -24142,7 +24142,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -24315,7 +24315,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -24435,7 +24435,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -24481,7 +24481,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
@@ -24491,17 +24491,17 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -24794,7 +24794,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -24840,7 +24840,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<String>? comment,
@@ -24848,19 +24848,19 @@ abstract class _ResearchDefinition extends ResearchDefinition {
           final List<Element?>? commentElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -25237,7 +25237,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           Element? variableTypeElement,
       List<ResearchElementDefinitionCharacteristic> characteristic});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -25355,7 +25355,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -25487,7 +25487,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -25511,7 +25511,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -25527,7 +25527,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -25535,7 +25535,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -25543,7 +25543,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -25605,12 +25605,12 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -26005,7 +26005,7 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
       List<ResearchElementDefinitionCharacteristic> characteristic});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -26146,7 +26146,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -26278,7 +26278,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -26302,7 +26302,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -26318,7 +26318,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -26326,7 +26326,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -26334,7 +26334,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -26516,7 +26516,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @override
   final String? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -26636,7 +26636,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -26682,7 +26682,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
@@ -26692,17 +26692,17 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -27006,7 +27006,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -27052,7 +27052,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<String>? comment,
@@ -27060,19 +27060,19 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
           final List<Element?>? commentElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,

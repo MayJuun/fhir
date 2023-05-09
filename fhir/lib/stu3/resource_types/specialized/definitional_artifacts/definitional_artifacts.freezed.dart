@@ -212,7 +212,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Reference? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -331,11 +331,11 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -423,7 +423,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -463,7 +463,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -471,7 +471,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -589,12 +589,12 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1046,7 +1046,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1192,11 +1192,11 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1284,7 +1284,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1324,7 +1324,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1332,7 +1332,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -1565,7 +1565,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1651,7 +1651,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1676,12 +1676,12 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -2042,7 +2042,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
               final Stu3ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -2073,7 +2073,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final FhirBoolean? experimental,
           @JsonKey(name: '_experimental')
               final Element? experimentalElement,
-          final Date? date,
+          final FhirDate? date,
           @JsonKey(name: '_date')
               final Element? dateElement,
           final String? publisher,
@@ -2088,10 +2088,10 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final String? usage,
           @JsonKey(name: '_usage')
               final Element? usageElement,
-          final Date? approvalDate,
+          final FhirDate? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
-          final Date? lastReviewDate,
+          final FhirDate? lastReviewDate,
           @JsonKey(name: '_lastReviewDate')
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,
@@ -3061,7 +3061,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       List<PlanDefinitionGoal>? goal,
       List<PlanDefinitionAction>? action});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3156,11 +3156,11 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3252,7 +3252,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3292,7 +3292,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -3300,7 +3300,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -3358,12 +3358,12 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3678,7 +3678,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       List<PlanDefinitionAction>? action});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3790,11 +3790,11 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3886,7 +3886,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -3926,7 +3926,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -3934,7 +3934,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -4089,7 +4089,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4177,7 +4177,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -4202,12 +4202,12 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -4482,7 +4482,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -4514,7 +4514,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -4529,10 +4529,10 @@ abstract class _PlanDefinition extends PlanDefinition {
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -7209,7 +7209,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
           PlanDefinitionRelatedAction>;
   @useResult
   $Res call(
-      {Id? actionId,
+      {FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -7247,7 +7247,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res,
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -7330,7 +7330,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? actionId,
+      {FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -7371,7 +7371,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -8256,7 +8256,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           List<Element?>? subjectTypeElement,
       List<QuestionnaireItem>? item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8344,11 +8344,11 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8468,7 +8468,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -8476,7 +8476,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -8526,12 +8526,12 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8816,7 +8816,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       List<QuestionnaireItem>? item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8919,11 +8919,11 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9043,7 +9043,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -9051,7 +9051,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -9190,7 +9190,7 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -9296,12 +9296,12 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -9546,7 +9546,7 @@ abstract class _Questionnaire extends Questionnaire {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -9589,10 +9589,10 @@ abstract class _Questionnaire extends Questionnaire {
       final String? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -10019,7 +10019,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -10043,7 +10043,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       initialDecimal: freezed == initialDecimal
           ? _value.initialDecimal
           : initialDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       initialDecimalElement: freezed == initialDecimalElement
           ? _value.initialDecimalElement
           : initialDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10051,7 +10051,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       initialInteger: freezed == initialInteger
           ? _value.initialInteger
           : initialInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       initialIntegerElement: freezed == initialIntegerElement
           ? _value.initialIntegerElement
           : initialIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10059,7 +10059,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       initialDate: freezed == initialDate
           ? _value.initialDate
           : initialDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       initialDateElement: freezed == initialDateElement
           ? _value.initialDateElement
           : initialDateElement // ignore: cast_nullable_to_non_nullable
@@ -10075,7 +10075,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       initialTime: freezed == initialTime
           ? _value.initialTime
           : initialTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       initialTimeElement: freezed == initialTimeElement
           ? _value.initialTimeElement
           : initialTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10620,7 +10620,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -10644,7 +10644,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       initialDecimal: freezed == initialDecimal
           ? _value.initialDecimal
           : initialDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       initialDecimalElement: freezed == initialDecimalElement
           ? _value.initialDecimalElement
           : initialDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10652,7 +10652,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       initialInteger: freezed == initialInteger
           ? _value.initialInteger
           : initialInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       initialIntegerElement: freezed == initialIntegerElement
           ? _value.initialIntegerElement
           : initialIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10660,7 +10660,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       initialDate: freezed == initialDate
           ? _value.initialDate
           : initialDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       initialDateElement: freezed == initialDateElement
           ? _value.initialDateElement
           : initialDateElement // ignore: cast_nullable_to_non_nullable
@@ -10676,7 +10676,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       initialTime: freezed == initialTime
           ? _value.initialTime
           : initialTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       initialTimeElement: freezed == initialTimeElement
           ? _value.initialTimeElement
           : initialTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10852,7 +10852,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_readOnly')
   final Element? readOnlyElement;
   @override
-  final Decimal? maxLength;
+  final FhirDecimal? maxLength;
   @override
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
@@ -10874,17 +10874,17 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_initialBoolean')
   final Element? initialBooleanElement;
   @override
-  final Decimal? initialDecimal;
+  final FhirDecimal? initialDecimal;
   @override
   @JsonKey(name: '_initialDecimal')
   final Element? initialDecimalElement;
   @override
-  final Decimal? initialInteger;
+  final FhirDecimal? initialInteger;
   @override
   @JsonKey(name: '_initialInteger')
   final Element? initialIntegerElement;
   @override
-  final Date? initialDate;
+  final FhirDate? initialDate;
   @override
   @JsonKey(name: '_initialDate')
   final Element? initialDateElement;
@@ -10894,7 +10894,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_initialDateTime')
   final Element? initialDateTimeElement;
   @override
-  final Time? initialTime;
+  final FhirTime? initialTime;
   @override
   @JsonKey(name: '_initialTime')
   final Element? initialTimeElement;
@@ -11103,21 +11103,21 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       @JsonKey(name: '_repeats') final Element? repeatsElement,
       final FhirBoolean? readOnly,
       @JsonKey(name: '_readOnly') final Element? readOnlyElement,
-      final Decimal? maxLength,
+      final FhirDecimal? maxLength,
       @JsonKey(name: '_maxLength') final Element? maxLengthElement,
       final Reference? options,
       final List<QuestionnaireOption>? option,
       final FhirBoolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') final Element? initialBooleanElement,
-      final Decimal? initialDecimal,
+      final FhirDecimal? initialDecimal,
       @JsonKey(name: '_initialDecimal') final Element? initialDecimalElement,
-      final Decimal? initialInteger,
+      final FhirDecimal? initialInteger,
       @JsonKey(name: '_initialInteger') final Element? initialIntegerElement,
-      final Date? initialDate,
+      final FhirDate? initialDate,
       @JsonKey(name: '_initialDate') final Element? initialDateElement,
       final FhirDateTime? initialDateTime,
       @JsonKey(name: '_initialDateTime') final Element? initialDateTimeElement,
-      final Time? initialTime,
+      final FhirTime? initialTime,
       @JsonKey(name: '_initialTime') final Element? initialTimeElement,
       final String? initialString,
       @JsonKey(name: '_initialString') final Element? initialStringElement,
@@ -11409,7 +11409,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerDecimal: freezed == answerDecimal
           ? _value.answerDecimal
           : answerDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerDecimalElement: freezed == answerDecimalElement
           ? _value.answerDecimalElement
           : answerDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -11417,7 +11417,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerInteger: freezed == answerInteger
           ? _value.answerInteger
           : answerInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerIntegerElement: freezed == answerIntegerElement
           ? _value.answerIntegerElement
           : answerIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -11425,7 +11425,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerDate: freezed == answerDate
           ? _value.answerDate
           : answerDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       answerDateElement: freezed == answerDateElement
           ? _value.answerDateElement
           : answerDateElement // ignore: cast_nullable_to_non_nullable
@@ -11441,7 +11441,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerTime: freezed == answerTime
           ? _value.answerTime
           : answerTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       answerTimeElement: freezed == answerTimeElement
           ? _value.answerTimeElement
           : answerTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11779,7 +11779,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDecimal: freezed == answerDecimal
           ? _value.answerDecimal
           : answerDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerDecimalElement: freezed == answerDecimalElement
           ? _value.answerDecimalElement
           : answerDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -11787,7 +11787,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerInteger: freezed == answerInteger
           ? _value.answerInteger
           : answerInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerIntegerElement: freezed == answerIntegerElement
           ? _value.answerIntegerElement
           : answerIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -11795,7 +11795,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDate: freezed == answerDate
           ? _value.answerDate
           : answerDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       answerDateElement: freezed == answerDateElement
           ? _value.answerDateElement
           : answerDateElement // ignore: cast_nullable_to_non_nullable
@@ -11811,7 +11811,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerTime: freezed == answerTime
           ? _value.answerTime
           : answerTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       answerTimeElement: freezed == answerTimeElement
           ? _value.answerTimeElement
           : answerTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11901,17 +11901,17 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_answerBoolean')
   final Element? answerBooleanElement;
   @override
-  final Decimal? answerDecimal;
+  final FhirDecimal? answerDecimal;
   @override
   @JsonKey(name: '_answerDecimal')
   final Element? answerDecimalElement;
   @override
-  final Decimal? answerInteger;
+  final FhirDecimal? answerInteger;
   @override
   @JsonKey(name: '_answerInteger')
   final Element? answerIntegerElement;
   @override
-  final Date? answerDate;
+  final FhirDate? answerDate;
   @override
   @JsonKey(name: '_answerDate')
   final Element? answerDateElement;
@@ -11921,7 +11921,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
   @JsonKey(name: '_answerDateTime')
   final Element? answerDateTimeElement;
   @override
-  final Time? answerTime;
+  final FhirTime? answerTime;
   @override
   @JsonKey(name: '_answerTime')
   final Element? answerTimeElement;
@@ -12058,15 +12058,15 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       @JsonKey(name: '_hasAnswer') final Element? hasAnswerElement,
       final FhirBoolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') final Element? answerBooleanElement,
-      final Decimal? answerDecimal,
+      final FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') final Element? answerDecimalElement,
-      final Decimal? answerInteger,
+      final FhirDecimal? answerInteger,
       @JsonKey(name: '_answerInteger') final Element? answerIntegerElement,
-      final Date? answerDate,
+      final FhirDate? answerDate,
       @JsonKey(name: '_answerDate') final Element? answerDateElement,
       final FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') final Element? answerDateTimeElement,
-      final Time? answerTime,
+      final FhirTime? answerTime,
       @JsonKey(name: '_answerTime') final Element? answerTimeElement,
       final String? answerString,
       @JsonKey(name: '_answerString') final Element? answerStringElement,
@@ -12178,7 +12178,7 @@ abstract class $QuestionnaireOptionCopyWith<$Res> {
       _$QuestionnaireOptionCopyWithImpl<$Res, QuestionnaireOption>;
   @useResult
   $Res call(
-      {Decimal? valueInteger,
+      {FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -12222,7 +12222,7 @@ class _$QuestionnaireOptionCopyWithImpl<$Res, $Val extends QuestionnaireOption>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -12230,7 +12230,7 @@ class _$QuestionnaireOptionCopyWithImpl<$Res, $Val extends QuestionnaireOption>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12238,7 +12238,7 @@ class _$QuestionnaireOptionCopyWithImpl<$Res, $Val extends QuestionnaireOption>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -12328,7 +12328,7 @@ abstract class _$$_QuestionnaireOptionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? valueInteger,
+      {FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       FhirDate? valueDate,
       @JsonKey(name: '_valueDate') Element? valueDateElement,
@@ -12375,7 +12375,7 @@ class __$$_QuestionnaireOptionCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -12383,7 +12383,7 @@ class __$$_QuestionnaireOptionCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12391,7 +12391,7 @@ class __$$_QuestionnaireOptionCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -12431,17 +12431,17 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
       _$$_QuestionnaireOptionFromJson(json);
 
   @override
-  final Decimal? valueInteger;
+  final FhirDecimal? valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -12514,11 +12514,11 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
 
 abstract class _QuestionnaireOption extends QuestionnaireOption {
   factory _QuestionnaireOption(
-      {final Decimal? valueInteger,
+      {final FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
@@ -12716,7 +12716,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       List<DataRequirement>? dataRequirement,
       Reference? operationDefinition});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -12810,11 +12810,11 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12902,7 +12902,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -12942,7 +12942,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -12950,7 +12950,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -13008,12 +13008,12 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -13326,7 +13326,7 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
       Reference? operationDefinition});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -13437,11 +13437,11 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -13529,7 +13529,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -13569,7 +13569,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -13577,7 +13577,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -13729,7 +13729,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -13815,7 +13815,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -13840,12 +13840,12 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -14113,7 +14113,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -14144,7 +14144,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -14159,10 +14159,10 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,

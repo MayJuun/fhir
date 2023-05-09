@@ -303,7 +303,7 @@ abstract class $EncounterCopyWith<$Res> {
       EncounterAdmission? admission,
       List<EncounterLocation>? location});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -383,11 +383,11 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -545,12 +545,12 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -783,7 +783,7 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       List<EncounterLocation>? location});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -875,11 +875,11 @@ class __$$_EncounterCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1127,7 +1127,7 @@ class _$_Encounter extends _Encounter {
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -1740,7 +1740,7 @@ abstract class _Encounter extends Encounter {
       {@JsonKey(unknownEnumValue: R5ResourceType.Encounter)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3437,7 +3437,7 @@ class _$EncounterDiagnosisCopyWithImpl<$Res, $Val extends EncounterDiagnosis>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -3546,7 +3546,7 @@ class __$$_EncounterDiagnosisCopyWithImpl<$Res>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -3657,7 +3657,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
 
   /// [rank] Ranking of the diagnosis (for each role type).
   @override
-  final PositiveInt? rank;
+  final FhirPositiveInt? rank;
 
   /// [rankElement] ("_rank") Extensions for rank
   @override
@@ -3721,7 +3721,7 @@ abstract class _EncounterDiagnosis extends EncounterDiagnosis {
           final List<FhirExtension>? modifierExtension,
           required final Reference condition,
           final CodeableConcept? use,
-          final PositiveInt? rank,
+          final FhirPositiveInt? rank,
           @JsonKey(name: '_rank') final Element? rankElement}) =
       _$_EncounterDiagnosis;
   _EncounterDiagnosis._() : super._();
@@ -5180,7 +5180,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       List<Reference>? careTeam,
       List<Reference>? account});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5237,11 +5237,11 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5331,12 +5331,12 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5474,7 +5474,7 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
       List<Reference>? account});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5537,11 +5537,11 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5692,7 +5692,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -6045,7 +6045,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       {@JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -6780,7 +6780,7 @@ class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res,
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -6890,7 +6890,7 @@ class __$$_EpisodeOfCareDiagnosisCopyWithImpl<$Res>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -6998,7 +6998,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
 
   /// [rank] Ranking of the diagnosis (for each role type).
   @override
-  final PositiveInt? rank;
+  final FhirPositiveInt? rank;
 
   /// [rankElement] ("_rank") Extensions for rank
   @override
@@ -7062,7 +7062,7 @@ abstract class _EpisodeOfCareDiagnosis extends EpisodeOfCareDiagnosis {
           final List<FhirExtension>? modifierExtension,
           required final CodeableReference condition,
           final CodeableConcept? role,
-          final PositiveInt? rank,
+          final FhirPositiveInt? rank,
           @JsonKey(name: '_rank') final Element? rankElement}) =
       _$_EpisodeOfCareDiagnosis;
   _EpisodeOfCareDiagnosis._() : super._();
@@ -7280,7 +7280,7 @@ abstract class $FlagCopyWith<$Res> {
       Reference? encounter,
       Reference? author});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7334,11 +7334,11 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7412,12 +7412,12 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7557,7 +7557,7 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       Reference? author});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7616,11 +7616,11 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7745,7 +7745,7 @@ class _$_Flag extends _Flag {
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -8021,7 +8021,7 @@ abstract class _Flag extends Flag {
       {@JsonKey(unknownEnumValue: R5ResourceType.Flag)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -8604,7 +8604,7 @@ abstract class $LibraryCopyWith<$Res> {
       List<DataRequirement>? dataRequirement,
       List<Attachment>? content});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8717,11 +8717,11 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8841,7 +8841,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -8857,7 +8857,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -8865,7 +8865,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -8881,7 +8881,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -8889,7 +8889,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -8967,12 +8967,12 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9371,7 +9371,7 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       List<Attachment>? content});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9506,11 +9506,11 @@ class __$$_LibraryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9630,7 +9630,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -9646,7 +9646,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -9654,7 +9654,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -9670,7 +9670,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -9678,7 +9678,7 @@ class __$$_LibraryCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -9878,7 +9878,7 @@ class _$_Library extends _Library {
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -10149,7 +10149,7 @@ class _$_Library extends _Library {
   /// [description] A free text natural language description of the library
   ///  from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -10195,7 +10195,7 @@ class _$_Library extends _Library {
   /// [purpose] Explanation of why this library is needed and why it has been
   ///  designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -10206,7 +10206,7 @@ class _$_Library extends _Library {
   ///  contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the library.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -10230,7 +10230,7 @@ class _$_Library extends _Library {
   ///  the publisher. Approval happens once when the content is officially
   ///  approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -10241,7 +10241,7 @@ class _$_Library extends _Library {
   ///  reviewed. Review happens periodically after approval but does not
   ///  change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for
   ///  lastReviewDate
@@ -10632,7 +10632,7 @@ abstract class _Library extends Library {
       {@JsonKey(unknownEnumValue: R5ResourceType.Library)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10674,24 +10674,24 @@ abstract class _Library extends Library {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -11294,7 +11294,7 @@ abstract class $FhirListCopyWith<$Res> {
       List<ListEntry>? entry,
       CodeableConcept? emptyReason});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11360,11 +11360,11 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11470,12 +11470,12 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11683,7 +11683,7 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
       CodeableConcept? emptyReason});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11760,11 +11760,11 @@ class __$$_FhirListCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11934,7 +11934,7 @@ class _$_FhirList extends _FhirList {
   ///  maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   ///  the resource was constructed, and which must be understood when
@@ -12272,7 +12272,7 @@ abstract class _FhirList extends FhirList {
       {@JsonKey(unknownEnumValue: R5ResourceType.FhirList)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

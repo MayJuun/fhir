@@ -11,10 +11,10 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Measure) ??
           Stu3ResourceType.Measure,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -22,7 +22,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -63,11 +63,11 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -89,13 +89,13 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : Date.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate']),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : Date.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate']),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -575,10 +575,10 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MeasureReport) ??
           Stu3ResourceType.MeasureReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -586,7 +586,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -617,7 +617,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
       patient: json['patient'] == null
           ? null
           : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -701,7 +701,7 @@ _$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
           .toList(),
       measureScore: json['measureScore'] == null
           ? null
-          : Decimal.fromJson(json['measureScore']),
+          : FhirDecimal.fromJson(json['measureScore']),
       measureScoreElement: json['_measureScore'] == null
           ? null
           : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
@@ -741,7 +741,7 @@ _$_MeasureReportPopulation _$$_MeasureReportPopulationFromJson(
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      count: json['count'] == null ? null : Decimal.fromJson(json['count']),
+      count: json['count'] == null ? null : FhirDecimal.fromJson(json['count']),
       countElement: json['_count'] == null
           ? null
           : Element.fromJson(json['_count'] as Map<String, dynamic>),
@@ -807,7 +807,7 @@ _$_MeasureReportStratum _$$_MeasureReportStratumFromJson(
           .toList(),
       measureScore: json['measureScore'] == null
           ? null
-          : Decimal.fromJson(json['measureScore']),
+          : FhirDecimal.fromJson(json['measureScore']),
       measureScoreElement: json['_measureScore'] == null
           ? null
           : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
@@ -841,7 +841,7 @@ _$_MeasureReportPopulation1 _$$_MeasureReportPopulation1FromJson(
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      count: json['count'] == null ? null : Decimal.fromJson(json['count']),
+      count: json['count'] == null ? null : FhirDecimal.fromJson(json['count']),
       countElement: json['_count'] == null
           ? null
           : Element.fromJson(json['_count'] as Map<String, dynamic>),

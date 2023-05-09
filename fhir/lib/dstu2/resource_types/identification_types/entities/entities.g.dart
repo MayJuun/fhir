@@ -11,10 +11,10 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Location) ??
           Dstu2ResourceType.Location,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -22,7 +22,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -241,23 +241,24 @@ const _$LocationModeEnumMap = {
 
 _$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
     _$_LocationPosition(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      longitude: Decimal.fromJson(json['longitude']),
+      longitude: FhirDecimal.fromJson(json['longitude']),
       longitudeElement: json['_longitude'] == null
           ? null
           : Element.fromJson(json['_longitude'] as Map<String, dynamic>),
-      latitude: Decimal.fromJson(json['latitude']),
+      latitude: FhirDecimal.fromJson(json['latitude']),
       latitudeElement: json['_latitude'] == null
           ? null
           : Element.fromJson(json['_latitude'] as Map<String, dynamic>),
-      altitude:
-          json['altitude'] == null ? null : Decimal.fromJson(json['altitude']),
+      altitude: json['altitude'] == null
+          ? null
+          : FhirDecimal.fromJson(json['altitude']),
       altitudeElement: json['_altitude'] == null
           ? null
           : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
@@ -291,10 +292,10 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Substance) ??
           Dstu2ResourceType.Substance,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -302,7 +303,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -375,7 +376,7 @@ Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
 
 _$_SubstanceInstance _$$_SubstanceInstanceFromJson(Map<String, dynamic> json) =>
     _$_SubstanceInstance(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -420,7 +421,7 @@ Map<String, dynamic> _$$_SubstanceInstanceToJson(
 _$_SubstanceIngredient _$$_SubstanceIngredientFromJson(
         Map<String, dynamic> json) =>
     _$_SubstanceIngredient(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -458,10 +459,10 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Person) ??
           Dstu2ResourceType.Person,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -469,7 +470,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -499,8 +500,9 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
       genderElement: json['_gender'] == null
           ? null
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDate: json['birthDate'] == null
+          ? null
+          : FhirDate.fromJson(json['birthDate']),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -514,7 +516,8 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
           ? null
           : Reference.fromJson(
               json['managingOrganization'] as Map<String, dynamic>),
-      active: json['active'] == null ? null : Boolean.fromJson(json['active']),
+      active:
+          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
       activeElement: json['_active'] == null
           ? null
           : Element.fromJson(json['_active'] as Map<String, dynamic>),
@@ -573,7 +576,7 @@ const _$PersonGenderEnumMap = {
 
 _$_PersonLink _$$_PersonLinkFromJson(Map<String, dynamic> json) =>
     _$_PersonLink(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -621,10 +624,10 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Contract) ??
           Dstu2ResourceType.Contract,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -632,7 +635,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -763,7 +766,7 @@ Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
 
 _$_ContractActor _$$_ContractActorFromJson(Map<String, dynamic> json) =>
     _$_ContractActor(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -798,7 +801,7 @@ Map<String, dynamic> _$$_ContractActorToJson(_$_ContractActor instance) {
 _$_ContractValuedItem _$$_ContractValuedItemFromJson(
         Map<String, dynamic> json) =>
     _$_ContractValuedItem(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -827,11 +830,13 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
       unitPrice: json['unitPrice'] == null
           ? null
           : Quantity.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
-      points: json['points'] == null ? null : Decimal.fromJson(json['points']),
+      points:
+          json['points'] == null ? null : FhirDecimal.fromJson(json['points']),
       pointsElement: json['_points'] == null
           ? null
           : Element.fromJson(json['_points'] as Map<String, dynamic>),
@@ -879,7 +884,7 @@ Map<String, dynamic> _$$_ContractValuedItemToJson(
 
 _$_ContractSigner _$$_ContractSignerFromJson(Map<String, dynamic> json) =>
     _$_ContractSigner(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -913,7 +918,7 @@ Map<String, dynamic> _$$_ContractSignerToJson(_$_ContractSigner instance) {
 
 _$_ContractTerm _$$_ContractTermFromJson(Map<String, dynamic> json) =>
     _$_ContractTerm(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -996,7 +1001,7 @@ Map<String, dynamic> _$$_ContractTermToJson(_$_ContractTerm instance) {
 
 _$_ContractTermActor _$$_ContractTermActorFromJson(Map<String, dynamic> json) =>
     _$_ContractTermActor(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1031,7 +1036,7 @@ Map<String, dynamic> _$$_ContractTermActorToJson(
 
 _$_ContractFriendly _$$_ContractFriendlyFromJson(Map<String, dynamic> json) =>
     _$_ContractFriendly(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1069,7 +1074,7 @@ Map<String, dynamic> _$$_ContractFriendlyToJson(_$_ContractFriendly instance) {
 
 _$_ContractLegal _$$_ContractLegalFromJson(Map<String, dynamic> json) =>
     _$_ContractLegal(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1106,7 +1111,7 @@ Map<String, dynamic> _$$_ContractLegalToJson(_$_ContractLegal instance) {
 
 _$_ContractRule _$$_ContractRuleFromJson(Map<String, dynamic> json) =>
     _$_ContractRule(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

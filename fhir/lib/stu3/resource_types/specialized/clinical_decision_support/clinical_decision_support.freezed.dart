@@ -110,7 +110,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       Reference? result,
       List<DataRequirement>? dataRequirement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -179,11 +179,11 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -219,7 +219,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -293,12 +293,12 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -528,7 +528,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       List<DataRequirement>? dataRequirement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -610,11 +610,11 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -650,7 +650,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -780,7 +780,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1005,7 +1005,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

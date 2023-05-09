@@ -11,10 +11,10 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Coverage) ??
           Stu3ResourceType.Coverage,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -22,7 +22,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -82,7 +82,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       sequenceElement: json['_sequence'] == null
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      order: json['order'] == null ? null : Decimal.fromJson(json['order']),
+      order: json['order'] == null ? null : FhirDecimal.fromJson(json['order']),
       orderElement: json['_order'] == null
           ? null
           : Element.fromJson(json['_order'] as Map<String, dynamic>),
@@ -360,10 +360,10 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EligibilityRequest) ??
           Stu3ResourceType.EligibilityRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -371,7 +371,7 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -402,7 +402,7 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
           : Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null
           ? null
-          : Date.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate']),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -503,10 +503,10 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EligibilityResponse) ??
           Stu3ResourceType.EligibilityResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -514,7 +514,7 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -561,8 +561,9 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
       insurer: json['insurer'] == null
           ? null
           : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
-      inforce:
-          json['inforce'] == null ? null : Boolean.fromJson(json['inforce']),
+      inforce: json['inforce'] == null
+          ? null
+          : FhirBoolean.fromJson(json['inforce']),
       inforceElement: json['_inforce'] == null
           ? null
           : Element.fromJson(json['_inforce'] as Map<String, dynamic>),
@@ -669,7 +670,7 @@ _$_EligibilityResponseBenefitBalance
                   json['subCategory'] as Map<String, dynamic>),
           excluded: json['excluded'] == null
               ? null
-              : Boolean.fromJson(json['excluded']),
+              : FhirBoolean.fromJson(json['excluded']),
           excludedElement: json['_excluded'] == null
               ? null
               : Element.fromJson(json['_excluded'] as Map<String, dynamic>),
@@ -730,7 +731,7 @@ _$_EligibilityResponseFinancial _$$_EligibilityResponseFinancialFromJson(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       allowedUnsignedInt: json['allowedUnsignedInt'] == null
           ? null
-          : Decimal.fromJson(json['allowedUnsignedInt']),
+          : FhirDecimal.fromJson(json['allowedUnsignedInt']),
       allowedUnsignedIntElement: json['_allowedUnsignedInt'] == null
           ? null
           : Element.fromJson(
@@ -744,7 +745,7 @@ _$_EligibilityResponseFinancial _$$_EligibilityResponseFinancialFromJson(
           : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
       usedUnsignedInt: json['usedUnsignedInt'] == null
           ? null
-          : Decimal.fromJson(json['usedUnsignedInt']),
+          : FhirDecimal.fromJson(json['usedUnsignedInt']),
       usedUnsignedIntElement: json['_usedUnsignedInt'] == null
           ? null
           : Element.fromJson(json['_usedUnsignedInt'] as Map<String, dynamic>),
@@ -795,10 +796,10 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EnrollmentRequest) ??
           Stu3ResourceType.EnrollmentRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -806,7 +807,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -896,10 +897,10 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EnrollmentResponse) ??
           Stu3ResourceType.EnrollmentResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -907,7 +908,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),

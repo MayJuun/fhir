@@ -112,7 +112,7 @@ abstract class $MediaCopyWith<$Res> {
           Element? durationElement,
       Attachment content});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -178,11 +178,11 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -250,7 +250,7 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       heightElement: freezed == heightElement
           ? _value.heightElement
           : heightElement // ignore: cast_nullable_to_non_nullable
@@ -258,7 +258,7 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       widthElement: freezed == widthElement
           ? _value.widthElement
           : widthElement // ignore: cast_nullable_to_non_nullable
@@ -266,7 +266,7 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
       frames: freezed == frames
           ? _value.frames
           : frames // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       framesElement: freezed == framesElement
           ? _value.framesElement
           : framesElement // ignore: cast_nullable_to_non_nullable
@@ -274,7 +274,7 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -288,12 +288,12 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -499,7 +499,7 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
       Attachment content});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -574,11 +574,11 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -646,7 +646,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       heightElement: freezed == heightElement
           ? _value.heightElement
           : heightElement // ignore: cast_nullable_to_non_nullable
@@ -654,7 +654,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       widthElement: freezed == widthElement
           ? _value.widthElement
           : widthElement // ignore: cast_nullable_to_non_nullable
@@ -662,7 +662,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
       frames: freezed == frames
           ? _value.frames
           : frames // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       framesElement: freezed == framesElement
           ? _value.framesElement
           : framesElement // ignore: cast_nullable_to_non_nullable
@@ -670,7 +670,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -741,7 +741,7 @@ class _$_Media extends _Media {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -814,22 +814,22 @@ class _$_Media extends _Media {
   @JsonKey(name: '_deviceName')
   final Element? deviceNameElement;
   @override
-  final PositiveInt? height;
+  final FhirPositiveInt? height;
   @override
   @JsonKey(name: '_height')
   final Element? heightElement;
   @override
-  final PositiveInt? width;
+  final FhirPositiveInt? width;
   @override
   @JsonKey(name: '_width')
   final Element? widthElement;
   @override
-  final PositiveInt? frames;
+  final FhirPositiveInt? frames;
   @override
   @JsonKey(name: '_frames')
   final Element? framesElement;
   @override
-  final UnsignedInt? duration;
+  final FhirUnsignedInt? duration;
   @override
   @JsonKey(name: '_duration')
   final Element? durationElement;
@@ -946,7 +946,7 @@ abstract class _Media extends Media {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -969,16 +969,16 @@ abstract class _Media extends Media {
       final String? deviceName,
       @JsonKey(name: '_deviceName')
           final Element? deviceNameElement,
-      final PositiveInt? height,
+      final FhirPositiveInt? height,
       @JsonKey(name: '_height')
           final Element? heightElement,
-      final PositiveInt? width,
+      final FhirPositiveInt? width,
       @JsonKey(name: '_width')
           final Element? widthElement,
-      final PositiveInt? frames,
+      final FhirPositiveInt? frames,
       @JsonKey(name: '_frames')
           final Element? framesElement,
-      final UnsignedInt? duration,
+      final FhirUnsignedInt? duration,
       @JsonKey(name: '_duration')
           final Element? durationElement,
       required final Attachment content}) = _$_Media;
@@ -1106,7 +1106,7 @@ abstract class $BinaryCopyWith<$Res> {
           Element? contentTypeElement,
       FhirBase64Binary? content});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $ElementCopyWith<$Res>? get contentTypeElement;
@@ -1144,11 +1144,11 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1182,12 +1182,12 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1252,7 +1252,7 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
       FhirBase64Binary? content});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1290,11 +1290,11 @@ class __$$_BinaryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1356,7 +1356,7 @@ class _$_Binary extends _Binary {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1438,7 +1438,7 @@ abstract class _Binary extends Binary {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1542,7 +1542,7 @@ abstract class $BundleCopyWith<$Res> {
       List<BundleEntry>? entry,
       Signature? signature});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -1586,11 +1586,11 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1618,7 +1618,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -1640,12 +1640,12 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1740,7 +1740,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       Signature? signature});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1786,11 +1786,11 @@ class __$$_BundleCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1818,7 +1818,7 @@ class __$$_BundleCopyWithImpl<$Res>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -1876,7 +1876,7 @@ class _$_Bundle extends _Bundle {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1894,7 +1894,7 @@ class _$_Bundle extends _Bundle {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final UnsignedInt? total;
+  final FhirUnsignedInt? total;
   @override
   @JsonKey(name: '_total')
   final Element? totalElement;
@@ -1993,7 +1993,7 @@ abstract class _Bundle extends Bundle {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2004,7 +2004,7 @@ abstract class _Bundle extends Bundle {
           required final BundleType type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final UnsignedInt? total,
+      final FhirUnsignedInt? total,
       @JsonKey(name: '_total')
           final Element? totalElement,
       final List<BundleLink>? link,
@@ -2087,7 +2087,7 @@ abstract class $BundleLinkCopyWith<$Res> {
       _$BundleLinkCopyWithImpl<$Res, BundleLink>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2126,7 +2126,7 @@ class _$BundleLinkCopyWithImpl<$Res, $Val extends BundleLink>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2192,7 +2192,7 @@ abstract class _$$_BundleLinkCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2231,7 +2231,7 @@ class __$$_BundleLinkCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2459,7 +2459,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       _$BundleEntryCopyWithImpl<$Res, BundleEntry>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2506,7 +2506,7 @@ class _$BundleEntryCopyWithImpl<$Res, $Val extends BundleEntry>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2608,7 +2608,7 @@ abstract class _$$_BundleEntryCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2657,7 +2657,7 @@ class __$$_BundleEntryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2927,7 +2927,7 @@ abstract class $BundleEntrySearchCopyWith<$Res> {
       _$BundleEntrySearchCopyWithImpl<$Res, BundleEntrySearch>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2966,7 +2966,7 @@ class _$BundleEntrySearchCopyWithImpl<$Res, $Val extends BundleEntrySearch>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2990,7 +2990,7 @@ class _$BundleEntrySearchCopyWithImpl<$Res, $Val extends BundleEntrySearch>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -3032,7 +3032,7 @@ abstract class _$$_BundleEntrySearchCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3071,7 +3071,7 @@ class __$$_BundleEntrySearchCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3095,7 +3095,7 @@ class __$$_BundleEntrySearchCopyWithImpl<$Res>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -3166,7 +3166,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
   @JsonKey(name: '_mode')
   final Element? modeElement;
   @override
-  final Decimal? score;
+  final FhirDecimal? score;
   @override
   @JsonKey(name: '_score')
   final Element? scoreElement;
@@ -3232,7 +3232,7 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
           @JsonKey(unknownEnumValue: SearchMode.unknown) final SearchMode? mode,
           @JsonKey(name: '_mode') final Element? modeElement,
-          final Decimal? score,
+          final FhirDecimal? score,
           @JsonKey(name: '_score') final Element? scoreElement}) =
       _$_BundleEntrySearch;
   _BundleEntrySearch._() : super._();
@@ -3313,7 +3313,7 @@ abstract class $BundleEntryRequestCopyWith<$Res> {
       _$BundleEntryRequestCopyWithImpl<$Res, BundleEntryRequest>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3372,7 +3372,7 @@ class _$BundleEntryRequestCopyWithImpl<$Res, $Val extends BundleEntryRequest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3412,7 +3412,7 @@ class _$BundleEntryRequestCopyWithImpl<$Res, $Val extends BundleEntryRequest>
       ifModifiedSince: freezed == ifModifiedSince
           ? _value.ifModifiedSince
           : ifModifiedSince // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       ifModifiedSinceElement: freezed == ifModifiedSinceElement
           ? _value.ifModifiedSinceElement
           : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
@@ -3518,7 +3518,7 @@ abstract class _$$_BundleEntryRequestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3581,7 +3581,7 @@ class __$$_BundleEntryRequestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3621,7 +3621,7 @@ class __$$_BundleEntryRequestCopyWithImpl<$Res>
       ifModifiedSince: freezed == ifModifiedSince
           ? _value.ifModifiedSince
           : ifModifiedSince // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       ifModifiedSinceElement: freezed == ifModifiedSinceElement
           ? _value.ifModifiedSinceElement
           : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
@@ -3726,7 +3726,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
   @JsonKey(name: '_ifNoneMatch')
   final Element? ifNoneMatchElement;
   @override
-  final Instant? ifModifiedSince;
+  final FhirInstant? ifModifiedSince;
   @override
   @JsonKey(name: '_ifModifiedSince')
   final Element? ifModifiedSinceElement;
@@ -3835,7 +3835,7 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
       final String? ifNoneMatch,
       @JsonKey(name: '_ifNoneMatch')
           final Element? ifNoneMatchElement,
-      final Instant? ifModifiedSince,
+      final FhirInstant? ifModifiedSince,
       @JsonKey(name: '_ifModifiedSince')
           final Element? ifModifiedSinceElement,
       final String? ifMatch,
@@ -3935,7 +3935,7 @@ abstract class $BundleEntryResponseCopyWith<$Res> {
       _$BundleEntryResponseCopyWithImpl<$Res, BundleEntryResponse>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3984,7 +3984,7 @@ class _$BundleEntryResponseCopyWithImpl<$Res, $Val extends BundleEntryResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4024,7 +4024,7 @@ class _$BundleEntryResponseCopyWithImpl<$Res, $Val extends BundleEntryResponse>
       lastModified: freezed == lastModified
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastModifiedElement: freezed == lastModifiedElement
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -4090,7 +4090,7 @@ abstract class _$$_BundleEntryResponseCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -4141,7 +4141,7 @@ class __$$_BundleEntryResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4181,7 +4181,7 @@ class __$$_BundleEntryResponseCopyWithImpl<$Res>
       lastModified: freezed == lastModified
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastModifiedElement: freezed == lastModifiedElement
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -4265,7 +4265,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
   @JsonKey(name: '_etag')
   final Element? etagElement;
   @override
-  final Instant? lastModified;
+  final FhirInstant? lastModified;
   @override
   @JsonKey(name: '_lastModified')
   final Element? lastModifiedElement;
@@ -4347,7 +4347,7 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
           @JsonKey(name: '_location') final Element? locationElement,
           final String? etag,
           @JsonKey(name: '_etag') final Element? etagElement,
-          final Instant? lastModified,
+          final FhirInstant? lastModified,
           @JsonKey(name: '_lastModified') final Element? lastModifiedElement}) =
       _$_BundleEntryResponse;
   _BundleEntryResponse._() : super._();
@@ -4455,7 +4455,7 @@ abstract class $BasicCopyWith<$Res> {
       @JsonKey(name: '_created')
           Element? createdElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4504,11 +4504,11 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4560,7 +4560,7 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
       created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -4570,12 +4570,12 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4692,7 +4692,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
           Element? createdElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4744,11 +4744,11 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4800,7 +4800,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
       created: freezed == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       createdElement: freezed == createdElement
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
@@ -4850,7 +4850,7 @@ class _$_Basic extends _Basic {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4912,7 +4912,7 @@ class _$_Basic extends _Basic {
   @override
   final Reference? author;
   @override
-  final Date? created;
+  final FhirDate? created;
   @override
   @JsonKey(name: '_created')
   final Element? createdElement;
@@ -4997,7 +4997,7 @@ abstract class _Basic extends Basic {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5013,7 +5013,7 @@ abstract class _Basic extends Basic {
       required final CodeableConcept code,
       final Reference? subject,
       final Reference? author,
-      final Date? created,
+      final FhirDate? created,
       @JsonKey(name: '_created')
           final Element? createdElement}) = _$_Basic;
   _Basic._() : super._();

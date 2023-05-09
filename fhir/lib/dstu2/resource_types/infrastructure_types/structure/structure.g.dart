@@ -11,10 +11,10 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Media) ??
           Dstu2ResourceType.Media,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -22,7 +22,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -59,23 +59,27 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
       deviceNameElement: json['_deviceName'] == null
           ? null
           : Element.fromJson(json['_deviceName'] as Map<String, dynamic>),
-      height:
-          json['height'] == null ? null : PositiveInt.fromJson(json['height']),
+      height: json['height'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['height']),
       heightElement: json['_height'] == null
           ? null
           : Element.fromJson(json['_height'] as Map<String, dynamic>),
-      width: json['width'] == null ? null : PositiveInt.fromJson(json['width']),
+      width: json['width'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['width']),
       widthElement: json['_width'] == null
           ? null
           : Element.fromJson(json['_width'] as Map<String, dynamic>),
-      frames:
-          json['frames'] == null ? null : PositiveInt.fromJson(json['frames']),
+      frames: json['frames'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['frames']),
       framesElement: json['_frames'] == null
           ? null
           : Element.fromJson(json['_frames'] as Map<String, dynamic>),
       duration: json['duration'] == null
           ? null
-          : UnsignedInt.fromJson(json['duration']),
+          : FhirUnsignedInt.fromJson(json['duration']),
       durationElement: json['_duration'] == null
           ? null
           : Element.fromJson(json['_duration'] as Map<String, dynamic>),
@@ -237,10 +241,10 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Binary) ??
           Dstu2ResourceType.Binary,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -248,19 +252,19 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
       contentType: json['contentType'] == null
           ? null
-          : Code.fromJson(json['contentType']),
+          : FhirCode.fromJson(json['contentType']),
       contentTypeElement: json['_contentType'] == null
           ? null
           : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
       content: json['content'] == null
           ? null
-          : FhirBase64Binary?.fromJson(json['content']),
+          : FhirBase64Binary.fromJson(json['content']),
     )
       ..text = json['text'] == null
           ? null
@@ -309,10 +313,10 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Bundle) ??
           Dstu2ResourceType.Bundle,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -320,7 +324,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -329,7 +333,9 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      total: json['total'] == null ? null : UnsignedInt.fromJson(json['total']),
+      total: json['total'] == null
+          ? null
+          : FhirUnsignedInt.fromJson(json['total']),
       totalElement: json['_total'] == null
           ? null
           : Element.fromJson(json['_total'] as Map<String, dynamic>),
@@ -404,7 +410,7 @@ const _$BundleTypeEnumMap = {
 
 _$_BundleLink _$$_BundleLinkFromJson(Map<String, dynamic> json) =>
     _$_BundleLink(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -448,7 +454,7 @@ Map<String, dynamic> _$$_BundleLinkToJson(_$_BundleLink instance) {
 
 _$_BundleEntry _$$_BundleEntryFromJson(Map<String, dynamic> json) =>
     _$_BundleEntry(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -509,7 +515,7 @@ Map<String, dynamic> _$$_BundleEntryToJson(_$_BundleEntry instance) {
 
 _$_BundleEntrySearch _$$_BundleEntrySearchFromJson(Map<String, dynamic> json) =>
     _$_BundleEntrySearch(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -524,7 +530,7 @@ _$_BundleEntrySearch _$$_BundleEntrySearchFromJson(Map<String, dynamic> json) =>
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      score: json['score'] == null ? null : Decimal.fromJson(json['score']),
+      score: json['score'] == null ? null : FhirDecimal.fromJson(json['score']),
       scoreElement: json['_score'] == null
           ? null
           : Element.fromJson(json['_score'] as Map<String, dynamic>),
@@ -563,7 +569,7 @@ const _$SearchModeEnumMap = {
 _$_BundleEntryRequest _$$_BundleEntryRequestFromJson(
         Map<String, dynamic> json) =>
     _$_BundleEntryRequest(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -588,7 +594,7 @@ _$_BundleEntryRequest _$$_BundleEntryRequestFromJson(
           : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
       ifModifiedSince: json['ifModifiedSince'] == null
           ? null
-          : Instant.fromJson(json['ifModifiedSince']),
+          : FhirInstant.fromJson(json['ifModifiedSince']),
       ifModifiedSinceElement: json['_ifModifiedSince'] == null
           ? null
           : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
@@ -644,7 +650,7 @@ const _$RequestMethodEnumMap = {
 _$_BundleEntryResponse _$$_BundleEntryResponseFromJson(
         Map<String, dynamic> json) =>
     _$_BundleEntryResponse(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -669,7 +675,7 @@ _$_BundleEntryResponse _$$_BundleEntryResponseFromJson(
           : Element.fromJson(json['_etag'] as Map<String, dynamic>),
       lastModified: json['lastModified'] == null
           ? null
-          : Instant.fromJson(json['lastModified']),
+          : FhirInstant.fromJson(json['lastModified']),
       lastModifiedElement: json['_lastModified'] == null
           ? null
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -707,10 +713,10 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Basic) ??
           Dstu2ResourceType.Basic,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -718,7 +724,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -744,7 +750,8 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
       author: json['author'] == null
           ? null
           : Reference.fromJson(json['author'] as Map<String, dynamic>),
-      created: json['created'] == null ? null : Date.fromJson(json['created']),
+      created:
+          json['created'] == null ? null : FhirDate.fromJson(json['created']),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),

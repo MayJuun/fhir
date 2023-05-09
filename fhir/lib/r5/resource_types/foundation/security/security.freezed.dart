@@ -178,7 +178,7 @@ abstract class $AuditEventCopyWith<$Res> {
       AuditEventSource source,
       List<AuditEventEntity>? entity});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -246,11 +246,11 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -322,7 +322,7 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
       recorded: freezed == recorded
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       recordedElement: freezed == recordedElement
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -364,12 +364,12 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -572,7 +572,7 @@ abstract class _$$_AuditEventCopyWith<$Res>
       List<AuditEventEntity>? entity});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -651,11 +651,11 @@ class __$$_AuditEventCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -727,7 +727,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
       recorded: freezed == recorded
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       recordedElement: freezed == recordedElement
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -837,7 +837,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -955,7 +955,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   /// [recorded] The time when the event was recorded.
   @override
-  final Instant? recorded;
+  final FhirInstant? recorded;
 
   /// [recordedElement] ("_recorded") Extensions for recorded
   @override
@@ -1144,7 +1144,7 @@ abstract class _AuditEvent extends AuditEvent {
       {@JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1168,7 +1168,7 @@ abstract class _AuditEvent extends AuditEvent {
       final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
           final Element? occurredDateTimeElement,
-      final Instant? recorded,
+      final FhirInstant? recorded,
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
       final AuditEventOutcome? outcome,
@@ -3745,7 +3745,7 @@ class _$AuditEventDetailCopyWithImpl<$Res, $Val extends AuditEventDetail>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -3761,7 +3761,7 @@ class _$AuditEventDetailCopyWithImpl<$Res, $Val extends AuditEventDetail>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4065,7 +4065,7 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -4081,7 +4081,7 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4239,7 +4239,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
   /// [valueInteger] The  value of the extra detail.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -4256,7 +4256,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
   /// [valueTime] The  value of the extra detail.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @override
@@ -4394,12 +4394,12 @@ abstract class _AuditEventDetail extends AuditEventDetail {
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
       final Range? valueRange,
       final Ratio? valueRatio,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
       final FhirDateTime? valueDateTime,
@@ -4687,7 +4687,7 @@ abstract class $ConsentCopyWith<$Res> {
       List<ConsentVerification>? verification,
       ConsentProvision? provision});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4751,11 +4751,11 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4811,7 +4811,7 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4869,12 +4869,12 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5034,7 +5034,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       ConsentProvision? provision});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5104,11 +5104,11 @@ class __$$_ConsentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5164,7 +5164,7 @@ class __$$_ConsentCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -5294,7 +5294,7 @@ class _$_Consent extends _Consent {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -5403,7 +5403,7 @@ class _$_Consent extends _Consent {
 
   /// [date] Date the consent instance was agreed to.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] ("_date") Extensions for date
   @override
@@ -5656,7 +5656,7 @@ abstract class _Consent extends Consent {
       {@JsonKey(unknownEnumValue: R5ResourceType.Consent)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5674,7 +5674,7 @@ abstract class _Consent extends Consent {
           final Element? statusElement,
       final List<CodeableConcept>? category,
       final Reference? subject,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final Period? period,
@@ -8600,7 +8600,7 @@ abstract class $PermissionCopyWith<$Res> {
           Element? combiningElement,
       List<PermissionRule>? rule});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8654,11 +8654,11 @@ class _$PermissionCopyWithImpl<$Res, $Val extends Permission>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8736,12 +8736,12 @@ class _$PermissionCopyWithImpl<$Res, $Val extends Permission>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8883,7 +8883,7 @@ abstract class _$$_PermissionCopyWith<$Res>
       List<PermissionRule>? rule});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8943,11 +8943,11 @@ class __$$_PermissionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9081,7 +9081,7 @@ class _$_Permission extends _Permission {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -9313,7 +9313,7 @@ abstract class _Permission extends Permission {
       {@JsonKey(unknownEnumValue: R5ResourceType.Permission)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -11728,7 +11728,7 @@ abstract class $ProvenanceCopyWith<$Res> {
       List<ProvenanceEntity>? entity,
       List<Signature>? signature});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11791,11 +11791,11 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11847,7 +11847,7 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
       recorded: freezed == recorded
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       recordedElement: freezed == recordedElement
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -11901,12 +11901,12 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -12078,7 +12078,7 @@ abstract class _$$_ProvenanceCopyWith<$Res>
       List<Signature>? signature});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12149,11 +12149,11 @@ class __$$_ProvenanceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12205,7 +12205,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
       recorded: freezed == recorded
           ? _value.recorded
           : recorded // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       recordedElement: freezed == recordedElement
           ? _value.recordedElement
           : recordedElement // ignore: cast_nullable_to_non_nullable
@@ -12327,7 +12327,7 @@ class _$_Provenance extends _Provenance {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -12421,7 +12421,7 @@ class _$_Provenance extends _Provenance {
 
   /// [recorded] The instant of time at which the activity was recorded.
   @override
-  final Instant? recorded;
+  final FhirInstant? recorded;
 
   /// [recordedElement] ("_recorded") Extensions for recorded
   @override
@@ -12647,7 +12647,7 @@ abstract class _Provenance extends Provenance {
       {@JsonKey(unknownEnumValue: R5ResourceType.Provenance)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -12664,7 +12664,7 @@ abstract class _Provenance extends Provenance {
       final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
           final Element? occurredDateTimeElement,
-      final Instant? recorded,
+      final FhirInstant? recorded,
       @JsonKey(name: '_recorded')
           final Element? recordedElement,
       final List<FhirUri>? policy,

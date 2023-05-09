@@ -302,7 +302,7 @@ abstract class $AppointmentCopyWith<$Res> {
       List<AppointmentParticipant> participant,
       List<Period>? requestedPeriod});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -387,7 +387,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -463,7 +463,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -483,7 +483,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -491,7 +491,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -499,7 +499,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       minutesDuration: freezed == minutesDuration
           ? _value.minutesDuration
           : minutesDuration // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minutesDurationElement: freezed == minutesDurationElement
           ? _value.minutesDurationElement
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
@@ -549,12 +549,12 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -794,7 +794,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       List<Period>? requestedPeriod});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -891,7 +891,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -967,7 +967,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -987,7 +987,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -995,7 +995,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -1003,7 +1003,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       minutesDuration: freezed == minutesDuration
           ? _value.minutesDuration
           : minutesDuration // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minutesDurationElement: freezed == minutesDurationElement
           ? _value.minutesDurationElement
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
@@ -1143,7 +1143,7 @@ class _$_Appointment extends _Appointment {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1382,7 +1382,7 @@ class _$_Appointment extends _Appointment {
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
   @override
-  final UnsignedInt? priority;
+  final FhirUnsignedInt? priority;
 
   /// [priorityElement] Extensions for priority
   @override
@@ -1418,7 +1418,7 @@ class _$_Appointment extends _Appointment {
 
   /// [start] Date/Time that the appointment is to take place.
   @override
-  final Instant? start;
+  final FhirInstant? start;
 
   /// [startElement] Extensions for start
   @override
@@ -1427,7 +1427,7 @@ class _$_Appointment extends _Appointment {
 
   /// [end] Date/Time that the appointment is to conclude.
   @override
-  final Instant? end;
+  final FhirInstant? end;
 
   /// [endElement] Extensions for end
   @override
@@ -1442,7 +1442,7 @@ class _$_Appointment extends _Appointment {
   /// long appointment, the duration may be 15 minutes less than the difference
   ///  between the start and end.
   @override
-  final PositiveInt? minutesDuration;
+  final FhirPositiveInt? minutesDuration;
 
   /// [minutesDurationElement] Extensions for minutesDuration
   @override
@@ -1700,7 +1700,7 @@ abstract class _Appointment extends Appointment {
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1723,20 +1723,20 @@ abstract class _Appointment extends Appointment {
       final CodeableConcept? appointmentType,
       final List<CodeableConcept>? reasonCode,
       final List<Reference>? reasonReference,
-      final UnsignedInt? priority,
+      final FhirUnsignedInt? priority,
       @JsonKey(name: '_priority')
           final Element? priorityElement,
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<Reference>? supportingInformation,
-      final Instant? start,
+      final FhirInstant? start,
       @JsonKey(name: '_start')
           final Element? startElement,
-      final Instant? end,
+      final FhirInstant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
-      final PositiveInt? minutesDuration,
+      final FhirPositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
           final Element? minutesDurationElement,
       final List<Reference>? slot,
@@ -2773,7 +2773,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2834,7 +2834,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2878,7 +2878,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -2886,7 +2886,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -2920,12 +2920,12 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3077,7 +3077,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3145,7 +3145,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3189,7 +3189,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -3197,7 +3197,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -3288,7 +3288,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -3427,7 +3427,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// [start] Date/Time that the appointment is to take place, or requested new
   ///  start time.
   @override
-  final Instant? start;
+  final FhirInstant? start;
 
   /// [startElement] Extensions for start
   @override
@@ -3438,7 +3438,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
   @override
-  final Instant? end;
+  final FhirInstant? end;
 
   /// [endElement] Extensions for end
   @override
@@ -3586,7 +3586,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3600,10 +3600,10 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required final Reference appointment,
-      final Instant? start,
+      final FhirInstant? start,
       @JsonKey(name: '_start')
           final Element? startElement,
-      final Instant? end,
+      final FhirInstant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
       final List<CodeableConcept>? participantType,
@@ -3923,7 +3923,7 @@ abstract class $ScheduleCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3979,7 +3979,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4057,12 +4057,12 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4177,7 +4177,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4237,7 +4237,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4371,7 +4371,7 @@ class _$_Schedule extends _Schedule {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -4678,7 +4678,7 @@ abstract class _Schedule extends Schedule {
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5028,7 +5028,7 @@ abstract class $SlotCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5094,7 +5094,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5162,7 +5162,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -5170,7 +5170,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -5196,12 +5196,12 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5368,7 +5368,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5440,7 +5440,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5508,7 +5508,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -5516,7 +5516,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -5605,7 +5605,7 @@ class _$_Slot extends _Slot {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5802,7 +5802,7 @@ class _$_Slot extends _Slot {
 
   /// [start] Date/Time that the slot is to begin.
   @override
-  final Instant? start;
+  final FhirInstant? start;
 
   /// [startElement] Extensions for start
   @override
@@ -5811,7 +5811,7 @@ class _$_Slot extends _Slot {
 
   /// [end] Date/Time that the slot is to conclude.
   @override
-  final Instant? end;
+  final FhirInstant? end;
 
   /// [endElement] Extensions for end
   @override
@@ -5949,7 +5949,7 @@ abstract class _Slot extends Slot {
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5970,10 +5970,10 @@ abstract class _Slot extends Slot {
       final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Instant? start,
+      final FhirInstant? start,
       @JsonKey(name: '_start')
           final Element? startElement,
-      final Instant? end,
+      final FhirInstant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
       final FhirBoolean? overbooked,
@@ -6450,7 +6450,7 @@ abstract class $TaskCopyWith<$Res> {
       List<TaskInput>? input,
       List<TaskOutput>? output});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6552,7 +6552,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6742,12 +6742,12 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7111,7 +7111,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       List<TaskOutput>? output});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7233,7 +7233,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7516,7 +7516,7 @@ class _$_Task extends _Task {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -8082,7 +8082,7 @@ abstract class _Task extends Task {
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -8530,7 +8530,7 @@ class _$TaskRestrictionCopyWithImpl<$Res, $Val extends TaskRestriction>
       repetitions: freezed == repetitions
           ? _value.repetitions
           : repetitions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       repetitionsElement: freezed == repetitionsElement
           ? _value.repetitionsElement
           : repetitionsElement // ignore: cast_nullable_to_non_nullable
@@ -8629,7 +8629,7 @@ class __$$_TaskRestrictionCopyWithImpl<$Res>
       repetitions: freezed == repetitions
           ? _value.repetitions
           : repetitions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       repetitionsElement: freezed == repetitionsElement
           ? _value.repetitionsElement
           : repetitionsElement // ignore: cast_nullable_to_non_nullable
@@ -8735,7 +8735,7 @@ class _$_TaskRestriction extends _TaskRestriction {
   /// [repetitions] Indicates the number of times the requested action should
   ///  occur.
   @override
-  final PositiveInt? repetitions;
+  final FhirPositiveInt? repetitions;
 
   /// [repetitionsElement] Extensions for repetitions
   @override
@@ -8816,7 +8816,7 @@ abstract class _TaskRestriction extends TaskRestriction {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? repetitions,
+      final FhirPositiveInt? repetitions,
       @JsonKey(name: '_repetitions') final Element? repetitionsElement,
       final Period? period,
       final List<Reference>? recipient}) = _$_TaskRestriction;
@@ -9289,7 +9289,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -9431,7 +9431,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -9447,7 +9447,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -9455,7 +9455,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -9463,7 +9463,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -9471,7 +9471,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -9479,7 +9479,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -9487,7 +9487,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -9495,7 +9495,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -9511,7 +9511,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9519,7 +9519,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -9543,7 +9543,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -9671,7 +9671,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
     ) as $Val);
   }
 
@@ -10278,12 +10278,12 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
+  $FhirMetaCopyWith<$Res>? get valueMeta {
     if (_value.valueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.valueMeta!, (value) {
       return _then(_value.copyWith(valueMeta: value) as $Val);
     });
   }
@@ -10472,7 +10472,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -10612,7 +10612,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -10628,7 +10628,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10636,7 +10636,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -10644,7 +10644,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -10652,7 +10652,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10660,7 +10660,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -10668,7 +10668,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -10676,7 +10676,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -10692,7 +10692,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -10700,7 +10700,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -10724,7 +10724,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -10852,7 +10852,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
     ));
   }
 }
@@ -11051,7 +11051,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueDate] The value of the input parameter as a basic type.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] Extensions for valueDate
   @override
@@ -11069,7 +11069,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueDecimal] The value of the input parameter as a basic type.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @override
@@ -11087,7 +11087,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueInstant] The value of the input parameter as a basic type.
   @override
-  final Instant? valueInstant;
+  final FhirInstant? valueInstant;
 
   /// [valueInstantElement] Extensions for valueInstant
   @override
@@ -11096,7 +11096,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueInteger] The value of the input parameter as a basic type.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] Extensions for valueInteger
   @override
@@ -11105,7 +11105,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueMarkdown] The value of the input parameter as a basic type.
   @override
-  final Markdown? valueMarkdown;
+  final FhirMarkdown? valueMarkdown;
 
   /// [valueMarkdownElement] Extensions for valueMarkdown
   @override
@@ -11114,7 +11114,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueOid] The value of the input parameter as a basic type.
   @override
-  final Oid? valueOid;
+  final FhirOid? valueOid;
 
   /// [valueOidElement] Extensions for valueOid
   @override
@@ -11123,7 +11123,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valuePositiveInt] The value of the input parameter as a basic type.
   @override
-  final PositiveInt? valuePositiveInt;
+  final FhirPositiveInt? valuePositiveInt;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @override
@@ -11141,7 +11141,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueTime] The value of the input parameter as a basic type.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] Extensions for valueTime
   @override
@@ -11150,7 +11150,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueUnsignedInt] The value of the input parameter as a basic type.
   @override
-  final UnsignedInt? valueUnsignedInt;
+  final FhirUnsignedInt? valueUnsignedInt;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @override
@@ -11177,7 +11177,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueUuid] The value of the input parameter as a basic type.
   @override
-  final Uuid? valueUuid;
+  final FhirUuid? valueUuid;
 
   /// [valueUuidElement] Extensions for valueUuid
   @override
@@ -11308,7 +11308,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueMeta] The value of the input parameter as a basic type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueMeta;
 
   @override
   String toString() {
@@ -11539,40 +11539,40 @@ abstract class _TaskInput extends TaskInput {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
       final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
-      final Instant? valueInstant,
+      final FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant')
           final Element? valueInstantElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Markdown? valueMarkdown,
+      final FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Oid? valueOid,
+      final FhirOid? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final PositiveInt? valuePositiveInt,
+      final FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
           final Element? valuePositiveIntElement,
       final String? valueString,
       @JsonKey(name: '_valueString')
           final Element? valueStringElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final UnsignedInt? valueUnsignedInt,
+      final FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
           final Element? valueUnsignedIntElement,
       final FhirUri? valueUri,
@@ -11581,7 +11581,7 @@ abstract class _TaskInput extends TaskInput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Uuid? valueUuid,
+      final FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -11614,7 +11614,7 @@ abstract class _TaskInput extends TaskInput {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta}) = _$_TaskInput;
+      final FhirMeta? valueMeta}) = _$_TaskInput;
   _TaskInput._() : super._();
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
@@ -12367,7 +12367,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -12509,7 +12509,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12525,7 +12525,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -12533,7 +12533,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -12541,7 +12541,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -12549,7 +12549,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -12557,7 +12557,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -12565,7 +12565,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -12573,7 +12573,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -12589,7 +12589,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -12597,7 +12597,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -12621,7 +12621,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -12749,7 +12749,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
     ) as $Val);
   }
 
@@ -13356,12 +13356,12 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
+  $FhirMetaCopyWith<$Res>? get valueMeta {
     if (_value.valueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.valueMeta!, (value) {
       return _then(_value.copyWith(valueMeta: value) as $Val);
     });
   }
@@ -13551,7 +13551,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -13691,7 +13691,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -13707,7 +13707,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -13715,7 +13715,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -13723,7 +13723,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -13731,7 +13731,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -13739,7 +13739,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -13747,7 +13747,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -13755,7 +13755,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -13771,7 +13771,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -13779,7 +13779,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -13803,7 +13803,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -13931,7 +13931,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
     ));
   }
 }
@@ -14129,7 +14129,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueDate] The value of the Output parameter as a basic type.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] Extensions for valueDate
   @override
@@ -14147,7 +14147,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueDecimal] The value of the Output parameter as a basic type.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @override
@@ -14165,7 +14165,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueInstant] The value of the Output parameter as a basic type.
   @override
-  final Instant? valueInstant;
+  final FhirInstant? valueInstant;
 
   /// [valueInstantElement] Extensions for valueInstant
   @override
@@ -14174,7 +14174,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueInteger] The value of the Output parameter as a basic type.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] Extensions for valueInteger
   @override
@@ -14183,7 +14183,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueMarkdown] The value of the Output parameter as a basic type.
   @override
-  final Markdown? valueMarkdown;
+  final FhirMarkdown? valueMarkdown;
 
   /// [valueMarkdownElement] Extensions for valueMarkdown
   @override
@@ -14192,7 +14192,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueOid] The value of the Output parameter as a basic type.
   @override
-  final Oid? valueOid;
+  final FhirOid? valueOid;
 
   /// [valueOidElement] Extensions for valueOid
   @override
@@ -14201,7 +14201,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valuePositiveInt] The value of the Output parameter as a basic type.
   @override
-  final PositiveInt? valuePositiveInt;
+  final FhirPositiveInt? valuePositiveInt;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @override
@@ -14219,7 +14219,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueTime] The value of the Output parameter as a basic type.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] Extensions for valueTime
   @override
@@ -14228,7 +14228,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueUnsignedInt] The value of the Output parameter as a basic type.
   @override
-  final UnsignedInt? valueUnsignedInt;
+  final FhirUnsignedInt? valueUnsignedInt;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @override
@@ -14255,7 +14255,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueUuid] The value of the Output parameter as a basic type.
   @override
-  final Uuid? valueUuid;
+  final FhirUuid? valueUuid;
 
   /// [valueUuidElement] Extensions for valueUuid
   @override
@@ -14386,7 +14386,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueMeta] The value of the Output parameter as a basic type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueMeta;
 
   @override
   String toString() {
@@ -14617,40 +14617,40 @@ abstract class _TaskOutput extends TaskOutput {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
       final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
-      final Instant? valueInstant,
+      final FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant')
           final Element? valueInstantElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Markdown? valueMarkdown,
+      final FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Oid? valueOid,
+      final FhirOid? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final PositiveInt? valuePositiveInt,
+      final FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
           final Element? valuePositiveIntElement,
       final String? valueString,
       @JsonKey(name: '_valueString')
           final Element? valueStringElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final UnsignedInt? valueUnsignedInt,
+      final FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
           final Element? valueUnsignedIntElement,
       final FhirUri? valueUri,
@@ -14659,7 +14659,7 @@ abstract class _TaskOutput extends TaskOutput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Uuid? valueUuid,
+      final FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -14692,7 +14692,7 @@ abstract class _TaskOutput extends TaskOutput {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta}) = _$_TaskOutput;
+      final FhirMeta? valueMeta}) = _$_TaskOutput;
   _TaskOutput._() : super._();
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
@@ -15239,7 +15239,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       VerificationResultAttestation? attestation,
       List<VerificationResultValidator>? validator});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -15310,7 +15310,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15398,7 +15398,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       nextScheduled: freezed == nextScheduled
           ? _value.nextScheduled
           : nextScheduled // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       nextScheduledElement: freezed == nextScheduledElement
           ? _value.nextScheduledElement
           : nextScheduledElement // ignore: cast_nullable_to_non_nullable
@@ -15424,12 +15424,12 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -15630,7 +15630,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       List<VerificationResultValidator>? validator});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -15711,7 +15711,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15799,7 +15799,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       nextScheduled: freezed == nextScheduled
           ? _value.nextScheduled
           : nextScheduled // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       nextScheduledElement: freezed == nextScheduledElement
           ? _value.nextScheduledElement
           : nextScheduledElement // ignore: cast_nullable_to_non_nullable
@@ -15894,7 +15894,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -16113,7 +16113,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
   @override
-  final Date? nextScheduled;
+  final FhirDate? nextScheduled;
 
   /// [nextScheduledElement] Extensions for nextScheduled
   @override
@@ -16279,7 +16279,7 @@ abstract class _VerificationResult extends VerificationResult {
           {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -16308,7 +16308,7 @@ abstract class _VerificationResult extends VerificationResult {
           final FhirDateTime? lastPerformed,
           @JsonKey(name: '_lastPerformed')
               final Element? lastPerformedElement,
-          final Date? nextScheduled,
+          final FhirDate? nextScheduled,
           @JsonKey(name: '_nextScheduled')
               final Element? nextScheduledElement,
           final CodeableConcept? failureAction,
@@ -17334,7 +17334,7 @@ class _$VerificationResultAttestationCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -17572,7 +17572,7 @@ class __$$_VerificationResultAttestationCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -17720,7 +17720,7 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
 
   /// [date] The date the information was attested to.
   @override
-  final Date? date;
+  final FhirDate? date;
 
   /// [dateElement] Extensions for date
   @override
@@ -17842,7 +17842,7 @@ abstract class _VerificationResultAttestation
       final Reference? who,
       final Reference? onBehalfOf,
       final CodeableConcept? communicationMethod,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? sourceIdentityCertificate,

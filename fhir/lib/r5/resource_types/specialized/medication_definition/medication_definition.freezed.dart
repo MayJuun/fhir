@@ -146,7 +146,7 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
       List<AdministrableProductDefinitionRouteOfAdministration>
           routeOfAdministration});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -201,11 +201,11 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -287,12 +287,12 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -423,7 +423,7 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
           routeOfAdministration});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -484,11 +484,11 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -631,7 +631,7 @@ class _$_AdministrableProductDefinition
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -897,7 +897,7 @@ abstract class _AdministrableProductDefinition
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1192,7 +1192,7 @@ class _$AdministrableProductDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -1391,7 +1391,7 @@ class __$$_AdministrableProductDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -1520,7 +1520,7 @@ class _$_AdministrableProductDefinitionProperty
 
   /// [valueDate] A value for the characteristic.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -1619,7 +1619,7 @@ abstract class _AdministrableProductDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -3348,7 +3348,7 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
       ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
       ClinicalUseDefinitionWarning? warning});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3408,11 +3408,11 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3502,12 +3502,12 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3679,7 +3679,7 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
       ClinicalUseDefinitionWarning? warning});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3746,11 +3746,11 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3900,7 +3900,7 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -4168,7 +4168,7 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7459,7 +7459,7 @@ class _$ClinicalUseDefinitionWarningCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -7555,7 +7555,7 @@ class __$$_ClinicalUseDefinitionWarningCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -7652,7 +7652,7 @@ class _$_ClinicalUseDefinitionWarning extends _ClinicalUseDefinitionWarning {
 
   /// [description] A textual definition of this warning, with formatting.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -7717,7 +7717,7 @@ abstract class _ClinicalUseDefinitionWarning
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final CodeableConcept? code}) = _$_ClinicalUseDefinitionWarning;
   _ClinicalUseDefinitionWarning._() : super._();
@@ -7906,7 +7906,7 @@ abstract class $IngredientCopyWith<$Res> {
       List<IngredientManufacturer>? manufacturer,
       IngredientSubstance substance});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7962,11 +7962,11 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8048,12 +8048,12 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8200,7 +8200,7 @@ abstract class _$$_IngredientCopyWith<$Res>
       IngredientSubstance substance});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8263,11 +8263,11 @@ class __$$_IngredientCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8407,7 +8407,7 @@ class _$_Ingredient extends _Ingredient {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -8648,7 +8648,7 @@ abstract class _Ingredient extends Ingredient {
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -11306,7 +11306,7 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
       List<ManufacturedItemDefinitionProperty>? property,
       List<ManufacturedItemDefinitionComponent>? component});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11362,11 +11362,11 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11452,12 +11452,12 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11584,7 +11584,7 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
       List<ManufacturedItemDefinitionComponent>? component});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11646,11 +11646,11 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11796,7 +11796,7 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -12069,7 +12069,7 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -12363,7 +12363,7 @@ class _$ManufacturedItemDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12542,7 +12542,7 @@ class __$$_ManufacturedItemDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12666,7 +12666,7 @@ class _$_ManufacturedItemDefinitionProperty
 
   /// [valueDate] A value for the characteristic.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -12759,7 +12759,7 @@ abstract class _ManufacturedItemDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -14088,7 +14088,7 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
       List<MedicinalProductDefinitionOperation>? operation,
       List<MedicinalProductDefinitionCharacteristic>? characteristic});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -14172,11 +14172,11 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14244,7 +14244,7 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -14260,7 +14260,7 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
       indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       indicationElement: freezed == indicationElement
           ? _value.indicationElement
           : indicationElement // ignore: cast_nullable_to_non_nullable
@@ -14346,12 +14346,12 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -14594,7 +14594,7 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
       List<MedicinalProductDefinitionCharacteristic>? characteristic});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -14691,11 +14691,11 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14763,7 +14763,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -14779,7 +14779,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
       indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       indicationElement: freezed == indicationElement
           ? _value.indicationElement
           : indicationElement // ignore: cast_nullable_to_non_nullable
@@ -14960,7 +14960,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -15073,7 +15073,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [description] General description of this product.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -15099,7 +15099,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   /// [indication] Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.
   @override
-  final Markdown? indication;
+  final FhirMarkdown? indication;
 
   /// [indicationElement] ("_indication") Extensions for indication
   @override
@@ -15485,7 +15485,7 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -15507,12 +15507,12 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
       final FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
           final Element? statusDateElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final CodeableConcept? combinedPharmaceuticalDoseForm,
       final List<CodeableConcept>? route,
-      final Markdown? indication,
+      final FhirMarkdown? indication,
       @JsonKey(name: '_indication')
           final Element? indicationElement,
       final CodeableConcept? legalStatusOfSupply,
@@ -18553,7 +18553,7 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -18561,7 +18561,7 @@ class _$MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -18784,7 +18784,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -18792,7 +18792,7 @@ class __$$_MedicinalProductDefinitionCharacteristicCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -18929,7 +18929,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   /// [valueInteger] A value for the characteristic.text.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -18938,7 +18938,7 @@ class _$_MedicinalProductDefinitionCharacteristic
 
   /// [valueDate] A value for the characteristic.text.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -19045,9 +19045,9 @@ abstract class _MedicinalProductDefinitionCharacteristic
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
           final Quantity? valueQuantity,
-          final Integer? valueInteger,
+          final FhirInteger? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -19317,7 +19317,7 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
       PackagedProductDefinitionPackaging? packaging,
       List<PackagedProductDefinitionProperty>? characteristic});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -19383,11 +19383,11 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -19459,7 +19459,7 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -19501,12 +19501,12 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -19683,7 +19683,7 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
       List<PackagedProductDefinitionProperty>? characteristic});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -19758,11 +19758,11 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -19834,7 +19834,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -19948,7 +19948,7 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -20084,7 +20084,7 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   /// [description] Textual description. Note that this is not the name of the package or product.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -20296,7 +20296,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -20319,7 +20319,7 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
           @JsonKey(name: '_statusDate')
               final Element? statusDateElement,
           final List<Quantity>? containedItemQuantity,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<PackagedProductDefinitionLegalStatusOfSupply>?
@@ -21063,7 +21063,7 @@ class _$PackagedProductDefinitionPackagingCopyWithImpl<$Res,
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -21233,7 +21233,7 @@ class __$$_PackagedProductDefinitionPackagingCopyWithImpl<$Res>
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       quantityElement: freezed == quantityElement
           ? _value.quantityElement
           : quantityElement // ignore: cast_nullable_to_non_nullable
@@ -21400,7 +21400,7 @@ class _$_PackagedProductDefinitionPackaging
 
   /// [quantity] The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.
   @override
-  final Integer? quantity;
+  final FhirInteger? quantity;
 
   /// [quantityElement] ("_quantity") Extensions for quantity
   @override
@@ -21587,7 +21587,7 @@ abstract class _PackagedProductDefinitionPackaging
           final CodeableConcept? type,
           final FhirBoolean? componentPart,
           @JsonKey(name: '_componentPart') final Element? componentPartElement,
-          final Integer? quantity,
+          final FhirInteger? quantity,
           @JsonKey(name: '_quantity') final Element? quantityElement,
           final List<CodeableConcept>? material,
           final List<CodeableConcept>? alternateMaterial,
@@ -21845,7 +21845,7 @@ class _$PackagedProductDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -22024,7 +22024,7 @@ class __$$_PackagedProductDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -22148,7 +22148,7 @@ class _$_PackagedProductDefinitionProperty
 
   /// [valueDate] A value for the characteristic.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -22241,7 +22241,7 @@ abstract class _PackagedProductDefinitionProperty
           required final CodeableConcept type,
           final CodeableConcept? valueCodeableConcept,
           final Quantity? valueQuantity,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -22872,7 +22872,7 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
       @JsonKey(name: 'case')
           RegulatedAuthorizationCase? case_});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -22938,11 +22938,11 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -22990,7 +22990,7 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23048,12 +23048,12 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -23249,7 +23249,7 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
           RegulatedAuthorizationCase? case_});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -23325,11 +23325,11 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -23377,7 +23377,7 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23501,7 +23501,7 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -23601,7 +23601,7 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   /// [description] General textual supporting information.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -23807,7 +23807,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -23822,7 +23822,7 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
       final List<Identifier>? identifier,
       final List<Reference>? subject,
       final CodeableConcept? type,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<CodeableConcept>? region,
@@ -24759,7 +24759,7 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
       Reference? protein,
       SubstanceDefinitionSourceMaterial? sourceMaterial});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -24834,11 +24834,11 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -24902,7 +24902,7 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -24980,12 +24980,12 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -25203,7 +25203,7 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
       SubstanceDefinitionSourceMaterial? sourceMaterial});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -25289,11 +25289,11 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -25357,7 +25357,7 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -25517,7 +25517,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -25643,7 +25643,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   /// [description] Textual description of the substance.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -25953,7 +25953,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -25973,7 +25973,7 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
           final List<CodeableConcept>? classification,
           final CodeableConcept? domain,
           final List<CodeableConcept>? grade,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<Reference>? informationSource,
@@ -27080,7 +27080,7 @@ class _$SubstanceDefinitionCharacterizationCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -27202,7 +27202,7 @@ class __$$_SubstanceDefinitionCharacterizationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -27312,7 +27312,7 @@ class _$_SubstanceDefinitionCharacterization
 
   /// [description] Narrative text, data, tables about the characterization.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -27394,7 +27394,7 @@ abstract class _SubstanceDefinitionCharacterization
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? technique,
       final CodeableConcept? form,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Attachment>? file}) = _$_SubstanceDefinitionCharacterization;
   _SubstanceDefinitionCharacterization._() : super._();
@@ -27612,7 +27612,7 @@ class _$SubstanceDefinitionPropertyCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -27791,7 +27791,7 @@ class __$$_SubstanceDefinitionPropertyCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -27913,7 +27913,7 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
 
   /// [valueDate] A value for the property.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -28005,7 +28005,7 @@ abstract class _SubstanceDefinitionProperty
       required final CodeableConcept type,
       final CodeableConcept? valueCodeableConcept,
       final Quantity? valueQuantity,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -32995,7 +32995,7 @@ abstract class $SubstanceNucleicAcidCopyWith<$Res> {
       CodeableConcept? oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit>? subunit});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -33046,11 +33046,11 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -33090,7 +33090,7 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res,
       numberOfSubunits: freezed == numberOfSubunits
           ? _value.numberOfSubunits
           : numberOfSubunits // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       numberOfSubunitsElement: freezed == numberOfSubunitsElement
           ? _value.numberOfSubunitsElement
           : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
@@ -33116,12 +33116,12 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -33246,7 +33246,7 @@ abstract class _$$_SubstanceNucleicAcidCopyWith<$Res>
       List<SubstanceNucleicAcidSubunit>? subunit});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -33301,11 +33301,11 @@ class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -33345,7 +33345,7 @@ class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
       numberOfSubunits: freezed == numberOfSubunits
           ? _value.numberOfSubunits
           : numberOfSubunits // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       numberOfSubunitsElement: freezed == numberOfSubunitsElement
           ? _value.numberOfSubunitsElement
           : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
@@ -33421,7 +33421,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -33495,7 +33495,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 
   /// [numberOfSubunits] The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.
   @override
-  final Integer? numberOfSubunits;
+  final FhirInteger? numberOfSubunits;
 
   /// [numberOfSubunitsElement] ("_numberOfSubunits") Extensions for numberOfSubunits
   @override
@@ -33618,7 +33618,7 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -33631,7 +33631,7 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? sequenceType,
-          final Integer? numberOfSubunits,
+          final FhirInteger? numberOfSubunits,
           @JsonKey(name: '_numberOfSubunits')
               final Element? numberOfSubunitsElement,
           final String? areaOfHybridisation,
@@ -33891,7 +33891,7 @@ class _$SubstanceNucleicAcidSubunitCopyWithImpl<$Res,
       subunit: freezed == subunit
           ? _value.subunit
           : subunit // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       subunitElement: freezed == subunitElement
           ? _value.subunitElement
           : subunitElement // ignore: cast_nullable_to_non_nullable
@@ -33907,7 +33907,7 @@ class _$SubstanceNucleicAcidSubunitCopyWithImpl<$Res,
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lengthElement: freezed == lengthElement
           ? _value.lengthElement
           : lengthElement // ignore: cast_nullable_to_non_nullable
@@ -34091,7 +34091,7 @@ class __$$_SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
       subunit: freezed == subunit
           ? _value.subunit
           : subunit // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       subunitElement: freezed == subunitElement
           ? _value.subunitElement
           : subunitElement // ignore: cast_nullable_to_non_nullable
@@ -34107,7 +34107,7 @@ class __$$_SubstanceNucleicAcidSubunitCopyWithImpl<$Res>
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lengthElement: freezed == lengthElement
           ? _value.lengthElement
           : lengthElement // ignore: cast_nullable_to_non_nullable
@@ -34230,7 +34230,7 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
 
   /// [subunit] Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
   @override
-  final Integer? subunit;
+  final FhirInteger? subunit;
 
   /// [subunitElement] ("_subunit") Extensions for subunit
   @override
@@ -34248,7 +34248,7 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
 
   /// [length] The length of the sequence shall be captured.
   @override
-  final Integer? length;
+  final FhirInteger? length;
 
   /// [lengthElement] ("_length") Extensions for length
   @override
@@ -34368,11 +34368,11 @@ abstract class _SubstanceNucleicAcidSubunit
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Integer? subunit,
+          final FhirInteger? subunit,
           @JsonKey(name: '_subunit') final Element? subunitElement,
           final String? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
-          final Integer? length,
+          final FhirInteger? length,
           @JsonKey(name: '_length') final Element? lengthElement,
           final Attachment? sequenceAttachment,
           final CodeableConcept? fivePrime,
@@ -35653,7 +35653,7 @@ abstract class $SubstancePolymerCopyWith<$Res> {
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -35704,11 +35704,11 @@ class _$SubstancePolymerCopyWithImpl<$Res, $Val extends SubstancePolymer>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -35778,12 +35778,12 @@ class _$SubstancePolymerCopyWithImpl<$Res, $Val extends SubstancePolymer>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -35909,7 +35909,7 @@ abstract class _$$_SubstancePolymerCopyWith<$Res>
       List<SubstancePolymerRepeat>? repeat});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -35965,11 +35965,11 @@ class __$$_SubstancePolymerCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -36092,7 +36092,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -36311,7 +36311,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -37952,7 +37952,7 @@ class _$SubstancePolymerRepeatUnitCopyWithImpl<$Res,
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       amountElement: freezed == amountElement
           ? _value.amountElement
           : amountElement // ignore: cast_nullable_to_non_nullable
@@ -38087,7 +38087,7 @@ class __$$_SubstancePolymerRepeatUnitCopyWithImpl<$Res>
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       amountElement: freezed == amountElement
           ? _value.amountElement
           : amountElement // ignore: cast_nullable_to_non_nullable
@@ -38209,7 +38209,7 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
 
   /// [amount] Number of repeats of this unit.
   @override
-  final Integer? amount;
+  final FhirInteger? amount;
 
   /// [amountElement] ("_amount") Extensions for amount
   @override
@@ -38312,7 +38312,7 @@ abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
       final String? unit,
       @JsonKey(name: '_unit') final Element? unitElement,
       final CodeableConcept? orientation,
-      final Integer? amount,
+      final FhirInteger? amount,
       @JsonKey(name: '_amount') final Element? amountElement,
       final List<SubstancePolymerDegreeOfPolymerisation>?
           degreeOfPolymerisation,
@@ -38527,7 +38527,7 @@ class _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res,
       average: freezed == average
           ? _value.average
           : average // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       averageElement: freezed == averageElement
           ? _value.averageElement
           : averageElement // ignore: cast_nullable_to_non_nullable
@@ -38535,7 +38535,7 @@ class _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res,
       low: freezed == low
           ? _value.low
           : low // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lowElement: freezed == lowElement
           ? _value.lowElement
           : lowElement // ignore: cast_nullable_to_non_nullable
@@ -38543,7 +38543,7 @@ class _$SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res,
       high: freezed == high
           ? _value.high
           : high // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       highElement: freezed == highElement
           ? _value.highElement
           : highElement // ignore: cast_nullable_to_non_nullable
@@ -38675,7 +38675,7 @@ class __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
       average: freezed == average
           ? _value.average
           : average // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       averageElement: freezed == averageElement
           ? _value.averageElement
           : averageElement // ignore: cast_nullable_to_non_nullable
@@ -38683,7 +38683,7 @@ class __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
       low: freezed == low
           ? _value.low
           : low // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lowElement: freezed == lowElement
           ? _value.lowElement
           : lowElement // ignore: cast_nullable_to_non_nullable
@@ -38691,7 +38691,7 @@ class __$$_SubstancePolymerDegreeOfPolymerisationCopyWithImpl<$Res>
       high: freezed == high
           ? _value.high
           : high // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       highElement: freezed == highElement
           ? _value.highElement
           : highElement // ignore: cast_nullable_to_non_nullable
@@ -38794,7 +38794,7 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
   /// [average] An average amount of polymerisation.
   @override
-  final Integer? average;
+  final FhirInteger? average;
 
   /// [averageElement] ("_average") Extensions for average
   @override
@@ -38803,7 +38803,7 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
   /// [low] A low expected limit of the amount.
   @override
-  final Integer? low;
+  final FhirInteger? low;
 
   /// [lowElement] ("_low") Extensions for low
   @override
@@ -38812,7 +38812,7 @@ class _$_SubstancePolymerDegreeOfPolymerisation
 
   /// [high] A high expected limit of the amount.
   @override
-  final Integer? high;
+  final FhirInteger? high;
 
   /// [highElement] ("_high") Extensions for high
   @override
@@ -38884,11 +38884,11 @@ abstract class _SubstancePolymerDegreeOfPolymerisation
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
-          final Integer? average,
+          final FhirInteger? average,
           @JsonKey(name: '_average') final Element? averageElement,
-          final Integer? low,
+          final FhirInteger? low,
           @JsonKey(name: '_low') final Element? lowElement,
-          final Integer? high,
+          final FhirInteger? high,
           @JsonKey(name: '_high') final Element? highElement}) =
       _$_SubstancePolymerDegreeOfPolymerisation;
   _SubstancePolymerDegreeOfPolymerisation._() : super._();
@@ -39591,7 +39591,7 @@ abstract class $SubstanceProteinCopyWith<$Res> {
           List<Element>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -39638,11 +39638,11 @@ class _$SubstanceProteinCopyWithImpl<$Res, $Val extends SubstanceProtein>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -39682,7 +39682,7 @@ class _$SubstanceProteinCopyWithImpl<$Res, $Val extends SubstanceProtein>
       numberOfSubunits: freezed == numberOfSubunits
           ? _value.numberOfSubunits
           : numberOfSubunits // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       numberOfSubunitsElement: freezed == numberOfSubunitsElement
           ? _value.numberOfSubunitsElement
           : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
@@ -39704,12 +39704,12 @@ class _$SubstanceProteinCopyWithImpl<$Res, $Val extends SubstanceProtein>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -39809,7 +39809,7 @@ abstract class _$$_SubstanceProteinCopyWith<$Res>
       List<SubstanceProteinSubunit>? subunit});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -39859,11 +39859,11 @@ class __$$_SubstanceProteinCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -39903,7 +39903,7 @@ class __$$_SubstanceProteinCopyWithImpl<$Res>
       numberOfSubunits: freezed == numberOfSubunits
           ? _value.numberOfSubunits
           : numberOfSubunits // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       numberOfSubunitsElement: freezed == numberOfSubunitsElement
           ? _value.numberOfSubunitsElement
           : numberOfSubunitsElement // ignore: cast_nullable_to_non_nullable
@@ -39976,7 +39976,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -40050,7 +40050,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 
   /// [numberOfSubunits] Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.
   @override
-  final Integer? numberOfSubunits;
+  final FhirInteger? numberOfSubunits;
 
   /// [numberOfSubunitsElement] ("_numberOfSubunits") Extensions for numberOfSubunits
   @override
@@ -40183,7 +40183,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -40196,7 +40196,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? sequenceType,
-      final Integer? numberOfSubunits,
+      final FhirInteger? numberOfSubunits,
       @JsonKey(name: '_numberOfSubunits')
           final Element? numberOfSubunitsElement,
       final List<String>? disulfideLinkage,
@@ -40468,7 +40468,7 @@ class _$SubstanceProteinSubunitCopyWithImpl<$Res,
       subunit: freezed == subunit
           ? _value.subunit
           : subunit // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       subunitElement: freezed == subunitElement
           ? _value.subunitElement
           : subunitElement // ignore: cast_nullable_to_non_nullable
@@ -40484,7 +40484,7 @@ class _$SubstanceProteinSubunitCopyWithImpl<$Res,
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lengthElement: freezed == lengthElement
           ? _value.lengthElement
           : lengthElement // ignore: cast_nullable_to_non_nullable
@@ -40716,7 +40716,7 @@ class __$$_SubstanceProteinSubunitCopyWithImpl<$Res>
       subunit: freezed == subunit
           ? _value.subunit
           : subunit // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       subunitElement: freezed == subunitElement
           ? _value.subunitElement
           : subunitElement // ignore: cast_nullable_to_non_nullable
@@ -40732,7 +40732,7 @@ class __$$_SubstanceProteinSubunitCopyWithImpl<$Res>
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       lengthElement: freezed == lengthElement
           ? _value.lengthElement
           : lengthElement // ignore: cast_nullable_to_non_nullable
@@ -40869,7 +40869,7 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 
   /// [subunit] Index of primary sequences of amino acids linked through peptide bonds in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.
   @override
-  final Integer? subunit;
+  final FhirInteger? subunit;
 
   /// [subunitElement] ("_subunit") Extensions for subunit
   @override
@@ -40887,7 +40887,7 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
 
   /// [length] Length of linear sequences of amino acids contained in the subunit.
   @override
-  final Integer? length;
+  final FhirInteger? length;
 
   /// [lengthElement] ("_length") Extensions for length
   @override
@@ -41014,13 +41014,13 @@ abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Integer? subunit,
+          final FhirInteger? subunit,
           @JsonKey(name: '_subunit')
               final Element? subunitElement,
           final String? sequence,
           @JsonKey(name: '_sequence')
               final Element? sequenceElement,
-          final Integer? length,
+          final FhirInteger? length,
           @JsonKey(name: '_length')
               final Element? lengthElement,
           final Attachment? sequenceAttachment,
@@ -41238,7 +41238,7 @@ abstract class $SubstanceReferenceInformationCopyWith<$Res> {
       List<SubstanceReferenceInformationGeneElement>? geneElement,
       List<SubstanceReferenceInformationTarget>? target});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -41284,11 +41284,11 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -41346,12 +41346,12 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -41438,7 +41438,7 @@ abstract class _$$_SubstanceReferenceInformationCopyWith<$Res>
       List<SubstanceReferenceInformationTarget>? target});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -41487,11 +41487,11 @@ class __$$_SubstanceReferenceInformationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -41599,7 +41599,7 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -41795,7 +41795,7 @@ abstract class _SubstanceReferenceInformation
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -43695,7 +43695,7 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
       SubstanceSourceMaterialOrganism? organism,
       List<SubstanceSourceMaterialPartDescription>? partDescription});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -43758,11 +43758,11 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -43864,12 +43864,12 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -44041,7 +44041,7 @@ abstract class _$$_SubstanceSourceMaterialCopyWith<$Res>
       List<SubstanceSourceMaterialPartDescription>? partDescription});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -44112,11 +44112,11 @@ class __$$_SubstanceSourceMaterialCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -44286,7 +44286,7 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -44618,7 +44618,7 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

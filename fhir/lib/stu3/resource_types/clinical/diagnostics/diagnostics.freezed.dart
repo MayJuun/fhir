@@ -87,7 +87,7 @@ abstract class $BodySiteCopyWith<$Res> {
       List<Attachment>? image,
       Reference patient});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -139,11 +139,11 @@ class _$BodySiteCopyWithImpl<$Res, $Val extends BodySite>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -217,12 +217,12 @@ class _$BodySiteCopyWithImpl<$Res, $Val extends BodySite>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -344,7 +344,7 @@ abstract class _$$_BodySiteCopyWith<$Res> implements $BodySiteCopyWith<$Res> {
       Reference patient});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -401,11 +401,11 @@ class __$$_BodySiteCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -525,7 +525,7 @@ class _$_BodySite extends _BodySite {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -705,7 +705,7 @@ abstract class _BodySite extends BodySite {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -890,7 +890,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<CodeableConcept>? codedDiagnosis,
       List<Attachment>? presentedForm});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -960,11 +960,11 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1090,12 +1090,12 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1293,7 +1293,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       List<Attachment>? presentedForm});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1373,11 +1373,11 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1570,7 +1570,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1860,7 +1860,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2461,7 +2461,7 @@ abstract class $ImagingManifestCopyWith<$Res> {
           Element? descriptionElement,
       List<ImagingManifestStudy> study});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2513,11 +2513,11 @@ class _$ImagingManifestCopyWithImpl<$Res, $Val extends ImagingManifest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2561,7 +2561,7 @@ class _$ImagingManifestCopyWithImpl<$Res, $Val extends ImagingManifest>
       authoringTime: freezed == authoringTime
           ? _value.authoringTime
           : authoringTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       authoringTimeElement: freezed == authoringTimeElement
           ? _value.authoringTimeElement
           : authoringTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2587,12 +2587,12 @@ class _$ImagingManifestCopyWithImpl<$Res, $Val extends ImagingManifest>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2726,7 +2726,7 @@ abstract class _$$_ImagingManifestCopyWith<$Res>
       List<ImagingManifestStudy> study});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2784,11 +2784,11 @@ class __$$_ImagingManifestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2832,7 +2832,7 @@ class __$$_ImagingManifestCopyWithImpl<$Res>
       authoringTime: freezed == authoringTime
           ? _value.authoringTime
           : authoringTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       authoringTimeElement: freezed == authoringTimeElement
           ? _value.authoringTimeElement
           : authoringTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2901,7 +2901,7 @@ class _$_ImagingManifest extends _ImagingManifest {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -2951,7 +2951,7 @@ class _$_ImagingManifest extends _ImagingManifest {
   @override
   final Reference patient;
   @override
-  final Time? authoringTime;
+  final FhirTime? authoringTime;
   @override
   @JsonKey(name: '_authoringTime')
   final Element? authoringTimeElement;
@@ -3058,7 +3058,7 @@ abstract class _ImagingManifest extends ImagingManifest {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3072,7 +3072,7 @@ abstract class _ImagingManifest extends ImagingManifest {
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       required final Reference patient,
-      final Time? authoringTime,
+      final FhirTime? authoringTime,
       @JsonKey(name: '_authoringTime')
           final Element? authoringTimeElement,
       final Reference? author,
@@ -3161,7 +3161,7 @@ abstract class $ImagingManifestStudyCopyWith<$Res> {
       _$ImagingManifestStudyCopyWithImpl<$Res, ImagingManifestStudy>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Reference? imagingStudy,
       List<Reference>? endpoint,
@@ -3195,7 +3195,7 @@ class _$ImagingManifestStudyCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3249,7 +3249,7 @@ abstract class _$$_ImagingManifestStudyCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Reference? imagingStudy,
       List<Reference>? endpoint,
@@ -3282,7 +3282,7 @@ class __$$_ImagingManifestStudyCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3445,7 +3445,7 @@ abstract class $ImagingManifestSeriesCopyWith<$Res> {
       _$ImagingManifestSeriesCopyWithImpl<$Res, ImagingManifestSeries>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       List<Reference>? endpoint,
       List<ImagingManifestInstance> instance});
@@ -3476,7 +3476,7 @@ class _$ImagingManifestSeriesCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3514,7 +3514,7 @@ abstract class _$$_ImagingManifestSeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       List<Reference>? endpoint,
       List<ImagingManifestInstance> instance});
@@ -3543,7 +3543,7 @@ class __$$_ImagingManifestSeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3733,7 +3733,7 @@ class _$ImagingManifestInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3815,7 +3815,7 @@ class __$$_ImagingManifestInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -4032,7 +4032,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
           Element? descriptionElement,
       List<ImagingStudySeries>? series});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4107,11 +4107,11 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4147,7 +4147,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -4207,7 +4207,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       numberOfSeries: freezed == numberOfSeries
           ? _value.numberOfSeries
           : numberOfSeries // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfSeriesElement: freezed == numberOfSeriesElement
           ? _value.numberOfSeriesElement
           : numberOfSeriesElement // ignore: cast_nullable_to_non_nullable
@@ -4215,7 +4215,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       numberOfInstances: freezed == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -4249,12 +4249,12 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4481,7 +4481,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       List<ImagingStudySeries>? series});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4568,11 +4568,11 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4608,7 +4608,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -4668,7 +4668,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       numberOfSeries: freezed == numberOfSeries
           ? _value.numberOfSeries
           : numberOfSeries // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfSeriesElement: freezed == numberOfSeriesElement
           ? _value.numberOfSeriesElement
           : numberOfSeriesElement // ignore: cast_nullable_to_non_nullable
@@ -4676,7 +4676,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       numberOfInstances: freezed == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -4781,7 +4781,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4900,12 +4900,12 @@ class _$_ImagingStudy extends _ImagingStudy {
   }
 
   @override
-  final Decimal? numberOfSeries;
+  final FhirDecimal? numberOfSeries;
   @override
   @JsonKey(name: '_numberOfSeries')
   final Element? numberOfSeriesElement;
   @override
-  final Decimal? numberOfInstances;
+  final FhirDecimal? numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
@@ -5082,7 +5082,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5112,10 +5112,10 @@ abstract class _ImagingStudy extends ImagingStudy {
       final Reference? referrer,
       final List<Reference>? interpreter,
       final List<Reference>? endpoint,
-      final Decimal? numberOfSeries,
+      final FhirDecimal? numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           final Element? numberOfSeriesElement,
-      final Decimal? numberOfInstances,
+      final FhirDecimal? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           final Element? numberOfInstancesElement,
       final List<Reference>? procedureReference,
@@ -5264,7 +5264,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       _$ImagingStudySeriesCopyWithImpl<$Res, ImagingStudySeries>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5330,7 +5330,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -5338,7 +5338,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -5358,7 +5358,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       numberOfInstances: freezed == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -5516,7 +5516,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5589,7 +5589,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -5597,7 +5597,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -5617,7 +5617,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       numberOfInstances: freezed == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -5698,7 +5698,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   @JsonKey(name: '_uid')
   final Element? uidElement;
   @override
-  final Decimal? number;
+  final FhirDecimal? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
@@ -5710,7 +5710,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Decimal? numberOfInstances;
+  final FhirDecimal? numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
@@ -5845,14 +5845,14 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       {final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
-      final Decimal? number,
+      final FhirDecimal? number,
       @JsonKey(name: '_number')
           final Element? numberElement,
       required final Coding modality,
       final String? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Decimal? numberOfInstances,
+      final FhirDecimal? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           final Element? numberOfInstancesElement,
       final ImagingStudySeriesAvailability? availability,
@@ -5951,7 +5951,7 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       _$ImagingStudyInstanceCopyWithImpl<$Res, ImagingStudyInstance>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5993,7 +5993,7 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -6001,7 +6001,7 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -6083,7 +6083,7 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -6126,7 +6126,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -6134,7 +6134,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -6182,7 +6182,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
   @JsonKey(name: '_uid')
   final Element? uidElement;
   @override
-  final Decimal? number;
+  final FhirDecimal? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
@@ -6246,7 +6246,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   factory _ImagingStudyInstance(
           {final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
-          final Decimal? number,
+          final FhirDecimal? number,
           @JsonKey(name: '_number') final Element? numberElement,
           final String? sopClass,
           @JsonKey(name: '_sopClass') final Element? sopClassElement,
@@ -6435,7 +6435,7 @@ abstract class $ObservationCopyWith<$Res> {
       List<ObservationRelated>? related,
       List<ObservationComponent>? component});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6539,11 +6539,11 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6623,7 +6623,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       issued: freezed == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -6675,7 +6675,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6741,12 +6741,12 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7159,7 +7159,7 @@ abstract class _$$_ObservationCopyWith<$Res>
       List<ObservationComponent>? component});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7289,11 +7289,11 @@ class __$$_ObservationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7373,7 +7373,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       issued: freezed == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -7425,7 +7425,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7578,7 +7578,7 @@ class _$_Observation extends _Observation {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -7672,7 +7672,7 @@ class _$_Observation extends _Observation {
   @override
   final Period? effectivePeriod;
   @override
-  final Instant? issued;
+  final FhirInstant? issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -7709,7 +7709,7 @@ class _$_Observation extends _Observation {
   @override
   final Attachment? valueAttachment;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -7941,7 +7941,7 @@ abstract class _Observation extends Observation {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7966,7 +7966,7 @@ abstract class _Observation extends Observation {
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
-      final Instant? issued,
+      final FhirInstant? issued,
       @JsonKey(name: '_issued')
           final Element? issuedElement,
       final List<Reference>? performer,
@@ -7982,7 +7982,7 @@ abstract class _Observation extends Observation {
       final Ratio? valueRatio,
       final SampledData? valueSampledData,
       final Attachment? valueAttachment,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
       final FhirDateTime? valueDateTime,
@@ -8849,7 +8849,7 @@ class _$ObservationComponentCopyWithImpl<$Res,
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9159,7 +9159,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -9239,7 +9239,7 @@ class _$_ObservationComponent extends _ObservationComponent {
   @override
   final Attachment? valueAttachment;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -9357,7 +9357,7 @@ abstract class _ObservationComponent extends ObservationComponent {
           final Ratio? valueRatio,
           final SampledData? valueSampledData,
           final Attachment? valueAttachment,
-          final Time? valueTime,
+          final FhirTime? valueTime,
           @JsonKey(name: '_valueTime') final Element? valueTimeElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -9498,7 +9498,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       Reference? source,
       List<QuestionnaireResponseItem>? item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -9559,11 +9559,11 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9653,12 +9653,12 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9837,7 +9837,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
       List<QuestionnaireResponseItem>? item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9906,11 +9906,11 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10050,7 +10050,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -10246,7 +10246,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10804,7 +10804,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res> {
           QuestionnaireResponseAnswer>;
   @useResult
   $Res call(
-      {Boolean? valueBoolean,
+      {FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -10888,7 +10888,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res,
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10896,7 +10896,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10904,7 +10904,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -10920,7 +10920,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res,
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11119,7 +11119,7 @@ abstract class _$$_QuestionnaireResponseAnswerCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Boolean? valueBoolean,
+      {FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -11214,7 +11214,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -11222,7 +11222,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -11230,7 +11230,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -11246,7 +11246,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11328,17 +11328,17 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
   final Element? valueDecimalElement;
   @override
-  final Decimal? valueInteger;
+  final FhirDecimal? valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
   @override
   @JsonKey(name: '_valueDate')
   final Element? valueDateElement;
@@ -11348,7 +11348,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -11480,15 +11480,15 @@ abstract class _QuestionnaireResponseAnswer
   factory _QuestionnaireResponseAnswer(
           {final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-          final Decimal? valueDecimal,
+          final FhirDecimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
-          final Decimal? valueInteger,
+          final FhirDecimal? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate') final Element? valueDateElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-          final Time? valueTime,
+          final FhirTime? valueTime,
           @JsonKey(name: '_valueTime') final Element? valueTimeElement,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
@@ -11659,7 +11659,7 @@ abstract class $SequenceCopyWith<$Res> {
       List<SequenceRepository>? repository,
       List<Reference>? pointer});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11727,11 +11727,11 @@ class _$SequenceCopyWithImpl<$Res, $Val extends Sequence>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11779,7 +11779,7 @@ class _$SequenceCopyWithImpl<$Res, $Val extends Sequence>
       coordinateSystem: freezed == coordinateSystem
           ? _value.coordinateSystem
           : coordinateSystem // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       coordinateSystemElement: freezed == coordinateSystemElement
           ? _value.coordinateSystemElement
           : coordinateSystemElement // ignore: cast_nullable_to_non_nullable
@@ -11827,7 +11827,7 @@ class _$SequenceCopyWithImpl<$Res, $Val extends Sequence>
       readCoverage: freezed == readCoverage
           ? _value.readCoverage
           : readCoverage // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       readCoverageElement: freezed == readCoverageElement
           ? _value.readCoverageElement
           : readCoverageElement // ignore: cast_nullable_to_non_nullable
@@ -11845,12 +11845,12 @@ class _$SequenceCopyWithImpl<$Res, $Val extends Sequence>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -12060,7 +12060,7 @@ abstract class _$$_SequenceCopyWith<$Res> implements $SequenceCopyWith<$Res> {
       List<Reference>? pointer});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12139,11 +12139,11 @@ class __$$_SequenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12191,7 +12191,7 @@ class __$$_SequenceCopyWithImpl<$Res>
       coordinateSystem: freezed == coordinateSystem
           ? _value.coordinateSystem
           : coordinateSystem // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       coordinateSystemElement: freezed == coordinateSystemElement
           ? _value.coordinateSystemElement
           : coordinateSystemElement // ignore: cast_nullable_to_non_nullable
@@ -12239,7 +12239,7 @@ class __$$_SequenceCopyWithImpl<$Res>
       readCoverage: freezed == readCoverage
           ? _value.readCoverage
           : readCoverage // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       readCoverageElement: freezed == readCoverageElement
           ? _value.readCoverageElement
           : readCoverageElement // ignore: cast_nullable_to_non_nullable
@@ -12317,7 +12317,7 @@ class _$_Sequence extends _Sequence {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -12378,7 +12378,7 @@ class _$_Sequence extends _Sequence {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Decimal? coordinateSystem;
+  final FhirDecimal? coordinateSystem;
   @override
   @JsonKey(name: '_coordinateSystem')
   final Element? coordinateSystemElement;
@@ -12420,7 +12420,7 @@ class _$_Sequence extends _Sequence {
   }
 
   @override
-  final Decimal? readCoverage;
+  final FhirDecimal? readCoverage;
   @override
   @JsonKey(name: '_readCoverage')
   final Element? readCoverageElement;
@@ -12563,7 +12563,7 @@ abstract class _Sequence extends Sequence {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -12579,7 +12579,7 @@ abstract class _Sequence extends Sequence {
       final SequenceType? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final Decimal? coordinateSystem,
+      final FhirDecimal? coordinateSystem,
       @JsonKey(name: '_coordinateSystem')
           final Element? coordinateSystemElement,
       final Reference? patient,
@@ -12593,7 +12593,7 @@ abstract class _Sequence extends Sequence {
       @JsonKey(name: '_observedSeq')
           final Element? observedSeqElement,
       final List<SequenceQuality>? quality,
-      final Decimal? readCoverage,
+      final FhirDecimal? readCoverage,
       @JsonKey(name: '_readCoverage')
           final Element? readCoverageElement,
       final List<SequenceRepository>? repository,
@@ -12798,7 +12798,7 @@ class _$SequenceReferenceSeqCopyWithImpl<$Res,
       strand: freezed == strand
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       strandElement: freezed == strandElement
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -12806,7 +12806,7 @@ class _$SequenceReferenceSeqCopyWithImpl<$Res,
       windowStart: freezed == windowStart
           ? _value.windowStart
           : windowStart // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       windowStartElement: freezed == windowStartElement
           ? _value.windowStartElement
           : windowStartElement // ignore: cast_nullable_to_non_nullable
@@ -12814,7 +12814,7 @@ class _$SequenceReferenceSeqCopyWithImpl<$Res,
       windowEnd: freezed == windowEnd
           ? _value.windowEnd
           : windowEnd // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       windowEndElement: freezed == windowEndElement
           ? _value.windowEndElement
           : windowEndElement // ignore: cast_nullable_to_non_nullable
@@ -13017,7 +13017,7 @@ class __$$_SequenceReferenceSeqCopyWithImpl<$Res>
       strand: freezed == strand
           ? _value.strand
           : strand // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       strandElement: freezed == strandElement
           ? _value.strandElement
           : strandElement // ignore: cast_nullable_to_non_nullable
@@ -13025,7 +13025,7 @@ class __$$_SequenceReferenceSeqCopyWithImpl<$Res>
       windowStart: freezed == windowStart
           ? _value.windowStart
           : windowStart // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       windowStartElement: freezed == windowStartElement
           ? _value.windowStartElement
           : windowStartElement // ignore: cast_nullable_to_non_nullable
@@ -13033,7 +13033,7 @@ class __$$_SequenceReferenceSeqCopyWithImpl<$Res>
       windowEnd: freezed == windowEnd
           ? _value.windowEnd
           : windowEnd // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       windowEndElement: freezed == windowEndElement
           ? _value.windowEndElement
           : windowEndElement // ignore: cast_nullable_to_non_nullable
@@ -13081,17 +13081,17 @@ class _$_SequenceReferenceSeq extends _SequenceReferenceSeq {
   @JsonKey(name: '_referenceSeqString')
   final Element? referenceSeqStringElement;
   @override
-  final Decimal? strand;
+  final FhirDecimal? strand;
   @override
   @JsonKey(name: '_strand')
   final Element? strandElement;
   @override
-  final Decimal? windowStart;
+  final FhirDecimal? windowStart;
   @override
   @JsonKey(name: '_windowStart')
   final Element? windowStartElement;
   @override
-  final Decimal? windowEnd;
+  final FhirDecimal? windowEnd;
   @override
   @JsonKey(name: '_windowEnd')
   final Element? windowEndElement;
@@ -13178,13 +13178,13 @@ abstract class _SequenceReferenceSeq extends SequenceReferenceSeq {
       final String? referenceSeqString,
       @JsonKey(name: '_referenceSeqString')
           final Element? referenceSeqStringElement,
-      final Decimal? strand,
+      final FhirDecimal? strand,
       @JsonKey(name: '_strand')
           final Element? strandElement,
-      final Decimal? windowStart,
+      final FhirDecimal? windowStart,
       @JsonKey(name: '_windowStart')
           final Element? windowStartElement,
-      final Decimal? windowEnd,
+      final FhirDecimal? windowEnd,
       @JsonKey(name: '_windowEnd')
           final Element? windowEndElement}) = _$_SequenceReferenceSeq;
   _SequenceReferenceSeq._() : super._();
@@ -13265,7 +13265,7 @@ abstract class $SequenceVariantCopyWith<$Res> {
       _$SequenceVariantCopyWithImpl<$Res, SequenceVariant>;
   @useResult
   $Res call(
-      {Decimal? start,
+      {FhirDecimal? start,
       @JsonKey(name: '_start') Element? startElement,
       FhirDecimal? end,
       @JsonKey(name: '_end') Element? endElement,
@@ -13314,7 +13314,7 @@ class _$SequenceVariantCopyWithImpl<$Res, $Val extends SequenceVariant>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -13322,7 +13322,7 @@ class _$SequenceVariantCopyWithImpl<$Res, $Val extends SequenceVariant>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -13440,7 +13440,7 @@ abstract class _$$_SequenceVariantCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? start,
+      {FhirDecimal? start,
       @JsonKey(name: '_start') Element? startElement,
       FhirDecimal? end,
       @JsonKey(name: '_end') Element? endElement,
@@ -13493,7 +13493,7 @@ class __$$_SequenceVariantCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -13501,7 +13501,7 @@ class __$$_SequenceVariantCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -13559,12 +13559,12 @@ class _$_SequenceVariant extends _SequenceVariant {
       _$$_SequenceVariantFromJson(json);
 
   @override
-  final Decimal? start;
+  final FhirDecimal? start;
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
   @override
-  final Decimal? end;
+  final FhirDecimal? end;
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -13649,9 +13649,9 @@ class _$_SequenceVariant extends _SequenceVariant {
 
 abstract class _SequenceVariant extends SequenceVariant {
   factory _SequenceVariant(
-      {final Decimal? start,
+      {final FhirDecimal? start,
       @JsonKey(name: '_start') final Element? startElement,
-      final Decimal? end,
+      final FhirDecimal? end,
       @JsonKey(name: '_end') final Element? endElement,
       final String? observedAllele,
       @JsonKey(name: '_observedAllele') final Element? observedAlleleElement,
@@ -13851,7 +13851,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -13859,7 +13859,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -13875,7 +13875,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       truthTP: freezed == truthTP
           ? _value.truthTP
           : truthTP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       truthTPElement: freezed == truthTPElement
           ? _value.truthTPElement
           : truthTPElement // ignore: cast_nullable_to_non_nullable
@@ -13883,7 +13883,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       queryTP: freezed == queryTP
           ? _value.queryTP
           : queryTP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       queryTPElement: freezed == queryTPElement
           ? _value.queryTPElement
           : queryTPElement // ignore: cast_nullable_to_non_nullable
@@ -13891,7 +13891,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       truthFN: freezed == truthFN
           ? _value.truthFN
           : truthFN // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       truthFNElement: freezed == truthFNElement
           ? _value.truthFNElement
           : truthFNElement // ignore: cast_nullable_to_non_nullable
@@ -13899,7 +13899,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       queryFP: freezed == queryFP
           ? _value.queryFP
           : queryFP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       queryFPElement: freezed == queryFPElement
           ? _value.queryFPElement
           : queryFPElement // ignore: cast_nullable_to_non_nullable
@@ -13907,7 +13907,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       gtFP: freezed == gtFP
           ? _value.gtFP
           : gtFP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       gtFPElement: freezed == gtFPElement
           ? _value.gtFPElement
           : gtFPElement // ignore: cast_nullable_to_non_nullable
@@ -13915,7 +13915,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       precision: freezed == precision
           ? _value.precision
           : precision // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       precisionElement: freezed == precisionElement
           ? _value.precisionElement
           : precisionElement // ignore: cast_nullable_to_non_nullable
@@ -13923,7 +13923,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       recall: freezed == recall
           ? _value.recall
           : recall // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       recallElement: freezed == recallElement
           ? _value.recallElement
           : recallElement // ignore: cast_nullable_to_non_nullable
@@ -13931,7 +13931,7 @@ class _$SequenceQualityCopyWithImpl<$Res, $Val extends SequenceQuality>
       fScore: freezed == fScore
           ? _value.fScore
           : fScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       fScoreElement: freezed == fScoreElement
           ? _value.fScoreElement
           : fScoreElement // ignore: cast_nullable_to_non_nullable
@@ -14226,7 +14226,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -14234,7 +14234,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -14250,7 +14250,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       truthTP: freezed == truthTP
           ? _value.truthTP
           : truthTP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       truthTPElement: freezed == truthTPElement
           ? _value.truthTPElement
           : truthTPElement // ignore: cast_nullable_to_non_nullable
@@ -14258,7 +14258,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       queryTP: freezed == queryTP
           ? _value.queryTP
           : queryTP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       queryTPElement: freezed == queryTPElement
           ? _value.queryTPElement
           : queryTPElement // ignore: cast_nullable_to_non_nullable
@@ -14266,7 +14266,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       truthFN: freezed == truthFN
           ? _value.truthFN
           : truthFN // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       truthFNElement: freezed == truthFNElement
           ? _value.truthFNElement
           : truthFNElement // ignore: cast_nullable_to_non_nullable
@@ -14274,7 +14274,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       queryFP: freezed == queryFP
           ? _value.queryFP
           : queryFP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       queryFPElement: freezed == queryFPElement
           ? _value.queryFPElement
           : queryFPElement // ignore: cast_nullable_to_non_nullable
@@ -14282,7 +14282,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       gtFP: freezed == gtFP
           ? _value.gtFP
           : gtFP // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       gtFPElement: freezed == gtFPElement
           ? _value.gtFPElement
           : gtFPElement // ignore: cast_nullable_to_non_nullable
@@ -14290,7 +14290,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       precision: freezed == precision
           ? _value.precision
           : precision // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       precisionElement: freezed == precisionElement
           ? _value.precisionElement
           : precisionElement // ignore: cast_nullable_to_non_nullable
@@ -14298,7 +14298,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       recall: freezed == recall
           ? _value.recall
           : recall // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       recallElement: freezed == recallElement
           ? _value.recallElement
           : recallElement // ignore: cast_nullable_to_non_nullable
@@ -14306,7 +14306,7 @@ class __$$_SequenceQualityCopyWithImpl<$Res>
       fScore: freezed == fScore
           ? _value.fScore
           : fScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       fScoreElement: freezed == fScoreElement
           ? _value.fScoreElement
           : fScoreElement // ignore: cast_nullable_to_non_nullable
@@ -14357,12 +14357,12 @@ class _$_SequenceQuality extends _SequenceQuality {
   @override
   final CodeableConcept? standardSequence;
   @override
-  final Decimal? start;
+  final FhirDecimal? start;
   @override
   @JsonKey(name: '_start')
   final Element? startElement;
   @override
-  final Decimal? end;
+  final FhirDecimal? end;
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
@@ -14371,42 +14371,42 @@ class _$_SequenceQuality extends _SequenceQuality {
   @override
   final CodeableConcept? method;
   @override
-  final Decimal? truthTP;
+  final FhirDecimal? truthTP;
   @override
   @JsonKey(name: '_truthTP')
   final Element? truthTPElement;
   @override
-  final Decimal? queryTP;
+  final FhirDecimal? queryTP;
   @override
   @JsonKey(name: '_queryTP')
   final Element? queryTPElement;
   @override
-  final Decimal? truthFN;
+  final FhirDecimal? truthFN;
   @override
   @JsonKey(name: '_truthFN')
   final Element? truthFNElement;
   @override
-  final Decimal? queryFP;
+  final FhirDecimal? queryFP;
   @override
   @JsonKey(name: '_queryFP')
   final Element? queryFPElement;
   @override
-  final Decimal? gtFP;
+  final FhirDecimal? gtFP;
   @override
   @JsonKey(name: '_gtFP')
   final Element? gtFPElement;
   @override
-  final Decimal? precision;
+  final FhirDecimal? precision;
   @override
   @JsonKey(name: '_precision')
   final Element? precisionElement;
   @override
-  final Decimal? recall;
+  final FhirDecimal? recall;
   @override
   @JsonKey(name: '_recall')
   final Element? recallElement;
   @override
-  final Decimal? fScore;
+  final FhirDecimal? fScore;
   @override
   @JsonKey(name: '_fScore')
   final Element? fScoreElement;
@@ -14511,27 +14511,27 @@ abstract class _SequenceQuality extends SequenceQuality {
           {final SequenceQualityType? type,
           @JsonKey(name: '_type') final Element? typeElement,
           final CodeableConcept? standardSequence,
-          final Decimal? start,
+          final FhirDecimal? start,
           @JsonKey(name: '_start') final Element? startElement,
-          final Decimal? end,
+          final FhirDecimal? end,
           @JsonKey(name: '_end') final Element? endElement,
           final Quantity? score,
           final CodeableConcept? method,
-          final Decimal? truthTP,
+          final FhirDecimal? truthTP,
           @JsonKey(name: '_truthTP') final Element? truthTPElement,
-          final Decimal? queryTP,
+          final FhirDecimal? queryTP,
           @JsonKey(name: '_queryTP') final Element? queryTPElement,
-          final Decimal? truthFN,
+          final FhirDecimal? truthFN,
           @JsonKey(name: '_truthFN') final Element? truthFNElement,
-          final Decimal? queryFP,
+          final FhirDecimal? queryFP,
           @JsonKey(name: '_queryFP') final Element? queryFPElement,
-          final Decimal? gtFP,
+          final FhirDecimal? gtFP,
           @JsonKey(name: '_gtFP') final Element? gtFPElement,
-          final Decimal? precision,
+          final FhirDecimal? precision,
           @JsonKey(name: '_precision') final Element? precisionElement,
-          final Decimal? recall,
+          final FhirDecimal? recall,
           @JsonKey(name: '_recall') final Element? recallElement,
-          final Decimal? fScore,
+          final FhirDecimal? fScore,
           @JsonKey(name: '_fScore') final Element? fScoreElement}) =
       _$_SequenceQuality;
   _SequenceQuality._() : super._();
@@ -15186,7 +15186,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<SpecimenContainer>? container,
       List<Annotation>? note});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -15245,11 +15245,11 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15309,7 +15309,7 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       receivedTime: freezed == receivedTime
           ? _value.receivedTime
           : receivedTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       receivedTimeElement: freezed == receivedTimeElement
           ? _value.receivedTimeElement
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
@@ -15343,12 +15343,12 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -15499,7 +15499,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<Annotation>? note});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -15565,11 +15565,11 @@ class __$$_SpecimenCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15629,7 +15629,7 @@ class __$$_SpecimenCopyWithImpl<$Res>
       receivedTime: freezed == receivedTime
           ? _value.receivedTime
           : receivedTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       receivedTimeElement: freezed == receivedTimeElement
           ? _value.receivedTimeElement
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
@@ -15717,7 +15717,7 @@ class _$_Specimen extends _Specimen {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -15784,7 +15784,7 @@ class _$_Specimen extends _Specimen {
   @override
   final Reference subject;
   @override
-  final Time? receivedTime;
+  final FhirTime? receivedTime;
   @override
   @JsonKey(name: '_receivedTime')
   final Element? receivedTimeElement;
@@ -15943,7 +15943,7 @@ abstract class _Specimen extends Specimen {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -15962,7 +15962,7 @@ abstract class _Specimen extends Specimen {
           final Element? statusElement,
       final CodeableConcept? type,
       required final Reference subject,
-      final Time? receivedTime,
+      final FhirTime? receivedTime,
       @JsonKey(name: '_receivedTime')
           final Element? receivedTimeElement,
       final List<Reference>? parent,

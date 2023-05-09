@@ -2438,7 +2438,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -2643,7 +2643,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -2713,7 +2713,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   @JsonKey(name: '_use')
   final Element? useElement;
   @override
-  final Decimal? min;
+  final FhirDecimal? min;
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
@@ -2806,7 +2806,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? use,
       @JsonKey(name: '_use') final Element? useElement,
-      final Decimal? min,
+      final FhirDecimal? min,
       @JsonKey(name: '_min') final Element? minElement,
       final String? max,
       @JsonKey(name: '_max') final Element? maxElement,
@@ -2971,7 +2971,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
       eventTimingDate: freezed == eventTimingDate
           ? _value.eventTimingDate
           : eventTimingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       eventTimingDateElement: freezed == eventTimingDateElement
           ? _value.eventTimingDateElement
           : eventTimingDateElement // ignore: cast_nullable_to_non_nullable
@@ -3168,7 +3168,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
       eventTimingDate: freezed == eventTimingDate
           ? _value.eventTimingDate
           : eventTimingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       eventTimingDateElement: freezed == eventTimingDateElement
           ? _value.eventTimingDateElement
           : eventTimingDateElement // ignore: cast_nullable_to_non_nullable
@@ -3224,7 +3224,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @override
   final Reference? eventTimingReference;
   @override
-  final Date? eventTimingDate;
+  final FhirDate? eventTimingDate;
   @override
   @JsonKey(name: '_eventTimingDate')
   final Element? eventTimingDateElement;
@@ -3312,7 +3312,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
           final Element? eventNameElement,
       final Timing? eventTimingTiming,
       final Reference? eventTimingReference,
-      final Date? eventTimingDate,
+      final FhirDate? eventTimingDate,
       @JsonKey(name: '_eventTimingDate')
           final Element? eventTimingDateElement,
       final FhirDateTime? eventTimingDateTime,

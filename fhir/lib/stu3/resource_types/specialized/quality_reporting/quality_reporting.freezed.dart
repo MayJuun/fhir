@@ -238,7 +238,7 @@ abstract class $MeasureCopyWith<$Res> {
       List<MeasureGroup>? group,
       List<MeasureSupplementalData>? supplementalData});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -362,11 +362,11 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -454,7 +454,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -494,7 +494,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -502,7 +502,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -646,12 +646,12 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1105,7 +1105,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       List<MeasureSupplementalData>? supplementalData});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1254,11 +1254,11 @@ class __$$_MeasureCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1346,7 +1346,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1386,7 +1386,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1394,7 +1394,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -1668,7 +1668,7 @@ class _$_Measure extends _Measure {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1754,7 +1754,7 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -1779,12 +1779,12 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
@@ -2186,7 +2186,7 @@ abstract class _Measure extends Measure {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2217,7 +2217,7 @@ abstract class _Measure extends Measure {
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final String? publisher,
@@ -2232,10 +2232,10 @@ abstract class _Measure extends Measure {
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -3870,7 +3870,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       List<MeasureReportGroup>? group,
       Reference? evaluatedResources});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3931,11 +3931,11 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3999,7 +3999,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4025,12 +4025,12 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4214,7 +4214,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       Reference? evaluatedResources});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4285,11 +4285,11 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4353,7 +4353,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -4428,7 +4428,7 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4490,7 +4490,7 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Reference? patient;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -4610,7 +4610,7 @@ abstract class _MeasureReport extends MeasureReport {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -4631,7 +4631,7 @@ abstract class _MeasureReport extends MeasureReport {
           final Element? typeElement,
       required final Reference measure,
       final Reference? patient,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date')
           final Element? dateElement,
       final Reference? reportingOrganization,
@@ -4773,7 +4773,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res, $Val extends MeasureReportGroup>
       measureScore: freezed == measureScore
           ? _value.measureScore
           : measureScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       measureScoreElement: freezed == measureScoreElement
           ? _value.measureScoreElement
           : measureScoreElement // ignore: cast_nullable_to_non_nullable
@@ -4856,7 +4856,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
       measureScore: freezed == measureScore
           ? _value.measureScore
           : measureScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       measureScoreElement: freezed == measureScoreElement
           ? _value.measureScoreElement
           : measureScoreElement // ignore: cast_nullable_to_non_nullable
@@ -4898,7 +4898,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   }
 
   @override
-  final Decimal? measureScore;
+  final FhirDecimal? measureScore;
   @override
   @JsonKey(name: '_measureScore')
   final Element? measureScoreElement;
@@ -4963,7 +4963,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   factory _MeasureReportGroup(
       {required final Identifier identifier,
       final List<MeasureReportPopulation>? population,
-      final Decimal? measureScore,
+      final FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') final Element? measureScoreElement,
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
@@ -5059,7 +5059,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -5175,7 +5175,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -5207,7 +5207,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
   @override
   final CodeableConcept? code;
   @override
-  final Decimal? count;
+  final FhirDecimal? count;
   @override
   @JsonKey(name: '_count')
   final Element? countElement;
@@ -5259,7 +5259,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   factory _MeasureReportPopulation(
       {final Identifier? identifier,
       final CodeableConcept? code,
-      final Decimal? count,
+      final FhirDecimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation;
   _MeasureReportPopulation._() : super._();
@@ -5547,7 +5547,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res,
       measureScore: freezed == measureScore
           ? _value.measureScore
           : measureScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       measureScoreElement: freezed == measureScoreElement
           ? _value.measureScoreElement
           : measureScoreElement // ignore: cast_nullable_to_non_nullable
@@ -5634,7 +5634,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
       measureScore: freezed == measureScore
           ? _value.measureScore
           : measureScore // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       measureScoreElement: freezed == measureScoreElement
           ? _value.measureScoreElement
           : measureScoreElement // ignore: cast_nullable_to_non_nullable
@@ -5674,7 +5674,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   }
 
   @override
-  final Decimal? measureScore;
+  final FhirDecimal? measureScore;
   @override
   @JsonKey(name: '_measureScore')
   final Element? measureScoreElement;
@@ -5730,7 +5730,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
           {final String? value,
           @JsonKey(name: '_value') final Element? valueElement,
           final List<MeasureReportPopulation1>? population,
-          final Decimal? measureScore,
+          final FhirDecimal? measureScore,
           @JsonKey(name: '_measureScore') final Element? measureScoreElement}) =
       _$_MeasureReportStratum;
   _MeasureReportStratum._() : super._();
@@ -5827,7 +5827,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -5944,7 +5944,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -5976,7 +5976,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
   @override
   final CodeableConcept? code;
   @override
-  final Decimal? count;
+  final FhirDecimal? count;
   @override
   @JsonKey(name: '_count')
   final Element? countElement;
@@ -6027,7 +6027,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   factory _MeasureReportPopulation1(
       {final Identifier? identifier,
       final CodeableConcept? code,
-      final Decimal? count,
+      final FhirDecimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation1;
   _MeasureReportPopulation1._() : super._();

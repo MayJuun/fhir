@@ -613,7 +613,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -629,7 +629,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -637,7 +637,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -645,7 +645,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -653,7 +653,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -661,7 +661,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -669,7 +669,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -677,7 +677,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -693,7 +693,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -701,7 +701,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -725,7 +725,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -1820,7 +1820,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -1836,7 +1836,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -1844,7 +1844,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -1852,7 +1852,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -1860,7 +1860,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -1868,7 +1868,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -1876,7 +1876,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -1884,7 +1884,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -1900,7 +1900,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1908,7 +1908,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -1932,7 +1932,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -2235,7 +2235,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueDate] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] Extensions for valueDate
   @override
@@ -2255,7 +2255,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueDecimal] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @override
@@ -2275,7 +2275,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueInstant] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Instant? valueInstant;
+  final FhirInstant? valueInstant;
 
   /// [valueInstantElement] Extensions for valueInstant
   @override
@@ -2285,7 +2285,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueInteger] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] Extensions for valueInteger
   @override
@@ -2295,7 +2295,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueMarkdown] Value of extension - must be one of a constrained set of
   ///  the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Markdown? valueMarkdown;
+  final FhirMarkdown? valueMarkdown;
 
   /// [valueMarkdownElement] Extensions for valueMarkdown
   @override
@@ -2305,7 +2305,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueOid] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Oid? valueOid;
+  final FhirOid? valueOid;
 
   /// [valueOidElement] Extensions for valueOid
   @override
@@ -2315,7 +2315,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valuePositiveInt] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final PositiveInt? valuePositiveInt;
+  final FhirPositiveInt? valuePositiveInt;
 
   /// [valuePositiveIntElement] Extensions for valuePositiveInt
   @override
@@ -2335,7 +2335,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueTime] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] Extensions for valueTime
   @override
@@ -2345,7 +2345,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueUnsignedInt] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final UnsignedInt? valueUnsignedInt;
+  final FhirUnsignedInt? valueUnsignedInt;
 
   /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
   @override
@@ -2375,7 +2375,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueUuid] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Uuid? valueUuid;
+  final FhirUuid? valueUuid;
 
   /// [valueUuidElement] Extensions for valueUuid
   @override
@@ -2778,40 +2778,40 @@ abstract class _FhirExtension extends FhirExtension {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
       final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
-      final Instant? valueInstant,
+      final FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant')
           final Element? valueInstantElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Markdown? valueMarkdown,
+      final FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Oid? valueOid,
+      final FhirOid? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final PositiveInt? valuePositiveInt,
+      final FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
           final Element? valuePositiveIntElement,
       final String? valueString,
       @JsonKey(name: '_valueString')
           final Element? valueStringElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final UnsignedInt? valueUnsignedInt,
+      final FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
           final Element? valueUnsignedIntElement,
       final FhirUri? valueUri,
@@ -2820,7 +2820,7 @@ abstract class _FhirExtension extends FhirExtension {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Uuid? valueUuid,
+      final FhirUuid? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,

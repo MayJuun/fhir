@@ -12,10 +12,10 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.GuidanceResponse) ??
           Stu3ResourceType.GuidanceResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -23,7 +23,7 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -40,7 +40,7 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       requestId:
-          json['requestId'] == null ? null : Id.fromJson(json['requestId']),
+          json['requestId'] == null ? null : FhirId.fromJson(json['requestId']),
       requestIdElement: json['_requestId'] == null
           ? null
           : Element.fromJson(json['_requestId'] as Map<String, dynamic>),

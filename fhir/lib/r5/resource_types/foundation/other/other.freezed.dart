@@ -117,7 +117,7 @@ abstract class $BasicCopyWith<$Res> {
           Element? createdElement,
       Reference? author});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -166,11 +166,11 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -232,12 +232,12 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -354,7 +354,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       Reference? author});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -406,11 +406,11 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -520,7 +520,7 @@ class _$_Basic extends _Basic {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -702,7 +702,7 @@ abstract class _Basic extends Basic {
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -892,7 +892,7 @@ abstract class $BinaryCopyWith<$Res> {
       @JsonKey(name: '_data')
           Element? dataElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $ElementCopyWith<$Res>? get contentTypeElement;
@@ -934,11 +934,11 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -980,12 +980,12 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1077,7 +1077,7 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
           Element? dataElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1121,11 +1121,11 @@ class __$$_BinaryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1206,7 +1206,7 @@ class _$_Binary extends _Binary {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1320,7 +1320,7 @@ abstract class _Binary extends Binary {
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1511,7 +1511,7 @@ abstract class $BundleCopyWith<$Res> {
       Signature? signature,
       Resource? issues});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $IdentifierCopyWith<$Res>? get identifier;
@@ -1561,11 +1561,11 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1597,7 +1597,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timestampElement: freezed == timestampElement
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -1605,7 +1605,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -1631,12 +1631,12 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1759,7 +1759,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       Resource? issues});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1813,11 +1813,11 @@ class __$$_BundleCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1849,7 +1849,7 @@ class __$$_BundleCopyWithImpl<$Res>
       timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timestampElement: freezed == timestampElement
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -1857,7 +1857,7 @@ class __$$_BundleCopyWithImpl<$Res>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -1931,7 +1931,7 @@ class _$_Bundle extends _Bundle {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1969,7 +1969,7 @@ class _$_Bundle extends _Bundle {
 
   /// [timestamp] The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.
   @override
-  final Instant? timestamp;
+  final FhirInstant? timestamp;
 
   /// [timestampElement] ("_timestamp") Extensions for timestamp
   @override
@@ -1978,7 +1978,7 @@ class _$_Bundle extends _Bundle {
 
   /// [total] If a set of search matches, this is the (potentially estimated) total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.
   @override
-  final UnsignedInt? total;
+  final FhirUnsignedInt? total;
 
   /// [totalElement] ("_total") Extensions for total
   @override
@@ -2102,7 +2102,7 @@ abstract class _Bundle extends Bundle {
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2113,10 +2113,10 @@ abstract class _Bundle extends Bundle {
       final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final Instant? timestamp,
+      final FhirInstant? timestamp,
       @JsonKey(name: '_timestamp')
           final Element? timestampElement,
-      final UnsignedInt? total,
+      final FhirUnsignedInt? total,
       @JsonKey(name: '_total')
           final Element? totalElement,
       final List<BundleLink>? link,
@@ -3352,7 +3352,7 @@ class _$BundleSearchCopyWithImpl<$Res, $Val extends BundleSearch>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -3451,7 +3451,7 @@ class __$$_BundleSearchCopyWithImpl<$Res>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -3554,7 +3554,7 @@ class _$_BundleSearch extends _BundleSearch {
 
   /// [score] When searching, the server's search ranking score for the entry.
   @override
-  final Decimal? score;
+  final FhirDecimal? score;
 
   /// [scoreElement] ("_score") Extensions for score
   @override
@@ -3617,7 +3617,7 @@ abstract class _BundleSearch extends BundleSearch {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
-      final Decimal? score,
+      final FhirDecimal? score,
       @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
   _BundleSearch._() : super._();
 
@@ -3860,7 +3860,7 @@ class _$BundleRequestCopyWithImpl<$Res, $Val extends BundleRequest>
       ifModifiedSince: freezed == ifModifiedSince
           ? _value.ifModifiedSince
           : ifModifiedSince // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       ifModifiedSinceElement: freezed == ifModifiedSinceElement
           ? _value.ifModifiedSinceElement
           : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
@@ -4063,7 +4063,7 @@ class __$$_BundleRequestCopyWithImpl<$Res>
       ifModifiedSince: freezed == ifModifiedSince
           ? _value.ifModifiedSince
           : ifModifiedSince // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       ifModifiedSinceElement: freezed == ifModifiedSinceElement
           ? _value.ifModifiedSinceElement
           : ifModifiedSinceElement // ignore: cast_nullable_to_non_nullable
@@ -4208,7 +4208,7 @@ class _$_BundleRequest extends _BundleRequest {
 
   /// [ifModifiedSince] Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
   @override
-  final Instant? ifModifiedSince;
+  final FhirInstant? ifModifiedSince;
 
   /// [ifModifiedSinceElement] ("_ifModifiedSince") Extensions for ifModifiedSince
   @override
@@ -4320,7 +4320,7 @@ abstract class _BundleRequest extends BundleRequest {
       final String? ifNoneMatch,
       @JsonKey(name: '_ifNoneMatch')
           final Element? ifNoneMatchElement,
-      final Instant? ifModifiedSince,
+      final FhirInstant? ifModifiedSince,
       @JsonKey(name: '_ifModifiedSince')
           final Element? ifModifiedSinceElement,
       final String? ifMatch,
@@ -4587,7 +4587,7 @@ class _$BundleResponseCopyWithImpl<$Res, $Val extends BundleResponse>
       lastModified: freezed == lastModified
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastModifiedElement: freezed == lastModifiedElement
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -4744,7 +4744,7 @@ class __$$_BundleResponseCopyWithImpl<$Res>
       lastModified: freezed == lastModified
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastModifiedElement: freezed == lastModifiedElement
           ? _value.lastModifiedElement
           : lastModifiedElement // ignore: cast_nullable_to_non_nullable
@@ -4874,7 +4874,7 @@ class _$_BundleResponse extends _BundleResponse {
 
   /// [lastModified] The date/time that the resource was modified on the server.
   @override
-  final Instant? lastModified;
+  final FhirInstant? lastModified;
 
   /// [lastModifiedElement] ("_lastModified") Extensions for lastModified
   @override
@@ -4959,7 +4959,7 @@ abstract class _BundleResponse extends BundleResponse {
       @JsonKey(name: '_location') final Element? locationElement,
       final String? etag,
       @JsonKey(name: '_etag') final Element? etagElement,
-      final Instant? lastModified,
+      final FhirInstant? lastModified,
       @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
       final Resource? outcome}) = _$_BundleResponse;
   _BundleResponse._() : super._();
@@ -5138,7 +5138,7 @@ abstract class $LinkageCopyWith<$Res> {
       Reference? author,
       List<LinkageItem> item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5183,11 +5183,11 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5241,12 +5241,12 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5342,7 +5342,7 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       List<LinkageItem> item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5389,11 +5389,11 @@ class __$$_LinkageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5493,7 +5493,7 @@ class _$_Linkage extends _Linkage {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -5660,7 +5660,7 @@ abstract class _Linkage extends Linkage {
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -6302,7 +6302,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       List<Reference>? focus,
       FhirCanonical? definition});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6363,11 +6363,11 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6457,12 +6457,12 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6648,7 +6648,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
       FhirCanonical? definition});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6719,11 +6719,11 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6869,7 +6869,7 @@ class _$_MessageHeader extends _MessageHeader {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -7108,7 +7108,7 @@ abstract class _MessageHeader extends MessageHeader {
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -8961,7 +8961,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<OperationOutcomeIssue> issue});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -9001,11 +9001,11 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9047,12 +9047,12 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9121,7 +9121,7 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
       List<OperationOutcomeIssue> issue});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9162,11 +9162,11 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9250,7 +9250,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -9397,7 +9397,7 @@ abstract class _OperationOutcome extends OperationOutcome {
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10272,7 +10272,7 @@ abstract class $ParametersCopyWith<$Res> {
           Element? languageElement,
       List<ParametersParameter>? parameter});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
 }
@@ -10307,11 +10307,11 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10337,12 +10337,12 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10394,7 +10394,7 @@ abstract class _$$_ParametersCopyWith<$Res>
       List<ParametersParameter>? parameter});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -10429,11 +10429,11 @@ class __$$_ParametersCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10493,7 +10493,7 @@ class _$_Parameters extends _Parameters {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -10587,7 +10587,7 @@ abstract class _Parameters extends Parameters {
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -11093,7 +11093,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $AvailabilityCopyWith<$Res>? get valueAvailability;
   $ExtendedContactDetailCopyWith<$Res>? get valueExtendedContactDetail;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -11247,7 +11247,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -11263,7 +11263,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -11271,7 +11271,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -11279,7 +11279,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -11287,7 +11287,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -11295,7 +11295,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueInteger64: freezed == valueInteger64
           ? _value.valueInteger64
           : valueInteger64 // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       valueInteger64Element: freezed == valueInteger64Element
           ? _value.valueInteger64Element
           : valueInteger64Element // ignore: cast_nullable_to_non_nullable
@@ -11303,7 +11303,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -11311,7 +11311,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -11319,7 +11319,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -11335,7 +11335,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -11343,7 +11343,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -11367,7 +11367,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -11507,7 +11507,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
@@ -12176,12 +12176,12 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
+  $FhirMetaCopyWith<$Res>? get valueMeta {
     if (_value.valueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.valueMeta!, (value) {
       return _then(_value.copyWith(valueMeta: value) as $Val);
     });
   }
@@ -12387,7 +12387,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueMeta;
 }
 
 /// @nodoc
@@ -12539,7 +12539,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -12555,7 +12555,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -12563,7 +12563,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -12571,7 +12571,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueInstant: freezed == valueInstant
           ? _value.valueInstant
           : valueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       valueInstantElement: freezed == valueInstantElement
           ? _value.valueInstantElement
           : valueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -12579,7 +12579,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -12587,7 +12587,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueInteger64: freezed == valueInteger64
           ? _value.valueInteger64
           : valueInteger64 // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       valueInteger64Element: freezed == valueInteger64Element
           ? _value.valueInteger64Element
           : valueInteger64Element // ignore: cast_nullable_to_non_nullable
@@ -12595,7 +12595,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueMarkdown: freezed == valueMarkdown
           ? _value.valueMarkdown
           : valueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       valueMarkdownElement: freezed == valueMarkdownElement
           ? _value.valueMarkdownElement
           : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -12603,7 +12603,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -12611,7 +12611,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valuePositiveInt: freezed == valuePositiveInt
           ? _value.valuePositiveInt
           : valuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       valuePositiveIntElement: freezed == valuePositiveIntElement
           ? _value.valuePositiveIntElement
           : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -12627,7 +12627,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -12635,7 +12635,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueUnsignedInt: freezed == valueUnsignedInt
           ? _value.valueUnsignedInt
           : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       valueUnsignedIntElement: freezed == valueUnsignedIntElement
           ? _value.valueUnsignedIntElement
           : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -12659,7 +12659,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -12799,7 +12799,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueMeta: freezed == valueMeta
           ? _value.valueMeta
           : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
@@ -13017,7 +13017,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueDate] Conveys the content if the parameter is a data type.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -13035,7 +13035,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueDecimal] Conveys the content if the parameter is a data type.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -13053,7 +13053,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueInstant] Conveys the content if the parameter is a data type.
   @override
-  final Instant? valueInstant;
+  final FhirInstant? valueInstant;
 
   /// [valueInstantElement] ("_valueInstant") Extensions for valueInstant
   @override
@@ -13062,7 +13062,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueInteger] Conveys the content if the parameter is a data type.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -13071,7 +13071,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueInteger64] Conveys the content if the parameter is a data type.
   @override
-  final Integer64? valueInteger64;
+  final FhirInteger64? valueInteger64;
 
   /// [valueInteger64Element] ("_valueInteger64") Extensions for valueInteger64
   @override
@@ -13080,7 +13080,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueMarkdown] Conveys the content if the parameter is a data type.
   @override
-  final Markdown? valueMarkdown;
+  final FhirMarkdown? valueMarkdown;
 
   /// [valueMarkdownElement] ("_valueMarkdown") Extensions for valueMarkdown
   @override
@@ -13098,7 +13098,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valuePositiveInt] Conveys the content if the parameter is a data type.
   @override
-  final PositiveInt? valuePositiveInt;
+  final FhirPositiveInt? valuePositiveInt;
 
   /// [valuePositiveIntElement] ("_valuePositiveInt") Extensions for valuePositiveInt
   @override
@@ -13116,7 +13116,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueTime] Conveys the content if the parameter is a data type.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @override
@@ -13125,7 +13125,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueUnsignedInt] Conveys the content if the parameter is a data type.
   @override
-  final UnsignedInt? valueUnsignedInt;
+  final FhirUnsignedInt? valueUnsignedInt;
 
   /// [valueUnsignedIntElement] ("_valueUnsignedInt") Extensions for valueUnsignedInt
   @override
@@ -13293,7 +13293,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueMeta] Conveys the content if the parameter is a data type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueMeta;
 
   /// [resource] Conveys the content if the parameter is a whole resource.
   @override
@@ -13562,43 +13562,43 @@ abstract class _ParametersParameter extends ParametersParameter {
       final FhirCode? valueCode,
       @JsonKey(name: '_valueCode')
           final Element? valueCodeElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate')
           final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
       final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
-      final Instant? valueInstant,
+      final FhirInstant? valueInstant,
       @JsonKey(name: '_valueInstant')
           final Element? valueInstantElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Integer64? valueInteger64,
+      final FhirInteger64? valueInteger64,
       @JsonKey(name: '_valueInteger64')
           final Element? valueInteger64Element,
-      final Markdown? valueMarkdown,
+      final FhirMarkdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
       final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final PositiveInt? valuePositiveInt,
+      final FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
           final Element? valuePositiveIntElement,
       final String? valueString,
       @JsonKey(name: '_valueString')
           final Element? valueStringElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
-      final UnsignedInt? valueUnsignedInt,
+      final FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
           final Element? valueUnsignedIntElement,
       final FhirUri? valueUri,
@@ -13643,7 +13643,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Availability? valueAvailability,
       final ExtendedContactDetail? valueExtendedContactDetail,
       final Dosage? valueDosage,
-      final Meta? valueMeta,
+      final FhirMeta? valueMeta,
       final Resource? resource,
       @JsonKey(name: 'part')
           final List<ParametersParameter>? part_}) = _$_ParametersParameter;
@@ -14090,7 +14090,7 @@ mixin _$Subscription {
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [topic] The reference to the subscription topic to be notified about.
-  Canonical get topic => throw _privateConstructorUsedError;
+  FhirCanonical get topic => throw _privateConstructorUsedError;
 
   /// [contact] Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
   List<ContactPoint>? get contact => throw _privateConstructorUsedError;
@@ -14203,7 +14203,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Canonical topic,
+      FhirCanonical topic,
       List<ContactPoint>? contact,
       FhirInstant? end,
       @JsonKey(name: '_end')
@@ -14236,7 +14236,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(name: '_maxCount')
           Element? maxCountElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -14315,11 +14315,11 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14375,7 +14375,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       topic: null == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
@@ -14383,7 +14383,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -14427,7 +14427,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       heartbeatPeriod: freezed == heartbeatPeriod
           ? _value.heartbeatPeriod
           : heartbeatPeriod // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       heartbeatPeriodElement: freezed == heartbeatPeriodElement
           ? _value.heartbeatPeriodElement
           : heartbeatPeriodElement // ignore: cast_nullable_to_non_nullable
@@ -14435,7 +14435,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       timeout: freezed == timeout
           ? _value.timeout
           : timeout // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       timeoutElement: freezed == timeoutElement
           ? _value.timeoutElement
           : timeoutElement // ignore: cast_nullable_to_non_nullable
@@ -14459,7 +14459,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       maxCount: freezed == maxCount
           ? _value.maxCount
           : maxCount // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxCountElement: freezed == maxCountElement
           ? _value.maxCountElement
           : maxCountElement // ignore: cast_nullable_to_non_nullable
@@ -14469,12 +14469,12 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -14687,7 +14687,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       FhirCode? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Canonical topic,
+      FhirCanonical topic,
       List<ContactPoint>? contact,
       FhirInstant? end,
       @JsonKey(name: '_end')
@@ -14721,7 +14721,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
           Element? maxCountElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -14813,11 +14813,11 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14873,7 +14873,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       topic: null == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       contact: freezed == contact
           ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
@@ -14881,7 +14881,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       end: freezed == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       endElement: freezed == endElement
           ? _value.endElement
           : endElement // ignore: cast_nullable_to_non_nullable
@@ -14925,7 +14925,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       heartbeatPeriod: freezed == heartbeatPeriod
           ? _value.heartbeatPeriod
           : heartbeatPeriod // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       heartbeatPeriodElement: freezed == heartbeatPeriodElement
           ? _value.heartbeatPeriodElement
           : heartbeatPeriodElement // ignore: cast_nullable_to_non_nullable
@@ -14933,7 +14933,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       timeout: freezed == timeout
           ? _value.timeout
           : timeout // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       timeoutElement: freezed == timeoutElement
           ? _value.timeoutElement
           : timeoutElement // ignore: cast_nullable_to_non_nullable
@@ -14957,7 +14957,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       maxCount: freezed == maxCount
           ? _value.maxCount
           : maxCount // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxCountElement: freezed == maxCountElement
           ? _value.maxCountElement
           : maxCountElement // ignore: cast_nullable_to_non_nullable
@@ -15051,7 +15051,7 @@ class _$_Subscription extends _Subscription {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -15152,7 +15152,7 @@ class _$_Subscription extends _Subscription {
 
   /// [topic] The reference to the subscription topic to be notified about.
   @override
-  final Canonical topic;
+  final FhirCanonical topic;
 
   /// [contact] Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
   final List<ContactPoint>? _contact;
@@ -15169,7 +15169,7 @@ class _$_Subscription extends _Subscription {
 
   /// [end] The time for the server to turn the subscription off.
   @override
-  final Instant? end;
+  final FhirInstant? end;
 
   /// [endElement] ("_end") Extensions for end
   @override
@@ -15244,7 +15244,7 @@ class _$_Subscription extends _Subscription {
 
   /// [heartbeatPeriod] If present,  a 'hearbeat" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.
   @override
-  final UnsignedInt? heartbeatPeriod;
+  final FhirUnsignedInt? heartbeatPeriod;
 
   /// [heartbeatPeriodElement] ("_heartbeatPeriod") Extensions for heartbeatPeriod
   @override
@@ -15253,7 +15253,7 @@ class _$_Subscription extends _Subscription {
 
   /// [timeout] If present, the maximum amount of time a server will allow before failing a notification attempt.
   @override
-  final UnsignedInt? timeout;
+  final FhirUnsignedInt? timeout;
 
   /// [timeoutElement] ("_timeout") Extensions for timeout
   @override
@@ -15280,7 +15280,7 @@ class _$_Subscription extends _Subscription {
 
   /// [maxCount] If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification).  Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included.
   @override
-  final PositiveInt? maxCount;
+  final FhirPositiveInt? maxCount;
 
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   @override
@@ -15428,7 +15428,7 @@ abstract class _Subscription extends Subscription {
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -15447,9 +15447,9 @@ abstract class _Subscription extends Subscription {
       final FhirCode? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
-      required final Canonical topic,
+      required final FhirCanonical topic,
       final List<ContactPoint>? contact,
-      final Instant? end,
+      final FhirInstant? end,
       @JsonKey(name: '_end')
           final Element? endElement,
       final Reference? managingEntity,
@@ -15464,10 +15464,10 @@ abstract class _Subscription extends Subscription {
       final List<String>? header,
       @JsonKey(name: '_header')
           final List<Element>? headerElement,
-      final UnsignedInt? heartbeatPeriod,
+      final FhirUnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           final Element? heartbeatPeriodElement,
-      final UnsignedInt? timeout,
+      final FhirUnsignedInt? timeout,
       @JsonKey(name: '_timeout')
           final Element? timeoutElement,
       final FhirCode? contentType,
@@ -15476,7 +15476,7 @@ abstract class _Subscription extends Subscription {
       final FhirCode? content,
       @JsonKey(name: '_content')
           final Element? contentElement,
-      final PositiveInt? maxCount,
+      final FhirPositiveInt? maxCount,
       @JsonKey(name: '_maxCount')
           final Element? maxCountElement}) = _$_Subscription;
   _Subscription._() : super._();
@@ -15563,7 +15563,7 @@ abstract class _Subscription extends Subscription {
   @override
 
   /// [topic] The reference to the subscription topic to be notified about.
-  Canonical get topic;
+  FhirCanonical get topic;
   @override
 
   /// [contact] Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
@@ -16395,7 +16395,7 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       FhirCanonical? topic,
       List<CodeableConcept>? error});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -16448,11 +16448,11 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16504,7 +16504,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       eventsSinceSubscriptionStart: freezed == eventsSinceSubscriptionStart
           ? _value.eventsSinceSubscriptionStart
           : eventsSinceSubscriptionStart // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       eventsSinceSubscriptionStartElement: freezed ==
               eventsSinceSubscriptionStartElement
           ? _value.eventsSinceSubscriptionStartElement
@@ -16531,12 +16531,12 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -16663,7 +16663,7 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       List<CodeableConcept>? error});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -16721,11 +16721,11 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16777,7 +16777,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       eventsSinceSubscriptionStart: freezed == eventsSinceSubscriptionStart
           ? _value.eventsSinceSubscriptionStart
           : eventsSinceSubscriptionStart // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       eventsSinceSubscriptionStartElement: freezed ==
               eventsSinceSubscriptionStartElement
           ? _value.eventsSinceSubscriptionStartElement
@@ -16859,7 +16859,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -16947,7 +16947,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   /// [eventsSinceSubscriptionStart] The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.
   @override
-  final Integer64? eventsSinceSubscriptionStart;
+  final FhirInteger64? eventsSinceSubscriptionStart;
 
   /// [eventsSinceSubscriptionStartElement] ("_eventsSinceSubscriptionStart") Extensions for eventsSinceSubscriptionStart
   @override
@@ -17087,7 +17087,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -17105,7 +17105,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final Integer64? eventsSinceSubscriptionStart,
+      final FhirInteger64? eventsSinceSubscriptionStart,
       @JsonKey(name: '_eventsSinceSubscriptionStart')
           final Element? eventsSinceSubscriptionStartElement,
       final List<SubscriptionStatusNotificationEvent>? notificationEvent,
@@ -17346,7 +17346,7 @@ class _$SubscriptionStatusNotificationEventCopyWithImpl<$Res,
       eventNumber: freezed == eventNumber
           ? _value.eventNumber
           : eventNumber // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       eventNumberElement: freezed == eventNumberElement
           ? _value.eventNumberElement
           : eventNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17354,7 +17354,7 @@ class _$SubscriptionStatusNotificationEventCopyWithImpl<$Res,
       timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timestampElement: freezed == timestampElement
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -17474,7 +17474,7 @@ class __$$_SubscriptionStatusNotificationEventCopyWithImpl<$Res>
       eventNumber: freezed == eventNumber
           ? _value.eventNumber
           : eventNumber // ignore: cast_nullable_to_non_nullable
-              as Integer64?,
+              as FhirInteger64?,
       eventNumberElement: freezed == eventNumberElement
           ? _value.eventNumberElement
           : eventNumberElement // ignore: cast_nullable_to_non_nullable
@@ -17482,7 +17482,7 @@ class __$$_SubscriptionStatusNotificationEventCopyWithImpl<$Res>
       timestamp: freezed == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timestampElement: freezed == timestampElement
           ? _value.timestampElement
           : timestampElement // ignore: cast_nullable_to_non_nullable
@@ -17589,7 +17589,7 @@ class _$_SubscriptionStatusNotificationEvent
 
   /// [eventNumber] The sequential number of this event in this subscription context.
   @override
-  final Integer64? eventNumber;
+  final FhirInteger64? eventNumber;
 
   /// [eventNumberElement] ("_eventNumber") Extensions for eventNumber
   @override
@@ -17598,7 +17598,7 @@ class _$_SubscriptionStatusNotificationEvent
 
   /// [timestamp] The actual time this event occured on the server.
   @override
-  final Instant? timestamp;
+  final FhirInstant? timestamp;
 
   /// [timestampElement] ("_timestamp") Extensions for timestamp
   @override
@@ -17687,9 +17687,9 @@ abstract class _SubscriptionStatusNotificationEvent
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Integer64? eventNumber,
+          final FhirInteger64? eventNumber,
           @JsonKey(name: '_eventNumber') final Element? eventNumberElement,
-          final Instant? timestamp,
+          final FhirInstant? timestamp,
           @JsonKey(name: '_timestamp') final Element? timestampElement,
           final Reference? focus,
           final List<Reference>? additionalContext}) =
@@ -18041,7 +18041,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       List<SubscriptionTopicCanFilterBy>? canFilterBy,
       List<SubscriptionTopicNotificationShape>? notificationShape});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -18138,11 +18138,11 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -18262,7 +18262,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -18278,7 +18278,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -18286,7 +18286,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -18306,7 +18306,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -18314,7 +18314,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -18344,12 +18344,12 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -18679,7 +18679,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       List<SubscriptionTopicNotificationShape>? notificationShape});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -18794,11 +18794,11 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -18918,7 +18918,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -18934,7 +18934,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -18942,7 +18942,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -18962,7 +18962,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -18970,7 +18970,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -19105,7 +19105,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -19286,7 +19286,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [description] A free text natural language description of the Topic from the consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -19321,7 +19321,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [purpose] Explains why this Topic is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -19330,7 +19330,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [copyright] A copyright statement relating to the SubscriptionTopic and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the SubscriptionTopic.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -19361,7 +19361,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -19370,7 +19370,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   /// [lastReviewDate] The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -19613,7 +19613,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -19655,25 +19655,25 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
           final List<FhirCanonical>? derivedFrom,
-          final Date? approvalDate,
+          final FhirDate? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
-          final Date? lastReviewDate,
+          final FhirDate? lastReviewDate,
           @JsonKey(name: '_lastReviewDate')
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,
@@ -20077,7 +20077,7 @@ class _$SubscriptionTopicResourceTriggerCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -20243,7 +20243,7 @@ class __$$_SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -20379,7 +20379,7 @@ class _$_SubscriptionTopicResourceTrigger
 
   /// [description] The human readable description of this resource trigger for the SubscriptionTopic -  for example, "An Encounter enters the 'in-progress' state".
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -20514,7 +20514,7 @@ abstract class _SubscriptionTopicResourceTrigger
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final FhirUri? resource,
@@ -21415,7 +21415,7 @@ class _$SubscriptionTopicEventTriggerCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -21533,7 +21533,7 @@ class __$$_SubscriptionTopicEventTriggerCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -21641,7 +21641,7 @@ class _$_SubscriptionTopicEventTrigger extends _SubscriptionTopicEventTrigger {
 
   /// [description] The human readable description of an event to trigger a notification for the SubscriptionTopic - for example, "Patient Admission, as defined in HL7v2 via message ADT^A01". Multiple values are considered OR joined (e.g., matching any single event listed).
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -21721,7 +21721,7 @@ abstract class _SubscriptionTopicEventTrigger
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           required final CodeableConcept event,
           final FhirUri? resource,
@@ -21939,7 +21939,7 @@ class _$SubscriptionTopicCanFilterByCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -22105,7 +22105,7 @@ class __$$_SubscriptionTopicCanFilterByCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -22239,7 +22239,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
 
   /// [description] Description of how this filtering parameter is intended to be used.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -22377,7 +22377,7 @@ abstract class _SubscriptionTopicCanFilterBy
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final FhirUri? resource,

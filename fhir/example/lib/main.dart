@@ -4,7 +4,7 @@ import 'package:fhir/r4.dart';
 void main() {
   final patient = Patient(
     id: '12345',
-    active: Boolean(true),
+    active: FhirBoolean(true),
     name: <HumanName>[
       HumanName(
         family: 'Atreides',
@@ -12,8 +12,8 @@ void main() {
       ),
     ],
     address: <Address>[Address(postalCode: '12345')],
-    gender: Code('male'),
-    birthDate: Date(DateTime(3071, 04, 25)),
+    gender: FhirCode('male'),
+    birthDate: FhirDate(DateTime(3071, 04, 25)),
   );
 
   print(patient.toYaml());
@@ -25,7 +25,7 @@ void main() {
         Coding(
           system: FhirUri(
               'http://terminology.hl7.org/CodeSystem/condition-clinical'),
-          code: Code('active'),
+          code: FhirCode('active'),
           display: 'Active',
         ),
       ],
@@ -35,7 +35,7 @@ void main() {
         Coding(
             system: FhirUri(
                 'http://terminology.hl7.org/CodeSystem/condition-ver-status'),
-            code: Code('confirmed'),
+            code: FhirCode('confirmed'),
             display: 'Confirmed')
       ],
     ),
@@ -45,7 +45,7 @@ void main() {
           Coding(
             system: FhirUri(
                 'http://hl7.org/fhir/us/core/CodeSystem/condition-category'),
-            code: Code('health-concern'),
+            code: FhirCode('health-concern'),
           )
         ],
       )
@@ -54,7 +54,7 @@ void main() {
       coding: [
         Coding(
           system: FhirUri('http://factor.info/sct'),
-          code: Code('32911000'),
+          code: FhirCode('32911000'),
           display: 'Homeless',
         ),
       ],
@@ -75,14 +75,14 @@ void main() {
 
   final observation = Observation(
     subject: Reference(reference: 'Patient/12345'),
-    status: Code('final'),
+    status: FhirCode('final'),
     category: [
       CodeableConcept(
         coding: [
           Coding(
             system: FhirUri(
                 'http://hl7.org/fhir/us/core/CodeSystem/condition-category'),
-            code: Code('social-history'),
+            code: FhirCode('social-history'),
             display: 'Social History',
           )
         ],
@@ -92,7 +92,7 @@ void main() {
           Coding(
             system: FhirUri(
                 'http://hl7.org/fhir/us/core/CodeSystem/condition-category'),
-            code: Code('survey'),
+            code: FhirCode('survey'),
             display: 'Survey',
           )
         ],
@@ -102,7 +102,7 @@ void main() {
       coding: [
         Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('LA19952-3'),
+          code: FhirCode('LA19952-3'),
           display: 'At risk',
         ),
       ],
@@ -121,7 +121,7 @@ void main() {
       coding: [
         Coding(
           system: FhirUri('http://loinc.org'),
-          code: Code('LA17956-6'),
+          code: FhirCode('LA17956-6'),
           display: 'Unemployed',
         ),
       ],

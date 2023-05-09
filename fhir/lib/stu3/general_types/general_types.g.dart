@@ -36,7 +36,7 @@ _$_Annotation _$$_AnnotationFromJson(Map<String, dynamic> json) =>
       authorStringElement: json['_authorString'] == null
           ? null
           : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : Time.fromJson(json['time']),
+      time: json['time'] == null ? null : FhirTime.fromJson(json['time']),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -83,7 +83,7 @@ _$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
       urlElement: json['_url'] == null
           ? null
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
-      size: json['size'] == null ? null : Decimal.fromJson(json['size']),
+      size: json['size'] == null ? null : FhirDecimal.fromJson(json['size']),
       sizeElement: json['_size'] == null
           ? null
           : Element.fromJson(json['_size'] as Map<String, dynamic>),
@@ -218,7 +218,7 @@ _$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -228,7 +228,7 @@ _$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
       userSelected: json['userSelected'] == null
           ? null
-          : Boolean.fromJson(json['userSelected']),
+          : FhirBoolean.fromJson(json['userSelected']),
       userSelectedElement: json['_userSelected'] == null
           ? null
           : Element.fromJson(json['_userSelected'] as Map<String, dynamic>),
@@ -257,7 +257,7 @@ Map<String, dynamic> _$$_CodingToJson(_$_Coding instance) {
 }
 
 _$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -274,7 +274,7 @@ _$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -312,7 +312,7 @@ const _$QuantityComparatorEnumMap = {
 
 _$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
     _$_FhirDuration(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -329,7 +329,7 @@ _$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -358,7 +358,7 @@ Map<String, dynamic> _$$_FhirDurationToJson(_$_FhirDuration instance) {
 }
 
 _$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -375,7 +375,7 @@ _$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -404,7 +404,7 @@ Map<String, dynamic> _$$_DistanceToJson(_$_Distance instance) {
 }
 
 _$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -421,7 +421,7 @@ _$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -450,7 +450,7 @@ Map<String, dynamic> _$$_CountToJson(_$_Count instance) {
 }
 
 _$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -467,7 +467,7 @@ _$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -496,7 +496,7 @@ Map<String, dynamic> _$$_MoneyToJson(_$_Money instance) {
 }
 
 _$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
-      value: json['value'] == null ? null : Decimal.fromJson(json['value']),
+      value: json['value'] == null ? null : FhirDecimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -513,7 +513,7 @@ _$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -617,29 +617,31 @@ Map<String, dynamic> _$$_RatioToJson(_$_Ratio instance) {
 _$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
     _$_SampledData(
       origin: Quantity.fromJson(json['origin'] as Map<String, dynamic>),
-      period: json['period'] == null ? null : Decimal.fromJson(json['period']),
+      period:
+          json['period'] == null ? null : FhirDecimal.fromJson(json['period']),
       periodElement: json['_period'] == null
           ? null
           : Element.fromJson(json['_period'] as Map<String, dynamic>),
-      factor: json['factor'] == null ? null : Decimal.fromJson(json['factor']),
+      factor:
+          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
       factorElement: json['_factor'] == null
           ? null
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
       lowerLimit: json['lowerLimit'] == null
           ? null
-          : Decimal.fromJson(json['lowerLimit']),
+          : FhirDecimal.fromJson(json['lowerLimit']),
       lowerLimitElement: json['_lowerLimit'] == null
           ? null
           : Element.fromJson(json['_lowerLimit'] as Map<String, dynamic>),
       upperLimit: json['upperLimit'] == null
           ? null
-          : Decimal.fromJson(json['upperLimit']),
+          : FhirDecimal.fromJson(json['upperLimit']),
       upperLimitElement: json['_upperLimit'] == null
           ? null
           : Element.fromJson(json['_upperLimit'] as Map<String, dynamic>),
       dimensions: json['dimensions'] == null
           ? null
-          : Decimal.fromJson(json['dimensions']),
+          : FhirDecimal.fromJson(json['dimensions']),
       dimensionsElement: json['_dimensions'] == null
           ? null
           : Element.fromJson(json['_dimensions'] as Map<String, dynamic>),
@@ -912,7 +914,7 @@ _$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
-      rank: json['rank'] == null ? null : Decimal.fromJson(json['rank']),
+      rank: json['rank'] == null ? null : FhirDecimal.fromJson(json['rank']),
       rankElement: json['_rank'] == null
           ? null
           : Element.fromJson(json['_rank'] as Map<String, dynamic>),
@@ -1006,23 +1008,25 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       boundsPeriod: json['boundsPeriod'] == null
           ? null
           : Period.fromJson(json['boundsPeriod'] as Map<String, dynamic>),
-      count: json['count'] == null ? null : Decimal.fromJson(json['count']),
+      count: json['count'] == null ? null : FhirDecimal.fromJson(json['count']),
       countElement: json['_count'] == null
           ? null
           : Element.fromJson(json['_count'] as Map<String, dynamic>),
-      countMax:
-          json['countMax'] == null ? null : Decimal.fromJson(json['countMax']),
+      countMax: json['countMax'] == null
+          ? null
+          : FhirDecimal.fromJson(json['countMax']),
       countMaxElement: json['_countMax'] == null
           ? null
           : Element.fromJson(json['_countMax'] as Map<String, dynamic>),
-      duration:
-          json['duration'] == null ? null : Decimal.fromJson(json['duration']),
+      duration: json['duration'] == null
+          ? null
+          : FhirDecimal.fromJson(json['duration']),
       durationElement: json['_duration'] == null
           ? null
           : Element.fromJson(json['_duration'] as Map<String, dynamic>),
       durationMax: json['durationMax'] == null
           ? null
-          : Decimal.fromJson(json['durationMax']),
+          : FhirDecimal.fromJson(json['durationMax']),
       durationMaxElement: json['_durationMax'] == null
           ? null
           : Element.fromJson(json['_durationMax'] as Map<String, dynamic>),
@@ -1033,23 +1037,24 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_durationUnit'] as Map<String, dynamic>),
       frequency: json['frequency'] == null
           ? null
-          : Decimal.fromJson(json['frequency']),
+          : FhirDecimal.fromJson(json['frequency']),
       frequencyElement: json['_frequency'] == null
           ? null
           : Element.fromJson(json['_frequency'] as Map<String, dynamic>),
       frequencyMax: json['frequencyMax'] == null
           ? null
-          : Decimal.fromJson(json['frequencyMax']),
+          : FhirDecimal.fromJson(json['frequencyMax']),
       frequencyMaxElement: json['_frequencyMax'] == null
           ? null
           : Element.fromJson(json['_frequencyMax'] as Map<String, dynamic>),
-      period: json['period'] == null ? null : Decimal.fromJson(json['period']),
+      period:
+          json['period'] == null ? null : FhirDecimal.fromJson(json['period']),
       periodElement: json['_period'] == null
           ? null
           : Element.fromJson(json['_period'] as Map<String, dynamic>),
       periodMax: json['periodMax'] == null
           ? null
-          : Decimal.fromJson(json['periodMax']),
+          : FhirDecimal.fromJson(json['periodMax']),
       periodMaxElement: json['_periodMax'] == null
           ? null
           : Element.fromJson(json['_periodMax'] as Map<String, dynamic>),
@@ -1066,7 +1071,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       timeOfDay: (json['timeOfDay'] as List<dynamic>?)
-          ?.map((e) => Time.fromJson(e))
+          ?.map(FhirTime.fromJson)
           .toList(),
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) =>
@@ -1079,7 +1084,8 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      offset: json['offset'] == null ? null : Decimal.fromJson(json['offset']),
+      offset:
+          json['offset'] == null ? null : FhirDecimal.fromJson(json['offset']),
       offsetElement: json['_offset'] == null
           ? null
           : Element.fromJson(json['_offset'] as Map<String, dynamic>),

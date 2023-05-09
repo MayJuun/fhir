@@ -15,7 +15,7 @@ FhirMeta _updateFhirMetaVersion(FhirMeta? oldFhirMeta) {
     );
   } else {
     return oldFhirMeta.copyWith(
-      lastUpdated: Instant(DateTime.now().toUtc()),
+      lastUpdated: FhirInstant(DateTime.now().toUtc()),
       versionId: FhirId(version.toString()),
     );
   }
@@ -25,7 +25,7 @@ FhirMeta _updateFhirMetaVersion(FhirMeta? oldFhirMeta) {
 /// field, adds 1 to the version number and adds an [Id] if there is not already
 /// one, accepts [meta] as an argument and will update that field, otherwise
 /// will try and update the [meta] field already in the resource
-Resource _updateFhirMeta(Resource resource, {FhirMeta? meta}) {
+Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
   switch (resource.resourceType) {
     case Dstu2ResourceType.Account:
       return (resource as Account)

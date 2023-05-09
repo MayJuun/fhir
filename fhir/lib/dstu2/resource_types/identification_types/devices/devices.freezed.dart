@@ -122,7 +122,7 @@ abstract class $DeviceCopyWith<$Res> {
       @JsonKey(name: '_url')
           Element? urlElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -193,11 +193,11 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -323,12 +323,12 @@ class _$DeviceCopyWithImpl<$Res, $Val extends Device>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -539,7 +539,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
           Element? urlElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -620,11 +620,11 @@ class __$$_DeviceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -814,7 +814,7 @@ class _$_Device extends _Device {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1057,7 +1057,7 @@ abstract class _Device extends Device {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1207,7 +1207,7 @@ mixin _$DeviceComponent {
       throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
   Identifier get identifier => throw _privateConstructorUsedError;
-  Instant get lastSystemChange => throw _privateConstructorUsedError;
+  FhirInstant get lastSystemChange => throw _privateConstructorUsedError;
   Reference? get source => throw _privateConstructorUsedError;
   Reference? get parent => throw _privateConstructorUsedError;
   List<CodeableConcept>? get operationalStatus =>
@@ -1248,7 +1248,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       Identifier identifier,
-      Instant lastSystemChange,
+      FhirInstant lastSystemChange,
       Reference? source,
       Reference? parent,
       List<CodeableConcept>? operationalStatus,
@@ -1259,7 +1259,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
       CodeableConcept? languageCode});
 
   $ElementCopyWith<$Res>? get idElement;
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $CodeableConceptCopyWith<$Res> get type;
   $IdentifierCopyWith<$Res> get identifier;
@@ -1311,7 +1311,7 @@ class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
@@ -1319,7 +1319,7 @@ class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1355,7 +1355,7 @@ class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
       lastSystemChange: null == lastSystemChange
           ? _value.lastSystemChange
           : lastSystemChange // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -1401,12 +1401,12 @@ class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1512,7 +1512,7 @@ abstract class _$$_DeviceComponentCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       Identifier identifier,
-      Instant lastSystemChange,
+      FhirInstant lastSystemChange,
       Reference? source,
       Reference? parent,
       List<CodeableConcept>? operationalStatus,
@@ -1525,7 +1525,7 @@ abstract class _$$_DeviceComponentCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get idElement;
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -1582,7 +1582,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
@@ -1590,7 +1590,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1626,7 +1626,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
       lastSystemChange: null == lastSystemChange
           ? _value.lastSystemChange
           : lastSystemChange // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
@@ -1707,7 +1707,7 @@ class _$_DeviceComponent extends _DeviceComponent {
   @JsonKey(name: '_id')
   final Element? idElement;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1751,7 +1751,7 @@ class _$_DeviceComponent extends _DeviceComponent {
   @override
   final Identifier identifier;
   @override
-  final Instant lastSystemChange;
+  final FhirInstant lastSystemChange;
   @override
   final Reference? source;
   @override
@@ -1879,7 +1879,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -1889,7 +1889,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       required final Identifier identifier,
-      required final Instant lastSystemChange,
+      required final FhirInstant lastSystemChange,
       final Reference? source,
       final Reference? parent,
       final List<CodeableConcept>? operationalStatus,
@@ -1932,7 +1932,7 @@ abstract class _DeviceComponent extends DeviceComponent {
   @override
   Identifier get identifier;
   @override
-  Instant get lastSystemChange;
+  FhirInstant get lastSystemChange;
   @override
   Reference? get source;
   @override
@@ -1987,7 +1987,7 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
           DeviceComponentProductionSpecification>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? specType,
@@ -2023,7 +2023,7 @@ class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2082,7 +2082,7 @@ abstract class _$$_DeviceComponentProductionSpecificationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? specType,
@@ -2119,7 +2119,7 @@ class __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2372,7 +2372,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       Timing? measurementPeriod,
       List<DeviceMetricCalibration>? calibration});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2433,11 +2433,11 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2527,12 +2527,12 @@ class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2719,7 +2719,7 @@ abstract class _$$_DeviceMetricCopyWith<$Res>
       List<DeviceMetricCalibration>? calibration});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2790,11 +2790,11 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2936,7 +2936,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -3123,7 +3123,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3260,7 +3260,7 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
       _$DeviceMetricCalibrationCopyWithImpl<$Res, DeviceMetricCalibration>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3309,7 +3309,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3337,7 +3337,7 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res,
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -3391,7 +3391,7 @@ abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3441,7 +3441,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3469,7 +3469,7 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -3535,7 +3535,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   @JsonKey(name: '_state')
   final Element? stateElement;
   @override
-  final Instant? time;
+  final FhirInstant? time;
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -3610,7 +3610,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           final CalibrationState? state,
       @JsonKey(name: '_state')
           final Element? stateElement,
-      final Instant? time,
+      final FhirInstant? time,
       @JsonKey(name: '_time')
           final Element? timeElement}) = _$_DeviceMetricCalibration;
   _DeviceMetricCalibration._() : super._();

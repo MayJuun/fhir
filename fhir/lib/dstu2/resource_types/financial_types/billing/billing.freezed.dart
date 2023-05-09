@@ -100,7 +100,7 @@ abstract class $AccountCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -163,11 +163,11 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -261,12 +261,12 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -471,7 +471,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
           Element? descriptionElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -544,11 +544,11 @@ class __$$_AccountCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -693,7 +693,7 @@ class _$_Account extends _Account {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -882,7 +882,7 @@ abstract class _Account extends Account {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1101,7 +1101,7 @@ abstract class $ClaimCopyWith<$Res> {
       List<Coding>? additionalMaterials,
       List<ClaimMissingTeeth>? missingTeeth});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -1188,11 +1188,11 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1328,7 +1328,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       accident: freezed == accident
           ? _value.accident
           : accident // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       accidentType: freezed == accidentType
           ? _value.accidentType
           : accidentType // ignore: cast_nullable_to_non_nullable
@@ -1354,12 +1354,12 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1660,7 +1660,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       List<ClaimMissingTeeth>? missingTeeth});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1763,11 +1763,11 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1903,7 +1903,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       accident: freezed == accident
           ? _value.accident
           : accident // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       accidentType: freezed == accidentType
           ? _value.accidentType
           : accidentType // ignore: cast_nullable_to_non_nullable
@@ -2005,7 +2005,7 @@ class _$_Claim extends _Claim {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -2145,7 +2145,7 @@ class _$_Claim extends _Claim {
   @override
   final String? school;
   @override
-  final Date? accident;
+  final FhirDate? accident;
   @override
   final Coding? accidentType;
   final List<Coding>? _interventionException;
@@ -2339,7 +2339,7 @@ abstract class _Claim extends Claim {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2380,7 +2380,7 @@ abstract class _Claim extends Claim {
       final List<ClaimCoverage>? coverage,
       final List<Coding>? exception,
       final String? school,
-      final Date? accident,
+      final FhirDate? accident,
       final Coding? accidentType,
       final List<Coding>? interventionException,
       final List<ClaimItem>? item,
@@ -2517,7 +2517,7 @@ abstract class $ClaimPayeeCopyWith<$Res> {
       _$ClaimPayeeCopyWithImpl<$Res, ClaimPayee>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
@@ -2556,7 +2556,7 @@ class _$ClaimPayeeCopyWithImpl<$Res, $Val extends ClaimPayee>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2642,7 +2642,7 @@ abstract class _$$_ClaimPayeeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
@@ -2683,7 +2683,7 @@ class __$$_ClaimPayeeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2858,7 +2858,7 @@ mixin _$ClaimDiagnosis {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get diagnosis => throw _privateConstructorUsedError;
@@ -2876,10 +2876,10 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       _$ClaimDiagnosisCopyWithImpl<$Res, ClaimDiagnosis>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding diagnosis});
 
@@ -2911,7 +2911,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res, $Val extends ClaimDiagnosis>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2923,7 +2923,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res, $Val extends ClaimDiagnosis>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -2965,10 +2965,10 @@ abstract class _$$_ClaimDiagnosisCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding diagnosis});
 
@@ -3000,7 +3000,7 @@ class __$$_ClaimDiagnosisCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3012,7 +3012,7 @@ class __$$_ClaimDiagnosisCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -3067,7 +3067,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -3127,7 +3127,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
+      required final FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Coding diagnosis}) = _$_ClaimDiagnosis;
   _ClaimDiagnosis._() : super._();
@@ -3143,7 +3143,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -3166,8 +3166,8 @@ mixin _$ClaimCoverage {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
-  Boolean get focal => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirBoolean get focal => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
   String? get businessArrangement => throw _privateConstructorUsedError;
   Coding get relationship => throw _privateConstructorUsedError;
@@ -3188,11 +3188,11 @@ abstract class $ClaimCoverageCopyWith<$Res> {
       _$ClaimCoverageCopyWithImpl<$Res, ClaimCoverage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
-      Boolean focal,
+      FhirPositiveInt sequence,
+      FhirBoolean focal,
       Reference coverage,
       String? businessArrangement,
       Coding relationship,
@@ -3235,7 +3235,7 @@ class _$ClaimCoverageCopyWithImpl<$Res, $Val extends ClaimCoverage>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3247,11 +3247,11 @@ class _$ClaimCoverageCopyWithImpl<$Res, $Val extends ClaimCoverage>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       focal: null == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       coverage: null == coverage
           ? _value.coverage
           : coverage // ignore: cast_nullable_to_non_nullable
@@ -3329,11 +3329,11 @@ abstract class _$$_ClaimCoverageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
-      Boolean focal,
+      FhirPositiveInt sequence,
+      FhirBoolean focal,
       Reference coverage,
       String? businessArrangement,
       Coding relationship,
@@ -3378,7 +3378,7 @@ class __$$_ClaimCoverageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3390,11 +3390,11 @@ class __$$_ClaimCoverageCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       focal: null == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       coverage: null == coverage
           ? _value.coverage
           : coverage // ignore: cast_nullable_to_non_nullable
@@ -3471,9 +3471,9 @@ class _$_ClaimCoverage extends _ClaimCoverage {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
-  final Boolean focal;
+  final FhirBoolean focal;
   @override
   final Reference coverage;
   @override
@@ -3562,8 +3562,8 @@ abstract class _ClaimCoverage extends ClaimCoverage {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
-      required final Boolean focal,
+      required final FhirPositiveInt sequence,
+      required final FhirBoolean focal,
       required final Reference coverage,
       final String? businessArrangement,
       required final Coding relationship,
@@ -3583,9 +3583,9 @@ abstract class _ClaimCoverage extends ClaimCoverage {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
-  Boolean get focal;
+  FhirBoolean get focal;
   @override
   Reference get coverage;
   @override
@@ -3615,7 +3615,7 @@ mixin _$ClaimItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
@@ -3652,10 +3652,10 @@ abstract class $ClaimItemCopyWith<$Res> {
       _$ClaimItemCopyWithImpl<$Res, ClaimItem>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Reference? provider,
@@ -3731,7 +3731,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3743,7 +3743,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -3771,7 +3771,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       serviceDate: freezed == serviceDate
           ? _value.serviceDate
           : serviceDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -3783,7 +3783,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -3791,7 +3791,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -3968,10 +3968,10 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Reference? provider,
@@ -4057,7 +4057,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4069,7 +4069,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4097,7 +4097,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       serviceDate: freezed == serviceDate
           ? _value.serviceDate
           : serviceDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -4109,7 +4109,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -4117,7 +4117,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -4213,7 +4213,7 @@ class _$_ClaimItem extends _ClaimItem {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -4237,18 +4237,18 @@ class _$_ClaimItem extends _ClaimItem {
   @JsonKey(name: '_servicedDate')
   final Element? servicedDateElement;
   @override
-  final Date? serviceDate;
+  final FhirDate? serviceDate;
   @override
   final Quantity? quantity;
   @override
   final Quantity? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? points;
+  final FhirDecimal? points;
   @override
   final Quantity? net;
   @override
@@ -4384,19 +4384,19 @@ abstract class _ClaimItem extends ClaimItem {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
+      required final FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Coding type,
       final Reference? provider,
       final List<FhirPositiveInt>? diagnosisLinkId,
       required final Coding service,
       @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
-      final Date? serviceDate,
+      final FhirDate? serviceDate,
       final Quantity? quantity,
       final Quantity? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? points,
+      final FhirDecimal? points,
       final Quantity? net,
       final Coding? udi,
       final Coding? bodySite,
@@ -4417,7 +4417,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -4476,7 +4476,7 @@ mixin _$ClaimItemDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
@@ -4505,10 +4505,10 @@ abstract class $ClaimItemDetailCopyWith<$Res> {
       _$ClaimItemDetailCopyWithImpl<$Res, ClaimItemDetail>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -4564,7 +4564,7 @@ class _$ClaimItemDetailCopyWithImpl<$Res, $Val extends ClaimItemDetail>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4576,7 +4576,7 @@ class _$ClaimItemDetailCopyWithImpl<$Res, $Val extends ClaimItemDetail>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4600,7 +4600,7 @@ class _$ClaimItemDetailCopyWithImpl<$Res, $Val extends ClaimItemDetail>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -4608,7 +4608,7 @@ class _$ClaimItemDetailCopyWithImpl<$Res, $Val extends ClaimItemDetail>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -4722,10 +4722,10 @@ abstract class _$$_ClaimItemDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -4787,7 +4787,7 @@ class __$$_ClaimItemDetailCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4799,7 +4799,7 @@ class __$$_ClaimItemDetailCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4823,7 +4823,7 @@ class __$$_ClaimItemDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -4831,7 +4831,7 @@ class __$$_ClaimItemDetailCopyWithImpl<$Res>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -4900,7 +4900,7 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -4913,12 +4913,12 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
   @override
   final Quantity? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? points;
+  final FhirDecimal? points;
   @override
   final Quantity? net;
   @override
@@ -5007,15 +5007,15 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
+      required final FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Coding type,
       required final Coding service,
       final Quantity? quantity,
       final Quantity? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? points,
+      final FhirDecimal? points,
       final Quantity? net,
       final Coding? udi,
       final List<ClaimDetailSubDetail>? subDetail}) = _$_ClaimItemDetail;
@@ -5032,7 +5032,7 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -5074,7 +5074,7 @@ mixin _$ClaimDetailSubDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
   Coding get type => throw _privateConstructorUsedError;
@@ -5101,10 +5101,10 @@ abstract class $ClaimDetailSubDetailCopyWith<$Res> {
       _$ClaimDetailSubDetailCopyWithImpl<$Res, ClaimDetailSubDetail>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -5159,7 +5159,7 @@ class _$ClaimDetailSubDetailCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5171,7 +5171,7 @@ class _$ClaimDetailSubDetailCopyWithImpl<$Res,
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -5195,7 +5195,7 @@ class _$ClaimDetailSubDetailCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5203,7 +5203,7 @@ class _$ClaimDetailSubDetailCopyWithImpl<$Res,
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -5313,10 +5313,10 @@ abstract class _$$_ClaimDetailSubDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
+      FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Coding type,
       Coding service,
@@ -5376,7 +5376,7 @@ class __$$_ClaimDetailSubDetailCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5388,7 +5388,7 @@ class __$$_ClaimDetailSubDetailCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -5412,7 +5412,7 @@ class __$$_ClaimDetailSubDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5420,7 +5420,7 @@ class __$$_ClaimDetailSubDetailCopyWithImpl<$Res>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       net: freezed == net
           ? _value.net
           : net // ignore: cast_nullable_to_non_nullable
@@ -5483,7 +5483,7 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -5496,12 +5496,12 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
   @override
   final Quantity? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? points;
+  final FhirDecimal? points;
   @override
   final Quantity? net;
   @override
@@ -5579,15 +5579,15 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
+      required final FhirPositiveInt sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Coding type,
       required final Coding service,
       final Quantity? quantity,
       final Quantity? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? points,
+      final FhirDecimal? points,
       final Quantity? net,
       final Coding? udi}) = _$_ClaimDetailSubDetail;
   _ClaimDetailSubDetail._() : super._();
@@ -5603,7 +5603,7 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -5660,7 +5660,7 @@ abstract class $ClaimItemProsthesisCopyWith<$Res> {
       _$ClaimItemProsthesisCopyWithImpl<$Res, ClaimItemProsthesis>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? initial,
@@ -5694,7 +5694,7 @@ class _$ClaimItemProsthesisCopyWithImpl<$Res, $Val extends ClaimItemProsthesis>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5710,7 +5710,7 @@ class _$ClaimItemProsthesisCopyWithImpl<$Res, $Val extends ClaimItemProsthesis>
       priorDate: freezed == priorDate
           ? _value.priorDate
           : priorDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       priorMaterial: freezed == priorMaterial
           ? _value.priorMaterial
           : priorMaterial // ignore: cast_nullable_to_non_nullable
@@ -5740,7 +5740,7 @@ abstract class _$$_ClaimItemProsthesisCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? initial,
@@ -5773,7 +5773,7 @@ class __$$_ClaimItemProsthesisCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5789,7 +5789,7 @@ class __$$_ClaimItemProsthesisCopyWithImpl<$Res>
       priorDate: freezed == priorDate
           ? _value.priorDate
           : priorDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       priorMaterial: freezed == priorMaterial
           ? _value.priorMaterial
           : priorMaterial // ignore: cast_nullable_to_non_nullable
@@ -5842,7 +5842,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
   @override
   final FhirBoolean? initial;
   @override
-  final Date? priorDate;
+  final FhirDate? priorDate;
   @override
   final Coding? priorMaterial;
 
@@ -5900,7 +5900,7 @@ abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirBoolean? initial,
-      final Date? priorDate,
+      final FhirDate? priorDate,
       final Coding? priorMaterial}) = _$_ClaimItemProsthesis;
   _ClaimItemProsthesis._() : super._();
 
@@ -5954,7 +5954,7 @@ abstract class $ClaimMissingTeethCopyWith<$Res> {
       _$ClaimMissingTeethCopyWithImpl<$Res, ClaimMissingTeeth>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding tooth,
@@ -5989,7 +5989,7 @@ class _$ClaimMissingTeethCopyWithImpl<$Res, $Val extends ClaimMissingTeeth>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6009,7 +6009,7 @@ class _$ClaimMissingTeethCopyWithImpl<$Res, $Val extends ClaimMissingTeeth>
       extractionDate: freezed == extractionDate
           ? _value.extractionDate
           : extractionDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
     ) as $Val);
   }
 
@@ -6043,7 +6043,7 @@ abstract class _$$_ClaimMissingTeethCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding tooth,
@@ -6078,7 +6078,7 @@ class __$$_ClaimMissingTeethCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6098,7 +6098,7 @@ class __$$_ClaimMissingTeethCopyWithImpl<$Res>
       extractionDate: freezed == extractionDate
           ? _value.extractionDate
           : extractionDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
     ));
   }
 }
@@ -6149,7 +6149,7 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
   @override
   final Coding? reason;
   @override
-  final Date? extractionDate;
+  final FhirDate? extractionDate;
 
   @override
   String toString() {
@@ -6205,7 +6205,7 @@ abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
       final List<FhirExtension>? modifierExtension,
       required final Coding tooth,
       final Coding? reason,
-      final Date? extractionDate}) = _$_ClaimMissingTeeth;
+      final FhirDate? extractionDate}) = _$_ClaimMissingTeeth;
   _ClaimMissingTeeth._() : super._();
 
   factory _ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =
@@ -6353,7 +6353,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       List<ClaimResponseNote>? note,
       List<ClaimResponseCoverage>? coverage});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6442,11 +6442,11 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6570,7 +6570,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -6604,12 +6604,12 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6952,7 +6952,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       List<ClaimResponseCoverage>? coverage});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7062,11 +7062,11 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7190,7 +7190,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       paymentDate: freezed == paymentDate
           ? _value.paymentDate
           : paymentDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       paymentDateElement: freezed == paymentDateElement
           ? _value.paymentDateElement
           : paymentDateElement // ignore: cast_nullable_to_non_nullable
@@ -7297,7 +7297,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -7423,7 +7423,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @override
   final Coding? paymentAdjustmentReason;
   @override
-  final Date? paymentDate;
+  final FhirDate? paymentDate;
   @override
   @JsonKey(name: '_paymentDate')
   final Element? paymentDateElement;
@@ -7603,7 +7603,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7641,7 +7641,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final Quantity? totalBenefit,
       final Quantity? paymentAdjustment,
       final Coding? paymentAdjustmentReason,
-      final Date? paymentDate,
+      final FhirDate? paymentDate,
       @JsonKey(name: '_paymentDate')
           final Element? paymentDateElement,
       final Quantity? paymentAmount,
@@ -7765,7 +7765,7 @@ mixin _$ClaimResponseItem {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
   List<FhirPositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
   List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
@@ -7787,11 +7787,11 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       _$ClaimResponseItemCopyWithImpl<$Res, ClaimResponseItem>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ClaimResponseItemAdjudication>? adjudication,
@@ -7825,7 +7825,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7841,7 +7841,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       noteNumber: freezed == noteNumber
           ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
@@ -7871,11 +7871,11 @@ abstract class _$$_ClaimResponseItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ClaimResponseItemAdjudication>? adjudication,
@@ -7907,7 +7907,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7923,7 +7923,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       noteNumber: freezed == noteNumber
           ? _value._noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
@@ -8005,7 +8005,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   }
 
   @override
-  final PositiveInt sequenceLinkId;
+  final FhirPositiveInt sequenceLinkId;
   final List<FhirPositiveInt>? _noteNumber;
   @override
   List<FhirPositiveInt>? get noteNumber {
@@ -8111,7 +8111,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-      required final PositiveInt sequenceLinkId,
+      required final FhirPositiveInt sequenceLinkId,
       final List<FhirPositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ClaimResponseItemAdjudication>? adjudication,
@@ -8132,7 +8132,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  FhirPositiveInt? get sequenceLinkId;
+  FhirPositiveInt get sequenceLinkId;
   @override
   List<FhirPositiveInt>? get noteNumber;
   @override
@@ -8181,7 +8181,7 @@ abstract class $ClaimResponseItemAdjudicationCopyWith<$Res> {
           ClaimResponseItemAdjudication>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding code,
@@ -8220,7 +8220,7 @@ class _$ClaimResponseItemAdjudicationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8240,7 +8240,7 @@ class _$ClaimResponseItemAdjudicationCopyWithImpl<$Res,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -8291,7 +8291,7 @@ abstract class _$$_ClaimResponseItemAdjudicationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding code,
@@ -8332,7 +8332,7 @@ class __$$_ClaimResponseItemAdjudicationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8352,7 +8352,7 @@ class __$$_ClaimResponseItemAdjudicationCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -8409,7 +8409,7 @@ class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
   @override
   final Quantity? amount;
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -8471,7 +8471,7 @@ abstract class _ClaimResponseItemAdjudication
           final List<FhirExtension>? modifierExtension,
           required final Coding code,
           final Quantity? amount,
-          final Decimal? value,
+          final FhirDecimal? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ClaimResponseItemAdjudication;
   _ClaimResponseItemAdjudication._() : super._();
@@ -8513,7 +8513,7 @@ mixin _$ClaimResponseItemDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ClaimResponseDetailSubDetail>? get subDetail =>
@@ -8532,10 +8532,10 @@ abstract class $ClaimResponseItemDetailCopyWith<$Res> {
       _$ClaimResponseItemDetailCopyWithImpl<$Res, ClaimResponseItemDetail>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseDetailSubDetail>? subDetail});
 }
@@ -8565,7 +8565,7 @@ class _$ClaimResponseItemDetailCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8577,7 +8577,7 @@ class _$ClaimResponseItemDetailCopyWithImpl<$Res,
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       adjudication: freezed == adjudication
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -8599,10 +8599,10 @@ abstract class _$$_ClaimResponseItemDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication,
       List<ClaimResponseDetailSubDetail>? subDetail});
 }
@@ -8630,7 +8630,7 @@ class __$$_ClaimResponseItemDetailCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8642,7 +8642,7 @@ class __$$_ClaimResponseItemDetailCopyWithImpl<$Res>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       adjudication: freezed == adjudication
           ? _value._adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -8699,7 +8699,7 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
   }
 
   @override
-  final PositiveInt sequenceLinkId;
+  final FhirPositiveInt sequenceLinkId;
   final List<ClaimResponseItemAdjudication>? _adjudication;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication {
@@ -8775,7 +8775,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
           {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final PositiveInt sequenceLinkId,
+          required final FhirPositiveInt sequenceLinkId,
           final List<ClaimResponseItemAdjudication>? adjudication,
           final List<ClaimResponseDetailSubDetail>? subDetail}) =
       _$_ClaimResponseItemDetail;
@@ -8792,7 +8792,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequenceLinkId;
+  FhirPositiveInt get sequenceLinkId;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication;
   @override
@@ -8815,7 +8815,7 @@ mixin _$ClaimResponseDetailSubDetail {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequenceLinkId => throw _privateConstructorUsedError;
   List<ClaimResponseItemAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
 
@@ -8834,10 +8834,10 @@ abstract class $ClaimResponseDetailSubDetailCopyWith<$Res> {
           ClaimResponseDetailSubDetail>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication});
 }
 
@@ -8865,7 +8865,7 @@ class _$ClaimResponseDetailSubDetailCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8877,7 +8877,7 @@ class _$ClaimResponseDetailSubDetailCopyWithImpl<$Res,
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       adjudication: freezed == adjudication
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -8896,10 +8896,10 @@ abstract class _$$_ClaimResponseDetailSubDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequenceLinkId,
+      FhirPositiveInt sequenceLinkId,
       List<ClaimResponseItemAdjudication>? adjudication});
 }
 
@@ -8926,7 +8926,7 @@ class __$$_ClaimResponseDetailSubDetailCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8938,7 +8938,7 @@ class __$$_ClaimResponseDetailSubDetailCopyWithImpl<$Res>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       adjudication: freezed == adjudication
           ? _value._adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -8989,7 +8989,7 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
   }
 
   @override
-  final PositiveInt sequenceLinkId;
+  final FhirPositiveInt sequenceLinkId;
   final List<ClaimResponseItemAdjudication>? _adjudication;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication {
@@ -9052,7 +9052,7 @@ abstract class _ClaimResponseDetailSubDetail
           {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final PositiveInt sequenceLinkId,
+          required final FhirPositiveInt sequenceLinkId,
           final List<ClaimResponseItemAdjudication>? adjudication}) =
       _$_ClaimResponseDetailSubDetail;
   _ClaimResponseDetailSubDetail._() : super._();
@@ -9068,7 +9068,7 @@ abstract class _ClaimResponseDetailSubDetail
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequenceLinkId;
+  FhirPositiveInt get sequenceLinkId;
   @override
   List<ClaimResponseItemAdjudication>? get adjudication;
   @override
@@ -9111,7 +9111,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       _$ClaimResponseAddItemCopyWithImpl<$Res, ClaimResponseAddItem>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<FhirPositiveInt>? sequenceLinkId,
@@ -9154,7 +9154,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9232,7 +9232,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<FhirPositiveInt>? sequenceLinkId,
@@ -9275,7 +9275,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9524,7 +9524,7 @@ abstract class $ClaimResponseAddItemDetailCopyWith<$Res> {
           ClaimResponseAddItemDetail>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding service,
@@ -9560,7 +9560,7 @@ class _$ClaimResponseAddItemDetailCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9615,7 +9615,7 @@ abstract class _$$_ClaimResponseAddItemDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding service,
@@ -9652,7 +9652,7 @@ class __$$_ClaimResponseAddItemDetailCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9844,7 +9844,7 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       _$ClaimResponseErrorCopyWithImpl<$Res, ClaimResponseError>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? sequenceLinkId,
@@ -9880,7 +9880,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9892,15 +9892,15 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceLinkId: freezed == detailSequenceLinkId
           ? _value.detailSequenceLinkId
           : detailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subdetailSequenceLinkId: freezed == subdetailSequenceLinkId
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -9926,7 +9926,7 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? sequenceLinkId,
@@ -9961,7 +9961,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9973,15 +9973,15 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       detailSequenceLinkId: freezed == detailSequenceLinkId
           ? _value.detailSequenceLinkId
           : detailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       subdetailSequenceLinkId: freezed == subdetailSequenceLinkId
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -10033,11 +10033,11 @@ class _$_ClaimResponseError extends _ClaimResponseError {
   }
 
   @override
-  final PositiveInt? sequenceLinkId;
+  final FhirPositiveInt? sequenceLinkId;
   @override
-  final PositiveInt? detailSequenceLinkId;
+  final FhirPositiveInt? detailSequenceLinkId;
   @override
-  final PositiveInt? subdetailSequenceLinkId;
+  final FhirPositiveInt? subdetailSequenceLinkId;
   @override
   final Coding code;
 
@@ -10098,9 +10098,9 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final PositiveInt? sequenceLinkId,
-      final PositiveInt? detailSequenceLinkId,
-      final PositiveInt? subdetailSequenceLinkId,
+      final FhirPositiveInt? sequenceLinkId,
+      final FhirPositiveInt? detailSequenceLinkId,
+      final FhirPositiveInt? subdetailSequenceLinkId,
       required final Coding code}) = _$_ClaimResponseError;
   _ClaimResponseError._() : super._();
 
@@ -10162,7 +10162,7 @@ abstract class $ClaimResponseNoteCopyWith<$Res> {
       _$ClaimResponseNoteCopyWithImpl<$Res, ClaimResponseNote>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? number,
@@ -10205,7 +10205,7 @@ class _$ClaimResponseNoteCopyWithImpl<$Res, $Val extends ClaimResponseNote>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10217,7 +10217,7 @@ class _$ClaimResponseNoteCopyWithImpl<$Res, $Val extends ClaimResponseNote>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -10299,7 +10299,7 @@ abstract class _$$_ClaimResponseNoteCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirPositiveInt? number,
@@ -10344,7 +10344,7 @@ class __$$_ClaimResponseNoteCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10356,7 +10356,7 @@ class __$$_ClaimResponseNoteCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -10426,7 +10426,7 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
   }
 
   @override
-  final PositiveInt? number;
+  final FhirPositiveInt? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
@@ -10501,7 +10501,7 @@ abstract class _ClaimResponseNote extends ClaimResponseNote {
           {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final PositiveInt? number,
+          final FhirPositiveInt? number,
           @JsonKey(name: '_number') final Element? numberElement,
           final Coding? type,
           @JsonKey(name: '_type') final Element? typeElement,
@@ -10553,8 +10553,8 @@ mixin _$ClaimResponseCoverage {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirPositiveInt? get sequence => throw _privateConstructorUsedError;
-  Boolean get focal => throw _privateConstructorUsedError;
+  FhirPositiveInt get sequence => throw _privateConstructorUsedError;
+  FhirBoolean get focal => throw _privateConstructorUsedError;
   Reference get coverage => throw _privateConstructorUsedError;
   String? get businessArrangement => throw _privateConstructorUsedError;
   Coding get relationship => throw _privateConstructorUsedError;
@@ -10575,11 +10575,11 @@ abstract class $ClaimResponseCoverageCopyWith<$Res> {
       _$ClaimResponseCoverageCopyWithImpl<$Res, ClaimResponseCoverage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
-      Boolean focal,
+      FhirPositiveInt sequence,
+      FhirBoolean focal,
       Reference coverage,
       String? businessArrangement,
       Coding relationship,
@@ -10623,7 +10623,7 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10635,11 +10635,11 @@ class _$ClaimResponseCoverageCopyWithImpl<$Res,
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       focal: null == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       coverage: null == coverage
           ? _value.coverage
           : coverage // ignore: cast_nullable_to_non_nullable
@@ -10717,11 +10717,11 @@ abstract class _$$_ClaimResponseCoverageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirPositiveInt? sequence,
-      Boolean focal,
+      FhirPositiveInt sequence,
+      FhirBoolean focal,
       Reference coverage,
       String? businessArrangement,
       Coding relationship,
@@ -10766,7 +10766,7 @@ class __$$_ClaimResponseCoverageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10778,11 +10778,11 @@ class __$$_ClaimResponseCoverageCopyWithImpl<$Res>
       sequence: null == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt,
+              as FhirPositiveInt,
       focal: null == focal
           ? _value.focal
           : focal // ignore: cast_nullable_to_non_nullable
-              as Boolean,
+              as FhirBoolean,
       coverage: null == coverage
           ? _value.coverage
           : coverage // ignore: cast_nullable_to_non_nullable
@@ -10859,9 +10859,9 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
   }
 
   @override
-  final PositiveInt sequence;
+  final FhirPositiveInt sequence;
   @override
-  final Boolean focal;
+  final FhirBoolean focal;
   @override
   final Reference coverage;
   @override
@@ -10951,8 +10951,8 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final PositiveInt sequence,
-      required final Boolean focal,
+      required final FhirPositiveInt sequence,
+      required final FhirBoolean focal,
       required final Reference coverage,
       final String? businessArrangement,
       required final Coding relationship,
@@ -10972,9 +10972,9 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirPositiveInt? get sequence;
+  FhirPositiveInt get sequence;
   @override
-  Boolean get focal;
+  FhirBoolean get focal;
   @override
   Reference get coverage;
   @override

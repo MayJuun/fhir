@@ -499,7 +499,7 @@ abstract class $MeasureCopyWith<$Res> {
       List<MeasureGroup>? group,
       List<MeasureSupplementalData>? supplementalData});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -633,7 +633,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -757,7 +757,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -773,7 +773,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -789,7 +789,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -797,7 +797,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -805,7 +805,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -845,7 +845,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       disclaimerElement: freezed == disclaimerElement
           ? _value.disclaimerElement
           : disclaimerElement // ignore: cast_nullable_to_non_nullable
@@ -881,7 +881,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       rationale: freezed == rationale
           ? _value.rationale
           : rationale // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       rationaleElement: freezed == rationaleElement
           ? _value.rationaleElement
           : rationaleElement // ignore: cast_nullable_to_non_nullable
@@ -890,7 +890,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
               clinicalRecommendationStatement
           ? _value.clinicalRecommendationStatement
           : clinicalRecommendationStatement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       clinicalRecommendationStatementElement: freezed ==
               clinicalRecommendationStatementElement
           ? _value.clinicalRecommendationStatementElement
@@ -911,7 +911,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       guidance: freezed == guidance
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       guidanceElement: freezed == guidanceElement
           ? _value.guidanceElement
           : guidanceElement // ignore: cast_nullable_to_non_nullable
@@ -929,12 +929,12 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1415,7 +1415,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       List<MeasureSupplementalData>? supplementalData});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1576,7 +1576,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1700,7 +1700,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1716,7 +1716,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1732,7 +1732,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1740,7 +1740,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1748,7 +1748,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -1788,7 +1788,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       disclaimer: freezed == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       disclaimerElement: freezed == disclaimerElement
           ? _value.disclaimerElement
           : disclaimerElement // ignore: cast_nullable_to_non_nullable
@@ -1824,7 +1824,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       rationale: freezed == rationale
           ? _value.rationale
           : rationale // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       rationaleElement: freezed == rationaleElement
           ? _value.rationaleElement
           : rationaleElement // ignore: cast_nullable_to_non_nullable
@@ -1833,7 +1833,7 @@ class __$$_MeasureCopyWithImpl<$Res>
               clinicalRecommendationStatement
           ? _value.clinicalRecommendationStatement
           : clinicalRecommendationStatement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       clinicalRecommendationStatementElement: freezed ==
               clinicalRecommendationStatementElement
           ? _value.clinicalRecommendationStatementElement
@@ -1854,7 +1854,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       guidance: freezed == guidance
           ? _value.guidance
           : guidance // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       guidanceElement: freezed == guidanceElement
           ? _value.guidanceElement
           : guidanceElement // ignore: cast_nullable_to_non_nullable
@@ -2014,7 +2014,7 @@ class _$_Measure extends _Measure {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -2281,7 +2281,7 @@ class _$_Measure extends _Measure {
   /// [description] A free text natural language description of the measure
   ///  from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -2327,7 +2327,7 @@ class _$_Measure extends _Measure {
   /// [purpose] Explanation of why this measure is needed and why it has been
   ///  designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -2348,7 +2348,7 @@ class _$_Measure extends _Measure {
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the measure.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -2359,7 +2359,7 @@ class _$_Measure extends _Measure {
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] Extensions for approvalDate
   @override
@@ -2370,7 +2370,7 @@ class _$_Measure extends _Measure {
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] Extensions for lastReviewDate
   @override
@@ -2494,7 +2494,7 @@ class _$_Measure extends _Measure {
   /// related to intellectual property (such as code systems) referenced by the
   ///  measure.
   @override
-  final Markdown? disclaimer;
+  final FhirMarkdown? disclaimer;
 
   /// [disclaimerElement] Extensions for disclaimer
   @override
@@ -2556,7 +2556,7 @@ class _$_Measure extends _Measure {
   /// Usually includes statements pertaining to importance criterion: impact,
   ///  gap in care, and evidence.
   @override
-  final Markdown? rationale;
+  final FhirMarkdown? rationale;
 
   /// [rationaleElement] Extensions for rationale
   @override
@@ -2566,7 +2566,7 @@ class _$_Measure extends _Measure {
   /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
   ///  guidelines or other clinical recommendations supporting the measure.
   @override
-  final Markdown? clinicalRecommendationStatement;
+  final FhirMarkdown? clinicalRecommendationStatement;
   @override
   @JsonKey(name: '_clinicalRecommendationStatement')
   final Element? clinicalRecommendationStatementElement;
@@ -2611,7 +2611,7 @@ class _$_Measure extends _Measure {
   /// [guidance] Additional guidance for the measure including how it can be
   ///  used in a clinical context, and the intent of the measure.
   @override
-  final Markdown? guidance;
+  final FhirMarkdown? guidance;
 
   /// [guidanceElement] Extensions for guidance
   @override
@@ -2879,7 +2879,7 @@ abstract class _Measure extends Measure {
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2922,24 +2922,24 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final String? usage,
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -2951,7 +2951,7 @@ abstract class _Measure extends Measure {
       final List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
           final List<FhirCanonical>? library_,
-      final Markdown? disclaimer,
+      final FhirMarkdown? disclaimer,
       @JsonKey(name: '_disclaimer')
           final Element? disclaimerElement,
       final CodeableConcept? scoring,
@@ -2963,17 +2963,17 @@ abstract class _Measure extends Measure {
       final String? rateAggregation,
       @JsonKey(name: '_rateAggregation')
           final Element? rateAggregationElement,
-      final Markdown? rationale,
+      final FhirMarkdown? rationale,
       @JsonKey(name: '_rationale')
           final Element? rationaleElement,
-      final Markdown? clinicalRecommendationStatement,
+      final FhirMarkdown? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
           final Element? clinicalRecommendationStatementElement,
       final CodeableConcept? improvementNotation,
       final List<FhirMarkdown>? definition,
       @JsonKey(name: '_definition')
           final List<Element?>? definitionElement,
-      final Markdown? guidance,
+      final FhirMarkdown? guidance,
       @JsonKey(name: '_guidance')
           final Element? guidanceElement,
       final List<MeasureGroup>? group,
@@ -6028,7 +6028,7 @@ mixin _$MeasureReport {
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  Canonical get measure => throw _privateConstructorUsedError;
+  FhirCanonical get measure => throw _privateConstructorUsedError;
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
@@ -6096,7 +6096,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical measure,
+      FhirCanonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -6107,7 +6107,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       List<MeasureReportGroup>? group,
       List<Reference>? evaluatedResource});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6171,7 +6171,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6227,7 +6227,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       measure: null == measure
           ? _value.measure
           : measure // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -6265,12 +6265,12 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6423,7 +6423,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       FhirCode? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Canonical measure,
+      FhirCanonical measure,
       Reference? subject,
       FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -6435,7 +6435,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       List<Reference>? evaluatedResource});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6507,7 +6507,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6563,7 +6563,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       measure: null == measure
           ? _value.measure
           : measure // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
@@ -6660,7 +6660,7 @@ class _$_MeasureReport extends _MeasureReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6818,7 +6818,7 @@ class _$_MeasureReport extends _MeasureReport {
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
   @override
-  final Canonical measure;
+  final FhirCanonical measure;
 
   /// [subject] Optional subject identifying the individual or individuals the
   ///  report is for.
@@ -6981,7 +6981,7 @@ abstract class _MeasureReport extends MeasureReport {
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7000,7 +7000,7 @@ abstract class _MeasureReport extends MeasureReport {
       final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      required final Canonical measure,
+      required final FhirCanonical measure,
       final Reference? subject,
       final FhirDateTime? date,
       @JsonKey(name: '_date')
@@ -7127,7 +7127,7 @@ abstract class _MeasureReport extends MeasureReport {
 
   /// [measure] A reference to the Measure that was calculated to produce this
   ///  report.
-  Canonical get measure;
+  FhirCanonical get measure;
   @override
 
   /// [subject] Optional subject identifying the individual or individuals the
@@ -7773,7 +7773,7 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -7887,7 +7887,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -7991,7 +7991,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 
   /// [count] The number of members of the population.
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] Extensions for count
   @override
@@ -8060,7 +8060,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Integer? count,
+      final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation;
   _MeasureReportPopulation._() : super._();
@@ -9498,7 +9498,7 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -9613,7 +9613,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -9717,7 +9717,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 
   /// [count] The number of members of the population in this stratum.
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] Extensions for count
   @override
@@ -9786,7 +9786,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Integer? count,
+      final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation1;
   _MeasureReportPopulation1._() : super._();
@@ -10048,7 +10048,7 @@ abstract class $TestReportCopyWith<$Res> {
       List<TestReportTest>? test,
       TestReportTeardown? teardown});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10119,7 +10119,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10187,7 +10187,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -10229,12 +10229,12 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10442,7 +10442,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       TestReportTeardown? teardown});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -10524,7 +10524,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10592,7 +10592,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       scoreElement: freezed == scoreElement
           ? _value.scoreElement
           : scoreElement // ignore: cast_nullable_to_non_nullable
@@ -10699,7 +10699,7 @@ class _$_TestReport extends _TestReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -10854,7 +10854,7 @@ class _$_TestReport extends _TestReport {
   /// [score] The final score (percentage of tests passed) resulting from the
   ///  execution of the TestScript.
   @override
-  final Decimal? score;
+  final FhirDecimal? score;
 
   /// [scoreElement] Extensions for score
   @override
@@ -11032,7 +11032,7 @@ abstract class _TestReport extends TestReport {
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -11055,7 +11055,7 @@ abstract class _TestReport extends TestReport {
       final FhirCode? result,
       @JsonKey(name: '_result')
           final Element? resultElement,
-      final Decimal? score,
+      final FhirDecimal? score,
       @JsonKey(name: '_score')
           final Element? scoreElement,
       final String? tester,
@@ -12629,7 +12629,7 @@ class _$TestReportOperationCopyWithImpl<$Res, $Val extends TestReportOperation>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -12754,7 +12754,7 @@ class __$$_TestReportOperationCopyWithImpl<$Res>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -12869,7 +12869,7 @@ class _$_TestReportOperation extends _TestReportOperation {
 
   /// [message] An explanatory message associated with the result.
   @override
-  final Markdown? message;
+  final FhirMarkdown? message;
 
   /// [messageElement] Extensions for message
   @override
@@ -12947,7 +12947,7 @@ abstract class _TestReportOperation extends TestReportOperation {
           final List<FhirExtension>? modifierExtension,
           final FhirCode? result,
           @JsonKey(name: '_result') final Element? resultElement,
-          final Markdown? message,
+          final FhirMarkdown? message,
           @JsonKey(name: '_message') final Element? messageElement,
           final FhirUri? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
@@ -13152,7 +13152,7 @@ class _$TestReportAssertCopyWithImpl<$Res, $Val extends TestReportAssert>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -13277,7 +13277,7 @@ class __$$_TestReportAssertCopyWithImpl<$Res>
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       messageElement: freezed == messageElement
           ? _value.messageElement
           : messageElement // ignore: cast_nullable_to_non_nullable
@@ -13392,7 +13392,7 @@ class _$_TestReportAssert extends _TestReportAssert {
 
   /// [message] An explanatory message associated with the result.
   @override
-  final Markdown? message;
+  final FhirMarkdown? message;
 
   /// [messageElement] Extensions for message
   @override
@@ -13469,7 +13469,7 @@ abstract class _TestReportAssert extends TestReportAssert {
           final List<FhirExtension>? modifierExtension,
           final FhirCode? result,
           @JsonKey(name: '_result') final Element? resultElement,
-          final Markdown? message,
+          final FhirMarkdown? message,
           @JsonKey(name: '_message') final Element? messageElement,
           final String? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
@@ -15411,7 +15411,7 @@ abstract class $TestScriptCopyWith<$Res> {
       List<TestScriptTest>? test,
       TestScriptTeardown? teardown});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -15504,7 +15504,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15612,7 +15612,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15628,7 +15628,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -15636,7 +15636,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -15682,12 +15682,12 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -15981,7 +15981,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       TestScriptTeardown? teardown});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -16090,7 +16090,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16198,7 +16198,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -16214,7 +16214,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -16222,7 +16222,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -16362,7 +16362,7 @@ class _$_TestScript extends _TestScript {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -16592,7 +16592,7 @@ class _$_TestScript extends _TestScript {
   /// [description] A free text natural language description of the test script
   ///  from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -16638,7 +16638,7 @@ class _$_TestScript extends _TestScript {
   /// [purpose] Explanation of why this test script is needed and why it has
   ///  been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -16649,7 +16649,7 @@ class _$_TestScript extends _TestScript {
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the test script.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -16914,7 +16914,7 @@ abstract class _TestScript extends TestScript {
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -16952,15 +16952,15 @@ abstract class _TestScript extends TestScript {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final List<TestScriptOrigin>? origin,
@@ -17356,7 +17356,7 @@ class _$TestScriptOriginCopyWithImpl<$Res, $Val extends TestScriptOrigin>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -17445,7 +17445,7 @@ class __$$_TestScriptOriginCopyWithImpl<$Res>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -17545,7 +17545,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   /// [index] Abstract name given to an origin server in this test script.  The
   ///  name is provided as a number starting at 1.
   @override
-  final Integer? index;
+  final FhirInteger? index;
 
   /// [indexElement] Extensions for index
   @override
@@ -17607,7 +17607,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Integer? index,
+      final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
@@ -17774,7 +17774,7 @@ class _$TestScriptDestinationCopyWithImpl<$Res,
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -17863,7 +17863,7 @@ class __$$_TestScriptDestinationCopyWithImpl<$Res>
       index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       indexElement: freezed == indexElement
           ? _value.indexElement
           : indexElement // ignore: cast_nullable_to_non_nullable
@@ -17963,7 +17963,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
   /// [index] Abstract name given to a destination server in this test script.
   ///  The name is provided as a number starting at 1.
   @override
-  final Integer? index;
+  final FhirInteger? index;
 
   /// [indexElement] Extensions for index
   @override
@@ -18026,7 +18026,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Integer? index,
+      final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptDestination;
   _TestScriptDestination._() : super._();
@@ -19004,7 +19004,7 @@ mixin _$TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities => throw _privateConstructorUsedError;
+  FhirCanonical get capabilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -19034,7 +19034,7 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      FhirCanonical capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
   $ElementCopyWith<$Res>? get validatedElement;
@@ -19121,7 +19121,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -19137,7 +19137,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res,
       capabilities: null == capabilities
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -19214,7 +19214,7 @@ abstract class _$$_TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Canonical capabilities});
+      FhirCanonical capabilities});
 
   @override
   $ElementCopyWith<$Res>? get requiredElement;
@@ -19302,7 +19302,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -19318,7 +19318,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
       capabilities: null == capabilities
           ? _value.capabilities
           : capabilities // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -19481,7 +19481,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
 
   /// [destination] Which server these requirements apply to.
   @override
-  final Integer? destination;
+  final FhirInteger? destination;
 
   /// [destinationElement] Extensions for destination
   @override
@@ -19522,7 +19522,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
   @override
-  final Canonical capabilities;
+  final FhirCanonical capabilities;
 
   @override
   String toString() {
@@ -19614,11 +19614,11 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<FhirInteger>? origin,
       @JsonKey(name: '_origin') final List<Element?>? originElement,
-      final Integer? destination,
+      final FhirInteger? destination,
       @JsonKey(name: '_destination') final Element? destinationElement,
       final List<FhirUri>? link,
       @JsonKey(name: '_link') final List<Element?>? linkElement,
-      required final Canonical capabilities}) = _$_TestScriptCapability;
+      required final FhirCanonical capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -19720,7 +19720,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  Canonical get capabilities;
+  FhirCanonical get capabilities;
   @override
   @JsonKey(ignore: true)
   _$$_TestScriptCapabilityCopyWith<_$_TestScriptCapability> get copyWith =>
@@ -20490,7 +20490,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -20745,7 +20745,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -22229,7 +22229,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -22253,7 +22253,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -22273,7 +22273,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -22281,7 +22281,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -22289,7 +22289,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -22297,7 +22297,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -22692,7 +22692,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       destinationElement: freezed == destinationElement
           ? _value.destinationElement
           : destinationElement // ignore: cast_nullable_to_non_nullable
@@ -22716,7 +22716,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       origin: freezed == origin
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       originElement: freezed == originElement
           ? _value.originElement
           : originElement // ignore: cast_nullable_to_non_nullable
@@ -22736,7 +22736,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -22744,7 +22744,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -22752,7 +22752,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -22760,7 +22760,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -22948,7 +22948,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [destination] The server where the request message is destined for.  Must
   ///  be one of the server numbers listed in TestScript.destination section.
   @override
-  final Integer? destination;
+  final FhirInteger? destination;
 
   /// [destinationElement] Extensions for destination
   @override
@@ -22980,7 +22980,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [origin] The server where the request message originates from.  Must be
   ///  one of the server numbers listed in TestScript.origin section.
   @override
-  final Integer? origin;
+  final FhirInteger? origin;
 
   /// [originElement] Extensions for origin
   @override
@@ -23210,7 +23210,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       final FhirCode? contentType,
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
-      final Integer? destination,
+      final FhirInteger? destination,
       @JsonKey(name: '_destination')
           final Element? destinationElement,
       final FhirBoolean? encodeRequestUrl,
@@ -23219,7 +23219,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       final FhirCode? method,
       @JsonKey(name: '_method')
           final Element? methodElement,
-      final Integer? origin,
+      final FhirInteger? origin,
       @JsonKey(name: '_origin')
           final Element? originElement,
       final String? params,
@@ -24437,7 +24437,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -24445,7 +24445,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -25083,7 +25083,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -25091,7 +25091,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable

@@ -17,17 +17,18 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.ImplementationGuide) ??
         Dstu2ResourceType.ImplementationGuide,
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
+    id: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+        : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
+    language:
+        json['language'] == null ? null : FhirCode.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -62,7 +63,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
     experimental: json['experimental'] == null
         ? null
-        : Boolean.fromJson(json['experimental']),
+        : FhirBoolean.fromJson(json['experimental']),
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -89,8 +90,9 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-    fhirVersion:
-        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
+    fhirVersion: json['fhirVersion'] == null
+        ? null
+        : FhirId.fromJson(json['fhirVersion']),
     fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -107,9 +109,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
         ?.map((e) =>
             ImplementationGuideGlobal.fromJson(e as Map<String, dynamic>))
         .toList(),
-    binary: (json['binary'] as List<dynamic>?)
-        ?.map((e) => FhirUri.fromJson(e))
-        .toList(),
+    binary: (json['binary'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
     page:
         ImplementationGuidePage.fromJson(json['page'] as Map<String, dynamic>),
   );
@@ -281,7 +281,7 @@ const _$ImplementationGuideStatusEnumMap = {
 _$_ImplementationGuideContact _$$_ImplementationGuideContactFromJson(
         Map<String, dynamic> json) =>
     _$_ImplementationGuideContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -317,7 +317,7 @@ Map<String, dynamic> _$$_ImplementationGuideContactToJson(
 _$_ImplementationGuideDependency _$$_ImplementationGuideDependencyFromJson(
         Map<String, dynamic> json) =>
     _$_ImplementationGuideDependency(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -366,7 +366,7 @@ _$_ImplementationGuidePackage _$$_ImplementationGuidePackageFromJson(
     requiredKeys: const ['resource'],
   );
   return _$_ImplementationGuidePackage(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
+    id: json['id'] == null ? null : FhirId.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -406,14 +406,14 @@ Map<String, dynamic> _$$_ImplementationGuidePackageToJson(
 _$_ImplementationGuideGlobal _$$_ImplementationGuideGlobalFromJson(
         Map<String, dynamic> json) =>
     _$_ImplementationGuideGlobal(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: Code.fromJson(json['type']),
+      type: FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -444,7 +444,7 @@ Map<String, dynamic> _$$_ImplementationGuideGlobalToJson(
 _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
         Map<String, dynamic> json) =>
     _$_ImplementationGuidePage(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -455,12 +455,10 @@ _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
       name: json['name'] as String,
       kind: $enumDecode(_$PageKindEnumMap, json['kind'],
           unknownValue: PageKind.unknown),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      type: (json['type'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       package:
           (json['package'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      format: json['format'] == null ? null : Code.fromJson(json['format']),
+      format: json['format'] == null ? null : FhirCode.fromJson(json['format']),
       page: (json['page'] as List<dynamic>?)
           ?.map((e) =>
               ImplementationGuidePage.fromJson(e as Map<String, dynamic>))
@@ -507,7 +505,7 @@ const _$PageKindEnumMap = {
 _$_ImplementationGuidePackageResource
     _$$_ImplementationGuidePackageResourceFromJson(Map<String, dynamic> json) =>
         _$_ImplementationGuidePackageResource(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -576,10 +574,10 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.TestScript) ??
           Dstu2ResourceType.TestScript,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -587,7 +585,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -622,7 +620,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -655,7 +653,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               json['metadata'] as Map<String, dynamic>),
       multiserver: json['multiserver'] == null
           ? null
-          : Boolean.fromJson(json['multiserver']),
+          : FhirBoolean.fromJson(json['multiserver']),
       fixture: (json['fixture'] as List<dynamic>?)
           ?.map((e) => TestScriptFixture.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -743,7 +741,7 @@ const _$TestScriptStatusEnumMap = {
 
 _$_TestScriptContact _$$_TestScriptContactFromJson(Map<String, dynamic> json) =>
     _$_TestScriptContact(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -783,7 +781,7 @@ _$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
     requiredKeys: const ['capability'],
   );
   return _$_TestScriptMetadata(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
+    id: json['id'] == null ? null : FhirId.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -823,7 +821,7 @@ Map<String, dynamic> _$$_TestScriptMetadataToJson(
 _$_TestScriptMetadataLink _$$_TestScriptMetadataLinkFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptMetadataLink(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -865,21 +863,22 @@ Map<String, dynamic> _$$_TestScriptMetadataLinkToJson(
 _$_TestScriptMetadataCapability _$$_TestScriptMetadataCapabilityFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptMetadataCapability(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
+      required_: json['required'] == null
+          ? null
+          : FhirBoolean.fromJson(json['required']),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       validated: json['validated'] == null
           ? null
-          : Boolean.fromJson(json['validated']),
+          : FhirBoolean.fromJson(json['validated']),
       validatedElement: json['_validated'] == null
           ? null
           : Element.fromJson(json['_validated'] as Map<String, dynamic>),
@@ -889,13 +888,11 @@ _$_TestScriptMetadataCapability _$$_TestScriptMetadataCapabilityFromJson(
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       destination: json['destination'] == null
           ? null
-          : Integer.fromJson(json['destination']),
+          : FhirInteger.fromJson(json['destination']),
       destinationElement: json['_destination'] == null
           ? null
           : Element.fromJson(json['_destination'] as Map<String, dynamic>),
-      link: (json['link'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      link: (json['link'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       linkElement: (json['_link'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -935,7 +932,7 @@ Map<String, dynamic> _$$_TestScriptMetadataCapabilityToJson(
 
 _$_TestScriptFixture _$$_TestScriptFixtureFromJson(Map<String, dynamic> json) =>
     _$_TestScriptFixture(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -944,13 +941,13 @@ _$_TestScriptFixture _$$_TestScriptFixtureFromJson(Map<String, dynamic> json) =>
           .toList(),
       autocreate: json['autocreate'] == null
           ? null
-          : Boolean.fromJson(json['autocreate']),
+          : FhirBoolean.fromJson(json['autocreate']),
       autocreateElement: json['_autocreate'] == null
           ? null
           : Element.fromJson(json['_autocreate'] as Map<String, dynamic>),
       autodelete: json['autodelete'] == null
           ? null
-          : Boolean.fromJson(json['autodelete']),
+          : FhirBoolean.fromJson(json['autodelete']),
       autodeleteElement: json['_autodelete'] == null
           ? null
           : Element.fromJson(json['_autodelete'] as Map<String, dynamic>),
@@ -985,7 +982,7 @@ Map<String, dynamic> _$$_TestScriptFixtureToJson(
 _$_TestScriptVariable _$$_TestScriptVariableFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptVariable(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1004,7 +1001,8 @@ _$_TestScriptVariable _$$_TestScriptVariableFromJson(
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['_sourceId'] == null
           ? null
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
@@ -1038,7 +1036,7 @@ Map<String, dynamic> _$$_TestScriptVariableToJson(
 
 _$_TestScriptSetup _$$_TestScriptSetupFromJson(Map<String, dynamic> json) =>
     _$_TestScriptSetup(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1076,7 +1074,7 @@ Map<String, dynamic> _$$_TestScriptSetupToJson(_$_TestScriptSetup instance) {
 _$_TestScriptSetupAction _$$_TestScriptSetupActionFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptSetupAction(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1120,7 +1118,7 @@ Map<String, dynamic> _$$_TestScriptSetupActionToJson(
 _$_TestScriptActionOperation _$$_TestScriptActionOperationFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptActionOperation(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1134,7 +1132,7 @@ _$_TestScriptActionOperation _$$_TestScriptActionOperationFromJson(
           ? null
           : Coding.fromJson(json['type'] as Map<String, dynamic>),
       resource:
-          json['resource'] == null ? null : Code.fromJson(json['resource']),
+          json['resource'] == null ? null : FhirCode.fromJson(json['resource']),
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
@@ -1159,13 +1157,13 @@ _$_TestScriptActionOperation _$$_TestScriptActionOperationFromJson(
           : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
       destination: json['destination'] == null
           ? null
-          : Integer.fromJson(json['destination']),
+          : FhirInteger.fromJson(json['destination']),
       destinationElement: json['_destination'] == null
           ? null
           : Element.fromJson(json['_destination'] as Map<String, dynamic>),
       encodeRequestUrl: json['encodeRequestUrl'] == null
           ? null
-          : Boolean.fromJson(json['encodeRequestUrl']),
+          : FhirBoolean.fromJson(json['encodeRequestUrl']),
       encodeRequestUrlElement: json['_encodeRequestUrl'] == null
           ? null
           : Element.fromJson(json['_encodeRequestUrl'] as Map<String, dynamic>),
@@ -1177,16 +1175,19 @@ _$_TestScriptActionOperation _$$_TestScriptActionOperationFromJson(
           ?.map((e) => TestScriptOperationRequestHeader.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      responseId:
-          json['responseId'] == null ? null : Id.fromJson(json['responseId']),
+      responseId: json['responseId'] == null
+          ? null
+          : FhirId.fromJson(json['responseId']),
       responseIdElement: json['_responseId'] == null
           ? null
           : Element.fromJson(json['_responseId'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['_sourceId'] == null
           ? null
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
-      targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
+      targetId:
+          json['targetId'] == null ? null : FhirId.fromJson(json['targetId']),
       targetIdElement: json['_targetId'] == null
           ? null
           : Element.fromJson(json['_targetId'] as Map<String, dynamic>),
@@ -1258,7 +1259,7 @@ const _$OperationContentTypeEnumMap = {
 _$_TestScriptOperationRequestHeader
     _$$_TestScriptOperationRequestHeaderFromJson(Map<String, dynamic> json) =>
         _$_TestScriptOperationRequestHeader(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1300,7 +1301,7 @@ Map<String, dynamic> _$$_TestScriptOperationRequestHeaderToJson(
 _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptActionAssert(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1344,7 +1345,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
           : Element.fromJson(json['_minimumId'] as Map<String, dynamic>),
       navigationLinks: json['navigationLinks'] == null
           ? null
-          : Boolean.fromJson(json['navigationLinks']),
+          : FhirBoolean.fromJson(json['navigationLinks']),
       navigationLinksElement: json['_navigationLinks'] == null
           ? null
           : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
@@ -1358,7 +1359,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       resource:
-          json['resource'] == null ? null : Code.fromJson(json['resource']),
+          json['resource'] == null ? null : FhirCode.fromJson(json['resource']),
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
@@ -1371,13 +1372,14 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
       responseCodeElement: json['_responseCode'] == null
           ? null
           : Element.fromJson(json['_responseCode'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['_sourceId'] == null
           ? null
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
       validateProfileId: json['validateProfileId'] == null
           ? null
-          : Id.fromJson(json['validateProfileId']),
+          : FhirId.fromJson(json['validateProfileId']),
       validateProfileIdElement: json['_validateProfileId'] == null
           ? null
           : Element.fromJson(
@@ -1388,7 +1390,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       warningOnly: json['warningOnly'] == null
           ? null
-          : Boolean.fromJson(json['warningOnly']),
+          : FhirBoolean.fromJson(json['warningOnly']),
       warningOnlyElement: json['_warningOnly'] == null
           ? null
           : Element.fromJson(json['_warningOnly'] as Map<String, dynamic>),
@@ -1494,7 +1496,7 @@ const _$AssertResponseEnumMap = {
 
 _$_TestScriptTest _$$_TestScriptTestFromJson(Map<String, dynamic> json) =>
     _$_TestScriptTest(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1544,7 +1546,7 @@ Map<String, dynamic> _$$_TestScriptTestToJson(_$_TestScriptTest instance) {
 _$_TestScriptTeardown _$$_TestScriptTeardownFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptTeardown(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1579,7 +1581,7 @@ Map<String, dynamic> _$$_TestScriptTeardownToJson(
 _$_TestScriptTeardownAction _$$_TestScriptTeardownActionFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptTeardownAction(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

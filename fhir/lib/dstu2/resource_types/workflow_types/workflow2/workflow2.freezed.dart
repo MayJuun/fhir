@@ -92,7 +92,7 @@ abstract class $ProcessRequestCopyWith<$Res> {
       List<String>? exclude,
       Period? period});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $CodingCopyWith<$Res>? get ruleset;
   $CodingCopyWith<$Res>? get originalRuleset;
@@ -151,11 +151,11 @@ class _$ProcessRequestCopyWithImpl<$Res, $Val extends ProcessRequest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -249,12 +249,12 @@ class _$ProcessRequestCopyWithImpl<$Res, $Val extends ProcessRequest>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -407,7 +407,7 @@ abstract class _$$_ProcessRequestCopyWith<$Res>
       Period? period});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -473,11 +473,11 @@ class __$$_ProcessRequestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -620,7 +620,7 @@ class _$_ProcessRequest extends _ProcessRequest {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -824,7 +824,7 @@ abstract class _ProcessRequest extends ProcessRequest {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -924,7 +924,7 @@ mixin _$ProcessRequestItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Integer get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirInteger get sequenceLinkId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -939,10 +939,10 @@ abstract class $ProcessRequestItemCopyWith<$Res> {
       _$ProcessRequestItemCopyWithImpl<$Res, ProcessRequestItem>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer sequenceLinkId});
+      FhirInteger sequenceLinkId});
 }
 
 /// @nodoc
@@ -967,7 +967,7 @@ class _$ProcessRequestItemCopyWithImpl<$Res, $Val extends ProcessRequestItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -979,7 +979,7 @@ class _$ProcessRequestItemCopyWithImpl<$Res, $Val extends ProcessRequestItem>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Integer,
+              as FhirInteger,
     ) as $Val);
   }
 }
@@ -993,10 +993,10 @@ abstract class _$$_ProcessRequestItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Integer sequenceLinkId});
+      FhirInteger sequenceLinkId});
 }
 
 /// @nodoc
@@ -1019,7 +1019,7 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1031,7 +1031,7 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
       sequenceLinkId: null == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Integer,
+              as FhirInteger,
     ));
   }
 }
@@ -1076,7 +1076,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   }
 
   @override
-  final Integer sequenceLinkId;
+  final FhirInteger sequenceLinkId;
 
   @override
   String toString() {
@@ -1126,7 +1126,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final Integer sequenceLinkId}) = _$_ProcessRequestItem;
+      required final FhirInteger sequenceLinkId}) = _$_ProcessRequestItem;
   _ProcessRequestItem._() : super._();
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
@@ -1140,7 +1140,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Integer get sequenceLinkId;
+  FhirInteger get sequenceLinkId;
   @override
   @JsonKey(ignore: true)
   _$$_ProcessRequestItemCopyWith<_$_ProcessRequestItem> get copyWith =>
@@ -1217,7 +1217,7 @@ abstract class $ProcessResponseCopyWith<$Res> {
       List<ProcessResponseNotes>? notes,
       List<Coding>? error});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res>? get request;
   $CodingCopyWith<$Res>? get outcome;
@@ -1273,11 +1273,11 @@ class _$ProcessResponseCopyWithImpl<$Res, $Val extends ProcessResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1359,12 +1359,12 @@ class _$ProcessResponseCopyWithImpl<$Res, $Val extends ProcessResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1513,7 +1513,7 @@ abstract class _$$_ProcessResponseCopyWith<$Res>
       List<Coding>? error});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -1576,11 +1576,11 @@ class __$$_ProcessResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1706,7 +1706,7 @@ class _$_ProcessResponse extends _ProcessResponse {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1888,7 +1888,7 @@ abstract class _ProcessResponse extends ProcessResponse {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -1993,7 +1993,7 @@ abstract class $ProcessResponseNotesCopyWith<$Res> {
       _$ProcessResponseNotesCopyWithImpl<$Res, ProcessResponseNotes>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
@@ -2026,7 +2026,7 @@ class _$ProcessResponseNotesCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2068,7 +2068,7 @@ abstract class _$$_ProcessResponseNotesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
@@ -2099,7 +2099,7 @@ class __$$_ProcessResponseNotesCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2319,7 +2319,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
       Reference? reasonReference,
       SupplyRequestWhen? when});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2379,11 +2379,11 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2469,12 +2469,12 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2665,7 +2665,7 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
       SupplyRequestWhen? when});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2735,11 +2735,11 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2872,7 +2872,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -3048,7 +3048,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3164,7 +3164,7 @@ abstract class $SupplyRequestWhenCopyWith<$Res> {
       _$SupplyRequestWhenCopyWithImpl<$Res, SupplyRequestWhen>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
@@ -3197,7 +3197,7 @@ class _$SupplyRequestWhenCopyWithImpl<$Res, $Val extends SupplyRequestWhen>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3251,7 +3251,7 @@ abstract class _$$_SupplyRequestWhenCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? code,
@@ -3284,7 +3284,7 @@ class __$$_SupplyRequestWhenCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3504,7 +3504,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Reference? destination,
       List<Reference>? receiver});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3564,11 +3564,11 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3654,12 +3654,12 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3849,7 +3849,7 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
       List<Reference>? receiver});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3919,11 +3919,11 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4056,7 +4056,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4233,7 +4233,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

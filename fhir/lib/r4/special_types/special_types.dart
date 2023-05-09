@@ -321,13 +321,13 @@ class Reference with _$Reference {
   }
 }
 
-/// [Meta] The metadata about a resource. This is content in the resource
+/// [FhirMeta] The metadata about a resource. This is content in the resource
 @freezed
 class FhirMeta with _$FhirMeta {
-  /// [Meta] The metadata about a resource. This is content in the resource
-  Meta._();
+  /// [FhirMeta] The metadata about a resource. This is content in the resource
+  FhirMeta._();
 
-  /// [Meta] The metadata about a resource. This is content in the resource
+  /// [FhirMeta] The metadata about a resource. This is content in the resource
   /// that is maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   ///
@@ -371,7 +371,7 @@ class FhirMeta with _$FhirMeta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
-  factory Meta({
+  factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -423,30 +423,32 @@ class FhirMeta with _$FhirMeta {
     /// are not required to consider the tags when interpreting the meaning of a
     ///  resource.
     List<Coding>? tag,
-  }) = _Meta;
+  }) = _FhirMeta;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(
+  factory FhirMeta.fromYaml(dynamic yaml) => yaml is String
+      ? FhirMeta.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirMeta.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Meta cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+  factory FhirMeta.fromJson(Map<String, dynamic> json) =>
+      _$FhirMetaFromJson(json);
 
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Meta.fromJsonString(String source) {
+  factory FhirMeta.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$MetaFromJson(json);
+      return _$FhirMetaFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -592,7 +594,7 @@ class Dosage with _$Dosage {
     /// [asNeededBoolean] Indicates whether the Medication is only taken when
     /// needed within a specific dosing schedule (Boolean option), or it indicates
     ///  the precondition for taking the Medication (CodeableConcept).
-     FhirBoolean? asNeededBoolean,
+    FhirBoolean? asNeededBoolean,
 
     /// [asNeededBooleanElement] Extensions for asNeededBoolean
     @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
@@ -2494,7 +2496,7 @@ class ElementDefinition with _$ElementDefinition {
     /// profile. If false, the slice is not overriding any slice in an inherited
     /// profile. If missing, the slice might or might not be overriding a slice in
     ///  an inherited profile, depending on the sliceName.
-     FhirBoolean? sliceIsConstraining,
+    FhirBoolean? sliceIsConstraining,
 
     /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
     @JsonKey(name: '_sliceIsConstraining')
@@ -2623,7 +2625,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueBoolean] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-     FhirBoolean? defaultValueBoolean,
+    FhirBoolean? defaultValueBoolean,
 
     /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
     @JsonKey(name: '_defaultValueBoolean')
@@ -2632,7 +2634,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueCanonical] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
-     FhirCanonical? defaultValueCanonical,
+    FhirCanonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
 
         /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
@@ -2641,7 +2643,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueCode] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-     FhirCode? defaultValueCode,
+    FhirCode? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
     @JsonKey(name: '_defaultValueCode')
@@ -2967,7 +2969,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-     FhirBoolean? fixedBoolean,
+    FhirBoolean? fixedBoolean,
 
     /// [fixedBooleanElement] Extensions for fixedBoolean
     @JsonKey(name: '_fixedBoolean')
@@ -2977,7 +2979,7 @@ class ElementDefinition with _$ElementDefinition {
     /// this element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-     FhirCanonical? fixedCanonical,
+    FhirCanonical? fixedCanonical,
 
     /// [fixedCanonicalElement] Extensions for fixedCanonical
     @JsonKey(name: '_fixedCanonical')
@@ -2987,7 +2989,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-     FhirCode? fixedCode,
+    FhirCode? fixedCode,
 
     /// [fixedCodeElement] Extensions for fixedCode
     @JsonKey(name: '_fixedCode')
@@ -3369,7 +3371,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-     FhirBoolean? patternBoolean,
+    FhirBoolean? patternBoolean,
 
     /// [patternBooleanElement] Extensions for patternBoolean
     @JsonKey(name: '_patternBoolean')
@@ -3390,7 +3392,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-     FhirCanonical? patternCanonical,
+    FhirCanonical? patternCanonical,
 
     /// [patternCanonicalElement] Extensions for patternCanonical
     @JsonKey(name: '_patternCanonical')
@@ -3411,7 +3413,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-     FhirCode? patternCode,
+    FhirCode? patternCode,
 
     /// [patternCodeElement] Extensions for patternCode
     @JsonKey(name: '_patternCode')
@@ -4429,7 +4431,7 @@ class ElementDefinition with _$ElementDefinition {
     /// the element may be ignored and not supported. If false, whether to
     /// populate or use the data element in any way is at the discretion of the
     ///  implementation.
-     FhirBoolean? mustSupport,
+    FhirBoolean? mustSupport,
 
     /// [mustSupportElement] Extensions for mustSupport
     @JsonKey(name: '_mustSupport')
@@ -4442,7 +4444,7 @@ class ElementDefinition with _$ElementDefinition {
     /// cannot be ignored by systems: they SHALL either recognize the element and
     /// process it, and/or a pre-determination has been made that it is not
     ///  relevant to their particular system.
-     FhirBoolean? isModifier,
+    FhirBoolean? isModifier,
 
     /// [isModifierElement] Extensions for isModifier
     @JsonKey(name: '_isModifier')
@@ -4458,7 +4460,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [isSummary] Whether the element should be included if a client requests a
     ///  search with the parameter _summary=true.
-     FhirBoolean? isSummary,
+    FhirBoolean? isSummary,
 
     /// [isSummaryElement] Extensions for isSummary
     @JsonKey(name: '_isSummary')
@@ -4610,7 +4612,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 
     /// [ordered] If the matching elements have to occur in the same order as
     ///  defined in the profile.
-     FhirBoolean? ordered,
+    FhirBoolean? ordered,
 
     /// [orderedElement] Extensions for ordered
     @JsonKey(name: '_ordered')
@@ -5357,21 +5359,21 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueBoolean] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-     FhirBoolean? valueBoolean,
+    FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-     FhirCanonical? valueCanonical,
+    FhirCanonical? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
     @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-     FhirCode? valueCode,
+    FhirCode? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -5786,7 +5788,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 
     /// [source] A reference to the original source of the constraint, for
     ///  traceability purposes.
-     FhirCanonical? source,
+    FhirCanonical? source,
   }) = _ElementDefinitionConstraint;
 
   /// Produces a Yaml formatted String version of the object
@@ -5913,7 +5915,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 
     /// [valueSet] Refers to the value set that identifies the set of codes the
     ///  binding refers to.
-     FhirCanonical? valueSet,
+    FhirCanonical? valueSet,
   }) = _ElementDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -6033,7 +6035,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
 
     /// [language] Identifies the computable language in which mapping.map is
     ///  expressed.
-     FhirCode? language,
+    FhirCode? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,

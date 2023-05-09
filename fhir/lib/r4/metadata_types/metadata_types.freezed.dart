@@ -944,7 +944,7 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       limitElement: freezed == limitElement
           ? _value.limitElement
           : limitElement // ignore: cast_nullable_to_non_nullable
@@ -1114,7 +1114,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
       limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       limitElement: freezed == limitElement
           ? _value.limitElement
           : limitElement // ignore: cast_nullable_to_non_nullable
@@ -1307,7 +1307,7 @@ class _$_DataRequirement extends _DataRequirement {
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
   @override
-  final PositiveInt? limit;
+  final FhirPositiveInt? limit;
 
   /// [limitElement] Extensions for limit
   @override
@@ -1408,7 +1408,7 @@ abstract class _DataRequirement extends DataRequirement {
       @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
       final List<DataRequirementCodeFilter>? codeFilter,
       final List<DataRequirementDateFilter>? dateFilter,
-      final PositiveInt? limit,
+      final FhirPositiveInt? limit,
       @JsonKey(name: '_limit') final Element? limitElement,
       final List<DataRequirementSort>? sort}) = _$_DataRequirement;
   _DataRequirement._() : super._();
@@ -3406,7 +3406,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -3609,7 +3609,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -3722,7 +3722,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   @override
-  final Integer? min;
+  final FhirInteger? min;
 
   /// [minElement] Extensions for min
   @override
@@ -3841,7 +3841,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final FhirCode? use,
       @JsonKey(name: '_use') final Element? useElement,
-      final Integer? min,
+      final FhirInteger? min,
       @JsonKey(name: '_min') final Element? minElement,
       final String? max,
       @JsonKey(name: '_max') final Element? maxElement,
@@ -4111,7 +4111,7 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
       citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
@@ -4315,7 +4315,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
       citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
@@ -4425,7 +4425,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
   @override
-  final Markdown? citation;
+  final FhirMarkdown? citation;
 
   /// [citationElement] Extensions for citation
   @override
@@ -4535,7 +4535,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final String? display,
       @JsonKey(name: '_display')
           final Element? displayElement,
-      final Markdown? citation,
+      final FhirMarkdown? citation,
       @JsonKey(name: '_citation')
           final Element? citationElement,
       final FhirUrl? url,
@@ -4799,7 +4799,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -5016,7 +5016,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -5126,7 +5126,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
   @override
-  final Date? timingDate;
+  final FhirDate? timingDate;
 
   /// [timingDateElement] Extensions for timingDate
   @override
@@ -5249,7 +5249,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
           final Element? nameElement,
       final Timing? timingTiming,
       final Reference? timingReference,
-      final Date? timingDate,
+      final FhirDate? timingDate,
       @JsonKey(name: '_timingDate')
           final Element? timingDateElement,
       final FhirDateTime? timingDateTime,
@@ -5924,7 +5924,7 @@ class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -6102,7 +6102,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable

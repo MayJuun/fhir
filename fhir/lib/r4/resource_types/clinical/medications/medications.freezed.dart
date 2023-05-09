@@ -308,7 +308,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       List<ImmunizationReaction>? reaction,
       List<ImmunizationProtocolApplied>? protocolApplied});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -407,7 +407,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -523,7 +523,7 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -593,12 +593,12 @@ class _$ImmunizationCopyWithImpl<$Res, $Val extends Immunization>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -931,7 +931,7 @@ abstract class _$$_ImmunizationCopyWith<$Res>
       List<ImmunizationProtocolApplied>? protocolApplied});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1050,7 +1050,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1166,7 +1166,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
       expirationDate: freezed == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       expirationDateElement: freezed == expirationDateElement
           ? _value.expirationDateElement
           : expirationDateElement // ignore: cast_nullable_to_non_nullable
@@ -1330,7 +1330,7 @@ class _$_Immunization extends _Immunization {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1550,7 +1550,7 @@ class _$_Immunization extends _Immunization {
 
   /// [expirationDate] Date vaccine batch expires.
   @override
-  final Date? expirationDate;
+  final FhirDate? expirationDate;
 
   /// [expirationDateElement] Extensions for expirationDate
   @override
@@ -1883,7 +1883,7 @@ abstract class _Immunization extends Immunization {
           {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -1921,7 +1921,7 @@ abstract class _Immunization extends Immunization {
           final String? lotNumber,
           @JsonKey(name: '_lotNumber')
               final Element? lotNumberElement,
-          final Date? expirationDate,
+          final FhirDate? expirationDate,
           @JsonKey(name: '_expirationDate')
               final Element? expirationDateElement,
           final CodeableConcept? site,
@@ -3891,7 +3891,7 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3907,7 +3907,7 @@ class _$ImmunizationProtocolAppliedCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4107,7 +4107,7 @@ class __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4123,7 +4123,7 @@ class __$$_ImmunizationProtocolAppliedCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4272,7 +4272,7 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @override
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element? doseNumberPositiveIntElement;
@@ -4289,7 +4289,7 @@ class _$_ImmunizationProtocolApplied extends _ImmunizationProtocolApplied {
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element? seriesDosesPositiveIntElement;
@@ -4396,13 +4396,13 @@ abstract class _ImmunizationProtocolApplied
               final Element? seriesElement,
           final Reference? authority,
           final List<CodeableConcept>? targetDisease,
-          final PositiveInt? doseNumberPositiveInt,
+          final FhirPositiveInt? doseNumberPositiveInt,
           @JsonKey(name: '_doseNumberPositiveInt')
               final Element? doseNumberPositiveIntElement,
           final String? doseNumberString,
           @JsonKey(name: '_doseNumberString')
               final Element? doseNumberStringElement,
-          final PositiveInt? seriesDosesPositiveInt,
+          final FhirPositiveInt? seriesDosesPositiveInt,
           @JsonKey(name: '_seriesDosesPositiveInt')
               final Element? seriesDosesPositiveIntElement,
           final String? seriesDosesString,
@@ -4727,7 +4727,7 @@ abstract class $ImmunizationEvaluationCopyWith<$Res> {
       @JsonKey(name: '_seriesDosesString')
           Element? seriesDosesStringElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4807,7 +4807,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4903,7 +4903,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4919,7 +4919,7 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -4937,12 +4937,12 @@ class _$ImmunizationEvaluationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5185,7 +5185,7 @@ abstract class _$$_ImmunizationEvaluationCopyWith<$Res>
           Element? seriesDosesStringElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5279,7 +5279,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5375,7 +5375,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5391,7 +5391,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -5481,7 +5481,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5691,7 +5691,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
 
   /// [doseNumberPositiveInt] Nominal position in a series.
   @override
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element? doseNumberPositiveIntElement;
@@ -5708,7 +5708,7 @@ class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element? seriesDosesPositiveIntElement;
@@ -5861,7 +5861,7 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5892,13 +5892,13 @@ abstract class _ImmunizationEvaluation extends ImmunizationEvaluation {
       final String? series,
       @JsonKey(name: '_series')
           final Element? seriesElement,
-      final PositiveInt? doseNumberPositiveInt,
+      final FhirPositiveInt? doseNumberPositiveInt,
       @JsonKey(name: '_doseNumberPositiveInt')
           final Element? doseNumberPositiveIntElement,
       final String? doseNumberString,
       @JsonKey(name: '_doseNumberString')
           final Element? doseNumberStringElement,
-      final PositiveInt? seriesDosesPositiveInt,
+      final FhirPositiveInt? seriesDosesPositiveInt,
       @JsonKey(name: '_seriesDosesPositiveInt')
           final Element? seriesDosesPositiveIntElement,
       final String? seriesDosesString,
@@ -6232,7 +6232,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
       Reference? authority,
       List<ImmunizationRecommendationRecommendation> recommendation});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6285,7 +6285,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6347,12 +6347,12 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6460,7 +6460,7 @@ abstract class _$$_ImmunizationRecommendationCopyWith<$Res>
       List<ImmunizationRecommendationRecommendation> recommendation});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6518,7 +6518,7 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6629,7 +6629,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6869,7 +6869,7 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7276,7 +7276,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res,
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7292,7 +7292,7 @@ class _$ImmunizationRecommendationRecommendationCopyWithImpl<$Res,
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7565,7 +7565,7 @@ class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       doseNumberPositiveInt: freezed == doseNumberPositiveInt
           ? _value.doseNumberPositiveInt
           : doseNumberPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       doseNumberPositiveIntElement: freezed == doseNumberPositiveIntElement
           ? _value.doseNumberPositiveIntElement
           : doseNumberPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7581,7 +7581,7 @@ class __$$_ImmunizationRecommendationRecommendationCopyWithImpl<$Res>
       seriesDosesPositiveInt: freezed == seriesDosesPositiveInt
           ? _value.seriesDosesPositiveInt
           : seriesDosesPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       seriesDosesPositiveIntElement: freezed == seriesDosesPositiveIntElement
           ? _value.seriesDosesPositiveIntElement
           : seriesDosesPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7813,7 +7813,7 @@ class _$_ImmunizationRecommendationRecommendation
   /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
   ///  series (e.g. dose 2 is the next recommended dose).
   @override
-  final PositiveInt? doseNumberPositiveInt;
+  final FhirPositiveInt? doseNumberPositiveInt;
   @override
   @JsonKey(name: '_doseNumberPositiveInt')
   final Element? doseNumberPositiveIntElement;
@@ -7831,7 +7831,7 @@ class _$_ImmunizationRecommendationRecommendation
   /// [seriesDosesPositiveInt] The recommended number of doses to achieve
   ///  immunity.
   @override
-  final PositiveInt? seriesDosesPositiveInt;
+  final FhirPositiveInt? seriesDosesPositiveInt;
   @override
   @JsonKey(name: '_seriesDosesPositiveInt')
   final Element? seriesDosesPositiveIntElement;
@@ -8006,13 +8006,13 @@ abstract class _ImmunizationRecommendationRecommendation
           final String? series,
           @JsonKey(name: '_series')
               final Element? seriesElement,
-          final PositiveInt? doseNumberPositiveInt,
+          final FhirPositiveInt? doseNumberPositiveInt,
           @JsonKey(name: '_doseNumberPositiveInt')
               final Element? doseNumberPositiveIntElement,
           final String? doseNumberString,
           @JsonKey(name: '_doseNumberString')
               final Element? doseNumberStringElement,
-          final PositiveInt? seriesDosesPositiveInt,
+          final FhirPositiveInt? seriesDosesPositiveInt,
           @JsonKey(name: '_seriesDosesPositiveInt')
               final Element? seriesDosesPositiveIntElement,
           final String? seriesDosesString,
@@ -8746,7 +8746,7 @@ abstract class $MedicationCopyWith<$Res> {
       List<MedicationIngredient>? ingredient,
       MedicationBatch? batch});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8804,7 +8804,7 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8878,12 +8878,12 @@ class _$MedicationCopyWithImpl<$Res, $Val extends Medication>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9033,7 +9033,7 @@ abstract class _$$_MedicationCopyWith<$Res>
       MedicationBatch? batch});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9098,7 +9098,7 @@ class __$$_MedicationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9223,7 +9223,7 @@ class _$_Medication extends _Medication {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -9492,7 +9492,7 @@ abstract class _Medication extends Medication {
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10870,7 +10870,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       MedicationAdministrationDosage? dosage,
       List<Reference>? eventHistory});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10948,7 +10948,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11082,12 +11082,12 @@ class _$MedicationAdministrationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11301,7 +11301,7 @@ abstract class _$$_MedicationAdministrationCopyWith<$Res>
       List<Reference>? eventHistory});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11390,7 +11390,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11602,7 +11602,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -12106,7 +12106,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -13734,7 +13734,7 @@ abstract class $MedicationDispenseCopyWith<$Res> {
       List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -13822,7 +13822,7 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -13976,12 +13976,12 @@ class _$MedicationDispenseCopyWithImpl<$Res, $Val extends MedicationDispense>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -14276,7 +14276,7 @@ abstract class _$$_MedicationDispenseCopyWith<$Res>
       List<Reference>? eventHistory});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -14381,7 +14381,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14616,7 +14616,7 @@ class _$_MedicationDispense extends _MedicationDispense {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -15141,7 +15141,7 @@ abstract class _MedicationDispense extends MedicationDispense {
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -16593,7 +16593,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       List<MedicationKnowledgeRegulatory>? regulatory,
       List<MedicationKnowledgeKinetics>? kinetics});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -16668,7 +16668,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16756,7 +16756,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
       preparationInstruction: freezed == preparationInstruction
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preparationInstructionElement: freezed == preparationInstructionElement
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -16806,12 +16806,12 @@ class _$MedicationKnowledgeCopyWithImpl<$Res, $Val extends MedicationKnowledge>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -16996,7 +16996,7 @@ abstract class _$$_MedicationKnowledgeCopyWith<$Res>
       List<MedicationKnowledgeKinetics>? kinetics});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -17079,7 +17079,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17167,7 +17167,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
       preparationInstruction: freezed == preparationInstruction
           ? _value.preparationInstruction
           : preparationInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preparationInstructionElement: freezed == preparationInstructionElement
           ? _value.preparationInstructionElement
           : preparationInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -17303,7 +17303,7 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -17562,7 +17562,7 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
 
   /// [preparationInstruction] The instructions for preparing the medication.
   @override
-  final Markdown? preparationInstruction;
+  final FhirMarkdown? preparationInstruction;
   @override
   @JsonKey(name: '_preparationInstruction')
   final Element? preparationInstructionElement;
@@ -17848,7 +17848,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
           {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -17876,7 +17876,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
           final List<CodeableConcept>? productType,
           final List<MedicationKnowledgeMonograph>? monograph,
           final List<MedicationKnowledgeIngredient>? ingredient,
-          final Markdown? preparationInstruction,
+          final FhirMarkdown? preparationInstruction,
           @JsonKey(name: '_preparationInstruction')
               final Element? preparationInstructionElement,
           final List<CodeableConcept>? intendedRoute,
@@ -25569,7 +25569,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
       List<Reference>? detectedIssue,
       List<Reference>? eventHistory});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -25675,7 +25675,7 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -25881,12 +25881,12 @@ class _$MedicationRequestCopyWithImpl<$Res, $Val extends MedicationRequest>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -26255,7 +26255,7 @@ abstract class _$$_MedicationRequestCopyWith<$Res>
       List<Reference>? eventHistory});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -26383,7 +26383,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -26693,7 +26693,7 @@ class _$_MedicationRequest extends _MedicationRequest {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -27382,7 +27382,7 @@ abstract class _MedicationRequest extends MedicationRequest {
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -27931,7 +27931,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res,
       numberOfRepeatsAllowed: freezed == numberOfRepeatsAllowed
           ? _value.numberOfRepeatsAllowed
           : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfRepeatsAllowedElement: freezed == numberOfRepeatsAllowedElement
           ? _value.numberOfRepeatsAllowedElement
           : numberOfRepeatsAllowedElement // ignore: cast_nullable_to_non_nullable
@@ -28132,7 +28132,7 @@ class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
       numberOfRepeatsAllowed: freezed == numberOfRepeatsAllowed
           ? _value.numberOfRepeatsAllowed
           : numberOfRepeatsAllowed // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberOfRepeatsAllowedElement: freezed == numberOfRepeatsAllowedElement
           ? _value.numberOfRepeatsAllowedElement
           : numberOfRepeatsAllowedElement // ignore: cast_nullable_to_non_nullable
@@ -28270,7 +28270,7 @@ class _$_MedicationRequestDispenseRequest
   /// tablets.  A prescriber may explicitly say that zero refills are permitted
   ///  after the initial dispense.
   @override
-  final UnsignedInt? numberOfRepeatsAllowed;
+  final FhirUnsignedInt? numberOfRepeatsAllowed;
   @override
   @JsonKey(name: '_numberOfRepeatsAllowed')
   final Element? numberOfRepeatsAllowedElement;
@@ -28367,7 +28367,7 @@ abstract class _MedicationRequestDispenseRequest
       final MedicationRequestInitialFill? initialFill,
       final FhirDuration? dispenseInterval,
       final Period? validityPeriod,
-      final UnsignedInt? numberOfRepeatsAllowed,
+      final FhirUnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           final Element? numberOfRepeatsAllowedElement,
       final Quantity? quantity,
@@ -29574,7 +29574,7 @@ abstract class $MedicationStatementCopyWith<$Res> {
       List<Annotation>? note,
       List<Dosage>? dosage});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -29649,7 +29649,7 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -29775,12 +29775,12 @@ class _$MedicationStatementCopyWithImpl<$Res, $Val extends MedicationStatement>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -29990,7 +29990,7 @@ abstract class _$$_MedicationStatementCopyWith<$Res>
       List<Dosage>? dosage});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -30076,7 +30076,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -30275,7 +30275,7 @@ class _$_MedicationStatement extends _MedicationStatement {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -30733,7 +30733,7 @@ abstract class _MedicationStatement extends MedicationStatement {
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

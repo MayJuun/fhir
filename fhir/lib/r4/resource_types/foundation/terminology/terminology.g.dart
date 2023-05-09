@@ -15,7 +15,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -23,7 +23,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -58,13 +58,13 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -81,7 +81,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -91,52 +91,56 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       caseSensitive: json['caseSensitive'] == null
           ? null
-          : Boolean.fromJson(json['caseSensitive']),
+          : FhirBoolean.fromJson(json['caseSensitive']),
       caseSensitiveElement: json['_caseSensitive'] == null
           ? null
           : Element.fromJson(json['_caseSensitive'] as Map<String, dynamic>),
       valueSet: json['valueSet'] == null
           ? null
-          : Canonical.fromJson(json['valueSet']),
+          : FhirCanonical.fromJson(json['valueSet']),
       hierarchyMeaning: json['hierarchyMeaning'] == null
           ? null
-          : Code.fromJson(json['hierarchyMeaning']),
+          : FhirCode.fromJson(json['hierarchyMeaning']),
       hierarchyMeaningElement: json['_hierarchyMeaning'] == null
           ? null
           : Element.fromJson(json['_hierarchyMeaning'] as Map<String, dynamic>),
       compositional: json['compositional'] == null
           ? null
-          : Boolean.fromJson(json['compositional']),
+          : FhirBoolean.fromJson(json['compositional']),
       compositionalElement: json['_compositional'] == null
           ? null
           : Element.fromJson(json['_compositional'] as Map<String, dynamic>),
       versionNeeded: json['versionNeeded'] == null
           ? null
-          : Boolean.fromJson(json['versionNeeded']),
+          : FhirBoolean.fromJson(json['versionNeeded']),
       versionNeededElement: json['_versionNeeded'] == null
           ? null
           : Element.fromJson(json['_versionNeeded'] as Map<String, dynamic>),
-      content: json['content'] == null ? null : Code.fromJson(json['content']),
+      content:
+          json['content'] == null ? null : FhirCode.fromJson(json['content']),
       contentElement: json['_content'] == null
           ? null
           : Element.fromJson(json['_content'] as Map<String, dynamic>),
       supplements: json['supplements'] == null
           ? null
-          : Canonical.fromJson(json['supplements']),
-      count: json['count'] == null ? null : UnsignedInt.fromJson(json['count']),
+          : FhirCanonical.fromJson(json['supplements']),
+      count: json['count'] == null
+          ? null
+          : FhirUnsignedInt.fromJson(json['count']),
       countElement: json['_count'] == null
           ? null
           : Element.fromJson(json['_count'] as Map<String, dynamic>),
@@ -378,7 +382,7 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -386,9 +390,8 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      operator_: (json['operator'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      operator_:
+          (json['operator'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       operatorElement: (json['_operator'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -435,7 +438,7 @@ _$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -447,7 +450,7 @@ _$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -488,7 +491,7 @@ _$_CodeSystemConcept _$$_CodeSystemConceptFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -551,7 +554,7 @@ _$_CodeSystemDesignation _$$_CodeSystemDesignationFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -597,12 +600,13 @@ _$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      valueCode:
-          json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
+      valueCode: json['valueCode'] == null
+          ? null
+          : FhirCode.fromJson(json['valueCode']),
       valueCodeElement: json['_valueCode'] == null
           ? null
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
@@ -615,13 +619,13 @@ _$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
       valueInteger: json['valueInteger'] == null
           ? null
-          : Integer.fromJson(json['valueInteger']),
+          : FhirInteger.fromJson(json['valueInteger']),
       valueIntegerElement: json['_valueInteger'] == null
           ? null
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
@@ -633,7 +637,7 @@ _$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
       valueDecimal: json['valueDecimal'] == null
           ? null
-          : Decimal.fromJson(json['valueDecimal']),
+          : FhirDecimal.fromJson(json['valueDecimal']),
       valueDecimalElement: json['_valueDecimal'] == null
           ? null
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
@@ -681,7 +685,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -689,7 +693,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -724,13 +728,13 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -747,7 +751,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -757,14 +761,15 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -776,7 +781,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_sourceUri'] as Map<String, dynamic>),
       sourceCanonical: json['sourceCanonical'] == null
           ? null
-          : Canonical.fromJson(json['sourceCanonical']),
+          : FhirCanonical.fromJson(json['sourceCanonical']),
       sourceCanonicalElement: json['_sourceCanonical'] == null
           ? null
           : Element.fromJson(json['_sourceCanonical'] as Map<String, dynamic>),
@@ -788,7 +793,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_targetUri'] as Map<String, dynamic>),
       targetCanonical: json['targetCanonical'] == null
           ? null
-          : Canonical.fromJson(json['targetCanonical']),
+          : FhirCanonical.fromJson(json['targetCanonical']),
       targetCanonicalElement: json['_targetCanonical'] == null
           ? null
           : Element.fromJson(json['_targetCanonical'] as Map<String, dynamic>),
@@ -931,7 +936,7 @@ _$_ConceptMapElement _$$_ConceptMapElementFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -976,7 +981,7 @@ _$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -986,7 +991,7 @@ _$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
       equivalence: json['equivalence'] == null
           ? null
-          : Code.fromJson(json['equivalence']),
+          : FhirCode.fromJson(json['equivalence']),
       equivalenceElement: json['_equivalence'] == null
           ? null
           : Element.fromJson(json['_equivalence'] as Map<String, dynamic>),
@@ -1045,8 +1050,9 @@ _$_ConceptMapDependsOn _$$_ConceptMapDependsOnFromJson(
       propertyElement: json['_property'] == null
           ? null
           : Element.fromJson(json['_property'] as Map<String, dynamic>),
-      system:
-          json['system'] == null ? null : Canonical.fromJson(json['system']),
+      system: json['system'] == null
+          ? null
+          : FhirCanonical.fromJson(json['system']),
       value: json['value'] as String?,
       valueElement: json['_value'] == null
           ? null
@@ -1092,11 +1098,11 @@ _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
+      mode: json['mode'] == null ? null : FhirCode.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1104,7 +1110,7 @@ _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
       displayElement: json['_display'] == null
           ? null
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
-      url: json['url'] == null ? null : Canonical.fromJson(json['url']),
+      url: json['url'] == null ? null : FhirCanonical.fromJson(json['url']),
     );
 
 Map<String, dynamic> _$$_ConceptMapUnmappedToJson(
@@ -1141,7 +1147,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1149,7 +1155,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1169,11 +1175,11 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      kind: json['kind'] == null ? null : Code.fromJson(json['kind']),
+      kind: json['kind'] == null ? null : FhirCode.fromJson(json['kind']),
       kindElement: json['_kind'] == null
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
@@ -1197,7 +1203,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1276,7 +1282,7 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1286,7 +1292,7 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       preferred: json['preferred'] == null
           ? null
-          : Boolean.fromJson(json['preferred']),
+          : FhirBoolean.fromJson(json['preferred']),
       preferredElement: json['_preferred'] == null
           ? null
           : Element.fromJson(json['_preferred'] as Map<String, dynamic>),
@@ -1336,7 +1342,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1344,7 +1350,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1376,13 +1382,13 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -1399,7 +1405,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1409,18 +1415,19 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
       jurisdiction: (json['jurisdiction'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-      kind: json['kind'] == null ? null : Code.fromJson(json['kind']),
+      kind: json['kind'] == null ? null : FhirCode.fromJson(json['kind']),
       kindElement: json['_kind'] == null
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
@@ -1434,7 +1441,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
               json['implementation'] as Map<String, dynamic>),
       lockedDate: json['lockedDate'] == null
           ? null
-          : Boolean.fromJson(json['lockedDate']),
+          : FhirBoolean.fromJson(json['lockedDate']),
       lockedDateElement: json['_lockedDate'] == null
           ? null
           : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),
@@ -1446,8 +1453,9 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
           ? null
           : TerminologyCapabilitiesExpansion.fromJson(
               json['expansion'] as Map<String, dynamic>),
-      codeSearch:
-          json['codeSearch'] == null ? null : Code.fromJson(json['codeSearch']),
+      codeSearch: json['codeSearch'] == null
+          ? null
+          : FhirCode.fromJson(json['codeSearch']),
       codeSearchElement: json['_codeSearch'] == null
           ? null
           : Element.fromJson(json['_codeSearch'] as Map<String, dynamic>),
@@ -1629,14 +1637,14 @@ _$_TerminologyCapabilitiesCodeSystem
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          uri: json['uri'] == null ? null : Canonical.fromJson(json['uri']),
+          uri: json['uri'] == null ? null : FhirCanonical.fromJson(json['uri']),
           version: (json['version'] as List<dynamic>?)
               ?.map((e) => TerminologyCapabilitiesVersion.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           subsumption: json['subsumption'] == null
               ? null
-              : Boolean.fromJson(json['subsumption']),
+              : FhirBoolean.fromJson(json['subsumption']),
           subsumptionElement: json['_subsumption'] == null
               ? null
               : Element.fromJson(json['_subsumption'] as Map<String, dynamic>),
@@ -1680,19 +1688,18 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
       isDefault: json['isDefault'] == null
           ? null
-          : Boolean.fromJson(json['isDefault']),
+          : FhirBoolean.fromJson(json['isDefault']),
       isDefaultElement: json['_isDefault'] == null
           ? null
           : Element.fromJson(json['_isDefault'] as Map<String, dynamic>),
       compositional: json['compositional'] == null
           ? null
-          : Boolean.fromJson(json['compositional']),
+          : FhirBoolean.fromJson(json['compositional']),
       compositionalElement: json['_compositional'] == null
           ? null
           : Element.fromJson(json['_compositional'] as Map<String, dynamic>),
-      language: (json['language'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      language:
+          (json['language'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       languageElement: (json['_language'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1701,9 +1708,8 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
           ?.map((e) =>
               TerminologyCapabilitiesFilter.fromJson(e as Map<String, dynamic>))
           .toList(),
-      property: (json['property'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      property:
+          (json['property'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       propertyElement: (json['_property'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1751,11 +1757,11 @@ _$_TerminologyCapabilitiesFilter _$$_TerminologyCapabilitiesFilterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      op: (json['op'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
+      op: (json['op'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
       opElement: (json['_op'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1796,18 +1802,19 @@ _$_TerminologyCapabilitiesExpansion
               .toList(),
           hierarchical: json['hierarchical'] == null
               ? null
-              : Boolean.fromJson(json['hierarchical']),
+              : FhirBoolean.fromJson(json['hierarchical']),
           hierarchicalElement: json['_hierarchical'] == null
               ? null
               : Element.fromJson(json['_hierarchical'] as Map<String, dynamic>),
-          paging:
-              json['paging'] == null ? null : Boolean.fromJson(json['paging']),
+          paging: json['paging'] == null
+              ? null
+              : FhirBoolean.fromJson(json['paging']),
           pagingElement: json['_paging'] == null
               ? null
               : Element.fromJson(json['_paging'] as Map<String, dynamic>),
           incomplete: json['incomplete'] == null
               ? null
-              : Boolean.fromJson(json['incomplete']),
+              : FhirBoolean.fromJson(json['incomplete']),
           incompleteElement: json['_incomplete'] == null
               ? null
               : Element.fromJson(json['_incomplete'] as Map<String, dynamic>),
@@ -1817,7 +1824,7 @@ _$_TerminologyCapabilitiesExpansion
               .toList(),
           textFilter: json['textFilter'] == null
               ? null
-              : Markdown.fromJson(json['textFilter']),
+              : FhirMarkdown.fromJson(json['textFilter']),
           textFilterElement: json['_textFilter'] == null
               ? null
               : Element.fromJson(json['_textFilter'] as Map<String, dynamic>),
@@ -1861,7 +1868,7 @@ _$_TerminologyCapabilitiesParameter
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          name: json['name'] == null ? null : Code.fromJson(json['name']),
+          name: json['name'] == null ? null : FhirCode.fromJson(json['name']),
           nameElement: json['_name'] == null
               ? null
               : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -1907,7 +1914,7 @@ _$_TerminologyCapabilitiesValidateCode
               .toList(),
           translations: json['translations'] == null
               ? null
-              : Boolean.fromJson(json['translations']),
+              : FhirBoolean.fromJson(json['translations']),
           translationsElement: json['_translations'] == null
               ? null
               : Element.fromJson(json['_translations'] as Map<String, dynamic>),
@@ -1945,7 +1952,7 @@ _$_TerminologyCapabilitiesTranslation
               .toList(),
           needsMap: json['needsMap'] == null
               ? null
-              : Boolean.fromJson(json['needsMap']),
+              : FhirBoolean.fromJson(json['needsMap']),
           needsMapElement: json['_needsMap'] == null
               ? null
               : Element.fromJson(json['_needsMap'] as Map<String, dynamic>),
@@ -1983,7 +1990,7 @@ _$_TerminologyCapabilitiesClosure _$$_TerminologyCapabilitiesClosureFromJson(
           .toList(),
       translation: json['translation'] == null
           ? null
-          : Boolean.fromJson(json['translation']),
+          : FhirBoolean.fromJson(json['translation']),
       translationElement: json['_translation'] == null
           ? null
           : Element.fromJson(json['_translation'] as Map<String, dynamic>),
@@ -2017,7 +2024,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2025,7 +2032,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2060,13 +2067,13 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       experimental: json['experimental'] == null
           ? null
-          : Boolean.fromJson(json['experimental']),
+          : FhirBoolean.fromJson(json['experimental']),
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
@@ -2083,7 +2090,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
           .toList(),
       description: json['description'] == null
           ? null
-          : Markdown.fromJson(json['description']),
+          : FhirMarkdown.fromJson(json['description']),
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -2095,18 +2102,19 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
           .toList(),
       immutable: json['immutable'] == null
           ? null
-          : Boolean.fromJson(json['immutable']),
+          : FhirBoolean.fromJson(json['immutable']),
       immutableElement: json['_immutable'] == null
           ? null
           : Element.fromJson(json['_immutable'] as Map<String, dynamic>),
-      purpose:
-          json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
+      purpose: json['purpose'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['purpose']),
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
       copyright: json['copyright'] == null
           ? null
-          : Markdown.fromJson(json['copyright']),
+          : FhirMarkdown.fromJson(json['copyright']),
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2188,13 +2196,15 @@ _$_ValueSetCompose _$$_ValueSetComposeFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      lockedDate:
-          json['lockedDate'] == null ? null : Date.fromJson(json['lockedDate']),
+      lockedDate: json['lockedDate'] == null
+          ? null
+          : FhirDate.fromJson(json['lockedDate']),
       lockedDateElement: json['_lockedDate'] == null
           ? null
           : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),
-      inactive:
-          json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
+      inactive: json['inactive'] == null
+          ? null
+          : FhirBoolean.fromJson(json['inactive']),
       inactiveElement: json['_inactive'] == null
           ? null
           : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
@@ -2253,7 +2263,7 @@ _$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
           ?.map((e) => ValueSetFilter.fromJson(e as Map<String, dynamic>))
           .toList(),
       valueSet: (json['valueSet'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(FhirCanonical.fromJson)
           .toList(),
     );
 
@@ -2290,7 +2300,7 @@ _$_ValueSetConcept _$$_ValueSetConceptFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -2337,7 +2347,7 @@ _$_ValueSetDesignation _$$_ValueSetDesignationFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2383,11 +2393,11 @@ _$_ValueSetFilter _$$_ValueSetFilterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       property:
-          json['property'] == null ? null : Code.fromJson(json['property']),
+          json['property'] == null ? null : FhirCode.fromJson(json['property']),
       propertyElement: json['_property'] == null
           ? null
           : Element.fromJson(json['_property'] as Map<String, dynamic>),
-      op: json['op'] == null ? null : Code.fromJson(json['op']),
+      op: json['op'] == null ? null : FhirCode.fromJson(json['op']),
       opElement: json['_op'] == null
           ? null
           : Element.fromJson(json['_op'] as Map<String, dynamic>),
@@ -2441,11 +2451,12 @@ _$_ValueSetExpansion _$$_ValueSetExpansionFromJson(Map<String, dynamic> json) =>
       timestampElement: json['_timestamp'] == null
           ? null
           : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
-      total: json['total'] == null ? null : Integer.fromJson(json['total']),
+      total: json['total'] == null ? null : FhirInteger.fromJson(json['total']),
       totalElement: json['_total'] == null
           ? null
           : Element.fromJson(json['_total'] as Map<String, dynamic>),
-      offset: json['offset'] == null ? null : Integer.fromJson(json['offset']),
+      offset:
+          json['offset'] == null ? null : FhirInteger.fromJson(json['offset']),
       offsetElement: json['_offset'] == null
           ? null
           : Element.fromJson(json['_offset'] as Map<String, dynamic>),
@@ -2505,19 +2516,19 @@ _$_ValueSetParameter _$$_ValueSetParameterFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
-          : Boolean.fromJson(json['valueBoolean']),
+          : FhirBoolean.fromJson(json['valueBoolean']),
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
       valueInteger: json['valueInteger'] == null
           ? null
-          : Integer.fromJson(json['valueInteger']),
+          : FhirInteger.fromJson(json['valueInteger']),
       valueIntegerElement: json['_valueInteger'] == null
           ? null
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueDecimal: json['valueDecimal'] == null
           ? null
-          : Decimal.fromJson(json['valueDecimal']),
+          : FhirDecimal.fromJson(json['valueDecimal']),
       valueDecimalElement: json['_valueDecimal'] == null
           ? null
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
@@ -2526,8 +2537,9 @@ _$_ValueSetParameter _$$_ValueSetParameterFromJson(Map<String, dynamic> json) =>
       valueUriElement: json['_valueUri'] == null
           ? null
           : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-      valueCode:
-          json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
+      valueCode: json['valueCode'] == null
+          ? null
+          : FhirCode.fromJson(json['valueCode']),
       valueCodeElement: json['_valueCode'] == null
           ? null
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
@@ -2586,13 +2598,15 @@ _$_ValueSetContains _$$_ValueSetContainsFromJson(Map<String, dynamic> json) =>
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      abstract_:
-          json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
+      abstract_: json['abstract'] == null
+          ? null
+          : FhirBoolean.fromJson(json['abstract']),
       abstractElement: json['_abstract'] == null
           ? null
           : Element.fromJson(json['_abstract'] as Map<String, dynamic>),
-      inactive:
-          json['inactive'] == null ? null : Boolean.fromJson(json['inactive']),
+      inactive: json['inactive'] == null
+          ? null
+          : FhirBoolean.fromJson(json['inactive']),
       inactiveElement: json['_inactive'] == null
           ? null
           : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
@@ -2600,7 +2614,7 @@ _$_ValueSetContains _$$_ValueSetContainsFromJson(Map<String, dynamic> json) =>
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),

@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Meta _$MetaFromJson(Map<String, dynamic> json) {
-  return _Meta.fromJson(json);
+FhirMeta _$FhirMetaFromJson(Map<String, dynamic> json) {
+  return _FhirMeta.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Meta {
+mixin _$FhirMeta {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
@@ -37,16 +37,17 @@ mixin _$Meta {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MetaCopyWith<Meta> get copyWith => throw _privateConstructorUsedError;
+  $FhirMetaCopyWith<FhirMeta> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MetaCopyWith<$Res> {
-  factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
-      _$MetaCopyWithImpl<$Res, Meta>;
+abstract class $FhirMetaCopyWith<$Res> {
+  factory $FhirMetaCopyWith(FhirMeta value, $Res Function(FhirMeta) then) =
+      _$FhirMetaCopyWithImpl<$Res, FhirMeta>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId? versionId,
@@ -62,9 +63,9 @@ abstract class $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MetaCopyWithImpl<$Res, $Val extends Meta>
-    implements $MetaCopyWith<$Res> {
-  _$MetaCopyWithImpl(this._value, this._then);
+class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
+    implements $FhirMetaCopyWith<$Res> {
+  _$FhirMetaCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -89,7 +90,7 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -101,7 +102,7 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
       versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
@@ -109,7 +110,7 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
       lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
@@ -155,13 +156,14 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
 }
 
 /// @nodoc
-abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
-  factory _$$_MetaCopyWith(_$_Meta value, $Res Function(_$_Meta) then) =
-      __$$_MetaCopyWithImpl<$Res>;
+abstract class _$$_FhirMetaCopyWith<$Res> implements $FhirMetaCopyWith<$Res> {
+  factory _$$_FhirMetaCopyWith(
+          _$_FhirMeta value, $Res Function(_$_FhirMeta) then) =
+      __$$_FhirMetaCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId? versionId,
@@ -179,9 +181,11 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
-    implements _$$_MetaCopyWith<$Res> {
-  __$$_MetaCopyWithImpl(_$_Meta _value, $Res Function(_$_Meta) _then)
+class __$$_FhirMetaCopyWithImpl<$Res>
+    extends _$FhirMetaCopyWithImpl<$Res, _$_FhirMeta>
+    implements _$$_FhirMetaCopyWith<$Res> {
+  __$$_FhirMetaCopyWithImpl(
+      _$_FhirMeta _value, $Res Function(_$_FhirMeta) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,11 +202,11 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
     Object? security = freezed,
     Object? tag = freezed,
   }) {
-    return _then(_$_Meta(
+    return _then(_$_FhirMeta(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -214,7 +218,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
       versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
@@ -222,7 +226,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
       lastUpdated: freezed == lastUpdated
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       lastUpdatedElement: freezed == lastUpdatedElement
           ? _value.lastUpdatedElement
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
@@ -245,8 +249,8 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Meta extends _Meta {
-  _$_Meta(
+class _$_FhirMeta extends _FhirMeta {
+  _$_FhirMeta(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -264,7 +268,8 @@ class _$_Meta extends _Meta {
         _tag = tag,
         super._();
 
-  factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
+  factory _$_FhirMeta.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirMetaFromJson(json);
 
   @override
   final FhirId? id;
@@ -296,7 +301,7 @@ class _$_Meta extends _Meta {
   @JsonKey(name: '_versionId')
   final Element? versionIdElement;
   @override
-  final Instant? lastUpdated;
+  final FhirInstant? lastUpdated;
   @override
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
@@ -332,14 +337,14 @@ class _$_Meta extends _Meta {
 
   @override
   String toString() {
-    return 'Meta(id: $id, extension_: $extension_, fhirComments: $fhirComments, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, profile: $profile, security: $security, tag: $tag)';
+    return 'FhirMeta(id: $id, extension_: $extension_, fhirComments: $fhirComments, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, profile: $profile, security: $security, tag: $tag)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Meta &&
+            other is _$_FhirMeta &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -376,32 +381,32 @@ class _$_Meta extends _Meta {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MetaCopyWith<_$_Meta> get copyWith =>
-      __$$_MetaCopyWithImpl<_$_Meta>(this, _$identity);
+  _$$_FhirMetaCopyWith<_$_FhirMeta> get copyWith =>
+      __$$_FhirMetaCopyWithImpl<_$_FhirMeta>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MetaToJson(
+    return _$$_FhirMetaToJson(
       this,
     );
   }
 }
 
-abstract class _Meta extends Meta {
-  factory _Meta(
+abstract class _FhirMeta extends FhirMeta {
+  factory _FhirMeta(
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final FhirId? versionId,
       @JsonKey(name: '_versionId') final Element? versionIdElement,
-      final Instant? lastUpdated,
+      final FhirInstant? lastUpdated,
       @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
       final List<FhirUri>? profile,
       final List<Coding>? security,
-      final List<Coding>? tag}) = _$_Meta;
-  _Meta._() : super._();
+      final List<Coding>? tag}) = _$_FhirMeta;
+  _FhirMeta._() : super._();
 
-  factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
+  factory _FhirMeta.fromJson(Map<String, dynamic> json) = _$_FhirMeta.fromJson;
 
   @override
   FhirId? get id;
@@ -429,7 +434,8 @@ abstract class _Meta extends Meta {
   List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
-  _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
+  _$$_FhirMetaCopyWith<_$_FhirMeta> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Reference _$ReferenceFromJson(Map<String, dynamic> json) {
@@ -462,7 +468,7 @@ abstract class $ReferenceCopyWith<$Res> {
       _$ReferenceCopyWithImpl<$Res, Reference>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? reference,
@@ -499,7 +505,7 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -560,7 +566,7 @@ abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? reference,
@@ -597,7 +603,7 @@ class __$$_ReferenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1260,7 +1266,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res, ElementDefinition>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       String path,
@@ -1749,7 +1755,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint;
   $TimingCopyWith<$Res>? get defaultValueTiming;
   $ReferenceCopyWith<$Res>? get defaultValueReference;
-  $MetaCopyWith<$Res>? get defaultValueMeta;
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta;
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   $ElementCopyWith<$Res>? get fixedBooleanElement;
   $ElementCopyWith<$Res>? get fixedIntegerElement;
@@ -1782,7 +1788,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get fixedContactPoint;
   $TimingCopyWith<$Res>? get fixedTiming;
   $ReferenceCopyWith<$Res>? get fixedReference;
-  $MetaCopyWith<$Res>? get fixedMeta;
+  $FhirMetaCopyWith<$Res>? get fixedMeta;
   $ElementCopyWith<$Res>? get patternBooleanElement;
   $ElementCopyWith<$Res>? get patternIntegerElement;
   $ElementCopyWith<$Res>? get patternDecimalElement;
@@ -1815,7 +1821,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get patternContactPoint;
   $TimingCopyWith<$Res>? get patternTiming;
   $ReferenceCopyWith<$Res>? get patternReference;
-  $MetaCopyWith<$Res>? get patternMeta;
+  $FhirMetaCopyWith<$Res>? get patternMeta;
   $ElementCopyWith<$Res>? get exampleBooleanElement;
   $ElementCopyWith<$Res>? get exampleIntegerElement;
   $ElementCopyWith<$Res>? get exampleDecimalElement;
@@ -1848,7 +1854,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get exampleContactPoint;
   $TimingCopyWith<$Res>? get exampleTiming;
   $ReferenceCopyWith<$Res>? get exampleReference;
-  $MetaCopyWith<$Res>? get exampleMeta;
+  $FhirMetaCopyWith<$Res>? get exampleMeta;
   $ElementCopyWith<$Res>? get minValueBooleanElement;
   $ElementCopyWith<$Res>? get minValueIntegerElement;
   $ElementCopyWith<$Res>? get minValueDecimalElement;
@@ -1881,7 +1887,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get minValueContactPoint;
   $TimingCopyWith<$Res>? get minValueTiming;
   $ReferenceCopyWith<$Res>? get minValueReference;
-  $MetaCopyWith<$Res>? get minValueMeta;
+  $FhirMetaCopyWith<$Res>? get minValueMeta;
   $ElementCopyWith<$Res>? get maxValueBooleanElement;
   $ElementCopyWith<$Res>? get maxValueIntegerElement;
   $ElementCopyWith<$Res>? get maxValueDecimalElement;
@@ -1914,7 +1920,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get maxValueContactPoint;
   $TimingCopyWith<$Res>? get maxValueTiming;
   $ReferenceCopyWith<$Res>? get maxValueReference;
-  $MetaCopyWith<$Res>? get maxValueMeta;
+  $FhirMetaCopyWith<$Res>? get maxValueMeta;
   $ElementCopyWith<$Res>? get maxLengthElement;
   $ElementCopyWith<$Res>? get conditionElement;
   $ElementCopyWith<$Res>? get mustSupportElement;
@@ -2275,7 +2281,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2323,7 +2329,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       definitionElement: freezed == definitionElement
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -2331,7 +2337,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
@@ -2339,7 +2345,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
@@ -2355,7 +2361,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -2391,7 +2397,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -2399,7 +2405,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -2416,7 +2422,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -2440,7 +2446,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -2456,7 +2462,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2472,7 +2478,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -2480,7 +2486,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -2488,7 +2494,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -2496,7 +2502,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -2504,7 +2510,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       defaultValueMarkDownElement: freezed == defaultValueMarkDownElement
           ? _value.defaultValueMarkDownElement
           : defaultValueMarkDownElement // ignore: cast_nullable_to_non_nullable
@@ -2576,11 +2582,11 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       meaningWhenMissing: freezed == meaningWhenMissing
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       meaningWhenMissingElement: freezed == meaningWhenMissingElement
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement // ignore: cast_nullable_to_non_nullable
@@ -2596,7 +2602,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedInteger: freezed == fixedInteger
           ? _value.fixedInteger
           : fixedInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       fixedIntegerElement: freezed == fixedIntegerElement
           ? _value.fixedIntegerElement
           : fixedIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -2604,7 +2610,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedDecimal: freezed == fixedDecimal
           ? _value.fixedDecimal
           : fixedDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       fixedDecimalElement: freezed == fixedDecimalElement
           ? _value.fixedDecimalElement
           : fixedDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -2620,7 +2626,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedInstant: freezed == fixedInstant
           ? _value.fixedInstant
           : fixedInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       fixedInstantElement: freezed == fixedInstantElement
           ? _value.fixedInstantElement
           : fixedInstantElement // ignore: cast_nullable_to_non_nullable
@@ -2644,7 +2650,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedDate: freezed == fixedDate
           ? _value.fixedDate
           : fixedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       fixedDateElement: freezed == fixedDateElement
           ? _value.fixedDateElement
           : fixedDateElement // ignore: cast_nullable_to_non_nullable
@@ -2668,7 +2674,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
@@ -2676,7 +2682,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
@@ -2684,7 +2690,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedUnsignedInt: freezed == fixedUnsignedInt
           ? _value.fixedUnsignedInt
           : fixedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       fixedUnsignedIntElement: freezed == fixedUnsignedIntElement
           ? _value.fixedUnsignedIntElement
           : fixedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -2692,7 +2698,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedPositiveInt: freezed == fixedPositiveInt
           ? _value.fixedPositiveInt
           : fixedPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       fixedPositiveIntElement: freezed == fixedPositiveIntElement
           ? _value.fixedPositiveIntElement
           : fixedPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -2700,7 +2706,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedMarkdown: freezed == fixedMarkdown
           ? _value.fixedMarkdown
           : fixedMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       fixedMarkdownElement: freezed == fixedMarkdownElement
           ? _value.fixedMarkdownElement
           : fixedMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -2772,7 +2778,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedMeta: freezed == fixedMeta
           ? _value.fixedMeta
           : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
@@ -2784,7 +2790,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternInteger: freezed == patternInteger
           ? _value.patternInteger
           : patternInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       patternIntegerElement: freezed == patternIntegerElement
           ? _value.patternIntegerElement
           : patternIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -2792,7 +2798,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternDecimal: freezed == patternDecimal
           ? _value.patternDecimal
           : patternDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       patternDecimalElement: freezed == patternDecimalElement
           ? _value.patternDecimalElement
           : patternDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -2808,7 +2814,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternInstant: freezed == patternInstant
           ? _value.patternInstant
           : patternInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       patternInstantElement: freezed == patternInstantElement
           ? _value.patternInstantElement
           : patternInstantElement // ignore: cast_nullable_to_non_nullable
@@ -2832,7 +2838,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternDate: freezed == patternDate
           ? _value.patternDate
           : patternDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       patternDateElement: freezed == patternDateElement
           ? _value.patternDateElement
           : patternDateElement // ignore: cast_nullable_to_non_nullable
@@ -2848,7 +2854,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternTime: freezed == patternTime
           ? _value.patternTime
           : patternTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       patternTimeElement: freezed == patternTimeElement
           ? _value.patternTimeElement
           : patternTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2864,7 +2870,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
@@ -2872,7 +2878,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
@@ -2880,7 +2886,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternUnsignedInt: freezed == patternUnsignedInt
           ? _value.patternUnsignedInt
           : patternUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       patternUnsignedIntElement: freezed == patternUnsignedIntElement
           ? _value.patternUnsignedIntElement
           : patternUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -2888,7 +2894,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternPositiveInt: freezed == patternPositiveInt
           ? _value.patternPositiveInt
           : patternPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       patternPositiveIntElement: freezed == patternPositiveIntElement
           ? _value.patternPositiveIntElement
           : patternPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -2896,7 +2902,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternMarkdown: freezed == patternMarkdown
           ? _value.patternMarkdown
           : patternMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       patternMarkdownElement: freezed == patternMarkdownElement
           ? _value.patternMarkdownElement
           : patternMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -2968,7 +2974,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternMeta: freezed == patternMeta
           ? _value.patternMeta
           : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
@@ -2980,7 +2986,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleInteger: freezed == exampleInteger
           ? _value.exampleInteger
           : exampleInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       exampleIntegerElement: freezed == exampleIntegerElement
           ? _value.exampleIntegerElement
           : exampleIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -2988,7 +2994,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleDecimal: freezed == exampleDecimal
           ? _value.exampleDecimal
           : exampleDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       exampleDecimalElement: freezed == exampleDecimalElement
           ? _value.exampleDecimalElement
           : exampleDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -3004,7 +3010,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleInstant: freezed == exampleInstant
           ? _value.exampleInstant
           : exampleInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       exampleInstantElement: freezed == exampleInstantElement
           ? _value.exampleInstantElement
           : exampleInstantElement // ignore: cast_nullable_to_non_nullable
@@ -3028,7 +3034,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleDate: freezed == exampleDate
           ? _value.exampleDate
           : exampleDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       exampleDateElement: freezed == exampleDateElement
           ? _value.exampleDateElement
           : exampleDateElement // ignore: cast_nullable_to_non_nullable
@@ -3044,7 +3050,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleTime: freezed == exampleTime
           ? _value.exampleTime
           : exampleTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       exampleTimeElement: freezed == exampleTimeElement
           ? _value.exampleTimeElement
           : exampleTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3060,7 +3066,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleOid: freezed == exampleOid
           ? _value.exampleOid
           : exampleOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       exampleOidElement: freezed == exampleOidElement
           ? _value.exampleOidElement
           : exampleOidElement // ignore: cast_nullable_to_non_nullable
@@ -3068,7 +3074,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleId: freezed == exampleId
           ? _value.exampleId
           : exampleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       exampleIdElement: freezed == exampleIdElement
           ? _value.exampleIdElement
           : exampleIdElement // ignore: cast_nullable_to_non_nullable
@@ -3076,7 +3082,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleUnsignedInt: freezed == exampleUnsignedInt
           ? _value.exampleUnsignedInt
           : exampleUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       exampleUnsignedIntElement: freezed == exampleUnsignedIntElement
           ? _value.exampleUnsignedIntElement
           : exampleUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -3084,7 +3090,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       examplePositiveInt: freezed == examplePositiveInt
           ? _value.examplePositiveInt
           : examplePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       examplePositiveIntElement: freezed == examplePositiveIntElement
           ? _value.examplePositiveIntElement
           : examplePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3092,7 +3098,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleMarkdown: freezed == exampleMarkdown
           ? _value.exampleMarkdown
           : exampleMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       exampleMarkdownElement: freezed == exampleMarkdownElement
           ? _value.exampleMarkdownElement
           : exampleMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -3164,7 +3170,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       exampleMeta: freezed == exampleMeta
           ? _value.exampleMeta
           : exampleMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
@@ -3176,7 +3182,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueInteger: freezed == minValueInteger
           ? _value.minValueInteger
           : minValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minValueIntegerElement: freezed == minValueIntegerElement
           ? _value.minValueIntegerElement
           : minValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -3184,7 +3190,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueDecimal: freezed == minValueDecimal
           ? _value.minValueDecimal
           : minValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       minValueDecimalElement: freezed == minValueDecimalElement
           ? _value.minValueDecimalElement
           : minValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -3200,7 +3206,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueInstant: freezed == minValueInstant
           ? _value.minValueInstant
           : minValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       minValueInstantElement: freezed == minValueInstantElement
           ? _value.minValueInstantElement
           : minValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -3224,7 +3230,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueDate: freezed == minValueDate
           ? _value.minValueDate
           : minValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       minValueDateElement: freezed == minValueDateElement
           ? _value.minValueDateElement
           : minValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -3240,7 +3246,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueTime: freezed == minValueTime
           ? _value.minValueTime
           : minValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       minValueTimeElement: freezed == minValueTimeElement
           ? _value.minValueTimeElement
           : minValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3256,7 +3262,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueOid: freezed == minValueOid
           ? _value.minValueOid
           : minValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       minValueOidElement: freezed == minValueOidElement
           ? _value.minValueOidElement
           : minValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -3264,7 +3270,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueId: freezed == minValueId
           ? _value.minValueId
           : minValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       minValueIdElement: freezed == minValueIdElement
           ? _value.minValueIdElement
           : minValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -3272,7 +3278,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueUnsignedInt: freezed == minValueUnsignedInt
           ? _value.minValueUnsignedInt
           : minValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       minValueUnsignedIntElement: freezed == minValueUnsignedIntElement
           ? _value.minValueUnsignedIntElement
           : minValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -3280,7 +3286,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValuePositiveInt: freezed == minValuePositiveInt
           ? _value.minValuePositiveInt
           : minValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minValuePositiveIntElement: freezed == minValuePositiveIntElement
           ? _value.minValuePositiveIntElement
           : minValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3288,7 +3294,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueMarkdown: freezed == minValueMarkdown
           ? _value.minValueMarkdown
           : minValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       minValueMarkdownElement: freezed == minValueMarkdownElement
           ? _value.minValueMarkdownElement
           : minValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -3360,7 +3366,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       minValueMeta: freezed == minValueMeta
           ? _value.minValueMeta
           : minValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
@@ -3372,7 +3378,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueInteger: freezed == maxValueInteger
           ? _value.maxValueInteger
           : maxValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxValueIntegerElement: freezed == maxValueIntegerElement
           ? _value.maxValueIntegerElement
           : maxValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -3380,7 +3386,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueDecimal: freezed == maxValueDecimal
           ? _value.maxValueDecimal
           : maxValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       maxValueDecimalElement: freezed == maxValueDecimalElement
           ? _value.maxValueDecimalElement
           : maxValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -3396,7 +3402,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueInstant: freezed == maxValueInstant
           ? _value.maxValueInstant
           : maxValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       maxValueInstantElement: freezed == maxValueInstantElement
           ? _value.maxValueInstantElement
           : maxValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -3420,7 +3426,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueDate: freezed == maxValueDate
           ? _value.maxValueDate
           : maxValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       maxValueDateElement: freezed == maxValueDateElement
           ? _value.maxValueDateElement
           : maxValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -3436,7 +3442,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueTime: freezed == maxValueTime
           ? _value.maxValueTime
           : maxValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       maxValueTimeElement: freezed == maxValueTimeElement
           ? _value.maxValueTimeElement
           : maxValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3452,7 +3458,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueOid: freezed == maxValueOid
           ? _value.maxValueOid
           : maxValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       maxValueOidElement: freezed == maxValueOidElement
           ? _value.maxValueOidElement
           : maxValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -3460,7 +3466,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueId: freezed == maxValueId
           ? _value.maxValueId
           : maxValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       maxValueIdElement: freezed == maxValueIdElement
           ? _value.maxValueIdElement
           : maxValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -3468,7 +3474,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueUnsignedInt: freezed == maxValueUnsignedInt
           ? _value.maxValueUnsignedInt
           : maxValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       maxValueUnsignedIntElement: freezed == maxValueUnsignedIntElement
           ? _value.maxValueUnsignedIntElement
           : maxValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -3476,7 +3482,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValuePositiveInt: freezed == maxValuePositiveInt
           ? _value.maxValuePositiveInt
           : maxValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxValuePositiveIntElement: freezed == maxValuePositiveIntElement
           ? _value.maxValuePositiveIntElement
           : maxValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -3484,7 +3490,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueMarkdown: freezed == maxValueMarkdown
           ? _value.maxValueMarkdown
           : maxValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       maxValueMarkdownElement: freezed == maxValueMarkdownElement
           ? _value.maxValueMarkdownElement
           : maxValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -3556,11 +3562,11 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       maxValueMeta: freezed == maxValueMeta
           ? _value.maxValueMeta
           : maxValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -4138,12 +4144,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get defaultValueMeta {
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta {
     if (_value.defaultValueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
       return _then(_value.copyWith(defaultValueMeta: value) as $Val);
     });
   }
@@ -4535,12 +4541,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get fixedMeta {
+  $FhirMetaCopyWith<$Res>? get fixedMeta {
     if (_value.fixedMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.fixedMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.fixedMeta!, (value) {
       return _then(_value.copyWith(fixedMeta: value) as $Val);
     });
   }
@@ -4932,12 +4938,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get patternMeta {
+  $FhirMetaCopyWith<$Res>? get patternMeta {
     if (_value.patternMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.patternMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.patternMeta!, (value) {
       return _then(_value.copyWith(patternMeta: value) as $Val);
     });
   }
@@ -5329,12 +5335,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get exampleMeta {
+  $FhirMetaCopyWith<$Res>? get exampleMeta {
     if (_value.exampleMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.exampleMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.exampleMeta!, (value) {
       return _then(_value.copyWith(exampleMeta: value) as $Val);
     });
   }
@@ -5726,12 +5732,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get minValueMeta {
+  $FhirMetaCopyWith<$Res>? get minValueMeta {
     if (_value.minValueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.minValueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.minValueMeta!, (value) {
       return _then(_value.copyWith(minValueMeta: value) as $Val);
     });
   }
@@ -6123,12 +6129,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get maxValueMeta {
+  $FhirMetaCopyWith<$Res>? get maxValueMeta {
     if (_value.maxValueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.maxValueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.maxValueMeta!, (value) {
       return _then(_value.copyWith(maxValueMeta: value) as $Val);
     });
   }
@@ -6215,7 +6221,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       String path,
@@ -6748,7 +6754,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get defaultValueReference;
   @override
-  $MetaCopyWith<$Res>? get defaultValueMeta;
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta;
   @override
   $ElementCopyWith<$Res>? get meaningWhenMissingElement;
   @override
@@ -6814,7 +6820,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get fixedReference;
   @override
-  $MetaCopyWith<$Res>? get fixedMeta;
+  $FhirMetaCopyWith<$Res>? get fixedMeta;
   @override
   $ElementCopyWith<$Res>? get patternBooleanElement;
   @override
@@ -6880,7 +6886,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get patternReference;
   @override
-  $MetaCopyWith<$Res>? get patternMeta;
+  $FhirMetaCopyWith<$Res>? get patternMeta;
   @override
   $ElementCopyWith<$Res>? get exampleBooleanElement;
   @override
@@ -6946,7 +6952,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get exampleReference;
   @override
-  $MetaCopyWith<$Res>? get exampleMeta;
+  $FhirMetaCopyWith<$Res>? get exampleMeta;
   @override
   $ElementCopyWith<$Res>? get minValueBooleanElement;
   @override
@@ -7012,7 +7018,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get minValueReference;
   @override
-  $MetaCopyWith<$Res>? get minValueMeta;
+  $FhirMetaCopyWith<$Res>? get minValueMeta;
   @override
   $ElementCopyWith<$Res>? get maxValueBooleanElement;
   @override
@@ -7078,7 +7084,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get maxValueReference;
   @override
-  $MetaCopyWith<$Res>? get maxValueMeta;
+  $FhirMetaCopyWith<$Res>? get maxValueMeta;
   @override
   $ElementCopyWith<$Res>? get maxLengthElement;
   @override
@@ -7443,7 +7449,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7491,7 +7497,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       definitionElement: freezed == definitionElement
           ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
@@ -7499,7 +7505,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
@@ -7507,7 +7513,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
@@ -7523,7 +7529,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -7559,7 +7565,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -7567,7 +7573,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -7584,7 +7590,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -7608,7 +7614,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -7624,7 +7630,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -7640,7 +7646,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -7648,7 +7654,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -7656,7 +7662,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -7664,7 +7670,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7672,7 +7678,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       defaultValueMarkDownElement: freezed == defaultValueMarkDownElement
           ? _value.defaultValueMarkDownElement
           : defaultValueMarkDownElement // ignore: cast_nullable_to_non_nullable
@@ -7744,11 +7750,11 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       meaningWhenMissing: freezed == meaningWhenMissing
           ? _value.meaningWhenMissing
           : meaningWhenMissing // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       meaningWhenMissingElement: freezed == meaningWhenMissingElement
           ? _value.meaningWhenMissingElement
           : meaningWhenMissingElement // ignore: cast_nullable_to_non_nullable
@@ -7764,7 +7770,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedInteger: freezed == fixedInteger
           ? _value.fixedInteger
           : fixedInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       fixedIntegerElement: freezed == fixedIntegerElement
           ? _value.fixedIntegerElement
           : fixedIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -7772,7 +7778,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedDecimal: freezed == fixedDecimal
           ? _value.fixedDecimal
           : fixedDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       fixedDecimalElement: freezed == fixedDecimalElement
           ? _value.fixedDecimalElement
           : fixedDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -7788,7 +7794,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedInstant: freezed == fixedInstant
           ? _value.fixedInstant
           : fixedInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       fixedInstantElement: freezed == fixedInstantElement
           ? _value.fixedInstantElement
           : fixedInstantElement // ignore: cast_nullable_to_non_nullable
@@ -7812,7 +7818,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedDate: freezed == fixedDate
           ? _value.fixedDate
           : fixedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       fixedDateElement: freezed == fixedDateElement
           ? _value.fixedDateElement
           : fixedDateElement // ignore: cast_nullable_to_non_nullable
@@ -7836,7 +7842,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
@@ -7844,7 +7850,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
@@ -7852,7 +7858,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedUnsignedInt: freezed == fixedUnsignedInt
           ? _value.fixedUnsignedInt
           : fixedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       fixedUnsignedIntElement: freezed == fixedUnsignedIntElement
           ? _value.fixedUnsignedIntElement
           : fixedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -7860,7 +7866,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedPositiveInt: freezed == fixedPositiveInt
           ? _value.fixedPositiveInt
           : fixedPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       fixedPositiveIntElement: freezed == fixedPositiveIntElement
           ? _value.fixedPositiveIntElement
           : fixedPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -7868,7 +7874,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedMarkdown: freezed == fixedMarkdown
           ? _value.fixedMarkdown
           : fixedMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       fixedMarkdownElement: freezed == fixedMarkdownElement
           ? _value.fixedMarkdownElement
           : fixedMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -7940,7 +7946,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedMeta: freezed == fixedMeta
           ? _value.fixedMeta
           : fixedMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       patternBoolean: freezed == patternBoolean
           ? _value.patternBoolean
           : patternBoolean // ignore: cast_nullable_to_non_nullable
@@ -7952,7 +7958,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternInteger: freezed == patternInteger
           ? _value.patternInteger
           : patternInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       patternIntegerElement: freezed == patternIntegerElement
           ? _value.patternIntegerElement
           : patternIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -7960,7 +7966,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternDecimal: freezed == patternDecimal
           ? _value.patternDecimal
           : patternDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       patternDecimalElement: freezed == patternDecimalElement
           ? _value.patternDecimalElement
           : patternDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -7976,7 +7982,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternInstant: freezed == patternInstant
           ? _value.patternInstant
           : patternInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       patternInstantElement: freezed == patternInstantElement
           ? _value.patternInstantElement
           : patternInstantElement // ignore: cast_nullable_to_non_nullable
@@ -8000,7 +8006,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternDate: freezed == patternDate
           ? _value.patternDate
           : patternDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       patternDateElement: freezed == patternDateElement
           ? _value.patternDateElement
           : patternDateElement // ignore: cast_nullable_to_non_nullable
@@ -8016,7 +8022,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternTime: freezed == patternTime
           ? _value.patternTime
           : patternTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       patternTimeElement: freezed == patternTimeElement
           ? _value.patternTimeElement
           : patternTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8032,7 +8038,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
@@ -8040,7 +8046,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
@@ -8048,7 +8054,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternUnsignedInt: freezed == patternUnsignedInt
           ? _value.patternUnsignedInt
           : patternUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       patternUnsignedIntElement: freezed == patternUnsignedIntElement
           ? _value.patternUnsignedIntElement
           : patternUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -8056,7 +8062,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternPositiveInt: freezed == patternPositiveInt
           ? _value.patternPositiveInt
           : patternPositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       patternPositiveIntElement: freezed == patternPositiveIntElement
           ? _value.patternPositiveIntElement
           : patternPositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8064,7 +8070,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternMarkdown: freezed == patternMarkdown
           ? _value.patternMarkdown
           : patternMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       patternMarkdownElement: freezed == patternMarkdownElement
           ? _value.patternMarkdownElement
           : patternMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -8136,7 +8142,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternMeta: freezed == patternMeta
           ? _value.patternMeta
           : patternMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       exampleBoolean: freezed == exampleBoolean
           ? _value.exampleBoolean
           : exampleBoolean // ignore: cast_nullable_to_non_nullable
@@ -8148,7 +8154,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleInteger: freezed == exampleInteger
           ? _value.exampleInteger
           : exampleInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       exampleIntegerElement: freezed == exampleIntegerElement
           ? _value.exampleIntegerElement
           : exampleIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -8156,7 +8162,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleDecimal: freezed == exampleDecimal
           ? _value.exampleDecimal
           : exampleDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       exampleDecimalElement: freezed == exampleDecimalElement
           ? _value.exampleDecimalElement
           : exampleDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -8172,7 +8178,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleInstant: freezed == exampleInstant
           ? _value.exampleInstant
           : exampleInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       exampleInstantElement: freezed == exampleInstantElement
           ? _value.exampleInstantElement
           : exampleInstantElement // ignore: cast_nullable_to_non_nullable
@@ -8196,7 +8202,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleDate: freezed == exampleDate
           ? _value.exampleDate
           : exampleDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       exampleDateElement: freezed == exampleDateElement
           ? _value.exampleDateElement
           : exampleDateElement // ignore: cast_nullable_to_non_nullable
@@ -8212,7 +8218,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleTime: freezed == exampleTime
           ? _value.exampleTime
           : exampleTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       exampleTimeElement: freezed == exampleTimeElement
           ? _value.exampleTimeElement
           : exampleTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8228,7 +8234,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleOid: freezed == exampleOid
           ? _value.exampleOid
           : exampleOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       exampleOidElement: freezed == exampleOidElement
           ? _value.exampleOidElement
           : exampleOidElement // ignore: cast_nullable_to_non_nullable
@@ -8236,7 +8242,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleId: freezed == exampleId
           ? _value.exampleId
           : exampleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       exampleIdElement: freezed == exampleIdElement
           ? _value.exampleIdElement
           : exampleIdElement // ignore: cast_nullable_to_non_nullable
@@ -8244,7 +8250,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleUnsignedInt: freezed == exampleUnsignedInt
           ? _value.exampleUnsignedInt
           : exampleUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       exampleUnsignedIntElement: freezed == exampleUnsignedIntElement
           ? _value.exampleUnsignedIntElement
           : exampleUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -8252,7 +8258,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       examplePositiveInt: freezed == examplePositiveInt
           ? _value.examplePositiveInt
           : examplePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       examplePositiveIntElement: freezed == examplePositiveIntElement
           ? _value.examplePositiveIntElement
           : examplePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8260,7 +8266,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleMarkdown: freezed == exampleMarkdown
           ? _value.exampleMarkdown
           : exampleMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       exampleMarkdownElement: freezed == exampleMarkdownElement
           ? _value.exampleMarkdownElement
           : exampleMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -8332,7 +8338,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       exampleMeta: freezed == exampleMeta
           ? _value.exampleMeta
           : exampleMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       minValueBoolean: freezed == minValueBoolean
           ? _value.minValueBoolean
           : minValueBoolean // ignore: cast_nullable_to_non_nullable
@@ -8344,7 +8350,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueInteger: freezed == minValueInteger
           ? _value.minValueInteger
           : minValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minValueIntegerElement: freezed == minValueIntegerElement
           ? _value.minValueIntegerElement
           : minValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -8352,7 +8358,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueDecimal: freezed == minValueDecimal
           ? _value.minValueDecimal
           : minValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       minValueDecimalElement: freezed == minValueDecimalElement
           ? _value.minValueDecimalElement
           : minValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -8368,7 +8374,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueInstant: freezed == minValueInstant
           ? _value.minValueInstant
           : minValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       minValueInstantElement: freezed == minValueInstantElement
           ? _value.minValueInstantElement
           : minValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -8392,7 +8398,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueDate: freezed == minValueDate
           ? _value.minValueDate
           : minValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       minValueDateElement: freezed == minValueDateElement
           ? _value.minValueDateElement
           : minValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -8408,7 +8414,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueTime: freezed == minValueTime
           ? _value.minValueTime
           : minValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       minValueTimeElement: freezed == minValueTimeElement
           ? _value.minValueTimeElement
           : minValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8424,7 +8430,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueOid: freezed == minValueOid
           ? _value.minValueOid
           : minValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       minValueOidElement: freezed == minValueOidElement
           ? _value.minValueOidElement
           : minValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -8432,7 +8438,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueId: freezed == minValueId
           ? _value.minValueId
           : minValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       minValueIdElement: freezed == minValueIdElement
           ? _value.minValueIdElement
           : minValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -8440,7 +8446,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueUnsignedInt: freezed == minValueUnsignedInt
           ? _value.minValueUnsignedInt
           : minValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       minValueUnsignedIntElement: freezed == minValueUnsignedIntElement
           ? _value.minValueUnsignedIntElement
           : minValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -8448,7 +8454,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValuePositiveInt: freezed == minValuePositiveInt
           ? _value.minValuePositiveInt
           : minValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       minValuePositiveIntElement: freezed == minValuePositiveIntElement
           ? _value.minValuePositiveIntElement
           : minValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8456,7 +8462,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueMarkdown: freezed == minValueMarkdown
           ? _value.minValueMarkdown
           : minValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       minValueMarkdownElement: freezed == minValueMarkdownElement
           ? _value.minValueMarkdownElement
           : minValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -8528,7 +8534,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       minValueMeta: freezed == minValueMeta
           ? _value.minValueMeta
           : minValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       maxValueBoolean: freezed == maxValueBoolean
           ? _value.maxValueBoolean
           : maxValueBoolean // ignore: cast_nullable_to_non_nullable
@@ -8540,7 +8546,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueInteger: freezed == maxValueInteger
           ? _value.maxValueInteger
           : maxValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxValueIntegerElement: freezed == maxValueIntegerElement
           ? _value.maxValueIntegerElement
           : maxValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -8548,7 +8554,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueDecimal: freezed == maxValueDecimal
           ? _value.maxValueDecimal
           : maxValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       maxValueDecimalElement: freezed == maxValueDecimalElement
           ? _value.maxValueDecimalElement
           : maxValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -8564,7 +8570,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueInstant: freezed == maxValueInstant
           ? _value.maxValueInstant
           : maxValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       maxValueInstantElement: freezed == maxValueInstantElement
           ? _value.maxValueInstantElement
           : maxValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -8588,7 +8594,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueDate: freezed == maxValueDate
           ? _value.maxValueDate
           : maxValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       maxValueDateElement: freezed == maxValueDateElement
           ? _value.maxValueDateElement
           : maxValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -8604,7 +8610,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueTime: freezed == maxValueTime
           ? _value.maxValueTime
           : maxValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       maxValueTimeElement: freezed == maxValueTimeElement
           ? _value.maxValueTimeElement
           : maxValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -8620,7 +8626,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueOid: freezed == maxValueOid
           ? _value.maxValueOid
           : maxValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       maxValueOidElement: freezed == maxValueOidElement
           ? _value.maxValueOidElement
           : maxValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -8628,7 +8634,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueId: freezed == maxValueId
           ? _value.maxValueId
           : maxValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       maxValueIdElement: freezed == maxValueIdElement
           ? _value.maxValueIdElement
           : maxValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -8636,7 +8642,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueUnsignedInt: freezed == maxValueUnsignedInt
           ? _value.maxValueUnsignedInt
           : maxValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       maxValueUnsignedIntElement: freezed == maxValueUnsignedIntElement
           ? _value.maxValueUnsignedIntElement
           : maxValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -8644,7 +8650,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValuePositiveInt: freezed == maxValuePositiveInt
           ? _value.maxValuePositiveInt
           : maxValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       maxValuePositiveIntElement: freezed == maxValuePositiveIntElement
           ? _value.maxValuePositiveIntElement
           : maxValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -8652,7 +8658,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueMarkdown: freezed == maxValueMarkdown
           ? _value.maxValueMarkdown
           : maxValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       maxValueMarkdownElement: freezed == maxValueMarkdownElement
           ? _value.maxValueMarkdownElement
           : maxValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -8724,11 +8730,11 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       maxValueMeta: freezed == maxValueMeta
           ? _value.maxValueMeta
           : maxValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -9296,17 +9302,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_short')
   final Element? shortElement;
   @override
-  final Markdown? definition;
+  final FhirMarkdown? definition;
   @override
   @JsonKey(name: '_definition')
   final Element? definitionElement;
   @override
-  final Markdown? comments;
+  final FhirMarkdown? comments;
   @override
   @JsonKey(name: '_comments')
   final Element? commentElement;
   @override
-  final Markdown? requirements;
+  final FhirMarkdown? requirements;
   @override
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
@@ -9324,7 +9330,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_alias')
   final Element? aliasElement;
   @override
-  final Integer? min;
+  final FhirInteger? min;
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
@@ -9353,12 +9359,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueBoolean')
   final Element? defaultValueBooleanElement;
   @override
-  final Integer? defaultValueInteger;
+  final FhirInteger? defaultValueInteger;
   @override
   @JsonKey(name: '_defaultValueInteger')
   final Element? defaultValueIntegerElement;
   @override
-  final Decimal? defaultValueDecimal;
+  final FhirDecimal? defaultValueDecimal;
   @override
   @JsonKey(name: '_defaultValueDecimal')
   final Element? defaultValueDecimalElement;
@@ -9368,7 +9374,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueBase64Binary')
   final Element? defaultValueBase64BinaryElement;
   @override
-  final Instant? defaultValueInstant;
+  final FhirInstant? defaultValueInstant;
   @override
   @JsonKey(name: '_defaultValueInstant')
   final Element? defaultValueInstantElement;
@@ -9383,7 +9389,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueUri')
   final Element? defaultValueUriElement;
   @override
-  final Date? defaultValueDate;
+  final FhirDate? defaultValueDate;
   @override
   @JsonKey(name: '_defaultValueDate')
   final Element? defaultValueDateElement;
@@ -9393,7 +9399,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueDateTime')
   final Element? defaultValueDateTimeElement;
   @override
-  final Time? defaultValueTime;
+  final FhirTime? defaultValueTime;
   @override
   @JsonKey(name: '_defaultValueTime')
   final Element? defaultValueTimeElement;
@@ -9403,7 +9409,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueCode')
   final Element? defaultValueCodeElement;
   @override
-  final Oid? defaultValueOid;
+  final FhirOid? defaultValueOid;
   @override
   @JsonKey(name: '_defaultValueOid')
   final Element? defaultValueOidElement;
@@ -9413,17 +9419,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_defaultValueId')
   final Element? defaultValueIdElement;
   @override
-  final UnsignedInt? defaultValueUnsignedInt;
+  final FhirUnsignedInt? defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   final Element? defaultValueUnsignedIntElement;
   @override
-  final PositiveInt? defaultValuePositiveInt;
+  final FhirPositiveInt? defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   final Element? defaultValuePositiveIntElement;
   @override
-  final Markdown? defaultValueMarkdown;
+  final FhirMarkdown? defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkDown')
   final Element? defaultValueMarkDownElement;
@@ -9460,9 +9466,9 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? defaultValueReference;
   @override
-  final Meta? defaultValueMeta;
+  final FhirMeta? defaultValueMeta;
   @override
-  final Markdown? meaningWhenMissing;
+  final FhirMarkdown? meaningWhenMissing;
   @override
   @JsonKey(name: '_meaningWhenMissing')
   final Element? meaningWhenMissingElement;
@@ -9472,12 +9478,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedBoolean')
   final Element? fixedBooleanElement;
   @override
-  final Integer? fixedInteger;
+  final FhirInteger? fixedInteger;
   @override
   @JsonKey(name: '_fixedInteger')
   final Element? fixedIntegerElement;
   @override
-  final Decimal? fixedDecimal;
+  final FhirDecimal? fixedDecimal;
   @override
   @JsonKey(name: '_fixedDecimal')
   final Element? fixedDecimalElement;
@@ -9487,7 +9493,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedBase64Binary')
   final Element? fixedBase64BinaryElement;
   @override
-  final Instant? fixedInstant;
+  final FhirInstant? fixedInstant;
   @override
   @JsonKey(name: '_fixedInstant')
   final Element? fixedInstantElement;
@@ -9502,7 +9508,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedUri')
   final Element? fixedUriElement;
   @override
-  final Date? fixedDate;
+  final FhirDate? fixedDate;
   @override
   @JsonKey(name: '_fixedDate')
   final Element? fixedDateElement;
@@ -9517,7 +9523,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedCode')
   final Element? fixedCodeElement;
   @override
-  final Oid? fixedOid;
+  final FhirOid? fixedOid;
   @override
   @JsonKey(name: '_fixedOid')
   final Element? fixedOidElement;
@@ -9527,17 +9533,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_fixedId')
   final Element? fixedIdElement;
   @override
-  final UnsignedInt? fixedUnsignedInt;
+  final FhirUnsignedInt? fixedUnsignedInt;
   @override
   @JsonKey(name: '_fixedUnsignedInt')
   final Element? fixedUnsignedIntElement;
   @override
-  final PositiveInt? fixedPositiveInt;
+  final FhirPositiveInt? fixedPositiveInt;
   @override
   @JsonKey(name: '_fixedPositiveInt')
   final Element? fixedPositiveIntElement;
   @override
-  final Markdown? fixedMarkdown;
+  final FhirMarkdown? fixedMarkdown;
   @override
   @JsonKey(name: '_fixedMarkdown')
   final Element? fixedMarkdownElement;
@@ -9574,19 +9580,19 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? fixedReference;
   @override
-  final Meta? fixedMeta;
+  final FhirMeta? fixedMeta;
   @override
   final FhirBoolean? patternBoolean;
   @override
   @JsonKey(name: '_patternBoolean')
   final Element? patternBooleanElement;
   @override
-  final Integer? patternInteger;
+  final FhirInteger? patternInteger;
   @override
   @JsonKey(name: '_patternInteger')
   final Element? patternIntegerElement;
   @override
-  final Decimal? patternDecimal;
+  final FhirDecimal? patternDecimal;
   @override
   @JsonKey(name: '_patternDecimal')
   final Element? patternDecimalElement;
@@ -9596,7 +9602,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternBase64Binary')
   final Element? patternBase64BinaryElement;
   @override
-  final Instant? patternInstant;
+  final FhirInstant? patternInstant;
   @override
   @JsonKey(name: '_patternInstant')
   final Element? patternInstantElement;
@@ -9611,7 +9617,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternUri')
   final Element? patternUriElement;
   @override
-  final Date? patternDate;
+  final FhirDate? patternDate;
   @override
   @JsonKey(name: '_patternDate')
   final Element? patternDateElement;
@@ -9621,7 +9627,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternDateTime')
   final Element? patternDateTimeElement;
   @override
-  final Time? patternTime;
+  final FhirTime? patternTime;
   @override
   @JsonKey(name: '_patternTime')
   final Element? patternTimeElement;
@@ -9631,7 +9637,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternCode')
   final Element? patternCodeElement;
   @override
-  final Oid? patternOid;
+  final FhirOid? patternOid;
   @override
   @JsonKey(name: '_patternOid')
   final Element? patternOidElement;
@@ -9641,17 +9647,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_patternId')
   final Element? patternIdElement;
   @override
-  final UnsignedInt? patternUnsignedInt;
+  final FhirUnsignedInt? patternUnsignedInt;
   @override
   @JsonKey(name: '_patternUnsignedInt')
   final Element? patternUnsignedIntElement;
   @override
-  final PositiveInt? patternPositiveInt;
+  final FhirPositiveInt? patternPositiveInt;
   @override
   @JsonKey(name: '_patternPositiveInt')
   final Element? patternPositiveIntElement;
   @override
-  final Markdown? patternMarkdown;
+  final FhirMarkdown? patternMarkdown;
   @override
   @JsonKey(name: '_patternMarkdown')
   final Element? patternMarkdownElement;
@@ -9688,19 +9694,19 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? patternReference;
   @override
-  final Meta? patternMeta;
+  final FhirMeta? patternMeta;
   @override
   final FhirBoolean? exampleBoolean;
   @override
   @JsonKey(name: '_exampleBoolean')
   final Element? exampleBooleanElement;
   @override
-  final Integer? exampleInteger;
+  final FhirInteger? exampleInteger;
   @override
   @JsonKey(name: '_exampleInteger')
   final Element? exampleIntegerElement;
   @override
-  final Decimal? exampleDecimal;
+  final FhirDecimal? exampleDecimal;
   @override
   @JsonKey(name: '_exampleDecimal')
   final Element? exampleDecimalElement;
@@ -9710,7 +9716,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleBase64Binary')
   final Element? exampleBase64BinaryElement;
   @override
-  final Instant? exampleInstant;
+  final FhirInstant? exampleInstant;
   @override
   @JsonKey(name: '_exampleInstant')
   final Element? exampleInstantElement;
@@ -9725,7 +9731,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleUri')
   final Element? exampleUriElement;
   @override
-  final Date? exampleDate;
+  final FhirDate? exampleDate;
   @override
   @JsonKey(name: '_exampleDate')
   final Element? exampleDateElement;
@@ -9735,7 +9741,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleDateTime')
   final Element? exampleDateTimeElement;
   @override
-  final Time? exampleTime;
+  final FhirTime? exampleTime;
   @override
   @JsonKey(name: '_exampleTime')
   final Element? exampleTimeElement;
@@ -9745,7 +9751,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleCode')
   final Element? exampleCodeElement;
   @override
-  final Oid? exampleOid;
+  final FhirOid? exampleOid;
   @override
   @JsonKey(name: '_exampleOid')
   final Element? exampleOidElement;
@@ -9755,17 +9761,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_exampleId')
   final Element? exampleIdElement;
   @override
-  final UnsignedInt? exampleUnsignedInt;
+  final FhirUnsignedInt? exampleUnsignedInt;
   @override
   @JsonKey(name: '_exampleUnsignedInt')
   final Element? exampleUnsignedIntElement;
   @override
-  final PositiveInt? examplePositiveInt;
+  final FhirPositiveInt? examplePositiveInt;
   @override
   @JsonKey(name: '_examplePositiveInt')
   final Element? examplePositiveIntElement;
   @override
-  final Markdown? exampleMarkdown;
+  final FhirMarkdown? exampleMarkdown;
   @override
   @JsonKey(name: '_exampleMarkdown')
   final Element? exampleMarkdownElement;
@@ -9802,19 +9808,19 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? exampleReference;
   @override
-  final Meta? exampleMeta;
+  final FhirMeta? exampleMeta;
   @override
   final FhirBoolean? minValueBoolean;
   @override
   @JsonKey(name: '_minValueBoolean')
   final Element? minValueBooleanElement;
   @override
-  final Integer? minValueInteger;
+  final FhirInteger? minValueInteger;
   @override
   @JsonKey(name: '_minValueInteger')
   final Element? minValueIntegerElement;
   @override
-  final Decimal? minValueDecimal;
+  final FhirDecimal? minValueDecimal;
   @override
   @JsonKey(name: '_minValueDecimal')
   final Element? minValueDecimalElement;
@@ -9824,7 +9830,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueBase64Binary')
   final Element? minValueBase64BinaryElement;
   @override
-  final Instant? minValueInstant;
+  final FhirInstant? minValueInstant;
   @override
   @JsonKey(name: '_minValueInstant')
   final Element? minValueInstantElement;
@@ -9839,7 +9845,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueUri')
   final Element? minValueUriElement;
   @override
-  final Date? minValueDate;
+  final FhirDate? minValueDate;
   @override
   @JsonKey(name: '_minValueDate')
   final Element? minValueDateElement;
@@ -9849,7 +9855,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueDateTime')
   final Element? minValueDateTimeElement;
   @override
-  final Time? minValueTime;
+  final FhirTime? minValueTime;
   @override
   @JsonKey(name: '_minValueTime')
   final Element? minValueTimeElement;
@@ -9859,7 +9865,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueCode')
   final Element? minValueCodeElement;
   @override
-  final Oid? minValueOid;
+  final FhirOid? minValueOid;
   @override
   @JsonKey(name: '_minValueOid')
   final Element? minValueOidElement;
@@ -9869,17 +9875,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_minValueId')
   final Element? minValueIdElement;
   @override
-  final UnsignedInt? minValueUnsignedInt;
+  final FhirUnsignedInt? minValueUnsignedInt;
   @override
   @JsonKey(name: '_minValueUnsignedInt')
   final Element? minValueUnsignedIntElement;
   @override
-  final PositiveInt? minValuePositiveInt;
+  final FhirPositiveInt? minValuePositiveInt;
   @override
   @JsonKey(name: '_minValuePositiveInt')
   final Element? minValuePositiveIntElement;
   @override
-  final Markdown? minValueMarkdown;
+  final FhirMarkdown? minValueMarkdown;
   @override
   @JsonKey(name: '_minValueMarkdown')
   final Element? minValueMarkdownElement;
@@ -9916,19 +9922,19 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? minValueReference;
   @override
-  final Meta? minValueMeta;
+  final FhirMeta? minValueMeta;
   @override
   final FhirBoolean? maxValueBoolean;
   @override
   @JsonKey(name: '_maxValueBoolean')
   final Element? maxValueBooleanElement;
   @override
-  final Integer? maxValueInteger;
+  final FhirInteger? maxValueInteger;
   @override
   @JsonKey(name: '_maxValueInteger')
   final Element? maxValueIntegerElement;
   @override
-  final Decimal? maxValueDecimal;
+  final FhirDecimal? maxValueDecimal;
   @override
   @JsonKey(name: '_maxValueDecimal')
   final Element? maxValueDecimalElement;
@@ -9938,7 +9944,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueBase64Binary')
   final Element? maxValueBase64BinaryElement;
   @override
-  final Instant? maxValueInstant;
+  final FhirInstant? maxValueInstant;
   @override
   @JsonKey(name: '_maxValueInstant')
   final Element? maxValueInstantElement;
@@ -9953,7 +9959,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueUri')
   final Element? maxValueUriElement;
   @override
-  final Date? maxValueDate;
+  final FhirDate? maxValueDate;
   @override
   @JsonKey(name: '_maxValueDate')
   final Element? maxValueDateElement;
@@ -9963,7 +9969,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueDateTime')
   final Element? maxValueDateTimeElement;
   @override
-  final Time? maxValueTime;
+  final FhirTime? maxValueTime;
   @override
   @JsonKey(name: '_maxValueTime')
   final Element? maxValueTimeElement;
@@ -9973,7 +9979,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueCode')
   final Element? maxValueCodeElement;
   @override
-  final Oid? maxValueOid;
+  final FhirOid? maxValueOid;
   @override
   @JsonKey(name: '_maxValueOid')
   final Element? maxValueOidElement;
@@ -9983,17 +9989,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxValueId')
   final Element? maxValueIdElement;
   @override
-  final UnsignedInt? maxValueUnsignedInt;
+  final FhirUnsignedInt? maxValueUnsignedInt;
   @override
   @JsonKey(name: '_maxValueUnsignedInt')
   final Element? maxValueUnsignedIntElement;
   @override
-  final PositiveInt? maxValuePositiveInt;
+  final FhirPositiveInt? maxValuePositiveInt;
   @override
   @JsonKey(name: '_maxValuePositiveInt')
   final Element? maxValuePositiveIntElement;
   @override
-  final Markdown? maxValueMarkdown;
+  final FhirMarkdown? maxValueMarkdown;
   @override
   @JsonKey(name: '_maxValueMarkdown')
   final Element? maxValueMarkdownElement;
@@ -10030,9 +10036,9 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final Reference? maxValueReference;
   @override
-  final Meta? maxValueMeta;
+  final FhirMeta? maxValueMeta;
   @override
-  final Integer? maxLength;
+  final FhirInteger? maxLength;
   @override
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
@@ -10842,19 +10848,19 @@ abstract class _ElementDefinition extends ElementDefinition {
       final String? short,
       @JsonKey(name: '_short')
           final Element? shortElement,
-      final Markdown? definition,
+      final FhirMarkdown? definition,
       @JsonKey(name: '_definition')
           final Element? definitionElement,
-      final Markdown? comments,
+      final FhirMarkdown? comments,
       @JsonKey(name: '_comments')
           final Element? commentElement,
-      final Markdown? requirements,
+      final FhirMarkdown? requirements,
       @JsonKey(name: '_requirements')
           final Element? requirementsElement,
       final List<String>? alias,
       @JsonKey(name: '_alias')
           final Element? aliasElement,
-      final Integer? min,
+      final FhirInteger? min,
       @JsonKey(name: '_min')
           final Element? minElement,
       final String? max,
@@ -10866,16 +10872,16 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           final Element? defaultValueBooleanElement,
-      final Integer? defaultValueInteger,
+      final FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           final Element? defaultValueIntegerElement,
-      final Decimal? defaultValueDecimal,
+      final FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           final Element? defaultValueDecimalElement,
       final FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
           final Element? defaultValueBase64BinaryElement,
-      final Instant? defaultValueInstant,
+      final FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           final Element? defaultValueInstantElement,
       final String? defaultValueString,
@@ -10884,31 +10890,31 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? defaultValueUri,
       @JsonKey(name: '_defaultValueUri')
           final Element? defaultValueUriElement,
-      final Date? defaultValueDate,
+      final FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           final Element? defaultValueDateElement,
       final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           final Element? defaultValueDateTimeElement,
-      final Time? defaultValueTime,
+      final FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           final Element? defaultValueTimeElement,
       final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           final Element? defaultValueCodeElement,
-      final Oid? defaultValueOid,
+      final FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           final Element? defaultValueOidElement,
       final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
-      final UnsignedInt? defaultValueUnsignedInt,
+      final FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           final Element? defaultValueUnsignedIntElement,
-      final PositiveInt? defaultValuePositiveInt,
+      final FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           final Element? defaultValuePositiveIntElement,
-      final Markdown? defaultValueMarkdown,
+      final FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkDown')
           final Element? defaultValueMarkDownElement,
       final Annotation? defaultValueAnnotation,
@@ -10927,23 +10933,23 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? defaultValueContactPoint,
       final Timing? defaultValueTiming,
       final Reference? defaultValueReference,
-      final Meta? defaultValueMeta,
-      final Markdown? meaningWhenMissing,
+      final FhirMeta? defaultValueMeta,
+      final FhirMarkdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
           final Element? meaningWhenMissingElement,
       final FhirBoolean? fixedBoolean,
       @JsonKey(name: '_fixedBoolean')
           final Element? fixedBooleanElement,
-      final Integer? fixedInteger,
+      final FhirInteger? fixedInteger,
       @JsonKey(name: '_fixedInteger')
           final Element? fixedIntegerElement,
-      final Decimal? fixedDecimal,
+      final FhirDecimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           final Element? fixedDecimalElement,
       final FhirBase64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
           final Element? fixedBase64BinaryElement,
-      final Instant? fixedInstant,
+      final FhirInstant? fixedInstant,
       @JsonKey(name: '_fixedInstant')
           final Element? fixedInstantElement,
       final String? fixedString,
@@ -10952,7 +10958,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? fixedUri,
       @JsonKey(name: '_fixedUri')
           final Element? fixedUriElement,
-      final Date? fixedDate,
+      final FhirDate? fixedDate,
       @JsonKey(name: '_fixedDate')
           final Element? fixedDateElement,
       final FhirDateTime? fixedDateTime,
@@ -10961,19 +10967,19 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirCode? fixedCode,
       @JsonKey(name: '_fixedCode')
           final Element? fixedCodeElement,
-      final Oid? fixedOid,
+      final FhirOid? fixedOid,
       @JsonKey(name: '_fixedOid')
           final Element? fixedOidElement,
       final FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           final Element? fixedIdElement,
-      final UnsignedInt? fixedUnsignedInt,
+      final FhirUnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
           final Element? fixedUnsignedIntElement,
-      final PositiveInt? fixedPositiveInt,
+      final FhirPositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
           final Element? fixedPositiveIntElement,
-      final Markdown? fixedMarkdown,
+      final FhirMarkdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           final Element? fixedMarkdownElement,
       final Annotation? fixedAnnotation,
@@ -10992,20 +10998,20 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? fixedContactPoint,
       final Timing? fixedTiming,
       final Reference? fixedReference,
-      final Meta? fixedMeta,
+      final FhirMeta? fixedMeta,
       final FhirBoolean? patternBoolean,
       @JsonKey(name: '_patternBoolean')
           final Element? patternBooleanElement,
-      final Integer? patternInteger,
+      final FhirInteger? patternInteger,
       @JsonKey(name: '_patternInteger')
           final Element? patternIntegerElement,
-      final Decimal? patternDecimal,
+      final FhirDecimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           final Element? patternDecimalElement,
       final FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
           final Element? patternBase64BinaryElement,
-      final Instant? patternInstant,
+      final FhirInstant? patternInstant,
       @JsonKey(name: '_patternInstant')
           final Element? patternInstantElement,
       final String? patternString,
@@ -11014,31 +11020,31 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? patternUri,
       @JsonKey(name: '_patternUri')
           final Element? patternUriElement,
-      final Date? patternDate,
+      final FhirDate? patternDate,
       @JsonKey(name: '_patternDate')
           final Element? patternDateElement,
       final FhirDateTime? patternDateTime,
       @JsonKey(name: '_patternDateTime')
           final Element? patternDateTimeElement,
-      final Time? patternTime,
+      final FhirTime? patternTime,
       @JsonKey(name: '_patternTime')
           final Element? patternTimeElement,
       final FhirCode? patternCode,
       @JsonKey(name: '_patternCode')
           final Element? patternCodeElement,
-      final Oid? patternOid,
+      final FhirOid? patternOid,
       @JsonKey(name: '_patternOid')
           final Element? patternOidElement,
       final FhirId? patternId,
       @JsonKey(name: '_patternId')
           final Element? patternIdElement,
-      final UnsignedInt? patternUnsignedInt,
+      final FhirUnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
           final Element? patternUnsignedIntElement,
-      final PositiveInt? patternPositiveInt,
+      final FhirPositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
           final Element? patternPositiveIntElement,
-      final Markdown? patternMarkdown,
+      final FhirMarkdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           final Element? patternMarkdownElement,
       final Annotation? patternAnnotation,
@@ -11057,20 +11063,20 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? patternContactPoint,
       final Timing? patternTiming,
       final Reference? patternReference,
-      final Meta? patternMeta,
+      final FhirMeta? patternMeta,
       final FhirBoolean? exampleBoolean,
       @JsonKey(name: '_exampleBoolean')
           final Element? exampleBooleanElement,
-      final Integer? exampleInteger,
+      final FhirInteger? exampleInteger,
       @JsonKey(name: '_exampleInteger')
           final Element? exampleIntegerElement,
-      final Decimal? exampleDecimal,
+      final FhirDecimal? exampleDecimal,
       @JsonKey(name: '_exampleDecimal')
           final Element? exampleDecimalElement,
       final FhirBase64Binary? exampleBase64Binary,
       @JsonKey(name: '_exampleBase64Binary')
           final Element? exampleBase64BinaryElement,
-      final Instant? exampleInstant,
+      final FhirInstant? exampleInstant,
       @JsonKey(name: '_exampleInstant')
           final Element? exampleInstantElement,
       final String? exampleString,
@@ -11079,31 +11085,31 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? exampleUri,
       @JsonKey(name: '_exampleUri')
           final Element? exampleUriElement,
-      final Date? exampleDate,
+      final FhirDate? exampleDate,
       @JsonKey(name: '_exampleDate')
           final Element? exampleDateElement,
       final FhirDateTime? exampleDateTime,
       @JsonKey(name: '_exampleDateTime')
           final Element? exampleDateTimeElement,
-      final Time? exampleTime,
+      final FhirTime? exampleTime,
       @JsonKey(name: '_exampleTime')
           final Element? exampleTimeElement,
       final FhirCode? exampleCode,
       @JsonKey(name: '_exampleCode')
           final Element? exampleCodeElement,
-      final Oid? exampleOid,
+      final FhirOid? exampleOid,
       @JsonKey(name: '_exampleOid')
           final Element? exampleOidElement,
       final FhirId? exampleId,
       @JsonKey(name: '_exampleId')
           final Element? exampleIdElement,
-      final UnsignedInt? exampleUnsignedInt,
+      final FhirUnsignedInt? exampleUnsignedInt,
       @JsonKey(name: '_exampleUnsignedInt')
           final Element? exampleUnsignedIntElement,
-      final PositiveInt? examplePositiveInt,
+      final FhirPositiveInt? examplePositiveInt,
       @JsonKey(name: '_examplePositiveInt')
           final Element? examplePositiveIntElement,
-      final Markdown? exampleMarkdown,
+      final FhirMarkdown? exampleMarkdown,
       @JsonKey(name: '_exampleMarkdown')
           final Element? exampleMarkdownElement,
       final Annotation? exampleAnnotation,
@@ -11122,20 +11128,20 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? exampleContactPoint,
       final Timing? exampleTiming,
       final Reference? exampleReference,
-      final Meta? exampleMeta,
+      final FhirMeta? exampleMeta,
       final FhirBoolean? minValueBoolean,
       @JsonKey(name: '_minValueBoolean')
           final Element? minValueBooleanElement,
-      final Integer? minValueInteger,
+      final FhirInteger? minValueInteger,
       @JsonKey(name: '_minValueInteger')
           final Element? minValueIntegerElement,
-      final Decimal? minValueDecimal,
+      final FhirDecimal? minValueDecimal,
       @JsonKey(name: '_minValueDecimal')
           final Element? minValueDecimalElement,
       final FhirBase64Binary? minValueBase64Binary,
       @JsonKey(name: '_minValueBase64Binary')
           final Element? minValueBase64BinaryElement,
-      final Instant? minValueInstant,
+      final FhirInstant? minValueInstant,
       @JsonKey(name: '_minValueInstant')
           final Element? minValueInstantElement,
       final String? minValueString,
@@ -11144,31 +11150,31 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? minValueUri,
       @JsonKey(name: '_minValueUri')
           final Element? minValueUriElement,
-      final Date? minValueDate,
+      final FhirDate? minValueDate,
       @JsonKey(name: '_minValueDate')
           final Element? minValueDateElement,
       final FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
           final Element? minValueDateTimeElement,
-      final Time? minValueTime,
+      final FhirTime? minValueTime,
       @JsonKey(name: '_minValueTime')
           final Element? minValueTimeElement,
       final FhirCode? minValueCode,
       @JsonKey(name: '_minValueCode')
           final Element? minValueCodeElement,
-      final Oid? minValueOid,
+      final FhirOid? minValueOid,
       @JsonKey(name: '_minValueOid')
           final Element? minValueOidElement,
       final FhirId? minValueId,
       @JsonKey(name: '_minValueId')
           final Element? minValueIdElement,
-      final UnsignedInt? minValueUnsignedInt,
+      final FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
           final Element? minValueUnsignedIntElement,
-      final PositiveInt? minValuePositiveInt,
+      final FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
           final Element? minValuePositiveIntElement,
-      final Markdown? minValueMarkdown,
+      final FhirMarkdown? minValueMarkdown,
       @JsonKey(name: '_minValueMarkdown')
           final Element? minValueMarkdownElement,
       final Annotation? minValueAnnotation,
@@ -11187,20 +11193,20 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? minValueContactPoint,
       final Timing? minValueTiming,
       final Reference? minValueReference,
-      final Meta? minValueMeta,
+      final FhirMeta? minValueMeta,
       final FhirBoolean? maxValueBoolean,
       @JsonKey(name: '_maxValueBoolean')
           final Element? maxValueBooleanElement,
-      final Integer? maxValueInteger,
+      final FhirInteger? maxValueInteger,
       @JsonKey(name: '_maxValueInteger')
           final Element? maxValueIntegerElement,
-      final Decimal? maxValueDecimal,
+      final FhirDecimal? maxValueDecimal,
       @JsonKey(name: '_maxValueDecimal')
           final Element? maxValueDecimalElement,
       final FhirBase64Binary? maxValueBase64Binary,
       @JsonKey(name: '_maxValueBase64Binary')
           final Element? maxValueBase64BinaryElement,
-      final Instant? maxValueInstant,
+      final FhirInstant? maxValueInstant,
       @JsonKey(name: '_maxValueInstant')
           final Element? maxValueInstantElement,
       final String? maxValueString,
@@ -11209,31 +11215,31 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUri? maxValueUri,
       @JsonKey(name: '_maxValueUri')
           final Element? maxValueUriElement,
-      final Date? maxValueDate,
+      final FhirDate? maxValueDate,
       @JsonKey(name: '_maxValueDate')
           final Element? maxValueDateElement,
       final FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
           final Element? maxValueDateTimeElement,
-      final Time? maxValueTime,
+      final FhirTime? maxValueTime,
       @JsonKey(name: '_maxValueTime')
           final Element? maxValueTimeElement,
       final FhirCode? maxValueCode,
       @JsonKey(name: '_maxValueCode')
           final Element? maxValueCodeElement,
-      final Oid? maxValueOid,
+      final FhirOid? maxValueOid,
       @JsonKey(name: '_maxValueOid')
           final Element? maxValueOidElement,
       final FhirId? maxValueId,
       @JsonKey(name: '_maxValueId')
           final Element? maxValueIdElement,
-      final UnsignedInt? maxValueUnsignedInt,
+      final FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
           final Element? maxValueUnsignedIntElement,
-      final PositiveInt? maxValuePositiveInt,
+      final FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
           final Element? maxValuePositiveIntElement,
-      final Markdown? maxValueMarkdown,
+      final FhirMarkdown? maxValueMarkdown,
       @JsonKey(name: '_maxValueMarkdown')
           final Element? maxValueMarkdownElement,
       final Annotation? maxValueAnnotation,
@@ -11252,8 +11258,8 @@ abstract class _ElementDefinition extends ElementDefinition {
       final ContactPoint? maxValueContactPoint,
       final Timing? maxValueTiming,
       final Reference? maxValueReference,
-      final Meta? maxValueMeta,
-      final Integer? maxLength,
+      final FhirMeta? maxValueMeta,
+      final FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           final Element? maxLengthElement,
       final List<FhirId>? condition,
@@ -12090,7 +12096,7 @@ abstract class $NarrativeCopyWith<$Res> {
       _$NarrativeCopyWithImpl<$Res, Narrative>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -12128,7 +12134,7 @@ class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12173,7 +12179,7 @@ abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -12210,7 +12216,7 @@ class __$$_NarrativeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12405,7 +12411,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       _$ElementDefinitionSlicingCopyWithImpl<$Res, ElementDefinitionSlicing>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<String>? discriminator,
       String? description,
@@ -12448,7 +12454,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12531,7 +12537,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<String>? discriminator,
       String? description,
@@ -12575,7 +12581,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12791,7 +12797,7 @@ mixin _$ElementDefinitionBase {
   String get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  Integer get min => throw _privateConstructorUsedError;
+  FhirInteger get min => throw _privateConstructorUsedError;
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
   String get max => throw _privateConstructorUsedError;
@@ -12811,11 +12817,11 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       _$ElementDefinitionBaseCopyWithImpl<$Res, ElementDefinitionBase>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String path,
       @JsonKey(name: '_path') Element? pathElement,
-      Integer min,
+      FhirInteger min,
       @JsonKey(name: '_min') Element? minElement,
       String max,
       @JsonKey(name: '_max') Element? maxElement});
@@ -12852,7 +12858,7 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12868,7 +12874,7 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
       min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer,
+              as FhirInteger,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -12930,11 +12936,11 @@ abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String path,
       @JsonKey(name: '_path') Element? pathElement,
-      Integer min,
+      FhirInteger min,
       @JsonKey(name: '_min') Element? minElement,
       String max,
       @JsonKey(name: '_max') Element? maxElement});
@@ -12971,7 +12977,7 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12987,7 +12993,7 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
       min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer,
+              as FhirInteger,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -13041,7 +13047,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Integer min;
+  final FhirInteger min;
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
@@ -13109,7 +13115,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           required final String path,
           @JsonKey(name: '_path') final Element? pathElement,
-          required final Integer min,
+          required final FhirInteger min,
           @JsonKey(name: '_min') final Element? minElement,
           required final String max,
           @JsonKey(name: '_max') final Element? maxElement}) =
@@ -13130,7 +13136,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  Integer get min;
+  FhirInteger get min;
   @override
   @JsonKey(name: '_min')
   Element? get minElement;
@@ -13178,7 +13184,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res, ElementDefinitionType>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -13218,7 +13224,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -13284,7 +13290,7 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -13323,7 +13329,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -13689,7 +13695,7 @@ mixin _$ElementDefinitionConstraint {
   FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  Id get key => throw _privateConstructorUsedError;
+  FhirId get key => throw _privateConstructorUsedError;
   @JsonKey(name: '_key')
   Element? get keyElement => throw _privateConstructorUsedError;
   String? get requirements => throw _privateConstructorUsedError;
@@ -13721,10 +13727,10 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
           ElementDefinitionConstraint>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Id key,
+      FhirId key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13779,7 +13785,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -13787,7 +13793,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -13898,10 +13904,10 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      Id key,
+      FhirId key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13960,7 +13966,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -13968,7 +13974,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -14052,7 +14058,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   }
 
   @override
-  final Id key;
+  final FhirId key;
   @override
   @JsonKey(name: '_key')
   final Element? keyElement;
@@ -14148,7 +14154,7 @@ abstract class _ElementDefinitionConstraint
       {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      required final Id key,
+      required final FhirId key,
       @JsonKey(name: '_key')
           final Element? keyElement,
       final String? requirements,
@@ -14175,7 +14181,7 @@ abstract class _ElementDefinitionConstraint
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  Id get key;
+  FhirId get key;
   @override
   @JsonKey(name: '_key')
   Element? get keyElement;
@@ -14242,7 +14248,7 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res, ElementDefinitionBinding>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14287,7 +14293,7 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -14366,7 +14372,7 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14412,7 +14418,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -14612,7 +14618,7 @@ mixin _$ElementDefinitionMapping {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
-  Id get identity => throw _privateConstructorUsedError;
+  FhirId get identity => throw _privateConstructorUsedError;
   @JsonKey(name: '_identity')
   Element? get identityElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
@@ -14635,10 +14641,10 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       _$ElementDefinitionMappingCopyWithImpl<$Res, ElementDefinitionMapping>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -14678,7 +14684,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -14690,7 +14696,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -14761,10 +14767,10 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      Id identity,
+      FhirId identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirCode? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -14805,7 +14811,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -14817,7 +14823,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
       identity: null == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id,
+              as FhirId,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -14887,7 +14893,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   }
 
   @override
-  final Id identity;
+  final FhirId identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -14964,7 +14970,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-          required final Id identity,
+          required final FhirId identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final FhirCode? language,
           @JsonKey(name: '_language') final Element? languageElement,
@@ -14985,7 +14991,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
   @override
-  Id get identity;
+  FhirId get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;

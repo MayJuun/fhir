@@ -100,7 +100,7 @@ abstract class $AccountCopyWith<$Res> {
           Element? descriptionElement,
       List<AccountGuarantor>? guarantor});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -163,11 +163,11 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -265,12 +265,12 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -463,7 +463,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       List<AccountGuarantor>? guarantor});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -535,11 +535,11 @@ class __$$_AccountCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -690,7 +690,7 @@ class _$_Account extends _Account {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -895,7 +895,7 @@ abstract class _Account extends Account {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1051,7 +1051,7 @@ class _$AccountCoverageCopyWithImpl<$Res, $Val extends AccountCoverage>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -1122,7 +1122,7 @@ class __$$_AccountCoverageCopyWithImpl<$Res>
       priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
@@ -1146,7 +1146,7 @@ class _$_AccountCoverage extends _AccountCoverage {
   @override
   final Reference coverage;
   @override
-  final Decimal? priority;
+  final FhirDecimal? priority;
   @override
   @JsonKey(name: '_priority')
   final Element? priorityElement;
@@ -1191,7 +1191,7 @@ class _$_AccountCoverage extends _AccountCoverage {
 abstract class _AccountCoverage extends AccountCoverage {
   factory _AccountCoverage(
           {required final Reference coverage,
-          final Decimal? priority,
+          final FhirDecimal? priority,
           @JsonKey(name: '_priority') final Element? priorityElement}) =
       _$_AccountCoverage;
   _AccountCoverage._() : super._();
@@ -1590,7 +1590,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       List<Annotation>? note,
       List<Reference>? supportingInformation});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -1676,11 +1676,11 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1788,7 +1788,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       factorOverride: freezed == factorOverride
           ? _value.factorOverride
           : factorOverride // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       factorOverrideElement: freezed == factorOverrideElement
           ? _value.factorOverrideElement
           : factorOverrideElement // ignore: cast_nullable_to_non_nullable
@@ -1812,7 +1812,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       enteredDate: freezed == enteredDate
           ? _value.enteredDate
           : enteredDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       enteredDateElement: freezed == enteredDateElement
           ? _value.enteredDateElement
           : enteredDateElement // ignore: cast_nullable_to_non_nullable
@@ -1842,12 +1842,12 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2136,7 +2136,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       List<Reference>? supportingInformation});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2239,11 +2239,11 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2351,7 +2351,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       factorOverride: freezed == factorOverride
           ? _value.factorOverride
           : factorOverride // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       factorOverrideElement: freezed == factorOverrideElement
           ? _value.factorOverrideElement
           : factorOverrideElement // ignore: cast_nullable_to_non_nullable
@@ -2375,7 +2375,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       enteredDate: freezed == enteredDate
           ? _value.enteredDate
           : enteredDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       enteredDateElement: freezed == enteredDateElement
           ? _value.enteredDateElement
           : enteredDateElement // ignore: cast_nullable_to_non_nullable
@@ -2484,7 +2484,7 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -2624,7 +2624,7 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final Reference? enterer;
   @override
-  final Date? enteredDate;
+  final FhirDate? enteredDate;
   @override
   @JsonKey(name: '_enteredDate')
   final Element? enteredDateElement;
@@ -2829,7 +2829,7 @@ abstract class _ChargeItem extends ChargeItem {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2870,7 +2870,7 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_overrideReason')
           final Element? overrideReasonElement,
       final Reference? enterer,
-      final Date? enteredDate,
+      final FhirDate? enteredDate,
       @JsonKey(name: '_enteredDate')
           final Element? enteredDateElement,
       final List<CodeableConcept>? reason,
@@ -3277,7 +3277,7 @@ abstract class $ContractCopyWith<$Res> {
       List<ContractLegal>? legal,
       List<ContractRule>? rule});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3351,11 +3351,11 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3497,12 +3497,12 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3705,7 +3705,7 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       List<ContractRule>? rule});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3789,11 +3789,11 @@ class __$$_ContractCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4010,7 +4010,7 @@ class _$_Contract extends _Contract {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4359,7 +4359,7 @@ abstract class _Contract extends Contract {
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           final Stu3ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -4977,7 +4977,7 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
       effectiveTime: freezed == effectiveTime
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       effectiveTimeElement: freezed == effectiveTimeElement
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -4993,7 +4993,7 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5001,7 +5001,7 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       pointsElement: freezed == pointsElement
           ? _value.pointsElement
           : pointsElement // ignore: cast_nullable_to_non_nullable
@@ -5205,7 +5205,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       effectiveTime: freezed == effectiveTime
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       effectiveTimeElement: freezed == effectiveTimeElement
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -5221,7 +5221,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5229,7 +5229,7 @@ class __$$_ContractValuedItemCopyWithImpl<$Res>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       pointsElement: freezed == pointsElement
           ? _value.pointsElement
           : pointsElement // ignore: cast_nullable_to_non_nullable
@@ -5270,7 +5270,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   @override
   final Identifier? identifier;
   @override
-  final Time? effectiveTime;
+  final FhirTime? effectiveTime;
   @override
   @JsonKey(name: '_effectiveTime')
   final Element? effectiveTimeElement;
@@ -5279,12 +5279,12 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   @override
   final Money? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? points;
+  final FhirDecimal? points;
   @override
   @JsonKey(name: '_points')
   final Element? pointsElement;
@@ -5361,13 +5361,13 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       {final CodeableConcept? entityCodeableConcept,
       final Reference? entityReference,
       final Identifier? identifier,
-      final Time? effectiveTime,
+      final FhirTime? effectiveTime,
       @JsonKey(name: '_effectiveTime') final Element? effectiveTimeElement,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? points,
+      final FhirDecimal? points,
       @JsonKey(name: '_points') final Element? pointsElement,
       final Money? net}) = _$_ContractValuedItem;
   _ContractValuedItem._() : super._();
@@ -6293,7 +6293,7 @@ class _$ContractValuedItem1CopyWithImpl<$Res, $Val extends ContractValuedItem1>
       effectiveTime: freezed == effectiveTime
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       effectiveTimeElement: freezed == effectiveTimeElement
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6309,7 +6309,7 @@ class _$ContractValuedItem1CopyWithImpl<$Res, $Val extends ContractValuedItem1>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -6317,7 +6317,7 @@ class _$ContractValuedItem1CopyWithImpl<$Res, $Val extends ContractValuedItem1>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       pointsElement: freezed == pointsElement
           ? _value.pointsElement
           : pointsElement // ignore: cast_nullable_to_non_nullable
@@ -6521,7 +6521,7 @@ class __$$_ContractValuedItem1CopyWithImpl<$Res>
       effectiveTime: freezed == effectiveTime
           ? _value.effectiveTime
           : effectiveTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       effectiveTimeElement: freezed == effectiveTimeElement
           ? _value.effectiveTimeElement
           : effectiveTimeElement // ignore: cast_nullable_to_non_nullable
@@ -6537,7 +6537,7 @@ class __$$_ContractValuedItem1CopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -6545,7 +6545,7 @@ class __$$_ContractValuedItem1CopyWithImpl<$Res>
       points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       pointsElement: freezed == pointsElement
           ? _value.pointsElement
           : pointsElement // ignore: cast_nullable_to_non_nullable
@@ -6586,7 +6586,7 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
   @override
   final Identifier? identifier;
   @override
-  final Time? effectiveTime;
+  final FhirTime? effectiveTime;
   @override
   @JsonKey(name: '_effectiveTime')
   final Element? effectiveTimeElement;
@@ -6595,12 +6595,12 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
   @override
   final Money? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? points;
+  final FhirDecimal? points;
   @override
   @JsonKey(name: '_points')
   final Element? pointsElement;
@@ -6677,13 +6677,13 @@ abstract class _ContractValuedItem1 extends ContractValuedItem1 {
       {final CodeableConcept? entityCodeableConcept,
       final Reference? entityReference,
       final Identifier? identifier,
-      final Time? effectiveTime,
+      final FhirTime? effectiveTime,
       @JsonKey(name: '_effectiveTime') final Element? effectiveTimeElement,
       final Quantity? quantity,
       final Money? unitPrice,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? points,
+      final FhirDecimal? points,
       @JsonKey(name: '_points') final Element? pointsElement,
       final Money? net}) = _$_ContractValuedItem1;
   _ContractValuedItem1._() : super._();
@@ -7453,7 +7453,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       List<ExplanationOfBenefitProcessNote>? processNote,
       List<ExplanationOfBenefitBenefitBalance>? benefitBalance});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7564,11 +7564,11 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7716,7 +7716,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       precedence: freezed == precedence
           ? _value.precedence
           : precedence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       precedenceElement: freezed == precedenceElement
           ? _value.precedenceElement
           : precedenceElement // ignore: cast_nullable_to_non_nullable
@@ -7778,12 +7778,12 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8236,7 +8236,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
       List<ExplanationOfBenefitBenefitBalance>? benefitBalance});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8375,11 +8375,11 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8527,7 +8527,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       precedence: freezed == precedence
           ? _value.precedence
           : precedence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       precedenceElement: freezed == precedenceElement
           ? _value.precedenceElement
           : precedenceElement // ignore: cast_nullable_to_non_nullable
@@ -8679,7 +8679,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -8840,7 +8840,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   }
 
   @override
-  final Decimal? precedence;
+  final FhirDecimal? precedence;
   @override
   @JsonKey(name: '_precedence')
   final Element? precedenceElement;
@@ -9083,7 +9083,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
               final Stu3ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -9126,7 +9126,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final List<ExplanationOfBenefitCareTeam>? careTeam,
           final List<ExplanationOfBenefitDiagnosis>? diagnosis,
           final List<ExplanationOfBenefitProcedure>? procedure,
-          final Decimal? precedence,
+          final FhirDecimal? precedence,
           @JsonKey(name: '_precedence')
               final Element? precedenceElement,
           final ExplanationOfBenefitInsurance? insurance,
@@ -9736,7 +9736,7 @@ abstract class $ExplanationOfBenefitInformationCopyWith<$Res> {
           ExplanationOfBenefitInformation>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -9794,7 +9794,7 @@ class _$ExplanationOfBenefitInformationCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -9810,7 +9810,7 @@ class _$ExplanationOfBenefitInformationCopyWithImpl<$Res,
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -9973,7 +9973,7 @@ abstract class _$$_ExplanationOfBenefitInformationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept category,
       CodeableConcept? code,
@@ -10040,7 +10040,7 @@ class __$$_ExplanationOfBenefitInformationCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10056,7 +10056,7 @@ class __$$_ExplanationOfBenefitInformationCopyWithImpl<$Res>
       timingDate: freezed == timingDate
           ? _value.timingDate
           : timingDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       timingDateElement: freezed == timingDateElement
           ? _value.timingDateElement
           : timingDateElement // ignore: cast_nullable_to_non_nullable
@@ -10118,7 +10118,7 @@ class _$_ExplanationOfBenefitInformation
       _$$_ExplanationOfBenefitInformationFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -10127,7 +10127,7 @@ class _$_ExplanationOfBenefitInformation
   @override
   final CodeableConcept? code;
   @override
-  final Date? timingDate;
+  final FhirDate? timingDate;
   @override
   @JsonKey(name: '_timingDate')
   final Element? timingDateElement;
@@ -10220,11 +10220,11 @@ class _$_ExplanationOfBenefitInformation
 abstract class _ExplanationOfBenefitInformation
     extends ExplanationOfBenefitInformation {
   factory _ExplanationOfBenefitInformation(
-      {final Decimal? sequence,
+      {final FhirDecimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final CodeableConcept category,
       final CodeableConcept? code,
-      final Date? timingDate,
+      final FhirDate? timingDate,
       @JsonKey(name: '_timingDate') final Element? timingDateElement,
       final Period? timingPeriod,
       final String? valueString,
@@ -10306,7 +10306,7 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
           ExplanationOfBenefitCareTeam>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -10347,7 +10347,7 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10442,7 +10442,7 @@ abstract class _$$_ExplanationOfBenefitCareTeamCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference provider,
       FhirBoolean? responsible,
@@ -10487,7 +10487,7 @@ class __$$_ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10533,7 +10533,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
       _$$_ExplanationOfBenefitCareTeamFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -10597,7 +10597,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
 abstract class _ExplanationOfBenefitCareTeam
     extends ExplanationOfBenefitCareTeam {
   factory _ExplanationOfBenefitCareTeam(
-      {final Decimal? sequence,
+      {final FhirDecimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       required final Reference provider,
       final FhirBoolean? responsible,
@@ -10662,7 +10662,7 @@ abstract class $ExplanationOfBenefitDiagnosisCopyWith<$Res> {
           ExplanationOfBenefitDiagnosis>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -10700,7 +10700,7 @@ class _$ExplanationOfBenefitDiagnosisCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10784,7 +10784,7 @@ abstract class _$$_ExplanationOfBenefitDiagnosisCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
@@ -10825,7 +10825,7 @@ class __$$_ExplanationOfBenefitDiagnosisCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -10868,7 +10868,7 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
       _$$_ExplanationOfBenefitDiagnosisFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -10942,7 +10942,7 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
 abstract class _ExplanationOfBenefitDiagnosis
     extends ExplanationOfBenefitDiagnosis {
   factory _ExplanationOfBenefitDiagnosis(
-      {final Decimal? sequence,
+      {final FhirDecimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
       final CodeableConcept? diagnosisCodeableConcept,
       final Reference? diagnosisReference,
@@ -11004,7 +11004,7 @@ abstract class $ExplanationOfBenefitProcedureCopyWith<$Res> {
           ExplanationOfBenefitProcedure>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -11042,7 +11042,7 @@ class _$ExplanationOfBenefitProcedureCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -11050,7 +11050,7 @@ class _$ExplanationOfBenefitProcedureCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11126,7 +11126,7 @@ abstract class _$$_ExplanationOfBenefitProcedureCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
@@ -11167,7 +11167,7 @@ class __$$_ExplanationOfBenefitProcedureCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -11175,7 +11175,7 @@ class __$$_ExplanationOfBenefitProcedureCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11209,12 +11209,12 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
       _$$_ExplanationOfBenefitProcedureFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -11270,9 +11270,9 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
 abstract class _ExplanationOfBenefitProcedure
     extends ExplanationOfBenefitProcedure {
   factory _ExplanationOfBenefitProcedure(
-      {final Decimal? sequence,
+      {final FhirDecimal? sequence,
       @JsonKey(name: '_sequence') final Element? sequenceElement,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? procedureCodeableConcept,
       final Reference? procedureReference}) = _$_ExplanationOfBenefitProcedure;
@@ -11569,7 +11569,7 @@ abstract class $ExplanationOfBenefitAccidentCopyWith<$Res> {
           ExplanationOfBenefitAccident>;
   @useResult
   $Res call(
-      {Date? date,
+      {FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -11605,7 +11605,7 @@ class _$ExplanationOfBenefitAccidentCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11684,7 +11684,7 @@ abstract class _$$_ExplanationOfBenefitAccidentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Date? date,
+      {FhirDate? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
       Address? locationAddress,
@@ -11723,7 +11723,7 @@ class __$$_ExplanationOfBenefitAccidentCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -11759,7 +11759,7 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
       _$$_ExplanationOfBenefitAccidentFromJson(json);
 
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -11813,7 +11813,7 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
 abstract class _ExplanationOfBenefitAccident
     extends ExplanationOfBenefitAccident {
   factory _ExplanationOfBenefitAccident(
-      {final Date? date,
+      {final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final CodeableConcept? type,
       final Address? locationAddress,
@@ -11914,7 +11914,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       _$ExplanationOfBenefitItemCopyWithImpl<$Res, ExplanationOfBenefitItem>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       List<FhirPositiveInt>? careTeamLinkId,
@@ -12026,7 +12026,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -12086,7 +12086,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -12118,7 +12118,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -12342,7 +12342,7 @@ abstract class _$$_ExplanationOfBenefitItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
       List<FhirPositiveInt>? careTeamLinkId,
@@ -12466,7 +12466,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -12526,7 +12526,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -12558,7 +12558,7 @@ class __$$_ExplanationOfBenefitItemCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -12672,7 +12672,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       _$$_ExplanationOfBenefitItemFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -12792,7 +12792,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   }
 
   @override
-  final Date? servicedDate;
+  final FhirDate? servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
   final Element? servicedDateElement;
@@ -12809,7 +12809,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   @override
   final Money? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
@@ -13019,7 +13019,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
 
 abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   factory _ExplanationOfBenefitItem(
-          {final Decimal? sequence,
+          {final FhirDecimal? sequence,
           @JsonKey(name: '_sequence')
               final Element? sequenceElement,
           final List<FhirPositiveInt>? careTeamLinkId,
@@ -13039,7 +13039,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           final CodeableConcept? service,
           final List<CodeableConcept>? modifier,
           final List<CodeableConcept>? programCode,
-          final Date? servicedDate,
+          final FhirDate? servicedDate,
           @JsonKey(name: '_servicedDate')
               final Element? servicedDateElement,
           final Period? servicedPeriod,
@@ -13048,7 +13048,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           final Reference? locationReference,
           final Quantity? quantity,
           final Money? unitPrice,
-          final Decimal? factor,
+          final FhirDecimal? factor,
           @JsonKey(name: '_factor')
               final Element? factorElement,
           final Money? net,
@@ -13226,7 +13226,7 @@ class _$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res,
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -13340,7 +13340,7 @@ class __$$_ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -13372,7 +13372,7 @@ class _$_ExplanationOfBenefitAdjudication
   @override
   final Money? amount;
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -13423,7 +13423,7 @@ abstract class _ExplanationOfBenefitAdjudication
           {required final CodeableConcept category,
           final CodeableConcept? reason,
           final Money? amount,
-          final Decimal? value,
+          final FhirDecimal? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ExplanationOfBenefitAdjudication;
   _ExplanationOfBenefitAdjudication._() : super._();
@@ -13494,7 +13494,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
           ExplanationOfBenefitDetail>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept type,
       CodeableConcept? revenue,
@@ -13561,7 +13561,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -13601,7 +13601,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -13748,7 +13748,7 @@ abstract class _$$_ExplanationOfBenefitDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept type,
       CodeableConcept? revenue,
@@ -13823,7 +13823,7 @@ class __$$_ExplanationOfBenefitDetailCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -13863,7 +13863,7 @@ class __$$_ExplanationOfBenefitDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -13931,7 +13931,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
       _$$_ExplanationOfBenefitDetailFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -13968,7 +13968,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   @override
   final Money? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
@@ -14107,7 +14107,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
 
 abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   factory _ExplanationOfBenefitDetail(
-          {final Decimal? sequence,
+          {final FhirDecimal? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
           required final CodeableConcept type,
           final CodeableConcept? revenue,
@@ -14117,7 +14117,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           final List<CodeableConcept>? programCode,
           final Quantity? quantity,
           final Money? unitPrice,
-          final Decimal? factor,
+          final FhirDecimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<Reference>? udi,
@@ -14220,7 +14220,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
           ExplanationOfBenefitSubDetail>;
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept type,
       CodeableConcept? revenue,
@@ -14285,7 +14285,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14325,7 +14325,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res,
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -14468,7 +14468,7 @@ abstract class _$$_ExplanationOfBenefitSubDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? sequence,
+      {FhirDecimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept type,
       CodeableConcept? revenue,
@@ -14541,7 +14541,7 @@ class __$$_ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -14581,7 +14581,7 @@ class __$$_ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -14644,7 +14644,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
       _$$_ExplanationOfBenefitSubDetailFromJson(json);
 
   @override
-  final Decimal? sequence;
+  final FhirDecimal? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
@@ -14681,7 +14681,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   @override
   final Money? unitPrice;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
@@ -14808,7 +14808,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
 abstract class _ExplanationOfBenefitSubDetail
     extends ExplanationOfBenefitSubDetail {
   factory _ExplanationOfBenefitSubDetail(
-          {final Decimal? sequence,
+          {final FhirDecimal? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
           required final CodeableConcept type,
           final CodeableConcept? revenue,
@@ -14818,7 +14818,7 @@ abstract class _ExplanationOfBenefitSubDetail
           final List<CodeableConcept>? programCode,
           final Quantity? quantity,
           final Money? unitPrice,
-          final Decimal? factor,
+          final FhirDecimal? factor,
           @JsonKey(name: '_factor') final Element? factorElement,
           final Money? net,
           final List<Reference>? udi,
@@ -15875,7 +15875,7 @@ class _$ExplanationOfBenefitPaymentCopyWithImpl<$Res,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16033,7 +16033,7 @@ class __$$_ExplanationOfBenefitPaymentCopyWithImpl<$Res>
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -16073,7 +16073,7 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
   @override
   final CodeableConcept? adjustmentReason;
   @override
-  final Date? date;
+  final FhirDate? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
@@ -16131,7 +16131,7 @@ abstract class _ExplanationOfBenefitPayment
       {final CodeableConcept? type,
       final Money? adjustment,
       final CodeableConcept? adjustmentReason,
-      final Date? date,
+      final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       final Money? amount,
       final Identifier? identifier}) = _$_ExplanationOfBenefitPayment;
@@ -16192,7 +16192,7 @@ abstract class $ExplanationOfBenefitProcessNoteCopyWith<$Res> {
           ExplanationOfBenefitProcessNote>;
   @useResult
   $Res call(
-      {Decimal? number,
+      {FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
       CodeableConcept? type,
       String? text,
@@ -16230,7 +16230,7 @@ class _$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -16313,7 +16313,7 @@ abstract class _$$_ExplanationOfBenefitProcessNoteCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? number,
+      {FhirDecimal? number,
       @JsonKey(name: '_number') Element? numberElement,
       CodeableConcept? type,
       String? text,
@@ -16354,7 +16354,7 @@ class __$$_ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -16397,7 +16397,7 @@ class _$_ExplanationOfBenefitProcessNote
       _$$_ExplanationOfBenefitProcessNoteFromJson(json);
 
   @override
-  final Decimal? number;
+  final FhirDecimal? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
@@ -16456,7 +16456,7 @@ class _$_ExplanationOfBenefitProcessNote
 abstract class _ExplanationOfBenefitProcessNote
     extends ExplanationOfBenefitProcessNote {
   factory _ExplanationOfBenefitProcessNote(
-      {final Decimal? number,
+      {final FhirDecimal? number,
       @JsonKey(name: '_number') final Element? numberElement,
       final CodeableConcept? type,
       final String? text,
@@ -17108,7 +17108,7 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res,
       allowedUnsignedInt: freezed == allowedUnsignedInt
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       allowedUnsignedIntElement: freezed == allowedUnsignedIntElement
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -17128,7 +17128,7 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res,
       usedUnsignedInt: freezed == usedUnsignedInt
           ? _value.usedUnsignedInt
           : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       usedUnsignedIntElement: freezed == usedUnsignedIntElement
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -17274,7 +17274,7 @@ class __$$_ExplanationOfBenefitFinancialCopyWithImpl<$Res>
       allowedUnsignedInt: freezed == allowedUnsignedInt
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       allowedUnsignedIntElement: freezed == allowedUnsignedIntElement
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -17294,7 +17294,7 @@ class __$$_ExplanationOfBenefitFinancialCopyWithImpl<$Res>
       usedUnsignedInt: freezed == usedUnsignedInt
           ? _value.usedUnsignedInt
           : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       usedUnsignedIntElement: freezed == usedUnsignedIntElement
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -17329,7 +17329,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
   @override
   final CodeableConcept type;
   @override
-  final Decimal? allowedUnsignedInt;
+  final FhirDecimal? allowedUnsignedInt;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
   final Element? allowedUnsignedIntElement;
@@ -17341,7 +17341,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
   @override
   final Money? allowedMoney;
   @override
-  final Decimal? usedUnsignedInt;
+  final FhirDecimal? usedUnsignedInt;
   @override
   @JsonKey(name: '_usedUnsignedInt')
   final Element? usedUnsignedIntElement;
@@ -17411,14 +17411,14 @@ abstract class _ExplanationOfBenefitFinancial
     extends ExplanationOfBenefitFinancial {
   factory _ExplanationOfBenefitFinancial(
       {required final CodeableConcept type,
-      final Decimal? allowedUnsignedInt,
+      final FhirDecimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
           final Element? allowedUnsignedIntElement,
       final String? allowedString,
       @JsonKey(name: '_allowedString')
           final Element? allowedStringElement,
       final Money? allowedMoney,
-      final Decimal? usedUnsignedInt,
+      final FhirDecimal? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt')
           final Element? usedUnsignedIntElement,
       final Money? usedMoney}) = _$_ExplanationOfBenefitFinancial;

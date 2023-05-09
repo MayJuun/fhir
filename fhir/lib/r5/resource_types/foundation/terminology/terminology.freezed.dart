@@ -373,7 +373,7 @@ abstract class $CodeSystemCopyWith<$Res> {
       List<CodeSystemProperty>? property,
       List<CodeSystemConcept>? concept});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -494,11 +494,11 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -618,7 +618,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -634,7 +634,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -642,7 +642,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -658,7 +658,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -666,7 +666,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -750,7 +750,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -772,12 +772,12 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1203,7 +1203,7 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       List<CodeSystemConcept>? concept});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1348,11 +1348,11 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1472,7 +1472,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1488,7 +1488,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1496,7 +1496,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1512,7 +1512,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1520,7 +1520,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -1604,7 +1604,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -1759,7 +1759,7 @@ class _$_CodeSystem extends _CodeSystem {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -1940,7 +1940,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [description] A free text natural language description of the code system from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -1975,7 +1975,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [purpose] Explanation of why this code system is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -1984,7 +1984,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [copyright] A copyright statement relating to the code system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the code system.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -2002,7 +2002,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -2011,7 +2011,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -2155,7 +2155,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   /// [count] The total number of concepts defined by the code system. Where the code system has a compositional grammar, the basis of this count is defined by the system steward.
   @override
-  final UnsignedInt? count;
+  final FhirUnsignedInt? count;
 
   /// [countElement] ("_count") Extensions for count
   @override
@@ -2415,7 +2415,7 @@ abstract class _CodeSystem extends CodeSystem {
       {@JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -2457,24 +2457,24 @@ abstract class _CodeSystem extends CodeSystem {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -2501,7 +2501,7 @@ abstract class _CodeSystem extends CodeSystem {
       @JsonKey(name: '_content')
           final Element? contentElement,
       final FhirCanonical? supplements,
-      final UnsignedInt? count,
+      final FhirUnsignedInt? count,
       @JsonKey(name: '_count')
           final Element? countElement,
       final List<CodeSystemFilter>? filter,
@@ -5388,7 +5388,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -5412,7 +5412,7 @@ class _$CodeSystemProperty1CopyWithImpl<$Res, $Val extends CodeSystemProperty1>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -5637,7 +5637,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -5661,7 +5661,7 @@ class __$$_CodeSystemProperty1CopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -5797,7 +5797,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   /// [valueInteger] The value of this property.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -5824,7 +5824,7 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
 
   /// [valueDecimal] The value of this property.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -5927,13 +5927,13 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
           final Coding? valueCoding,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
-          final Integer? valueInteger,
+          final FhirInteger? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-          final Decimal? valueDecimal,
+          final FhirDecimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
       _$_CodeSystemProperty1;
   _CodeSystemProperty1._() : super._();
@@ -6369,7 +6369,7 @@ abstract class $ConceptMapCopyWith<$Res> {
           Element? targetScopeCanonicalElement,
       List<ConceptMapGroup>? group});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6480,11 +6480,11 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6604,7 +6604,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -6620,7 +6620,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -6628,7 +6628,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -6644,7 +6644,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -6652,7 +6652,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -6726,12 +6726,12 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7123,7 +7123,7 @@ abstract class _$$_ConceptMapCopyWith<$Res>
       List<ConceptMapGroup>? group});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7256,11 +7256,11 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7380,7 +7380,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -7396,7 +7396,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -7404,7 +7404,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -7420,7 +7420,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -7428,7 +7428,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -7623,7 +7623,7 @@ class _$_ConceptMap extends _ConceptMap {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -7804,7 +7804,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [description] A free text natural language description of the concept map from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -7839,7 +7839,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [purpose] Explanation of why this concept map is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -7848,7 +7848,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [copyright] A copyright statement relating to the concept map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the concept map.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -7866,7 +7866,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -7875,7 +7875,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -8211,7 +8211,7 @@ abstract class _ConceptMap extends ConceptMap {
       {@JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -8253,24 +8253,24 @@ abstract class _ConceptMap extends ConceptMap {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -10522,7 +10522,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10546,7 +10546,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10562,7 +10562,7 @@ class _$ConceptMapDependsOnCopyWithImpl<$Res, $Val extends ConceptMapDependsOn>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -10829,7 +10829,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -10853,7 +10853,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10869,7 +10869,7 @@ class __$$_ConceptMapDependsOnCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -11014,7 +11014,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueInteger] Property value that the map depends on.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -11041,7 +11041,7 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
 
   /// [valueDecimal] Property value that the map depends on.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -11182,13 +11182,13 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
       final Coding? valueCoding,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
       final FhirUri? valueUri,
       @JsonKey(name: '_valueUri') final Element? valueUriElement,
@@ -12290,7 +12290,7 @@ abstract class $NamingSystemCopyWith<$Res> {
           Element? usageElement,
       List<NamingSystemUniqueId> uniqueId});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -12400,11 +12400,11 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12524,7 +12524,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12540,7 +12540,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -12548,7 +12548,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -12564,7 +12564,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -12572,7 +12572,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -12642,12 +12642,12 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -13037,7 +13037,7 @@ abstract class _$$_NamingSystemCopyWith<$Res>
       List<NamingSystemUniqueId> uniqueId});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -13169,11 +13169,11 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -13293,7 +13293,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -13309,7 +13309,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -13317,7 +13317,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -13333,7 +13333,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -13341,7 +13341,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -13530,7 +13530,7 @@ class _$_NamingSystem extends _NamingSystem {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -13711,7 +13711,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [description] A free text natural language description of the naming system from a consumer's perspective. Details about what the namespace identifies including scope, granularity, version labeling, etc.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -13746,7 +13746,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [purpose] Explanation of why this naming system is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -13755,7 +13755,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [copyright] A copyright statement relating to the naming system and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the naming system.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -13773,7 +13773,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -13782,7 +13782,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -14109,7 +14109,7 @@ abstract class _NamingSystem extends NamingSystem {
       {@JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -14151,24 +14151,24 @@ abstract class _NamingSystem extends NamingSystem {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -15483,7 +15483,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
       TerminologyCapabilitiesTranslation? translation,
       TerminologyCapabilitiesClosure? closure});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -15590,11 +15590,11 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15714,7 +15714,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15730,7 +15730,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -15738,7 +15738,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -15808,12 +15808,12 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -16225,7 +16225,7 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
       TerminologyCapabilitiesClosure? closure});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -16356,11 +16356,11 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16480,7 +16480,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -16496,7 +16496,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -16504,7 +16504,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -16679,7 +16679,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -16860,7 +16860,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [description] A free text natural language description of the terminology capabilities from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -16895,7 +16895,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [purpose] Explanation of why this terminology capabilities is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -16904,7 +16904,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   /// [copyright] A copyright statement relating to the terminology capabilities and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the terminology capabilities.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -17170,7 +17170,7 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           {@JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -17212,15 +17212,15 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final String? copyrightLabel,
@@ -20301,7 +20301,7 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res,
       textFilter: freezed == textFilter
           ? _value.textFilter
           : textFilter // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textFilterElement: freezed == textFilterElement
           ? _value.textFilterElement
           : textFilterElement // ignore: cast_nullable_to_non_nullable
@@ -20461,7 +20461,7 @@ class __$$_TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       textFilter: freezed == textFilter
           ? _value.textFilter
           : textFilter // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       textFilterElement: freezed == textFilterElement
           ? _value.textFilterElement
           : textFilterElement // ignore: cast_nullable_to_non_nullable
@@ -20603,7 +20603,7 @@ class _$_TerminologyCapabilitiesExpansion
 
   /// [textFilter] Documentation about text searching works.
   @override
-  final Markdown? textFilter;
+  final FhirMarkdown? textFilter;
 
   /// [textFilterElement] ("_textFilter") Extensions for textFilter
   @override
@@ -20690,7 +20690,7 @@ abstract class _TerminologyCapabilitiesExpansion
           final FhirBoolean? incomplete,
           @JsonKey(name: '_incomplete') final Element? incompleteElement,
           final List<TerminologyCapabilitiesParameter>? parameter,
-          final Markdown? textFilter,
+          final FhirMarkdown? textFilter,
           @JsonKey(name: '_textFilter') final Element? textFilterElement}) =
       _$_TerminologyCapabilitiesExpansion;
   _TerminologyCapabilitiesExpansion._() : super._();
@@ -22697,7 +22697,7 @@ abstract class $ValueSetCopyWith<$Res> {
       ValueSetExpansion? expansion,
       ValueSetScope? scope});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -22804,11 +22804,11 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -22928,7 +22928,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -22944,7 +22944,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -22952,7 +22952,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -22968,7 +22968,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -22976,7 +22976,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -23034,12 +23034,12 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -23423,7 +23423,7 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       ValueSetScope? scope});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -23552,11 +23552,11 @@ class __$$_ValueSetCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -23676,7 +23676,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23692,7 +23692,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -23700,7 +23700,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -23716,7 +23716,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -23724,7 +23724,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -23895,7 +23895,7 @@ class _$_ValueSet extends _ValueSet {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -24076,7 +24076,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [description] A free text natural language description of the value set from a consumer's perspective. The textual description specifies the span of meanings for concepts to be included within the Value Set Expansion, and also may specify the intended use and limitations of the Value Set.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -24111,7 +24111,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [purpose] Explanation of why this value set is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -24120,7 +24120,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [copyright] A copyright statement relating to the value set and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the value set.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -24138,7 +24138,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -24147,7 +24147,7 @@ class _$_ValueSet extends _ValueSet {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -24447,7 +24447,7 @@ abstract class _ValueSet extends ValueSet {
       {@JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -24489,24 +24489,24 @@ abstract class _ValueSet extends ValueSet {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -24921,7 +24921,7 @@ class _$ValueSetComposeCopyWithImpl<$Res, $Val extends ValueSetCompose>
       lockedDate: freezed == lockedDate
           ? _value.lockedDate
           : lockedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lockedDateElement: freezed == lockedDateElement
           ? _value.lockedDateElement
           : lockedDateElement // ignore: cast_nullable_to_non_nullable
@@ -25044,7 +25044,7 @@ class __$$_ValueSetComposeCopyWithImpl<$Res>
       lockedDate: freezed == lockedDate
           ? _value.lockedDate
           : lockedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lockedDateElement: freezed == lockedDateElement
           ? _value.lockedDateElement
           : lockedDateElement // ignore: cast_nullable_to_non_nullable
@@ -25170,7 +25170,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   /// [lockedDate] The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.
   @override
-  final Date? lockedDate;
+  final FhirDate? lockedDate;
 
   /// [lockedDateElement] ("_lockedDate") Extensions for lockedDate
   @override
@@ -25302,7 +25302,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Date? lockedDate,
+          final FhirDate? lockedDate,
           @JsonKey(name: '_lockedDate') final Element? lockedDateElement,
           final FhirBoolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement,
@@ -27731,7 +27731,7 @@ class _$ValueSetExpansionCopyWithImpl<$Res, $Val extends ValueSetExpansion>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -27739,7 +27739,7 @@ class _$ValueSetExpansionCopyWithImpl<$Res, $Val extends ValueSetExpansion>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -27926,7 +27926,7 @@ class __$$_ValueSetExpansionCopyWithImpl<$Res>
       total: freezed == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       totalElement: freezed == totalElement
           ? _value.totalElement
           : totalElement // ignore: cast_nullable_to_non_nullable
@@ -27934,7 +27934,7 @@ class __$$_ValueSetExpansionCopyWithImpl<$Res>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -28079,7 +28079,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
   /// [total] The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
   @override
-  final Integer? total;
+  final FhirInteger? total;
 
   /// [totalElement] ("_total") Extensions for total
   @override
@@ -28088,7 +28088,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
   /// [offset] If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.
   @override
-  final Integer? offset;
+  final FhirInteger? offset;
 
   /// [offsetElement] ("_offset") Extensions for offset
   @override
@@ -28219,9 +28219,9 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       @JsonKey(name: '_next') final Element? nextElement,
       final FhirDateTime? timestamp,
       @JsonKey(name: '_timestamp') final Element? timestampElement,
-      final Integer? total,
+      final FhirInteger? total,
       @JsonKey(name: '_total') final Element? totalElement,
-      final Integer? offset,
+      final FhirInteger? offset,
       @JsonKey(name: '_offset') final Element? offsetElement,
       final List<ValueSetParameter>? parameter,
       final List<ValueSetProperty>? property,
@@ -28530,7 +28530,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -28538,7 +28538,7 @@ class _$ValueSetParameterCopyWithImpl<$Res, $Val extends ValueSetParameter>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -28785,7 +28785,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -28793,7 +28793,7 @@ class __$$_ValueSetParameterCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -28950,7 +28950,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 
   /// [valueInteger] The value of the parameter.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -28959,7 +28959,7 @@ class _$_ValueSetParameter extends _ValueSetParameter {
 
   /// [valueDecimal] The value of the parameter.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -29096,10 +29096,10 @@ abstract class _ValueSetParameter extends ValueSetParameter {
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean')
           final Element? valueBooleanElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger')
           final Element? valueIntegerElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
       final FhirUri? valueUri,
@@ -30732,7 +30732,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res, $Val extends ValueSetProperty1>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -30756,7 +30756,7 @@ class _$ValueSetProperty1CopyWithImpl<$Res, $Val extends ValueSetProperty1>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -30987,7 +30987,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -31011,7 +31011,7 @@ class __$$_ValueSetProperty1CopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -31153,7 +31153,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   /// [valueInteger] The value of this property.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -31180,7 +31180,7 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
 
   /// [valueDecimal] The value of this property.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -31300,13 +31300,13 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
       final Coding? valueCoding,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
       final List<ValueSetSubProperty>? subProperty}) = _$_ValueSetProperty1;
   _ValueSetProperty1._() : super._();
@@ -31625,7 +31625,7 @@ class _$ValueSetSubPropertyCopyWithImpl<$Res, $Val extends ValueSetSubProperty>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -31649,7 +31649,7 @@ class _$ValueSetSubPropertyCopyWithImpl<$Res, $Val extends ValueSetSubProperty>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -31874,7 +31874,7 @@ class __$$_ValueSetSubPropertyCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -31898,7 +31898,7 @@ class __$$_ValueSetSubPropertyCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -32034,7 +32034,7 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
 
   /// [valueInteger] The value of this subproperty.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -32061,7 +32061,7 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
 
   /// [valueDecimal] The value of this subproperty.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -32164,13 +32164,13 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
           final Coding? valueCoding,
           final String? valueString,
           @JsonKey(name: '_valueString') final Element? valueStringElement,
-          final Integer? valueInteger,
+          final FhirInteger? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-          final Decimal? valueDecimal,
+          final FhirDecimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
       _$_ValueSetSubProperty;
   _ValueSetSubProperty._() : super._();

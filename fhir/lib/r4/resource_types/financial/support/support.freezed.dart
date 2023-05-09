@@ -242,7 +242,7 @@ abstract class $CoverageCopyWith<$Res> {
           Element? subrogationElement,
       List<Reference>? contract});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -320,7 +320,7 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -416,7 +416,7 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
       order: freezed == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       orderElement: freezed == orderElement
           ? _value.orderElement
           : orderElement // ignore: cast_nullable_to_non_nullable
@@ -450,12 +450,12 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -692,7 +692,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       List<Reference>? contract});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -783,7 +783,7 @@ class __$$_CoverageCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -879,7 +879,7 @@ class __$$_CoverageCopyWithImpl<$Res>
       order: freezed == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       orderElement: freezed == orderElement
           ? _value.orderElement
           : orderElement // ignore: cast_nullable_to_non_nullable
@@ -987,7 +987,7 @@ class _$_Coverage extends _Coverage {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1204,7 +1204,7 @@ class _$_Coverage extends _Coverage {
   /// numbering and this does not imply primary, secondary etc. as the specific
   ///  positioning of coverages depends upon the episode of care.
   @override
-  final PositiveInt? order;
+  final FhirPositiveInt? order;
 
   /// [orderElement] Extensions for order
   @override
@@ -1393,7 +1393,7 @@ abstract class _Coverage extends Coverage {
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1424,7 +1424,7 @@ abstract class _Coverage extends Coverage {
       required final List<Reference> payor,
       @JsonKey(name: 'class')
           final List<CoverageClass>? class_,
-      final PositiveInt? order,
+      final FhirPositiveInt? order,
       @JsonKey(name: '_order')
           final Element? orderElement,
       final String? network,
@@ -3203,7 +3203,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       List<CoverageEligibilityRequestInsurance>? insurance,
       List<CoverageEligibilityRequestItem>? item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3276,7 +3276,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3340,7 +3340,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -3390,12 +3390,12 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3599,7 +3599,7 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
       List<CoverageEligibilityRequestItem>? item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3684,7 +3684,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3748,7 +3748,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -3866,7 +3866,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -4051,7 +4051,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   /// [servicedDate] The date or dates when the enclosed suite of services were
   ///  performed or completed.
   @override
-  final Date? servicedDate;
+  final FhirDate? servicedDate;
 
   /// [servicedDateElement] Extensions for servicedDate
   @override
@@ -4256,7 +4256,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -4277,7 +4277,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           @JsonKey(name: '_purpose')
               final List<Element?>? purposeElement,
           required final Reference patient,
-          final Date? servicedDate,
+          final FhirDate? servicedDate,
           @JsonKey(name: '_servicedDate')
               final Element? servicedDateElement,
           final Period? servicedPeriod,
@@ -4602,7 +4602,7 @@ class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res,
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4720,7 +4720,7 @@ class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
       sequence: freezed == sequence
           ? _value.sequence
           : sequence // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       sequenceElement: freezed == sequenceElement
           ? _value.sequenceElement
           : sequenceElement // ignore: cast_nullable_to_non_nullable
@@ -4831,7 +4831,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   /// [sequence] A number to uniquely identify supporting information entries.
   @override
-  final PositiveInt? sequence;
+  final FhirPositiveInt? sequence;
 
   /// [sequenceElement] Extensions for sequence
   @override
@@ -4916,7 +4916,7 @@ abstract class _CoverageEligibilityRequestSupportingInfo
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final PositiveInt? sequence,
+          final FhirPositiveInt? sequence,
           @JsonKey(name: '_sequence') final Element? sequenceElement,
           required final Reference information,
           final FhirBoolean? appliesToAll,
@@ -6954,7 +6954,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       CodeableConcept? form,
       List<CoverageEligibilityResponseError>? error});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7033,7 +7033,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7093,7 +7093,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -7163,12 +7163,12 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7399,7 +7399,7 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
       List<CoverageEligibilityResponseError>? error});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7492,7 +7492,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7552,7 +7552,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
       servicedDate: freezed == servicedDate
           ? _value.servicedDate
           : servicedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       servicedDateElement: freezed == servicedDateElement
           ? _value.servicedDateElement
           : servicedDateElement // ignore: cast_nullable_to_non_nullable
@@ -7696,7 +7696,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -7876,7 +7876,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   /// [servicedDate] The date or dates when the enclosed suite of services were
   ///  performed or completed.
   @override
-  final Date? servicedDate;
+  final FhirDate? servicedDate;
 
   /// [servicedDateElement] Extensions for servicedDate
   @override
@@ -8101,7 +8101,7 @@ abstract class _CoverageEligibilityResponse
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -8121,7 +8121,7 @@ abstract class _CoverageEligibilityResponse
       @JsonKey(name: '_purpose')
           final List<Element?>? purposeElement,
       required final Reference patient,
-      final Date? servicedDate,
+      final FhirDate? servicedDate,
       @JsonKey(name: '_servicedDate')
           final Element? servicedDateElement,
       final Period? servicedPeriod,
@@ -10156,7 +10156,7 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res,
       allowedUnsignedInt: freezed == allowedUnsignedInt
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       allowedUnsignedIntElement: freezed == allowedUnsignedIntElement
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -10176,7 +10176,7 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res,
       usedUnsignedInt: freezed == usedUnsignedInt
           ? _value.usedUnsignedInt
           : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       usedUnsignedIntElement: freezed == usedUnsignedIntElement
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -10366,7 +10366,7 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
       allowedUnsignedInt: freezed == allowedUnsignedInt
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       allowedUnsignedIntElement: freezed == allowedUnsignedIntElement
           ? _value.allowedUnsignedIntElement
           : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -10386,7 +10386,7 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
       usedUnsignedInt: freezed == usedUnsignedInt
           ? _value.usedUnsignedInt
           : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       usedUnsignedIntElement: freezed == usedUnsignedIntElement
           ? _value.usedUnsignedIntElement
           : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -10508,7 +10508,7 @@ class _$_CoverageEligibilityResponseBenefit
   /// [allowedUnsignedInt] The quantity of the benefit which is permitted under
   ///  the coverage.
   @override
-  final UnsignedInt? allowedUnsignedInt;
+  final FhirUnsignedInt? allowedUnsignedInt;
 
   /// [allowedUnsignedIntElement] Extensions for allowedUnsignedInt
   @override
@@ -10533,7 +10533,7 @@ class _$_CoverageEligibilityResponseBenefit
   /// [usedUnsignedInt] The quantity of the benefit which have been consumed to
   ///  date.
   @override
-  final UnsignedInt? usedUnsignedInt;
+  final FhirUnsignedInt? usedUnsignedInt;
 
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
   @override
@@ -10636,14 +10636,14 @@ abstract class _CoverageEligibilityResponseBenefit
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final UnsignedInt? allowedUnsignedInt,
+      final FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
           final Element? allowedUnsignedIntElement,
       final String? allowedString,
       @JsonKey(name: '_allowedString')
           final Element? allowedStringElement,
       final Money? allowedMoney,
-      final UnsignedInt? usedUnsignedInt,
+      final FhirUnsignedInt? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt')
           final Element? usedUnsignedIntElement,
       final String? usedString,
@@ -11249,7 +11249,7 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Reference? candidate,
       Reference? coverage});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11307,7 +11307,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11381,12 +11381,12 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11537,7 +11537,7 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
       Reference? coverage});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11602,7 +11602,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11727,7 +11727,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11981,7 +11981,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -12293,7 +12293,7 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       Reference? organization,
       Reference? requestProvider});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -12355,7 +12355,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12441,12 +12441,12 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -12614,7 +12614,7 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
       Reference? requestProvider});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12684,7 +12684,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12826,7 +12826,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -13102,7 +13102,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,

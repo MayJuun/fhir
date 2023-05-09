@@ -246,7 +246,7 @@ class _$AnnotationCopyWithImpl<$Res, $Val extends Annotation>
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -373,7 +373,7 @@ class __$$_AnnotationCopyWithImpl<$Res>
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
@@ -414,7 +414,7 @@ class _$_Annotation extends _Annotation {
   @JsonKey(name: '_authorString')
   final Element? authorStringElement;
   @override
-  final Time? time;
+  final FhirTime? time;
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -472,7 +472,7 @@ abstract class _Annotation extends Annotation {
       {final Reference? authorReference,
       final String? authorString,
       @JsonKey(name: '_authorString') final Element? authorStringElement,
-      final Time? time,
+      final FhirTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
       final String? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_Annotation;
@@ -641,7 +641,7 @@ class _$AttachmentCopyWithImpl<$Res, $Val extends Attachment>
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sizeElement: freezed == sizeElement
           ? _value.sizeElement
           : sizeElement // ignore: cast_nullable_to_non_nullable
@@ -878,7 +878,7 @@ class __$$_AttachmentCopyWithImpl<$Res>
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       sizeElement: freezed == sizeElement
           ? _value.sizeElement
           : sizeElement // ignore: cast_nullable_to_non_nullable
@@ -957,7 +957,7 @@ class _$_Attachment extends _Attachment {
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final Decimal? size;
+  final FhirDecimal? size;
   @override
   @JsonKey(name: '_size')
   final Element? sizeElement;
@@ -1061,7 +1061,7 @@ abstract class _Attachment extends Attachment {
           @JsonKey(name: '_data') final Element? dataElement,
           final String? url,
           @JsonKey(name: '_url') final Element? urlElement,
-          final Decimal? size,
+          final FhirDecimal? size,
           @JsonKey(name: '_size') final Element? sizeElement,
           final String? hash,
           @JsonKey(name: '_hash') final Element? hashElement,
@@ -2202,7 +2202,7 @@ abstract class $QuantityCopyWith<$Res> {
       _$QuantityCopyWithImpl<$Res, Quantity>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -2248,7 +2248,7 @@ class _$QuantityCopyWithImpl<$Res, $Val extends Quantity>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -2357,7 +2357,7 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -2406,7 +2406,7 @@ class __$$_QuantityCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -2467,7 +2467,7 @@ class _$_Quantity extends _Quantity {
       _$$_QuantityFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -2551,7 +2551,7 @@ class _$_Quantity extends _Quantity {
 
 abstract class _Quantity extends Quantity {
   factory _Quantity(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -2631,7 +2631,7 @@ abstract class $FhirDurationCopyWith<$Res> {
       _$FhirDurationCopyWithImpl<$Res, FhirDuration>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -2677,7 +2677,7 @@ class _$FhirDurationCopyWithImpl<$Res, $Val extends FhirDuration>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -2787,7 +2787,7 @@ abstract class _$$_FhirDurationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -2836,7 +2836,7 @@ class __$$_FhirDurationCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -2897,7 +2897,7 @@ class _$_FhirDuration extends _FhirDuration {
       _$$_FhirDurationFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -2981,7 +2981,7 @@ class _$_FhirDuration extends _FhirDuration {
 
 abstract class _FhirDuration extends FhirDuration {
   factory _FhirDuration(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -3061,7 +3061,7 @@ abstract class $DistanceCopyWith<$Res> {
       _$DistanceCopyWithImpl<$Res, Distance>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -3107,7 +3107,7 @@ class _$DistanceCopyWithImpl<$Res, $Val extends Distance>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3216,7 +3216,7 @@ abstract class _$$_DistanceCopyWith<$Res> implements $DistanceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -3265,7 +3265,7 @@ class __$$_DistanceCopyWithImpl<$Res>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3326,7 +3326,7 @@ class _$_Distance extends _Distance {
       _$$_DistanceFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -3410,7 +3410,7 @@ class _$_Distance extends _Distance {
 
 abstract class _Distance extends Distance {
   factory _Distance(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -3488,7 +3488,7 @@ abstract class $CountCopyWith<$Res> {
       _$CountCopyWithImpl<$Res, Count>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -3534,7 +3534,7 @@ class _$CountCopyWithImpl<$Res, $Val extends Count>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3642,7 +3642,7 @@ abstract class _$$_CountCopyWith<$Res> implements $CountCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -3689,7 +3689,7 @@ class __$$_CountCopyWithImpl<$Res> extends _$CountCopyWithImpl<$Res, _$_Count>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -3750,7 +3750,7 @@ class _$_Count extends _Count {
       _$$_CountFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -3834,7 +3834,7 @@ class _$_Count extends _Count {
 
 abstract class _Count extends Count {
   factory _Count(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -3912,7 +3912,7 @@ abstract class $MoneyCopyWith<$Res> {
       _$MoneyCopyWithImpl<$Res, Money>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -3958,7 +3958,7 @@ class _$MoneyCopyWithImpl<$Res, $Val extends Money>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4066,7 +4066,7 @@ abstract class _$$_MoneyCopyWith<$Res> implements $MoneyCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -4113,7 +4113,7 @@ class __$$_MoneyCopyWithImpl<$Res> extends _$MoneyCopyWithImpl<$Res, _$_Money>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4174,7 +4174,7 @@ class _$_Money extends _Money {
       _$$_MoneyFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -4258,7 +4258,7 @@ class _$_Money extends _Money {
 
 abstract class _Money extends Money {
   factory _Money(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -4336,7 +4336,7 @@ abstract class $AgeCopyWith<$Res> {
       _$AgeCopyWithImpl<$Res, Age>;
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -4381,7 +4381,7 @@ class _$AgeCopyWithImpl<$Res, $Val extends Age> implements $AgeCopyWith<$Res> {
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4489,7 +4489,7 @@ abstract class _$$_AgeCopyWith<$Res> implements $AgeCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Decimal? value,
+      {FhirDecimal? value,
       @JsonKey(name: '_value') Element? valueElement,
       QuantityComparator? comparator,
       @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -4536,7 +4536,7 @@ class __$$_AgeCopyWithImpl<$Res> extends _$AgeCopyWithImpl<$Res, _$_Age>
       value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
@@ -4596,7 +4596,7 @@ class _$_Age extends _Age {
   factory _$_Age.fromJson(Map<String, dynamic> json) => _$$_AgeFromJson(json);
 
   @override
-  final Decimal? value;
+  final FhirDecimal? value;
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
@@ -4680,7 +4680,7 @@ class _$_Age extends _Age {
 
 abstract class _Age extends Age {
   factory _Age(
-      {final Decimal? value,
+      {final FhirDecimal? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final QuantityComparator? comparator,
       @JsonKey(name: '_comparator') final Element? comparatorElement,
@@ -5417,7 +5417,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -5425,7 +5425,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5433,7 +5433,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       lowerLimit: freezed == lowerLimit
           ? _value.lowerLimit
           : lowerLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       lowerLimitElement: freezed == lowerLimitElement
           ? _value.lowerLimitElement
           : lowerLimitElement // ignore: cast_nullable_to_non_nullable
@@ -5441,7 +5441,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       upperLimit: freezed == upperLimit
           ? _value.upperLimit
           : upperLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       upperLimitElement: freezed == upperLimitElement
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
@@ -5449,7 +5449,7 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
       dimensions: freezed == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       dimensionsElement: freezed == dimensionsElement
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
@@ -5618,7 +5618,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -5626,7 +5626,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
@@ -5634,7 +5634,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       lowerLimit: freezed == lowerLimit
           ? _value.lowerLimit
           : lowerLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       lowerLimitElement: freezed == lowerLimitElement
           ? _value.lowerLimitElement
           : lowerLimitElement // ignore: cast_nullable_to_non_nullable
@@ -5642,7 +5642,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       upperLimit: freezed == upperLimit
           ? _value.upperLimit
           : upperLimit // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       upperLimitElement: freezed == upperLimitElement
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
@@ -5650,7 +5650,7 @@ class __$$_SampledDataCopyWithImpl<$Res>
       dimensions: freezed == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       dimensionsElement: freezed == dimensionsElement
           ? _value.dimensionsElement
           : dimensionsElement // ignore: cast_nullable_to_non_nullable
@@ -5692,27 +5692,27 @@ class _$_SampledData extends _SampledData {
   @override
   final Quantity origin;
   @override
-  final Decimal? period;
+  final FhirDecimal? period;
   @override
   @JsonKey(name: '_period')
   final Element? periodElement;
   @override
-  final Decimal? factor;
+  final FhirDecimal? factor;
   @override
   @JsonKey(name: '_factor')
   final Element? factorElement;
   @override
-  final Decimal? lowerLimit;
+  final FhirDecimal? lowerLimit;
   @override
   @JsonKey(name: '_lowerLimit')
   final Element? lowerLimitElement;
   @override
-  final Decimal? upperLimit;
+  final FhirDecimal? upperLimit;
   @override
   @JsonKey(name: '_upperLimit')
   final Element? upperLimitElement;
   @override
-  final Decimal? dimensions;
+  final FhirDecimal? dimensions;
   @override
   @JsonKey(name: '_dimensions')
   final Element? dimensionsElement;
@@ -5791,15 +5791,15 @@ class _$_SampledData extends _SampledData {
 abstract class _SampledData extends SampledData {
   factory _SampledData(
       {required final Quantity origin,
-      final Decimal? period,
+      final FhirDecimal? period,
       @JsonKey(name: '_period') final Element? periodElement,
-      final Decimal? factor,
+      final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
-      final Decimal? lowerLimit,
+      final FhirDecimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') final Element? lowerLimitElement,
-      final Decimal? upperLimit,
+      final FhirDecimal? upperLimit,
       @JsonKey(name: '_upperLimit') final Element? upperLimitElement,
-      final Decimal? dimensions,
+      final FhirDecimal? dimensions,
       @JsonKey(name: '_dimensions') final Element? dimensionsElement,
       final String? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
@@ -7724,7 +7724,7 @@ class _$ContactPointCopyWithImpl<$Res, $Val extends ContactPoint>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -7877,7 +7877,7 @@ class __$$_ContactPointCopyWithImpl<$Res>
       rank: freezed == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       rankElement: freezed == rankElement
           ? _value.rankElement
           : rankElement // ignore: cast_nullable_to_non_nullable
@@ -7924,7 +7924,7 @@ class _$_ContactPoint extends _ContactPoint {
   @JsonKey(name: '_use')
   final Element? useElement;
   @override
-  final Decimal? rank;
+  final FhirDecimal? rank;
   @override
   @JsonKey(name: '_rank')
   final Element? rankElement;
@@ -7983,7 +7983,7 @@ abstract class _ContactPoint extends ContactPoint {
       @JsonKey(name: '_value') final Element? valueElement,
       final ContactPointUse? use,
       @JsonKey(name: '_use') final Element? useElement,
-      final Decimal? rank,
+      final FhirDecimal? rank,
       @JsonKey(name: '_rank') final Element? rankElement,
       final Period? period}) = _$_ContactPoint;
   _ContactPoint._() : super._();
@@ -8449,7 +8449,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -8457,7 +8457,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       countMax: freezed == countMax
           ? _value.countMax
           : countMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countMaxElement: freezed == countMaxElement
           ? _value.countMaxElement
           : countMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8465,7 +8465,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -8473,7 +8473,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       durationMax: freezed == durationMax
           ? _value.durationMax
           : durationMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationMaxElement: freezed == durationMaxElement
           ? _value.durationMaxElement
           : durationMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8489,7 +8489,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       frequencyElement: freezed == frequencyElement
           ? _value.frequencyElement
           : frequencyElement // ignore: cast_nullable_to_non_nullable
@@ -8497,7 +8497,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       frequencyMax: freezed == frequencyMax
           ? _value.frequencyMax
           : frequencyMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       frequencyMaxElement: freezed == frequencyMaxElement
           ? _value.frequencyMaxElement
           : frequencyMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8505,7 +8505,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -8513,7 +8513,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       periodMax: freezed == periodMax
           ? _value.periodMax
           : periodMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodMaxElement: freezed == periodMaxElement
           ? _value.periodMaxElement
           : periodMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8553,7 +8553,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -8860,7 +8860,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -8868,7 +8868,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       countMax: freezed == countMax
           ? _value.countMax
           : countMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       countMaxElement: freezed == countMaxElement
           ? _value.countMaxElement
           : countMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8876,7 +8876,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationElement: freezed == durationElement
           ? _value.durationElement
           : durationElement // ignore: cast_nullable_to_non_nullable
@@ -8884,7 +8884,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       durationMax: freezed == durationMax
           ? _value.durationMax
           : durationMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       durationMaxElement: freezed == durationMaxElement
           ? _value.durationMaxElement
           : durationMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8900,7 +8900,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       frequency: freezed == frequency
           ? _value.frequency
           : frequency // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       frequencyElement: freezed == frequencyElement
           ? _value.frequencyElement
           : frequencyElement // ignore: cast_nullable_to_non_nullable
@@ -8908,7 +8908,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       frequencyMax: freezed == frequencyMax
           ? _value.frequencyMax
           : frequencyMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       frequencyMaxElement: freezed == frequencyMaxElement
           ? _value.frequencyMaxElement
           : frequencyMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8916,7 +8916,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodElement: freezed == periodElement
           ? _value.periodElement
           : periodElement // ignore: cast_nullable_to_non_nullable
@@ -8924,7 +8924,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       periodMax: freezed == periodMax
           ? _value.periodMax
           : periodMax // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       periodMaxElement: freezed == periodMaxElement
           ? _value.periodMaxElement
           : periodMaxElement // ignore: cast_nullable_to_non_nullable
@@ -8964,7 +8964,7 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
       offset: freezed == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       offsetElement: freezed == offsetElement
           ? _value.offsetElement
           : offsetElement // ignore: cast_nullable_to_non_nullable
@@ -9026,22 +9026,22 @@ class _$_TimingRepeat extends _TimingRepeat {
   @override
   final Period? boundsPeriod;
   @override
-  final Decimal? count;
+  final FhirDecimal? count;
   @override
   @JsonKey(name: '_count')
   final Element? countElement;
   @override
-  final Decimal? countMax;
+  final FhirDecimal? countMax;
   @override
   @JsonKey(name: '_countMax')
   final Element? countMaxElement;
   @override
-  final Decimal? duration;
+  final FhirDecimal? duration;
   @override
   @JsonKey(name: '_duration')
   final Element? durationElement;
   @override
-  final Decimal? durationMax;
+  final FhirDecimal? durationMax;
   @override
   @JsonKey(name: '_durationMax')
   final Element? durationMaxElement;
@@ -9051,22 +9051,22 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_durationUnit')
   final Element? durationUnitElement;
   @override
-  final Decimal? frequency;
+  final FhirDecimal? frequency;
   @override
   @JsonKey(name: '_frequency')
   final Element? frequencyElement;
   @override
-  final Decimal? frequencyMax;
+  final FhirDecimal? frequencyMax;
   @override
   @JsonKey(name: '_frequencyMax')
   final Element? frequencyMaxElement;
   @override
-  final Decimal? period;
+  final FhirDecimal? period;
   @override
   @JsonKey(name: '_period')
   final Element? periodElement;
   @override
-  final Decimal? periodMax;
+  final FhirDecimal? periodMax;
   @override
   @JsonKey(name: '_periodMax')
   final Element? periodMaxElement;
@@ -9141,7 +9141,7 @@ class _$_TimingRepeat extends _TimingRepeat {
   }
 
   @override
-  final Decimal? offset;
+  final FhirDecimal? offset;
   @override
   @JsonKey(name: '_offset')
   final Element? offsetElement;
@@ -9272,23 +9272,23 @@ abstract class _TimingRepeat extends TimingRepeat {
           {final FhirDuration? boundsDuration,
           final Range? boundsRange,
           final Period? boundsPeriod,
-          final Decimal? count,
+          final FhirDecimal? count,
           @JsonKey(name: '_count') final Element? countElement,
-          final Decimal? countMax,
+          final FhirDecimal? countMax,
           @JsonKey(name: '_countMax') final Element? countMaxElement,
-          final Decimal? duration,
+          final FhirDecimal? duration,
           @JsonKey(name: '_duration') final Element? durationElement,
-          final Decimal? durationMax,
+          final FhirDecimal? durationMax,
           @JsonKey(name: '_durationMax') final Element? durationMaxElement,
           final TimingRepeatDurationUnit? durationUnit,
           @JsonKey(name: '_durationUnit') final Element? durationUnitElement,
-          final Decimal? frequency,
+          final FhirDecimal? frequency,
           @JsonKey(name: '_frequency') final Element? frequencyElement,
-          final Decimal? frequencyMax,
+          final FhirDecimal? frequencyMax,
           @JsonKey(name: '_frequencyMax') final Element? frequencyMaxElement,
-          final Decimal? period,
+          final FhirDecimal? period,
           @JsonKey(name: '_period') final Element? periodElement,
-          final Decimal? periodMax,
+          final FhirDecimal? periodMax,
           @JsonKey(name: '_periodMax') final Element? periodMaxElement,
           final TimingRepeatPeriodUnit? periodUnit,
           @JsonKey(name: '_periodUnit') final Element? periodUnitElement,
@@ -9298,7 +9298,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_timeOfDay') final List<Element?>? timeOfDayElement,
           final List<TimingRepeatWhen>? when,
           @JsonKey(name: '_when') final List<Element?>? whenElement,
-          final Decimal? offset,
+          final FhirDecimal? offset,
           @JsonKey(name: '_offset') final Element? offsetElement}) =
       _$_TimingRepeat;
   _TimingRepeat._() : super._();

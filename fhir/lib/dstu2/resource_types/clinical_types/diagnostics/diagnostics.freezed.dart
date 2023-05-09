@@ -160,7 +160,7 @@ abstract class $ObservationCopyWith<$Res> {
       List<ObservationComponent>? component});
 
   $ElementCopyWith<$Res>? get idElement;
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -260,7 +260,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
@@ -268,7 +268,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -344,7 +344,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       issued: freezed == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -388,7 +388,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -462,12 +462,12 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -867,7 +867,7 @@ abstract class _$$_ObservationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get idElement;
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -992,7 +992,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
@@ -1000,7 +1000,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1076,7 +1076,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       issued: freezed == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -1120,7 +1120,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -1267,7 +1267,7 @@ class _$_Observation extends _Observation {
   @JsonKey(name: '_id')
   final Element? idElement;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1344,7 +1344,7 @@ class _$_Observation extends _Observation {
   @override
   final Period? effectivePeriod;
   @override
-  final Instant? issued;
+  final FhirInstant? issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -1376,7 +1376,7 @@ class _$_Observation extends _Observation {
   @override
   final Attachment? valueAttachment;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -1602,7 +1602,7 @@ abstract class _Observation extends Observation {
       final FhirId? id,
       @JsonKey(name: '_id')
           final Element? idElement,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -1627,7 +1627,7 @@ abstract class _Observation extends Observation {
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
-      final Instant? issued,
+      final FhirInstant? issued,
       @JsonKey(name: '_issued')
           final Element? issuedElement,
       final List<Reference>? performer,
@@ -1640,7 +1640,7 @@ abstract class _Observation extends Observation {
       final Ratio? valueRatio,
       final SampledData? valueSampledData,
       final Attachment? valueAttachment,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime')
           final Element? valueTimeElement,
       final FhirDateTime? valueDateTime,
@@ -1811,7 +1811,7 @@ abstract class $ObservationReferenceRangeCopyWith<$Res> {
       _$ObservationReferenceRangeCopyWithImpl<$Res, ObservationReferenceRange>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -1858,7 +1858,7 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1969,7 +1969,7 @@ abstract class _$$_ObservationReferenceRangeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2020,7 +2020,7 @@ class __$$_ObservationReferenceRangeCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2265,7 +2265,7 @@ abstract class $ObservationRelatedCopyWith<$Res> {
       _$ObservationRelatedCopyWithImpl<$Res, ObservationRelated>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2299,7 +2299,7 @@ class _$ObservationRelatedCopyWithImpl<$Res, $Val extends ObservationRelated>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2341,7 +2341,7 @@ abstract class _$$_ObservationRelatedCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2374,7 +2374,7 @@ class __$$_ObservationRelatedCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2587,7 +2587,7 @@ abstract class $ObservationComponentCopyWith<$Res> {
       _$ObservationComponentCopyWithImpl<$Res, ObservationComponent>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2661,7 +2661,7 @@ class _$ObservationComponentCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2713,7 +2713,7 @@ class _$ObservationComponentCopyWithImpl<$Res,
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -2892,7 +2892,7 @@ abstract class _$$_ObservationComponentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -2975,7 +2975,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3027,7 +3027,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -3144,7 +3144,7 @@ class _$_ObservationComponent extends _ObservationComponent {
   @override
   final Attachment? valueAttachment;
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
   @override
   @JsonKey(name: '_valueTime')
   final Element? valueTimeElement;
@@ -3273,7 +3273,7 @@ abstract class _ObservationComponent extends ObservationComponent {
           final Ratio? valueRatio,
           final SampledData? valueSampledData,
           final Attachment? valueAttachment,
-          final Time? valueTime,
+          final FhirTime? valueTime,
           @JsonKey(name: '_valueTime') final Element? valueTimeElement,
           final FhirDateTime? valueDateTime,
           @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
@@ -3372,7 +3372,7 @@ mixin _$DiagnosticReport {
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
-  Instant get issued => throw _privateConstructorUsedError;
+  FhirInstant get issued => throw _privateConstructorUsedError;
   @JsonKey(name: '_issued')
   Element? get issuedElement => throw _privateConstructorUsedError;
   Reference get performer => throw _privateConstructorUsedError;
@@ -3429,7 +3429,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
       Period? effectivePeriod,
-      Instant issued,
+      FhirInstant issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
       Reference performer,
@@ -3444,7 +3444,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<CodeableConcept>? codedDiagnosis,
       List<Attachment>? presentedForm});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3515,11 +3515,11 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3595,7 +3595,7 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       issued: null == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -3645,12 +3645,12 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3837,7 +3837,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
       Period? effectivePeriod,
-      Instant issued,
+      FhirInstant issued,
       @JsonKey(name: '_issued')
           Element? issuedElement,
       Reference performer,
@@ -3853,7 +3853,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       List<Attachment>? presentedForm});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3935,11 +3935,11 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4015,7 +4015,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       issued: null == issued
           ? _value.issued
           : issued // ignore: cast_nullable_to_non_nullable
-              as Instant,
+              as FhirInstant,
       issuedElement: freezed == issuedElement
           ? _value.issuedElement
           : issuedElement // ignore: cast_nullable_to_non_nullable
@@ -4132,7 +4132,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -4209,7 +4209,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final Period? effectivePeriod;
   @override
-  final Instant issued;
+  final FhirInstant issued;
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
@@ -4416,7 +4416,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -4441,7 +4441,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
-      required final Instant issued,
+      required final FhirInstant issued,
       @JsonKey(name: '_issued')
           final Element? issuedElement,
       required final Reference performer,
@@ -4510,7 +4510,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   Period? get effectivePeriod;
   @override
-  Instant get issued;
+  FhirInstant get issued;
   @override
   @JsonKey(name: '_issued')
   Element? get issuedElement;
@@ -4571,7 +4571,7 @@ abstract class $DiagnosticReportImageCopyWith<$Res> {
       _$DiagnosticReportImageCopyWithImpl<$Res, DiagnosticReportImage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? comment,
@@ -4607,7 +4607,7 @@ class _$DiagnosticReportImageCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4661,7 +4661,7 @@ abstract class _$$_DiagnosticReportImageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? comment,
@@ -4696,7 +4696,7 @@ class __$$_DiagnosticReportImageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4923,7 +4923,7 @@ abstract class $DiagnosticOrderCopyWith<$Res> {
       List<DiagnosticOrderItem>? item,
       List<Annotation>? note});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get orderer;
@@ -4973,11 +4973,11 @@ class _$DiagnosticOrderCopyWithImpl<$Res, $Val extends DiagnosticOrder>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5055,12 +5055,12 @@ class _$DiagnosticOrderCopyWithImpl<$Res, $Val extends DiagnosticOrder>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5146,7 +5146,7 @@ abstract class _$$_DiagnosticOrderCopyWith<$Res>
       List<Annotation>? note});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -5198,11 +5198,11 @@ class __$$_DiagnosticOrderCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5329,7 +5329,7 @@ class _$_DiagnosticOrder extends _DiagnosticOrder {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -5540,7 +5540,7 @@ abstract class _DiagnosticOrder extends DiagnosticOrder {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -5649,7 +5649,7 @@ abstract class $DiagnosticOrderEventCopyWith<$Res> {
       _$DiagnosticOrderEventCopyWithImpl<$Res, DiagnosticOrderEvent>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EventStatus.unknown) EventStatus status,
@@ -5687,7 +5687,7 @@ class _$DiagnosticOrderEventCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5749,7 +5749,7 @@ abstract class _$$_DiagnosticOrderEventCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EventStatus.unknown) EventStatus status,
@@ -5786,7 +5786,7 @@ class __$$_DiagnosticOrderEventCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5986,7 +5986,7 @@ abstract class $DiagnosticOrderItemCopyWith<$Res> {
       _$DiagnosticOrderItemCopyWithImpl<$Res, DiagnosticOrderItem>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -6025,7 +6025,7 @@ class _$DiagnosticOrderItemCopyWithImpl<$Res, $Val extends DiagnosticOrderItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6087,7 +6087,7 @@ abstract class _$$_DiagnosticOrderItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -6126,7 +6126,7 @@ class __$$_DiagnosticOrderItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6402,7 +6402,7 @@ abstract class $SpecimenCopyWith<$Res> {
       List<SpecimenTreatment>? treatment,
       List<SpecimenContainer>? container});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6459,11 +6459,11 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6549,12 +6549,12 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6704,7 +6704,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
       List<SpecimenContainer>? container});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6768,11 +6768,11 @@ class __$$_SpecimenCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6909,7 +6909,7 @@ class _$_Specimen extends _Specimen {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -7112,7 +7112,7 @@ abstract class _Specimen extends Specimen {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7238,7 +7238,7 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       _$SpecimenCollectionCopyWithImpl<$Res, SpecimenCollection>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       List<FhirExtension>? modifierExtension,
@@ -7289,7 +7289,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res, $Val extends SpecimenCollection>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7419,7 +7419,7 @@ abstract class _$$_SpecimenCollectionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       List<FhirExtension>? modifierExtension,
@@ -7474,7 +7474,7 @@ class __$$_SpecimenCollectionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7758,7 +7758,7 @@ abstract class $SpecimenTreatmentCopyWith<$Res> {
       _$SpecimenTreatmentCopyWithImpl<$Res, SpecimenTreatment>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? description,
@@ -7792,7 +7792,7 @@ class _$SpecimenTreatmentCopyWithImpl<$Res, $Val extends SpecimenTreatment>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7838,7 +7838,7 @@ abstract class _$$_SpecimenTreatmentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? description,
@@ -7871,7 +7871,7 @@ class __$$_SpecimenTreatmentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8067,7 +8067,7 @@ abstract class $SpecimenContainerCopyWith<$Res> {
       _$SpecimenContainerCopyWithImpl<$Res, SpecimenContainer>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
@@ -8116,7 +8116,7 @@ class _$SpecimenContainerCopyWithImpl<$Res, $Val extends SpecimenContainer>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8243,7 +8243,7 @@ abstract class _$$_SpecimenContainerCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
@@ -8296,7 +8296,7 @@ class __$$_SpecimenContainerCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8581,7 +8581,7 @@ abstract class $BodySiteCopyWith<$Res> {
       String? description,
       List<Attachment>? image});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res>? get code;
@@ -8624,11 +8624,11 @@ class _$BodySiteCopyWithImpl<$Res, $Val extends BodySite>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8682,12 +8682,12 @@ class _$BodySiteCopyWithImpl<$Res, $Val extends BodySite>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8752,7 +8752,7 @@ abstract class _$$_BodySiteCopyWith<$Res> implements $BodySiteCopyWith<$Res> {
       List<Attachment>? image});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -8796,11 +8796,11 @@ class __$$_BodySiteCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8891,7 +8891,7 @@ class _$_BodySite extends _BodySite {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -9040,7 +9040,7 @@ abstract class _BodySite extends BodySite {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
       final Narrative? text,
@@ -9122,7 +9122,7 @@ mixin _$ImagingStudy {
   @JsonKey(name: '_started')
   Element? get startedElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   Identifier? get accession => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get order => throw _privateConstructorUsedError;
@@ -9132,10 +9132,10 @@ mixin _$ImagingStudy {
   ImagingStudyAvailability? get availability =>
       throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
-  UnsignedInt get numberOfSeries => throw _privateConstructorUsedError;
+  FhirUnsignedInt get numberOfSeries => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfSeries')
   Element? get numberOfSeriesElement => throw _privateConstructorUsedError;
-  UnsignedInt get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt get numberOfInstances => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement => throw _privateConstructorUsedError;
   List<Reference>? get procedure => throw _privateConstructorUsedError;
@@ -9177,7 +9177,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @JsonKey(name: '_started')
           Element? startedElement,
       Reference patient,
-      FhirOid? uid,
+      FhirOid uid,
       Identifier? accession,
       List<Identifier>? identifier,
       List<Reference>? order,
@@ -9186,10 +9186,10 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
           ImagingStudyAvailability? availability,
       FhirUri? url,
-      UnsignedInt numberOfSeries,
+      FhirUnsignedInt numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           Element? numberOfSeriesElement,
-      UnsignedInt numberOfInstances,
+      FhirUnsignedInt numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       List<Reference>? procedure,
@@ -9199,7 +9199,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
           Element? descriptionElement,
       List<ImagingStudySeries>? series});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -9266,11 +9266,11 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9318,7 +9318,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       accession: freezed == accession
           ? _value.accession
           : accession // ignore: cast_nullable_to_non_nullable
@@ -9350,7 +9350,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       numberOfSeries: null == numberOfSeries
           ? _value.numberOfSeries
           : numberOfSeries // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfSeriesElement: freezed == numberOfSeriesElement
           ? _value.numberOfSeriesElement
           : numberOfSeriesElement // ignore: cast_nullable_to_non_nullable
@@ -9358,7 +9358,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       numberOfInstances: null == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -9388,12 +9388,12 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9555,7 +9555,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @JsonKey(name: '_started')
           Element? startedElement,
       Reference patient,
-      FhirOid? uid,
+      FhirOid uid,
       Identifier? accession,
       List<Identifier>? identifier,
       List<Reference>? order,
@@ -9564,10 +9564,10 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
           ImagingStudyAvailability? availability,
       FhirUri? url,
-      UnsignedInt numberOfSeries,
+      FhirUnsignedInt numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           Element? numberOfSeriesElement,
-      UnsignedInt numberOfInstances,
+      FhirUnsignedInt numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       List<Reference>? procedure,
@@ -9578,7 +9578,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       List<ImagingStudySeries>? series});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9654,11 +9654,11 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9706,7 +9706,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       accession: freezed == accession
           ? _value.accession
           : accession // ignore: cast_nullable_to_non_nullable
@@ -9738,7 +9738,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       numberOfSeries: null == numberOfSeries
           ? _value.numberOfSeries
           : numberOfSeries // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfSeriesElement: freezed == numberOfSeriesElement
           ? _value.numberOfSeriesElement
           : numberOfSeriesElement // ignore: cast_nullable_to_non_nullable
@@ -9746,7 +9746,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       numberOfInstances: null == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -9838,7 +9838,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -9891,7 +9891,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   final Reference patient;
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   final Identifier? accession;
   final List<Identifier>? _identifier;
@@ -9932,12 +9932,12 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   final FhirUri? url;
   @override
-  final UnsignedInt numberOfSeries;
+  final FhirUnsignedInt numberOfSeries;
   @override
   @JsonKey(name: '_numberOfSeries')
   final Element? numberOfSeriesElement;
   @override
-  final UnsignedInt numberOfInstances;
+  final FhirUnsignedInt numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
@@ -10090,7 +10090,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10106,7 +10106,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       @JsonKey(name: '_started')
           final Element? startedElement,
       required final Reference patient,
-      required final Oid uid,
+      required final FhirOid uid,
       final Identifier? accession,
       final List<Identifier>? identifier,
       final List<Reference>? order,
@@ -10115,10 +10115,10 @@ abstract class _ImagingStudy extends ImagingStudy {
       @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
           final ImagingStudyAvailability? availability,
       final FhirUri? url,
-      required final UnsignedInt numberOfSeries,
+      required final FhirUnsignedInt numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           final Element? numberOfSeriesElement,
-      required final UnsignedInt numberOfInstances,
+      required final FhirUnsignedInt numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           final Element? numberOfInstancesElement,
       final List<Reference>? procedure,
@@ -10166,7 +10166,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   Reference get patient;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   Identifier? get accession;
   @override
@@ -10183,12 +10183,12 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   FhirUri? get url;
   @override
-  UnsignedInt get numberOfSeries;
+  FhirUnsignedInt get numberOfSeries;
   @override
   @JsonKey(name: '_numberOfSeries')
   Element? get numberOfSeriesElement;
   @override
-  UnsignedInt get numberOfInstances;
+  FhirUnsignedInt get numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement;
@@ -10224,13 +10224,13 @@ mixin _$ImagingStudySeries {
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   Coding get modality => throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  UnsignedInt get numberOfInstances => throw _privateConstructorUsedError;
+  FhirUnsignedInt get numberOfInstances => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
@@ -10257,7 +10257,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       _$ImagingStudySeriesCopyWithImpl<$Res, ImagingStudySeries>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -10265,13 +10265,13 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       @JsonKey(name: '_number')
           Element? numberElement,
       Coding modality,
-      FhirOid? uid,
+      FhirOid uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      UnsignedInt numberOfInstances,
+      FhirUnsignedInt numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
@@ -10331,7 +10331,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10343,7 +10343,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -10355,7 +10355,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -10371,7 +10371,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       numberOfInstances: null == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -10509,7 +10509,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -10517,13 +10517,13 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       @JsonKey(name: '_number')
           Element? numberElement,
       Coding modality,
-      FhirOid? uid,
+      FhirOid uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      UnsignedInt numberOfInstances,
+      FhirUnsignedInt numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           Element? numberOfInstancesElement,
       @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
@@ -10589,7 +10589,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10601,7 +10601,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -10613,7 +10613,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -10629,7 +10629,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       numberOfInstances: null == numberOfInstances
           ? _value.numberOfInstances
           : numberOfInstances // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt,
+              as FhirUnsignedInt,
       numberOfInstancesElement: freezed == numberOfInstancesElement
           ? _value.numberOfInstancesElement
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
@@ -10722,14 +10722,14 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   }
 
   @override
-  final UnsignedInt? number;
+  final FhirUnsignedInt? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
   @override
   final Coding modality;
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -10739,7 +10739,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final UnsignedInt numberOfInstances;
+  final FhirUnsignedInt numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
@@ -10858,17 +10858,17 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final UnsignedInt? number,
+          final FhirUnsignedInt? number,
           @JsonKey(name: '_number')
               final Element? numberElement,
           required final Coding modality,
-          required final Oid uid,
+          required final FhirOid uid,
           @JsonKey(name: '_uid')
               final Element? uidElement,
           final String? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
-          required final UnsignedInt numberOfInstances,
+          required final FhirUnsignedInt numberOfInstances,
           @JsonKey(name: '_numberOfInstances')
               final Element? numberOfInstancesElement,
           @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
@@ -10901,7 +10901,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
   Coding get modality;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -10911,7 +10911,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  UnsignedInt get numberOfInstances;
+  FhirUnsignedInt get numberOfInstances;
   @override
   @JsonKey(name: '_numberOfInstances')
   Element? get numberOfInstancesElement;
@@ -10952,10 +10952,10 @@ mixin _$ImagingStudySeriesInstance {
   FhirUnsignedInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
-  FhirOid? get sopClass => throw _privateConstructorUsedError;
+  FhirOid get sopClass => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
@@ -10976,14 +10976,14 @@ abstract class $ImagingStudySeriesInstanceCopyWith<$Res> {
           ImagingStudySeriesInstance>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      FhirOid? uid,
+      FhirOid uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      FhirOid? sopClass,
+      FhirOid sopClass,
       String? type,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -11025,7 +11025,7 @@ class _$ImagingStudySeriesInstanceCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11037,7 +11037,7 @@ class _$ImagingStudySeriesInstanceCopyWithImpl<$Res,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -11045,7 +11045,7 @@ class _$ImagingStudySeriesInstanceCopyWithImpl<$Res,
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -11053,7 +11053,7 @@ class _$ImagingStudySeriesInstanceCopyWithImpl<$Res,
       sopClass: null == sopClass
           ? _value.sopClass
           : sopClass // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -11120,14 +11120,14 @@ abstract class _$$_ImagingStudySeriesInstanceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
-      FhirOid? uid,
+      FhirOid uid,
       @JsonKey(name: '_uid') Element? uidElement,
-      FhirOid? sopClass,
+      FhirOid sopClass,
       String? type,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
@@ -11171,7 +11171,7 @@ class __$$_ImagingStudySeriesInstanceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11183,7 +11183,7 @@ class __$$_ImagingStudySeriesInstanceCopyWithImpl<$Res>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       numberElement: freezed == numberElement
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
@@ -11191,7 +11191,7 @@ class __$$_ImagingStudySeriesInstanceCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -11199,7 +11199,7 @@ class __$$_ImagingStudySeriesInstanceCopyWithImpl<$Res>
       sopClass: null == sopClass
           ? _value.sopClass
           : sopClass // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -11269,17 +11269,17 @@ class _$_ImagingStudySeriesInstance extends _ImagingStudySeriesInstance {
   }
 
   @override
-  final UnsignedInt? number;
+  final FhirUnsignedInt? number;
   @override
   @JsonKey(name: '_number')
   final Element? numberElement;
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
   @override
-  final Oid sopClass;
+  final FhirOid sopClass;
   @override
   final String? type;
   @override
@@ -11364,11 +11364,11 @@ abstract class _ImagingStudySeriesInstance extends ImagingStudySeriesInstance {
       {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final UnsignedInt? number,
+      final FhirUnsignedInt? number,
       @JsonKey(name: '_number') final Element? numberElement,
-      required final Oid uid,
+      required final FhirOid uid,
       @JsonKey(name: '_uid') final Element? uidElement,
-      required final Oid sopClass,
+      required final FhirOid sopClass,
       final String? type,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
@@ -11391,12 +11391,12 @@ abstract class _ImagingStudySeriesInstance extends ImagingStudySeriesInstance {
   @JsonKey(name: '_number')
   Element? get numberElement;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
   @override
-  FhirOid? get sopClass;
+  FhirOid get sopClass;
   @override
   String? get type;
   @override
@@ -11431,7 +11431,7 @@ mixin _$ImagingObjectSelection {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   CodeableConcept get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -11464,7 +11464,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? uid,
+      FhirOid uid,
       Reference patient,
       CodeableConcept title,
       String? description,
@@ -11472,7 +11472,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
       FhirDateTime? authoringTime,
       List<ImagingObjectSelectionStudy> study});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res> get title;
@@ -11518,11 +11518,11 @@ class _$ImagingObjectSelectionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11550,7 +11550,7 @@ class _$ImagingObjectSelectionCopyWithImpl<$Res,
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       patient: null == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -11580,12 +11580,12 @@ class _$ImagingObjectSelectionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11651,7 +11651,7 @@ abstract class _$$_ImagingObjectSelectionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? uid,
+      FhirOid uid,
       Reference patient,
       CodeableConcept title,
       String? description,
@@ -11660,7 +11660,7 @@ abstract class _$$_ImagingObjectSelectionCopyWith<$Res>
       List<ImagingObjectSelectionStudy> study});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -11708,11 +11708,11 @@ class __$$_ImagingObjectSelectionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11740,7 +11740,7 @@ class __$$_ImagingObjectSelectionCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       patient: null == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -11806,7 +11806,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -11846,7 +11846,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   }
 
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   final Reference patient;
   @override
@@ -11942,7 +11942,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
               final Dstu2ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           final FhirCode? language,
           final Narrative? text,
@@ -11950,7 +11950,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Oid uid,
+          required final FhirOid uid,
           required final Reference patient,
           required final CodeableConcept title,
           final String? description,
@@ -11984,7 +11984,7 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   Reference get patient;
   @override
@@ -12015,7 +12015,7 @@ mixin _$ImagingObjectSelectionStudy {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
   Reference? get imagingStudy => throw _privateConstructorUsedError;
   @JsonKey(required: true)
@@ -12037,10 +12037,10 @@ abstract class $ImagingObjectSelectionStudyCopyWith<$Res> {
           ImagingObjectSelectionStudy>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? uid,
+      FhirOid uid,
       FhirUri? url,
       Reference? imagingStudy,
       @JsonKey(required: true) List<ImagingObjectSelectionStudySeries> series});
@@ -12074,7 +12074,7 @@ class _$ImagingObjectSelectionStudyCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12086,7 +12086,7 @@ class _$ImagingObjectSelectionStudyCopyWithImpl<$Res,
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12125,10 +12125,10 @@ abstract class _$$_ImagingObjectSelectionStudyCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? uid,
+      FhirOid uid,
       FhirUri? url,
       Reference? imagingStudy,
       @JsonKey(required: true) List<ImagingObjectSelectionStudySeries> series});
@@ -12162,7 +12162,7 @@ class __$$_ImagingObjectSelectionStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12174,7 +12174,7 @@ class __$$_ImagingObjectSelectionStudyCopyWithImpl<$Res>
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12237,7 +12237,7 @@ class _$_ImagingObjectSelectionStudy extends _ImagingObjectSelectionStudy {
   }
 
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   final FhirUri? url;
   @override
@@ -12307,7 +12307,7 @@ abstract class _ImagingObjectSelectionStudy
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Oid uid,
+          required final FhirOid uid,
           final FhirUri? url,
           final Reference? imagingStudy,
           @JsonKey(required: true)
@@ -12326,7 +12326,7 @@ abstract class _ImagingObjectSelectionStudy
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   FhirUri? get url;
   @override
@@ -12373,7 +12373,7 @@ abstract class $ImagingObjectSelectionStudySeriesCopyWith<$Res> {
           ImagingObjectSelectionStudySeries>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -12408,7 +12408,7 @@ class _$ImagingObjectSelectionStudySeriesCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12420,7 +12420,7 @@ class _$ImagingObjectSelectionStudySeriesCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12443,7 +12443,7 @@ abstract class _$$_ImagingObjectSelectionStudySeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -12477,7 +12477,7 @@ class __$$_ImagingObjectSelectionStudySeriesCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12489,7 +12489,7 @@ class __$$_ImagingObjectSelectionStudySeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12549,7 +12549,7 @@ class _$_ImagingObjectSelectionStudySeries
   }
 
   @override
-  final Oid? uid;
+  final FhirOid? uid;
   @override
   final FhirUri? url;
   final List<ImagingObjectSelectionSeriesInstance> _instance;
@@ -12615,7 +12615,7 @@ abstract class _ImagingObjectSelectionStudySeries
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Oid? uid,
+      final FhirOid? uid,
       final FhirUri? url,
       @JsonKey(required: true)
           required final List<ImagingObjectSelectionSeriesInstance>
@@ -12659,8 +12659,8 @@ mixin _$ImagingObjectSelectionSeriesInstance {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  FhirOid? get sopClass => throw _privateConstructorUsedError;
-  FhirOid? get uid => throw _privateConstructorUsedError;
+  FhirOid get sopClass => throw _privateConstructorUsedError;
+  FhirOid get uid => throw _privateConstructorUsedError;
   FhirUri get url => throw _privateConstructorUsedError;
   List<ImagingObjectSelectionInstanceFrames>? get frames =>
       throw _privateConstructorUsedError;
@@ -12681,11 +12681,11 @@ abstract class $ImagingObjectSelectionSeriesInstanceCopyWith<$Res> {
           ImagingObjectSelectionSeriesInstance>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? sopClass,
-      FhirOid? uid,
+      FhirOid sopClass,
+      FhirOid uid,
       FhirUri url,
       List<ImagingObjectSelectionInstanceFrames>? frames});
 }
@@ -12716,7 +12716,7 @@ class _$ImagingObjectSelectionSeriesInstanceCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12728,11 +12728,11 @@ class _$ImagingObjectSelectionSeriesInstanceCopyWithImpl<$Res,
       sopClass: null == sopClass
           ? _value.sopClass
           : sopClass // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12755,11 +12755,11 @@ abstract class _$$_ImagingObjectSelectionSeriesInstanceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      FhirOid? sopClass,
-      FhirOid? uid,
+      FhirOid sopClass,
+      FhirOid uid,
       FhirUri url,
       List<ImagingObjectSelectionInstanceFrames>? frames});
 }
@@ -12789,7 +12789,7 @@ class __$$_ImagingObjectSelectionSeriesInstanceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12801,11 +12801,11 @@ class __$$_ImagingObjectSelectionSeriesInstanceCopyWithImpl<$Res>
       sopClass: null == sopClass
           ? _value.sopClass
           : sopClass // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       uid: null == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Oid,
+              as FhirOid,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -12864,9 +12864,9 @@ class _$_ImagingObjectSelectionSeriesInstance
   }
 
   @override
-  final Oid sopClass;
+  final FhirOid sopClass;
   @override
-  final Oid uid;
+  final FhirOid uid;
   @override
   final FhirUri url;
   final List<ImagingObjectSelectionInstanceFrames>? _frames;
@@ -12935,8 +12935,8 @@ abstract class _ImagingObjectSelectionSeriesInstance
           {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Oid sopClass,
-          required final Oid uid,
+          required final FhirOid sopClass,
+          required final FhirOid uid,
           required final FhirUri url,
           final List<ImagingObjectSelectionInstanceFrames>? frames}) =
       _$_ImagingObjectSelectionSeriesInstance;
@@ -12954,9 +12954,9 @@ abstract class _ImagingObjectSelectionSeriesInstance
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  FhirOid? get sopClass;
+  FhirOid get sopClass;
   @override
-  FhirOid? get uid;
+  FhirOid get uid;
   @override
   FhirUri get url;
   @override
@@ -12998,7 +12998,7 @@ abstract class $ImagingObjectSelectionInstanceFramesCopyWith<$Res> {
           ImagingObjectSelectionInstanceFrames>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExte,
       List<FhirUnsignedInt> frameNumbers,
@@ -13031,7 +13031,7 @@ class _$ImagingObjectSelectionInstanceFramesCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -13074,7 +13074,7 @@ abstract class _$$_ImagingObjectSelectionInstanceFramesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExte,
       List<FhirUnsignedInt> frameNumbers,
@@ -13107,7 +13107,7 @@ class __$$_ImagingObjectSelectionInstanceFramesCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable

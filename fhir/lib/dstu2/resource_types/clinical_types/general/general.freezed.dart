@@ -129,7 +129,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       Annotation? note,
       List<AllergyIntoleranceReaction>? reaction});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -199,11 +199,11 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -321,12 +321,12 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -548,7 +548,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       List<AllergyIntoleranceReaction>? reaction});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -630,11 +630,11 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -816,7 +816,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -1049,7 +1049,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
               final Dstu2ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -1226,7 +1226,7 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
           AllergyIntoleranceReaction>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1295,7 +1295,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1454,7 +1454,7 @@ abstract class _$$_AllergyIntoleranceReactionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1529,7 +1529,7 @@ class __$$_AllergyIntoleranceReactionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1977,7 +1977,7 @@ abstract class $ConditionCopyWith<$Res> {
       List<CodeableConcept>? bodySite,
       String? notes});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2064,11 +2064,11 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2120,7 +2120,7 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
       dateRecorded: freezed == dateRecorded
           ? _value.dateRecorded
           : dateRecorded // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateRecordedElement: freezed == dateRecordedElement
           ? _value.dateRecordedElement
           : dateRecordedElement // ignore: cast_nullable_to_non_nullable
@@ -2226,12 +2226,12 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2543,7 +2543,7 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       String? notes});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2649,11 +2649,11 @@ class __$$_ConditionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2705,7 +2705,7 @@ class __$$_ConditionCopyWithImpl<$Res>
       dateRecorded: freezed == dateRecorded
           ? _value.dateRecorded
           : dateRecorded // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       dateRecordedElement: freezed == dateRecordedElement
           ? _value.dateRecordedElement
           : dateRecordedElement // ignore: cast_nullable_to_non_nullable
@@ -2883,7 +2883,7 @@ class _$_Condition extends _Condition {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -2945,7 +2945,7 @@ class _$_Condition extends _Condition {
   @override
   final Reference? asserter;
   @override
-  final Date? dateRecorded;
+  final FhirDate? dateRecorded;
   @override
   @JsonKey(name: '_dateRecorded')
   final Element? dateRecordedElement;
@@ -3173,7 +3173,7 @@ abstract class _Condition extends Condition {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -3189,7 +3189,7 @@ abstract class _Condition extends Condition {
       required final Reference patient,
       final Reference? encounter,
       final Reference? asserter,
-      final Date? dateRecorded,
+      final FhirDate? dateRecorded,
       @JsonKey(name: '_dateRecorded')
           final Element? dateRecordedElement,
       required final CodeableConcept code,
@@ -3356,7 +3356,7 @@ abstract class $ConditionStageCopyWith<$Res> {
       _$ConditionStageCopyWithImpl<$Res, ConditionStage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       List<FhirExtension>? modifierExtension,
@@ -3390,7 +3390,7 @@ class _$ConditionStageCopyWithImpl<$Res, $Val extends ConditionStage>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3436,7 +3436,7 @@ abstract class _$$_ConditionStageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       List<FhirExtension>? modifierExtension,
@@ -3469,7 +3469,7 @@ class __$$_ConditionStageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3669,7 +3669,7 @@ abstract class $ConditionEvidenceCopyWith<$Res> {
       _$ConditionEvidenceCopyWithImpl<$Res, ConditionEvidence>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3703,7 +3703,7 @@ class _$ConditionEvidenceCopyWithImpl<$Res, $Val extends ConditionEvidence>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3749,7 +3749,7 @@ abstract class _$$_ConditionEvidenceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3782,7 +3782,7 @@ class __$$_ConditionEvidenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4063,7 +4063,7 @@ abstract class $ProcedureCopyWith<$Res> {
       List<ProcedureFocalDevice>? focalDevice,
       List<Reference>? used});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4139,11 +4139,11 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4281,12 +4281,12 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4518,7 +4518,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       List<Reference>? used});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4607,11 +4607,11 @@ class __$$_ProcedureCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4819,7 +4819,7 @@ class _$_Procedure extends _Procedure {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -5131,7 +5131,7 @@ abstract class _Procedure extends Procedure {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -5290,7 +5290,7 @@ abstract class $ProcedurePerformerCopyWith<$Res> {
       _$ProcedurePerformerCopyWithImpl<$Res, ProcedurePerformer>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -5325,7 +5325,7 @@ class _$ProcedurePerformerCopyWithImpl<$Res, $Val extends ProcedurePerformer>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5383,7 +5383,7 @@ abstract class _$$_ProcedurePerformerCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -5418,7 +5418,7 @@ class __$$_ProcedurePerformerCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5608,7 +5608,7 @@ abstract class $ProcedureFocalDeviceCopyWith<$Res> {
       _$ProcedureFocalDeviceCopyWithImpl<$Res, ProcedureFocalDevice>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
@@ -5642,7 +5642,7 @@ class _$ProcedureFocalDeviceCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5692,7 +5692,7 @@ abstract class _$$_ProcedureFocalDeviceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? action,
@@ -5725,7 +5725,7 @@ class __$$_ProcedureFocalDeviceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5979,7 +5979,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       List<Reference>? plan,
       List<Reference>? action});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6050,11 +6050,11 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6184,12 +6184,12 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6391,7 +6391,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       List<Reference>? action});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6472,11 +6472,11 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6675,7 +6675,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -6963,7 +6963,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -7123,7 +7123,7 @@ abstract class $ClinicalImpressionInvestigationsCopyWith<$Res> {
           ClinicalImpressionInvestigations>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -7156,7 +7156,7 @@ class _$ClinicalImpressionInvestigationsCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7195,7 +7195,7 @@ abstract class _$$_ClinicalImpressionInvestigationsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -7228,7 +7228,7 @@ class __$$_ClinicalImpressionInvestigationsCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7408,7 +7408,7 @@ abstract class $ClinicalImpressionFindingCopyWith<$Res> {
       _$ClinicalImpressionFindingCopyWithImpl<$Res, ClinicalImpressionFinding>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept item,
@@ -7441,7 +7441,7 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7480,7 +7480,7 @@ abstract class _$$_ClinicalImpressionFindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept item,
@@ -7513,7 +7513,7 @@ class __$$_ClinicalImpressionFindingCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7681,7 +7681,7 @@ abstract class $ClinicalImpressionRuledOutCopyWith<$Res> {
           ClinicalImpressionRuledOut>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept item,
@@ -7714,7 +7714,7 @@ class _$ClinicalImpressionRuledOutCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7753,7 +7753,7 @@ abstract class _$$_ClinicalImpressionRuledOutCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept item,
@@ -7786,7 +7786,7 @@ class __$$_ClinicalImpressionRuledOutCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8058,7 +8058,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       Annotation? note,
       List<FamilyMemberHistoryCondition>? condition});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8143,11 +8143,11 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8227,7 +8227,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       bornDate: freezed == bornDate
           ? _value.bornDate
           : bornDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       bornDateElement: freezed == bornDateElement
           ? _value.bornDateElement
           : bornDateElement // ignore: cast_nullable_to_non_nullable
@@ -8275,7 +8275,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       deceasedDate: freezed == deceasedDate
           ? _value.deceasedDate
           : deceasedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       deceasedDateElement: freezed == deceasedDateElement
           ? _value.deceasedDateElement
           : deceasedDateElement // ignore: cast_nullable_to_non_nullable
@@ -8301,12 +8301,12 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8610,7 +8610,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       List<FamilyMemberHistoryCondition>? condition});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8713,11 +8713,11 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8797,7 +8797,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       bornDate: freezed == bornDate
           ? _value.bornDate
           : bornDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       bornDateElement: freezed == bornDateElement
           ? _value.bornDateElement
           : bornDateElement // ignore: cast_nullable_to_non_nullable
@@ -8845,7 +8845,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       deceasedDate: freezed == deceasedDate
           ? _value.deceasedDate
           : deceasedDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       deceasedDateElement: freezed == deceasedDateElement
           ? _value.deceasedDateElement
           : deceasedDateElement // ignore: cast_nullable_to_non_nullable
@@ -8945,7 +8945,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -9026,7 +9026,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final Period? bornPeriod;
   @override
-  final Date? bornDate;
+  final FhirDate? bornDate;
   @override
   @JsonKey(name: '_bornDate')
   final Element? bornDateElement;
@@ -9054,7 +9054,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @override
   final Range? deceasedRange;
   @override
-  final Date? deceasedDate;
+  final FhirDate? deceasedDate;
   @override
   @JsonKey(name: '_deceasedDate')
   final Element? deceasedDateElement;
@@ -9224,7 +9224,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -9252,7 +9252,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       @JsonKey(unknownEnumValue: FamilyMemberHistoryGender.unknown)
           final FamilyMemberHistoryGender? gender,
       final Period? bornPeriod,
-      final Date? bornDate,
+      final FhirDate? bornDate,
       @JsonKey(name: '_bornDate')
           final Element? bornDateElement,
       final String? bornString,
@@ -9268,7 +9268,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           final Element? deceasedBooleanElement,
       final Quantity? deceasedQuantity,
       final Range? deceasedRange,
-      final Date? deceasedDate,
+      final FhirDate? deceasedDate,
       @JsonKey(name: '_deceasedDate')
           final Element? deceasedDateElement,
       final String? deceasedString,
@@ -9419,7 +9419,7 @@ abstract class $FamilyMemberHistoryConditionCopyWith<$Res> {
           FamilyMemberHistoryCondition>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -9470,7 +9470,7 @@ class _$FamilyMemberHistoryConditionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9605,7 +9605,7 @@ abstract class _$$_FamilyMemberHistoryConditionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
@@ -9662,7 +9662,7 @@ class __$$_FamilyMemberHistoryConditionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9958,7 +9958,7 @@ abstract class $RiskAssessmentCopyWith<$Res> {
       @JsonKey(name: '_mitigation')
           Element? mitigationElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10015,11 +10015,11 @@ class _$RiskAssessmentCopyWithImpl<$Res, $Val extends RiskAssessment>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10101,12 +10101,12 @@ class _$RiskAssessmentCopyWithImpl<$Res, $Val extends RiskAssessment>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10270,7 +10270,7 @@ abstract class _$$_RiskAssessmentCopyWith<$Res>
           Element? mitigationElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -10335,11 +10335,11 @@ class __$$_RiskAssessmentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10467,7 +10467,7 @@ class _$_RiskAssessment extends _RiskAssessment {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -10648,7 +10648,7 @@ abstract class _RiskAssessment extends RiskAssessment {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -10773,7 +10773,7 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res> {
       _$RiskAssessmentPredictionCopyWithImpl<$Res, RiskAssessmentPrediction>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept outcome,
@@ -10831,7 +10831,7 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10847,7 +10847,7 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res,
       probabilityDecimal: freezed == probabilityDecimal
           ? _value.probabilityDecimal
           : probabilityDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       probabilityDecimalElement: freezed == probabilityDecimalElement
           ? _value.probabilityDecimalElement
           : probabilityDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -10863,7 +10863,7 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res,
       relativeRisk: freezed == relativeRisk
           ? _value.relativeRisk
           : relativeRisk // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       relativeRiskElement: freezed == relativeRiskElement
           ? _value.relativeRiskElement
           : relativeRiskElement // ignore: cast_nullable_to_non_nullable
@@ -10991,7 +10991,7 @@ abstract class _$$_RiskAssessmentPredictionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept outcome,
@@ -11055,7 +11055,7 @@ class __$$_RiskAssessmentPredictionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11071,7 +11071,7 @@ class __$$_RiskAssessmentPredictionCopyWithImpl<$Res>
       probabilityDecimal: freezed == probabilityDecimal
           ? _value.probabilityDecimal
           : probabilityDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       probabilityDecimalElement: freezed == probabilityDecimalElement
           ? _value.probabilityDecimalElement
           : probabilityDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -11087,7 +11087,7 @@ class __$$_RiskAssessmentPredictionCopyWithImpl<$Res>
       relativeRisk: freezed == relativeRisk
           ? _value.relativeRisk
           : relativeRisk // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       relativeRiskElement: freezed == relativeRiskElement
           ? _value.relativeRiskElement
           : relativeRiskElement // ignore: cast_nullable_to_non_nullable
@@ -11164,7 +11164,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   @override
   final CodeableConcept outcome;
   @override
-  final Decimal? probabilityDecimal;
+  final FhirDecimal? probabilityDecimal;
   @override
   @JsonKey(name: '_probabilityDecimal')
   final Element? probabilityDecimalElement;
@@ -11173,7 +11173,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
   @override
   final CodeableConcept? probabilityCodeableConcept;
   @override
-  final Decimal? relativeRisk;
+  final FhirDecimal? relativeRisk;
   @override
   @JsonKey(name: '_relativeRisk')
   final Element? relativeRiskElement;
@@ -11269,12 +11269,12 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept outcome,
-      final Decimal? probabilityDecimal,
+      final FhirDecimal? probabilityDecimal,
       @JsonKey(name: '_probabilityDecimal')
           final Element? probabilityDecimalElement,
       final Range? probabilityRange,
       final CodeableConcept? probabilityCodeableConcept,
-      final Decimal? relativeRisk,
+      final FhirDecimal? relativeRisk,
       @JsonKey(name: '_relativeRisk')
           final Element? relativeRiskElement,
       final Period? whenPeriod,
@@ -11412,7 +11412,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
           Element? referenceElement,
       List<DetectedIssueMitigation>? mitigation});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11471,11 +11471,11 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11565,12 +11565,12 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11739,7 +11739,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       List<DetectedIssueMitigation>? mitigation});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11806,11 +11806,11 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11951,7 +11951,7 @@ class _$_DetectedIssue extends _DetectedIssue {
   @override
   final FhirId? id;
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
@@ -12144,7 +12144,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -12269,7 +12269,7 @@ abstract class $DetectedIssueMitigationCopyWith<$Res> {
       _$DetectedIssueMitigationCopyWithImpl<$Res, DetectedIssueMitigation>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept action,
@@ -12305,7 +12305,7 @@ class _$DetectedIssueMitigationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -12359,7 +12359,7 @@ abstract class _$$_DetectedIssueMitigationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept action,
@@ -12395,7 +12395,7 @@ class __$$_DetectedIssueMitigationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable

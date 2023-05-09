@@ -233,7 +233,7 @@ _$_DataRequirementCodeFilter _$$_DataRequirementCodeFilterFromJson(
           : Reference.fromJson(
               json['valueSetReference'] as Map<String, dynamic>),
       valueCode: (json['valueCode'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(FhirCode.fromJson)
           .toList(),
       valueCodeElement: (json['_valueCode'] as List<dynamic>?)
           ?.map((e) =>
@@ -325,7 +325,7 @@ _$_ParameterDefinition _$$_ParameterDefinitionFromJson(
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
-      min: json['min'] == null ? null : Decimal.fromJson(json['min']),
+      min: json['min'] == null ? null : FhirDecimal.fromJson(json['min']),
       minElement: json['_min'] == null
           ? null
           : Element.fromJson(json['_min'] as Map<String, dynamic>),
@@ -391,7 +391,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
               json['eventTimingReference'] as Map<String, dynamic>),
       eventTimingDate: json['eventTimingDate'] == null
           ? null
-          : Date.fromJson(json['eventTimingDate']),
+          : FhirDate.fromJson(json['eventTimingDate']),
       eventTimingDateElement: json['_eventTimingDate'] == null
           ? null
           : Element.fromJson(json['_eventTimingDate'] as Map<String, dynamic>),

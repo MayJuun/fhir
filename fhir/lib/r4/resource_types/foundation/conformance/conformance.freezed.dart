@@ -371,7 +371,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       List<CapabilityStatementMessaging>? messaging,
       List<CapabilityStatementDocument>? document});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -470,7 +470,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -574,7 +574,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -590,7 +590,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -598,7 +598,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -672,12 +672,12 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -983,7 +983,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       List<CapabilityStatementDocument>? document});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1098,7 +1098,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1202,7 +1202,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1218,7 +1218,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1226,7 +1226,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1408,7 +1408,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1635,7 +1635,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// capability statement describes a desired rather than an actual solution,
   ///  for example as a formal expression of requirements as part of an RFP.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -1681,7 +1681,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [purpose] Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -1692,7 +1692,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -2070,7 +2070,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -2107,15 +2107,15 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final FhirCode? kind,
@@ -3679,7 +3679,7 @@ class _$CapabilityStatementRestCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -3830,7 +3830,7 @@ class __$$_CapabilityStatementRestCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -3972,7 +3972,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   /// [documentation] Information about the system's restful capabilities that
   ///  apply across all applications, such as security.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -4141,7 +4141,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
-      final Markdown? documentation,
+      final FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') final Element? documentationElement,
       final CapabilityStatementSecurity? security,
       final List<CapabilityStatementResource>? resource,
@@ -4378,7 +4378,7 @@ class _$CapabilityStatementSecurityCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -4486,7 +4486,7 @@ class __$$_CapabilityStatementSecurityCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -4609,7 +4609,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
 
   /// [description] General description of how security works.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -4678,7 +4678,7 @@ abstract class _CapabilityStatementSecurity
           final FhirBoolean? cors,
           @JsonKey(name: '_cors') final Element? corsElement,
           final List<CodeableConcept>? service,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_CapabilityStatementSecurity;
   _CapabilityStatementSecurity._() : super._();
@@ -5072,7 +5072,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -5435,7 +5435,7 @@ class __$$_CapabilityStatementResourceCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -5716,7 +5716,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   /// [documentation] Additional information about the resource type used by
   ///  the system.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -6079,7 +6079,7 @@ abstract class _CapabilityStatementResource
               final Element? typeElement,
           final FhirCanonical? profile,
           final List<FhirCanonical>? supportedProfile,
-          final Markdown? documentation,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation')
               final Element? documentationElement,
           final List<CapabilityStatementInteraction>? interaction,
@@ -6445,7 +6445,7 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -6547,7 +6547,7 @@ class __$$_CapabilityStatementInteractionCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -6658,7 +6658,7 @@ class _$_CapabilityStatementInteraction
   /// allowed with version id' or 'creates permitted from pre-authorized
   ///  certificates only'.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -6726,7 +6726,7 @@ abstract class _CapabilityStatementInteraction
           final FhirCode? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
-          final Markdown? documentation,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementInteraction;
@@ -6950,7 +6950,7 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -7084,7 +7084,7 @@ class __$$_CapabilityStatementSearchParamCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -7211,7 +7211,7 @@ class _$_CapabilityStatementSearchParam
   /// [documentation] This allows documentation of any distinct behaviors about
   ///  how the search parameter is used.  For example, text matching algorithms.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -7291,7 +7291,7 @@ abstract class _CapabilityStatementSearchParam
           final FhirCode? type,
           @JsonKey(name: '_type')
               final Element? typeElement,
-          final Markdown? documentation,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementSearchParam;
@@ -7426,7 +7426,7 @@ mixin _$CapabilityStatementOperation {
   /// custom [[[OperationDefinition]]] with a 'base' of the original
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
-  Canonical get definition => throw _privateConstructorUsedError;
+  FhirCanonical get definition => throw _privateConstructorUsedError;
 
   /// [documentation] Documentation that describes anything special about the
   /// operation behavior, possibly detailing different behavior for system, type
@@ -7457,7 +7457,7 @@ abstract class $CapabilityStatementOperationCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical definition,
+      FhirCanonical definition,
       FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -7512,11 +7512,11 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res,
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -7564,7 +7564,7 @@ abstract class _$$_CapabilityStatementOperationCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Canonical definition,
+      FhirCanonical definition,
       FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -7620,11 +7620,11 @@ class __$$_CapabilityStatementOperationCopyWithImpl<$Res>
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -7740,13 +7740,13 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
   @override
-  final Canonical definition;
+  final FhirCanonical definition;
 
   /// [documentation] Documentation that describes anything special about the
   /// operation behavior, possibly detailing different behavior for system, type
   ///  and instance-level invocation of the operation.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -7817,8 +7817,8 @@ abstract class _CapabilityStatementOperation
           final String? name,
           @JsonKey(name: '_name')
               final Element? nameElement,
-          required final Canonical definition,
-          final Markdown? documentation,
+          required final FhirCanonical definition,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementOperation;
@@ -7880,7 +7880,7 @@ abstract class _CapabilityStatementOperation
   /// custom [[[OperationDefinition]]] with a 'base' of the original
   /// OperationDefinition.  The custom definition would describe the specific
   ///  subset of functionality supported.
-  Canonical get definition;
+  FhirCanonical get definition;
   @override
 
   /// [documentation] Documentation that describes anything special about the
@@ -8023,7 +8023,7 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -8125,7 +8125,7 @@ class __$$_CapabilityStatementInteraction1CopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -8234,7 +8234,7 @@ class _$_CapabilityStatementInteraction1
   /// operation, such as limitations on the kind of transactions allowed, or
   ///  information about system wide search is implemented.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -8303,7 +8303,7 @@ abstract class _CapabilityStatementInteraction1
           final FhirCode? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
-          final Markdown? documentation,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation')
               final Element? documentationElement}) =
       _$_CapabilityStatementInteraction1;
@@ -8508,7 +8508,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res,
       reliableCache: freezed == reliableCache
           ? _value.reliableCache
           : reliableCache // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       reliableCacheElement: freezed == reliableCacheElement
           ? _value.reliableCacheElement
           : reliableCacheElement // ignore: cast_nullable_to_non_nullable
@@ -8516,7 +8516,7 @@ class _$CapabilityStatementMessagingCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -8622,7 +8622,7 @@ class __$$_CapabilityStatementMessagingCopyWithImpl<$Res>
       reliableCache: freezed == reliableCache
           ? _value.reliableCache
           : reliableCache // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       reliableCacheElement: freezed == reliableCacheElement
           ? _value.reliableCacheElement
           : reliableCacheElement // ignore: cast_nullable_to_non_nullable
@@ -8630,7 +8630,7 @@ class __$$_CapabilityStatementMessagingCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -8751,7 +8751,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   /// minutes (if a receiver) or how long the cache length on the receiver
   ///  should be (if a sender).
   @override
-  final UnsignedInt? reliableCache;
+  final FhirUnsignedInt? reliableCache;
 
   /// [reliableCacheElement] Extensions for reliableCache
   @override
@@ -8763,7 +8763,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
   /// For example, the process for becoming an authorized messaging exchange
   ///  partner.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -8850,9 +8850,9 @@ abstract class _CapabilityStatementMessaging
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<CapabilityStatementEndpoint>? endpoint,
-          final UnsignedInt? reliableCache,
+          final FhirUnsignedInt? reliableCache,
           @JsonKey(name: '_reliableCache') final Element? reliableCacheElement,
-          final Markdown? documentation,
+          final FhirMarkdown? documentation,
           @JsonKey(name: '_documentation') final Element? documentationElement,
           final List<CapabilityStatementSupportedMessage>? supportedMessage}) =
       _$_CapabilityStatementMessaging;
@@ -9407,7 +9407,7 @@ mixin _$CapabilityStatementSupportedMessage {
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  Canonical get definition => throw _privateConstructorUsedError;
+  FhirCanonical get definition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -9430,7 +9430,7 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Canonical definition});
+      FhirCanonical definition});
 
   $ElementCopyWith<$Res>? get modeElement;
 }
@@ -9480,7 +9480,7 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res,
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -9512,7 +9512,7 @@ abstract class _$$_CapabilityStatementSupportedMessageCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Canonical definition});
+      FhirCanonical definition});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -9562,7 +9562,7 @@ class __$$_CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -9666,7 +9666,7 @@ class _$_CapabilityStatementSupportedMessage
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
   @override
-  final Canonical definition;
+  final FhirCanonical definition;
 
   @override
   String toString() {
@@ -9725,7 +9725,7 @@ abstract class _CapabilityStatementSupportedMessage
           final List<FhirExtension>? modifierExtension,
           final FhirCode? mode,
           @JsonKey(name: '_mode') final Element? modeElement,
-          required final Canonical definition}) =
+          required final FhirCanonical definition}) =
       _$_CapabilityStatementSupportedMessage;
   _CapabilityStatementSupportedMessage._() : super._();
 
@@ -9778,7 +9778,7 @@ abstract class _CapabilityStatementSupportedMessage
 
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  Canonical get definition;
+  FhirCanonical get definition;
   @override
   @JsonKey(ignore: true)
   _$$_CapabilityStatementSupportedMessageCopyWith<
@@ -9841,7 +9841,7 @@ mixin _$CapabilityStatementDocument {
 
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  Canonical get profile => throw _privateConstructorUsedError;
+  FhirCanonical get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -9865,7 +9865,7 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       @JsonKey(name: '_mode') Element? modeElement,
       FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Canonical profile});
+      FhirCanonical profile});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get documentationElement;
@@ -9918,7 +9918,7 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res,
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -9926,7 +9926,7 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res,
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -9972,7 +9972,7 @@ abstract class _$$_CapabilityStatementDocumentCopyWith<$Res>
       @JsonKey(name: '_mode') Element? modeElement,
       FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Canonical profile});
+      FhirCanonical profile});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -10026,7 +10026,7 @@ class __$$_CapabilityStatementDocumentCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -10034,7 +10034,7 @@ class __$$_CapabilityStatementDocumentCopyWithImpl<$Res>
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -10139,7 +10139,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   /// specified document profile.  For example, when documents are created, what
   ///  action is taken with consumed documents, etc.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
@@ -10149,7 +10149,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
   @override
-  final Canonical profile;
+  final FhirCanonical profile;
 
   @override
   String toString() {
@@ -10212,9 +10212,9 @@ abstract class _CapabilityStatementDocument
       final List<FhirExtension>? modifierExtension,
       final FhirCode? mode,
       @JsonKey(name: '_mode') final Element? modeElement,
-      final Markdown? documentation,
+      final FhirMarkdown? documentation,
       @JsonKey(name: '_documentation') final Element? documentationElement,
-      required final Canonical profile}) = _$_CapabilityStatementDocument;
+      required final FhirCanonical profile}) = _$_CapabilityStatementDocument;
   _CapabilityStatementDocument._() : super._();
 
   factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
@@ -10276,7 +10276,7 @@ abstract class _CapabilityStatementDocument
 
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  Canonical get profile;
+  FhirCanonical get profile;
   @override
   @JsonKey(ignore: true)
   _$$_CapabilityStatementDocumentCopyWith<_$_CapabilityStatementDocument>
@@ -10540,7 +10540,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           Element? searchElement,
       List<CompartmentDefinitionResource>? resource});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10620,7 +10620,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10716,7 +10716,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -10728,7 +10728,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -10758,12 +10758,12 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10999,7 +10999,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
       List<CompartmentDefinitionResource>? resource});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11090,7 +11090,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11186,7 +11186,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -11198,7 +11198,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -11306,7 +11306,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11522,7 +11522,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [description] A free text natural language description of the compartment
   ///  definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -11553,7 +11553,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [purpose] Explanation of why this compartment definition is needed and
   ///  why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -11726,7 +11726,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
           {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -11760,11 +11760,11 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
           final FhirCode? code,
@@ -12819,7 +12819,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       List<ExampleScenarioProcess>? process,
       List<FhirCanonical>? workflow});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -12897,7 +12897,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -13005,7 +13005,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -13013,7 +13013,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -13039,12 +13039,12 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -13255,7 +13255,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       List<FhirCanonical>? workflow});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -13343,7 +13343,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -13451,7 +13451,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -13459,7 +13459,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -13567,7 +13567,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -13837,7 +13837,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the example scenario.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -13848,7 +13848,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// not be used to show the business purpose of the scenario itself, but the
   ///  purpose of documenting a scenario.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -14043,7 +14043,7 @@ abstract class _ExampleScenario extends ExampleScenario {
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -14080,10 +14080,10 @@ abstract class _ExampleScenario extends ExampleScenario {
       final List<ContactDetail>? contact,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final List<ExampleScenarioActor>? actor,
@@ -14486,7 +14486,7 @@ class _$ExampleScenarioActorCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -14637,7 +14637,7 @@ class __$$_ExampleScenarioActorCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -14764,7 +14764,7 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
 
   /// [description] The description of the actor.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -14843,7 +14843,7 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
           @JsonKey(name: '_type') final Element? typeElement,
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ExampleScenarioActor;
   _ExampleScenarioActor._() : super._();
@@ -15098,7 +15098,7 @@ class _$ExampleScenarioInstanceCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15262,7 +15262,7 @@ class __$$_ExampleScenarioInstanceCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15401,7 +15401,7 @@ class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
 
   /// [description] Human-friendly description of the resource instance.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -15517,7 +15517,7 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
           @JsonKey(name: '_resourceType') final Element? resourceTypeElement,
           final String? name,
           @JsonKey(name: '_name') final Element? nameElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           final List<ExampleScenarioVersion>? version,
           final List<ExampleScenarioContainedInstance>? containedInstance}) =
@@ -15730,7 +15730,7 @@ class _$ExampleScenarioVersionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15830,7 +15830,7 @@ class __$$_ExampleScenarioVersionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -15935,7 +15935,7 @@ class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
 
   /// [description] The description of the resource version.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -16001,7 +16001,7 @@ abstract class _ExampleScenarioVersion extends ExampleScenarioVersion {
           final List<FhirExtension>? modifierExtension,
           final String? versionId,
           @JsonKey(name: '_versionId') final Element? versionIdElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ExampleScenarioVersion;
   _ExampleScenarioVersion._() : super._();
@@ -16678,7 +16678,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -16686,7 +16686,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       preConditions: freezed == preConditions
           ? _value.preConditions
           : preConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preConditionsElement: freezed == preConditionsElement
           ? _value.preConditionsElement
           : preConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -16694,7 +16694,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       postConditions: freezed == postConditions
           ? _value.postConditions
           : postConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       postConditionsElement: freezed == postConditionsElement
           ? _value.postConditionsElement
           : postConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -16836,7 +16836,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -16844,7 +16844,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       preConditions: freezed == preConditions
           ? _value.preConditions
           : preConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preConditionsElement: freezed == preConditionsElement
           ? _value.preConditionsElement
           : preConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -16852,7 +16852,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       postConditions: freezed == postConditions
           ? _value.postConditions
           : postConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       postConditionsElement: freezed == postConditionsElement
           ? _value.postConditionsElement
           : postConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -16967,7 +16967,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [description] A longer description of the group of operations.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -16976,7 +16976,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [preConditions] Description of initial status before the process starts.
   @override
-  final Markdown? preConditions;
+  final FhirMarkdown? preConditions;
 
   /// [preConditionsElement] Extensions for preConditions
   @override
@@ -16985,7 +16985,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [postConditions] Description of final status after the process ends.
   @override
-  final Markdown? postConditions;
+  final FhirMarkdown? postConditions;
 
   /// [postConditionsElement] Extensions for postConditions
   @override
@@ -17077,11 +17077,11 @@ abstract class _ExampleScenarioProcess extends ExampleScenarioProcess {
       final List<FhirExtension>? modifierExtension,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Markdown? preConditions,
+      final FhirMarkdown? preConditions,
       @JsonKey(name: '_preConditions') final Element? preConditionsElement,
-      final Markdown? postConditions,
+      final FhirMarkdown? postConditions,
       @JsonKey(name: '_postConditions') final Element? postConditionsElement,
       final List<ExampleScenarioStep>? step}) = _$_ExampleScenarioProcess;
   _ExampleScenarioProcess._() : super._();
@@ -17908,7 +17908,7 @@ class _$ExampleScenarioOperationCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -18207,7 +18207,7 @@ class __$$_ExampleScenarioOperationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -18386,7 +18386,7 @@ class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
 
   /// [description] A comment to be inserted in the diagram.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -18527,7 +18527,7 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
       @JsonKey(name: '_initiator') final Element? initiatorElement,
       final String? receiver,
       @JsonKey(name: '_receiver') final Element? receiverElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirBoolean? initiatorActive,
       @JsonKey(name: '_initiatorActive') final Element? initiatorActiveElement,
@@ -18789,7 +18789,7 @@ class _$ExampleScenarioAlternativeCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -18897,7 +18897,7 @@ class __$$_ExampleScenarioAlternativeCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -19010,7 +19010,7 @@ class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
   /// [description] A human-readable description of the alternative explaining
   ///  when the alternative should occur rather than the base step.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -19090,7 +19090,7 @@ abstract class _ExampleScenarioAlternative extends ExampleScenarioAlternative {
       final List<FhirExtension>? modifierExtension,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<ExampleScenarioStep>? step}) = _$_ExampleScenarioAlternative;
   _ExampleScenarioAlternative._() : super._();
@@ -19411,7 +19411,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       FhirCanonical? profile,
       List<GraphDefinitionLink>? link});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -19489,7 +19489,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -19585,7 +19585,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -19601,7 +19601,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -19627,12 +19627,12 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -19855,7 +19855,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       List<GraphDefinitionLink>? link});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -19944,7 +19944,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -20040,7 +20040,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -20056,7 +20056,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -20160,7 +20160,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -20375,7 +20375,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [description] A free text natural language description of the graph
   ///  definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -20421,7 +20421,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [purpose] Explanation of why this graph definition is needed and why it
   ///  has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -20586,7 +20586,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -20620,12 +20620,12 @@ abstract class _GraphDefinition extends GraphDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final FhirCode? start,
@@ -21030,7 +21030,7 @@ class _$GraphDefinitionLinkCopyWithImpl<$Res, $Val extends GraphDefinitionLink>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -21213,7 +21213,7 @@ class __$$_GraphDefinitionLinkCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -21356,7 +21356,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 
   /// [min] Minimum occurrences for this link.
   @override
-  final Integer? min;
+  final FhirInteger? min;
 
   /// [minElement] Extensions for min
   @override
@@ -21473,7 +21473,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
       @JsonKey(name: '_path') final Element? pathElement,
       final String? sliceName,
       @JsonKey(name: '_sliceName') final Element? sliceNameElement,
-      final Integer? min,
+      final FhirInteger? min,
       @JsonKey(name: '_min') final Element? minElement,
       final String? max,
       @JsonKey(name: '_max') final Element? maxElement,
@@ -23119,7 +23119,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       ImplementationGuideDefinition? definition,
       ImplementationGuideManifest? manifest});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -23209,7 +23209,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -23313,7 +23313,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23329,7 +23329,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -23337,7 +23337,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -23379,12 +23379,12 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -23668,7 +23668,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       ImplementationGuideManifest? manifest});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -23773,7 +23773,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -23877,7 +23877,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -23893,7 +23893,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -23901,7 +23901,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -24035,7 +24035,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -24260,7 +24260,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [description] A free text natural language description of the
   ///  implementation guide from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -24307,7 +24307,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the implementation guide.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -24572,7 +24572,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -24609,12 +24609,12 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final FhirId? packageId,
@@ -24945,7 +24945,7 @@ mixin _$ImplementationGuideDependsOn {
 
   /// [uri] A canonical reference to the Implementation guide for the
   ///  dependency.
-  Canonical get uri => throw _privateConstructorUsedError;
+  FhirCanonical get uri => throw _privateConstructorUsedError;
 
   /// [packageId] The NPM package name for the Implementation Guide that this
   ///  IG depends on.
@@ -24981,7 +24981,7 @@ abstract class $ImplementationGuideDependsOnCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical uri,
+      FhirCanonical uri,
       FhirId? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
@@ -25030,11 +25030,11 @@ class _$ImplementationGuideDependsOnCopyWithImpl<$Res,
       uri: null == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -25088,7 +25088,7 @@ abstract class _$$_ImplementationGuideDependsOnCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical uri,
+      FhirCanonical uri,
       FhirId? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
@@ -25138,11 +25138,11 @@ class __$$_ImplementationGuideDependsOnCopyWithImpl<$Res>
       uri: null == uri
           ? _value.uri
           : uri // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -25248,7 +25248,7 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
   /// [uri] A canonical reference to the Implementation guide for the
   ///  dependency.
   @override
-  final Canonical uri;
+  final FhirCanonical uri;
 
   /// [packageId] The NPM package name for the Implementation Guide that this
   ///  IG depends on.
@@ -25329,7 +25329,7 @@ abstract class _ImplementationGuideDependsOn
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Canonical uri,
+          required final FhirCanonical uri,
           final FhirId? packageId,
           @JsonKey(name: '_packageId') final Element? packageIdElement,
           final String? version,
@@ -25375,7 +25375,7 @@ abstract class _ImplementationGuideDependsOn
 
   /// [uri] A canonical reference to the Implementation guide for the
   ///  dependency.
-  Canonical get uri;
+  FhirCanonical get uri;
   @override
 
   /// [packageId] The NPM package name for the Implementation Guide that this
@@ -25446,7 +25446,7 @@ mixin _$ImplementationGuideGlobal {
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [profile] A reference to the profile that all instances must conform to.
-  Canonical get profile => throw _privateConstructorUsedError;
+  FhirCanonical get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -25466,7 +25466,7 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical profile});
+      FhirCanonical profile});
 
   $ElementCopyWith<$Res>? get typeElement;
 }
@@ -25516,7 +25516,7 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res,
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -25548,7 +25548,7 @@ abstract class _$$_ImplementationGuideGlobalCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Canonical profile});
+      FhirCanonical profile});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -25598,7 +25598,7 @@ class __$$_ImplementationGuideGlobalCopyWithImpl<$Res>
       profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -25698,7 +25698,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
   /// [profile] A reference to the profile that all instances must conform to.
   @override
-  final Canonical profile;
+  final FhirCanonical profile;
 
   @override
   String toString() {
@@ -25754,7 +25754,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
-      required final Canonical profile}) = _$_ImplementationGuideGlobal;
+      required final FhirCanonical profile}) = _$_ImplementationGuideGlobal;
   _ImplementationGuideGlobal._() : super._();
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
@@ -25803,7 +25803,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @override
 
   /// [profile] A reference to the profile that all instances must conform to.
-  Canonical get profile;
+  FhirCanonical get profile;
   @override
   @JsonKey(ignore: true)
   _$$_ImplementationGuideGlobalCopyWith<_$_ImplementationGuideGlobal>
@@ -27019,7 +27019,7 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res,
       groupingId: freezed == groupingId
           ? _value.groupingId
           : groupingId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       groupingIdElement: freezed == groupingIdElement
           ? _value.groupingIdElement
           : groupingIdElement // ignore: cast_nullable_to_non_nullable
@@ -27227,7 +27227,7 @@ class __$$_ImplementationGuideResourceCopyWithImpl<$Res>
       groupingId: freezed == groupingId
           ? _value.groupingId
           : groupingId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       groupingIdElement: freezed == groupingIdElement
           ? _value.groupingIdElement
           : groupingIdElement // ignore: cast_nullable_to_non_nullable
@@ -31333,7 +31333,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       List<MessageDefinitionAllowedResponse>? allowedResponse,
       List<FhirCanonical>? graph});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -31430,7 +31430,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -31542,7 +31542,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -31558,7 +31558,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -31566,7 +31566,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -31624,12 +31624,12 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -31930,7 +31930,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
       List<FhirCanonical>? graph});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -32043,7 +32043,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -32155,7 +32155,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -32171,7 +32171,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -32179,7 +32179,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -32338,7 +32338,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -32589,7 +32589,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [description] A free text natural language description of the message
   ///  definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -32635,7 +32635,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [purpose] Explanation of why this message definition is needed and why it
   ///  has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -32646,7 +32646,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the message definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -32931,7 +32931,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -32970,15 +32970,15 @@ abstract class _MessageDefinition extends MessageDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final FhirCanonical? base,
@@ -33441,7 +33441,7 @@ class _$MessageDefinitionFocusCopyWithImpl<$Res,
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -33573,7 +33573,7 @@ class __$$_MessageDefinitionFocusCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -33696,7 +33696,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
   /// be pointed to by a message in order for it to be valid against this
   ///  MessageDefinition.
   @override
-  final UnsignedInt? min;
+  final FhirUnsignedInt? min;
 
   /// [minElement] Extensions for min
   @override
@@ -33779,7 +33779,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
           final FhirCode? code,
           @JsonKey(name: '_code') final Element? codeElement,
           final FhirCanonical? profile,
-          final UnsignedInt? min,
+          final FhirUnsignedInt? min,
           @JsonKey(name: '_min') final Element? minElement,
           final String? max,
           @JsonKey(name: '_max') final Element? maxElement}) =
@@ -33900,7 +33900,7 @@ mixin _$MessageDefinitionAllowedResponse {
 
   /// [message] A reference to the message definition that must be adhered to
   ///  by this supported response.
-  Canonical get message => throw _privateConstructorUsedError;
+  FhirCanonical get message => throw _privateConstructorUsedError;
 
   /// [situation] Provides a description of the circumstances in which this
   ///  response should be used (as opposed to one of the alternative responses).
@@ -33928,7 +33928,7 @@ abstract class $MessageDefinitionAllowedResponseCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical message,
+      FhirCanonical message,
       FhirMarkdown? situation,
       @JsonKey(name: '_situation') Element? situationElement});
 
@@ -33972,11 +33972,11 @@ class _$MessageDefinitionAllowedResponseCopyWithImpl<$Res,
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       situation: freezed == situation
           ? _value.situation
           : situation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       situationElement: freezed == situationElement
           ? _value.situationElement
           : situationElement // ignore: cast_nullable_to_non_nullable
@@ -34010,7 +34010,7 @@ abstract class _$$_MessageDefinitionAllowedResponseCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical message,
+      FhirCanonical message,
       FhirMarkdown? situation,
       @JsonKey(name: '_situation') Element? situationElement});
 
@@ -34054,11 +34054,11 @@ class __$$_MessageDefinitionAllowedResponseCopyWithImpl<$Res>
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       situation: freezed == situation
           ? _value.situation
           : situation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       situationElement: freezed == situationElement
           ? _value.situationElement
           : situationElement // ignore: cast_nullable_to_non_nullable
@@ -34156,12 +34156,12 @@ class _$_MessageDefinitionAllowedResponse
   /// [message] A reference to the message definition that must be adhered to
   ///  by this supported response.
   @override
-  final Canonical message;
+  final FhirCanonical message;
 
   /// [situation] Provides a description of the circumstances in which this
   ///  response should be used (as opposed to one of the alternative responses).
   @override
-  final Markdown? situation;
+  final FhirMarkdown? situation;
 
   /// [situationElement] Extensions for situation
   @override
@@ -34223,8 +34223,8 @@ abstract class _MessageDefinitionAllowedResponse
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Canonical message,
-          final Markdown? situation,
+          required final FhirCanonical message,
+          final FhirMarkdown? situation,
           @JsonKey(name: '_situation') final Element? situationElement}) =
       _$_MessageDefinitionAllowedResponse;
   _MessageDefinitionAllowedResponse._() : super._();
@@ -34267,7 +34267,7 @@ abstract class _MessageDefinitionAllowedResponse
 
   /// [message] A reference to the message definition that must be adhered to
   ///  by this supported response.
-  Canonical get message;
+  FhirCanonical get message;
   @override
 
   /// [situation] Provides a description of the circumstances in which this
@@ -34646,7 +34646,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -34750,7 +34750,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -34862,7 +34862,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -34878,7 +34878,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -34902,7 +34902,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
@@ -34964,12 +34964,12 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -35303,7 +35303,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
       List<OperationDefinitionOverload>? overload});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -35425,7 +35425,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -35537,7 +35537,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -35553,7 +35553,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -35577,7 +35577,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       commentElement: freezed == commentElement
           ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
@@ -35747,7 +35747,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -35981,7 +35981,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [description] A free text natural language description of the operation
   ///  definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -36027,7 +36027,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [purpose] Explanation of why this operation definition is needed and why
   ///  it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -36056,7 +36056,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [comment] Additional information about how to use this operation or named
   ///  query.
   @override
-  final Markdown? comment;
+  final FhirMarkdown? comment;
 
   /// [commentElement] Extensions for comment
   @override
@@ -36353,7 +36353,7 @@ abstract class _OperationDefinition extends OperationDefinition {
           {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -36393,12 +36393,12 @@ abstract class _OperationDefinition extends OperationDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
           final FhirBoolean? affectsState,
@@ -36407,7 +36407,7 @@ abstract class _OperationDefinition extends OperationDefinition {
           final FhirCode? code,
           @JsonKey(name: '_code')
               final Element? codeElement,
-          final Markdown? comment,
+          final FhirMarkdown? comment,
           @JsonKey(name: '_comment')
               final Element? commentElement,
           final FhirCanonical? base,
@@ -36982,7 +36982,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -37252,7 +37252,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -37432,7 +37432,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   @override
-  final Integer? min;
+  final FhirInteger? min;
 
   /// [minElement] Extensions for min
   @override
@@ -37641,7 +37641,7 @@ abstract class _OperationDefinitionParameter
           final FhirCode? use,
           @JsonKey(name: '_use')
               final Element? useElement,
-          final Integer? min,
+          final FhirInteger? min,
           @JsonKey(name: '_min')
               final Element? minElement,
           final String? max,
@@ -37844,7 +37844,7 @@ mixin _$OperationDefinitionBinding {
 
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  Canonical get valueSet => throw _privateConstructorUsedError;
+  FhirCanonical get valueSet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37865,7 +37865,7 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
-      Canonical valueSet});
+      FhirCanonical valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
 }
@@ -37915,7 +37915,7 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res,
       valueSet: null == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ) as $Val);
   }
 
@@ -37947,7 +37947,7 @@ abstract class _$$_OperationDefinitionBindingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
-      Canonical valueSet});
+      FhirCanonical valueSet});
 
   @override
   $ElementCopyWith<$Res>? get strengthElement;
@@ -37997,7 +37997,7 @@ class __$$_OperationDefinitionBindingCopyWithImpl<$Res>
       valueSet: null == valueSet
           ? _value.valueSet
           : valueSet // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
     ));
   }
 }
@@ -38100,7 +38100,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
   @override
-  final Canonical valueSet;
+  final FhirCanonical valueSet;
 
   @override
   String toString() {
@@ -38158,7 +38158,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? strength,
       @JsonKey(name: '_strength') final Element? strengthElement,
-      required final Canonical valueSet}) = _$_OperationDefinitionBinding;
+      required final FhirCanonical valueSet}) = _$_OperationDefinitionBinding;
   _OperationDefinitionBinding._() : super._();
 
   factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
@@ -38210,7 +38210,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
 
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  Canonical get valueSet;
+  FhirCanonical get valueSet;
   @override
   @JsonKey(ignore: true)
   _$$_OperationDefinitionBindingCopyWith<_$_OperationDefinitionBinding>
@@ -39542,7 +39542,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           List<Element?>? chainElement,
       List<SearchParameterComponent>? component});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -39648,7 +39648,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -39748,7 +39748,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -39764,7 +39764,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -39874,12 +39874,12 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -40207,7 +40207,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
       List<SearchParameterComponent>? component});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -40330,7 +40330,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -40430,7 +40430,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -40446,7 +40446,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -40677,7 +40677,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -40899,7 +40899,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [description] And how it used.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -40945,7 +40945,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [purpose] Explanation of why this search parameter is needed and why it
   ///  has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -41379,7 +41379,7 @@ abstract class _SearchParameter extends SearchParameter {
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -41414,12 +41414,12 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
       final FhirCode? code,
@@ -41841,7 +41841,7 @@ mixin _$SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  Canonical get definition => throw _privateConstructorUsedError;
+  FhirCanonical get definition => throw _privateConstructorUsedError;
 
   /// [expression] A sub-expression that defines how to extract values for this
   ///  component from the output of the main SearchParameter.expression.
@@ -41867,7 +41867,7 @@ abstract class $SearchParameterComponentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical definition,
+      FhirCanonical definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -41911,7 +41911,7 @@ class _$SearchParameterComponentCopyWithImpl<$Res,
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
@@ -41949,7 +41949,7 @@ abstract class _$$_SearchParameterComponentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical definition,
+      FhirCanonical definition,
       String? expression,
       @JsonKey(name: '_expression') Element? expressionElement});
 
@@ -41992,7 +41992,7 @@ class __$$_SearchParameterComponentCopyWithImpl<$Res>
       definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
@@ -42092,7 +42092,7 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
   /// [definition] The definition of the search parameter that describes this
   ///  part.
   @override
-  final Canonical definition;
+  final FhirCanonical definition;
 
   /// [expression] A sub-expression that defines how to extract values for this
   ///  component from the output of the main SearchParameter.expression.
@@ -42158,7 +42158,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          required final Canonical definition,
+          required final FhirCanonical definition,
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_SearchParameterComponent;
@@ -42202,7 +42202,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
 
   /// [definition] The definition of the search parameter that describes this
   ///  part.
-  Canonical get definition;
+  FhirCanonical get definition;
   @override
 
   /// [expression] A sub-expression that defines how to extract values for this
@@ -42600,7 +42600,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       StructureDefinitionSnapshot? snapshot,
       StructureDefinitionDifferential? differential});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -42707,7 +42707,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -42815,7 +42815,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -42831,7 +42831,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -42839,7 +42839,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -42925,12 +42925,12 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -43292,7 +43292,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
       StructureDefinitionDifferential? differential});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -43419,7 +43419,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -43527,7 +43527,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -43543,7 +43543,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -43551,7 +43551,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -43749,7 +43749,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -43991,7 +43991,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [description] A free text natural language description of the structure
   ///  definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -44037,7 +44037,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [purpose] Explanation of why this structure definition is needed and why
   ///  it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -44048,7 +44048,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the structure definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -44403,7 +44403,7 @@ abstract class _StructureDefinition extends StructureDefinition {
           {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
               final R4ResourceType resourceType,
           final String? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -44441,15 +44441,15 @@ abstract class _StructureDefinition extends StructureDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final List<Coding>? keyword,
@@ -44963,7 +44963,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res,
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -45117,7 +45117,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -46871,7 +46871,7 @@ abstract class $StructureMapCopyWith<$Res> {
           List<FhirCanonical>? import_,
       List<StructureMapGroup> group});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -46954,7 +46954,7 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -47062,7 +47062,7 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -47078,7 +47078,7 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -47086,7 +47086,7 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -47108,12 +47108,12 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -47354,7 +47354,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
       List<StructureMapGroup> group});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -47449,7 +47449,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -47557,7 +47557,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -47573,7 +47573,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -47581,7 +47581,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -47690,7 +47690,7 @@ class _$_StructureMap extends _StructureMap {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -47931,7 +47931,7 @@ class _$_StructureMap extends _StructureMap {
   /// [description] A free text natural language description of the structure
   ///  map from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
@@ -47977,7 +47977,7 @@ class _$_StructureMap extends _StructureMap {
   /// [purpose] Explanation of why this structure map is needed and why it has
   ///  been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
@@ -47988,7 +47988,7 @@ class _$_StructureMap extends _StructureMap {
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the structure map.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
@@ -48183,7 +48183,7 @@ abstract class _StructureMap extends StructureMap {
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
           final R4ResourceType resourceType,
       final String? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -48221,15 +48221,15 @@ abstract class _StructureMap extends StructureMap {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final List<StructureMapStructure>? structure,
@@ -48525,7 +48525,7 @@ mixin _$StructureMapStructure {
       throw _privateConstructorUsedError;
 
   /// [url] The canonical reference to the structure.
-  Canonical get url => throw _privateConstructorUsedError;
+  FhirCanonical get url => throw _privateConstructorUsedError;
 
   /// [mode] How the referenced structure is used in this mapping.
   FhirCode? get mode => throw _privateConstructorUsedError;
@@ -48565,7 +48565,7 @@ abstract class $StructureMapStructureCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical url,
+      FhirCanonical url,
       FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
@@ -48619,7 +48619,7 @@ class _$StructureMapStructureCopyWithImpl<$Res,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -48696,7 +48696,7 @@ abstract class _$$_StructureMapStructureCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Canonical url,
+      FhirCanonical url,
       FhirCode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
       String? alias,
@@ -48750,7 +48750,7 @@ class __$$_StructureMapStructureCopyWithImpl<$Res>
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as Canonical,
+              as FhirCanonical,
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -48869,7 +48869,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 
   /// [url] The canonical reference to the structure.
   @override
-  final Canonical url;
+  final FhirCanonical url;
 
   /// [mode] How the referenced structure is used in this mapping.
   @override
@@ -48963,7 +48963,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final Canonical url,
+      required final FhirCanonical url,
       final FhirCode? mode,
       @JsonKey(name: '_mode')
           final Element? modeElement,
@@ -49012,7 +49012,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
   @override
 
   /// [url] The canonical reference to the structure.
-  Canonical get url;
+  FhirCanonical get url;
   @override
 
   /// [mode] How the referenced structure is used in this mapping.
@@ -49196,7 +49196,7 @@ class _$StructureMapGroupCopyWithImpl<$Res, $Val extends StructureMapGroup>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -49204,7 +49204,7 @@ class _$StructureMapGroupCopyWithImpl<$Res, $Val extends StructureMapGroup>
       extends_: freezed == extends_
           ? _value.extends_
           : extends_ // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extendsElement: freezed == extendsElement
           ? _value.extendsElement
           : extendsElement // ignore: cast_nullable_to_non_nullable
@@ -49359,7 +49359,7 @@ class __$$_StructureMapGroupCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -49367,7 +49367,7 @@ class __$$_StructureMapGroupCopyWithImpl<$Res>
       extends_: freezed == extends_
           ? _value.extends_
           : extends_ // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extendsElement: freezed == extendsElement
           ? _value.extendsElement
           : extendsElement // ignore: cast_nullable_to_non_nullable
@@ -49863,7 +49863,7 @@ class _$StructureMapInputCopyWithImpl<$Res, $Val extends StructureMapInput>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -50014,7 +50014,7 @@ class __$$_StructureMapInputCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -50461,7 +50461,7 @@ class _$StructureMapRuleCopyWithImpl<$Res, $Val extends StructureMapRule>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -50584,7 +50584,7 @@ class __$$_StructureMapRuleCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -51514,7 +51514,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get defaultValueUsageContext;
   $DosageCopyWith<$Res>? get defaultValueDosage;
-  $MetaCopyWith<$Res>? get defaultValueMeta;
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta;
   $ElementCopyWith<$Res>? get elementElement;
   $ElementCopyWith<$Res>? get listModeElement;
   $ElementCopyWith<$Res>? get variableElement;
@@ -51645,7 +51645,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -51653,7 +51653,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -51710,7 +51710,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -51726,7 +51726,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -51734,7 +51734,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -51742,7 +51742,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -51750,7 +51750,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -51758,7 +51758,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       defaultValueMarkdownElement: freezed == defaultValueMarkdownElement
           ? _value.defaultValueMarkdownElement
           : defaultValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -51766,7 +51766,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -51774,7 +51774,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -51790,7 +51790,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -51798,7 +51798,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -51822,7 +51822,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueUuid: freezed == defaultValueUuid
           ? _value.defaultValueUuid
           : defaultValueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       defaultValueUuidElement: freezed == defaultValueUuidElement
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -51951,7 +51951,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       element: freezed == element
           ? _value.element
           : element // ignore: cast_nullable_to_non_nullable
@@ -51971,7 +51971,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -52659,12 +52659,12 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get defaultValueMeta {
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta {
     if (_value.defaultValueMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.defaultValueMeta!, (value) {
       return _then(_value.copyWith(defaultValueMeta: value) as $Val);
     });
   }
@@ -52981,7 +52981,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get defaultValueDosage;
   @override
-  $MetaCopyWith<$Res>? get defaultValueMeta;
+  $FhirMetaCopyWith<$Res>? get defaultValueMeta;
   @override
   $ElementCopyWith<$Res>? get elementElement;
   @override
@@ -53116,7 +53116,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -53124,7 +53124,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
@@ -53181,7 +53181,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueDate: freezed == defaultValueDate
           ? _value.defaultValueDate
           : defaultValueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       defaultValueDateElement: freezed == defaultValueDateElement
           ? _value.defaultValueDateElement
           : defaultValueDateElement // ignore: cast_nullable_to_non_nullable
@@ -53197,7 +53197,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueDecimal: freezed == defaultValueDecimal
           ? _value.defaultValueDecimal
           : defaultValueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       defaultValueDecimalElement: freezed == defaultValueDecimalElement
           ? _value.defaultValueDecimalElement
           : defaultValueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -53205,7 +53205,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -53213,7 +53213,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueInstant: freezed == defaultValueInstant
           ? _value.defaultValueInstant
           : defaultValueInstant // ignore: cast_nullable_to_non_nullable
-              as Instant?,
+              as FhirInstant?,
       defaultValueInstantElement: freezed == defaultValueInstantElement
           ? _value.defaultValueInstantElement
           : defaultValueInstantElement // ignore: cast_nullable_to_non_nullable
@@ -53221,7 +53221,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueInteger: freezed == defaultValueInteger
           ? _value.defaultValueInteger
           : defaultValueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       defaultValueIntegerElement: freezed == defaultValueIntegerElement
           ? _value.defaultValueIntegerElement
           : defaultValueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -53229,7 +53229,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueMarkdown: freezed == defaultValueMarkdown
           ? _value.defaultValueMarkdown
           : defaultValueMarkdown // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       defaultValueMarkdownElement: freezed == defaultValueMarkdownElement
           ? _value.defaultValueMarkdownElement
           : defaultValueMarkdownElement // ignore: cast_nullable_to_non_nullable
@@ -53237,7 +53237,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Oid?,
+              as FhirOid?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -53245,7 +53245,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValuePositiveInt: freezed == defaultValuePositiveInt
           ? _value.defaultValuePositiveInt
           : defaultValuePositiveInt // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
+              as FhirPositiveInt?,
       defaultValuePositiveIntElement: freezed == defaultValuePositiveIntElement
           ? _value.defaultValuePositiveIntElement
           : defaultValuePositiveIntElement // ignore: cast_nullable_to_non_nullable
@@ -53261,7 +53261,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueTime: freezed == defaultValueTime
           ? _value.defaultValueTime
           : defaultValueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       defaultValueTimeElement: freezed == defaultValueTimeElement
           ? _value.defaultValueTimeElement
           : defaultValueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -53269,7 +53269,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueUnsignedInt: freezed == defaultValueUnsignedInt
           ? _value.defaultValueUnsignedInt
           : defaultValueUnsignedInt // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
+              as FhirUnsignedInt?,
       defaultValueUnsignedIntElement: freezed == defaultValueUnsignedIntElement
           ? _value.defaultValueUnsignedIntElement
           : defaultValueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
@@ -53293,7 +53293,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueUuid: freezed == defaultValueUuid
           ? _value.defaultValueUuid
           : defaultValueUuid // ignore: cast_nullable_to_non_nullable
-              as Uuid?,
+              as FhirUuid?,
       defaultValueUuidElement: freezed == defaultValueUuidElement
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -53422,7 +53422,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueMeta: freezed == defaultValueMeta
           ? _value.defaultValueMeta
           : defaultValueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       element: freezed == element
           ? _value.element
           : element // ignore: cast_nullable_to_non_nullable
@@ -53442,7 +53442,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -53687,7 +53687,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [min] Specified minimum cardinality for the element. This is optional; if
   ///  present, it acts an implicit check on the input content.
   @override
-  final Integer? min;
+  final FhirInteger? min;
 
   /// [minElement] Extensions for min
   @override
@@ -53754,7 +53754,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueDate] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Date? defaultValueDate;
+  final FhirDate? defaultValueDate;
 
   /// [defaultValueDateElement] Extensions for defaultValueDate
   @override
@@ -53772,7 +53772,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueDecimal] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Decimal? defaultValueDecimal;
+  final FhirDecimal? defaultValueDecimal;
 
   /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
   @override
@@ -53792,7 +53792,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueInstant] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Instant? defaultValueInstant;
+  final FhirInstant? defaultValueInstant;
 
   /// [defaultValueInstantElement] Extensions for defaultValueInstant
   @override
@@ -53802,7 +53802,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueInteger] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Integer? defaultValueInteger;
+  final FhirInteger? defaultValueInteger;
 
   /// [defaultValueIntegerElement] Extensions for defaultValueInteger
   @override
@@ -53812,7 +53812,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueMarkdown] A value to use if there is no existing value in
   ///  the source object.
   @override
-  final Markdown? defaultValueMarkdown;
+  final FhirMarkdown? defaultValueMarkdown;
   @override
   @JsonKey(name: '_defaultValueMarkdown')
   final Element? defaultValueMarkdownElement;
@@ -53820,7 +53820,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueOid] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Oid? defaultValueOid;
+  final FhirOid? defaultValueOid;
 
   /// [defaultValueOidElement] Extensions for defaultValueOid
   @override
@@ -53830,7 +53830,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValuePositiveInt] A value to use if there is no existing value in
   ///  the source object.
   @override
-  final PositiveInt? defaultValuePositiveInt;
+  final FhirPositiveInt? defaultValuePositiveInt;
   @override
   @JsonKey(name: '_defaultValuePositiveInt')
   final Element? defaultValuePositiveIntElement;
@@ -53848,7 +53848,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueTime] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Time? defaultValueTime;
+  final FhirTime? defaultValueTime;
 
   /// [defaultValueTimeElement] Extensions for defaultValueTime
   @override
@@ -53858,7 +53858,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueUnsignedInt] A value to use if there is no existing value in
   ///  the source object.
   @override
-  final UnsignedInt? defaultValueUnsignedInt;
+  final FhirUnsignedInt? defaultValueUnsignedInt;
   @override
   @JsonKey(name: '_defaultValueUnsignedInt')
   final Element? defaultValueUnsignedIntElement;
@@ -53886,7 +53886,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueUuid] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Uuid? defaultValueUuid;
+  final FhirUuid? defaultValueUuid;
 
   /// [defaultValueUuidElement] Extensions for defaultValueUuid
   @override
@@ -54046,7 +54046,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueMeta] A value to use if there is no existing value in the
   ///  source object.
   @override
-  final Meta? defaultValueMeta;
+  final FhirMeta? defaultValueMeta;
 
   /// [element] Optional field for this source.
   @override
@@ -54356,7 +54356,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       final FhirId? context,
       @JsonKey(name: '_context')
           final Element? contextElement,
-      final Integer? min,
+      final FhirInteger? min,
       @JsonKey(name: '_min')
           final Element? minElement,
       final String? max,
@@ -54377,40 +54377,40 @@ abstract class _StructureMapSource extends StructureMapSource {
       final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
           final Element? defaultValueCodeElement,
-      final Date? defaultValueDate,
+      final FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
           final Element? defaultValueDateElement,
       final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
           final Element? defaultValueDateTimeElement,
-      final Decimal? defaultValueDecimal,
+      final FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           final Element? defaultValueDecimalElement,
       final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
-      final Instant? defaultValueInstant,
+      final FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
           final Element? defaultValueInstantElement,
-      final Integer? defaultValueInteger,
+      final FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
           final Element? defaultValueIntegerElement,
-      final Markdown? defaultValueMarkdown,
+      final FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           final Element? defaultValueMarkdownElement,
-      final Oid? defaultValueOid,
+      final FhirOid? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           final Element? defaultValueOidElement,
-      final PositiveInt? defaultValuePositiveInt,
+      final FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
           final Element? defaultValuePositiveIntElement,
       final String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
           final Element? defaultValueStringElement,
-      final Time? defaultValueTime,
+      final FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
           final Element? defaultValueTimeElement,
-      final UnsignedInt? defaultValueUnsignedInt,
+      final FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
           final Element? defaultValueUnsignedIntElement,
       final FhirUri? defaultValueUri,
@@ -54419,7 +54419,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       final FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           final Element? defaultValueUrlElement,
-      final Uuid? defaultValueUuid,
+      final FhirUuid? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           final Element? defaultValueUuidElement,
       final Address? defaultValueAddress,
@@ -54452,7 +54452,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       final TriggerDefinition? defaultValueTriggerDefinition,
       final UsageContext? defaultValueUsageContext,
       final Dosage? defaultValueDosage,
-      final Meta? defaultValueMeta,
+      final FhirMeta? defaultValueMeta,
       final String? element,
       @JsonKey(name: '_element')
           final Element? elementElement,
@@ -55119,7 +55119,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -55143,7 +55143,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -55159,7 +55159,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       listRuleId: freezed == listRuleId
           ? _value.listRuleId
           : listRuleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       listRuleIdElement: freezed == listRuleIdElement
           ? _value.listRuleIdElement
           : listRuleIdElement // ignore: cast_nullable_to_non_nullable
@@ -55340,7 +55340,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -55364,7 +55364,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -55380,7 +55380,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       listRuleId: freezed == listRuleId
           ? _value.listRuleId
           : listRuleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       listRuleIdElement: freezed == listRuleIdElement
           ? _value.listRuleIdElement
           : listRuleIdElement // ignore: cast_nullable_to_non_nullable
@@ -55954,7 +55954,7 @@ class _$StructureMapParameterCopyWithImpl<$Res,
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -55978,7 +55978,7 @@ class _$StructureMapParameterCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -55986,7 +55986,7 @@ class _$StructureMapParameterCopyWithImpl<$Res,
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -56131,7 +56131,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -56155,7 +56155,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -56163,7 +56163,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -56292,7 +56292,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
   /// [valueInteger] Parameter value - variable or literal.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] Extensions for valueInteger
   @override
@@ -56301,7 +56301,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
   /// [valueDecimal] Parameter value - variable or literal.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] Extensions for valueDecimal
   @override
@@ -56388,9 +56388,9 @@ abstract class _StructureMapParameter extends StructureMapParameter {
           @JsonKey(name: '_valueString') final Element? valueStringElement,
           final FhirBoolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-          final Integer? valueInteger,
+          final FhirInteger? valueInteger,
           @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-          final Decimal? valueDecimal,
+          final FhirDecimal? valueDecimal,
           @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement}) =
       _$_StructureMapParameter;
   _StructureMapParameter._() : super._();
@@ -56592,7 +56592,7 @@ class _$StructureMapDependentCopyWithImpl<$Res,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -56677,7 +56677,7 @@ class __$$_StructureMapDependentCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable

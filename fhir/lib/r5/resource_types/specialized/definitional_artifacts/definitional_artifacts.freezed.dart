@@ -471,7 +471,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       FhirCanonical? transform,
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -627,11 +627,11 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -751,7 +751,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -767,7 +767,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -775,7 +775,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -791,7 +791,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -799,7 +799,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -989,12 +989,12 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1615,7 +1615,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1809,11 +1809,11 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1933,7 +1933,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -1949,7 +1949,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -1957,7 +1957,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -1973,7 +1973,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -1981,7 +1981,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -2333,7 +2333,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -2514,7 +2514,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [description] A free text natural language description of the activity definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -2549,7 +2549,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [purpose] Explanation of why this activity definition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -2558,7 +2558,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [copyright] A copyright statement relating to the activity definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the activity definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -2576,7 +2576,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -2585,7 +2585,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -3167,7 +3167,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -3209,24 +3209,24 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
-          final Date? approvalDate,
+          final FhirDate? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
-          final Date? lastReviewDate,
+          final FhirDate? lastReviewDate,
           @JsonKey(name: '_lastReviewDate')
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,
@@ -4924,7 +4924,7 @@ abstract class $ActorDefinitionCopyWith<$Res> {
       FhirCanonical? capabilities,
       List<FhirCanonical>? derivedFrom});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5018,11 +5018,11 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5142,7 +5142,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -5158,7 +5158,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -5166,7 +5166,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -5190,7 +5190,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -5216,12 +5216,12 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5538,7 +5538,7 @@ abstract class _$$_ActorDefinitionCopyWith<$Res>
       List<FhirCanonical>? derivedFrom});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5649,11 +5649,11 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5773,7 +5773,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -5789,7 +5789,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -5797,7 +5797,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -5821,7 +5821,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
@@ -5949,7 +5949,7 @@ class _$_ActorDefinition extends _ActorDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -6130,7 +6130,7 @@ class _$_ActorDefinition extends _ActorDefinition {
 
   /// [description] A free text natural language description of the actor.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -6165,7 +6165,7 @@ class _$_ActorDefinition extends _ActorDefinition {
 
   /// [purpose] Explanation of why this actor definition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -6174,7 +6174,7 @@ class _$_ActorDefinition extends _ActorDefinition {
 
   /// [copyright] A copyright statement relating to the actor definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the actor definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -6201,7 +6201,7 @@ class _$_ActorDefinition extends _ActorDefinition {
 
   /// [documentation] Documentation about the functionality of the actor.
   @override
-  final Markdown? documentation;
+  final FhirMarkdown? documentation;
 
   /// [documentationElement] ("_documentation") Extensions for documentation
   @override
@@ -6427,7 +6427,7 @@ abstract class _ActorDefinition extends ActorDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -6469,15 +6469,15 @@ abstract class _ActorDefinition extends ActorDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
@@ -6486,7 +6486,7 @@ abstract class _ActorDefinition extends ActorDefinition {
       final FhirCode? type,
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final Markdown? documentation,
+      final FhirMarkdown? documentation,
       @JsonKey(name: '_documentation')
           final Element? documentationElement,
       final List<FhirUrl>? reference,
@@ -7104,7 +7104,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
       List<ConditionDefinitionQuestionnaire>? questionnaire,
       List<ConditionDefinitionPlan>? plan});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7230,11 +7230,11 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7354,7 +7354,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -7370,7 +7370,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -7378,7 +7378,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -7394,7 +7394,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -7402,7 +7402,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -7520,12 +7520,12 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7973,7 +7973,7 @@ abstract class _$$_ConditionDefinitionCopyWith<$Res>
       List<ConditionDefinitionPlan>? plan});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8125,11 +8125,11 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8249,7 +8249,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -8265,7 +8265,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -8273,7 +8273,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -8289,7 +8289,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -8297,7 +8297,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -8555,7 +8555,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -8736,7 +8736,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 
   /// [description] A free text natural language description of the condition definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -8771,7 +8771,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 
   /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -8780,7 +8780,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 
   /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -8798,7 +8798,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -8807,7 +8807,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -9275,7 +9275,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -9317,24 +9317,24 @@ abstract class _ConditionDefinition extends ConditionDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -12034,7 +12034,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       DeviceDefinitionCorrectiveAction? correctiveAction,
       List<DeviceDefinitionChargeItem>? chargeItem});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -12112,11 +12112,11 @@ class _$DeviceDefinitionCopyWithImpl<$Res, $Val extends DeviceDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12152,7 +12152,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res, $Val extends DeviceDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12279,12 +12279,12 @@ class _$DeviceDefinitionCopyWithImpl<$Res, $Val extends DeviceDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -12484,7 +12484,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
       List<DeviceDefinitionChargeItem>? chargeItem});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12571,11 +12571,11 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12611,7 +12611,7 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -12833,7 +12833,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -12903,7 +12903,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
 
   /// [description] Additional information to describe the device.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -13366,7 +13366,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -13378,7 +13378,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<Identifier>? identifier,
@@ -16179,7 +16179,7 @@ class _$DeviceDefinitionHasPartCopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -16269,7 +16269,7 @@ class __$$_DeviceDefinitionHasPartCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -16366,7 +16366,7 @@ class _$_DeviceDefinitionHasPart extends _DeviceDefinitionHasPart {
 
   /// [count] Number of instances of the component device in the current device.
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] ("_count") Extensions for count
   @override
@@ -16428,7 +16428,7 @@ abstract class _DeviceDefinitionHasPart extends DeviceDefinitionHasPart {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Reference reference,
-          final Integer? count,
+          final FhirInteger? count,
           @JsonKey(name: '_count') final Element? countElement}) =
       _$_DeviceDefinitionHasPart;
   _DeviceDefinitionHasPart._() : super._();
@@ -16623,7 +16623,7 @@ class _$DeviceDefinitionPackagingCopyWithImpl<$Res,
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -16757,7 +16757,7 @@ class __$$_DeviceDefinitionPackagingCopyWithImpl<$Res>
       count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       countElement: freezed == countElement
           ? _value.countElement
           : countElement // ignore: cast_nullable_to_non_nullable
@@ -16877,7 +16877,7 @@ class _$_DeviceDefinitionPackaging extends _DeviceDefinitionPackaging {
 
   /// [count] The number of items contained in the package (devices or sub-packages).
   @override
-  final Integer? count;
+  final FhirInteger? count;
 
   /// [countElement] ("_count") Extensions for count
   @override
@@ -16990,7 +16990,7 @@ abstract class _DeviceDefinitionPackaging extends DeviceDefinitionPackaging {
           final List<FhirExtension>? modifierExtension,
           final Identifier? identifier,
           final CodeableConcept? type,
-          final Integer? count,
+          final FhirInteger? count,
           @JsonKey(name: '_count') final Element? countElement,
           final List<DeviceDefinitionDistributor>? distributor,
           final List<DeviceDefinitionUdiDeviceIdentifier>? udiDeviceIdentifier,
@@ -18132,7 +18132,7 @@ class _$DeviceDefinitionPropertyCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -18356,7 +18356,7 @@ class __$$_DeviceDefinitionPropertyCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -18495,7 +18495,7 @@ class _$_DeviceDefinitionProperty extends _DeviceDefinitionProperty {
 
   /// [valueInteger] Property value - the data type depends on the property type.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -18594,7 +18594,7 @@ abstract class _DeviceDefinitionProperty extends DeviceDefinitionProperty {
       @JsonKey(name: '_valueString') final Element? valueStringElement,
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Range? valueRange,
       final Attachment? valueAttachment}) = _$_DeviceDefinitionProperty;
@@ -19710,7 +19710,7 @@ class _$DeviceDefinitionGuidelineCopyWithImpl<$Res,
       usageInstruction: freezed == usageInstruction
           ? _value.usageInstruction
           : usageInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       usageInstructionElement: freezed == usageInstructionElement
           ? _value.usageInstructionElement
           : usageInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -19842,7 +19842,7 @@ class __$$_DeviceDefinitionGuidelineCopyWithImpl<$Res>
       usageInstruction: freezed == usageInstruction
           ? _value.usageInstruction
           : usageInstruction // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       usageInstructionElement: freezed == usageInstructionElement
           ? _value.usageInstructionElement
           : usageInstructionElement // ignore: cast_nullable_to_non_nullable
@@ -19983,7 +19983,7 @@ class _$_DeviceDefinitionGuideline extends _DeviceDefinitionGuideline {
 
   /// [usageInstruction] Detailed written and visual directions for the user on how to use the device.
   @override
-  final Markdown? usageInstruction;
+  final FhirMarkdown? usageInstruction;
 
   /// [usageInstructionElement] ("_usageInstruction") Extensions for usageInstruction
   @override
@@ -20126,7 +20126,7 @@ abstract class _DeviceDefinitionGuideline extends DeviceDefinitionGuideline {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<UsageContext>? useContext,
-      final Markdown? usageInstruction,
+      final FhirMarkdown? usageInstruction,
       @JsonKey(name: '_usageInstruction')
           final Element? usageInstructionElement,
       final List<RelatedArtifact>? relatedArtifact,
@@ -21485,7 +21485,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
           Element? usageElement,
       List<TriggerDefinition> trigger});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -21594,11 +21594,11 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -21718,7 +21718,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -21734,7 +21734,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -21742,7 +21742,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -21758,7 +21758,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -21766,7 +21766,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -21832,12 +21832,12 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -22226,7 +22226,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
       List<TriggerDefinition> trigger});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -22357,11 +22357,11 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -22481,7 +22481,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -22497,7 +22497,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -22505,7 +22505,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -22521,7 +22521,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -22529,7 +22529,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -22712,7 +22712,7 @@ class _$_EventDefinition extends _EventDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -22893,7 +22893,7 @@ class _$_EventDefinition extends _EventDefinition {
 
   /// [description] A free text natural language description of the event definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -22928,7 +22928,7 @@ class _$_EventDefinition extends _EventDefinition {
 
   /// [purpose] Explanation of why this event definition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -22937,7 +22937,7 @@ class _$_EventDefinition extends _EventDefinition {
 
   /// [copyright] A copyright statement relating to the event definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the event definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -22955,7 +22955,7 @@ class _$_EventDefinition extends _EventDefinition {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -22964,7 +22964,7 @@ class _$_EventDefinition extends _EventDefinition {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -23284,7 +23284,7 @@ abstract class _EventDefinition extends EventDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -23326,24 +23326,24 @@ abstract class _EventDefinition extends EventDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -23884,7 +23884,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       List<ExampleScenarioInstance>? instance,
       List<ExampleScenarioProcess>? process});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -23971,11 +23971,11 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -24095,7 +24095,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -24111,7 +24111,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -24119,7 +24119,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -24149,12 +24149,12 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -24439,7 +24439,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
       List<ExampleScenarioProcess>? process});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -24541,11 +24541,11 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -24665,7 +24665,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -24681,7 +24681,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -24689,7 +24689,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -24813,7 +24813,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -24994,7 +24994,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [description] A free text natural language description of the ExampleScenario from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -25029,7 +25029,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [purpose] What the example scenario resource is created for. This should not be used to show the business purpose of the scenario itself, but the purpose of documenting a scenario.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -25038,7 +25038,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [copyright] A copyright statement relating to the example scenario and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the example scenario.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -25253,7 +25253,7 @@ abstract class _ExampleScenario extends ExampleScenario {
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -25295,15 +25295,15 @@ abstract class _ExampleScenario extends ExampleScenario {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
@@ -25685,7 +25685,7 @@ class _$ExampleScenarioActorCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -25836,7 +25836,7 @@ class __$$_ExampleScenarioActorCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -25961,7 +25961,7 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
 
   /// [description] An explanation of who/what the actor is and its role in the scenario.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -26040,7 +26040,7 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
           @JsonKey(name: '_type') final Element? typeElement,
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ExampleScenarioActor;
   _ExampleScenarioActor._() : super._();
@@ -26358,7 +26358,7 @@ class _$ExampleScenarioInstanceCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -26620,7 +26620,7 @@ class __$$_ExampleScenarioInstanceCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -26796,7 +26796,7 @@ class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
 
   /// [description] An explanation of what the instance contains and what it's for.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -26947,7 +26947,7 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
           final String? title,
           @JsonKey(name: '_title')
               final Element? titleElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final Reference? content,
@@ -27211,7 +27211,7 @@ class _$ExampleScenarioVersionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -27357,7 +27357,7 @@ class __$$_ExampleScenarioVersionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -27476,7 +27476,7 @@ class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
 
   /// [description] An explanation of what this specific version of the instance contains and represents.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -27554,7 +27554,7 @@ abstract class _ExampleScenarioVersion extends ExampleScenarioVersion {
       @JsonKey(name: '_key') final Element? keyElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Reference? content}) = _$_ExampleScenarioVersion;
   _ExampleScenarioVersion._() : super._();
@@ -28243,7 +28243,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -28251,7 +28251,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       preConditions: freezed == preConditions
           ? _value.preConditions
           : preConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preConditionsElement: freezed == preConditionsElement
           ? _value.preConditionsElement
           : preConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -28259,7 +28259,7 @@ class _$ExampleScenarioProcessCopyWithImpl<$Res,
       postConditions: freezed == postConditions
           ? _value.postConditions
           : postConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       postConditionsElement: freezed == postConditionsElement
           ? _value.postConditionsElement
           : postConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -28401,7 +28401,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -28409,7 +28409,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       preConditions: freezed == preConditions
           ? _value.preConditions
           : preConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       preConditionsElement: freezed == preConditionsElement
           ? _value.preConditionsElement
           : preConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -28417,7 +28417,7 @@ class __$$_ExampleScenarioProcessCopyWithImpl<$Res>
       postConditions: freezed == postConditions
           ? _value.postConditions
           : postConditions // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       postConditionsElement: freezed == postConditionsElement
           ? _value.postConditionsElement
           : postConditionsElement // ignore: cast_nullable_to_non_nullable
@@ -28530,7 +28530,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [description] An explanation of what the process represents and what it does.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -28539,7 +28539,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [preConditions] Description of the initial state of the actors, environment and data before the process starts.
   @override
-  final Markdown? preConditions;
+  final FhirMarkdown? preConditions;
 
   /// [preConditionsElement] ("_preConditions") Extensions for preConditions
   @override
@@ -28548,7 +28548,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
 
   /// [postConditions] Description of the final state of the actors, environment and data after the process has been successfully completed.
   @override
-  final Markdown? postConditions;
+  final FhirMarkdown? postConditions;
 
   /// [postConditionsElement] ("_postConditions") Extensions for postConditions
   @override
@@ -28640,11 +28640,11 @@ abstract class _ExampleScenarioProcess extends ExampleScenarioProcess {
       final List<FhirExtension>? modifierExtension,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Markdown? preConditions,
+      final FhirMarkdown? preConditions,
       @JsonKey(name: '_preConditions') final Element? preConditionsElement,
-      final Markdown? postConditions,
+      final FhirMarkdown? postConditions,
       @JsonKey(name: '_postConditions') final Element? postConditionsElement,
       final List<ExampleScenarioStep>? step}) = _$_ExampleScenarioProcess;
   _ExampleScenarioProcess._() : super._();
@@ -29534,7 +29534,7 @@ class _$ExampleScenarioOperationCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -29801,7 +29801,7 @@ class __$$_ExampleScenarioOperationCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -29961,7 +29961,7 @@ class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
 
   /// [description] An explanation of what the operation represents and what it does.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -30088,7 +30088,7 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
       @JsonKey(name: '_initiator') final Element? initiatorElement,
       final String? receiver,
       @JsonKey(name: '_receiver') final Element? receiverElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirBoolean? initiatorActive,
       @JsonKey(name: '_initiatorActive') final Element? initiatorActiveElement,
@@ -30330,7 +30330,7 @@ class _$ExampleScenarioAlternativeCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -30438,7 +30438,7 @@ class __$$_ExampleScenarioAlternativeCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -30547,7 +30547,7 @@ class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
 
   /// [description] A human-readable description of the alternative explaining when the alternative should occur rather than the base step.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -30627,7 +30627,7 @@ abstract class _ExampleScenarioAlternative extends ExampleScenarioAlternative {
       final List<FhirExtension>? modifierExtension,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<ExampleScenarioStep>? step}) = _$_ExampleScenarioAlternative;
   _ExampleScenarioAlternative._() : super._();
@@ -31072,7 +31072,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<Reference>? hasMember,
       List<ObservationDefinitionComponent>? component});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -31201,11 +31201,11 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -31325,7 +31325,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -31341,7 +31341,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -31349,7 +31349,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -31365,7 +31365,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -31373,7 +31373,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -31495,12 +31495,12 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -31952,7 +31952,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
       List<ObservationDefinitionComponent>? component});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -32106,11 +32106,11 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -32230,7 +32230,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -32246,7 +32246,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -32254,7 +32254,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -32270,7 +32270,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -32278,7 +32278,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -32543,7 +32543,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -32715,7 +32715,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [description] A free text natural language description of the ObservationDefinition from the consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -32750,7 +32750,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [purpose] Explains why this ObservationDefinition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -32759,7 +32759,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [copyright] Copyright statement relating to the ObservationDefinition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the ObservationDefinition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -32777,7 +32777,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -32786,7 +32786,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 
   /// [lastReviewDate] The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -33298,7 +33298,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -33340,24 +33340,24 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
-          final Date? approvalDate,
+          final FhirDate? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
-          final Date? lastReviewDate,
+          final FhirDate? lastReviewDate,
           @JsonKey(name: '_lastReviewDate')
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,
@@ -33866,7 +33866,7 @@ class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res,
       conversionFactor: freezed == conversionFactor
           ? _value.conversionFactor
           : conversionFactor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       conversionFactorElement: freezed == conversionFactorElement
           ? _value.conversionFactorElement
           : conversionFactorElement // ignore: cast_nullable_to_non_nullable
@@ -33874,7 +33874,7 @@ class _$ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res,
       decimalPrecision: freezed == decimalPrecision
           ? _value.decimalPrecision
           : decimalPrecision // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       decimalPrecisionElement: freezed == decimalPrecisionElement
           ? _value.decimalPrecisionElement
           : decimalPrecisionElement // ignore: cast_nullable_to_non_nullable
@@ -34008,7 +34008,7 @@ class __$$_ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
       conversionFactor: freezed == conversionFactor
           ? _value.conversionFactor
           : conversionFactor // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       conversionFactorElement: freezed == conversionFactorElement
           ? _value.conversionFactorElement
           : conversionFactorElement // ignore: cast_nullable_to_non_nullable
@@ -34016,7 +34016,7 @@ class __$$_ObservationDefinitionQuantitativeDetailsCopyWithImpl<$Res>
       decimalPrecision: freezed == decimalPrecision
           ? _value.decimalPrecision
           : decimalPrecision // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       decimalPrecisionElement: freezed == decimalPrecisionElement
           ? _value.decimalPrecisionElement
           : decimalPrecisionElement // ignore: cast_nullable_to_non_nullable
@@ -34122,7 +34122,7 @@ class _$_ObservationDefinitionQuantitativeDetails
 
   /// [conversionFactor] Factor for converting value expressed with primary unit to value expressed with secondary unit.
   @override
-  final Decimal? conversionFactor;
+  final FhirDecimal? conversionFactor;
 
   /// [conversionFactorElement] ("_conversionFactor") Extensions for conversionFactor
   @override
@@ -34131,7 +34131,7 @@ class _$_ObservationDefinitionQuantitativeDetails
 
   /// [decimalPrecision] Number of digits after decimal separator when the results of such observations are of type Quantity.
   @override
-  final Integer? decimalPrecision;
+  final FhirInteger? decimalPrecision;
 
   /// [decimalPrecisionElement] ("_decimalPrecision") Extensions for decimalPrecision
   @override
@@ -34207,10 +34207,10 @@ abstract class _ObservationDefinitionQuantitativeDetails
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? unit,
           final CodeableConcept? customaryUnit,
-          final Decimal? conversionFactor,
+          final FhirDecimal? conversionFactor,
           @JsonKey(name: '_conversionFactor')
               final Element? conversionFactorElement,
-          final Integer? decimalPrecision,
+          final FhirInteger? decimalPrecision,
           @JsonKey(name: '_decimalPrecision')
               final Element? decimalPrecisionElement}) =
       _$_ObservationDefinitionQuantitativeDetails;
@@ -36019,7 +36019,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
           Element? asNeededBooleanElement,
       CodeableConcept? asNeededCodeableConcept});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -36141,11 +36141,11 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -36265,7 +36265,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -36281,7 +36281,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -36289,7 +36289,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -36305,7 +36305,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -36313,7 +36313,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -36415,12 +36415,12 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -36870,7 +36870,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
       CodeableConcept? asNeededCodeableConcept});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -37018,11 +37018,11 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -37142,7 +37142,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -37158,7 +37158,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -37166,7 +37166,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -37182,7 +37182,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -37190,7 +37190,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -37424,7 +37424,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -37605,7 +37605,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [description] A free text natural language description of the plan definition from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -37640,7 +37640,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [purpose] Explanation of why this plan definition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -37649,7 +37649,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [copyright] A copyright statement relating to the plan definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the plan definition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -37667,7 +37667,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -37676,7 +37676,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -38082,7 +38082,7 @@ abstract class _PlanDefinition extends PlanDefinition {
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -38124,24 +38124,24 @@ abstract class _PlanDefinition extends PlanDefinition {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -39261,7 +39261,7 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res,
       detailInteger: freezed == detailInteger
           ? _value.detailInteger
           : detailInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       detailIntegerElement: freezed == detailIntegerElement
           ? _value.detailIntegerElement
           : detailIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -39507,7 +39507,7 @@ class __$$_PlanDefinitionTargetCopyWithImpl<$Res>
       detailInteger: freezed == detailInteger
           ? _value.detailInteger
           : detailInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       detailIntegerElement: freezed == detailIntegerElement
           ? _value.detailIntegerElement
           : detailIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -39651,7 +39651,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
 
   /// [detailInteger] The target value of the measure to be achieved to signify fulfillment of the goal, e.g. 150 pounds or 7.0%, or in the case of pharmaceutical quality - NMT 0.6%, Clear solution, etc. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any value at or above the low value.
   @override
-  final Integer? detailInteger;
+  final FhirInteger? detailInteger;
 
   /// [detailIntegerElement] ("_detailInteger") Extensions for detailInteger
   @override
@@ -39753,7 +39753,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
       @JsonKey(name: '_detailString') final Element? detailStringElement,
       final FhirBoolean? detailBoolean,
       @JsonKey(name: '_detailBoolean') final Element? detailBooleanElement,
-      final Integer? detailInteger,
+      final FhirInteger? detailInteger,
       @JsonKey(name: '_detailInteger') final Element? detailIntegerElement,
       final Ratio? detailRatio,
       final FhirDuration? due}) = _$_PlanDefinitionTarget;
@@ -39972,7 +39972,7 @@ class _$PlanDefinitionActorCopyWithImpl<$Res, $Val extends PlanDefinitionActor>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -40077,7 +40077,7 @@ class __$$_PlanDefinitionActorCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -40186,7 +40186,7 @@ class _$_PlanDefinitionActor extends _PlanDefinitionActor {
 
   /// [description] A description of how the actor fits into the overall actions of the plan definition.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -40264,7 +40264,7 @@ abstract class _PlanDefinitionActor extends PlanDefinitionActor {
           final List<FhirExtension>? modifierExtension,
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           required final List<PlanDefinitionOption> option}) =
       _$_PlanDefinitionActor;
@@ -43615,7 +43615,7 @@ class _$PlanDefinitionInputCopyWithImpl<$Res, $Val extends PlanDefinitionInput>
       relatedData: freezed == relatedData
           ? _value.relatedData
           : relatedData // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       relatedDataElement: freezed == relatedDataElement
           ? _value.relatedDataElement
           : relatedDataElement // ignore: cast_nullable_to_non_nullable
@@ -43734,7 +43734,7 @@ class __$$_PlanDefinitionInputCopyWithImpl<$Res>
       relatedData: freezed == relatedData
           ? _value.relatedData
           : relatedData // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       relatedDataElement: freezed == relatedDataElement
           ? _value.relatedDataElement
           : relatedDataElement // ignore: cast_nullable_to_non_nullable
@@ -44594,7 +44594,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res,
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -44736,7 +44736,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -46341,7 +46341,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<Coding>? code,
       List<QuestionnaireItem>? item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -46444,11 +46444,11 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -46568,7 +46568,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -46584,7 +46584,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -46592,7 +46592,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -46608,7 +46608,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -46616,7 +46616,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -46674,12 +46674,12 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -47016,7 +47016,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
       List<QuestionnaireItem>? item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -47137,11 +47137,11 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -47261,7 +47261,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -47277,7 +47277,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -47285,7 +47285,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -47301,7 +47301,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -47309,7 +47309,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -47485,7 +47485,7 @@ class _$_Questionnaire extends _Questionnaire {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -47666,7 +47666,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [description] A free text natural language description of the questionnaire from a consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -47701,7 +47701,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [purpose] Explanation of why this questionnaire is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -47710,7 +47710,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [copyright] A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -47728,7 +47728,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -47737,7 +47737,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -48083,7 +48083,7 @@ abstract class _Questionnaire extends Questionnaire {
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -48125,24 +48125,24 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Date? approvalDate,
+      final FhirDate? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      final FhirDate? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Period? effectivePeriod,
@@ -48778,7 +48778,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res, $Val extends QuestionnaireItem>
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -49173,7 +49173,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
       maxLength: freezed == maxLength
           ? _value.maxLength
           : maxLength // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       maxLengthElement: freezed == maxLengthElement
           ? _value.maxLengthElement
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
@@ -49439,7 +49439,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 
   /// [maxLength] The maximum number of characters that are permitted in the answer to be considered a "valid" QuestionnaireResponse.
   @override
-  final Integer? maxLength;
+  final FhirInteger? maxLength;
 
   /// [maxLengthElement] ("_maxLength") Extensions for maxLength
   @override
@@ -49661,7 +49661,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       final FhirBoolean? readOnly,
       @JsonKey(name: '_readOnly')
           final Element? readOnlyElement,
-      final Integer? maxLength,
+      final FhirInteger? maxLength,
       @JsonKey(name: '_maxLength')
           final Element? maxLengthElement,
       final FhirCode? answerConstraint,
@@ -50084,7 +50084,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerDecimal: freezed == answerDecimal
           ? _value.answerDecimal
           : answerDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerDecimalElement: freezed == answerDecimalElement
           ? _value.answerDecimalElement
           : answerDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -50092,7 +50092,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerInteger: freezed == answerInteger
           ? _value.answerInteger
           : answerInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       answerIntegerElement: freezed == answerIntegerElement
           ? _value.answerIntegerElement
           : answerIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -50100,7 +50100,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerDate: freezed == answerDate
           ? _value.answerDate
           : answerDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       answerDateElement: freezed == answerDateElement
           ? _value.answerDateElement
           : answerDateElement // ignore: cast_nullable_to_non_nullable
@@ -50116,7 +50116,7 @@ class _$QuestionnaireEnableWhenCopyWithImpl<$Res,
       answerTime: freezed == answerTime
           ? _value.answerTime
           : answerTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       answerTimeElement: freezed == answerTimeElement
           ? _value.answerTimeElement
           : answerTimeElement // ignore: cast_nullable_to_non_nullable
@@ -50426,7 +50426,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDecimal: freezed == answerDecimal
           ? _value.answerDecimal
           : answerDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       answerDecimalElement: freezed == answerDecimalElement
           ? _value.answerDecimalElement
           : answerDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -50434,7 +50434,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerInteger: freezed == answerInteger
           ? _value.answerInteger
           : answerInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       answerIntegerElement: freezed == answerIntegerElement
           ? _value.answerIntegerElement
           : answerIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -50442,7 +50442,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerDate: freezed == answerDate
           ? _value.answerDate
           : answerDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       answerDateElement: freezed == answerDateElement
           ? _value.answerDateElement
           : answerDateElement // ignore: cast_nullable_to_non_nullable
@@ -50458,7 +50458,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
       answerTime: freezed == answerTime
           ? _value.answerTime
           : answerTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       answerTimeElement: freezed == answerTimeElement
           ? _value.answerTimeElement
           : answerTimeElement // ignore: cast_nullable_to_non_nullable
@@ -50617,7 +50617,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   /// [answerDecimal] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
   @override
-  final Decimal? answerDecimal;
+  final FhirDecimal? answerDecimal;
 
   /// [answerDecimalElement] ("_answerDecimal") Extensions for answerDecimal
   @override
@@ -50626,7 +50626,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   /// [answerInteger] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
   @override
-  final Integer? answerInteger;
+  final FhirInteger? answerInteger;
 
   /// [answerIntegerElement] ("_answerInteger") Extensions for answerInteger
   @override
@@ -50635,7 +50635,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   /// [answerDate] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
   @override
-  final Date? answerDate;
+  final FhirDate? answerDate;
 
   /// [answerDateElement] ("_answerDate") Extensions for answerDate
   @override
@@ -50653,7 +50653,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 
   /// [answerTime] A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.
   @override
-  final Time? answerTime;
+  final FhirTime? answerTime;
 
   /// [answerTimeElement] ("_answerTime") Extensions for answerTime
   @override
@@ -50797,15 +50797,15 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       @JsonKey(name: '_operator') final Element? operatorElement,
       final FhirBoolean? answerBoolean,
       @JsonKey(name: '_answerBoolean') final Element? answerBooleanElement,
-      final Decimal? answerDecimal,
+      final FhirDecimal? answerDecimal,
       @JsonKey(name: '_answerDecimal') final Element? answerDecimalElement,
-      final Integer? answerInteger,
+      final FhirInteger? answerInteger,
       @JsonKey(name: '_answerInteger') final Element? answerIntegerElement,
-      final Date? answerDate,
+      final FhirDate? answerDate,
       @JsonKey(name: '_answerDate') final Element? answerDateElement,
       final FhirDateTime? answerDateTime,
       @JsonKey(name: '_answerDateTime') final Element? answerDateTimeElement,
-      final Time? answerTime,
+      final FhirTime? answerTime,
       @JsonKey(name: '_answerTime') final Element? answerTimeElement,
       final String? answerString,
       @JsonKey(name: '_answerString') final Element? answerStringElement,
@@ -51107,7 +51107,7 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -51115,7 +51115,7 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -51123,7 +51123,7 @@ class _$QuestionnaireAnswerOptionCopyWithImpl<$Res,
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -51327,7 +51327,7 @@ class __$$_QuestionnaireAnswerOptionCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -51335,7 +51335,7 @@ class __$$_QuestionnaireAnswerOptionCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -51343,7 +51343,7 @@ class __$$_QuestionnaireAnswerOptionCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -51469,7 +51469,7 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
 
   /// [valueInteger] A potential answer that's allowed as the answer to this question.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -51478,7 +51478,7 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
 
   /// [valueDate] A potential answer that's allowed as the answer to this question.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -51487,7 +51487,7 @@ class _$_QuestionnaireAnswerOption extends _QuestionnaireAnswerOption {
 
   /// [valueTime] A potential answer that's allowed as the answer to this question.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @override
@@ -51602,13 +51602,13 @@ abstract class _QuestionnaireAnswerOption extends QuestionnaireAnswerOption {
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Integer? valueInteger,
+          final FhirInteger? valueInteger,
           @JsonKey(name: '_valueInteger')
               final Element? valueIntegerElement,
-          final Date? valueDate,
+          final FhirDate? valueDate,
           @JsonKey(name: '_valueDate')
               final Element? valueDateElement,
-          final Time? valueTime,
+          final FhirTime? valueTime,
           @JsonKey(name: '_valueTime')
               final Element? valueTimeElement,
           final String? valueString,
@@ -51929,7 +51929,7 @@ class _$QuestionnaireInitialCopyWithImpl<$Res,
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -51937,7 +51937,7 @@ class _$QuestionnaireInitialCopyWithImpl<$Res,
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -51945,7 +51945,7 @@ class _$QuestionnaireInitialCopyWithImpl<$Res,
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -51961,7 +51961,7 @@ class _$QuestionnaireInitialCopyWithImpl<$Res,
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -52264,7 +52264,7 @@ class __$$_QuestionnaireInitialCopyWithImpl<$Res>
       valueDecimal: freezed == valueDecimal
           ? _value.valueDecimal
           : valueDecimal // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
+              as FhirDecimal?,
       valueDecimalElement: freezed == valueDecimalElement
           ? _value.valueDecimalElement
           : valueDecimalElement // ignore: cast_nullable_to_non_nullable
@@ -52272,7 +52272,7 @@ class __$$_QuestionnaireInitialCopyWithImpl<$Res>
       valueInteger: freezed == valueInteger
           ? _value.valueInteger
           : valueInteger // ignore: cast_nullable_to_non_nullable
-              as Integer?,
+              as FhirInteger?,
       valueIntegerElement: freezed == valueIntegerElement
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
@@ -52280,7 +52280,7 @@ class __$$_QuestionnaireInitialCopyWithImpl<$Res>
       valueDate: freezed == valueDate
           ? _value.valueDate
           : valueDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       valueDateElement: freezed == valueDateElement
           ? _value.valueDateElement
           : valueDateElement // ignore: cast_nullable_to_non_nullable
@@ -52296,7 +52296,7 @@ class __$$_QuestionnaireInitialCopyWithImpl<$Res>
       valueTime: freezed == valueTime
           ? _value.valueTime
           : valueTime // ignore: cast_nullable_to_non_nullable
-              as Time?,
+              as FhirTime?,
       valueTimeElement: freezed == valueTimeElement
           ? _value.valueTimeElement
           : valueTimeElement // ignore: cast_nullable_to_non_nullable
@@ -52447,7 +52447,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   /// [valueDecimal] The actual value to for an initial answer.
   @override
-  final Decimal? valueDecimal;
+  final FhirDecimal? valueDecimal;
 
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   @override
@@ -52456,7 +52456,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   /// [valueInteger] The actual value to for an initial answer.
   @override
-  final Integer? valueInteger;
+  final FhirInteger? valueInteger;
 
   /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   @override
@@ -52465,7 +52465,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   /// [valueDate] The actual value to for an initial answer.
   @override
-  final Date? valueDate;
+  final FhirDate? valueDate;
 
   /// [valueDateElement] ("_valueDate") Extensions for valueDate
   @override
@@ -52483,7 +52483,7 @@ class _$_QuestionnaireInitial extends _QuestionnaireInitial {
 
   /// [valueTime] The actual value to for an initial answer.
   @override
-  final Time? valueTime;
+  final FhirTime? valueTime;
 
   /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   @override
@@ -52632,15 +52632,15 @@ abstract class _QuestionnaireInitial extends QuestionnaireInitial {
       final List<FhirExtension>? modifierExtension,
       final FhirBoolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
-      final Decimal? valueDecimal,
+      final FhirDecimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
-      final Integer? valueInteger,
+      final FhirInteger? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
-      final Date? valueDate,
+      final FhirDate? valueDate,
       @JsonKey(name: '_valueDate') final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
-      final Time? valueTime,
+      final FhirTime? valueTime,
       @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
@@ -53022,7 +53022,7 @@ abstract class $RequirementsCopyWith<$Res> {
       List<FhirCanonical>? actor,
       List<RequirementsStatement>? statement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -53109,11 +53109,11 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -53233,7 +53233,7 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -53249,7 +53249,7 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -53257,7 +53257,7 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -53287,12 +53287,12 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -53577,7 +53577,7 @@ abstract class _$$_RequirementsCopyWith<$Res>
       List<RequirementsStatement>? statement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -53679,11 +53679,11 @@ class __$$_RequirementsCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -53803,7 +53803,7 @@ class __$$_RequirementsCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -53819,7 +53819,7 @@ class __$$_RequirementsCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -53827,7 +53827,7 @@ class __$$_RequirementsCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -53951,7 +53951,7 @@ class _$_Requirements extends _Requirements {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -54132,7 +54132,7 @@ class _$_Requirements extends _Requirements {
 
   /// [description] A free text natural language description of the actor.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -54167,7 +54167,7 @@ class _$_Requirements extends _Requirements {
 
   /// [purpose] Explanation of why this Requirements is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -54176,7 +54176,7 @@ class _$_Requirements extends _Requirements {
 
   /// [copyright] A copyright statement relating to the Requirements and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the Requirements.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -54393,7 +54393,7 @@ abstract class _Requirements extends Requirements {
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           final R5ResourceType resourceType,
       final FhirId? id,
-      final Meta? meta,
+      final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
@@ -54435,15 +54435,15 @@ abstract class _Requirements extends Requirements {
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
       final List<ContactDetail>? contact,
-      final Markdown? description,
+      final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      final FhirMarkdown? purpose,
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final Markdown? copyright,
+      final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
       final String? copyrightLabel,
@@ -54864,7 +54864,7 @@ class _$RequirementsStatementCopyWithImpl<$Res,
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -54896,7 +54896,7 @@ class _$RequirementsStatementCopyWithImpl<$Res,
       requirement: freezed == requirement
           ? _value.requirement
           : requirement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       requirementElement: freezed == requirementElement
           ? _value.requirementElement
           : requirementElement // ignore: cast_nullable_to_non_nullable
@@ -55109,7 +55109,7 @@ class __$$_RequirementsStatementCopyWithImpl<$Res>
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -55141,7 +55141,7 @@ class __$$_RequirementsStatementCopyWithImpl<$Res>
       requirement: freezed == requirement
           ? _value.requirement
           : requirement // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       requirementElement: freezed == requirementElement
           ? _value.requirementElement
           : requirementElement // ignore: cast_nullable_to_non_nullable
@@ -55348,7 +55348,7 @@ class _$_RequirementsStatement extends _RequirementsStatement {
 
   /// [requirement] The actual requirement for human consumption.
   @override
-  final Markdown? requirement;
+  final FhirMarkdown? requirement;
 
   /// [requirementElement] ("_requirement") Extensions for requirement
   @override
@@ -55549,7 +55549,7 @@ abstract class _RequirementsStatement extends RequirementsStatement {
       @JsonKey(name: '_conformance') final List<Element>? conformanceElement,
       final FhirBoolean? conditionality,
       @JsonKey(name: '_conditionality') final Element? conditionalityElement,
-      final Markdown? requirement,
+      final FhirMarkdown? requirement,
       @JsonKey(name: '_requirement') final Element? requirementElement,
       final String? derivedFrom,
       @JsonKey(name: '_derivedFrom') final Element? derivedFromElement,
@@ -56018,7 +56018,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       List<CodeableConcept>? collection,
       List<SpecimenDefinitionTypeTested>? typeTested});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -56132,11 +56132,11 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -56256,7 +56256,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -56272,7 +56272,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -56280,7 +56280,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -56296,7 +56296,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -56304,7 +56304,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -56386,12 +56386,12 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -56796,7 +56796,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
       List<SpecimenDefinitionTypeTested>? typeTested});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -56933,11 +56933,11 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -57057,7 +57057,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
@@ -57073,7 +57073,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       purpose: freezed == purpose
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       purposeElement: freezed == purposeElement
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
@@ -57081,7 +57081,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
+              as FhirMarkdown?,
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
@@ -57097,7 +57097,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -57105,7 +57105,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as Date?,
+              as FhirDate?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -57312,7 +57312,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   /// maintained by the infrastructure. Changes to the content might not
   /// always be associated with version changes to the resource.
   @override
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when
   /// the resource was constructed, and which must be understood when
@@ -57484,7 +57484,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   /// [description] A free text natural language description of the SpecimenDefinition from the consumer's perspective.
   @override
-  final Markdown? description;
+  final FhirMarkdown? description;
 
   /// [descriptionElement] ("_description") Extensions for description
   @override
@@ -57519,7 +57519,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   /// [purpose] Explains why this SpecimeDefinition is needed and why it has been designed as it has.
   @override
-  final Markdown? purpose;
+  final FhirMarkdown? purpose;
 
   /// [purposeElement] ("_purpose") Extensions for purpose
   @override
@@ -57528,7 +57528,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   /// [copyright] Copyright statement relating to the SpecimenDefinition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the SpecimenDefinition.
   @override
-  final Markdown? copyright;
+  final FhirMarkdown? copyright;
 
   /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
@@ -57546,7 +57546,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   /// [approvalDate] The date on which the asset content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final Date? approvalDate;
+  final FhirDate? approvalDate;
 
   /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
@@ -57555,7 +57555,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
 
   /// [lastReviewDate] The date on which the asset content was last reviewed. Review happens periodically after that, but doesn't change the original approval date.
   @override
-  final Date? lastReviewDate;
+  final FhirDate? lastReviewDate;
 
   /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
@@ -57950,7 +57950,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
           {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
               final R5ResourceType resourceType,
           final FhirId? id,
-          final Meta? meta,
+          final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
@@ -57992,24 +57992,24 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
           @JsonKey(name: '_publisher')
               final Element? publisherElement,
           final List<ContactDetail>? contact,
-          final Markdown? description,
+          final FhirMarkdown? description,
           @JsonKey(name: '_description')
               final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          final FhirMarkdown? purpose,
           @JsonKey(name: '_purpose')
               final Element? purposeElement,
-          final Markdown? copyright,
+          final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright')
               final Element? copyrightElement,
           final String? copyrightLabel,
           @JsonKey(name: '_copyrightLabel')
               final Element? copyrightLabelElement,
-          final Date? approvalDate,
+          final FhirDate? approvalDate,
           @JsonKey(name: '_approvalDate')
               final Element? approvalDateElement,
-          final Date? lastReviewDate,
+          final FhirDate? lastReviewDate,
           @JsonKey(name: '_lastReviewDate')
               final Element? lastReviewDateElement,
           final Period? effectivePeriod,

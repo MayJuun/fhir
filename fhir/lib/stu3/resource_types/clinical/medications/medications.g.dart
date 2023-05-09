@@ -12,10 +12,10 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Immunization) ??
           Stu3ResourceType.Immunization,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -23,7 +23,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -46,8 +46,9 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      notGiven:
-          json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
+      notGiven: json['notGiven'] == null
+          ? null
+          : FhirBoolean.fromJson(json['notGiven']),
       notGivenElement: json['_notGiven'] == null
           ? null
           : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
@@ -57,13 +58,13 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
       primarySource: json['primarySource'] == null
           ? null
-          : Boolean.fromJson(json['primarySource']),
+          : FhirBoolean.fromJson(json['primarySource']),
       primarySourceElement: json['_primarySource'] == null
           ? null
           : Element.fromJson(json['_primarySource'] as Map<String, dynamic>),
@@ -83,7 +84,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : Date.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate']),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -347,15 +348,16 @@ Map<String, dynamic> _$$_ImmunizationExplanationToJson(
 _$_ImmunizationReaction _$$_ImmunizationReactionFromJson(
         Map<String, dynamic> json) =>
     _$_ImmunizationReaction(
-      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
       detail: json['detail'] == null
           ? null
           : Reference.fromJson(json['detail'] as Map<String, dynamic>),
-      reported:
-          json['reported'] == null ? null : Boolean.fromJson(json['reported']),
+      reported: json['reported'] == null
+          ? null
+          : FhirBoolean.fromJson(json['reported']),
       reportedElement: json['_reported'] == null
           ? null
           : Element.fromJson(json['_reported'] as Map<String, dynamic>),
@@ -384,7 +386,7 @@ _$_ImmunizationVaccinationProtocol _$$_ImmunizationVaccinationProtocolFromJson(
     _$_ImmunizationVaccinationProtocol(
       doseSequence: json['doseSequence'] == null
           ? null
-          : Decimal.fromJson(json['doseSequence']),
+          : FhirDecimal.fromJson(json['doseSequence']),
       doseSequenceElement: json['_doseSequence'] == null
           ? null
           : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
@@ -401,7 +403,7 @@ _$_ImmunizationVaccinationProtocol _$$_ImmunizationVaccinationProtocolFromJson(
           : Element.fromJson(json['_series'] as Map<String, dynamic>),
       seriesDoses: json['seriesDoses'] == null
           ? null
-          : Decimal.fromJson(json['seriesDoses']),
+          : FhirDecimal.fromJson(json['seriesDoses']),
       seriesDosesElement: json['_seriesDoses'] == null
           ? null
           : Element.fromJson(json['_seriesDoses'] as Map<String, dynamic>),
@@ -448,10 +450,10 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImmunizationRecommendation) ??
           Stu3ResourceType.ImmunizationRecommendation,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -459,7 +461,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -522,7 +524,7 @@ _$_ImmunizationRecommendationRecommendation
     _$$_ImmunizationRecommendationRecommendationFromJson(
             Map<String, dynamic> json) =>
         _$_ImmunizationRecommendationRecommendation(
-          date: json['date'] == null ? null : Date.fromJson(json['date']),
+          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
           dateElement: json['_date'] == null
               ? null
               : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -536,7 +538,7 @@ _$_ImmunizationRecommendationRecommendation
                   json['targetDisease'] as Map<String, dynamic>),
           doseNumber: json['doseNumber'] == null
               ? null
-              : Decimal.fromJson(json['doseNumber']),
+              : FhirDecimal.fromJson(json['doseNumber']),
           doseNumberElement: json['_doseNumber'] == null
               ? null
               : Element.fromJson(json['_doseNumber'] as Map<String, dynamic>),
@@ -620,7 +622,7 @@ _$_ImmunizationRecommendationProtocol
         _$_ImmunizationRecommendationProtocol(
           doseSequence: json['doseSequence'] == null
               ? null
-              : Decimal.fromJson(json['doseSequence']),
+              : FhirDecimal.fromJson(json['doseSequence']),
           doseSequenceElement: json['_doseSequence'] == null
               ? null
               : Element.fromJson(json['_doseSequence'] as Map<String, dynamic>),
@@ -663,10 +665,10 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Medication) ??
           Stu3ResourceType.Medication,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -674,7 +676,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -697,14 +699,15 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      isBrand:
-          json['isBrand'] == null ? null : Boolean.fromJson(json['isBrand']),
+      isBrand: json['isBrand'] == null
+          ? null
+          : FhirBoolean.fromJson(json['isBrand']),
       isBrandElement: json['_isBrand'] == null
           ? null
           : Element.fromJson(json['_isBrand'] as Map<String, dynamic>),
       isOverTheCounter: json['isOverTheCounter'] == null
           ? null
-          : Boolean.fromJson(json['isOverTheCounter']),
+          : FhirBoolean.fromJson(json['isOverTheCounter']),
       isOverTheCounterElement: json['_isOverTheCounter'] == null
           ? null
           : Element.fromJson(json['_isOverTheCounter'] as Map<String, dynamic>),
@@ -782,8 +785,9 @@ _$_MedicationIngredient _$$_MedicationIngredientFromJson(
       itemReference: json['itemReference'] == null
           ? null
           : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-      isActive:
-          json['isActive'] == null ? null : Boolean.fromJson(json['isActive']),
+      isActive: json['isActive'] == null
+          ? null
+          : FhirBoolean.fromJson(json['isActive']),
       isActiveElement: json['_isActive'] == null
           ? null
           : Element.fromJson(json['_isActive'] as Map<String, dynamic>),
@@ -877,7 +881,7 @@ _$_MedicationBatch _$$_MedicationBatchFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : Date.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate']),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -906,10 +910,10 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationAdministration) ??
           Stu3ResourceType.MedicationAdministration,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -917,7 +921,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -979,8 +983,9 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           ?.map((e) => MedicationAdministrationPerformer.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      notGiven:
-          json['notGiven'] == null ? null : Boolean.fromJson(json['notGiven']),
+      notGiven: json['notGiven'] == null
+          ? null
+          : FhirBoolean.fromJson(json['notGiven']),
       notGivenElement: json['_notGiven'] == null
           ? null
           : Element.fromJson(json['_notGiven'] as Map<String, dynamic>),
@@ -1165,10 +1170,10 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationDispense) ??
           Stu3ResourceType.MedicationDispense,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1176,7 +1181,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1267,8 +1272,9 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
       detectedIssue: (json['detectedIssue'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      notDone:
-          json['notDone'] == null ? null : Boolean.fromJson(json['notDone']),
+      notDone: json['notDone'] == null
+          ? null
+          : FhirBoolean.fromJson(json['notDone']),
       notDoneElement: json['_notDone'] == null
           ? null
           : Element.fromJson(json['_notDone'] as Map<String, dynamic>),
@@ -1393,7 +1399,7 @@ _$_MedicationDispenseSubstitution _$$_MedicationDispenseSubstitutionFromJson(
     _$_MedicationDispenseSubstitution(
       wasSubstituted: json['wasSubstituted'] == null
           ? null
-          : Boolean.fromJson(json['wasSubstituted']),
+          : FhirBoolean.fromJson(json['wasSubstituted']),
       wasSubstitutedElement: json['_wasSubstituted'] == null
           ? null
           : Element.fromJson(json['_wasSubstituted'] as Map<String, dynamic>),
@@ -1433,10 +1439,10 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationRequest) ??
           Stu3ResourceType.MedicationRequest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1444,7 +1450,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1676,7 +1682,7 @@ _$_MedicationRequestDispenseRequest
               : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
           numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] == null
               ? null
-              : Decimal.fromJson(json['numberOfRepeatsAllowed']),
+              : FhirDecimal.fromJson(json['numberOfRepeatsAllowed']),
           numberOfRepeatsAllowedElement: json['_numberOfRepeatsAllowed'] == null
               ? null
               : Element.fromJson(
@@ -1718,8 +1724,9 @@ Map<String, dynamic> _$$_MedicationRequestDispenseRequestToJson(
 _$_MedicationRequestSubstitution _$$_MedicationRequestSubstitutionFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationRequestSubstitution(
-      allowed:
-          json['allowed'] == null ? null : Boolean.fromJson(json['allowed']),
+      allowed: json['allowed'] == null
+          ? null
+          : FhirBoolean.fromJson(json['allowed']),
       allowedElement: json['_allowed'] == null
           ? null
           : Element.fromJson(json['_allowed'] as Map<String, dynamic>),
@@ -1751,10 +1758,10 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationStatement) ??
           Stu3ResourceType.MedicationStatement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1762,7 +1769,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1818,7 +1825,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
       dateAsserted: json['dateAsserted'] == null
           ? null
-          : Date.fromJson(json['dateAsserted']),
+          : FhirDate.fromJson(json['dateAsserted']),
       dateAssertedElement: json['_dateAsserted'] == null
           ? null
           : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),

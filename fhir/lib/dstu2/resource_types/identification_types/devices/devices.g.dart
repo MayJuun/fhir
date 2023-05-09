@@ -11,10 +11,10 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Device) ??
           Dstu2ResourceType.Device,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -22,7 +22,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -251,18 +251,18 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceComponent) ??
           Dstu2ResourceType.DeviceComponent,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['_id'] == null
           ? null
           : Element.fromJson(json['_id'] as Map<String, dynamic>),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -278,7 +278,7 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       identifier:
           Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      lastSystemChange: Instant.fromJson(json['lastSystemChange']),
+      lastSystemChange: FhirInstant.fromJson(json['lastSystemChange']),
       source: json['source'] == null
           ? null
           : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -367,7 +367,7 @@ _$_DeviceComponentProductionSpecification
     _$$_DeviceComponentProductionSpecificationFromJson(
             Map<String, dynamic> json) =>
         _$_DeviceComponentProductionSpecification(
-          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          id: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -412,10 +412,10 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceMetric) ??
           Dstu2ResourceType.DeviceMetric,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -423,7 +423,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
+          json['language'] == null ? null : FhirCode.fromJson(json['language']),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -550,7 +550,7 @@ const _$DeviceMetricCategoryEnumMap = {
 _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
         Map<String, dynamic> json) =>
     _$_DeviceMetricCalibration(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -567,7 +567,7 @@ _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
       stateElement: json['_state'] == null
           ? null
           : Element.fromJson(json['_state'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : Instant.fromJson(json['time']),
+      time: json['time'] == null ? null : FhirInstant.fromJson(json['time']),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
