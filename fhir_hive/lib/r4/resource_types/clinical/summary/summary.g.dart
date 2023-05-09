@@ -19,7 +19,7 @@ class AdverseEventAdapter extends TypeAdapter<_$_AdverseEvent> {
     return _$_AdverseEvent(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -155,7 +155,7 @@ class AllergyIntoleranceAdapter extends TypeAdapter<_$_AllergyIntolerance> {
     return _$_AllergyIntolerance(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -300,7 +300,7 @@ class ClinicalImpressionAdapter extends TypeAdapter<_$_ClinicalImpression> {
     return _$_ClinicalImpression(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -446,7 +446,7 @@ class ConditionAdapter extends TypeAdapter<_$_Condition> {
     return _$_Condition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -646,7 +646,7 @@ class DetectedIssueAdapter extends TypeAdapter<_$_DetectedIssue> {
     return _$_DetectedIssue(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -811,7 +811,7 @@ class FamilyMemberHistoryAdapter extends TypeAdapter<_$_FamilyMemberHistory> {
     return _$_FamilyMemberHistory(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1057,7 +1057,7 @@ class ProcedureAdapter extends TypeAdapter<_$_Procedure> {
     return _$_Procedure(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1275,7 +1275,7 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1670,7 +1670,7 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1909,7 +1909,7 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2163,7 +2163,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2422,7 +2422,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2639,7 +2639,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2911,7 +2911,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),

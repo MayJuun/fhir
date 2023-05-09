@@ -26,7 +26,7 @@ mixin _$AdverseEvent {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -121,7 +121,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -194,7 +194,7 @@ abstract class $AdverseEventCopyWith<$Res> {
       @HiveField(34)
           List<Reference>? study});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -274,7 +274,7 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -408,12 +408,12 @@ class _$AdverseEventCopyWithImpl<$Res, $Val extends AdverseEvent>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -622,7 +622,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -696,7 +696,7 @@ abstract class _$$_AdverseEventCopyWith<$Res>
           List<Reference>? study});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -790,7 +790,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1030,7 +1030,7 @@ class _$_AdverseEvent extends _AdverseEvent {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -1354,7 +1354,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -1440,7 +1440,7 @@ abstract class _AdverseEvent extends AdverseEvent {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -2236,7 +2236,7 @@ mixin _$AllergyIntolerance {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -2339,7 +2339,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -2421,7 +2421,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       @HiveField(37)
           List<AllergyIntoleranceReaction>? reaction});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -2507,7 +2507,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2653,12 +2653,12 @@ class _$AllergyIntoleranceCopyWithImpl<$Res, $Val extends AllergyIntolerance>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2903,7 +2903,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -2986,7 +2986,7 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
           List<AllergyIntoleranceReaction>? reaction});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3089,7 +3089,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3348,7 +3348,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -3675,7 +3675,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           @HiveField(1)
               final String? id,
           @HiveField(2)
-              final Meta? meta,
+              final FhirMeta? meta,
           @HiveField(3)
               final FhirUri? implicitRules,
           @HiveField(4)
@@ -3771,7 +3771,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -4442,7 +4442,7 @@ mixin _$ClinicalImpression {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -4546,7 +4546,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -4627,7 +4627,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       @HiveField(37)
           List<Annotation>? note});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4709,7 +4709,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4855,12 +4855,12 @@ class _$ClinicalImpressionCopyWithImpl<$Res, $Val extends ClinicalImpression>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5057,7 +5057,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -5139,7 +5139,7 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
           List<Annotation>? note});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -5234,7 +5234,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5497,7 +5497,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -5863,7 +5863,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -5957,7 +5957,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -6733,7 +6733,7 @@ mixin _$Condition {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -6838,7 +6838,7 @@ abstract class $ConditionCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -6924,7 +6924,7 @@ abstract class $ConditionCopyWith<$Res> {
       @HiveField(40)
           List<Annotation>? note});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7016,7 +7016,7 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7174,12 +7174,12 @@ class _$ConditionCopyWithImpl<$Res, $Val extends Condition>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7459,7 +7459,7 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -7546,7 +7546,7 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
           List<Annotation>? note});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7658,7 +7658,7 @@ class __$$_ConditionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7934,7 +7934,7 @@ class _$_Condition extends _Condition {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -8284,7 +8284,7 @@ abstract class _Condition extends Condition {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -8383,7 +8383,7 @@ abstract class _Condition extends Condition {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -9139,7 +9139,7 @@ mixin _$DetectedIssue {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -9223,7 +9223,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -9285,7 +9285,7 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @HiveField(28)
           List<DetectedIssueMitigation>? mitigation});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -9355,7 +9355,7 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9465,12 +9465,12 @@ class _$DetectedIssueCopyWithImpl<$Res, $Val extends DetectedIssue>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -9635,7 +9635,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -9698,7 +9698,7 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
           List<DetectedIssueMitigation>? mitigation});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -9778,7 +9778,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -9980,7 +9980,7 @@ class _$_DetectedIssue extends _DetectedIssue {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -10243,7 +10243,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -10318,7 +10318,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -11071,7 +11071,7 @@ mixin _$FamilyMemberHistory {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -11200,7 +11200,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -11306,7 +11306,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       @HiveField(47)
           List<FamilyMemberHistoryCondition>? condition});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -11405,7 +11405,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11591,12 +11591,12 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res, $Val extends FamilyMemberHistory>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11873,7 +11873,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -11980,7 +11980,7 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
           List<FamilyMemberHistoryCondition>? condition});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -12099,7 +12099,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -12425,7 +12425,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -12841,7 +12841,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
           @HiveField(1)
               final String? id,
           @HiveField(2)
-              final Meta? meta,
+              final FhirMeta? meta,
           @HiveField(3)
               final FhirUri? implicitRules,
           @HiveField(4)
@@ -12961,7 +12961,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;
@@ -13788,7 +13788,7 @@ mixin _$Procedure {
   @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
   @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -13907,7 +13907,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -14004,7 +14004,7 @@ abstract class $ProcedureCopyWith<$Res> {
       @HiveField(46)
           List<CodeableConcept>? usedCode});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -14098,7 +14098,7 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -14280,12 +14280,12 @@ class _$ProcedureCopyWithImpl<$Res, $Val extends Procedure>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -14517,7 +14517,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -14615,7 +14615,7 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
           List<CodeableConcept>? usedCode});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -14725,7 +14725,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15048,7 +15048,7 @@ class _$_Procedure extends _Procedure {
   final String? id;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
   @override
   @HiveField(3)
   final FhirUri? implicitRules;
@@ -15528,7 +15528,7 @@ abstract class _Procedure extends Procedure {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -15638,7 +15638,7 @@ abstract class _Procedure extends Procedure {
   String? get id;
   @override
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
   @HiveField(3)
   FhirUri? get implicitRules;

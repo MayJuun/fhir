@@ -33,7 +33,7 @@ mixin _$Endpoint {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -199,7 +199,7 @@ abstract class $EndpointCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -257,7 +257,7 @@ abstract class $EndpointCopyWith<$Res> {
       @HiveField(26)
           List<Element?>? headerElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -322,7 +322,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -424,12 +424,12 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -553,7 +553,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -612,7 +612,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<Element?>? headerElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -684,7 +684,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -884,7 +884,7 @@ class _$_Endpoint extends _Endpoint {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1283,7 +1283,7 @@ abstract class _Endpoint extends Endpoint {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1360,7 +1360,7 @@ abstract class _Endpoint extends Endpoint {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1554,7 +1554,7 @@ mixin _$HealthcareService {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1792,7 +1792,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1880,7 +1880,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       @HiveField(41)
           List<Reference>? endpoint});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -1961,7 +1961,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2119,12 +2119,12 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2279,7 +2279,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2368,7 +2368,7 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
           List<Reference>? endpoint});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2458,7 +2458,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2753,7 +2753,7 @@ class _$_HealthcareService extends _HealthcareService {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -3361,7 +3361,7 @@ abstract class _HealthcareService extends HealthcareService {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3469,7 +3469,7 @@ abstract class _HealthcareService extends HealthcareService {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5237,7 +5237,7 @@ mixin _$Location {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5436,7 +5436,7 @@ abstract class $LocationCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5511,7 +5511,7 @@ abstract class $LocationCopyWith<$Res> {
       @HiveField(35)
           List<Reference>? endpoint});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5588,7 +5588,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5718,12 +5718,12 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5913,7 +5913,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5989,7 +5989,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<Reference>? endpoint});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6078,7 +6078,7 @@ class __$$_LocationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6323,7 +6323,7 @@ class _$_Location extends _Location {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6779,7 +6779,7 @@ abstract class _Location extends Location {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6873,7 +6873,7 @@ abstract class _Location extends Location {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -8253,7 +8253,7 @@ mixin _$Organization {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -8396,7 +8396,7 @@ abstract class $OrganizationCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8446,7 +8446,7 @@ abstract class $OrganizationCopyWith<$Res> {
       @HiveField(23)
           List<Reference>? endpoint});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -8505,7 +8505,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8595,12 +8595,12 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -8693,7 +8693,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8744,7 +8744,7 @@ abstract class _$$_OrganizationCopyWith<$Res>
           List<Reference>? endpoint});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8807,7 +8807,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8988,7 +8988,7 @@ class _$_Organization extends _Organization {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -9355,7 +9355,7 @@ abstract class _Organization extends Organization {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9425,7 +9425,7 @@ abstract class _Organization extends Organization {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10064,7 +10064,7 @@ mixin _$OrganizationAffiliation {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -10213,7 +10213,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10261,7 +10261,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       @HiveField(23)
           List<Reference>? endpoint});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10322,7 +10322,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10412,12 +10412,12 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10522,7 +10522,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10571,7 +10571,7 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
           List<Reference>? endpoint});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -10637,7 +10637,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10816,7 +10816,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11197,7 +11197,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11265,7 +11265,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the

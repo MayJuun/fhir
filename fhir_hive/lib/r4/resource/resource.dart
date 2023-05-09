@@ -30,7 +30,7 @@ part 'resource_types_enum.dart';
 class Resource {
   String? id;
   R4ResourceType? resourceType;
-  Meta? meta;
+  FhirMeta? meta;
   FhirUri? implicitRules;
   Code? language;
   Narrative? text;
@@ -74,7 +74,7 @@ class Resource {
   static Resource copyWith({
     String? id,
     R4ResourceType? resourceType,
-    Meta? meta,
+    FhirMeta? meta,
     FhirUri? implicitRules,
     Code? language,
     Narrative? text,
@@ -139,5 +139,6 @@ class Resource {
 
   /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
   /// field, adds 1 to the version number
-  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
+  Resource updateVersion({FhirMeta? oldFhirMeta}) =>
+      _updateFhirMeta(this, meta: oldFhirMeta);
 }

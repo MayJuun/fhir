@@ -137,7 +137,7 @@ class Endpoint extends HiveObject with Resource, _$Endpoint {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -476,7 +476,7 @@ class HealthcareService extends HiveObject with Resource, _$HealthcareService {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1227,7 +1227,7 @@ class Location extends HiveObject with Resource, _$Location {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1816,7 +1816,7 @@ class Organization extends HiveObject with Resource, _$Organization {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2202,7 +2202,7 @@ class OrganizationAffiliation extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

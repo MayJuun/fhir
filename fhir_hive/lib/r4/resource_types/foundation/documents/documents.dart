@@ -133,7 +133,7 @@ class CatalogEntry extends HiveObject with Resource, _$CatalogEntry {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -560,7 +560,7 @@ class Composition extends HiveObject with Resource, _$Composition {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1462,7 +1462,7 @@ class DocumentManifest extends HiveObject with Resource, _$DocumentManifest {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1891,7 +1891,7 @@ class DocumentReference extends HiveObject with Resource, _$DocumentReference {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

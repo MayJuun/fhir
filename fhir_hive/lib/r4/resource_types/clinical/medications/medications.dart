@@ -187,7 +187,7 @@ class Immunization extends HiveObject with Resource, _$Immunization {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1122,7 +1122,7 @@ class ImmunizationEvaluation extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1421,7 +1421,7 @@ class ImmunizationRecommendation extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1962,7 +1962,7 @@ class Medication extends HiveObject with Resource, _$Medication {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2513,7 +2513,7 @@ class MedicationAdministration extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3191,7 +3191,7 @@ class MedicationDispense extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3838,7 +3838,7 @@ class MedicationKnowledge extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -6000,7 +6000,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -6892,7 +6892,7 @@ class MedicationStatement extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

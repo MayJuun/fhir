@@ -19,7 +19,7 @@ class ImmunizationAdapter extends TypeAdapter<_$_Immunization> {
     return _$_Immunization(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -196,7 +196,7 @@ class ImmunizationEvaluationAdapter
     return _$_ImmunizationEvaluation(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -330,7 +330,7 @@ class ImmunizationRecommendationAdapter
     return _$_ImmunizationRecommendation(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -413,7 +413,7 @@ class MedicationAdapter extends TypeAdapter<_$_Medication> {
     return _$_Medication(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -560,7 +560,7 @@ class MedicationAdministrationAdapter
     return _$_MedicationAdministration(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -697,7 +697,7 @@ class MedicationDispenseAdapter extends TypeAdapter<_$_MedicationDispense> {
     return _$_MedicationDispense(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -848,7 +848,7 @@ class MedicationKnowledgeAdapter extends TypeAdapter<_$_MedicationKnowledge> {
     return _$_MedicationKnowledge(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1140,7 +1140,7 @@ class MedicationRequestAdapter extends TypeAdapter<_$_MedicationRequest> {
     return _$_MedicationRequest(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1330,7 +1330,7 @@ class MedicationStatementAdapter extends TypeAdapter<_$_MedicationStatement> {
     return _$_MedicationStatement(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1460,7 +1460,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2047,7 +2047,7 @@ _$_ImmunizationEvaluation _$$_ImmunizationEvaluationFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2196,7 +2196,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2445,7 +2445,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2636,7 +2636,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2906,7 +2906,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -3188,7 +3188,7 @@ _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -4069,7 +4069,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -4474,7 +4474,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),

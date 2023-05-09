@@ -121,7 +121,7 @@ Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
   return val;
 }
 
-_$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
+_$_FhirMeta _$$_FhirMetaFromJson(Map<String, dynamic> json) => _$_FhirMeta(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -152,7 +152,7 @@ _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MetaToJson(_$_Meta instance) {
+Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2154,9 +2154,9 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
       valueDosage: json['valueDosage'] == null
           ? null
           : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueMeta: json['valueMeta'] == null
+      valueFhirMeta: json['valueFhirMeta'] == null
           ? null
-          : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['valueFhirMeta'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
@@ -2250,7 +2250,7 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  writeNotNull('valueFhirMeta', instance.valueFhirMeta?.toJson());
   return val;
 }
 

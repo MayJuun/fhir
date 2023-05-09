@@ -19,7 +19,7 @@ class EncounterAdapter extends TypeAdapter<_$_Encounter> {
     return _$_Encounter(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -210,7 +210,7 @@ class EpisodeOfCareAdapter extends TypeAdapter<_$_EpisodeOfCare> {
     return _$_EpisodeOfCare(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -313,7 +313,7 @@ class FlagAdapter extends TypeAdapter<_$_Flag> {
     return _$_Flag(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -404,7 +404,7 @@ class LibraryAdapter extends TypeAdapter<_$_Library> {
     return _$_Library(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -609,7 +609,7 @@ class FhirListAdapter extends TypeAdapter<_$_FhirList> {
     return _$_FhirList(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -723,7 +723,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1311,7 +1311,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1507,7 +1507,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1599,7 +1599,7 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1836,7 +1836,7 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),

@@ -176,7 +176,7 @@ class CarePlan extends HiveObject with Resource, _$CarePlan {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -967,7 +967,7 @@ class CareTeam extends HiveObject with Resource, _$CareTeam {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1390,7 +1390,7 @@ class Goal extends HiveObject with Resource, _$Goal {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1979,7 +1979,7 @@ class NutritionOrder extends HiveObject with Resource, _$NutritionOrder {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3145,7 +3145,7 @@ class RequestGroup extends HiveObject with Resource, _$RequestGroup {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4042,7 +4042,7 @@ class RiskAssessment extends HiveObject with Resource, _$RiskAssessment {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4632,7 +4632,7 @@ class ServiceRequest extends HiveObject with Resource, _$ServiceRequest {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5105,7 +5105,7 @@ class VisionPrescription extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

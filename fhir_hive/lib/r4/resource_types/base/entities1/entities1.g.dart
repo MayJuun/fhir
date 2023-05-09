@@ -19,7 +19,7 @@ class EndpointAdapter extends TypeAdapter<_$_Endpoint> {
     return _$_Endpoint(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -131,7 +131,7 @@ class HealthcareServiceAdapter extends TypeAdapter<_$_HealthcareService> {
     return _$_HealthcareService(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -287,7 +287,7 @@ class LocationAdapter extends TypeAdapter<_$_Location> {
     return _$_Location(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -420,7 +420,7 @@ class OrganizationAdapter extends TypeAdapter<_$_Organization> {
     return _$_Organization(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -524,7 +524,7 @@ class OrganizationAffiliationAdapter
     return _$_OrganizationAffiliation(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -626,7 +626,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -897,7 +897,7 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1234,7 +1234,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1499,7 +1499,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1658,7 +1658,7 @@ _$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),

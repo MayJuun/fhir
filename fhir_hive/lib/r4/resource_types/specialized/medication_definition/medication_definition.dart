@@ -64,7 +64,7 @@ class AdministrableProductDefinition extends HiveObject
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     @HiveField(4)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(5)
@@ -584,7 +584,7 @@ class Ingredient extends HiveObject with Resource, _$Ingredient {
     @HiveField(1) String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3) FhirUri? implicitRules,
@@ -1097,7 +1097,7 @@ class ClinicalUseDefinition extends HiveObject
     @HiveField(1) String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3) FhirUri? implicitRules,
@@ -1798,7 +1798,7 @@ class ManufacturedItemDefinition extends HiveObject
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3)
@@ -2108,7 +2108,7 @@ class MedicinalProductDefinition extends HiveObject
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3)
@@ -2948,7 +2948,7 @@ class PackagedProductDefinition extends HiveObject
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3)
@@ -3678,7 +3678,7 @@ class RegulatedAuthorization extends HiveObject
     @HiveField(1) String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3) FhirUri? implicitRules,
@@ -3964,7 +3964,7 @@ class SubstanceDefinition extends HiveObject
     @HiveField(1) String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3) FhirUri? implicitRules,

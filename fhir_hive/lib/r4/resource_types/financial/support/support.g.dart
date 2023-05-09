@@ -19,7 +19,7 @@ class CoverageAdapter extends TypeAdapter<_$_Coverage> {
     return _$_Coverage(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -154,7 +154,7 @@ class CoverageEligibilityRequestAdapter
     return _$_CoverageEligibilityRequest(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -278,7 +278,7 @@ class CoverageEligibilityResponseAdapter
     return _$_CoverageEligibilityResponse(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -412,7 +412,7 @@ class EnrollmentRequestAdapter extends TypeAdapter<_$_EnrollmentRequest> {
     return _$_EnrollmentRequest(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -503,7 +503,7 @@ class EnrollmentResponseAdapter extends TypeAdapter<_$_EnrollmentResponse> {
     return _$_EnrollmentResponse(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -602,7 +602,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1019,7 +1019,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1381,7 +1381,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1791,7 +1791,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1890,7 +1890,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),

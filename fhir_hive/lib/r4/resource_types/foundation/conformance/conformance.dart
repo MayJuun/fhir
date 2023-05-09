@@ -231,7 +231,7 @@ class CapabilityStatement extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2644,7 +2644,7 @@ class CompartmentDefinition extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3176,7 +3176,7 @@ class ExampleScenario extends HiveObject with Resource, _$ExampleScenario {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4622,7 +4622,7 @@ class GraphDefinition extends HiveObject with Resource, _$GraphDefinition {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -5478,7 +5478,7 @@ class ImplementationGuide extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -7420,7 +7420,7 @@ class MessageDefinition extends HiveObject with Resource, _$MessageDefinition {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -8178,7 +8178,7 @@ class OperationDefinition extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -9277,7 +9277,7 @@ class SearchParameter extends HiveObject with Resource, _$SearchParameter {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -9965,7 +9965,7 @@ class StructureDefinition extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -10947,7 +10947,7 @@ class StructureMap extends HiveObject with Resource, _$StructureMap {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -11987,7 +11987,7 @@ class StructureMapSource with _$StructureMapSource {
   /// [defaultValueDosage] A value to use if there is no existing value in the
   ///  source object.
   ///
-  /// [defaultValueMeta] A value to use if there is no existing value in the
+  /// [defaultValueFhirMeta] A value to use if there is no existing value in the
   ///  source object.
   ///
   /// [element] Optional field for this source.
@@ -12349,9 +12349,9 @@ class StructureMapSource with _$StructureMapSource {
     ///  source object.
     Dosage? defaultValueDosage,
 
-    /// [defaultValueMeta] A value to use if there is no existing value in the
+    /// [defaultValueFhirMeta] A value to use if there is no existing value in the
     ///  source object.
-    Meta? defaultValueMeta,
+    FhirMeta? defaultValueFhirMeta,
 
     /// [element] Optional field for this source.
     String? element,

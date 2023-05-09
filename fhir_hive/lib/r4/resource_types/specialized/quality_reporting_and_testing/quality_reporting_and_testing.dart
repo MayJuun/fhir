@@ -298,7 +298,7 @@ class Measure extends HiveObject with Resource, _$Measure {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1517,7 +1517,7 @@ class MeasureReport extends HiveObject with Resource, _$MeasureReport {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2502,7 +2502,7 @@ class TestReport extends HiveObject with Resource, _$TestReport {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3858,7 +3858,7 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -4084,7 +4084,7 @@ class TestScript extends HiveObject with Resource, _$TestScript {
     /// [metadata] The required capability must exist and are assumed to function
     ///  correctly on the FHIR server being tested.
     @HiveField(39)
-        TestScriptMetadata? metadata,
+        TestScriptFhirMetadata? metadata,
 
     /// [fixture] Fixture in the test script - by reference (uri). All fixtures
     ///  are required for the test script to execute.
@@ -4362,13 +4362,13 @@ class TestScriptDestination with _$TestScriptDestination {
   }
 }
 
-/// [TestScriptMetadata] A structured set of tests against a FHIR server or
+/// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
 @freezed
-class TestScriptMetadata with _$TestScriptMetadata {
-  /// [TestScriptMetadata] A structured set of tests against a FHIR server or
-  TestScriptMetadata._();
+class TestScriptFhirMetadata with _$TestScriptFhirMetadata {
+  /// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
+  TestScriptFhirMetadata._();
 
-  /// [TestScriptMetadata] A structured set of tests against a FHIR server or
+  /// [TestScriptFhirMetadata] A structured set of tests against a FHIR server or
   /// client implementation to determine compliance against the FHIR
   ///  specification.
   ///
@@ -4400,7 +4400,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   ///
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  factory TestScriptMetadata({
+  factory TestScriptFhirMetadata({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -4434,32 +4434,32 @@ class TestScriptMetadata with _$TestScriptMetadata {
     /// [capability] Capabilities that must exist and are assumed to function
     ///  correctly on the FHIR server being tested.
     required List<TestScriptCapability> capability,
-  }) = _TestScriptMetadata;
+  }) = _TestScriptFhirMetadata;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptMetadata.fromJson(
+  factory TestScriptFhirMetadata.fromYaml(dynamic yaml) => yaml is String
+      ? TestScriptFhirMetadata.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptMetadata.fromJson(
+          ? TestScriptFhirMetadata.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TestScriptMetadata cannot be constructed from input provided,'
+              'TestScriptFhirMetadata cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptMetadataFromJson(json);
+  factory TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptFhirMetadataFromJson(json);
 
-  /// Acts like a constructor, returns a [TestScriptMetadata], accepts a
+  /// Acts like a constructor, returns a [TestScriptFhirMetadata], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TestScriptMetadata.fromJsonString(String source) {
+  factory TestScriptFhirMetadata.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TestScriptMetadataFromJson(json);
+      return _$TestScriptFhirMetadataFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

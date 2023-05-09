@@ -20,8 +20,8 @@ class FhirHiveDb {
     Hive.init('.');
     initialized = true;
     registerResourceTypes();
-    final Box<Set<R4ResourceType>> typesBox = await Hive.openBox('types');
-    types = typesBox.get('types') ?? <R4ResourceType>{};
+    final Box<List<R4ResourceType>> typesBox = await Hive.openBox('types');
+    // types = typesBox.get('types')?.toSet() ?? <R4ResourceType>{};
   }
 
   /// Convenience getter to ensure initialized
@@ -52,10 +52,10 @@ class FhirHiveDb {
         return true;
       } else {
         await ensureInit;
-        final Box<Set<R4ResourceType>> box = Hive.box('types');
-        final resourceSet = box.get('types') ?? <R4ResourceType>{};
+        final Box<List<R4ResourceType>> box = Hive.box('types');
+        final resourceSet = box.get('types')?.toSet() ?? <R4ResourceType>{};
         resourceSet.add(resourceType);
-        box.put('types', resourceSet);
+        box.put('types', resourceSet.toList());
         return true;
       }
     } catch (e) {

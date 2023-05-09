@@ -19,7 +19,7 @@ class CapabilityStatementAdapter extends TypeAdapter<_$_CapabilityStatement> {
     return _$_CapabilityStatement(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -257,7 +257,7 @@ class CompartmentDefinitionAdapter
     return _$_CompartmentDefinition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -396,7 +396,7 @@ class ExampleScenarioAdapter extends TypeAdapter<_$_ExampleScenario> {
     return _$_ExampleScenario(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -538,7 +538,7 @@ class GraphDefinitionAdapter extends TypeAdapter<_$_GraphDefinition> {
     return _$_GraphDefinition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -677,7 +677,7 @@ class ImplementationGuideAdapter extends TypeAdapter<_$_ImplementationGuide> {
     return _$_ImplementationGuide(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -840,7 +840,7 @@ class MessageDefinitionAdapter extends TypeAdapter<_$_MessageDefinition> {
     return _$_MessageDefinition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1022,7 +1022,7 @@ class OperationDefinitionAdapter extends TypeAdapter<_$_OperationDefinition> {
     return _$_OperationDefinition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1218,7 +1218,7 @@ class SearchParameterAdapter extends TypeAdapter<_$_SearchParameter> {
     return _$_SearchParameter(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1423,7 +1423,7 @@ class StructureDefinitionAdapter extends TypeAdapter<_$_StructureDefinition> {
     return _$_StructureDefinition(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1622,7 +1622,7 @@ class StructureMapAdapter extends TypeAdapter<_$_StructureMap> {
     return _$_StructureMap(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -1844,7 +1844,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2967,7 +2967,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -3166,7 +3166,7 @@ _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -3793,7 +3793,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -4122,7 +4122,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -4891,7 +4891,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -5189,7 +5189,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -5629,7 +5629,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -5909,7 +5909,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -6304,7 +6304,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -6949,9 +6949,10 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
       defaultValueDosage: json['defaultValueDosage'] == null
           ? null
           : Dosage.fromJson(json['defaultValueDosage'] as Map<String, dynamic>),
-      defaultValueMeta: json['defaultValueMeta'] == null
+      defaultValueFhirMeta: json['defaultValueFhirMeta'] == null
           ? null
-          : Meta.fromJson(json['defaultValueMeta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(
+              json['defaultValueFhirMeta'] as Map<String, dynamic>),
       element: json['element'] as String?,
       elementElement: json['_element'] == null
           ? null
@@ -7102,7 +7103,7 @@ Map<String, dynamic> _$$_StructureMapSourceToJson(
   writeNotNull(
       'defaultValueUsageContext', instance.defaultValueUsageContext?.toJson());
   writeNotNull('defaultValueDosage', instance.defaultValueDosage?.toJson());
-  writeNotNull('defaultValueMeta', instance.defaultValueMeta?.toJson());
+  writeNotNull('defaultValueFhirMeta', instance.defaultValueFhirMeta?.toJson());
   writeNotNull('element', instance.element);
   writeNotNull('_element', instance.elementElement?.toJson());
   writeNotNull('listMode', instance.listMode?.toJson());

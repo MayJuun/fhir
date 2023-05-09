@@ -194,7 +194,7 @@ class Appointment extends HiveObject with Resource, _$Appointment {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -716,7 +716,7 @@ class AppointmentResponse extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -983,7 +983,7 @@ class Schedule extends HiveObject with Resource, _$Schedule {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1251,7 +1251,7 @@ class Slot extends HiveObject with Resource, _$Slot {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1610,7 +1610,7 @@ class Task extends HiveObject with Resource, _$Task {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2186,7 +2186,7 @@ class TaskInput with _$TaskInput {
   ///
   /// [valueDosage] The value of the input parameter as a basic type.
   ///
-  /// [valueMeta] The value of the input parameter as a basic type.
+  /// [valueFhirMeta] The value of the input parameter as a basic type.
   factory TaskInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -2425,8 +2425,8 @@ class TaskInput with _$TaskInput {
     /// [valueDosage] The value of the input parameter as a basic type.
     Dosage? valueDosage,
 
-    /// [valueMeta] The value of the input parameter as a basic type.
-    Meta? valueMeta,
+    /// [valueFhirMeta] The value of the input parameter as a basic type.
+    FhirMeta? valueFhirMeta,
   }) = _TaskInput;
 
   /// Produces a Yaml formatted String version of the object
@@ -2632,7 +2632,7 @@ class TaskOutput with _$TaskOutput {
   ///
   /// [valueDosage] The value of the Output parameter as a basic type.
   ///
-  /// [valueMeta] The value of the Output parameter as a basic type.
+  /// [valueFhirMeta] The value of the Output parameter as a basic type.
   factory TaskOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -2870,8 +2870,8 @@ class TaskOutput with _$TaskOutput {
     /// [valueDosage] The value of the Output parameter as a basic type.
     Dosage? valueDosage,
 
-    /// [valueMeta] The value of the Output parameter as a basic type.
-    Meta? valueMeta,
+    /// [valueFhirMeta] The value of the Output parameter as a basic type.
+    FhirMeta? valueFhirMeta,
   }) = _TaskOutput;
 
   /// Produces a Yaml formatted String version of the object
@@ -3032,7 +3032,7 @@ class VerificationResult extends HiveObject
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the

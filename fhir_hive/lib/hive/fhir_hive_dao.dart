@@ -37,7 +37,7 @@ class FhirHiveDao {
       instance.addType(resourceType);
 
   /// Saves a [Resource] to the local Db, [password] is optional (but after set,
-  /// it must always be used everytime), will update the meta fields of the
+  /// it must always be used everytime), will update the FhirFhirFhirMeta fields of the
   /// [Resource] and adds an id if none is already given.
   Future<Resource> save(String? password, Resource? resource) async {
     if (resource != null) {
@@ -76,7 +76,8 @@ class FhirHiveDao {
         if (dbResource != null) {
           final oldResource = dbResource;
           await _fhirHiveDb.saveHistory(oldResource);
-          final newResource = resource.updateVersion(oldMeta: oldResource.meta);
+          final newResource =
+              resource.updateVersion(oldFhirMeta: oldResource.meta);
           await _fhirHiveDb.save(newResource);
           return newResource;
         } else {

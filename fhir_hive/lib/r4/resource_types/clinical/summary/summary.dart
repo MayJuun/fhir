@@ -152,7 +152,7 @@ class AdverseEvent extends HiveObject with Resource, _$AdverseEvent {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -542,7 +542,7 @@ class AllergyIntolerance extends HiveObject
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -878,7 +878,7 @@ class ClinicalImpression extends HiveObject
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -1284,7 +1284,7 @@ class Condition extends HiveObject with Resource, _$Condition {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -1641,7 +1641,7 @@ class DetectedIssue extends HiveObject with Resource, _$DetectedIssue {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -2037,7 +2037,7 @@ class FamilyMemberHistory extends HiveObject
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -2428,7 +2428,7 @@ class Procedure extends HiveObject with Resource, _$Procedure {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')

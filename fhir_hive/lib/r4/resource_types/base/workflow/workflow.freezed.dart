@@ -33,7 +33,7 @@ mixin _$Appointment {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -290,7 +290,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -384,7 +384,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @HiveField(43)
           List<Period>? requestedPeriod});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -469,7 +469,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -631,12 +631,12 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -825,7 +825,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -920,7 +920,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
           List<Period>? requestedPeriod});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1017,7 +1017,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1317,7 +1317,7 @@ class _$_Appointment extends _Appointment {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1912,7 +1912,7 @@ abstract class _Appointment extends Appointment {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2026,7 +2026,7 @@ abstract class _Appointment extends Appointment {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -2912,7 +2912,7 @@ mixin _$AppointmentResponse {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -3061,7 +3061,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3110,7 +3110,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
       @HiveField(22)
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -3171,7 +3171,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3257,12 +3257,12 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -3387,7 +3387,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3437,7 +3437,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -3505,7 +3505,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -3675,7 +3675,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -3996,7 +3996,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4065,7 +4065,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -4237,7 +4237,7 @@ mixin _$Schedule {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -4375,7 +4375,7 @@ abstract class $ScheduleCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4418,7 +4418,7 @@ abstract class $ScheduleCopyWith<$Res> {
       @HiveField(20)
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -4474,7 +4474,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4552,12 +4552,12 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -4649,7 +4649,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4693,7 +4693,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -4753,7 +4753,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -4912,7 +4912,7 @@ class _$_Schedule extends _Schedule {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5240,7 +5240,7 @@ abstract class _Schedule extends Schedule {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5302,7 +5302,7 @@ abstract class _Schedule extends Schedule {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5462,7 +5462,7 @@ mixin _$Slot {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5623,7 +5623,7 @@ abstract class $SlotCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5682,7 +5682,7 @@ abstract class $SlotCopyWith<$Res> {
       @HiveField(27)
           Element? commentElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5748,7 +5748,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5850,12 +5850,12 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5990,7 +5990,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6050,7 +6050,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
           Element? commentElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6122,7 +6122,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6319,7 +6319,7 @@ class _$_Slot extends _Slot {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6685,7 +6685,7 @@ abstract class _Slot extends Slot {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6763,7 +6763,7 @@ abstract class _Slot extends Slot {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -6952,7 +6952,7 @@ mixin _$Task {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -7223,7 +7223,7 @@ abstract class $TaskCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7331,7 +7331,7 @@ abstract class $TaskCopyWith<$Res> {
       @HiveField(51)
           List<TaskOutput>? output});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7433,7 +7433,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7623,12 +7623,12 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7935,7 +7935,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8044,7 +8044,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
           List<TaskOutput>? output});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -8166,7 +8166,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -8505,7 +8505,7 @@ class _$_Task extends _Task {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -9116,7 +9116,7 @@ abstract class _Task extends Task {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9243,7 +9243,7 @@ abstract class _Task extends Task {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10277,8 +10277,8 @@ mixin _$TaskInput {
   /// [valueDosage] The value of the input parameter as a basic type.
   Dosage? get valueDosage => throw _privateConstructorUsedError;
 
-  /// [valueMeta] The value of the input parameter as a basic type.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  /// [valueFhirMeta] The value of the input parameter as a basic type.
+  FhirMeta? get valueFhirMeta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -10364,7 +10364,7 @@ abstract class $TaskInputCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res>? get valueBase64BinaryElement;
@@ -10416,7 +10416,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -10504,7 +10504,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -10795,10 +10795,10 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ) as $Val);
   }
 
@@ -11405,13 +11405,13 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
-    if (_value.valueMeta == null) {
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta {
+    if (_value.valueFhirMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
-      return _then(_value.copyWith(valueMeta: value) as $Val);
+    return $FhirMetaCopyWith<$Res>(_value.valueFhirMeta!, (value) {
+      return _then(_value.copyWith(valueFhirMeta: value) as $Val);
     });
   }
 }
@@ -11496,7 +11496,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -11599,7 +11599,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -11685,7 +11685,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_$_TaskInput(
       id: freezed == id
@@ -11976,10 +11976,10 @@ class __$$_TaskInputCopyWithImpl<$Res>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ));
   }
 }
@@ -12060,7 +12060,7 @@ class _$_TaskInput extends _TaskInput {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta})
+      this.valueFhirMeta})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -12433,13 +12433,13 @@ class _$_TaskInput extends _TaskInput {
   @override
   final Dosage? valueDosage;
 
-  /// [valueMeta] The value of the input parameter as a basic type.
+  /// [valueFhirMeta] The value of the input parameter as a basic type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueFhirMeta;
 
   @override
   String toString() {
-    return 'TaskInput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'TaskInput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueFhirMeta: $valueFhirMeta)';
   }
 
   @override
@@ -12551,7 +12551,7 @@ class _$_TaskInput extends _TaskInput {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || other.valueTriggerDefinition == valueTriggerDefinition) &&
             (identical(other.valueUsageContext, valueUsageContext) || other.valueUsageContext == valueUsageContext) &&
             (identical(other.valueDosage, valueDosage) || other.valueDosage == valueDosage) &&
-            (identical(other.valueMeta, valueMeta) || other.valueMeta == valueMeta));
+            (identical(other.valueFhirMeta, valueFhirMeta) || other.valueFhirMeta == valueFhirMeta));
   }
 
   @JsonKey(ignore: true)
@@ -12630,7 +12630,7 @@ class _$_TaskInput extends _TaskInput {
         valueTriggerDefinition,
         valueUsageContext,
         valueDosage,
-        valueMeta
+        valueFhirMeta
       ]);
 
   @JsonKey(ignore: true)
@@ -12741,7 +12741,7 @@ abstract class _TaskInput extends TaskInput {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta}) = _$_TaskInput;
+      final FhirMeta? valueFhirMeta}) = _$_TaskInput;
   _TaskInput._() : super._();
 
   factory _TaskInput.fromJson(Map<String, dynamic> json) =
@@ -13078,8 +13078,8 @@ abstract class _TaskInput extends TaskInput {
   Dosage? get valueDosage;
   @override
 
-  /// [valueMeta] The value of the input parameter as a basic type.
-  Meta? get valueMeta;
+  /// [valueFhirMeta] The value of the input parameter as a basic type.
+  FhirMeta? get valueFhirMeta;
   @override
   @JsonKey(ignore: true)
   _$$_TaskInputCopyWith<_$_TaskInput> get copyWith =>
@@ -13354,8 +13354,8 @@ mixin _$TaskOutput {
   /// [valueDosage] The value of the Output parameter as a basic type.
   Dosage? get valueDosage => throw _privateConstructorUsedError;
 
-  /// [valueMeta] The value of the Output parameter as a basic type.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  /// [valueFhirMeta] The value of the Output parameter as a basic type.
+  FhirMeta? get valueFhirMeta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -13442,7 +13442,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res>? get valueBase64BinaryElement;
@@ -13494,7 +13494,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -13582,7 +13582,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -13873,10 +13873,10 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ) as $Val);
   }
 
@@ -14483,13 +14483,13 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
-    if (_value.valueMeta == null) {
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta {
+    if (_value.valueFhirMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
-      return _then(_value.copyWith(valueMeta: value) as $Val);
+    return $FhirMetaCopyWith<$Res>(_value.valueFhirMeta!, (value) {
+      return _then(_value.copyWith(valueFhirMeta: value) as $Val);
     });
   }
 }
@@ -14575,7 +14575,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
@@ -14678,7 +14678,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -14764,7 +14764,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_$_TaskOutput(
       id: freezed == id
@@ -15055,10 +15055,10 @@ class __$$_TaskOutputCopyWithImpl<$Res>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ));
   }
 }
@@ -15139,7 +15139,7 @@ class _$_TaskOutput extends _TaskOutput {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta})
+      this.valueFhirMeta})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -15511,13 +15511,13 @@ class _$_TaskOutput extends _TaskOutput {
   @override
   final Dosage? valueDosage;
 
-  /// [valueMeta] The value of the Output parameter as a basic type.
+  /// [valueFhirMeta] The value of the Output parameter as a basic type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueFhirMeta;
 
   @override
   String toString() {
-    return 'TaskOutput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'TaskOutput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueFhirMeta: $valueFhirMeta)';
   }
 
   @override
@@ -15629,7 +15629,7 @@ class _$_TaskOutput extends _TaskOutput {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || other.valueTriggerDefinition == valueTriggerDefinition) &&
             (identical(other.valueUsageContext, valueUsageContext) || other.valueUsageContext == valueUsageContext) &&
             (identical(other.valueDosage, valueDosage) || other.valueDosage == valueDosage) &&
-            (identical(other.valueMeta, valueMeta) || other.valueMeta == valueMeta));
+            (identical(other.valueFhirMeta, valueFhirMeta) || other.valueFhirMeta == valueFhirMeta));
   }
 
   @JsonKey(ignore: true)
@@ -15708,7 +15708,7 @@ class _$_TaskOutput extends _TaskOutput {
         valueTriggerDefinition,
         valueUsageContext,
         valueDosage,
-        valueMeta
+        valueFhirMeta
       ]);
 
   @JsonKey(ignore: true)
@@ -15819,7 +15819,7 @@ abstract class _TaskOutput extends TaskOutput {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta}) = _$_TaskOutput;
+      final FhirMeta? valueFhirMeta}) = _$_TaskOutput;
   _TaskOutput._() : super._();
 
   factory _TaskOutput.fromJson(Map<String, dynamic> json) =
@@ -16155,8 +16155,8 @@ abstract class _TaskOutput extends TaskOutput {
   Dosage? get valueDosage;
   @override
 
-  /// [valueMeta] The value of the Output parameter as a basic type.
-  Meta? get valueMeta;
+  /// [valueFhirMeta] The value of the Output parameter as a basic type.
+  FhirMeta? get valueFhirMeta;
   @override
   @JsonKey(ignore: true)
   _$$_TaskOutputCopyWith<_$_TaskOutput> get copyWith =>
@@ -16182,7 +16182,7 @@ mixin _$VerificationResult {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -16362,7 +16362,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16426,7 +16426,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       @HiveField(29)
           List<VerificationResultValidator>? validator});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -16497,7 +16497,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16611,12 +16611,12 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -16782,7 +16782,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16847,7 +16847,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
           List<VerificationResultValidator>? validator});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -16928,7 +16928,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17145,7 +17145,7 @@ class _$_VerificationResult extends _VerificationResult {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -17560,7 +17560,7 @@ abstract class _VerificationResult extends VerificationResult {
           @HiveField(1)
               final String? id,
           @HiveField(2)
-              final Meta? meta,
+              final FhirMeta? meta,
           @HiveField(3)
               final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -17645,7 +17645,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the

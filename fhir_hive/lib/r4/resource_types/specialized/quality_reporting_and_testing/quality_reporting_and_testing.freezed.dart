@@ -33,7 +33,7 @@ mixin _$Measure {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -463,7 +463,7 @@ abstract class $MeasureCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -641,7 +641,7 @@ abstract class $MeasureCopyWith<$Res> {
       @HiveField(80)
           List<MeasureSupplementalData>? supplementalData});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -775,7 +775,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1071,12 +1071,12 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1459,7 +1459,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1638,7 +1638,7 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           List<MeasureSupplementalData>? supplementalData});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1799,7 +1799,7 @@ class __$$_MeasureCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2322,7 +2322,7 @@ class _$_Measure extends _Measure {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -3241,7 +3241,7 @@ abstract class _Measure extends Measure {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3438,7 +3438,7 @@ abstract class _Measure extends Measure {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -6491,7 +6491,7 @@ mixin _$MeasureReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6644,7 +6644,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6697,7 +6697,7 @@ abstract class $MeasureReportCopyWith<$Res> {
       @HiveField(25)
           List<Reference>? evaluatedResource});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -6761,7 +6761,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6855,12 +6855,12 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -6997,7 +6997,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7051,7 +7051,7 @@ abstract class _$$_MeasureReportCopyWith<$Res>
           List<Reference>? evaluatedResource});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7123,7 +7123,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7306,7 +7306,7 @@ class _$_MeasureReport extends _MeasureReport {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -7645,7 +7645,7 @@ abstract class _MeasureReport extends MeasureReport {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7718,7 +7718,7 @@ abstract class _MeasureReport extends MeasureReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10613,7 +10613,7 @@ mixin _$TestReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -10787,7 +10787,7 @@ abstract class $TestReportCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10850,7 +10850,7 @@ abstract class $TestReportCopyWith<$Res> {
       @HiveField(28)
           TestReportTeardown? teardown});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10921,7 +10921,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11031,12 +11031,12 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11209,7 +11209,7 @@ abstract class _$$_TestReportCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11273,7 +11273,7 @@ abstract class _$$_TestReportCopyWith<$Res>
           TestReportTeardown? teardown});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11355,7 +11355,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11563,7 +11563,7 @@ class _$_TestReport extends _TestReport {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11925,7 +11925,7 @@ abstract class _TestReport extends TestReport {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12008,7 +12008,7 @@ abstract class _TestReport extends TestReport {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -16073,7 +16073,7 @@ mixin _$TestScript {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -16301,7 +16301,7 @@ mixin _$TestScript {
   /// [metadata] The required capability must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   @HiveField(39)
-  TestScriptMetadata? get metadata => throw _privateConstructorUsedError;
+  TestScriptFhirMetadata? get metadata => throw _privateConstructorUsedError;
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
@@ -16349,7 +16349,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16437,7 +16437,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @HiveField(38)
           List<TestScriptDestination>? destination,
       @HiveField(39)
-          TestScriptMetadata? metadata,
+          TestScriptFhirMetadata? metadata,
       @HiveField(40)
           List<TestScriptFixture>? fixture,
       @HiveField(41)
@@ -16451,7 +16451,7 @@ abstract class $TestScriptCopyWith<$Res> {
       @HiveField(45)
           TestScriptTeardown? teardown});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -16467,7 +16467,7 @@ abstract class $TestScriptCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
-  $TestScriptMetadataCopyWith<$Res>? get metadata;
+  $TestScriptFhirMetadataCopyWith<$Res>? get metadata;
   $TestScriptSetupCopyWith<$Res>? get setup;
   $TestScriptTeardownCopyWith<$Res>? get teardown;
 }
@@ -16544,7 +16544,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16692,7 +16692,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as TestScriptMetadata?,
+              as TestScriptFhirMetadata?,
       fixture: freezed == fixture
           ? _value.fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -16722,12 +16722,12 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -16914,12 +16914,12 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
 
   @override
   @pragma('vm:prefer-inline')
-  $TestScriptMetadataCopyWith<$Res>? get metadata {
+  $TestScriptFhirMetadataCopyWith<$Res>? get metadata {
     if (_value.metadata == null) {
       return null;
     }
 
-    return $TestScriptMetadataCopyWith<$Res>(_value.metadata!, (value) {
+    return $TestScriptFhirMetadataCopyWith<$Res>(_value.metadata!, (value) {
       return _then(_value.copyWith(metadata: value) as $Val);
     });
   }
@@ -16964,7 +16964,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17052,7 +17052,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
       @HiveField(38)
           List<TestScriptDestination>? destination,
       @HiveField(39)
-          TestScriptMetadata? metadata,
+          TestScriptFhirMetadata? metadata,
       @HiveField(40)
           List<TestScriptFixture>? fixture,
       @HiveField(41)
@@ -17067,7 +17067,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
           TestScriptTeardown? teardown});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -17099,7 +17099,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
   @override
-  $TestScriptMetadataCopyWith<$Res>? get metadata;
+  $TestScriptFhirMetadataCopyWith<$Res>? get metadata;
   @override
   $TestScriptSetupCopyWith<$Res>? get setup;
   @override
@@ -17176,7 +17176,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17324,7 +17324,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as TestScriptMetadata?,
+              as TestScriptFhirMetadata?,
       fixture: freezed == fixture
           ? _value._fixture
           : fixture // ignore: cast_nullable_to_non_nullable
@@ -17498,7 +17498,7 @@ class _$_TestScript extends _TestScript {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -17862,7 +17862,7 @@ class _$_TestScript extends _TestScript {
   ///  correctly on the FHIR server being tested.
   @override
   @HiveField(39)
-  final TestScriptMetadata? metadata;
+  final TestScriptFhirMetadata? metadata;
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
   ///  are required for the test script to execute.
@@ -18096,7 +18096,7 @@ abstract class _TestScript extends TestScript {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18184,7 +18184,7 @@ abstract class _TestScript extends TestScript {
       @HiveField(38)
           final List<TestScriptDestination>? destination,
       @HiveField(39)
-          final TestScriptMetadata? metadata,
+          final TestScriptFhirMetadata? metadata,
       @HiveField(40)
           final List<TestScriptFixture>? fixture,
       @HiveField(41)
@@ -18218,7 +18218,7 @@ abstract class _TestScript extends TestScript {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -18481,7 +18481,7 @@ abstract class _TestScript extends TestScript {
   /// [metadata] The required capability must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   @HiveField(39)
-  TestScriptMetadata? get metadata;
+  TestScriptFhirMetadata? get metadata;
   @override
 
   /// [fixture] Fixture in the test script - by reference (uri). All fixtures
@@ -19356,12 +19356,13 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       throw _privateConstructorUsedError;
 }
 
-TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
-  return _TestScriptMetadata.fromJson(json);
+TestScriptFhirMetadata _$TestScriptFhirMetadataFromJson(
+    Map<String, dynamic> json) {
+  return _TestScriptFhirMetadata.fromJson(json);
 }
 
 /// @nodoc
-mixin _$TestScriptMetadata {
+mixin _$TestScriptFhirMetadata {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
@@ -19401,15 +19402,15 @@ mixin _$TestScriptMetadata {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith =>
+  $TestScriptFhirMetadataCopyWith<TestScriptFhirMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TestScriptMetadataCopyWith<$Res> {
-  factory $TestScriptMetadataCopyWith(
-          TestScriptMetadata value, $Res Function(TestScriptMetadata) then) =
-      _$TestScriptMetadataCopyWithImpl<$Res, TestScriptMetadata>;
+abstract class $TestScriptFhirMetadataCopyWith<$Res> {
+  factory $TestScriptFhirMetadataCopyWith(TestScriptFhirMetadata value,
+          $Res Function(TestScriptFhirMetadata) then) =
+      _$TestScriptFhirMetadataCopyWithImpl<$Res, TestScriptFhirMetadata>;
   @useResult
   $Res call(
       {String? id,
@@ -19420,9 +19421,10 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TestScriptMetadataCopyWithImpl<$Res, $Val extends TestScriptMetadata>
-    implements $TestScriptMetadataCopyWith<$Res> {
-  _$TestScriptMetadataCopyWithImpl(this._value, this._then);
+class _$TestScriptFhirMetadataCopyWithImpl<$Res,
+        $Val extends TestScriptFhirMetadata>
+    implements $TestScriptFhirMetadataCopyWith<$Res> {
+  _$TestScriptFhirMetadataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -19464,11 +19466,11 @@ class _$TestScriptMetadataCopyWithImpl<$Res, $Val extends TestScriptMetadata>
 }
 
 /// @nodoc
-abstract class _$$_TestScriptMetadataCopyWith<$Res>
-    implements $TestScriptMetadataCopyWith<$Res> {
-  factory _$$_TestScriptMetadataCopyWith(_$_TestScriptMetadata value,
-          $Res Function(_$_TestScriptMetadata) then) =
-      __$$_TestScriptMetadataCopyWithImpl<$Res>;
+abstract class _$$_TestScriptFhirMetadataCopyWith<$Res>
+    implements $TestScriptFhirMetadataCopyWith<$Res> {
+  factory _$$_TestScriptFhirMetadataCopyWith(_$_TestScriptFhirMetadata value,
+          $Res Function(_$_TestScriptFhirMetadata) then) =
+      __$$_TestScriptFhirMetadataCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -19480,11 +19482,12 @@ abstract class _$$_TestScriptMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TestScriptMetadataCopyWithImpl<$Res>
-    extends _$TestScriptMetadataCopyWithImpl<$Res, _$_TestScriptMetadata>
-    implements _$$_TestScriptMetadataCopyWith<$Res> {
-  __$$_TestScriptMetadataCopyWithImpl(
-      _$_TestScriptMetadata _value, $Res Function(_$_TestScriptMetadata) _then)
+class __$$_TestScriptFhirMetadataCopyWithImpl<$Res>
+    extends _$TestScriptFhirMetadataCopyWithImpl<$Res,
+        _$_TestScriptFhirMetadata>
+    implements _$$_TestScriptFhirMetadataCopyWith<$Res> {
+  __$$_TestScriptFhirMetadataCopyWithImpl(_$_TestScriptFhirMetadata _value,
+      $Res Function(_$_TestScriptFhirMetadata) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -19496,7 +19499,7 @@ class __$$_TestScriptMetadataCopyWithImpl<$Res>
     Object? link = freezed,
     Object? capability = null,
   }) {
-    return _then(_$_TestScriptMetadata(
+    return _then(_$_TestScriptFhirMetadata(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -19523,8 +19526,8 @@ class __$$_TestScriptMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TestScriptMetadata extends _TestScriptMetadata {
-  _$_TestScriptMetadata(
+class _$_TestScriptFhirMetadata extends _TestScriptFhirMetadata {
+  _$_TestScriptFhirMetadata(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19536,8 +19539,8 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
         _capability = capability,
         super._();
 
-  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
-      _$$_TestScriptMetadataFromJson(json);
+  factory _$_TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =>
+      _$$_TestScriptFhirMetadataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -19634,14 +19637,14 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
   @override
   String toString() {
-    return 'TestScriptMetadata(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, capability: $capability)';
+    return 'TestScriptFhirMetadata(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, link: $link, capability: $capability)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TestScriptMetadata &&
+            other is _$_TestScriptFhirMetadata &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -19665,30 +19668,30 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
-      __$$_TestScriptMetadataCopyWithImpl<_$_TestScriptMetadata>(
+  _$$_TestScriptFhirMetadataCopyWith<_$_TestScriptFhirMetadata> get copyWith =>
+      __$$_TestScriptFhirMetadataCopyWithImpl<_$_TestScriptFhirMetadata>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScriptMetadataToJson(
+    return _$$_TestScriptFhirMetadataToJson(
       this,
     );
   }
 }
 
-abstract class _TestScriptMetadata extends TestScriptMetadata {
-  factory _TestScriptMetadata(
+abstract class _TestScriptFhirMetadata extends TestScriptFhirMetadata {
+  factory _TestScriptFhirMetadata(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<TestScriptLink>? link,
           required final List<TestScriptCapability> capability}) =
-      _$_TestScriptMetadata;
-  _TestScriptMetadata._() : super._();
+      _$_TestScriptFhirMetadata;
+  _TestScriptFhirMetadata._() : super._();
 
-  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
-      _$_TestScriptMetadata.fromJson;
+  factory _TestScriptFhirMetadata.fromJson(Map<String, dynamic> json) =
+      _$_TestScriptFhirMetadata.fromJson;
 
   @override
 
@@ -19732,7 +19735,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   List<TestScriptCapability> get capability;
   @override
   @JsonKey(ignore: true)
-  _$$_TestScriptMetadataCopyWith<_$_TestScriptMetadata> get copyWith =>
+  _$$_TestScriptFhirMetadataCopyWith<_$_TestScriptFhirMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

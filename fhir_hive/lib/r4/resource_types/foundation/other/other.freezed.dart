@@ -33,7 +33,7 @@ mixin _$Basic {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -143,7 +143,7 @@ abstract class $BasicCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -178,7 +178,7 @@ abstract class $BasicCopyWith<$Res> {
       @HiveField(17)
           Reference? author});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -231,7 +231,7 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -293,12 +293,12 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -397,7 +397,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -433,7 +433,7 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
           Reference? author});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -489,7 +489,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -620,7 +620,7 @@ class _$_Basic extends _Basic {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -865,7 +865,7 @@ abstract class _Basic extends Basic {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -919,7 +919,7 @@ abstract class _Basic extends Basic {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1049,7 +1049,7 @@ mixin _$Binary {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1118,7 +1118,7 @@ abstract class $BinaryCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1143,7 +1143,7 @@ abstract class $BinaryCopyWith<$Res> {
       @HiveField(12)
           Element? dataElement});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $ElementCopyWith<$Res>? get contentTypeElement;
@@ -1189,7 +1189,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1231,12 +1231,12 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -1315,7 +1315,7 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1341,7 +1341,7 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
           Element? dataElement});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -1389,7 +1389,7 @@ class __$$_BinaryCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1486,7 +1486,7 @@ class _$_Binary extends _Binary {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1619,7 +1619,7 @@ abstract class _Binary extends Binary {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1663,7 +1663,7 @@ abstract class _Binary extends Binary {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1748,7 +1748,7 @@ mixin _$Bundle {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -1838,7 +1838,7 @@ abstract class $BundleCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1873,7 +1873,7 @@ abstract class $BundleCopyWith<$Res> {
       @HiveField(16)
           Signature? signature});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $IdentifierCopyWith<$Res>? get identifier;
@@ -1926,7 +1926,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -1988,12 +1988,12 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -2096,7 +2096,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2132,7 +2132,7 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
           Signature? signature});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -2189,7 +2189,7 @@ class __$$_BundleCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -2318,7 +2318,7 @@ class _$_Bundle extends _Bundle {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -2508,7 +2508,7 @@ abstract class _Bundle extends Bundle {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2562,7 +2562,7 @@ abstract class _Bundle extends Bundle {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5005,7 +5005,7 @@ mixin _$BundleResponse {
   Element? get locationElement => throw _privateConstructorUsedError;
 
   /// [etag] The Etag for the resource, if the operation for the entry produced
-  /// a versioned resource (see [Resource Metadata and
+  /// a versioned resource (see [Resource FhirMetadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   String? get etag => throw _privateConstructorUsedError;
@@ -5406,7 +5406,7 @@ class _$_BundleResponse extends _BundleResponse {
   final Element? locationElement;
 
   /// [etag] The Etag for the resource, if the operation for the entry produced
-  /// a versioned resource (see [Resource Metadata and
+  /// a versioned resource (see [Resource FhirMetadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   @override
@@ -5569,7 +5569,7 @@ abstract class _BundleResponse extends BundleResponse {
   @override
 
   /// [etag] The Etag for the resource, if the operation for the entry produced
-  /// a versioned resource (see [Resource Metadata and
+  /// a versioned resource (see [Resource FhirMetadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   String? get etag;
@@ -5618,7 +5618,7 @@ mixin _$Linkage {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -5723,7 +5723,7 @@ abstract class $LinkageCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5753,7 +5753,7 @@ abstract class $LinkageCopyWith<$Res> {
       @HiveField(14)
           List<LinkageItem> item});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -5802,7 +5802,7 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -5856,12 +5856,12 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -5941,7 +5941,7 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5972,7 +5972,7 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
           List<LinkageItem> item});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -6023,7 +6023,7 @@ class __$$_LinkageCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -6141,7 +6141,7 @@ class _$_Linkage extends _Linkage {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -6375,7 +6375,7 @@ abstract class _Linkage extends Linkage {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6424,7 +6424,7 @@ abstract class _Linkage extends Linkage {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -6964,7 +6964,7 @@ mixin _$MessageHeader {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -7123,7 +7123,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7171,7 +7171,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       @HiveField(23)
           Canonical? definition});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -7236,7 +7236,7 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7326,12 +7326,12 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -7492,7 +7492,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7541,7 +7541,7 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
           Canonical? definition});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -7616,7 +7616,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -7789,7 +7789,7 @@ class _$_MessageHeader extends _MessageHeader {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -8119,7 +8119,7 @@ abstract class _MessageHeader extends MessageHeader {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8187,7 +8187,7 @@ abstract class _MessageHeader extends MessageHeader {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -10067,7 +10067,7 @@ mixin _$OperationOutcome {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -10157,7 +10157,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10180,7 +10180,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       @HiveField(11)
           List<OperationOutcomeIssue> issue});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -10224,7 +10224,7 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10266,12 +10266,12 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -10328,7 +10328,7 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10352,7 +10352,7 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
           List<OperationOutcomeIssue> issue});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -10397,7 +10397,7 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -10496,7 +10496,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -10702,7 +10702,7 @@ abstract class _OperationOutcome extends OperationOutcome {
           @HiveField(1)
               final String? id,
           @HiveField(2)
-              final Meta? meta,
+              final FhirMeta? meta,
           @HiveField(3)
               final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -10746,7 +10746,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11632,7 +11632,7 @@ mixin _$Parameters {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -11679,7 +11679,7 @@ abstract class $ParametersCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11693,7 +11693,7 @@ abstract class $ParametersCopyWith<$Res> {
       @HiveField(7)
           List<ParametersParameter>? parameter});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
 }
@@ -11732,7 +11732,7 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11758,12 +11758,12 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -11808,7 +11808,7 @@ abstract class _$$_ParametersCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11823,7 +11823,7 @@ abstract class _$$_ParametersCopyWith<$Res>
           List<ParametersParameter>? parameter});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -11862,7 +11862,7 @@ class __$$_ParametersCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -11933,7 +11933,7 @@ class _$_Parameters extends _Parameters {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -12035,7 +12035,7 @@ abstract class _Parameters extends Parameters {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12069,7 +12069,7 @@ abstract class _Parameters extends Parameters {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -12376,8 +12376,8 @@ mixin _$ParametersParameter {
   /// [valueDosage] If the parameter is a data type.
   Dosage? get valueDosage => throw _privateConstructorUsedError;
 
-  /// [valueMeta] If the parameter is a data type.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  /// [valueFhirMeta] If the parameter is a data type.
+  FhirMeta? get valueFhirMeta => throw _privateConstructorUsedError;
 
   /// [resource] If the parameter is a whole resource.
   Resource? get resource => throw _privateConstructorUsedError;
@@ -12472,7 +12472,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta,
+      FhirMeta? valueFhirMeta,
       Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
@@ -12526,7 +12526,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -12615,7 +12615,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
     Object? resource = freezed,
     Object? part_ = freezed,
   }) {
@@ -12912,10 +12912,10 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
@@ -13534,13 +13534,13 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
-    if (_value.valueMeta == null) {
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta {
+    if (_value.valueFhirMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
-      return _then(_value.copyWith(valueMeta: value) as $Val);
+    return $FhirMetaCopyWith<$Res>(_value.valueFhirMeta!, (value) {
+      return _then(_value.copyWith(valueFhirMeta: value) as $Val);
     });
   }
 }
@@ -13627,7 +13627,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta,
+      FhirMeta? valueFhirMeta,
       Resource? resource,
       @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
@@ -13732,7 +13732,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -13819,7 +13819,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
     Object? resource = freezed,
     Object? part_ = freezed,
   }) {
@@ -14116,10 +14116,10 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
       resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
@@ -14209,7 +14209,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta,
+      this.valueFhirMeta,
       this.resource,
       @JsonKey(name: 'part') final List<ParametersParameter>? part_})
       : _extension_ = extension_,
@@ -14587,9 +14587,9 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Dosage? valueDosage;
 
-  /// [valueMeta] If the parameter is a data type.
+  /// [valueFhirMeta] If the parameter is a data type.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueFhirMeta;
 
   /// [resource] If the parameter is a whole resource.
   @override
@@ -14611,7 +14611,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   @override
   String toString() {
-    return 'ParametersParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta, resource: $resource, part_: $part_)';
+    return 'ParametersParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueFhirMeta: $valueFhirMeta, resource: $resource, part_: $part_)';
   }
 
   @override
@@ -14725,7 +14725,7 @@ class _$_ParametersParameter extends _ParametersParameter {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || other.valueTriggerDefinition == valueTriggerDefinition) &&
             (identical(other.valueUsageContext, valueUsageContext) || other.valueUsageContext == valueUsageContext) &&
             (identical(other.valueDosage, valueDosage) || other.valueDosage == valueDosage) &&
-            (identical(other.valueMeta, valueMeta) || other.valueMeta == valueMeta) &&
+            (identical(other.valueFhirMeta, valueFhirMeta) || other.valueFhirMeta == valueFhirMeta) &&
             (identical(other.resource, resource) || other.resource == resource) &&
             const DeepCollectionEquality().equals(other._part_, _part_));
   }
@@ -14807,7 +14807,7 @@ class _$_ParametersParameter extends _ParametersParameter {
         valueTriggerDefinition,
         valueUsageContext,
         valueDosage,
-        valueMeta,
+        valueFhirMeta,
         resource,
         const DeepCollectionEquality().hash(_part_)
       ]);
@@ -14923,7 +14923,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta,
+      final FhirMeta? valueFhirMeta,
       final Resource? resource,
       @JsonKey(name: 'part')
           final List<ParametersParameter>? part_}) = _$_ParametersParameter;
@@ -15265,8 +15265,8 @@ abstract class _ParametersParameter extends ParametersParameter {
   Dosage? get valueDosage;
   @override
 
-  /// [valueMeta] If the parameter is a data type.
-  Meta? get valueMeta;
+  /// [valueFhirMeta] If the parameter is a data type.
+  FhirMeta? get valueFhirMeta;
   @override
 
   /// [resource] If the parameter is a whole resource.
@@ -15301,7 +15301,7 @@ mixin _$Subscription {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -15444,7 +15444,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15494,7 +15494,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @HiveField(22)
           SubscriptionChannel channel});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -15555,7 +15555,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -15641,12 +15641,12 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -15771,7 +15771,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15822,7 +15822,7 @@ abstract class _$$_SubscriptionCopyWith<$Res>
           SubscriptionChannel channel});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -15890,7 +15890,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -16060,7 +16060,7 @@ class _$_Subscription extends _Subscription {
   ///  be associated with version changes to the resource.
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
@@ -16361,7 +16361,7 @@ abstract class _Subscription extends Subscription {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16431,7 +16431,7 @@ abstract class _Subscription extends Subscription {
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -17216,7 +17216,7 @@ mixin _$SubscriptionStatus {
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @HiveField(3)
@@ -17317,7 +17317,7 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17361,7 +17361,7 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       @HiveField(20)
           List<CodeableConcept>? error});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -17418,7 +17418,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17497,12 +17497,12 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -17604,7 +17604,7 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17649,7 +17649,7 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
           List<CodeableConcept>? error});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -17711,7 +17711,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -17866,7 +17866,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
@@ -18111,7 +18111,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18173,7 +18173,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
@@ -18767,7 +18767,7 @@ mixin _$SubscriptionTopic {
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @HiveField(2)
-  Meta? get meta => throw _privateConstructorUsedError;
+  FhirMeta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @HiveField(3)
@@ -18956,7 +18956,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -19057,7 +19057,7 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @HiveField(44)
           List<SubscriptionTopicNotificationShape>? notificationShape});
 
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
@@ -19147,7 +19147,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -19321,12 +19321,12 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get meta {
+  $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+    return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
     });
   }
@@ -19538,7 +19538,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
       @HiveField(1)
           String? id,
       @HiveField(2)
-          Meta? meta,
+          FhirMeta? meta,
       @HiveField(3)
           FhirUri? implicitRules,
       @HiveField(4)
@@ -19640,7 +19640,7 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
           List<SubscriptionTopicNotificationShape>? notificationShape});
 
   @override
-  $MetaCopyWith<$Res>? get meta;
+  $FhirMetaCopyWith<$Res>? get meta;
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
@@ -19744,7 +19744,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+              as FhirMeta?,
       implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
@@ -20058,7 +20058,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @override
   @HiveField(2)
-  final Meta? meta;
+  final FhirMeta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
   @override
@@ -20535,7 +20535,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
       @HiveField(1)
           final String? id,
       @HiveField(2)
-          final Meta? meta,
+          final FhirMeta? meta,
       @HiveField(3)
           final FhirUri? implicitRules,
       @HiveField(4)
@@ -20655,7 +20655,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
 
   /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
   @HiveField(2)
-  Meta? get meta;
+  FhirMeta? get meta;
   @override
 
   /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;

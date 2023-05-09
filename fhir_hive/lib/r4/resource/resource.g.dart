@@ -750,7 +750,7 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
       $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType'])
   ..meta = json['meta'] == null
       ? null
-      : Meta.fromJson(json['meta'] as Map<String, dynamic>)
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>)
   ..implicitRules = json['implicitRules'] == null
       ? null
       : FhirUri.fromJson(json['implicitRules'])

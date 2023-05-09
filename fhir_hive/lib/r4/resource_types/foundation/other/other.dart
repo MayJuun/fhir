@@ -108,7 +108,7 @@ class Basic extends HiveObject with Resource, _$Basic {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -298,7 +298,7 @@ class Binary extends HiveObject with Resource, _$Binary {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -456,7 +456,7 @@ class Bundle extends HiveObject with Resource, _$Bundle {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1212,7 +1212,7 @@ class BundleResponse with _$BundleResponse {
   /// [locationElement] Extensions for location
   ///
   /// [etag] The Etag for the resource, if the operation for the entry produced
-  /// a versioned resource (see [Resource Metadata and
+  /// a versioned resource (see [Resource FhirMetadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   ///
@@ -1269,7 +1269,7 @@ class BundleResponse with _$BundleResponse {
     @JsonKey(name: '_location') Element? locationElement,
 
     /// [etag] The Etag for the resource, if the operation for the entry produced
-    /// a versioned resource (see [Resource Metadata and
+    /// a versioned resource (see [Resource FhirMetadata and
     /// Versioning](http.html#versioning) and [Managing Resource
     ///  Contention](http.html#concurrency)).
     String? etag,
@@ -1412,7 +1412,7 @@ class Linkage extends HiveObject with Resource, _$Linkage {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -1765,7 +1765,7 @@ class MessageHeader extends HiveObject with Resource, _$MessageHeader {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2415,7 +2415,7 @@ class OperationOutcome extends HiveObject with Resource, _$OperationOutcome {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2741,7 +2741,7 @@ class Parameters extends HiveObject with Resource, _$Parameters {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -2971,7 +2971,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [valueDosage] If the parameter is a data type.
   ///
-  /// [valueMeta] If the parameter is a data type.
+  /// [valueFhirMeta] If the parameter is a data type.
   ///
   /// [resource] If the parameter is a whole resource.
   ///
@@ -3214,8 +3214,8 @@ class ParametersParameter with _$ParametersParameter {
     /// [valueDosage] If the parameter is a data type.
     Dosage? valueDosage,
 
-    /// [valueMeta] If the parameter is a data type.
-    Meta? valueMeta,
+    /// [valueFhirMeta] If the parameter is a data type.
+    FhirMeta? valueFhirMeta,
 
     /// [resource] If the parameter is a whole resource.
     Resource? resource,
@@ -3367,7 +3367,7 @@ class Subscription extends HiveObject with Resource, _$Subscription {
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
@@ -3733,7 +3733,7 @@ class SubscriptionStatus extends HiveObject
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3)
@@ -4041,7 +4041,7 @@ class SubscriptionTopic extends HiveObject with Resource, _$SubscriptionTopic {
     @HiveField(1) String? id,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
     @HiveField(3) FhirUri? implicitRules,

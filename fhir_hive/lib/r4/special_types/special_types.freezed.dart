@@ -1190,12 +1190,12 @@ abstract class _Reference extends Reference {
       throw _privateConstructorUsedError;
 }
 
-Meta _$MetaFromJson(Map<String, dynamic> json) {
-  return _Meta.fromJson(json);
+FhirMeta _$FhirMetaFromJson(Map<String, dynamic> json) {
+  return _FhirMeta.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Meta {
+mixin _$FhirMeta {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
@@ -1254,13 +1254,14 @@ mixin _$Meta {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MetaCopyWith<Meta> get copyWith => throw _privateConstructorUsedError;
+  $FhirMetaCopyWith<FhirMeta> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MetaCopyWith<$Res> {
-  factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
-      _$MetaCopyWithImpl<$Res, Meta>;
+abstract class $FhirMetaCopyWith<$Res> {
+  factory $FhirMetaCopyWith(FhirMeta value, $Res Function(FhirMeta) then) =
+      _$FhirMetaCopyWithImpl<$Res, FhirMeta>;
   @useResult
   $Res call(
       {String? id,
@@ -1281,9 +1282,9 @@ abstract class $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MetaCopyWithImpl<$Res, $Val extends Meta>
-    implements $MetaCopyWith<$Res> {
-  _$MetaCopyWithImpl(this._value, this._then);
+class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
+    implements $FhirMetaCopyWith<$Res> {
+  _$FhirMetaCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1391,9 +1392,10 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
 }
 
 /// @nodoc
-abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
-  factory _$$_MetaCopyWith(_$_Meta value, $Res Function(_$_Meta) then) =
-      __$$_MetaCopyWithImpl<$Res>;
+abstract class _$$_FhirMetaCopyWith<$Res> implements $FhirMetaCopyWith<$Res> {
+  factory _$$_FhirMetaCopyWith(
+          _$_FhirMeta value, $Res Function(_$_FhirMeta) then) =
+      __$$_FhirMetaCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1418,9 +1420,11 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
-    implements _$$_MetaCopyWith<$Res> {
-  __$$_MetaCopyWithImpl(_$_Meta _value, $Res Function(_$_Meta) _then)
+class __$$_FhirMetaCopyWithImpl<$Res>
+    extends _$FhirMetaCopyWithImpl<$Res, _$_FhirMeta>
+    implements _$$_FhirMetaCopyWith<$Res> {
+  __$$_FhirMetaCopyWithImpl(
+      _$_FhirMeta _value, $Res Function(_$_FhirMeta) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1438,7 +1442,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
     Object? security = freezed,
     Object? tag = freezed,
   }) {
-    return _then(_$_Meta(
+    return _then(_$_FhirMeta(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1489,8 +1493,8 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Meta extends _Meta {
-  _$_Meta(
+class _$_FhirMeta extends _FhirMeta {
+  _$_FhirMeta(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.versionId,
@@ -1508,7 +1512,8 @@ class _$_Meta extends _Meta {
         _tag = tag,
         super._();
 
-  factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
+  factory _$_FhirMeta.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirMetaFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -1626,14 +1631,14 @@ class _$_Meta extends _Meta {
 
   @override
   String toString() {
-    return 'Meta(id: $id, extension_: $extension_, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, source: $source, sourceElement: $sourceElement, profile: $profile, security: $security, tag: $tag)';
+    return 'FhirMeta(id: $id, extension_: $extension_, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, source: $source, sourceElement: $sourceElement, profile: $profile, security: $security, tag: $tag)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Meta &&
+            other is _$_FhirMeta &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1672,19 +1677,19 @@ class _$_Meta extends _Meta {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MetaCopyWith<_$_Meta> get copyWith =>
-      __$$_MetaCopyWithImpl<_$_Meta>(this, _$identity);
+  _$$_FhirMetaCopyWith<_$_FhirMeta> get copyWith =>
+      __$$_FhirMetaCopyWithImpl<_$_FhirMeta>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MetaToJson(
+    return _$$_FhirMetaToJson(
       this,
     );
   }
 }
 
-abstract class _Meta extends Meta {
-  factory _Meta(
+abstract class _FhirMeta extends FhirMeta {
+  factory _FhirMeta(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Id? versionId,
@@ -1695,10 +1700,10 @@ abstract class _Meta extends Meta {
       @JsonKey(name: '_source') final Element? sourceElement,
       final List<Canonical>? profile,
       final List<Coding>? security,
-      final List<Coding>? tag}) = _$_Meta;
-  _Meta._() : super._();
+      final List<Coding>? tag}) = _$_FhirMeta;
+  _FhirMeta._() : super._();
 
-  factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
+  factory _FhirMeta.fromJson(Map<String, dynamic> json) = _$_FhirMeta.fromJson;
 
   @override
 
@@ -1769,7 +1774,8 @@ abstract class _Meta extends Meta {
   List<Coding>? get tag;
   @override
   @JsonKey(ignore: true)
-  _$$_MetaCopyWith<_$_Meta> get copyWith => throw _privateConstructorUsedError;
+  _$$_FhirMetaCopyWith<_$_FhirMeta> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Dosage _$DosageFromJson(Map<String, dynamic> json) {
@@ -21158,9 +21164,9 @@ mixin _$ElementDefinitionExample {
   ///  types allowed for this element.
   Dosage? get valueDosage => throw _privateConstructorUsedError;
 
-  /// [valueMeta] The actual value for the element, which must be one of the
+  /// [valueFhirMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Meta? get valueMeta => throw _privateConstructorUsedError;
+  FhirMeta? get valueFhirMeta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -21250,7 +21256,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   $ElementCopyWith<$Res>? get labelElement;
   $ElementCopyWith<$Res>? get valueBase64BinaryElement;
@@ -21304,7 +21310,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
   $UsageContextCopyWith<$Res>? get valueUsageContext;
   $DosageCopyWith<$Res>? get valueDosage;
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -21396,7 +21402,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -21699,10 +21705,10 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ) as $Val);
   }
 
@@ -22338,13 +22344,13 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $MetaCopyWith<$Res>? get valueMeta {
-    if (_value.valueMeta == null) {
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta {
+    if (_value.valueFhirMeta == null) {
       return null;
     }
 
-    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
-      return _then(_value.copyWith(valueMeta: value) as $Val);
+    return $FhirMetaCopyWith<$Res>(_value.valueFhirMeta!, (value) {
+      return _then(_value.copyWith(valueFhirMeta: value) as $Val);
     });
   }
 }
@@ -22434,7 +22440,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       TriggerDefinition? valueTriggerDefinition,
       UsageContext? valueUsageContext,
       Dosage? valueDosage,
-      Meta? valueMeta});
+      FhirMeta? valueFhirMeta});
 
   @override
   $ElementCopyWith<$Res>? get labelElement;
@@ -22541,7 +22547,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   @override
   $DosageCopyWith<$Res>? get valueDosage;
   @override
-  $MetaCopyWith<$Res>? get valueMeta;
+  $FhirMetaCopyWith<$Res>? get valueFhirMeta;
 }
 
 /// @nodoc
@@ -22631,7 +22637,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
     Object? valueTriggerDefinition = freezed,
     Object? valueUsageContext = freezed,
     Object? valueDosage = freezed,
-    Object? valueMeta = freezed,
+    Object? valueFhirMeta = freezed,
   }) {
     return _then(_$_ElementDefinitionExample(
       id: freezed == id
@@ -22934,10 +22940,10 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
           ? _value.valueDosage
           : valueDosage // ignore: cast_nullable_to_non_nullable
               as Dosage?,
-      valueMeta: freezed == valueMeta
-          ? _value.valueMeta
-          : valueMeta // ignore: cast_nullable_to_non_nullable
-              as Meta?,
+      valueFhirMeta: freezed == valueFhirMeta
+          ? _value.valueFhirMeta
+          : valueFhirMeta // ignore: cast_nullable_to_non_nullable
+              as FhirMeta?,
     ));
   }
 }
@@ -23021,7 +23027,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
       this.valueTriggerDefinition,
       this.valueUsageContext,
       this.valueDosage,
-      this.valueMeta})
+      this.valueFhirMeta})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -23449,14 +23455,14 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   @override
   final Dosage? valueDosage;
 
-  /// [valueMeta] The actual value for the element, which must be one of the
+  /// [valueFhirMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   @override
-  final Meta? valueMeta;
+  final FhirMeta? valueFhirMeta;
 
   @override
   String toString() {
-    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'ElementDefinitionExample(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueFhirMeta: $valueFhirMeta)';
   }
 
   @override
@@ -23572,7 +23578,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
             (identical(other.valueTriggerDefinition, valueTriggerDefinition) || other.valueTriggerDefinition == valueTriggerDefinition) &&
             (identical(other.valueUsageContext, valueUsageContext) || other.valueUsageContext == valueUsageContext) &&
             (identical(other.valueDosage, valueDosage) || other.valueDosage == valueDosage) &&
-            (identical(other.valueMeta, valueMeta) || other.valueMeta == valueMeta));
+            (identical(other.valueFhirMeta, valueFhirMeta) || other.valueFhirMeta == valueFhirMeta));
   }
 
   @JsonKey(ignore: true)
@@ -23654,7 +23660,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
         valueTriggerDefinition,
         valueUsageContext,
         valueDosage,
-        valueMeta
+        valueFhirMeta
       ]);
 
   @JsonKey(ignore: true)
@@ -23770,7 +23776,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final Meta? valueMeta}) = _$_ElementDefinitionExample;
+      final FhirMeta? valueFhirMeta}) = _$_ElementDefinitionExample;
   _ElementDefinitionExample._() : super._();
 
   factory _ElementDefinitionExample.fromJson(Map<String, dynamic> json) =
@@ -24162,9 +24168,9 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   Dosage? get valueDosage;
   @override
 
-  /// [valueMeta] The actual value for the element, which must be one of the
+  /// [valueFhirMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  Meta? get valueMeta;
+  FhirMeta? get valueFhirMeta;
   @override
   @JsonKey(ignore: true)
   _$$_ElementDefinitionExampleCopyWith<_$_ElementDefinitionExample>

@@ -332,13 +332,13 @@ class Reference with _$Reference {
   }
 }
 
-/// [Meta] The metadata about a resource. This is content in the resource
+/// [FhirMeta] The metadata about a resource. This is content in the resource
 @freezed
-class Meta with _$Meta {
-  /// [Meta] The metadata about a resource. This is content in the resource
-  Meta._();
+class FhirMeta with _$FhirMeta {
+  /// [FhirMeta] The metadata about a resource. This is content in the resource
+  FhirMeta._();
 
-  /// [Meta] The metadata about a resource. This is content in the resource
+  /// [FhirMeta] The metadata about a resource. This is content in the resource
   /// that is maintained by the infrastructure. Changes to the content might not
   ///  always be associated with version changes to the resource.
   ///
@@ -383,7 +383,7 @@ class Meta with _$Meta {
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
 
-  factory Meta({
+  factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
 
@@ -448,30 +448,32 @@ class Meta with _$Meta {
     ///  resource.
 
     List<Coding>? tag,
-  }) = _Meta;
+  }) = _FhirMeta;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(
+  factory FhirMeta.fromYaml(dynamic yaml) => yaml is String
+      ? FhirMeta.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirMeta.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Meta cannot be constructed from input provided,'
+              'FhirMeta cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+  factory FhirMeta.fromJson(Map<String, dynamic> json) =>
+      _$FhirMetaFromJson(json);
 
-  /// Acts like a constructor, returns a [Meta], accepts a
+  /// Acts like a constructor, returns a [FhirMeta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Meta.fromJsonString(String source) {
+  factory FhirMeta.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$MetaFromJson(json);
+      return _$FhirMetaFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -5647,7 +5649,7 @@ class ElementDefinitionExample extends HiveObject
   /// [valueDosage] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  /// [valueMeta] The actual value for the element, which must be one of the
+  /// [valueFhirMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
 
   factory ElementDefinitionExample({
@@ -5945,9 +5947,9 @@ class ElementDefinitionExample extends HiveObject
     ///  types allowed for this element.
     Dosage? valueDosage,
 
-    /// [valueMeta] The actual value for the element, which must be one of the
+    /// [valueFhirMeta] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Meta? valueMeta,
+    FhirMeta? valueFhirMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object

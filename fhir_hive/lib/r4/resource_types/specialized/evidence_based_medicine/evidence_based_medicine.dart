@@ -201,7 +201,7 @@ class Citation extends HiveObject with Resource, _$Citation {
     @HiveField(1)
         String? id,
     @HiveField(2)
-        Meta? meta,
+        FhirMeta? meta,
     @HiveField(3)
         FhirUri? implicitRules,
     @HiveField(4)
@@ -2674,7 +2674,7 @@ class Evidence extends HiveObject with Resource, _$Evidence {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -3421,7 +3421,7 @@ class EvidenceReport extends HiveObject with Resource, _$EvidenceReport {
     @Default(R4ResourceType.EvidenceReport)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -3992,7 +3992,7 @@ class EvidenceVariable extends HiveObject with Resource, _$EvidenceVariable {
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -4615,7 +4615,7 @@ class ResearchDefinition extends HiveObject
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')
@@ -4957,7 +4957,7 @@ class ResearchElementDefinition extends HiveObject
     @HiveField(0)
         R4ResourceType resourceType,
     @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
+    @HiveField(2) FhirMeta? meta,
     @HiveField(3) FhirUri? implicitRules,
     @HiveField(4)
     @JsonKey(name: '_implicitRules')

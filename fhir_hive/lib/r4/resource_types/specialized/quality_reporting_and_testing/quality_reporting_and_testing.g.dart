@@ -19,7 +19,7 @@ class MeasureAdapter extends TypeAdapter<_$_Measure> {
     return _$_Measure(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -330,7 +330,7 @@ class MeasureReportAdapter extends TypeAdapter<_$_MeasureReport> {
     return _$_MeasureReport(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -488,7 +488,7 @@ class TestReportAdapter extends TypeAdapter<_$_TestReport> {
     return _$_TestReport(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -606,7 +606,7 @@ class TestScriptAdapter extends TypeAdapter<_$_TestScript> {
     return _$_TestScript(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -643,7 +643,7 @@ class TestScriptAdapter extends TypeAdapter<_$_TestScript> {
       copyrightElement: fields[36] as Element?,
       origin: (fields[37] as List?)?.cast<TestScriptOrigin>(),
       destination: (fields[38] as List?)?.cast<TestScriptDestination>(),
-      metadata: fields[39] as TestScriptMetadata?,
+      metadata: fields[39] as TestScriptFhirMetadata?,
       fixture: (fields[40] as List?)?.cast<TestScriptFixture>(),
       profile: (fields[41] as List?)?.cast<Reference>(),
       variable: (fields[42] as List?)?.cast<TestScriptVariable>(),
@@ -774,7 +774,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1455,7 +1455,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1826,7 +1826,7 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2312,7 +2312,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -2408,7 +2408,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
           .toList(),
       metadata: json['metadata'] == null
           ? null
-          : TestScriptMetadata.fromJson(
+          : TestScriptFhirMetadata.fromJson(
               json['metadata'] as Map<String, dynamic>),
       fixture: (json['fixture'] as List<dynamic>?)
           ?.map((e) => TestScriptFixture.fromJson(e as Map<String, dynamic>))
@@ -2570,9 +2570,9 @@ Map<String, dynamic> _$$_TestScriptDestinationToJson(
   return val;
 }
 
-_$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
+_$_TestScriptFhirMetadata _$$_TestScriptFhirMetadataFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptMetadata(
+    _$_TestScriptFhirMetadata(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2588,8 +2588,8 @@ _$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptMetadataToJson(
-    _$_TestScriptMetadata instance) {
+Map<String, dynamic> _$$_TestScriptFhirMetadataToJson(
+    _$_TestScriptFhirMetadata instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

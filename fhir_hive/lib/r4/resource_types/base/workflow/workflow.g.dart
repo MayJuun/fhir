@@ -19,7 +19,7 @@ class AppointmentAdapter extends TypeAdapter<_$_Appointment> {
     return _$_Appointment(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -176,7 +176,7 @@ class AppointmentResponseAdapter extends TypeAdapter<_$_AppointmentResponse> {
     return _$_AppointmentResponse(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -276,7 +276,7 @@ class ScheduleAdapter extends TypeAdapter<_$_Schedule> {
     return _$_Schedule(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -370,7 +370,7 @@ class SlotAdapter extends TypeAdapter<_$_Slot> {
     return _$_Slot(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -482,7 +482,7 @@ class TaskAdapter extends TypeAdapter<_$_Task> {
     return _$_Task(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -660,7 +660,7 @@ class VerificationResultAdapter extends TypeAdapter<_$_VerificationResult> {
     return _$_VerificationResult(
       resourceType: fields[0] as R4ResourceType,
       id: fields[1] as String?,
-      meta: fields[2] as Meta?,
+      meta: fields[2] as FhirMeta?,
       implicitRules: fields[3] as FhirUri?,
       implicitRulesElement: fields[4] as Element?,
       language: fields[5] as Code?,
@@ -782,7 +782,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1170,7 +1170,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1277,7 +1277,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1378,7 +1378,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1498,7 +1498,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
@@ -1969,9 +1969,9 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
       valueDosage: json['valueDosage'] == null
           ? null
           : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueMeta: json['valueMeta'] == null
+      valueFhirMeta: json['valueFhirMeta'] == null
           ? null
-          : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['valueFhirMeta'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
@@ -2060,7 +2060,7 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  writeNotNull('valueFhirMeta', instance.valueFhirMeta?.toJson());
   return val;
 }
 
@@ -2283,9 +2283,9 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
       valueDosage: json['valueDosage'] == null
           ? null
           : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueMeta: json['valueMeta'] == null
+      valueFhirMeta: json['valueFhirMeta'] == null
           ? null
-          : Meta.fromJson(json['valueMeta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['valueFhirMeta'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
@@ -2374,7 +2374,7 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
       'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
   writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  writeNotNull('valueFhirMeta', instance.valueFhirMeta?.toJson());
   return val;
 }
 
@@ -2388,7 +2388,7 @@ _$_VerificationResult _$$_VerificationResultFromJson(
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
