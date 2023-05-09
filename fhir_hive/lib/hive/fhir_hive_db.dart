@@ -166,6 +166,7 @@ class FhirHiveDb {
   }
 
   void registerResourceTypes() {
+    Hive.registerAdapter(R4ResourceTypeAdapter());
     Hive.registerAdapter(AccountAdapter());
     Hive.registerAdapter(ActivityDefinitionAdapter());
     Hive.registerAdapter(AdministrableProductDefinitionAdapter());
