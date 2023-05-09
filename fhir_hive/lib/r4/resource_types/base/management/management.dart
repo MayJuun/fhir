@@ -2567,7 +2567,7 @@ class FhirList extends HiveObject with Resource, _$FhirList {
   /// [entry] Entries in this list.
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
-  @HiveType(typeId: 226)
+  @HiveType(typeId: 15)
   factory FhirList({
     @Default(R4ResourceType.FhirList)
     @JsonKey(unknownEnumValue: R4ResourceType.FhirList)

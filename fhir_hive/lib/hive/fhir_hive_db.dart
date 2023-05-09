@@ -169,7 +169,6 @@ class FhirHiveDb {
     Hive.registerAdapter(AccountAdapter());
     Hive.registerAdapter(ActivityDefinitionAdapter());
     Hive.registerAdapter(AdministrableProductDefinitionAdapter());
-    Hive.registerAdapter(AdministrableProductDefinitionAdapter());
     Hive.registerAdapter(AdverseEventAdapter());
     Hive.registerAdapter(AllergyIntoleranceAdapter());
     Hive.registerAdapter(AppointmentAdapter());

@@ -837,7 +837,7 @@ class MedicationDispenseAdapter extends TypeAdapter<_$_MedicationDispense> {
 
 class MedicationKnowledgeAdapter extends TypeAdapter<_$_MedicationKnowledge> {
   @override
-  final int typeId = 220;
+  final int typeId = 16;
 
   @override
   _$_MedicationKnowledge read(BinaryReader reader) {
@@ -982,7 +982,7 @@ class MedicationKnowledgeAdapter extends TypeAdapter<_$_MedicationKnowledge> {
 class MedicationKnowledgeRelatedMedicationKnowledgeAdapter
     extends TypeAdapter<_$_MedicationKnowledgeRelatedMedicationKnowledge> {
   @override
-  final int typeId = 221;
+  final int typeId = 17;
 
   @override
   _$_MedicationKnowledgeRelatedMedicationKnowledge read(BinaryReader reader) {
@@ -1030,7 +1030,7 @@ class MedicationKnowledgeRelatedMedicationKnowledgeAdapter
 class MedicationKnowledgeIngredientAdapter
     extends TypeAdapter<_$_MedicationKnowledgeIngredient> {
   @override
-  final int typeId = 222;
+  final int typeId = 18;
 
   @override
   _$_MedicationKnowledgeIngredient read(BinaryReader reader) {
@@ -1086,7 +1086,7 @@ class MedicationKnowledgeIngredientAdapter
 class MedicationKnowledgeScheduleAdapter
     extends TypeAdapter<_$_MedicationKnowledgeSchedule> {
   @override
-  final int typeId = 223;
+  final int typeId = 19;
 
   @override
   _$_MedicationKnowledgeSchedule read(BinaryReader reader) {
@@ -1129,7 +1129,7 @@ class MedicationKnowledgeScheduleAdapter
 
 class MedicationRequestAdapter extends TypeAdapter<_$_MedicationRequest> {
   @override
-  final int typeId = 224;
+  final int typeId = 20;
 
   @override
   _$_MedicationRequest read(BinaryReader reader) {
@@ -1319,7 +1319,7 @@ class MedicationRequestAdapter extends TypeAdapter<_$_MedicationRequest> {
 
 class MedicationStatementAdapter extends TypeAdapter<_$_MedicationStatement> {
   @override
-  final int typeId = 225;
+  final int typeId = 21;
 
   @override
   _$_MedicationStatement read(BinaryReader reader) {

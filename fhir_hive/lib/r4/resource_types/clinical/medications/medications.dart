@@ -3820,7 +3820,7 @@ class MedicationKnowledge extends HiveObject
   ///
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  @HiveType(typeId: 220)
+  @HiveType(typeId: 16)
   factory MedicationKnowledge({
     @Default(R4ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
@@ -4104,7 +4104,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   ///
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
-  @HiveType(typeId: 221)
+  @HiveType(typeId: 17)
   factory MedicationKnowledgeRelatedMedicationKnowledge({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -4313,7 +4313,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  @HiveType(typeId: 222)
+  @HiveType(typeId: 18)
   factory MedicationKnowledgeIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -5496,7 +5496,7 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   ///  modifierExtension itself).
   ///
   /// [schedule] Specifies the specific drug schedule.
-  @HiveType(typeId: 223)
+  @HiveType(typeId: 19)
   factory MedicationKnowledgeSchedule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
@@ -5982,7 +5982,7 @@ class MedicationRequest extends HiveObject with Resource, _$MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  @HiveType(typeId: 224)
+  @HiveType(typeId: 20)
   factory MedicationRequest({
     @Default(R4ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
@@ -6874,7 +6874,7 @@ class MedicationStatement extends HiveObject
   ///
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  @HiveType(typeId: 225)
+  @HiveType(typeId: 21)
   factory MedicationStatement({
     @Default(R4ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)

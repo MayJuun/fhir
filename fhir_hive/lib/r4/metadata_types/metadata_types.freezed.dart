@@ -22,7 +22,6 @@ ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
 mixin _$ContactDetail {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -31,22 +30,18 @@ mixin _$ContactDetail {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [name] The name of an individual to contact.
-  @HiveField(2)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
-  @HiveField(3)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-  @HiveField(4)
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -62,11 +57,11 @@ abstract class $ContactDetailCopyWith<$Res> {
       _$ContactDetailCopyWithImpl<$Res, ContactDetail>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) String? name,
-      @HiveField(3) @JsonKey(name: '_name') Element? nameElement,
-      @HiveField(4) List<ContactPoint>? telecom});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom});
 
   $ElementCopyWith<$Res>? get nameElement;
 }
@@ -136,11 +131,11 @@ abstract class _$$_ContactDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) String? name,
-      @HiveField(3) @JsonKey(name: '_name') Element? nameElement,
-      @HiveField(4) List<ContactPoint>? telecom});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactPoint>? telecom});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -190,21 +185,13 @@ class __$$_ContactDetailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 0)
 class _$_ContactDetail extends _ContactDetail {
   _$_ContactDetail(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          this.name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @HiveField(4)
-          final List<ContactPoint>? telecom})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      final List<ContactPoint>? telecom})
       : _extension_ = extension_,
         _telecom = telecom,
         super._();
@@ -215,7 +202,6 @@ class _$_ContactDetail extends _ContactDetail {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -233,7 +219,6 @@ class _$_ContactDetail extends _ContactDetail {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -245,12 +230,10 @@ class _$_ContactDetail extends _ContactDetail {
 
   /// [name] The name of an individual to contact.
   @override
-  @HiveField(2)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
-  @HiveField(3)
   @JsonKey(name: '_name')
   final Element? nameElement;
 
@@ -261,7 +244,6 @@ class _$_ContactDetail extends _ContactDetail {
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
   @override
-  @HiveField(4)
   List<ContactPoint>? get telecom {
     final value = _telecom;
     if (value == null) return null;
@@ -315,18 +297,11 @@ class _$_ContactDetail extends _ContactDetail {
 
 abstract class _ContactDetail extends ContactDetail {
   factory _ContactDetail(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final String? name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      @HiveField(4)
-          final List<ContactPoint>? telecom}) = _$_ContactDetail;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final List<ContactPoint>? telecom}) = _$_ContactDetail;
   _ContactDetail._() : super._();
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
@@ -336,7 +311,6 @@ abstract class _ContactDetail extends ContactDetail {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -346,25 +320,21 @@ abstract class _ContactDetail extends ContactDetail {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [name] The name of an individual to contact.
-  @HiveField(2)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
-  @HiveField(3)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
 
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-  @HiveField(4)
   List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
@@ -380,7 +350,6 @@ Contributor _$ContributorFromJson(Map<String, dynamic> json) {
 mixin _$Contributor {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -389,33 +358,27 @@ mixin _$Contributor {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [type] The type of contributor.
-  @HiveField(2)
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
-  @HiveField(3)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [name] The name of the individual or organization responsible for the
   ///  contribution.
-  @HiveField(4)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
-  @HiveField(5)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-  @HiveField(6)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -431,24 +394,13 @@ abstract class $ContributorCopyWith<$Res> {
       _$ContributorCopyWithImpl<$Res, Contributor>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-      @JsonKey(unknownEnumValue: ContributorType.unknown)
-          ContributorType? type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(4)
-          String? name,
-      @HiveField(5)
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @HiveField(6)
-          List<ContactDetail>? contact});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -541,24 +493,13 @@ abstract class _$$_ContributorCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-      @JsonKey(unknownEnumValue: ContributorType.unknown)
-          ContributorType? type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(4)
-          String? name,
-      @HiveField(5)
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @HiveField(6)
-          List<ContactDetail>? contact});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      List<ContactDetail>? contact});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -620,27 +561,15 @@ class __$$_ContributorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 1)
 class _$_Contributor extends _Contributor {
   _$_Contributor(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-      @JsonKey(unknownEnumValue: ContributorType.unknown)
-          this.type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          this.typeElement,
-      @HiveField(4)
-          this.name,
-      @HiveField(5)
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @HiveField(6)
-          final List<ContactDetail>? contact})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(unknownEnumValue: ContributorType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      final List<ContactDetail>? contact})
       : _extension_ = extension_,
         _contact = contact,
         super._();
@@ -651,7 +580,6 @@ class _$_Contributor extends _Contributor {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -669,7 +597,6 @@ class _$_Contributor extends _Contributor {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -681,25 +608,21 @@ class _$_Contributor extends _Contributor {
 
   /// [type] The type of contributor.
   @override
-  @HiveField(2)
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   final ContributorType? type;
 
   /// [typeElement] Extensions for type
   @override
-  @HiveField(3)
   @JsonKey(name: '_type')
   final Element? typeElement;
 
   /// [name] The name of the individual or organization responsible for the
   ///  contribution.
   @override
-  @HiveField(4)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
-  @HiveField(5)
   @JsonKey(name: '_name')
   final Element? nameElement;
 
@@ -710,7 +633,6 @@ class _$_Contributor extends _Contributor {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
   @override
-  @HiveField(6)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -769,24 +691,17 @@ class _$_Contributor extends _Contributor {
 
 abstract class _Contributor extends Contributor {
   factory _Contributor(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
+      {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      @HiveField(2)
       @JsonKey(unknownEnumValue: ContributorType.unknown)
           final ContributorType? type,
-      @HiveField(3)
       @JsonKey(name: '_type')
           final Element? typeElement,
-      @HiveField(4)
-          final String? name,
-      @HiveField(5)
+      final String? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
-      @HiveField(6)
-          final List<ContactDetail>? contact}) = _$_Contributor;
+      final List<ContactDetail>? contact}) = _$_Contributor;
   _Contributor._() : super._();
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
@@ -796,7 +711,6 @@ abstract class _Contributor extends Contributor {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -806,38 +720,32 @@ abstract class _Contributor extends Contributor {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [type] The type of contributor.
-  @HiveField(2)
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type;
   @override
 
   /// [typeElement] Extensions for type
-  @HiveField(3)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
 
   /// [name] The name of the individual or organization responsible for the
   ///  contribution.
-  @HiveField(4)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
-  @HiveField(5)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-  @HiveField(6)
   List<ContactDetail>? get contact;
   @override
   @JsonKey(ignore: true)
@@ -853,7 +761,6 @@ DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
 mixin _$DataRequirement {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -862,35 +769,29 @@ mixin _$DataRequirement {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  @HiveField(2)
   Code? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
-  @HiveField(3)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  @HiveField(4)
   List<Canonical>? get profile => throw _privateConstructorUsedError;
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
-  @HiveField(5)
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [subjectReference] The intended subjects of the data requirement. If this
   ///  element is not provided, a Patient subject is assumed.
-  @HiveField(6)
   Reference? get subjectReference => throw _privateConstructorUsedError;
 
   /// [mustSupport] Indicates that specific elements of the type are referenced
@@ -902,15 +803,16 @@ mixin _$DataRequirement {
   /// the DataRequirement. The path SHALL consist only of identifiers, constant
   /// indexers, and .resolve() (see the [Simple FHIRPath
   ///  Profile](fhirpath.html#simple) for full details).
-  @HiveField(7)
   List<String>? get mustSupport => throw _privateConstructorUsedError;
 
   /// [mustSupportElement] Extensions for mustSupport
-  @HiveField(8)
   @JsonKey(name: '_mustSupport')
   List<Element?>? get mustSupportElement => throw _privateConstructorUsedError;
-  @HiveField(9)
-  @HiveField(10)
+
+  /// [codeFilter] Code filters specify additional constraints on the data,
+  /// specifying the value set of interest for a particular element of the data.
+  /// Each code filter defines an additional constraint on the data, i.e. code
+  ///  filters are AND'ed, not OR'ed.
   List<DataRequirementCodeFilter>? get codeFilter =>
       throw _privateConstructorUsedError;
 
@@ -918,22 +820,18 @@ mixin _$DataRequirement {
   /// terms of the applicable date range for specific elements. Each date filter
   /// specifies an additional constraint on the data, i.e. date filters are
   ///  AND'ed, not OR'ed.
-  @HiveField(11)
   List<DataRequirementDateFilter>? get dateFilter =>
       throw _privateConstructorUsedError;
 
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
-  @HiveField(12)
   PositiveInt? get limit => throw _privateConstructorUsedError;
 
   /// [limitElement] Extensions for limit
-  @HiveField(13)
   @JsonKey(name: '_limit')
   Element? get limitElement => throw _privateConstructorUsedError;
 
   /// [sort] Specifies the order of the results to be returned.
-  @HiveField(14)
   List<DataRequirementSort>? get sort => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -949,39 +847,20 @@ abstract class $DataRequirementCopyWith<$Res> {
       _$DataRequirementCopyWithImpl<$Res, DataRequirement>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          Code? type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(4)
-          List<Canonical>? profile,
-      @HiveField(5)
-          CodeableConcept? subjectCodeableConcept,
-      @HiveField(6)
-          Reference? subjectReference,
-      @HiveField(7)
-          List<String>? mustSupport,
-      @HiveField(8)
-      @JsonKey(name: '_mustSupport')
-          List<Element?>? mustSupportElement,
-      @HiveField(9)
-      @HiveField(10)
-          List<DataRequirementCodeFilter>? codeFilter,
-      @HiveField(11)
-          List<DataRequirementDateFilter>? dateFilter,
-      @HiveField(12)
-          PositiveInt? limit,
-      @HiveField(13)
-      @JsonKey(name: '_limit')
-          Element? limitElement,
-      @HiveField(14)
-          List<DataRequirementSort>? sort});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<Canonical>? profile,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
+      PositiveInt? limit,
+      @JsonKey(name: '_limit') Element? limitElement,
+      List<DataRequirementSort>? sort});
 
   $ElementCopyWith<$Res>? get typeElement;
   $CodeableConceptCopyWith<$Res>? get subjectCodeableConcept;
@@ -1136,39 +1015,20 @@ abstract class _$$_DataRequirementCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          Code? type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(4)
-          List<Canonical>? profile,
-      @HiveField(5)
-          CodeableConcept? subjectCodeableConcept,
-      @HiveField(6)
-          Reference? subjectReference,
-      @HiveField(7)
-          List<String>? mustSupport,
-      @HiveField(8)
-      @JsonKey(name: '_mustSupport')
-          List<Element?>? mustSupportElement,
-      @HiveField(9)
-      @HiveField(10)
-          List<DataRequirementCodeFilter>? codeFilter,
-      @HiveField(11)
-          List<DataRequirementDateFilter>? dateFilter,
-      @HiveField(12)
-          PositiveInt? limit,
-      @HiveField(13)
-      @JsonKey(name: '_limit')
-          Element? limitElement,
-      @HiveField(14)
-          List<DataRequirementSort>? sort});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      List<Canonical>? profile,
+      CodeableConcept? subjectCodeableConcept,
+      Reference? subjectReference,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
+      PositiveInt? limit,
+      @JsonKey(name: '_limit') Element? limitElement,
+      List<DataRequirementSort>? sort});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -1269,42 +1129,22 @@ class __$$_DataRequirementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 2)
 class _$_DataRequirement extends _DataRequirement {
   _$_DataRequirement(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          this.type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          this.typeElement,
-      @HiveField(4)
-          final List<Canonical>? profile,
-      @HiveField(5)
-          this.subjectCodeableConcept,
-      @HiveField(6)
-          this.subjectReference,
-      @HiveField(7)
-          final List<String>? mustSupport,
-      @HiveField(8)
-      @JsonKey(name: '_mustSupport')
-          final List<Element?>? mustSupportElement,
-      @HiveField(9)
-      @HiveField(10)
-          final List<DataRequirementCodeFilter>? codeFilter,
-      @HiveField(11)
-          final List<DataRequirementDateFilter>? dateFilter,
-      @HiveField(12)
-          this.limit,
-      @HiveField(13)
-      @JsonKey(name: '_limit')
-          this.limitElement,
-      @HiveField(14)
-          final List<DataRequirementSort>? sort})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      final List<Canonical>? profile,
+      this.subjectCodeableConcept,
+      this.subjectReference,
+      final List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
+      final List<DataRequirementCodeFilter>? codeFilter,
+      final List<DataRequirementDateFilter>? dateFilter,
+      this.limit,
+      @JsonKey(name: '_limit') this.limitElement,
+      final List<DataRequirementSort>? sort})
       : _extension_ = extension_,
         _profile = profile,
         _mustSupport = mustSupport,
@@ -1320,7 +1160,6 @@ class _$_DataRequirement extends _DataRequirement {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -1338,7 +1177,6 @@ class _$_DataRequirement extends _DataRequirement {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -1352,12 +1190,10 @@ class _$_DataRequirement extends _DataRequirement {
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
   @override
-  @HiveField(2)
   final Code? type;
 
   /// [typeElement] Extensions for type
   @override
-  @HiveField(3)
   @JsonKey(name: '_type')
   final Element? typeElement;
 
@@ -1368,7 +1204,6 @@ class _$_DataRequirement extends _DataRequirement {
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
   @override
-  @HiveField(4)
   List<Canonical>? get profile {
     final value = _profile;
     if (value == null) return null;
@@ -1380,13 +1215,11 @@ class _$_DataRequirement extends _DataRequirement {
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
   @override
-  @HiveField(5)
   final CodeableConcept? subjectCodeableConcept;
 
   /// [subjectReference] The intended subjects of the data requirement. If this
   ///  element is not provided, a Patient subject is assumed.
   @override
-  @HiveField(6)
   final Reference? subjectReference;
 
   /// [mustSupport] Indicates that specific elements of the type are referenced
@@ -1410,7 +1243,6 @@ class _$_DataRequirement extends _DataRequirement {
   /// indexers, and .resolve() (see the [Simple FHIRPath
   ///  Profile](fhirpath.html#simple) for full details).
   @override
-  @HiveField(7)
   List<String>? get mustSupport {
     final value = _mustSupport;
     if (value == null) return null;
@@ -1424,7 +1256,6 @@ class _$_DataRequirement extends _DataRequirement {
 
   /// [mustSupportElement] Extensions for mustSupport
   @override
-  @HiveField(8)
   @JsonKey(name: '_mustSupport')
   List<Element?>? get mustSupportElement {
     final value = _mustSupportElement;
@@ -1435,10 +1266,17 @@ class _$_DataRequirement extends _DataRequirement {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [codeFilter] Code filters specify additional constraints on the data,
+  /// specifying the value set of interest for a particular element of the data.
+  /// Each code filter defines an additional constraint on the data, i.e. code
+  ///  filters are AND'ed, not OR'ed.
   final List<DataRequirementCodeFilter>? _codeFilter;
+
+  /// [codeFilter] Code filters specify additional constraints on the data,
+  /// specifying the value set of interest for a particular element of the data.
+  /// Each code filter defines an additional constraint on the data, i.e. code
+  ///  filters are AND'ed, not OR'ed.
   @override
-  @HiveField(9)
-  @HiveField(10)
   List<DataRequirementCodeFilter>? get codeFilter {
     final value = _codeFilter;
     if (value == null) return null;
@@ -1458,7 +1296,6 @@ class _$_DataRequirement extends _DataRequirement {
   /// specifies an additional constraint on the data, i.e. date filters are
   ///  AND'ed, not OR'ed.
   @override
-  @HiveField(11)
   List<DataRequirementDateFilter>? get dateFilter {
     final value = _dateFilter;
     if (value == null) return null;
@@ -1470,12 +1307,10 @@ class _$_DataRequirement extends _DataRequirement {
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
   @override
-  @HiveField(12)
   final PositiveInt? limit;
 
   /// [limitElement] Extensions for limit
   @override
-  @HiveField(13)
   @JsonKey(name: '_limit')
   final Element? limitElement;
 
@@ -1484,7 +1319,6 @@ class _$_DataRequirement extends _DataRequirement {
 
   /// [sort] Specifies the order of the results to be returned.
   @override
-  @HiveField(14)
   List<DataRequirementSort>? get sort {
     final value = _sort;
     if (value == null) return null;
@@ -1563,39 +1397,20 @@ class _$_DataRequirement extends _DataRequirement {
 
 abstract class _DataRequirement extends DataRequirement {
   factory _DataRequirement(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final Code? type,
-      @HiveField(3)
-      @JsonKey(name: '_type')
-          final Element? typeElement,
-      @HiveField(4)
-          final List<Canonical>? profile,
-      @HiveField(5)
-          final CodeableConcept? subjectCodeableConcept,
-      @HiveField(6)
-          final Reference? subjectReference,
-      @HiveField(7)
-          final List<String>? mustSupport,
-      @HiveField(8)
-      @JsonKey(name: '_mustSupport')
-          final List<Element?>? mustSupportElement,
-      @HiveField(9)
-      @HiveField(10)
-          final List<DataRequirementCodeFilter>? codeFilter,
-      @HiveField(11)
-          final List<DataRequirementDateFilter>? dateFilter,
-      @HiveField(12)
-          final PositiveInt? limit,
-      @HiveField(13)
-      @JsonKey(name: '_limit')
-          final Element? limitElement,
-      @HiveField(14)
-          final List<DataRequirementSort>? sort}) = _$_DataRequirement;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final List<Canonical>? profile,
+      final CodeableConcept? subjectCodeableConcept,
+      final Reference? subjectReference,
+      final List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
+      final List<DataRequirementCodeFilter>? codeFilter,
+      final List<DataRequirementDateFilter>? dateFilter,
+      final PositiveInt? limit,
+      @JsonKey(name: '_limit') final Element? limitElement,
+      final List<DataRequirementSort>? sort}) = _$_DataRequirement;
   _DataRequirement._() : super._();
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
@@ -1605,7 +1420,6 @@ abstract class _DataRequirement extends DataRequirement {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -1615,7 +1429,6 @@ abstract class _DataRequirement extends DataRequirement {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -1623,31 +1436,26 @@ abstract class _DataRequirement extends DataRequirement {
   /// [type] The type of the required data, specified as the type name of a
   /// resource. For profiles, this value is set to the type of the base resource
   ///  of the profile.
-  @HiveField(2)
   Code? get type;
   @override
 
   /// [typeElement] Extensions for type
-  @HiveField(3)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
 
   /// [profile] The profile of the required data, specified as the uri of the
   ///  profile definition.
-  @HiveField(4)
   List<Canonical>? get profile;
   @override
 
   /// [subjectCodeableConcept] The intended subjects of the data requirement.
   ///  If this element is not provided, a Patient subject is assumed.
-  @HiveField(5)
   CodeableConcept? get subjectCodeableConcept;
   @override
 
   /// [subjectReference] The intended subjects of the data requirement. If this
   ///  element is not provided, a Patient subject is assumed.
-  @HiveField(6)
   Reference? get subjectReference;
   @override
 
@@ -1660,17 +1468,18 @@ abstract class _DataRequirement extends DataRequirement {
   /// the DataRequirement. The path SHALL consist only of identifiers, constant
   /// indexers, and .resolve() (see the [Simple FHIRPath
   ///  Profile](fhirpath.html#simple) for full details).
-  @HiveField(7)
   List<String>? get mustSupport;
   @override
 
   /// [mustSupportElement] Extensions for mustSupport
-  @HiveField(8)
   @JsonKey(name: '_mustSupport')
   List<Element?>? get mustSupportElement;
   @override
-  @HiveField(9)
-  @HiveField(10)
+
+  /// [codeFilter] Code filters specify additional constraints on the data,
+  /// specifying the value set of interest for a particular element of the data.
+  /// Each code filter defines an additional constraint on the data, i.e. code
+  ///  filters are AND'ed, not OR'ed.
   List<DataRequirementCodeFilter>? get codeFilter;
   @override
 
@@ -1678,24 +1487,20 @@ abstract class _DataRequirement extends DataRequirement {
   /// terms of the applicable date range for specific elements. Each date filter
   /// specifies an additional constraint on the data, i.e. date filters are
   ///  AND'ed, not OR'ed.
-  @HiveField(11)
   List<DataRequirementDateFilter>? get dateFilter;
   @override
 
   /// [limit] Specifies a maximum number of results that are required (uses the
   ///  _count search parameter).
-  @HiveField(12)
   PositiveInt? get limit;
   @override
 
   /// [limitElement] Extensions for limit
-  @HiveField(13)
   @JsonKey(name: '_limit')
   Element? get limitElement;
   @override
 
   /// [sort] Specifies the order of the results to be returned.
-  @HiveField(14)
   List<DataRequirementSort>? get sort;
   @override
   @JsonKey(ignore: true)
@@ -1712,7 +1517,6 @@ DataRequirementCodeFilter _$DataRequirementCodeFilterFromJson(
 mixin _$DataRequirementCodeFilter {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -1721,7 +1525,6 @@ mixin _$DataRequirementCodeFilter {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -1738,28 +1541,29 @@ mixin _$DataRequirementCodeFilter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [path] The code-valued attribute of the filter. The specified path SHALL
-  @HiveField(3)
-  @HiveField(4)
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type code, Coding, or CodeableConcept.
   String? get path => throw _privateConstructorUsedError;
 
   /// [pathElement] Extensions for path
-  @HiveField(5)
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
 
   /// [searchParam] A token parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type code, Coding, or CodeableConcept.
-  @HiveField(6)
   String? get searchParam => throw _privateConstructorUsedError;
 
   /// [searchParamElement] Extensions for searchParam
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   Element? get searchParamElement => throw _privateConstructorUsedError;
 
@@ -1767,7 +1571,6 @@ mixin _$DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  @HiveField(8)
   Canonical? get valueSet => throw _privateConstructorUsedError;
 
   /// [code] The codes for the code filter. If values are given, the filter
@@ -1775,7 +1578,6 @@ mixin _$DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-  @HiveField(9)
   List<Coding>? get code => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1791,15 +1593,15 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       _$DataRequirementCodeFilterCopyWithImpl<$Res, DataRequirementCodeFilter>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) String? path,
-      @HiveField(5) @JsonKey(name: '_path') Element? pathElement,
-      @HiveField(6) String? searchParam,
-      @HiveField(7) @JsonKey(name: '_searchParam') Element? searchParamElement,
-      @HiveField(8) Canonical? valueSet,
-      @HiveField(9) List<Coding>? code});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? searchParam,
+      @JsonKey(name: '_searchParam') Element? searchParamElement,
+      Canonical? valueSet,
+      List<Coding>? code});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get searchParamElement;
@@ -1904,15 +1706,15 @@ abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) List<FhirExtension>? modifierExtension,
-      @HiveField(3) @HiveField(4) String? path,
-      @HiveField(5) @JsonKey(name: '_path') Element? pathElement,
-      @HiveField(6) String? searchParam,
-      @HiveField(7) @JsonKey(name: '_searchParam') Element? searchParamElement,
-      @HiveField(8) Canonical? valueSet,
-      @HiveField(9) List<Coding>? code});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? searchParam,
+      @JsonKey(name: '_searchParam') Element? searchParamElement,
+      Canonical? valueSet,
+      List<Coding>? code});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -1986,31 +1788,17 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 3)
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   _$_DataRequirementCodeFilter(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          this.path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          this.pathElement,
-      @HiveField(6)
-          this.searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          this.searchParamElement,
-      @HiveField(8)
-          this.valueSet,
-      @HiveField(9)
-          final List<Coding>? code})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.path,
+      @JsonKey(name: '_path') this.pathElement,
+      this.searchParam,
+      @JsonKey(name: '_searchParam') this.searchParamElement,
+      this.valueSet,
+      final List<Coding>? code})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _code = code,
@@ -2022,7 +1810,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2040,7 +1827,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -2079,7 +1865,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -2090,14 +1875,18 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   }
 
   /// [path] The code-valued attribute of the filter. The specified path SHALL
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type code, Coding, or CodeableConcept.
   @override
-  @HiveField(3)
-  @HiveField(4)
   final String? path;
 
   /// [pathElement] Extensions for path
   @override
-  @HiveField(5)
   @JsonKey(name: '_path')
   final Element? pathElement;
 
@@ -2105,12 +1894,10 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type code, Coding, or CodeableConcept.
   @override
-  @HiveField(6)
   final String? searchParam;
 
   /// [searchParamElement] Extensions for searchParam
   @override
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   final Element? searchParamElement;
 
@@ -2119,7 +1906,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
   @override
-  @HiveField(8)
   final Canonical? valueSet;
 
   /// [code] The codes for the code filter. If values are given, the filter
@@ -2135,7 +1921,6 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
   @override
-  @HiveField(9)
   List<Coding>? get code {
     final value = _code;
     if (value == null) return null;
@@ -2202,28 +1987,15 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 
 abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   factory _DataRequirementCodeFilter(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          final String? path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          final Element? pathElement,
-      @HiveField(6)
-          final String? searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          final Element? searchParamElement,
-      @HiveField(8)
-          final Canonical? valueSet,
-      @HiveField(9)
-          final List<Coding>? code}) = _$_DataRequirementCodeFilter;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? path,
+      @JsonKey(name: '_path') final Element? pathElement,
+      final String? searchParam,
+      @JsonKey(name: '_searchParam') final Element? searchParamElement,
+      final Canonical? valueSet,
+      final List<Coding>? code}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
@@ -2233,7 +2005,6 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -2243,7 +2014,6 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -2261,18 +2031,21 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [path] The code-valued attribute of the filter. The specified path SHALL
-  @HiveField(3)
-  @HiveField(4)
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type code, Coding, or CodeableConcept.
   String? get path;
   @override
 
   /// [pathElement] Extensions for path
-  @HiveField(5)
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
@@ -2280,12 +2053,10 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// [searchParam] A token parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type code, Coding, or CodeableConcept.
-  @HiveField(6)
   String? get searchParam;
   @override
 
   /// [searchParamElement] Extensions for searchParam
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   Element? get searchParamElement;
   @override
@@ -2294,7 +2065,6 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// elements are additive. If valueSet is specified, the filter will return
   /// only those data items for which the value of the code-valued element
   ///  specified in the path is a member of the specified valueset.
-  @HiveField(8)
   Canonical? get valueSet;
   @override
 
@@ -2303,7 +2073,6 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-  @HiveField(9)
   List<Coding>? get code;
   @override
   @JsonKey(ignore: true)
@@ -2320,7 +2089,6 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
 mixin _$DataRequirementDateFilter {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2329,7 +2097,6 @@ mixin _$DataRequirementDateFilter {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -2346,28 +2113,29 @@ mixin _$DataRequirementDateFilter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [path] The date-valued attribute of the filter. The specified path SHALL
-  @HiveField(3)
-  @HiveField(4)
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type date, dateTime, Period, Schedule, or Timing.
   String? get path => throw _privateConstructorUsedError;
 
   /// [pathElement] Extensions for path
-  @HiveField(5)
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
 
   /// [searchParam] A date parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type date, dateTime, Period, Schedule, or Timing.
-  @HiveField(6)
   String? get searchParam => throw _privateConstructorUsedError;
 
   /// [searchParamElement] Extensions for searchParam
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   Element? get searchParamElement => throw _privateConstructorUsedError;
 
@@ -2377,11 +2145,9 @@ mixin _$DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  @HiveField(8)
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
 
   /// [valueDateTimeElement] Extensions for valueDateTime
-  @HiveField(9)
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
 
@@ -2391,7 +2157,6 @@ mixin _$DataRequirementDateFilter {
   /// specified, the filter will return only those data items that are equal to
   /// the specified dateTime. If a Duration is specified, the filter will return
   ///  only those data items that fall within Duration before now.
-  @HiveField(10)
   Period? get valuePeriod => throw _privateConstructorUsedError;
 
   /// [valueDuration] The value of the filter. If period is specified, the
@@ -2400,7 +2165,6 @@ mixin _$DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  @HiveField(11)
   FhirDuration? get valueDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2416,33 +2180,17 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       _$DataRequirementDateFilterCopyWithImpl<$Res, DataRequirementDateFilter>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          String? path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @HiveField(6)
-          String? searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          Element? searchParamElement,
-      @HiveField(8)
-          FhirDateTime? valueDateTime,
-      @HiveField(9)
-      @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
-      @HiveField(10)
-          Period? valuePeriod,
-      @HiveField(11)
-          FhirDuration? valueDuration});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? searchParam,
+      @JsonKey(name: '_searchParam') Element? searchParamElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get searchParamElement;
@@ -2596,33 +2344,17 @@ abstract class _$$_DataRequirementDateFilterCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          String? path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @HiveField(6)
-          String? searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          Element? searchParamElement,
-      @HiveField(8)
-          FhirDateTime? valueDateTime,
-      @HiveField(9)
-      @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
-      @HiveField(10)
-          Period? valuePeriod,
-      @HiveField(11)
-          FhirDuration? valueDuration});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? path,
+      @JsonKey(name: '_path') Element? pathElement,
+      String? searchParam,
+      @JsonKey(name: '_searchParam') Element? searchParamElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Period? valuePeriod,
+      FhirDuration? valueDuration});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -2712,36 +2444,19 @@ class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 4)
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   _$_DataRequirementDateFilter(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          this.path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          this.pathElement,
-      @HiveField(6)
-          this.searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          this.searchParamElement,
-      @HiveField(8)
-          this.valueDateTime,
-      @HiveField(9)
-      @JsonKey(name: '_valueDateTime')
-          this.valueDateTimeElement,
-      @HiveField(10)
-          this.valuePeriod,
-      @HiveField(11)
-          this.valueDuration})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.path,
+      @JsonKey(name: '_path') this.pathElement,
+      this.searchParam,
+      @JsonKey(name: '_searchParam') this.searchParamElement,
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valuePeriod,
+      this.valueDuration})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -2752,7 +2467,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2770,7 +2484,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -2809,7 +2522,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -2820,14 +2532,18 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   }
 
   /// [path] The date-valued attribute of the filter. The specified path SHALL
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type date, dateTime, Period, Schedule, or Timing.
   @override
-  @HiveField(3)
-  @HiveField(4)
   final String? path;
 
   /// [pathElement] Extensions for path
   @override
-  @HiveField(5)
   @JsonKey(name: '_path')
   final Element? pathElement;
 
@@ -2835,12 +2551,10 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type date, dateTime, Period, Schedule, or Timing.
   @override
-  @HiveField(6)
   final String? searchParam;
 
   /// [searchParamElement] Extensions for searchParam
   @override
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   final Element? searchParamElement;
 
@@ -2851,12 +2565,10 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
   @override
-  @HiveField(8)
   final FhirDateTime? valueDateTime;
 
   /// [valueDateTimeElement] Extensions for valueDateTime
   @override
-  @HiveField(9)
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
 
@@ -2867,7 +2579,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// the specified dateTime. If a Duration is specified, the filter will return
   ///  only those data items that fall within Duration before now.
   @override
-  @HiveField(10)
   final Period? valuePeriod;
 
   /// [valueDuration] The value of the filter. If period is specified, the
@@ -2877,7 +2588,6 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
   @override
-  @HiveField(11)
   final FhirDuration? valueDuration;
 
   @override
@@ -2945,33 +2655,17 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 
 abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   factory _DataRequirementDateFilter(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-      @HiveField(4)
-          final String? path,
-      @HiveField(5)
-      @JsonKey(name: '_path')
-          final Element? pathElement,
-      @HiveField(6)
-          final String? searchParam,
-      @HiveField(7)
-      @JsonKey(name: '_searchParam')
-          final Element? searchParamElement,
-      @HiveField(8)
-          final FhirDateTime? valueDateTime,
-      @HiveField(9)
-      @JsonKey(name: '_valueDateTime')
-          final Element? valueDateTimeElement,
-      @HiveField(10)
-          final Period? valuePeriod,
-      @HiveField(11)
-          final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? path,
+      @JsonKey(name: '_path') final Element? pathElement,
+      final String? searchParam,
+      @JsonKey(name: '_searchParam') final Element? searchParamElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+      final Period? valuePeriod,
+      final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
   _DataRequirementDateFilter._() : super._();
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
@@ -2981,7 +2675,6 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -2991,7 +2684,6 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
@@ -3009,18 +2701,21 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [path] The date-valued attribute of the filter. The specified path SHALL
-  @HiveField(3)
-  @HiveField(4)
+  /// be a FHIRPath resolveable on the specified type of the DataRequirement,
+  /// and SHALL consist only of identifiers, constant indexers, and .resolve().
+  /// The path is allowed to contain qualifiers (.) to traverse sub-elements, as
+  /// well as indexers ([x]) to traverse multiple-cardinality sub-elements (see
+  /// the [Simple FHIRPath Profile](fhirpath.html#simple) for full details).
+  /// Note that the index must be an integer constant. The path must resolve to
+  ///  an element of type date, dateTime, Period, Schedule, or Timing.
   String? get path;
   @override
 
   /// [pathElement] Extensions for path
-  @HiveField(5)
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
@@ -3028,12 +2723,10 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// [searchParam] A date parameter that refers to a search parameter defined
   /// on the specified type of the DataRequirement, and which searches on
   ///  elements of type date, dateTime, Period, Schedule, or Timing.
-  @HiveField(6)
   String? get searchParam;
   @override
 
   /// [searchParamElement] Extensions for searchParam
-  @HiveField(7)
   @JsonKey(name: '_searchParam')
   Element? get searchParamElement;
   @override
@@ -3044,12 +2737,10 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  @HiveField(8)
   FhirDateTime? get valueDateTime;
   @override
 
   /// [valueDateTimeElement] Extensions for valueDateTime
-  @HiveField(9)
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement;
   @override
@@ -3060,7 +2751,6 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// specified, the filter will return only those data items that are equal to
   /// the specified dateTime. If a Duration is specified, the filter will return
   ///  only those data items that fall within Duration before now.
-  @HiveField(10)
   Period? get valuePeriod;
   @override
 
@@ -3070,7 +2760,6 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  @HiveField(11)
   FhirDuration? get valueDuration;
   @override
   @JsonKey(ignore: true)
@@ -3086,7 +2775,6 @@ DataRequirementSort _$DataRequirementSortFromJson(Map<String, dynamic> json) {
 mixin _$DataRequirementSort {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3096,7 +2784,6 @@ mixin _$DataRequirementSort {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -3112,7 +2799,6 @@ mixin _$DataRequirementSort {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -3121,21 +2807,17 @@ mixin _$DataRequirementSort {
   /// qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to
   /// traverse multiple-cardinality sub-elements. Note that the index must be an
   ///  integer constant.
-  @HiveField(3)
   String? get path => throw _privateConstructorUsedError;
 
   /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
-  @HiveField(4)
   Element? get pathElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-  @HiveField(5)
   DataRequirementSortDirection? get direction =>
       throw _privateConstructorUsedError;
 
   /// [directionElement] Extensions for direction
   @JsonKey(name: '_direction')
-  @HiveField(6)
   Element? get directionElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3151,23 +2833,16 @@ abstract class $DataRequirementSortCopyWith<$Res> {
       _$DataRequirementSortCopyWithImpl<$Res, DataRequirementSort>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          String? path,
+      List<FhirExtension>? modifierExtension,
+      String? path,
       @JsonKey(name: '_path')
-      @HiveField(4)
           Element? pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-      @HiveField(5)
           DataRequirementSortDirection? direction,
       @JsonKey(name: '_direction')
-      @HiveField(6)
           Element? directionElement});
 
   $ElementCopyWith<$Res>? get pathElement;
@@ -3261,23 +2936,16 @@ abstract class _$$_DataRequirementSortCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
-      @HiveField(2)
-          List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          String? path,
+      List<FhirExtension>? modifierExtension,
+      String? path,
       @JsonKey(name: '_path')
-      @HiveField(4)
           Element? pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-      @HiveField(5)
           DataRequirementSortDirection? direction,
       @JsonKey(name: '_direction')
-      @HiveField(6)
           Element? directionElement});
 
   @override
@@ -3340,26 +3008,18 @@ class __$$_DataRequirementSortCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 5)
 class _$_DataRequirementSort extends _DataRequirementSort {
   _$_DataRequirementSort(
-      {@HiveField(0)
-          this.id,
+      {this.id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          this.path,
+      final List<FhirExtension>? modifierExtension,
+      this.path,
       @JsonKey(name: '_path')
-      @HiveField(4)
           this.pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-      @HiveField(5)
           this.direction,
       @JsonKey(name: '_direction')
-      @HiveField(6)
           this.directionElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -3371,7 +3031,6 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3390,7 +3049,6 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -3428,7 +3086,6 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3444,23 +3101,19 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   /// traverse multiple-cardinality sub-elements. Note that the index must be an
   ///  integer constant.
   @override
-  @HiveField(3)
   final String? path;
 
   /// [pathElement] Extensions for path
   @override
   @JsonKey(name: '_path')
-  @HiveField(4)
   final Element? pathElement;
   @override
   @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-  @HiveField(5)
   final DataRequirementSortDirection? direction;
 
   /// [directionElement] Extensions for direction
   @override
   @JsonKey(name: '_direction')
-  @HiveField(6)
   final Element? directionElement;
 
   @override
@@ -3516,23 +3169,16 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 
 abstract class _DataRequirementSort extends DataRequirementSort {
   factory _DataRequirementSort(
-      {@HiveField(0)
-          final String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final List<FhirExtension>? modifierExtension,
-      @HiveField(3)
-          final String? path,
+      final List<FhirExtension>? modifierExtension,
+      final String? path,
       @JsonKey(name: '_path')
-      @HiveField(4)
           final Element? pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-      @HiveField(5)
           final DataRequirementSortDirection? direction,
       @JsonKey(name: '_direction')
-      @HiveField(6)
           final Element? directionElement}) = _$_DataRequirementSort;
   _DataRequirementSort._() : super._();
 
@@ -3543,7 +3189,6 @@ abstract class _DataRequirementSort extends DataRequirementSort {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -3554,7 +3199,6 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_;
   @override
 
@@ -3571,7 +3215,6 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
-  @HiveField(2)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -3580,23 +3223,19 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   /// qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to
   /// traverse multiple-cardinality sub-elements. Note that the index must be an
   ///  integer constant.
-  @HiveField(3)
   String? get path;
   @override
 
   /// [pathElement] Extensions for path
   @JsonKey(name: '_path')
-  @HiveField(4)
   Element? get pathElement;
   @override
   @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-  @HiveField(5)
   DataRequirementSortDirection? get direction;
   @override
 
   /// [directionElement] Extensions for direction
   @JsonKey(name: '_direction')
-  @HiveField(6)
   Element? get directionElement;
   @override
   @JsonKey(ignore: true)
@@ -3612,7 +3251,6 @@ ParameterDefinition _$ParameterDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ParameterDefinition {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3621,71 +3259,57 @@ mixin _$ParameterDefinition {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  @HiveField(2)
   Code? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
-  @HiveField(3)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [use] Whether the parameter is input or output for the module.
-  @HiveField(4)
   Code? get use => throw _privateConstructorUsedError;
 
   /// [useElement] Extensions for use
-  @HiveField(5)
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  @HiveField(6)
   Integer? get min => throw _privateConstructorUsedError;
 
   /// [minElement] Extensions for min
-  @HiveField(7)
   @JsonKey(name: '_min')
   Element? get minElement => throw _privateConstructorUsedError;
 
   /// [max] The maximum number of times this element is permitted to appear in
   ///  the request or response.
-  @HiveField(8)
   String? get max => throw _privateConstructorUsedError;
 
   /// [maxElement] Extensions for max
-  @HiveField(9)
   @JsonKey(name: '_max')
   Element? get maxElement => throw _privateConstructorUsedError;
 
   /// [documentation] A brief discussion of what the parameter is for and how
   ///  it is used by the module.
-  @HiveField(10)
   String? get documentation => throw _privateConstructorUsedError;
 
   /// [documentationElement] Extensions for documentation
-  @HiveField(11)
   @JsonKey(name: '_documentation')
   Element? get documentationElement => throw _privateConstructorUsedError;
 
   /// [type] The type of the parameter.
-  @HiveField(12)
   Code? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
-  @HiveField(13)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  @HiveField(14)
   Canonical? get profile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3701,43 +3325,21 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       _$ParameterDefinitionCopyWithImpl<$Res, ParameterDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          Code? name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @HiveField(4)
-          Code? use,
-      @HiveField(5)
-      @JsonKey(name: '_use')
-          Element? useElement,
-      @HiveField(6)
-          Integer? min,
-      @HiveField(7)
-      @JsonKey(name: '_min')
-          Element? minElement,
-      @HiveField(8)
-          String? max,
-      @HiveField(9)
-      @JsonKey(name: '_max')
-          Element? maxElement,
-      @HiveField(10)
-          String? documentation,
-      @HiveField(11)
-      @JsonKey(name: '_documentation')
-          Element? documentationElement,
-      @HiveField(12)
-          Code? type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(14)
-          Canonical? profile});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Code? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Code? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Integer? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Canonical? profile});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get useElement;
@@ -3922,43 +3524,21 @@ abstract class _$$_ParameterDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @HiveField(2)
-          Code? name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @HiveField(4)
-          Code? use,
-      @HiveField(5)
-      @JsonKey(name: '_use')
-          Element? useElement,
-      @HiveField(6)
-          Integer? min,
-      @HiveField(7)
-      @JsonKey(name: '_min')
-          Element? minElement,
-      @HiveField(8)
-          String? max,
-      @HiveField(9)
-      @JsonKey(name: '_max')
-          Element? maxElement,
-      @HiveField(10)
-          String? documentation,
-      @HiveField(11)
-      @JsonKey(name: '_documentation')
-          Element? documentationElement,
-      @HiveField(12)
-          Code? type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @HiveField(14)
-          Canonical? profile});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Code? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Code? use,
+      @JsonKey(name: '_use') Element? useElement,
+      Integer? min,
+      @JsonKey(name: '_min') Element? minElement,
+      String? max,
+      @JsonKey(name: '_max') Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation') Element? documentationElement,
+      Code? type,
+      @JsonKey(name: '_type') Element? typeElement,
+      Canonical? profile});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -4068,46 +3648,23 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 6)
 class _$_ParameterDefinition extends _ParameterDefinition {
   _$_ParameterDefinition(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          this.name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @HiveField(4)
-          this.use,
-      @HiveField(5)
-      @JsonKey(name: '_use')
-          this.useElement,
-      @HiveField(6)
-          this.min,
-      @HiveField(7)
-      @JsonKey(name: '_min')
-          this.minElement,
-      @HiveField(8)
-          this.max,
-      @HiveField(9)
-      @JsonKey(name: '_max')
-          this.maxElement,
-      @HiveField(10)
-          this.documentation,
-      @HiveField(11)
-      @JsonKey(name: '_documentation')
-          this.documentationElement,
-      @HiveField(12)
-          this.type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          this.typeElement,
-      @HiveField(14)
-          this.profile})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.use,
+      @JsonKey(name: '_use') this.useElement,
+      this.min,
+      @JsonKey(name: '_min') this.minElement,
+      this.max,
+      @JsonKey(name: '_max') this.maxElement,
+      this.documentation,
+      @JsonKey(name: '_documentation') this.documentationElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      this.profile})
       : _extension_ = extension_,
         super._();
 
@@ -4117,7 +3674,6 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4135,7 +3691,6 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -4148,77 +3703,64 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
   @override
-  @HiveField(2)
   final Code? name;
 
   /// [nameElement] Extensions for name
   @override
-  @HiveField(3)
   @JsonKey(name: '_name')
   final Element? nameElement;
 
   /// [use] Whether the parameter is input or output for the module.
   @override
-  @HiveField(4)
   final Code? use;
 
   /// [useElement] Extensions for use
   @override
-  @HiveField(5)
   @JsonKey(name: '_use')
   final Element? useElement;
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
   @override
-  @HiveField(6)
   final Integer? min;
 
   /// [minElement] Extensions for min
   @override
-  @HiveField(7)
   @JsonKey(name: '_min')
   final Element? minElement;
 
   /// [max] The maximum number of times this element is permitted to appear in
   ///  the request or response.
   @override
-  @HiveField(8)
   final String? max;
 
   /// [maxElement] Extensions for max
   @override
-  @HiveField(9)
   @JsonKey(name: '_max')
   final Element? maxElement;
 
   /// [documentation] A brief discussion of what the parameter is for and how
   ///  it is used by the module.
   @override
-  @HiveField(10)
   final String? documentation;
 
   /// [documentationElement] Extensions for documentation
   @override
-  @HiveField(11)
   @JsonKey(name: '_documentation')
   final Element? documentationElement;
 
   /// [type] The type of the parameter.
   @override
-  @HiveField(12)
   final Code? type;
 
   /// [typeElement] Extensions for type
   @override
-  @HiveField(13)
   @JsonKey(name: '_type')
   final Element? typeElement;
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
   @override
-  @HiveField(14)
   final Canonical? profile;
 
   @override
@@ -4293,43 +3835,21 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
 abstract class _ParameterDefinition extends ParameterDefinition {
   factory _ParameterDefinition(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final Code? name,
-      @HiveField(3)
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      @HiveField(4)
-          final Code? use,
-      @HiveField(5)
-      @JsonKey(name: '_use')
-          final Element? useElement,
-      @HiveField(6)
-          final Integer? min,
-      @HiveField(7)
-      @JsonKey(name: '_min')
-          final Element? minElement,
-      @HiveField(8)
-          final String? max,
-      @HiveField(9)
-      @JsonKey(name: '_max')
-          final Element? maxElement,
-      @HiveField(10)
-          final String? documentation,
-      @HiveField(11)
-      @JsonKey(name: '_documentation')
-          final Element? documentationElement,
-      @HiveField(12)
-          final Code? type,
-      @HiveField(13)
-      @JsonKey(name: '_type')
-          final Element? typeElement,
-      @HiveField(14)
-          final Canonical? profile}) = _$_ParameterDefinition;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final Code? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final Code? use,
+      @JsonKey(name: '_use') final Element? useElement,
+      final Integer? min,
+      @JsonKey(name: '_min') final Element? minElement,
+      final String? max,
+      @JsonKey(name: '_max') final Element? maxElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation') final Element? documentationElement,
+      final Code? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final Canonical? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
@@ -4339,7 +3859,6 @@ abstract class _ParameterDefinition extends ParameterDefinition {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -4349,84 +3868,70 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [name] The name of the parameter used to allow access to the value of the
   ///  parameter in evaluation contexts.
-  @HiveField(2)
   Code? get name;
   @override
 
   /// [nameElement] Extensions for name
-  @HiveField(3)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
 
   /// [use] Whether the parameter is input or output for the module.
-  @HiveField(4)
   Code? get use;
   @override
 
   /// [useElement] Extensions for use
-  @HiveField(5)
   @JsonKey(name: '_use')
   Element? get useElement;
   @override
 
   /// [min] The minimum number of times this parameter SHALL appear in the
   ///  request or response.
-  @HiveField(6)
   Integer? get min;
   @override
 
   /// [minElement] Extensions for min
-  @HiveField(7)
   @JsonKey(name: '_min')
   Element? get minElement;
   @override
 
   /// [max] The maximum number of times this element is permitted to appear in
   ///  the request or response.
-  @HiveField(8)
   String? get max;
   @override
 
   /// [maxElement] Extensions for max
-  @HiveField(9)
   @JsonKey(name: '_max')
   Element? get maxElement;
   @override
 
   /// [documentation] A brief discussion of what the parameter is for and how
   ///  it is used by the module.
-  @HiveField(10)
   String? get documentation;
   @override
 
   /// [documentationElement] Extensions for documentation
-  @HiveField(11)
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
   @override
 
   /// [type] The type of the parameter.
-  @HiveField(12)
   Code? get type;
   @override
 
   /// [typeElement] Extensions for type
-  @HiveField(13)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
 
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  @HiveField(14)
   Canonical? get profile;
   @override
   @JsonKey(ignore: true)
@@ -4442,7 +3947,6 @@ RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
 mixin _$RelatedArtifact {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4452,63 +3956,52 @@ mixin _$RelatedArtifact {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-  @HiveField(2)
   RelatedArtifactType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(3)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [label] A short label that can be used to reference the citation from
   ///  elsewhere in the containing artifact, such as a footnote index.
-  @HiveField(4)
   String? get label => throw _privateConstructorUsedError;
 
   /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
-  @HiveField(5)
   Element? get labelElement => throw _privateConstructorUsedError;
 
   /// [display] A brief description of the document or knowledge resource being
   ///  referenced, suitable for display to a consumer.
-  @HiveField(6)
   String? get display => throw _privateConstructorUsedError;
 
   /// [displayElement] Extensions for display
   @JsonKey(name: '_display')
-  @HiveField(7)
   Element? get displayElement => throw _privateConstructorUsedError;
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  @HiveField(8)
   Markdown? get citation => throw _privateConstructorUsedError;
 
   /// [citationElement] Extensions for citation
   @JsonKey(name: '_citation')
-  @HiveField(9)
   Element? get citationElement => throw _privateConstructorUsedError;
 
   /// [url] A url for the artifact that can be followed to access the actual
   ///  content.
-  @HiveField(10)
   FhirUrl? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(11)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [document] The document being referenced, represented as an attachment.
   ///  This is exclusive with the resource element.
-  @HiveField(12)
   Attachment? get document => throw _privateConstructorUsedError;
-  @HiveField(13)
-  @HiveField(14)
+
+  /// [resource] The related resource, such as a library, value set, profile,
+  ///  or other knowledge resource.
   Canonical? get resource => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4524,42 +4017,27 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       _$RelatedArtifactCopyWithImpl<$Res, RelatedArtifact>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-      @HiveField(2)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           Element? typeElement,
-      @HiveField(4)
-          String? label,
+      String? label,
       @JsonKey(name: '_label')
-      @HiveField(5)
           Element? labelElement,
-      @HiveField(6)
-          String? display,
+      String? display,
       @JsonKey(name: '_display')
-      @HiveField(7)
           Element? displayElement,
-      @HiveField(8)
-          Markdown? citation,
+      Markdown? citation,
       @JsonKey(name: '_citation')
-      @HiveField(9)
           Element? citationElement,
-      @HiveField(10)
-          FhirUrl? url,
+      FhirUrl? url,
       @JsonKey(name: '_url')
-      @HiveField(11)
           Element? urlElement,
-      @HiveField(12)
-          Attachment? document,
-      @HiveField(13)
-      @HiveField(14)
-          Canonical? resource});
+      Attachment? document,
+      Canonical? resource});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get labelElement;
@@ -4739,42 +4217,27 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-      @HiveField(2)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           Element? typeElement,
-      @HiveField(4)
-          String? label,
+      String? label,
       @JsonKey(name: '_label')
-      @HiveField(5)
           Element? labelElement,
-      @HiveField(6)
-          String? display,
+      String? display,
       @JsonKey(name: '_display')
-      @HiveField(7)
           Element? displayElement,
-      @HiveField(8)
-          Markdown? citation,
+      Markdown? citation,
       @JsonKey(name: '_citation')
-      @HiveField(9)
           Element? citationElement,
-      @HiveField(10)
-          FhirUrl? url,
+      FhirUrl? url,
       @JsonKey(name: '_url')
-      @HiveField(11)
           Element? urlElement,
-      @HiveField(12)
-          Attachment? document,
-      @HiveField(13)
-      @HiveField(14)
-          Canonical? resource});
+      Attachment? document,
+      Canonical? resource});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -4879,45 +4342,22 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 7)
 class _$_RelatedArtifact extends _RelatedArtifact {
   _$_RelatedArtifact(
-      {@HiveField(0)
-          this.id,
-      @JsonKey(name: 'extension')
-      @HiveField(1)
-          final List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-      @HiveField(2)
-          this.type,
-      @JsonKey(name: '_type')
-      @HiveField(3)
-          this.typeElement,
-      @HiveField(4)
-          this.label,
-      @JsonKey(name: '_label')
-      @HiveField(5)
-          this.labelElement,
-      @HiveField(6)
-          this.display,
-      @JsonKey(name: '_display')
-      @HiveField(7)
-          this.displayElement,
-      @HiveField(8)
-          this.citation,
-      @JsonKey(name: '_citation')
-      @HiveField(9)
-          this.citationElement,
-      @HiveField(10)
-          this.url,
-      @JsonKey(name: '_url')
-      @HiveField(11)
-          this.urlElement,
-      @HiveField(12)
-          this.document,
-      @HiveField(13)
-      @HiveField(14)
-          this.resource})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      this.label,
+      @JsonKey(name: '_label') this.labelElement,
+      this.display,
+      @JsonKey(name: '_display') this.displayElement,
+      this.citation,
+      @JsonKey(name: '_citation') this.citationElement,
+      this.url,
+      @JsonKey(name: '_url') this.urlElement,
+      this.document,
+      this.resource})
       : _extension_ = extension_,
         super._();
 
@@ -4927,7 +4367,6 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4946,7 +4385,6 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -4957,71 +4395,61 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
   @override
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-  @HiveField(2)
   final RelatedArtifactType? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
-  @HiveField(3)
   final Element? typeElement;
 
   /// [label] A short label that can be used to reference the citation from
   ///  elsewhere in the containing artifact, such as a footnote index.
   @override
-  @HiveField(4)
   final String? label;
 
   /// [labelElement] Extensions for label
   @override
   @JsonKey(name: '_label')
-  @HiveField(5)
   final Element? labelElement;
 
   /// [display] A brief description of the document or knowledge resource being
   ///  referenced, suitable for display to a consumer.
   @override
-  @HiveField(6)
   final String? display;
 
   /// [displayElement] Extensions for display
   @override
   @JsonKey(name: '_display')
-  @HiveField(7)
   final Element? displayElement;
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
   @override
-  @HiveField(8)
   final Markdown? citation;
 
   /// [citationElement] Extensions for citation
   @override
   @JsonKey(name: '_citation')
-  @HiveField(9)
   final Element? citationElement;
 
   /// [url] A url for the artifact that can be followed to access the actual
   ///  content.
   @override
-  @HiveField(10)
   final FhirUrl? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
-  @HiveField(11)
   final Element? urlElement;
 
   /// [document] The document being referenced, represented as an attachment.
   ///  This is exclusive with the resource element.
   @override
-  @HiveField(12)
   final Attachment? document;
+
+  /// [resource] The related resource, such as a library, value set, profile,
+  ///  or other knowledge resource.
   @override
-  @HiveField(13)
-  @HiveField(14)
   final Canonical? resource;
 
   @override
@@ -5094,42 +4522,27 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
 abstract class _RelatedArtifact extends RelatedArtifact {
   factory _RelatedArtifact(
-      {@HiveField(0)
-          final String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-      @HiveField(2)
           final RelatedArtifactType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           final Element? typeElement,
-      @HiveField(4)
-          final String? label,
+      final String? label,
       @JsonKey(name: '_label')
-      @HiveField(5)
           final Element? labelElement,
-      @HiveField(6)
-          final String? display,
+      final String? display,
       @JsonKey(name: '_display')
-      @HiveField(7)
           final Element? displayElement,
-      @HiveField(8)
-          final Markdown? citation,
+      final Markdown? citation,
       @JsonKey(name: '_citation')
-      @HiveField(9)
           final Element? citationElement,
-      @HiveField(10)
-          final FhirUrl? url,
+      final FhirUrl? url,
       @JsonKey(name: '_url')
-      @HiveField(11)
           final Element? urlElement,
-      @HiveField(12)
-          final Attachment? document,
-      @HiveField(13)
-      @HiveField(14)
-          final Canonical? resource}) = _$_RelatedArtifact;
+      final Attachment? document,
+      final Canonical? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
@@ -5139,7 +4552,6 @@ abstract class _RelatedArtifact extends RelatedArtifact {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -5150,75 +4562,64 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-  @HiveField(2)
   RelatedArtifactType? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(3)
   Element? get typeElement;
   @override
 
   /// [label] A short label that can be used to reference the citation from
   ///  elsewhere in the containing artifact, such as a footnote index.
-  @HiveField(4)
   String? get label;
   @override
 
   /// [labelElement] Extensions for label
   @JsonKey(name: '_label')
-  @HiveField(5)
   Element? get labelElement;
   @override
 
   /// [display] A brief description of the document or knowledge resource being
   ///  referenced, suitable for display to a consumer.
-  @HiveField(6)
   String? get display;
   @override
 
   /// [displayElement] Extensions for display
   @JsonKey(name: '_display')
-  @HiveField(7)
   Element? get displayElement;
   @override
 
   /// [citation] A bibliographic citation for the related artifact. This text
   ///  SHOULD be formatted according to an accepted citation format.
-  @HiveField(8)
   Markdown? get citation;
   @override
 
   /// [citationElement] Extensions for citation
   @JsonKey(name: '_citation')
-  @HiveField(9)
   Element? get citationElement;
   @override
 
   /// [url] A url for the artifact that can be followed to access the actual
   ///  content.
-  @HiveField(10)
   FhirUrl? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
-  @HiveField(11)
   Element? get urlElement;
   @override
 
   /// [document] The document being referenced, represented as an attachment.
   ///  This is exclusive with the resource element.
-  @HiveField(12)
   Attachment? get document;
   @override
-  @HiveField(13)
-  @HiveField(14)
+
+  /// [resource] The related resource, such as a library, value set, profile,
+  ///  or other knowledge resource.
   Canonical? get resource;
   @override
   @JsonKey(ignore: true)
@@ -5234,7 +4635,6 @@ TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$TriggerDefinition {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5244,65 +4644,52 @@ mixin _$TriggerDefinition {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-  @HiveField(2)
   TriggerDefinitionType? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(3)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [name] A formal name for the event. This may be an absolute URI that
   /// identifies the event formally (e.g. from a trigger registry), or a simple
   ///  relative URI that identifies the event in a local context.
-  @HiveField(4)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(5)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
-  @HiveField(6)
   Timing? get timingTiming => throw _privateConstructorUsedError;
 
   /// [timingReference] The timing of the event (if this is a periodic
   ///  trigger).
-  @HiveField(7)
   Reference? get timingReference => throw _privateConstructorUsedError;
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  @HiveField(8)
   Date? get timingDate => throw _privateConstructorUsedError;
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
-  @HiveField(9)
   Element? get timingDateElement => throw _privateConstructorUsedError;
 
   /// [timingDateTime] The timing of the event (if this is a periodic trigger).
-  @HiveField(10)
   FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @JsonKey(name: '_timingDateTime')
-  @HiveField(11)
   Element? get timingDateTimeElement => throw _privateConstructorUsedError;
 
   /// [data] The triggering data of the event (if this is a data trigger). If
   /// more than one data is requirement is specified, then all the data
   ///  requirements must be true.
-  @HiveField(12)
   List<DataRequirement>? get data => throw _privateConstructorUsedError;
 
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-  @HiveField(13)
   Expression? get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5318,40 +4705,26 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       _$TriggerDefinitionCopyWithImpl<$Res, TriggerDefinition>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-      @HiveField(2)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           Element? typeElement,
-      @HiveField(4)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           Element? nameElement,
-      @HiveField(6)
-          Timing? timingTiming,
-      @HiveField(7)
-          Reference? timingReference,
-      @HiveField(8)
-          Date? timingDate,
+      Timing? timingTiming,
+      Reference? timingReference,
+      Date? timingDate,
       @JsonKey(name: '_timingDate')
-      @HiveField(9)
           Element? timingDateElement,
-      @HiveField(10)
-          FhirDateTime? timingDateTime,
+      FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
-      @HiveField(11)
           Element? timingDateTimeElement,
-      @HiveField(12)
-          List<DataRequirement>? data,
-      @HiveField(13)
-          Expression? condition});
+      List<DataRequirement>? data,
+      Expression? condition});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -5544,40 +4917,26 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-      @HiveField(2)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           Element? typeElement,
-      @HiveField(4)
-          String? name,
+      String? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           Element? nameElement,
-      @HiveField(6)
-          Timing? timingTiming,
-      @HiveField(7)
-          Reference? timingReference,
-      @HiveField(8)
-          Date? timingDate,
+      Timing? timingTiming,
+      Reference? timingReference,
+      Date? timingDate,
       @JsonKey(name: '_timingDate')
-      @HiveField(9)
           Element? timingDateElement,
-      @HiveField(10)
-          FhirDateTime? timingDateTime,
+      FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
-      @HiveField(11)
           Element? timingDateTimeElement,
-      @HiveField(12)
-          List<DataRequirement>? data,
-      @HiveField(13)
-          Expression? condition});
+      List<DataRequirement>? data,
+      Expression? condition});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -5684,43 +5043,22 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 8)
 class _$_TriggerDefinition extends _TriggerDefinition {
   _$_TriggerDefinition(
-      {@HiveField(0)
-          this.id,
-      @JsonKey(name: 'extension')
-      @HiveField(1)
-          final List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-      @HiveField(2)
-          this.type,
-      @JsonKey(name: '_type')
-      @HiveField(3)
-          this.typeElement,
-      @HiveField(4)
-          this.name,
-      @JsonKey(name: '_name')
-      @HiveField(5)
-          this.nameElement,
-      @HiveField(6)
-          this.timingTiming,
-      @HiveField(7)
-          this.timingReference,
-      @HiveField(8)
-          this.timingDate,
-      @JsonKey(name: '_timingDate')
-      @HiveField(9)
-          this.timingDateElement,
-      @HiveField(10)
-          this.timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-      @HiveField(11)
-          this.timingDateTimeElement,
-      @HiveField(12)
-          final List<DataRequirement>? data,
-      @HiveField(13)
-          this.condition})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.timingTiming,
+      this.timingReference,
+      this.timingDate,
+      @JsonKey(name: '_timingDate') this.timingDateElement,
+      this.timingDateTime,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
+      final List<DataRequirement>? data,
+      this.condition})
       : _extension_ = extension_,
         _data = data,
         super._();
@@ -5731,7 +5069,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -5750,7 +5087,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -5761,59 +5097,49 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   @override
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-  @HiveField(2)
   final TriggerDefinitionType? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
-  @HiveField(3)
   final Element? typeElement;
 
   /// [name] A formal name for the event. This may be an absolute URI that
   /// identifies the event formally (e.g. from a trigger registry), or a simple
   ///  relative URI that identifies the event in a local context.
   @override
-  @HiveField(4)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(5)
   final Element? nameElement;
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
   @override
-  @HiveField(6)
   final Timing? timingTiming;
 
   /// [timingReference] The timing of the event (if this is a periodic
   ///  trigger).
   @override
-  @HiveField(7)
   final Reference? timingReference;
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
   @override
-  @HiveField(8)
   final Date? timingDate;
 
   /// [timingDateElement] Extensions for timingDate
   @override
   @JsonKey(name: '_timingDate')
-  @HiveField(9)
   final Element? timingDateElement;
 
   /// [timingDateTime] The timing of the event (if this is a periodic trigger).
   @override
-  @HiveField(10)
   final FhirDateTime? timingDateTime;
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @override
   @JsonKey(name: '_timingDateTime')
-  @HiveField(11)
   final Element? timingDateTimeElement;
 
   /// [data] The triggering data of the event (if this is a data trigger). If
@@ -5825,7 +5151,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   /// more than one data is requirement is specified, then all the data
   ///  requirements must be true.
   @override
-  @HiveField(12)
   List<DataRequirement>? get data {
     final value = _data;
     if (value == null) return null;
@@ -5838,7 +5163,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
   @override
-  @HiveField(13)
   final Expression? condition;
 
   @override
@@ -5913,40 +5237,26 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
 abstract class _TriggerDefinition extends TriggerDefinition {
   factory _TriggerDefinition(
-      {@HiveField(0)
-          final String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-      @HiveField(2)
           final TriggerDefinitionType? type,
       @JsonKey(name: '_type')
-      @HiveField(3)
           final Element? typeElement,
-      @HiveField(4)
-          final String? name,
+      final String? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           final Element? nameElement,
-      @HiveField(6)
-          final Timing? timingTiming,
-      @HiveField(7)
-          final Reference? timingReference,
-      @HiveField(8)
-          final Date? timingDate,
+      final Timing? timingTiming,
+      final Reference? timingReference,
+      final Date? timingDate,
       @JsonKey(name: '_timingDate')
-      @HiveField(9)
           final Element? timingDateElement,
-      @HiveField(10)
-          final FhirDateTime? timingDateTime,
+      final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
-      @HiveField(11)
           final Element? timingDateTimeElement,
-      @HiveField(12)
-          final List<DataRequirement>? data,
-      @HiveField(13)
-          final Expression? condition}) = _$_TriggerDefinition;
+      final List<DataRequirement>? data,
+      final Expression? condition}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
@@ -5956,7 +5266,6 @@ abstract class _TriggerDefinition extends TriggerDefinition {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -5967,77 +5276,64 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-  @HiveField(2)
   TriggerDefinitionType? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
-  @HiveField(3)
   Element? get typeElement;
   @override
 
   /// [name] A formal name for the event. This may be an absolute URI that
   /// identifies the event formally (e.g. from a trigger registry), or a simple
   ///  relative URI that identifies the event in a local context.
-  @HiveField(4)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(5)
   Element? get nameElement;
   @override
 
   /// [timingTiming] The timing of the event (if this is a periodic trigger).
-  @HiveField(6)
   Timing? get timingTiming;
   @override
 
   /// [timingReference] The timing of the event (if this is a periodic
   ///  trigger).
-  @HiveField(7)
   Reference? get timingReference;
   @override
 
   /// [timingDate] The timing of the event (if this is a periodic trigger).
-  @HiveField(8)
   Date? get timingDate;
   @override
 
   /// [timingDateElement] Extensions for timingDate
   @JsonKey(name: '_timingDate')
-  @HiveField(9)
   Element? get timingDateElement;
   @override
 
   /// [timingDateTime] The timing of the event (if this is a periodic trigger).
-  @HiveField(10)
   FhirDateTime? get timingDateTime;
   @override
 
   /// [timingDateTimeElement] Extensions for timingDateTime
   @JsonKey(name: '_timingDateTime')
-  @HiveField(11)
   Element? get timingDateTimeElement;
   @override
 
   /// [data] The triggering data of the event (if this is a data trigger). If
   /// more than one data is requirement is specified, then all the data
   ///  requirements must be true.
-  @HiveField(12)
   List<DataRequirement>? get data;
   @override
 
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-  @HiveField(13)
   Expression? get condition;
   @override
   @JsonKey(ignore: true)
@@ -6053,7 +5349,6 @@ UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
 mixin _$UsageContext {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6062,34 +5357,28 @@ mixin _$UsageContext {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [code] A code that identifies the type of context being specified by this
   ///  usage context.
-  @HiveField(2)
   Coding get code => throw _privateConstructorUsedError;
 
   /// [valueCodeableConcept] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(3)
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
 
   /// [valueQuantity] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(4)
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
 
   /// [valueRange] A value that defines the context specified in this context
   ///  of use. The interpretation of the value is defined by the code.
-  @HiveField(5)
   Range? get valueRange => throw _privateConstructorUsedError;
 
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(6)
   Reference? get valueReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6105,13 +5394,13 @@ abstract class $UsageContextCopyWith<$Res> {
       _$UsageContextCopyWithImpl<$Res, UsageContext>;
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) Coding code,
-      @HiveField(3) CodeableConcept? valueCodeableConcept,
-      @HiveField(4) Quantity? valueQuantity,
-      @HiveField(5) Range? valueRange,
-      @HiveField(6) Reference? valueReference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Coding code,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference});
 
   $CodingCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
@@ -6240,13 +5529,13 @@ abstract class _$$_UsageContextCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) String? id,
-      @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @HiveField(2) Coding code,
-      @HiveField(3) CodeableConcept? valueCodeableConcept,
-      @HiveField(4) Quantity? valueQuantity,
-      @HiveField(5) Range? valueRange,
-      @HiveField(6) Reference? valueReference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Coding code,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Reference? valueReference});
 
   @override
   $CodingCopyWith<$Res> get code;
@@ -6314,24 +5603,15 @@ class __$$_UsageContextCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 9)
 class _$_UsageContext extends _UsageContext {
   _$_UsageContext(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          required this.code,
-      @HiveField(3)
-          this.valueCodeableConcept,
-      @HiveField(4)
-          this.valueQuantity,
-      @HiveField(5)
-          this.valueRange,
-      @HiveField(6)
-          this.valueReference})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      required this.code,
+      this.valueCodeableConcept,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueReference})
       : _extension_ = extension_,
         super._();
 
@@ -6341,7 +5621,6 @@ class _$_UsageContext extends _UsageContext {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6359,7 +5638,6 @@ class _$_UsageContext extends _UsageContext {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -6372,31 +5650,26 @@ class _$_UsageContext extends _UsageContext {
   /// [code] A code that identifies the type of context being specified by this
   ///  usage context.
   @override
-  @HiveField(2)
   final Coding code;
 
   /// [valueCodeableConcept] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   @override
-  @HiveField(3)
   final CodeableConcept? valueCodeableConcept;
 
   /// [valueQuantity] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   @override
-  @HiveField(4)
   final Quantity? valueQuantity;
 
   /// [valueRange] A value that defines the context specified in this context
   ///  of use. The interpretation of the value is defined by the code.
   @override
-  @HiveField(5)
   final Range? valueRange;
 
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   @override
-  @HiveField(6)
   final Reference? valueReference;
 
   @override
@@ -6451,21 +5724,13 @@ class _$_UsageContext extends _UsageContext {
 
 abstract class _UsageContext extends UsageContext {
   factory _UsageContext(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          required final Coding code,
-      @HiveField(3)
-          final CodeableConcept? valueCodeableConcept,
-      @HiveField(4)
-          final Quantity? valueQuantity,
-      @HiveField(5)
-          final Range? valueRange,
-      @HiveField(6)
-          final Reference? valueReference}) = _$_UsageContext;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      required final Coding code,
+      final CodeableConcept? valueCodeableConcept,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Reference? valueReference}) = _$_UsageContext;
   _UsageContext._() : super._();
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
@@ -6475,7 +5740,6 @@ abstract class _UsageContext extends UsageContext {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -6485,38 +5749,32 @@ abstract class _UsageContext extends UsageContext {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
   /// [code] A code that identifies the type of context being specified by this
   ///  usage context.
-  @HiveField(2)
   Coding get code;
   @override
 
   /// [valueCodeableConcept] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(3)
   CodeableConcept? get valueCodeableConcept;
   @override
 
   /// [valueQuantity] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(4)
   Quantity? get valueQuantity;
   @override
 
   /// [valueRange] A value that defines the context specified in this context
   ///  of use. The interpretation of the value is defined by the code.
-  @HiveField(5)
   Range? get valueRange;
   @override
 
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  @HiveField(6)
   Reference? get valueReference;
   @override
   @JsonKey(ignore: true)
@@ -6532,7 +5790,6 @@ Expression _$ExpressionFromJson(Map<String, dynamic> json) {
 mixin _$Expression {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6542,54 +5799,43 @@ mixin _$Expression {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [description] A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
-  @HiveField(2)
   String? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(3)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  @HiveField(4)
   Id? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(5)
   Element? get nameElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-  @HiveField(6)
   ExpressionLanguage? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(7)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [expression] An expression in the specified language that returns a
   ///  value.
-  @HiveField(8)
   String? get expression => throw _privateConstructorUsedError;
 
   /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
-  @HiveField(9)
   Element? get expressionElement => throw _privateConstructorUsedError;
 
   /// [reference] A URI that defines where the expression is found.
-  @HiveField(10)
   FhirUri? get reference => throw _privateConstructorUsedError;
 
   /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
-  @HiveField(11)
   Element? get referenceElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6605,36 +5851,24 @@ abstract class $ExpressionCopyWith<$Res> {
       _$ExpressionCopyWithImpl<$Res, Expression>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
-      @HiveField(2)
-          String? description,
+      String? description,
       @JsonKey(name: '_description')
-      @HiveField(3)
           Element? descriptionElement,
-      @HiveField(4)
-          Id? name,
+      Id? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-      @HiveField(6)
           ExpressionLanguage? language,
       @JsonKey(name: '_language')
-      @HiveField(7)
           Element? languageElement,
-      @HiveField(8)
-          String? expression,
+      String? expression,
       @JsonKey(name: '_expression')
-      @HiveField(9)
           Element? expressionElement,
-      @HiveField(10)
-          FhirUri? reference,
+      FhirUri? reference,
       @JsonKey(name: '_reference')
-      @HiveField(11)
           Element? referenceElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -6792,36 +6026,24 @@ abstract class _$$_ExpressionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
+      {String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           List<FhirExtension>? extension_,
-      @HiveField(2)
-          String? description,
+      String? description,
       @JsonKey(name: '_description')
-      @HiveField(3)
           Element? descriptionElement,
-      @HiveField(4)
-          Id? name,
+      Id? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-      @HiveField(6)
           ExpressionLanguage? language,
       @JsonKey(name: '_language')
-      @HiveField(7)
           Element? languageElement,
-      @HiveField(8)
-          String? expression,
+      String? expression,
       @JsonKey(name: '_expression')
-      @HiveField(9)
           Element? expressionElement,
-      @HiveField(10)
-          FhirUri? reference,
+      FhirUri? reference,
       @JsonKey(name: '_reference')
-      @HiveField(11)
           Element? referenceElement});
 
   @override
@@ -6915,40 +6137,20 @@ class __$$_ExpressionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 10)
 class _$_Expression extends _Expression {
   _$_Expression(
-      {@HiveField(0)
-          this.id,
-      @JsonKey(name: 'extension')
-      @HiveField(1)
-          final List<FhirExtension>? extension_,
-      @HiveField(2)
-          this.description,
-      @JsonKey(name: '_description')
-      @HiveField(3)
-          this.descriptionElement,
-      @HiveField(4)
-          this.name,
-      @JsonKey(name: '_name')
-      @HiveField(5)
-          this.nameElement,
-      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-      @HiveField(6)
-          this.language,
-      @JsonKey(name: '_language')
-      @HiveField(7)
-          this.languageElement,
-      @HiveField(8)
-          this.expression,
-      @JsonKey(name: '_expression')
-      @HiveField(9)
-          this.expressionElement,
-      @HiveField(10)
-          this.reference,
-      @JsonKey(name: '_reference')
-      @HiveField(11)
-          this.referenceElement})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(unknownEnumValue: ExpressionLanguage.unknown) this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.expression,
+      @JsonKey(name: '_expression') this.expressionElement,
+      this.reference,
+      @JsonKey(name: '_reference') this.referenceElement})
       : _extension_ = extension_,
         super._();
 
@@ -6958,7 +6160,6 @@ class _$_Expression extends _Expression {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6977,7 +6178,6 @@ class _$_Expression extends _Expression {
   ///  definition of the extension.
   @override
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -6989,58 +6189,48 @@ class _$_Expression extends _Expression {
   /// [description] A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
   @override
-  @HiveField(2)
   final String? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
-  @HiveField(3)
   final Element? descriptionElement;
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   @override
-  @HiveField(4)
   final Id? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
-  @HiveField(5)
   final Element? nameElement;
   @override
   @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-  @HiveField(6)
   final ExpressionLanguage? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
-  @HiveField(7)
   final Element? languageElement;
 
   /// [expression] An expression in the specified language that returns a
   ///  value.
   @override
-  @HiveField(8)
   final String? expression;
 
   /// [expressionElement] Extensions for expression
   @override
   @JsonKey(name: '_expression')
-  @HiveField(9)
   final Element? expressionElement;
 
   /// [reference] A URI that defines where the expression is found.
   @override
-  @HiveField(10)
   final FhirUri? reference;
 
   /// [referenceElement] Extensions for reference
   @override
   @JsonKey(name: '_reference')
-  @HiveField(11)
   final Element? referenceElement;
 
   @override
@@ -7110,36 +6300,24 @@ class _$_Expression extends _Expression {
 
 abstract class _Expression extends Expression {
   factory _Expression(
-      {@HiveField(0)
-          final String? id,
+      {final String? id,
       @JsonKey(name: 'extension')
-      @HiveField(1)
           final List<FhirExtension>? extension_,
-      @HiveField(2)
-          final String? description,
+      final String? description,
       @JsonKey(name: '_description')
-      @HiveField(3)
           final Element? descriptionElement,
-      @HiveField(4)
-          final Id? name,
+      final Id? name,
       @JsonKey(name: '_name')
-      @HiveField(5)
           final Element? nameElement,
       @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-      @HiveField(6)
           final ExpressionLanguage? language,
       @JsonKey(name: '_language')
-      @HiveField(7)
           final Element? languageElement,
-      @HiveField(8)
-          final String? expression,
+      final String? expression,
       @JsonKey(name: '_expression')
-      @HiveField(9)
           final Element? expressionElement,
-      @HiveField(10)
-          final FhirUri? reference,
+      final FhirUri? reference,
       @JsonKey(name: '_reference')
-      @HiveField(11)
           final Element? referenceElement}) = _$_Expression;
   _Expression._() : super._();
 
@@ -7150,7 +6328,6 @@ abstract class _Expression extends Expression {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -7161,64 +6338,53 @@ abstract class _Expression extends Expression {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @JsonKey(name: 'extension')
-  @HiveField(1)
   List<FhirExtension>? get extension_;
   @override
 
   /// [description] A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
-  @HiveField(2)
   String? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
-  @HiveField(3)
   Element? get descriptionElement;
   @override
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  @HiveField(4)
   Id? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
-  @HiveField(5)
   Element? get nameElement;
   @override
   @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-  @HiveField(6)
   ExpressionLanguage? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
-  @HiveField(7)
   Element? get languageElement;
   @override
 
   /// [expression] An expression in the specified language that returns a
   ///  value.
-  @HiveField(8)
   String? get expression;
   @override
 
   /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
-  @HiveField(9)
   Element? get expressionElement;
   @override
 
   /// [reference] A URI that defines where the expression is found.
-  @HiveField(10)
   FhirUri? get reference;
   @override
 
   /// [referenceElement] Extensions for reference
   @JsonKey(name: '_reference')
-  @HiveField(11)
   Element? get referenceElement;
   @override
   @JsonKey(ignore: true)

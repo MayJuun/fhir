@@ -16,7 +16,7 @@ part 'special_types.g.dart';
 /// [Narrative] A human-readable summary of the resource conveying the essential
 /// clinical and business information for the resource.
 @freezed
-class Narrative extends HiveObject with _$Narrative {
+class Narrative with _$Narrative {
   /// [Narrative] A human-readable summary of the resource conveying the essential
   /// clinical and business information for the resource.
 
@@ -42,11 +42,11 @@ class Narrative extends HiveObject with _$Narrative {
   /// [statusElement] (_status) Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
-  @HiveType(typeId: 39)
+
   factory Narrative({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -54,20 +54,19 @@ class Narrative extends HiveObject with _$Narrative {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     /// definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [status] The status of the narrative - whether it\u0027s entirely generated
     /// (from just the defined data or the extensions too), or whether a human
     /// authored it and it may contain additional data.
-    @HiveField(2)
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-        NarrativeStatus? status,
+
+    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
 
     /// [statusElement] (_status) Extensions for status
-    @HiveField(3) @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [div] The actual narrative content, a stripped down version of XHTML.
-    @HiveField(4) required String div,
+    required String div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object
@@ -105,7 +104,7 @@ class Narrative extends HiveObject with _$Narrative {
 /// reference to a concept defined in a terminology or ontology (by class).
 
 @freezed
-class CodeableReference extends HiveObject with _$CodeableReference {
+class CodeableReference with _$CodeableReference {
   /// [CodeableReference] A reference to a resource (by instance), or instead, a
   /// reference to a concept defined in a terminology or ontology (by class).
 
@@ -129,14 +128,13 @@ class CodeableReference extends HiveObject with _$CodeableReference {
   ///
   /// [reference] A reference to a resource the provides exact details about the
   /// information being referenced.
-  @HiveType(typeId: 40)
+
   factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal references).
-    @HiveField(0)
 
     /// This may be any string value that does not contain spaces.",
-    @HiveField(1)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -144,21 +142,19 @@ class CodeableReference extends HiveObject with _$CodeableReference {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     /// definition of the extension.
-    @HiveField(2)
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [concept] A reference to a concept - e.g. the information is identified by
-    @HiveField(3)
 
     /// its general class to the degree of precision found in the terminology.",
-    @HiveField(4)
-        CodeableConcept? concept,
+
+    CodeableConcept? concept,
 
     /// [reference] A reference to a resource the provides exact details about the
     /// information being referenced.
-    @HiveField(5)
-        Reference? reference,
+
+    Reference? reference,
   }) = _CodeableReference;
 
   /// Produces a Yaml formatted String version of the object
@@ -194,7 +190,7 @@ class CodeableReference extends HiveObject with _$CodeableReference {
 
 /// [Reference] A reference from one resource to another.
 @freezed
-class Reference extends HiveObject with _$Reference {
+class Reference with _$Reference {
   /// [Reference] A reference from one resource to another.
   Reference._();
 
@@ -246,11 +242,11 @@ class Reference extends HiveObject with _$Reference {
   ///  to the resource reference.
   ///
   /// [displayElement] Extensions for display
-  @HiveType(typeId: 41)
+
   factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -258,7 +254,7 @@ class Reference extends HiveObject with _$Reference {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [reference] A reference to a location at which the other resource is
     /// found. The reference may be a relative reference, in which case it is
@@ -267,10 +263,10 @@ class Reference extends HiveObject with _$Reference {
     /// specific or not. If the reference is not to a FHIR RESTful server, then it
     /// should be assumed to be version specific. Internal fragment references
     ///  (start with '#') refer to contained resources.
-    @HiveField(2) String? reference,
+    String? reference,
 
     /// [referenceElement] Extensions for reference
-    @HiveField(3) @JsonKey(name: '_reference') Element? referenceElement,
+    @JsonKey(name: '_reference') Element? referenceElement,
 
     /// [type] The expected type of the target of the reference. If both
     /// Reference.type and Reference.reference are populated and
@@ -281,10 +277,10 @@ class Reference extends HiveObject with _$Reference {
     /// http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only
     /// allowed for logical models (and can only be used in references in logical
     ///  models, not resources).
-    @HiveField(4) FhirUri? type,
+    FhirUri? type,
 
     /// [typeElement] Extensions for type
-    @HiveField(5) @JsonKey(name: '_type') Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [identifier] An identifier for the target resource. This is used when
     /// there is no way to reference the other resource directly, either because
@@ -295,14 +291,14 @@ class Reference extends HiveObject with _$Reference {
     /// instance, but it SHALL point to a business concept that would be expected
     /// to be exposed as a FHIR instance, and that instance would need to be of a
     ///  FHIR resource type allowed by the reference.
-    @HiveField(6) Identifier? identifier,
+    Identifier? identifier,
 
     /// [display] Plain text narrative that identifies the resource in addition
     ///  to the resource reference.
-    @HiveField(7) String? display,
+    String? display,
 
     /// [displayElement] Extensions for display
-    @HiveField(8) @JsonKey(name: '_display') Element? displayElement,
+    @JsonKey(name: '_display') Element? displayElement,
   }) = _Reference;
 
   /// Produces a Yaml formatted String version of the object
@@ -338,7 +334,7 @@ class Reference extends HiveObject with _$Reference {
 
 /// [Meta] The metadata about a resource. This is content in the resource
 @freezed
-class Meta extends HiveObject with _$Meta {
+class Meta with _$Meta {
   /// [Meta] The metadata about a resource. This is content in the resource
   Meta._();
 
@@ -386,12 +382,12 @@ class Meta extends HiveObject with _$Meta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
-  @HiveType(typeId: 42)
+
   factory Meta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -399,65 +395,59 @@ class Meta extends HiveObject with _$Meta {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1)
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [versionId] The version specific identifier, as it appears in the version
-    @HiveField(2)
 
     /// portion of the URL. This value changes when the resource is created,
     ///  updated, or deleted.
-    @HiveField(3)
-        Id? versionId,
+
+    Id? versionId,
 
     /// [versionIdElement] Extensions for versionId
-    @HiveField(4)
-    @JsonKey(name: '_versionId')
-        Element? versionIdElement,
+
+    @JsonKey(name: '_versionId') Element? versionIdElement,
 
     /// [lastUpdated] When the resource last changed - e.g. when the version
     ///  changed.
-    @HiveField(5)
-        Instant? lastUpdated,
+
+    Instant? lastUpdated,
 
     /// [lastUpdatedElement] Extensions for lastUpdated
-    @HiveField(6)
-    @JsonKey(name: '_lastUpdated')
-        Element? lastUpdatedElement,
+
+    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
 
     /// [source] A uri that identifies the source system of the resource. This
     /// provides a minimal amount of [[[Provenance]]] information that can be used
     /// to track or differentiate the source of information in the resource. The
-    @HiveField(7)
 
     /// source may identify another FHIR server, document, message, database,
     ///  etc.
-    @HiveField(8)
-        FhirUri? source,
+
+    FhirUri? source,
 
     /// [sourceElement] Extensions for source
-    @HiveField(9)
-    @JsonKey(name: '_source')
-        Element? sourceElement,
+
+    @JsonKey(name: '_source') Element? sourceElement,
 
     /// [profile] A list of profiles (references to [[[StructureDefinition]]]
     /// resources) that this resource claims to conform to. The URL is a reference
     ///  to [[[StructureDefinition.url]]].
-    @HiveField(10)
-        List<Canonical>? profile,
+
+    List<Canonical>? profile,
 
     /// [security] Security labels applied to this resource. These tags connect
     ///  specific resources to the overall security policy and infrastructure.
-    @HiveField(11)
-        List<Coding>? security,
+
+    List<Coding>? security,
 
     /// [tag] Tags applied to this resource. Tags are intended to be used to
     /// identify and relate resources to process and workflow, and applications
     /// are not required to consider the tags when interpreting the meaning of a
     ///  resource.
-    @HiveField(12)
-        List<Coding>? tag,
+
+    List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object
@@ -491,7 +481,7 @@ class Meta extends HiveObject with _$Meta {
 
 /// [Dosage] Indicates how the medication is/was taken or should be taken by
 @freezed
-class Dosage extends HiveObject with _$Dosage {
+class Dosage with _$Dosage {
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
   Dosage._();
 
@@ -567,11 +557,11 @@ class Dosage extends HiveObject with _$Dosage {
   ///
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
-  @HiveType(typeId: 43)
+
   factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -579,7 +569,7 @@ class Dosage extends HiveObject with _$Dosage {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -594,75 +584,73 @@ class Dosage extends HiveObject with _$Dosage {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [sequence] Indicates the order in which the dosage instructions should be
     ///  applied or interpreted.
-    @HiveField(3) Integer? sequence,
+    Integer? sequence,
 
     /// [sequenceElement] Extensions for sequence
-    @HiveField(4) @JsonKey(name: '_sequence') Element? sequenceElement,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [text] Free text dosage instructions e.g. SIG.
-    @HiveField(5) String? text,
+    String? text,
 
     /// [textElement] Extensions for text
-    @HiveField(6) @JsonKey(name: '_text') Element? textElement,
+    @JsonKey(name: '_text') Element? textElement,
 
     /// [additionalInstruction] Supplemental instructions to the patient on how
     /// to take the medication  (e.g. "with meals" or"take half to one hour before
     /// food") or warnings for the patient about the medication (e.g. "may cause
     ///  drowsiness" or "avoid exposure of skin to direct sunlight or sunlamps").
-    @HiveField(7) List<CodeableConcept>? additionalInstruction,
+    List<CodeableConcept>? additionalInstruction,
 
     /// [patientInstruction] Instructions in terms that are understood by the
     ///  patient or consumer.
-    @HiveField(8) String? patientInstruction,
+    String? patientInstruction,
 
     /// [patientInstructionElement] Extensions for patientInstruction
-    @HiveField(9)
-    @JsonKey(name: '_patientInstruction')
-        Element? patientInstructionElement,
+
+    @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
 
     /// [timing] When medication should be administered.
-    @HiveField(10) Timing? timing,
+    Timing? timing,
 
     /// [asNeededBoolean] Indicates whether the Medication is only taken when
     /// needed within a specific dosing schedule (Boolean option), or it indicates
     ///  the precondition for taking the Medication (CodeableConcept).
-    @HiveField(11) Boolean? asNeededBoolean,
+    Boolean? asNeededBoolean,
 
     /// [asNeededBooleanElement] Extensions for asNeededBoolean
-    @HiveField(12)
-    @JsonKey(name: '_asNeededBoolean')
-        Element? asNeededBooleanElement,
+
+    @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
 
     /// [asNeededCodeableConcept] Indicates whether the Medication is only taken
     /// when needed within a specific dosing schedule (Boolean option), or it
     ///  indicates the precondition for taking the Medication (CodeableConcept).
-    @HiveField(13) CodeableConcept? asNeededCodeableConcept,
+    CodeableConcept? asNeededCodeableConcept,
 
     /// [site] Body site to administer to.
-    @HiveField(14) CodeableConcept? site,
+    CodeableConcept? site,
 
     /// [route] How drug should enter body.
-    @HiveField(15) CodeableConcept? route,
+    CodeableConcept? route,
 
     /// [method] Technique for administering medication.
-    @HiveField(16) CodeableConcept? method,
+    CodeableConcept? method,
 
     /// [doseAndRate] The amount of medication administered.
-    @HiveField(17) List<DosageDoseAndRate>? doseAndRate,
+    List<DosageDoseAndRate>? doseAndRate,
 
     /// [maxDosePerPeriod] Upper limit on medication per unit of time.
-    @HiveField(18) Ratio? maxDosePerPeriod,
+    Ratio? maxDosePerPeriod,
 
     /// [maxDosePerAdministration] Upper limit on medication per administration.
-    @HiveField(19) Quantity? maxDosePerAdministration,
+    Quantity? maxDosePerAdministration,
 
     /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
     ///  patient.
-    @HiveField(20) Quantity? maxDosePerLifetime,
+    Quantity? maxDosePerLifetime,
   }) = _Dosage;
 
   /// Produces a Yaml formatted String version of the object
@@ -697,7 +685,7 @@ class Dosage extends HiveObject with _$Dosage {
 
 /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
 @freezed
-class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
+class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
   DosageDoseAndRate._();
 
@@ -740,11 +728,11 @@ class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
   /// [rateRange] Amount of medication per unit of time.
   ///
   /// [rateQuantity] Amount of medication per unit of time.
-  @HiveType(typeId: 44)
+
   factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -752,7 +740,7 @@ class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -767,26 +755,26 @@ class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [type] The kind of dose or rate specified, for example, ordered or
     ///  calculated.
-    @HiveField(3) CodeableConcept? type,
+    CodeableConcept? type,
 
     /// [doseRange] Amount of medication per dose.
-    @HiveField(4) Range? doseRange,
+    Range? doseRange,
 
     /// [doseQuantity] Amount of medication per dose.
-    @HiveField(5) Quantity? doseQuantity,
+    Quantity? doseQuantity,
 
     /// [rateRatio] Amount of medication per unit of time.
-    @HiveField(6) Ratio? rateRatio,
+    Ratio? rateRatio,
 
     /// [rateRange] Amount of medication per unit of time.
-    @HiveField(7) Range? rateRange,
+    Range? rateRange,
 
     /// [rateQuantity] Amount of medication per unit of time.
-    @HiveField(8) Quantity? rateQuantity,
+    Quantity? rateQuantity,
   }) = _DosageDoseAndRate;
 
   /// Produces a Yaml formatted String version of the object
@@ -822,7 +810,7 @@ class DosageDoseAndRate extends HiveObject with _$DosageDoseAndRate {
 
 /// [ElementDefinition] Captures constraints on each element within the
 @freezed
-class ElementDefinition extends HiveObject with _$ElementDefinition {
+class ElementDefinition with _$ElementDefinition {
   /// [ElementDefinition] Captures constraints on each element within the
   ElementDefinition._();
 
@@ -2474,12 +2462,12 @@ class ElementDefinition extends HiveObject with _$ElementDefinition {
   ///
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
-  @HiveType(typeId: 45)
+
   factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2488,7 +2476,6 @@ class ElementDefinition extends HiveObject with _$ElementDefinition {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2504,8 +2491,8 @@ class ElementDefinition extends HiveObject with _$ElementDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
 
     /// [path] The path identifies the element and is expressed as a
     /// "."-separated list of ancestor elements, beginning with the name of the
@@ -4886,12 +4873,12 @@ class ElementDefinitionSlicing extends HiveObject
   ///  allowed at the end.
   ///
   /// [rulesElement] Extensions for rules
-  @HiveType(typeId: 46)
+
   factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4900,7 +4887,6 @@ class ElementDefinitionSlicing extends HiveObject
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4916,8 +4902,8 @@ class ElementDefinitionSlicing extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
 
     /// [discriminator] Designates which child elements are used to discriminate
     /// between the slices when processing an instance. If one or more
@@ -4925,41 +4911,38 @@ class ElementDefinitionSlicing extends HiveObject
     /// instance data SHALL completely distinguish which slice the element in the
     /// resource matches based on the allowed values for those elements in each of
     ///  the slices.
-    @HiveField(3)
-        List<ElementDefinitionDiscriminator>? discriminator,
+
+    List<ElementDefinitionDiscriminator>? discriminator,
 
     /// [description] A human-readable text description of how the slicing works.
     /// If there is no discriminator, this is required to be present to provide
     /// whatever information is possible about how the slices can be
     ///  differentiated.
-    @HiveField(4)
-        String? description,
+
+    String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(5)
         Element? descriptionElement,
 
     /// [ordered] If the matching elements have to occur in the same order as
     ///  defined in the profile.
-    @HiveField(6)
-        Boolean? ordered,
+
+    Boolean? ordered,
 
     /// [orderedElement] Extensions for ordered
     @JsonKey(name: '_ordered')
-    @HiveField(7)
         Element? orderedElement,
     @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
 
-    /// [rules] Whether additional slices are allowed or not. When the slices are
-    /// ordered, profile authors can also say that additional slices are only
-    ///  allowed at the end.
-    @HiveField(8)
+        /// [rules] Whether additional slices are allowed or not. When the slices are
+        /// ordered, profile authors can also say that additional slices are only
+        ///  allowed at the end.
+
         ElementDefinitionSlicingRules? rules,
 
     /// [rulesElement] Extensions for rules
     @JsonKey(name: '_rules')
-    @HiveField(9)
         Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -5038,12 +5021,12 @@ class ElementDefinitionDiscriminator extends HiveObject
   ///  which discrimination is based.
   ///
   /// [pathElement] Extensions for path
-  @HiveType(typeId: 47)
+
   factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5052,7 +5035,6 @@ class ElementDefinitionDiscriminator extends HiveObject
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5068,29 +5050,27 @@ class ElementDefinitionDiscriminator extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
 
-    /// [type] How the element value is interpreted when discrimination is
-    ///  evaluated.
-    @HiveField(3)
+        /// [type] How the element value is interpreted when discrimination is
+        ///  evaluated.
+
         ElementDefinitionDiscriminatorType? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
-    @HiveField(4)
         Element? typeElement,
 
     /// [path] A FHIRPath expression, using [the simple subset of
     /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
     ///  which discrimination is based.
-    @HiveField(5)
-        String? path,
+
+    String? path,
 
     /// [pathElement] Extensions for path
     @JsonKey(name: '_path')
-    @HiveField(6)
         Element? pathElement,
   }) = _ElementDefinitionDiscriminator;
 
@@ -5128,7 +5108,7 @@ class ElementDefinitionDiscriminator extends HiveObject
 
 /// [ElementDefinitionBase] Captures constraints on each element within the
 @freezed
-class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
+class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [ElementDefinitionBase] Captures constraints on each element within the
   ElementDefinitionBase._();
 
@@ -5173,11 +5153,11 @@ class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
   /// [max] Maximum cardinality of the base element identified by the path.
   ///
   /// [maxElement] Extensions for max
-  @HiveType(typeId: 48)
+
   factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5185,7 +5165,7 @@ class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5200,28 +5180,28 @@ class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [path] The Path that identifies the base element - this matches the
     /// ElementDefinition.path for that element. Across FHIR, there is only one
     /// base definition of any element - that is, an element definition on a
     ///  [[[StructureDefinition]]] without a StructureDefinition.base.
-    @HiveField(3) String? path,
+    String? path,
 
     /// [pathElement] Extensions for path
-    @HiveField(4) @JsonKey(name: '_path') Element? pathElement,
+    @JsonKey(name: '_path') Element? pathElement,
 
     /// [min] Minimum cardinality of the base element identified by the path.
-    @HiveField(5) UnsignedInt? min,
+    UnsignedInt? min,
 
     /// [minElement] Extensions for min
-    @HiveField(6) @JsonKey(name: '_min') Element? minElement,
+    @JsonKey(name: '_min') Element? minElement,
 
     /// [max] Maximum cardinality of the base element identified by the path.
-    @HiveField(7) String? max,
+    String? max,
 
     /// [maxElement] Extensions for max
-    @HiveField(8) @JsonKey(name: '_max') Element? maxElement,
+    @JsonKey(name: '_max') Element? maxElement,
   }) = _ElementDefinitionBase;
 
   /// Produces a Yaml formatted String version of the object
@@ -5257,7 +5237,7 @@ class ElementDefinitionBase extends HiveObject with _$ElementDefinitionBase {
 
 /// [ElementDefinitionType] Captures constraints on each element within the
 @freezed
-class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
+class ElementDefinitionType with _$ElementDefinitionType {
   /// [ElementDefinitionType] Captures constraints on each element within the
   ElementDefinitionType._();
 
@@ -5324,12 +5304,12 @@ class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
   ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] Extensions for versioning
-  @HiveType(typeId: 49)
+
   factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5338,7 +5318,6 @@ class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -5354,20 +5333,19 @@ class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
 
     /// [code] URL of Data type or Resource that is a(or the) type used for this
     /// element. References are URLs that are relative to
     /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
     /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
     ///  allowed in logical models.
-    @HiveField(3)
-        FhirUri? code,
+
+    FhirUri? code,
 
     /// [codeElement] Extensions for code
     @JsonKey(name: '_code')
-    @HiveField(4)
         Element? codeElement,
 
     /// [profile] Identifies a profile structure or implementation Guide that
@@ -5377,10 +5355,9 @@ class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
     /// reference to another StructureDefinition or Implementation Guide by a
     /// canonical URL. When an implementation guide is specified, the type SHALL
     ///  conform to at least one profile defined in the implementation guide.
-    @HiveField(5)
-        List<Canonical>? profile,
+
+    List<Canonical>? profile,
     @JsonKey(name: '_profile')
-    @HiveField(6)
         List<Element?>? profileElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
@@ -5392,29 +5369,27 @@ class ElementDefinitionType extends HiveObject with _$ElementDefinitionType {
     /// canonical URL. When an implementation guide is specified, the target
     /// resource SHALL conform to at least one profile defined in the
     ///  implementation guide.
-    @HiveField(7)
-        List<Canonical>? targetProfile,
+
+    List<Canonical>? targetProfile,
 
     /// [aggregation] If the type is a reference to another resource, how the
     /// resource is or can be aggregated - is it a contained resource, or a
     ///  reference, and if the context is a bundle, is it included in the bundle.
-    @HiveField(8)
-        List<ElementDefinitionTypeAggregation>? aggregation,
+
+    List<ElementDefinitionTypeAggregation>? aggregation,
 
     /// [aggregationElement] Extensions for aggregation
     @JsonKey(name: '_aggregation')
-    @HiveField(9)
         List<Element?>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
 
-    /// [versioning] Whether this reference needs to be version specific or
-    ///  version independent, or whether either can be used.
-    @HiveField(10)
+        /// [versioning] Whether this reference needs to be version specific or
+        ///  version independent, or whether either can be used.
+
         ElementDefinitionTypeVersioning? versioning,
 
     /// [versioningElement] Extensions for versioning
     @JsonKey(name: '_versioning')
-    @HiveField(11)
         Element? versioningElement,
   }) = _ElementDefinitionType;
 
@@ -5674,11 +5649,11 @@ class ElementDefinitionExample extends HiveObject
   ///
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  @HiveType(typeId: 50)
+
   factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5686,7 +5661,7 @@ class ElementDefinitionExample extends HiveObject
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5701,284 +5676,278 @@ class ElementDefinitionExample extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [label] Describes the purpose of this example amoung the set of examples.
-    @HiveField(3) String? label,
+    String? label,
 
     /// [labelElement] Extensions for label
-    @HiveField(4) @JsonKey(name: '_label') Element? labelElement,
+    @JsonKey(name: '_label') Element? labelElement,
 
     /// [valueBase64Binary] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    @HiveField(5) Base64Binary? valueBase64Binary,
+    Base64Binary? valueBase64Binary,
 
     /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-    @HiveField(6)
-    @JsonKey(name: '_valueBase64Binary')
-        Element? valueBase64BinaryElement,
+
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
 
     /// [valueBoolean] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(7) Boolean? valueBoolean,
+    Boolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
-    @HiveField(8) @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueCanonical] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(9) Canonical? valueCanonical,
+    Canonical? valueCanonical,
 
     /// [valueCanonicalElement] Extensions for valueCanonical
-    @HiveField(10)
-    @JsonKey(name: '_valueCanonical')
-        Element? valueCanonicalElement,
+
+    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
 
     /// [valueCode] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(11) Code? valueCode,
+    Code? valueCode,
 
     /// [valueCodeElement] Extensions for valueCode
-    @HiveField(12) @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    @JsonKey(name: '_valueCode') Element? valueCodeElement,
 
     /// [valueDate] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(13) Date? valueDate,
+    Date? valueDate,
 
     /// [valueDateElement] Extensions for valueDate
-    @HiveField(14) @JsonKey(name: '_valueDate') Element? valueDateElement,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
 
     /// [valueDateTime] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(15) FhirDateTime? valueDateTime,
+    FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-    @HiveField(16)
-    @JsonKey(name: '_valueDateTime')
-        Element? valueDateTimeElement,
+
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valueDecimal] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(17) Decimal? valueDecimal,
+    Decimal? valueDecimal,
 
     /// [valueDecimalElement] Extensions for valueDecimal
-    @HiveField(18) @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(19) Id? valueId,
+    Id? valueId,
 
     /// [valueIdElement] Extensions for valueId
-    @HiveField(20) @JsonKey(name: '_valueId') Element? valueIdElement,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
 
     /// [valueInstant] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(21) Instant? valueInstant,
+    Instant? valueInstant,
 
     /// [valueInstantElement] Extensions for valueInstant
-    @HiveField(22) @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
 
     /// [valueInteger] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(23) Integer? valueInteger,
+    Integer? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
-    @HiveField(24) @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueMarkdown] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(25) Markdown? valueMarkdown,
+    Markdown? valueMarkdown,
 
     /// [valueMarkdownElement] Extensions for valueMarkdown
-    @HiveField(26)
-    @JsonKey(name: '_valueMarkdown')
-        Element? valueMarkdownElement,
+
+    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(27) Oid? valueOid,
+    Oid? valueOid,
 
     /// [valueOidElement] Extensions for valueOid
-    @HiveField(28) @JsonKey(name: '_valueOid') Element? valueOidElement,
+    @JsonKey(name: '_valueOid') Element? valueOidElement,
 
     /// [valuePositiveInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(29) PositiveInt? valuePositiveInt,
+    PositiveInt? valuePositiveInt,
 
     /// [valuePositiveIntElement] Extensions for valuePositiveInt
-    @HiveField(30)
-    @JsonKey(name: '_valuePositiveInt')
-        Element? valuePositiveIntElement,
+
+    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
 
     /// [valueString] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(31) String? valueString,
+    String? valueString,
 
     /// [valueStringElement] Extensions for valueString
-    @HiveField(32) @JsonKey(name: '_valueString') Element? valueStringElement,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueTime] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(33) Time? valueTime,
+    Time? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
-    @HiveField(34) @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueUnsignedInt] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(35) UnsignedInt? valueUnsignedInt,
+    UnsignedInt? valueUnsignedInt,
 
     /// [valueUnsignedIntElement] Extensions for valueUnsignedInt
-    @HiveField(36)
-    @JsonKey(name: '_valueUnsignedInt')
-        Element? valueUnsignedIntElement,
+
+    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
 
     /// [valueUri] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(37) FhirUri? valueUri,
+    FhirUri? valueUri,
 
     /// [valueUriElement] Extensions for valueUri
-    @HiveField(38) @JsonKey(name: '_valueUri') Element? valueUriElement,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
 
     /// [valueUrl] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(39) FhirUrl? valueUrl,
+    FhirUrl? valueUrl,
 
     /// [valueUrlElement] Extensions for valueUrl
-    @HiveField(40) @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(41) Uuid? valueUuid,
+    Uuid? valueUuid,
 
     /// [valueUuidElement] Extensions for valueUuid
-    @HiveField(42) @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
 
     /// [valueAddress] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(43) Address? valueAddress,
+    Address? valueAddress,
 
     /// [valueAge] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(44) Age? valueAge,
+    Age? valueAge,
 
     /// [valueAnnotation] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(45) Annotation? valueAnnotation,
+    Annotation? valueAnnotation,
 
     /// [valueAttachment] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(46) Attachment? valueAttachment,
+    Attachment? valueAttachment,
 
     /// [valueCodeableConcept] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    @HiveField(47) CodeableConcept? valueCodeableConcept,
-    @HiveField(48) CodeableReference? valueCodeableReference,
+    CodeableConcept? valueCodeableConcept,
+    CodeableReference? valueCodeableReference,
 
     /// [valueCoding] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(49) Coding? valueCoding,
+    Coding? valueCoding,
 
     /// [valueContactPoint] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    @HiveField(50) ContactPoint? valueContactPoint,
+    ContactPoint? valueContactPoint,
 
     /// [valueCount] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(51) Count? valueCount,
+    Count? valueCount,
 
     /// [valueDistance] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(52) Distance? valueDistance,
+    Distance? valueDistance,
 
     /// [valueDuration] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(53) FhirDuration? valueDuration,
+    FhirDuration? valueDuration,
 
     /// [valueHumanName] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(54) HumanName? valueHumanName,
+    HumanName? valueHumanName,
 
     /// [valueIdentifier] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(55) Identifier? valueIdentifier,
+    Identifier? valueIdentifier,
 
     /// [valueMoney] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(56) Money? valueMoney,
+    Money? valueMoney,
 
     /// [valuePeriod] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(57) Period? valuePeriod,
+    Period? valuePeriod,
 
     /// [valueQuantity] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(58) Quantity? valueQuantity,
+    Quantity? valueQuantity,
 
     /// [valueRange] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(59) Range? valueRange,
+    Range? valueRange,
 
     /// [valueRatio] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(60) Ratio? valueRatio,
-    @HiveField(61) RatioRange? valueRatioRange,
+    Ratio? valueRatio,
+    RatioRange? valueRatioRange,
 
     /// [valueReference] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(62) Reference? valueReference,
+    Reference? valueReference,
 
     /// [valueSampledData] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(63) SampledData? valueSampledData,
+    SampledData? valueSampledData,
 
     /// [valueSignature] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(64) Signature? valueSignature,
+    Signature? valueSignature,
 
     /// [valueTiming] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(65) Timing? valueTiming,
+    Timing? valueTiming,
 
     /// [valueContactDetail] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    @HiveField(66) ContactDetail? valueContactDetail,
+    ContactDetail? valueContactDetail,
 
     /// [valueContributor] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(67) Contributor? valueContributor,
+    Contributor? valueContributor,
 
     /// [valueDataRequirement] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    @HiveField(68) DataRequirement? valueDataRequirement,
+    DataRequirement? valueDataRequirement,
 
     /// [valueExpression] The actual value for the element, which must be one of
     ///  the types allowed for this element.
-    @HiveField(69) Expression? valueExpression,
+    Expression? valueExpression,
 
     /// [valueParameterDefinition] The actual value for the element, which must
     ///  be one of the types allowed for this element.
-    @HiveField(70) ParameterDefinition? valueParameterDefinition,
+    ParameterDefinition? valueParameterDefinition,
 
     /// [valueRelatedArtifact] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    @HiveField(71) RelatedArtifact? valueRelatedArtifact,
+    RelatedArtifact? valueRelatedArtifact,
 
     /// [valueTriggerDefinition] The actual value for the element, which must be
     ///  one of the types allowed for this element.
-    @HiveField(72) TriggerDefinition? valueTriggerDefinition,
+    TriggerDefinition? valueTriggerDefinition,
 
     /// [valueUsageContext] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    @HiveField(73) UsageContext? valueUsageContext,
+    UsageContext? valueUsageContext,
 
     /// [valueDosage] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(74) Dosage? valueDosage,
+    Dosage? valueDosage,
 
     /// [valueMeta] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    @HiveField(75) Meta? valueMeta,
+    Meta? valueMeta,
   }) = _ElementDefinitionExample;
 
   /// Produces a Yaml formatted String version of the object
@@ -6079,12 +6048,12 @@ class ElementDefinitionConstraint extends HiveObject
   ///
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  @HiveType(typeId: 51)
+
   factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6093,7 +6062,6 @@ class ElementDefinitionConstraint extends HiveObject
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -6109,75 +6077,69 @@ class ElementDefinitionConstraint extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
 
     /// [key] Allows identification of which elements have their cardinalities
     /// impacted by the constraint.  Will not be referenced for constraints that
     ///  do not affect cardinality.
-    @HiveField(3)
-        Id? key,
+
+    Id? key,
 
     /// [keyElement] Extensions for key
     @JsonKey(name: '_key')
-    @HiveField(4)
         Element? keyElement,
 
     /// [requirements] Description of why this constraint is necessary or
     ///  appropriate.
-    @HiveField(5)
-        String? requirements,
+
+    String? requirements,
 
     /// [requirementsElement] Extensions for requirements
     @JsonKey(name: '_requirements')
-    @HiveField(6)
         Element? requirementsElement,
     @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
 
-    /// [severity] Identifies the impact constraint violation has on the
-    ///  conformance of the instance.
-    @HiveField(7)
+        /// [severity] Identifies the impact constraint violation has on the
+        ///  conformance of the instance.
+
         ElementDefinitionConstraintSeverity? severity,
 
     /// [severityElement] Extensions for severity
     @JsonKey(name: '_severity')
-    @HiveField(8)
         Element? severityElement,
 
     /// [human] Text that can be used to describe the constraint in messages
     ///  identifying that the constraint has been violated.
-    @HiveField(9)
-        String? human,
+
+    String? human,
 
     /// [humanElement] Extensions for human
     @JsonKey(name: '_human')
-    @HiveField(10)
         Element? humanElement,
 
     /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
     ///  can be executed to see if this constraint is met.
-    @HiveField(11)
-        String? expression,
+
+    String? expression,
 
     /// [expressionElement] Extensions for expression
     @JsonKey(name: '_expression')
-    @HiveField(12)
         Element? expressionElement,
 
     /// [xpath] An XPath expression of constraint that can be executed to see if
     ///  this constraint is met.
-    @HiveField(13)
-        String? xpath,
+
+    String? xpath,
 
     /// [xpathElement] Extensions for xpath
     @JsonKey(name: '_xpath')
-    @HiveField(14)
         Element? xpathElement,
 
     /// [source] A reference to the original source of the constraint, for
     ///  traceability purposes.
-    @HiveField(15)
-        Canonical? source,
+
+    Canonical? source,
   }) = _ElementDefinitionConstraint;
 
   /// Produces a Yaml formatted String version of the object
@@ -6257,12 +6219,12 @@ class ElementDefinitionBinding extends HiveObject
   ///
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  @HiveType(typeId: 52)
+
   factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0)
-        String? id,
+
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6271,7 +6233,6 @@ class ElementDefinitionBinding extends HiveObject
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
     @JsonKey(name: 'extension')
-    @HiveField(1)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -6287,34 +6248,32 @@ class ElementDefinitionBinding extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2)
-        List<FhirExtension>? modifierExtension,
+
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
 
-    /// [strength] Indicates the degree of conformance expectations associated
-    /// with this binding - that is, the degree to which the provided value set
-    ///  must be adhered to in the instances.
-    @HiveField(3)
+        /// [strength] Indicates the degree of conformance expectations associated
+        /// with this binding - that is, the degree to which the provided value set
+        ///  must be adhered to in the instances.
+
         ElementDefinitionBindingStrength? strength,
 
     /// [strengthElement] Extensions for strength
     @JsonKey(name: '_strength')
-    @HiveField(4)
         Element? strengthElement,
 
     /// [description] Describes the intended use of this particular set of codes.
-    @HiveField(5)
-        String? description,
+
+    String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
-    @HiveField(6)
         Element? descriptionElement,
 
     /// [valueSet] Refers to the value set that identifies the set of codes the
     ///  binding refers to.
-    @HiveField(7)
-        Canonical? valueSet,
+
+    Canonical? valueSet,
   }) = _ElementDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -6399,11 +6358,11 @@ class ElementDefinitionMapping extends HiveObject
   /// [comment] Comments that provide information about the mapping or its use.
   ///
   /// [commentElement] Extensions for comment
-  @HiveType(typeId: 53)
+
   factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @HiveField(0) String? id,
+    String? id,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6411,7 +6370,7 @@ class ElementDefinitionMapping extends HiveObject
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @HiveField(1) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -6426,33 +6385,33 @@ class ElementDefinitionMapping extends HiveObject
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    @HiveField(2) List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.
-    @HiveField(3) Id? identity,
+    Id? identity,
 
     /// [identityElement] Extensions for identity
-    @HiveField(4) @JsonKey(name: '_identity') Element? identityElement,
+    @JsonKey(name: '_identity') Element? identityElement,
 
     /// [language] Identifies the computable language in which mapping.map is
     ///  expressed.
-    @HiveField(5) Code? language,
+    Code? language,
 
     /// [languageElement] Extensions for language
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [map] Expresses what part of the target specification corresponds to this
     ///  element.
-    @HiveField(7) String? map,
+    String? map,
 
     /// [mapElement] Extensions for map
-    @HiveField(8) @JsonKey(name: '_map') Element? mapElement,
+    @JsonKey(name: '_map') Element? mapElement,
 
     /// [comment] Comments that provide information about the mapping or its use.
-    @HiveField(9) String? comment,
+    String? comment,
 
     /// [commentElement] Extensions for comment
-    @HiveField(10) @JsonKey(name: '_comment') Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _ElementDefinitionMapping;
 
   /// Produces a Yaml formatted String version of the object

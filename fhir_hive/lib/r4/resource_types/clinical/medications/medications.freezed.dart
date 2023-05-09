@@ -18728,7 +18728,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 220)
+@HiveType(typeId: 16)
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
@@ -19961,7 +19961,7 @@ class __$$_MedicationKnowledgeRelatedMedicationKnowledgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 221)
+@HiveType(typeId: 17)
 class _$_MedicationKnowledgeRelatedMedicationKnowledge
     extends _MedicationKnowledgeRelatedMedicationKnowledge {
   _$_MedicationKnowledgeRelatedMedicationKnowledge(
@@ -20887,7 +20887,7 @@ class __$$_MedicationKnowledgeIngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 222)
+@HiveType(typeId: 18)
 class _$_MedicationKnowledgeIngredient extends _MedicationKnowledgeIngredient {
   _$_MedicationKnowledgeIngredient(
       {@HiveField(0)
@@ -25941,7 +25941,7 @@ class __$$_MedicationKnowledgeScheduleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 223)
+@HiveType(typeId: 19)
 class _$_MedicationKnowledgeSchedule extends _MedicationKnowledgeSchedule {
   _$_MedicationKnowledgeSchedule(
       {@HiveField(0)
@@ -28503,7 +28503,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 224)
+@HiveType(typeId: 20)
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
@@ -32409,7 +32409,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 225)
+@HiveType(typeId: 21)
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)

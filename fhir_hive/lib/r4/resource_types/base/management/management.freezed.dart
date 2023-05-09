@@ -12300,7 +12300,7 @@ class __$$_FhirListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 226)
+@HiveType(typeId: 15)
 class _$_FhirList extends _FhirList {
   _$_FhirList(
       {@JsonKey(unknownEnumValue: R4ResourceType.FhirList)

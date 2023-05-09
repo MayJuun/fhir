@@ -598,7 +598,7 @@ class LibraryAdapter extends TypeAdapter<_$_Library> {
 
 class FhirListAdapter extends TypeAdapter<_$_FhirList> {
   @override
-  final int typeId = 226;
+  final int typeId = 15;
 
   @override
   _$_FhirList read(BinaryReader reader) {

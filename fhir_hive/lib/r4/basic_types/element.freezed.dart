@@ -22,7 +22,6 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 mixin _$Element {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -31,7 +30,6 @@ mixin _$Element {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
@@ -46,11 +44,8 @@ abstract class $ElementCopyWith<$Res> {
       _$ElementCopyWithImpl<$Res, Element>;
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
@@ -90,11 +85,8 @@ abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@HiveField(0)
-          String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_});
 }
 
 /// @nodoc
@@ -125,14 +117,10 @@ class __$$_ElementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-@HiveType(typeId: 16)
 class _$_Element extends _Element {
   _$_Element(
-      {@HiveField(0)
-          this.id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_})
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
       : _extension_ = extension_,
         super._();
 
@@ -142,7 +130,6 @@ class _$_Element extends _Element {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @override
-  @HiveField(0)
   final String? id;
 
   /// [extension_] May be used to represent additional information that is not
@@ -160,7 +147,6 @@ class _$_Element extends _Element {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   @override
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -206,11 +192,9 @@ class _$_Element extends _Element {
 
 abstract class _Element extends Element {
   factory _Element(
-      {@HiveField(0)
-          final String? id,
-      @HiveField(1)
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_}) = _$_Element;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_}) =
+      _$_Element;
   _Element._() : super._();
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
@@ -219,7 +203,6 @@ abstract class _Element extends Element {
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
-  @HiveField(0)
   String? get id;
   @override
 
@@ -229,7 +212,6 @@ abstract class _Element extends Element {
   /// definition and use of extensions. Though any implementer can define an
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
-  @HiveField(1)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
